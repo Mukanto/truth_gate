@@ -1,0 +1,25 @@
+# A2 manifest of examples/01_tautology/faulty.py (criterion A2, spec 0.6 section 14).
+[study]
+name = "E1-08 rule agreement"
+
+[data]
+rows = ["L", "observed"]            # row-aligned keys, needed by the `shuffle` control
+
+[worlds.plus]
+python = "world.py:plus"
+
+[worlds.minus]
+python = "world.py:minus"
+change = "observed multiplier 3 -> 2 in (m L + 1) mod 9"
+
+[[criteria]]
+id = "rule_agreement"
+python = "world.py:agreement"
+
+[[controls]]
+id = "permute_observed"
+criteria = ["rule_agreement"]
+mutations = [ { op = "shuffle", column = "observed" } ]
+
+[budget]
+samples = 200

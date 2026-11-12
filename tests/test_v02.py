@@ -222,10 +222,10 @@ class TestVerdictInvariance(unittest.TestCase):
 
 class TestVersions(unittest.TestCase):
     def test_versions(self):
-        self.assertEqual(kapi.__version__, "0.3.0")
-        self.assertEqual(body("toy_good")["kapi_version"], "0.3.0")
-        self.assertEqual(body("toy_good")["spec_version"], "0.5")
-        self.assertEqual(kapi.SPEC_VERSION, "0.5")
+        self.assertEqual(kapi.__version__, "0.4.0")
+        self.assertEqual(body("toy_good")["tool_version"], "0.4.0")
+        self.assertEqual(body("toy_good")["spec_version"], "0.6")
+        self.assertEqual(kapi.SPEC_VERSION, "0.6")
 
 
 if __name__ == "__main__":

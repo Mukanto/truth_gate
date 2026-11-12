@@ -1,0 +1,26 @@
+[study]
+name = "A4 faulty: reads the first 10 rows of an exchangeable table"
+
+[data]
+rows_exchangeable = true
+rows = ["x"]
+
+[worlds.plus]
+python = "a4_worlds.py:plus"
+
+[worlds.minus]
+python = "a4_worlds.py:minus"
+change = "mean 1.4 -> 0"
+
+[[criteria]]
+id = "C"
+pattern = "threshold"
+x = "x"
+stat = "mean"
+op = ">"
+value = 1.0
+
+[[controls]]
+id = "negated"
+criteria = ["C"]
+mutations = [ { op = "sign_flip", column = "x" } ]

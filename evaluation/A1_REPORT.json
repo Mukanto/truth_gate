@@ -1,0 +1,1122 @@
+{
+ "criterion": "A1 (spec 0.6, section 14)",
+ "studies": 159,
+ "equal": 159,
+ "differs": 0,
+ "wall_seconds": 63.4,
+ "results": [
+  {
+   "path": "evaluation/cases/E2/E2-01_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-01_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-02_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "verdict and flag sets only (baseline carries K6_NONREPRODUCIBLE)",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-02_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-03_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "verdict and flag sets only (baseline carries K6_NONREPRODUCIBLE)",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-03_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-04_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-04_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-05_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-05_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-06_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-06_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-07_faulty.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-07_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-08_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-08_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-09_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-09_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-10_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-10_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-11_faulty.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-11_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-12_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-12_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-13_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-13_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-14_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E2/E2-14_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-01_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-01_fixed.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-02_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-02_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-03_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-03_fixed.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-04_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-04_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-05_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-05_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-06_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-06_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-07_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-07_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-08_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-08_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-09_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-09_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-10_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-10_fixed.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-11_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-11_fixed.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-12_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-12_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-13_faulty.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-13_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-14_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-14_fixed.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-15_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-15_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-16_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E4/E4-16_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-01_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-01_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-02_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-02_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-03_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-03_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-04_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-04_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-05_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-05_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-06_faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-06_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-07_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-07_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-08_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-08_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-09_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-09_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-10_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-10_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-11_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-11_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-12_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-13_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-14_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-15_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-16_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-17_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-17_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-18_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-18_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-19_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-19_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-20_faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "evaluation/cases/E5/E5-20_fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/01_tautology/faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/01_tautology/fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/02_inert_minus_world/faulty.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/02_inert_minus_world/fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/03_unit_epsilon_bug/faulty.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/03_unit_epsilon_bug/fixed.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/convergence_criteria/study.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/ghz_heron/ghz_study.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "examples/ghz_heron_run2/ghz2_study.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_allowed_file.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_assumed_premise.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_bad_return.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_components_mismatch.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_components_ok.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_control_also_holds.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_control_world.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_degenerate.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_always_true.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_depends.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_one_undefined.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_two_undefined.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_shuffle.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_undefined.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_det_waived.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_dup_ids.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_fails_unreachable.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_good.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_good_det.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_high_rate.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_highsize.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_holds_unreachable.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_import_allowed_file.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_import_leak.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_control.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_premise.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_probe.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_leak_listdir.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_leak_open.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_lowpower.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_no_control.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_no_separation.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_no_separation_distinct.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_noise.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_nondeterministic.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "verdict and flag sets only (baseline carries K6_NONREPRODUCIBLE)",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_nonreproducible.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "verdict and flag sets only (baseline carries K6_NONREPRODUCIBLE)",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_not_tested_premise.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_null_holds.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_regime_covered.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_regime_uncovered.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_shuffle_bad.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_shuffle_good.py",
+   "exit_code": 0,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_det.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_stoch.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_unresolvable.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_undefined_exc.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_undefined_none.py",
+   "exit_code": 3,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_unresolvable_premise.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_unresolvable_tol.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_trap.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_unread.py",
+   "exit_code": 2,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_untested.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_untested_det.py",
+   "exit_code": 6,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_waived.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  },
+  {
+   "path": "tests/toy_studies/toy_waived_with_control.py",
+   "exit_code": 1,
+   "new_tool_version": "0.4.0",
+   "comparison": "full stripped body",
+   "result": "equal"
+  }
+ ]
+}

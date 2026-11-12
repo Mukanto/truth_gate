@@ -153,7 +153,7 @@ class TestProbeDrawsField(unittest.TestCase):
                 self.assertTrue(set(draws) <= {H, F, U})
 
     def test_spec_version(self):
-        self.assertEqual(body("toy_good")["spec_version"], "0.5")
+        self.assertEqual(body("toy_good")["spec_version"], "0.6")
 
 
 if __name__ == "__main__":

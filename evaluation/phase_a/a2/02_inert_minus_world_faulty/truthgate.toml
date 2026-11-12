@@ -1,0 +1,28 @@
+# A2 manifest of examples/02_inert_minus_world/faulty.py (criterion A2, spec 0.6 section 14).
+[study]
+name = "E5-01 spring calibration"
+deterministic = true
+
+[worlds.plus]
+python = "world.py:plus"
+
+[worlds.minus]
+python = "world.py:minus"
+change = "spring constant 40 -> 20 N/m"
+
+[[criteria]]
+id = "stiffness_40"
+python = "world.py:stiffness_ok"
+tolerances = { k_tol = [4.0, 40.0] }
+
+[[premises]]
+id = "stiffness"
+role = "tested"
+criteria = ["stiffness_40"]
+magnitude = [0.5, 1.0]
+mutations = [ { op = "scale", column = "f", factor = 0.5 } ]
+
+[[controls]]
+id = "axes_swapped"
+criteria = ["stiffness_40"]
+mutations = [ { op = "swap", a = "x", b = "f" } ]

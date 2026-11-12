@@ -1,0 +1,34 @@
+[study]
+name = "the new fertiliser raises mean yield by at least 0.5 t/ha"
+
+[data]
+rows_exchangeable = true            # rows are i.i.d. plots, so their order must not matter (adds a K8 check)
+[data.columns]
+plot  = { type = "str",   role = "id" }
+group = { type = "str",   role = "group" }
+yield = { type = "float", role = "outcome" }
+
+[worlds.plus]
+file = "synthetic_trial.csv"        # a realistic dataset in which the claim is true; never the real data
+provenance = "simulated from last season's control plots plus a 0.8 t/ha effect"
+
+[worlds.minus]
+derive = "plus"
+change = "no effect: treated yields are drawn from control plots"
+mutations = [ { op = "null_effect", outcome = "yield", group = "group", reference = "control" } ]
+
+[[criteria]]
+id = "C1"
+pattern = "difference"
+a = "yield"
+a_where = { column = "group", equals = "treated" }
+b = "yield"
+b_where = { column = "group", equals = "control" }
+stat = "mean"
+op = ">="
+value = 0.5
+
+[[controls]]
+id = "labels_shuffled"
+criteria = ["C1"]
+mutations = [ { op = "shuffle", column = "group" } ]

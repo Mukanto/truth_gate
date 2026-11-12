@@ -1,0 +1,30 @@
+# pre-commit hooks of Truth_Gate. In your .pre-commit-config.yaml:
+#
+#   repos:
+#     - repo: https://github.com/Mukanto/truth_gate
+#       rev: v0.4.0
+#       hooks:
+#         - id: truth-gate-freeze
+#           args: [FREEZE.json]        # the freeze manifest to verify (one per hook entry)
+#         - id: truth-gate-check
+#
+# truth-gate-freeze runs on every commit, because a frozen file can change without the manifest changing.
+# truth-gate-check runs the quick mode on every changed truthgate.toml or truthgate.json (pre-commit may pass several
+# files in one call; the wrapper checks each one and exits with the most severe code). Quick mode is not certifiable.
+# The certificates go to a temporary folder that is deleted afterwards, never next to the manifest.
+
+- id: truth-gate-freeze
+  name: truth-gate freeze verify
+  description: Verify a freeze manifest (given in args) against the files it lists.
+  entry: truth-gate freeze verify
+  language: python
+  pass_filenames: false
+  always_run: true
+
+- id: truth-gate-check
+  name: truth-gate check (quick)
+  description: Quick check of a changed truthgate.toml or truthgate.json manifest.
+  entry: python -m truth_gate.ci --pre-commit
+  language: python
+  pass_filenames: true
+  files: '(^|/)truthgate\.(toml|json)$'

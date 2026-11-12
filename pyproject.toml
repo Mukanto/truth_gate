@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "truth-gate"
-version = "0.3.0"
+version = "0.4.0"
 description = "Pre-registration kit and falsifiability gate for computational studies"
 readme = "README.md"
 license = "MIT"
@@ -16,5 +16,11 @@ dependencies = ["numpy"]
 [project.urls]
 Repository = "https://github.com/Mukanto/truth_gate"
 
+[project.scripts]
+truth-gate = "truth_gate.cli:main"
+
 [tool.setuptools]
-packages = ["kapi"]
+packages = ["truth_gate", "kapi"]
+
+[tool.setuptools.package-data]
+truth_gate = ["templates/*"]

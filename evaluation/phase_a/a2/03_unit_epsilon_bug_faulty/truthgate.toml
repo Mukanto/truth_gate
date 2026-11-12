@@ -1,0 +1,31 @@
+# A2 manifest of examples/03_unit_epsilon_bug/faulty.py (criterion A2, spec 0.6 section 14).
+# The criterion is the `rate` pattern; the premise is an `offset` mutation and the control a `sign_flip` mutation.
+[study]
+name = "E5-20 illuminated detector"
+
+[worlds.plus]
+python = "world.py:plus"
+
+[worlds.minus]
+python = "world.py:minus"
+change = "illumination off (pixel level 3.0 -> 0)"
+
+[[criteria]]
+id = "lit_fraction_gt_08"
+pattern = "rate"
+condition = { column = "pixel", op = ">", value = 1.5 }
+op = ">"
+value = 0.8
+tolerances = { fraction = [0.8, 1.0] }
+
+[[premises]]
+id = "illumination"
+role = "tested"
+criteria = ["lit_fraction_gt_08"]
+magnitude = [3.0, 1.0]
+mutations = [ { op = "offset", column = "pixel", value = -3.0 } ]
+
+[[controls]]
+id = "negated"
+criteria = ["lit_fraction_gt_08"]
+mutations = [ { op = "sign_flip", column = "pixel" } ]

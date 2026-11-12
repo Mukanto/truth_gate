@@ -1,0 +1,58 @@
+name: Truth_Gate
+description: Check a pre-registered study with the Truth_Gate falsifiability gate and upload the certificate.
+author: Truth_Gate
+
+# Pinned by full commit SHA (the tag is in the comment). Both are node24 releases: the node20 lines are past end of life.
+# They are used only through documented inputs (python-version; name, path, if-no-files-found).
+
+inputs:
+  target:
+    description: The study to check, a manifest (.toml or .json) or a Python study file, relative to the workspace.
+    required: true
+  freeze:
+    description: Optional path of a freeze manifest (FREEZE.json) to verify.
+    required: false
+    default: ""
+  quick:
+    description: '"true" runs the quick mode, which is not certifiable.'
+    required: false
+    default: "false"
+  fail-on:
+    description: Comma-separated verdicts that fail the job. SUGGESTED_UNREVIEWED always fails it.
+    required: false
+    default: "NOT_FALSIFIABLE,UNDEFINED,UNTESTED"
+
+outputs:
+  certificate:
+    description: Absolute path of the certificate written by the check (empty when the check produced none).
+    value: ${{ steps.tg.outputs.certificate }}
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1  # v6.3.0
+      with:
+        python-version: "3.12"
+
+    - name: Install Truth_Gate from this action's own checkout
+      shell: bash
+      run: python -m pip install "$GITHUB_ACTION_PATH"
+
+    - name: Check the study
+      id: tg
+      shell: bash
+      env:
+        TG_TARGET: ${{ inputs.target }}
+        TG_FREEZE: ${{ inputs.freeze }}
+        TG_QUICK: ${{ inputs.quick }}
+        TG_FAIL_ON: ${{ inputs.fail-on }}
+      run: python -m truth_gate.ci
+
+    - name: Upload the certificate
+      if: ${{ always() && steps.tg.outputs.certificate != '' }}
+      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6.0.0
+      with:
+        name: truth-gate-certificate
+        path: ${{ steps.tg.outputs.certificate }}
+        if-no-files-found: error

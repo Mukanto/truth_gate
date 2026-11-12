@@ -1,0 +1,26 @@
+# A study whose criterion is a Node program (protocol tg-line/1, see README.md).
+# Run from anywhere:  truth-gate check examples/node_criterion/truthgate.toml --out node_example.json
+[study]
+name = "treated plots yield at least 0.5 t/ha more than control plots"
+
+[data]
+rows = ["group", "y"]                # row-aligned keys, needed by the `shuffle` control
+
+[worlds.plus]
+python = "world.py:plus"
+
+[worlds.minus]
+python = "world.py:minus"
+change = "no treatment effect (0.8 -> 0 t/ha)"
+
+[[criteria]]
+id = "effect"
+command = ["node", "criterion.js"]   # an argv list, never a shell string
+
+[[controls]]
+id = "labels_shuffled"
+criteria = ["effect"]
+mutations = [ { op = "shuffle", column = "group" } ]
+
+[external]
+uses = ["criterion.js", "tg_line.js"]   # copied into the program's private working folder and hashed

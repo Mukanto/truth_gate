@@ -1,0 +1,45 @@
+# A2 manifest of examples/convergence_criteria/study.py (criterion A2, spec 0.6 section 14).
+# C3 is the `threshold` pattern (every entry of in_domain is True); the control `unit_multiplier` is a `constant` mutation.
+[study]
+name = "convergence criteria on synthetic linear worlds"
+deterministic = true
+
+[worlds.plus]
+python = "world.py:plus"
+
+[worlds.minus]
+python = "world.py:minus"
+change = "update law contracting (lam 0.02) -> repelling (lam 1.39)"
+
+[[criteria]]
+id = "C1_local_attraction"
+python = "world.py:C1_local_attraction"
+tolerances = { lam_threshold = [1.0, 1.0] }
+
+[[criteria]]
+id = "C2_convergence_N"
+python = "world.py:C2_convergence_N"
+tolerances = { tol = [1e-10, 0.74] }
+
+[[criteria]]
+id = "C3_in_domain"
+pattern = "threshold"
+x = "in_domain"
+stat = "fraction_true"
+op = ">="
+value = 1.0
+
+[[controls]]
+id = "frozen_state"
+criteria = ["C2_convergence_N"]
+python = "world.py:frozen_state"
+
+[[controls]]
+id = "unit_multiplier"
+criteria = ["C1_local_attraction"]
+mutations = [ { op = "constant", column = "lam", value = 1.0 } ]
+
+[[controls]]
+id = "forced_exit"
+criteria = ["C3_in_domain"]
+python = "world.py:forced_exit"

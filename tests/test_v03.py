@@ -756,8 +756,8 @@ class TestVerdictOrder(unittest.TestCase):
 class TestCertificateFields(unittest.TestCase):
     def test_versions(self):
         b = body("toy_good")
-        self.assertEqual(b["kapi_version"], "0.3.0")
-        self.assertEqual(b["spec_version"], "0.5")
+        self.assertEqual(b["tool_version"], "0.4.0")
+        self.assertEqual(b["spec_version"], "0.6")
 
     def test_minus_check_is_always_present(self):
         for toy in ("toy_good", "toy_good_det", "toy_v03_untested", "toy_v03_unread", "toy_waived", "toy_components_ok"):
@@ -794,7 +794,7 @@ class TestCertificateFields(unittest.TestCase):
         text = " ".join(body("toy_good")["known_limitations"])
         for phrase in ("exact identity", "pairing", "top-level keys", "UNTESTED can hide a criterion defect"):
             self.assertIn(phrase, text)
-        self.assertEqual(len(body("toy_good")["known_limitations"]), 3)
+        self.assertEqual(len(body("toy_good")["known_limitations"]), 5)  # spec 0.6 section 11 adds two (revision R-1)
 
     def test_untested_certificate_validates_and_round_trips(self):
         env = _helpers.run_toy("toy_v03_untested")

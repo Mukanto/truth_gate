@@ -1,0 +1,38 @@
+# truthgate.toml: a minimal Truth_Gate manifest (a scaffold written by `truth-gate init`).
+# Run `truth-gate check truthgate.toml` once the TODO items are done. Reference: docs/design/spec-0.6.md, section 3.
+# `truth-gate suggest DATA.csv` writes a starting manifest from a dataset (it must NOT be the real study data).
+
+[study]
+name = "TODO: state the claim in one sentence"
+
+[data]
+rows_exchangeable = true            # rows are i.i.d. units, so their order must not matter (adds a K8 check)
+[data.columns]
+unit  = { type = "str",   role = "id" }
+group = { type = "str",   role = "group" }
+value = { type = "float", role = "outcome" }
+
+[worlds.plus]
+file = "synthetic_data.csv"         # TODO: a realistic dataset in which the claim is true; never the real data
+provenance = "TODO"                 # where the file comes from; the gate refuses to run while this says TODO
+
+[worlds.minus]
+derive = "plus"
+change = "no effect: treated values are drawn from control units"
+mutations = [ { op = "null_effect", outcome = "value", group = "group", reference = "control" } ]
+
+[[criteria]]
+id = "C1"
+pattern = "difference"
+a = "value"
+a_where = { column = "group", equals = "treated" }
+b = "value"
+b_where = { column = "group", equals = "control" }
+stat = "mean"
+op = ">="
+value = 0.5                         # TODO: the threshold of your claim
+
+[[controls]]
+id = "labels_shuffled"
+criteria = ["C1"]
+mutations = [ { op = "shuffle", column = "group" } ]

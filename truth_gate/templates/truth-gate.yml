@@ -1,0 +1,19 @@
+# Truth_Gate: checks the study on every push and pull request.
+# The Action fails on NOT_FALSIFIABLE, UNDEFINED and UNTESTED, and always on SUGGESTED_UNREVIEWED.
+name: truth-gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  truth-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Mukanto/truth_gate@v0.4.0
+        with:
+          target: truthgate.toml
+          # freeze: FREEZE.json              # optional: a freeze manifest to verify
+          # quick: "false"                   # "true" runs the quick mode (not certifiable)
+          # fail-on: "NOT_FALSIFIABLE,UNDEFINED,UNTESTED"

@@ -12,8 +12,8 @@ import kapi
 from kapi import certificate
 
 SPEC_BODY_FIELDS = (
-    "kapi_version", "spec_version", "python_version", "numpy_version", "mode", "study",
-    "m_comparisons", "alpha_per_bound", "components", "premise_map", "study_flags", "leak_log",
+    "tool", "tool_version", "spec_version", "input_kind", "python_version", "numpy_version", "mode", "study",
+    "m_comparisons", "alpha_per_bound", "components", "premise_map", "study_flags", "study_notes", "leak_log",
     "verdict", "non_claims",
 )
 SPEC_STUDY_FIELDS = (
@@ -83,9 +83,9 @@ class TestEnvelope(unittest.TestCase):
 class TestContents(unittest.TestCase):
     def test_versions_and_non_claims(self):
         b = body("toy_good")
-        self.assertEqual(b["kapi_version"], kapi.__version__)
-        self.assertEqual(b["spec_version"], "0.5")
-        self.assertEqual(len(b["non_claims"]), 3)
+        self.assertEqual(b["tool_version"], kapi.__version__)
+        self.assertEqual(b["spec_version"], "0.6")
+        self.assertEqual(len(b["non_claims"]), 6)
         self.assertIn("does not mean the hypothesis is true", b["non_claims"][0])
         self.assertTrue(b["known_limitations"])
 

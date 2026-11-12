@@ -150,6 +150,42 @@ A corrected model was pre-registered and run once on new shots ([`examples/ghz_h
   * one identification argument was incomplete.
   It also found that one of the designer's controls guarded against a failure that cannot affect the estimator.
 
+## 0.4 (spec 0.6, package 0.4.0): Phase A
+
+Phase A checks that 0.4 keeps 0.3's behaviour and that its new parts give the same answers as hand-written studies.
+It is an internal check on the project's own examples, not external evidence. The criteria were written and frozen
+before implementation ([`design/spec-0.6.md`](design/spec-0.6.md), section 14; freeze `design/FREEZE_SPEC_0.6.json`).
+The 0.3.0 results were recorded from tag `v0.3.0` before any code changed and frozen
+(`../evaluation/FREEZE_BASELINE_V030.json`).
+
+| id | Claim | Result | |
+|---|---|---|---|
+| A1 | Python studies behave exactly as in 0.3 | **HOLDS** | 159 of 159 studies (95 evaluation cases, 55 test studies, 9 examples) give the same certificate body as 0.3.0 after the pre-registered strip rule; for the 4 studies that use unseeded randomness on purpose, the same verdict and flags |
+| A2 | Manifests reproduce hand-written studies | **HOLDS** | 7 of 7 pairs (examples 01, 02 and 03, both twins each, and the convergence study): same verdict, flags and tolerance declarations. The required coverage was met: the criteria of example 03 and C3 of the convergence study are patterns, and every control and premise of examples 01–03 is a mutation |
+| A3 | Any language gives the same answer | **HOLDS** | 6 of 6 pairs: the criteria rewritten as Node programs give the same verdict, flags (apart from `K2_MINUS_UNREAD`) and per-stream counts as the A2 manifests, over 200 samples per stream |
+| A4 | K8 catches order dependence and changes the verdict | **HOLDS** | The faulty twin (reads the first 10 of 40 exchangeable rows) changed its outcome under row permutation in 34 of 200 plus samples (Wilson lower bound 0.124 > 0.05): NOT_FALSIFIABLE with `K8_NOT_INVARIANT` as its only mandatory flag; without K8 it would have been FALSIFIABLE. The fixed twin (mean of all rows) was FALSIFIABLE and never changed |
+
+**How the results were obtained.** The evaluation scripts in [`../evaluation/`](../evaluation/) produced the results,
+and the designer recomputed all four with separate scripts. Environment: Python 3.14.2, numpy 2.4.1, Node 26.12.1,
+Windows 11. Four tests that need a POSIX system were skipped.
+
+**What happened on the way, without changing a criterion:**
+
+* The specification went through three blind reviews before the freeze. The first found 19 problems, two of them
+  critical. The third found one that blocked the freeze: A1 could not be met as written for studies with unseeded
+  randomness.
+* During implementation, 34 points that the frozen text left open were decided and logged with reasons
+  ([`design/spec-0.6-REVISIONS-post-freeze.md`](design/spec-0.6-REVISIONS-post-freeze.md)). The coding agent stopped
+  and asked each time instead of choosing.
+* A blind audit of the code found two real defects, both reproduced and fixed before the final run. A command criterion
+  whose own child process held its output pipe made `check` hang. A blank line in a single-column CSV file was dropped
+  instead of read as a missing value. The audit also found that A2 and A3 had left out the fixed twin of example 02,
+  which section 14 includes. It was added before the final run (revision R-34).
+
+**What Phase A does not show.** It says nothing about whether the gate catches real errors in real studies. That is
+Phase B: an external test set built from errors documented in the literature, with criteria pre-registered before the
+set is built (section 14 of the spec).
+
 ## Limitations of the evaluation
 
 * **Not independent of the specification.** All case sets were written by AI sessions that had read the spec, and from

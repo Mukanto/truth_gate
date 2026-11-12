@@ -1,0 +1,1628 @@
+{
+ "tool_under_test": "kapi 0.3.0 (git tag v0.3.0)",
+ "mode": "full",
+ "runner_python_version": "3.14.2",
+ "runner_numpy_version": "2.4.1",
+ "jobs": 1,
+ "total_wall_seconds": 56.8,
+ "runs": [
+  {
+   "path": "evaluation/cases/E2/E2-01_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.375,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-01_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.319,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-02_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.675,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_NONREPRODUCIBLE"
+   ]
+  },
+  {
+   "path": "evaluation/cases/E2/E2-02_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.602,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-03_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.265,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_NONREPRODUCIBLE",
+    "NONDETERMINISTIC"
+   ]
+  },
+  {
+   "path": "evaluation/cases/E2/E2-03_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.259,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-04_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.329,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-04_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.319,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-05_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.335,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-05_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.341,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-06_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 1.342,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-06_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 1.261,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-07_faulty.py",
+   "exit_code": 3,
+   "wall_seconds": 0.388,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-07_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.378,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-08_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.429,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-08_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.436,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-09_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.327,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-09_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.335,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-10_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.642,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "evaluation/cases/E2/E2-10_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.328,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-11_faulty.py",
+   "exit_code": 3,
+   "wall_seconds": 0.573,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "evaluation/cases/E2/E2-11_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.319,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-12_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.339,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-12_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.337,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-13_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.334,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-13_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.407,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-14_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.261,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E2/E2-14_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.268,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-01_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 1.027,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-01_fixed.py",
+   "exit_code": 1,
+   "wall_seconds": 0.353,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-02_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.382,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-02_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.39,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-03_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.551,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-03_fixed.py",
+   "exit_code": 1,
+   "wall_seconds": 0.357,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-04_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 1.349,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-04_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.456,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-05_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.346,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-05_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.356,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-06_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.336,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-06_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.344,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-07_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.457,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-07_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.353,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-08_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.353,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-08_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.373,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-09_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.338,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-09_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.334,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-10_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.347,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-10_fixed.py",
+   "exit_code": 1,
+   "wall_seconds": 0.365,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-11_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.441,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-11_fixed.py",
+   "exit_code": 1,
+   "wall_seconds": 0.439,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-12_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.348,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-12_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.334,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-13_faulty.py",
+   "exit_code": 3,
+   "wall_seconds": 0.48,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "evaluation/cases/E4/E4-13_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.317,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-14_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.352,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-14_fixed.py",
+   "exit_code": 1,
+   "wall_seconds": 0.356,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-15_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.4,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-15_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.409,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-16_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.273,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E4/E4-16_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.269,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-01_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.259,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-01_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.262,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-02_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.269,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-02_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.267,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-03_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.262,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-03_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.266,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-04_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.322,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-04_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.316,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-05_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.414,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-05_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.386,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-06_faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.419,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-06_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.414,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-07_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.326,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-07_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.324,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-08_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.314,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-08_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.314,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-09_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.26,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-09_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.265,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-10_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.271,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-10_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.26,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-11_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.3,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-11_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.326,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-12_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.325,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-13_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.263,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-14_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.299,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-15_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.26,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-16_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.258,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-17_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.263,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-17_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.259,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-18_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.353,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-18_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.361,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-19_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.26,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-19_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.261,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-20_faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.305,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "evaluation/cases/E5/E5-20_fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.313,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/01_tautology/faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.313,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/01_tautology/fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.312,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/02_inert_minus_world/faulty.py",
+   "exit_code": 6,
+   "wall_seconds": 0.266,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/02_inert_minus_world/fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.273,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/03_unit_epsilon_bug/faulty.py",
+   "exit_code": 2,
+   "wall_seconds": 0.306,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/03_unit_epsilon_bug/fixed.py",
+   "exit_code": 0,
+   "wall_seconds": 0.307,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/convergence_criteria/study.py",
+   "exit_code": 2,
+   "wall_seconds": 0.262,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/ghz_heron/ghz_study.py",
+   "exit_code": 1,
+   "wall_seconds": 0.564,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "examples/ghz_heron_run2/ghz2_study.py",
+   "exit_code": 1,
+   "wall_seconds": 0.644,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_allowed_file.py",
+   "exit_code": 0,
+   "wall_seconds": 0.516,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_assumed_premise.py",
+   "exit_code": 0,
+   "wall_seconds": 0.287,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_bad_return.py",
+   "exit_code": 3,
+   "wall_seconds": 0.266,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_components_mismatch.py",
+   "exit_code": 3,
+   "wall_seconds": 0.265,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K7_COMPONENT_MISMATCH"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_components_ok.py",
+   "exit_code": 0,
+   "wall_seconds": 0.313,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_control_also_holds.py",
+   "exit_code": 2,
+   "wall_seconds": 0.283,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_control_world.py",
+   "exit_code": 0,
+   "wall_seconds": 0.28,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_degenerate.py",
+   "exit_code": 2,
+   "wall_seconds": 0.279,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_always_true.py",
+   "exit_code": 2,
+   "wall_seconds": 0.258,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_depends.py",
+   "exit_code": 2,
+   "wall_seconds": 0.26,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_one_undefined.py",
+   "exit_code": 0,
+   "wall_seconds": 0.259,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_noise_two_undefined.py",
+   "exit_code": 1,
+   "wall_seconds": 0.266,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_shuffle.py",
+   "exit_code": 0,
+   "wall_seconds": 0.259,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_undefined.py",
+   "exit_code": 3,
+   "wall_seconds": 0.266,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_det_waived.py",
+   "exit_code": 1,
+   "wall_seconds": 0.288,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_dup_ids.py",
+   "exit_code": 3,
+   "wall_seconds": 0.275,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_fails_unreachable.py",
+   "exit_code": 2,
+   "wall_seconds": 0.298,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_good.py",
+   "exit_code": 0,
+   "wall_seconds": 0.308,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_good_det.py",
+   "exit_code": 0,
+   "wall_seconds": 0.266,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_high_rate.py",
+   "exit_code": 2,
+   "wall_seconds": 0.293,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_highsize.py",
+   "exit_code": 2,
+   "wall_seconds": 0.273,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_holds_unreachable.py",
+   "exit_code": 2,
+   "wall_seconds": 0.284,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_import_allowed_file.py",
+   "exit_code": 3,
+   "wall_seconds": 0.248,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_import_leak.py",
+   "exit_code": 3,
+   "wall_seconds": 0.244,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_control.py",
+   "exit_code": 1,
+   "wall_seconds": 0.282,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_premise.py",
+   "exit_code": 1,
+   "wall_seconds": 0.293,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_inconclusive_probe.py",
+   "exit_code": 1,
+   "wall_seconds": 0.285,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_leak_listdir.py",
+   "exit_code": 2,
+   "wall_seconds": 0.429,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_leak_open.py",
+   "exit_code": 3,
+   "wall_seconds": 0.307,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_LEAK_ATTEMPT"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_lowpower.py",
+   "exit_code": 1,
+   "wall_seconds": 0.282,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_no_control.py",
+   "exit_code": 2,
+   "wall_seconds": 0.281,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_no_separation.py",
+   "exit_code": 2,
+   "wall_seconds": 0.284,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_no_separation_distinct.py",
+   "exit_code": 2,
+   "wall_seconds": 0.277,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_noise.py",
+   "exit_code": 2,
+   "wall_seconds": 0.289,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_nondeterministic.py",
+   "exit_code": 2,
+   "wall_seconds": 0.261,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_NONREPRODUCIBLE",
+    "NONDETERMINISTIC"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_nonreproducible.py",
+   "exit_code": 2,
+   "wall_seconds": 0.275,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K6_NONREPRODUCIBLE"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_not_tested_premise.py",
+   "exit_code": 2,
+   "wall_seconds": 0.31,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_null_holds.py",
+   "exit_code": 2,
+   "wall_seconds": 0.302,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_regime_covered.py",
+   "exit_code": 0,
+   "wall_seconds": 0.311,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_regime_uncovered.py",
+   "exit_code": 2,
+   "wall_seconds": 0.282,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": [
+    "K7_REGIME_UNCOVERED"
+   ]
+  },
+  {
+   "path": "tests/toy_studies/toy_shuffle_bad.py",
+   "exit_code": 2,
+   "wall_seconds": 0.286,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_shuffle_good.py",
+   "exit_code": 0,
+   "wall_seconds": 0.322,
+   "verdict": "FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_det.py",
+   "exit_code": 2,
+   "wall_seconds": 0.26,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_stoch.py",
+   "exit_code": 2,
+   "wall_seconds": 0.307,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_suppress_unresolvable.py",
+   "exit_code": 2,
+   "wall_seconds": 0.281,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_undefined_exc.py",
+   "exit_code": 3,
+   "wall_seconds": 0.27,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_undefined_none.py",
+   "exit_code": 3,
+   "wall_seconds": 0.265,
+   "verdict": "UNDEFINED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_unresolvable_premise.py",
+   "exit_code": 2,
+   "wall_seconds": 0.291,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_unresolvable_tol.py",
+   "exit_code": 2,
+   "wall_seconds": 0.294,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_trap.py",
+   "exit_code": 2,
+   "wall_seconds": 0.276,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_unread.py",
+   "exit_code": 2,
+   "wall_seconds": 0.28,
+   "verdict": "NOT_FALSIFIABLE",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_untested.py",
+   "exit_code": 6,
+   "wall_seconds": 0.281,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_v03_untested_det.py",
+   "exit_code": 6,
+   "wall_seconds": 0.268,
+   "verdict": "UNTESTED",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_waived.py",
+   "exit_code": 1,
+   "wall_seconds": 0.286,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  },
+  {
+   "path": "tests/toy_studies/toy_waived_with_control.py",
+   "exit_code": 1,
+   "wall_seconds": 0.282,
+   "verdict": "WEAK",
+   "python_version": "3.14.2",
+   "numpy_version": "2.4.1",
+   "kapi_version": "0.3.0",
+   "study_flags": []
+  }
+ ]
+}

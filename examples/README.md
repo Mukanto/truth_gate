@@ -27,8 +27,16 @@ origin note removed from the first pair), so the verdicts below are what the eva
 | [`03_unit_epsilon_bug/fixed.py`](03_unit_epsilon_bug/fixed.py) | The offset is `LEVEL * UNIT`. | `FALSIFIABLE` | 0 | none |
 | [`convergence_criteria/study.py`](convergence_criteria/study.py) | A generic synthetic-world study with three criteria and three controls (see below). | `NOT_FALSIFIABLE` (C1), `WEAK` (C2), `FALSIFIABLE` (C3); study verdict `NOT_FALSIFIABLE` | 2 | C1: `K5_HOLDS_ON_NOISE`, `K5_HOLDS_ON_DEGENERATE`; C2: `K5_INCONCLUSIVE:noise`, `K5_INCONCLUSIVE:zeros` |
 
-The verdicts above were produced by `python -m kapi check` with this version (0.3.0) of the package; the certificates
-are reproducible (`verify` exits 0).
+The verdicts above were produced by `python -m kapi check` with this version (0.4.0) of the package (`truth-gate check`
+gives the same); the certificates are reproducible (`verify` exits 0).
+
+### A criterion in another language: [`node_criterion/`](node_criterion/README.md)
+
+A manifest study whose criterion is a Node program that speaks the line protocol `tg-line/1` (the gate sends each
+sample as one JSON line, the program answers `HOLDS`, `FAILS` or `UNDEFINED`). It needs `node` on `PATH`. Run it with
+`truth-gate check examples/node_criterion/truthgate.toml --out node_example.json`. The certificate carries the study
+note `K6_EXTERNAL_UNGUARDED`, because the leak guard cannot see inside another program. The manifest format is in
+[`../docs/MANIFEST.md`](../docs/MANIFEST.md).
 
 ### A real hardware run: [`ghz_heron/`](ghz_heron/)
 
