@@ -1,0 +1,21 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-11T23:18:25Z",
+  "algorithm": "sha256",
+  "files": {
+    "PREREG.md": "b73f34a480ec69db3e14c8139d29c14dbac9bbd6e41f0b2ba84943d019dba7e0",
+    "README.md": "8d59f6da0b79e7d3fb5c1e57875f993d7aa0d918a54cb3d1b6ba169e0845df8b",
+    "REVISIONS.md": "e6058d18d1e0764314597d07cedf99605fd5a061c3b0fca4a90a1ab5cf5814cb",
+    "certs/cert_v1.json": "7d39c4fbea596bf5eb281d37baf7d4ef5e201526a1affaf8aeb8a09f7df9b98b",
+    "certs/cert_v2.json": "f2aa5758b7e3d5e577aef3d3e4627cdb73ac8b1d9860cebfd049da85bb2628e1",
+    "certs/cert_v3.json": "927a1519c3f48b8faeecd94776b2cdfc43d01b76f931484ec96534a0bf9458a1",
+    "certs/k2_sim.json": "c70f74f0f9f93275c9acda7a434132846f90c0e4647851e33ddda4724d3a6155",
+    "ghz_analyze.py": "656786234b9ea6c617f93a5d1b1e5e64dcafeb01e116e6d1b92299756c5ef6ed",
+    "ghz_core.py": "615a96ba810c766028f509cba0630927e56833fca0d6ce3b209d19f483839117",
+    "ghz_d4.py": "bc3b7d56f162de7bc26ca9e730c42fe6f0f32e71e5fbd1219fb1e71e1240cbc1",
+    "ghz_run.py": "cb142ed0557370e2fe8076847a0d704cb7bdb005179e40bb77ec40f6ffdf36c1",
+    "ghz_study.py": "cfe3f7de79683b47443a51eebe10a8170a40453a68cfff14da6d84bd94888473",
+    "tests_ghz.py": "caf25808688a9ad7ffd4c71cb07f3bd47f0ebe74aa8648e725c6ddce03d6e8e5"
+  },
+  "core_sha256": "8a870c66b0caae801deaaefe7970d974bf89190698e104b9631a87245051fc87"
+}

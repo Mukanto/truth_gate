@@ -1,0 +1,2959 @@
+{
+ "job_id": "dbqg2dgk09pc73at7d9g",
+ "backend": "ibm_kingston",
+ "backend_choice_basis": "processor_type",
+ "submitted_utc": "20261111T235843Z",
+ "snapshot_file": "snapshot_ibm_kingston_20261111T235843Z.json",
+ "snapshot_sha256": "104fb995b806e2aa5e2cc139fa6f3e24ba2fba403ce3e3868c20b64a1f0dbacb",
+ "shots": 2000,
+ "n_circuits": 368,
+ "dynamical_decoupling": false,
+ "twirling": false,
+ "est_quantum_seconds": 186.5417760000004,
+ "manifest": [
+  {
+   "index": 0,
+   "name": "GHZ4_POP",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 1,
+   "name": "GHZ4_PAR0",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 2,
+   "name": "GHZ4_PAR1",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 3,
+   "name": "GHZ4_PAR2",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 4,
+   "name": "GHZ4_PAR3",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 5,
+   "name": "GHZ4_PAR4",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 6,
+   "name": "GHZ4_PAR5",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 7,
+   "name": "GHZ4_PAR6",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 8,
+   "name": "GHZ4_PAR7",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 9,
+   "name": "GHZ4_PAR8",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 10,
+   "name": "GHZ4_PAR9",
+   "family": "GHZ",
+   "n": 4,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 11,
+   "name": "GHZ8_POP",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 12,
+   "name": "GHZ8_PAR0",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 13,
+   "name": "GHZ8_PAR1",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 14,
+   "name": "GHZ8_PAR2",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 15,
+   "name": "GHZ8_PAR3",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 16,
+   "name": "GHZ8_PAR4",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 17,
+   "name": "GHZ8_PAR5",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 18,
+   "name": "GHZ8_PAR6",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 19,
+   "name": "GHZ8_PAR7",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 20,
+   "name": "GHZ8_PAR8",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 21,
+   "name": "GHZ8_PAR9",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 22,
+   "name": "GHZ8_PAR10",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 23,
+   "name": "GHZ8_PAR11",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 24,
+   "name": "GHZ8_PAR12",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 25,
+   "name": "GHZ8_PAR13",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 26,
+   "name": "GHZ8_PAR14",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 27,
+   "name": "GHZ8_PAR15",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 28,
+   "name": "GHZ8_PAR16",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 29,
+   "name": "GHZ8_PAR17",
+   "family": "GHZ",
+   "n": 8,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 30,
+   "name": "GHZ16_POP",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 31,
+   "name": "GHZ16_PAR0",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 32,
+   "name": "GHZ16_PAR1",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 33,
+   "name": "GHZ16_PAR2",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 34,
+   "name": "GHZ16_PAR3",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 35,
+   "name": "GHZ16_PAR4",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 36,
+   "name": "GHZ16_PAR5",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 37,
+   "name": "GHZ16_PAR6",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 38,
+   "name": "GHZ16_PAR7",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 39,
+   "name": "GHZ16_PAR8",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 40,
+   "name": "GHZ16_PAR9",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 41,
+   "name": "GHZ16_PAR10",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 42,
+   "name": "GHZ16_PAR11",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 43,
+   "name": "GHZ16_PAR12",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 44,
+   "name": "GHZ16_PAR13",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 45,
+   "name": "GHZ16_PAR14",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 46,
+   "name": "GHZ16_PAR15",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 47,
+   "name": "GHZ16_PAR16",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 48,
+   "name": "GHZ16_PAR17",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 49,
+   "name": "GHZ16_PAR18",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 18
+  },
+  {
+   "index": 50,
+   "name": "GHZ16_PAR19",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 19
+  },
+  {
+   "index": 51,
+   "name": "GHZ16_PAR20",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 20
+  },
+  {
+   "index": 52,
+   "name": "GHZ16_PAR21",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 21
+  },
+  {
+   "index": 53,
+   "name": "GHZ16_PAR22",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 22
+  },
+  {
+   "index": 54,
+   "name": "GHZ16_PAR23",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 23
+  },
+  {
+   "index": 55,
+   "name": "GHZ16_PAR24",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 24
+  },
+  {
+   "index": 56,
+   "name": "GHZ16_PAR25",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 25
+  },
+  {
+   "index": 57,
+   "name": "GHZ16_PAR26",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 26
+  },
+  {
+   "index": 58,
+   "name": "GHZ16_PAR27",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 27
+  },
+  {
+   "index": 59,
+   "name": "GHZ16_PAR28",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 28
+  },
+  {
+   "index": 60,
+   "name": "GHZ16_PAR29",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 29
+  },
+  {
+   "index": 61,
+   "name": "GHZ16_PAR30",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 30
+  },
+  {
+   "index": 62,
+   "name": "GHZ16_PAR31",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 31
+  },
+  {
+   "index": 63,
+   "name": "GHZ16_PAR32",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 32
+  },
+  {
+   "index": 64,
+   "name": "GHZ16_PAR33",
+   "family": "GHZ",
+   "n": 16,
+   "kind": "PAR",
+   "j": 33
+  },
+  {
+   "index": 65,
+   "name": "GHZ24_POP",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 66,
+   "name": "GHZ24_PAR0",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 67,
+   "name": "GHZ24_PAR1",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 68,
+   "name": "GHZ24_PAR2",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 69,
+   "name": "GHZ24_PAR3",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 70,
+   "name": "GHZ24_PAR4",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 71,
+   "name": "GHZ24_PAR5",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 72,
+   "name": "GHZ24_PAR6",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 73,
+   "name": "GHZ24_PAR7",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 74,
+   "name": "GHZ24_PAR8",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 75,
+   "name": "GHZ24_PAR9",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 76,
+   "name": "GHZ24_PAR10",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 77,
+   "name": "GHZ24_PAR11",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 78,
+   "name": "GHZ24_PAR12",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 79,
+   "name": "GHZ24_PAR13",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 80,
+   "name": "GHZ24_PAR14",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 81,
+   "name": "GHZ24_PAR15",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 82,
+   "name": "GHZ24_PAR16",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 83,
+   "name": "GHZ24_PAR17",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 84,
+   "name": "GHZ24_PAR18",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 18
+  },
+  {
+   "index": 85,
+   "name": "GHZ24_PAR19",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 19
+  },
+  {
+   "index": 86,
+   "name": "GHZ24_PAR20",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 20
+  },
+  {
+   "index": 87,
+   "name": "GHZ24_PAR21",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 21
+  },
+  {
+   "index": 88,
+   "name": "GHZ24_PAR22",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 22
+  },
+  {
+   "index": 89,
+   "name": "GHZ24_PAR23",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 23
+  },
+  {
+   "index": 90,
+   "name": "GHZ24_PAR24",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 24
+  },
+  {
+   "index": 91,
+   "name": "GHZ24_PAR25",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 25
+  },
+  {
+   "index": 92,
+   "name": "GHZ24_PAR26",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 26
+  },
+  {
+   "index": 93,
+   "name": "GHZ24_PAR27",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 27
+  },
+  {
+   "index": 94,
+   "name": "GHZ24_PAR28",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 28
+  },
+  {
+   "index": 95,
+   "name": "GHZ24_PAR29",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 29
+  },
+  {
+   "index": 96,
+   "name": "GHZ24_PAR30",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 30
+  },
+  {
+   "index": 97,
+   "name": "GHZ24_PAR31",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 31
+  },
+  {
+   "index": 98,
+   "name": "GHZ24_PAR32",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 32
+  },
+  {
+   "index": 99,
+   "name": "GHZ24_PAR33",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 33
+  },
+  {
+   "index": 100,
+   "name": "GHZ24_PAR34",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 34
+  },
+  {
+   "index": 101,
+   "name": "GHZ24_PAR35",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 35
+  },
+  {
+   "index": 102,
+   "name": "GHZ24_PAR36",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 36
+  },
+  {
+   "index": 103,
+   "name": "GHZ24_PAR37",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 37
+  },
+  {
+   "index": 104,
+   "name": "GHZ24_PAR38",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 38
+  },
+  {
+   "index": 105,
+   "name": "GHZ24_PAR39",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 39
+  },
+  {
+   "index": 106,
+   "name": "GHZ24_PAR40",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 40
+  },
+  {
+   "index": 107,
+   "name": "GHZ24_PAR41",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 41
+  },
+  {
+   "index": 108,
+   "name": "GHZ24_PAR42",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 42
+  },
+  {
+   "index": 109,
+   "name": "GHZ24_PAR43",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 43
+  },
+  {
+   "index": 110,
+   "name": "GHZ24_PAR44",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 44
+  },
+  {
+   "index": 111,
+   "name": "GHZ24_PAR45",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 45
+  },
+  {
+   "index": 112,
+   "name": "GHZ24_PAR46",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 46
+  },
+  {
+   "index": 113,
+   "name": "GHZ24_PAR47",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 47
+  },
+  {
+   "index": 114,
+   "name": "GHZ24_PAR48",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 48
+  },
+  {
+   "index": 115,
+   "name": "GHZ24_PAR49",
+   "family": "GHZ",
+   "n": 24,
+   "kind": "PAR",
+   "j": 49
+  },
+  {
+   "index": 116,
+   "name": "GHZ32_POP",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 117,
+   "name": "GHZ32_PAR0",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 118,
+   "name": "GHZ32_PAR1",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 119,
+   "name": "GHZ32_PAR2",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 120,
+   "name": "GHZ32_PAR3",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 121,
+   "name": "GHZ32_PAR4",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 122,
+   "name": "GHZ32_PAR5",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 123,
+   "name": "GHZ32_PAR6",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 124,
+   "name": "GHZ32_PAR7",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 125,
+   "name": "GHZ32_PAR8",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 126,
+   "name": "GHZ32_PAR9",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 127,
+   "name": "GHZ32_PAR10",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 128,
+   "name": "GHZ32_PAR11",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 129,
+   "name": "GHZ32_PAR12",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 130,
+   "name": "GHZ32_PAR13",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 131,
+   "name": "GHZ32_PAR14",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 132,
+   "name": "GHZ32_PAR15",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 133,
+   "name": "GHZ32_PAR16",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 134,
+   "name": "GHZ32_PAR17",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 135,
+   "name": "GHZ32_PAR18",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 18
+  },
+  {
+   "index": 136,
+   "name": "GHZ32_PAR19",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 19
+  },
+  {
+   "index": 137,
+   "name": "GHZ32_PAR20",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 20
+  },
+  {
+   "index": 138,
+   "name": "GHZ32_PAR21",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 21
+  },
+  {
+   "index": 139,
+   "name": "GHZ32_PAR22",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 22
+  },
+  {
+   "index": 140,
+   "name": "GHZ32_PAR23",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 23
+  },
+  {
+   "index": 141,
+   "name": "GHZ32_PAR24",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 24
+  },
+  {
+   "index": 142,
+   "name": "GHZ32_PAR25",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 25
+  },
+  {
+   "index": 143,
+   "name": "GHZ32_PAR26",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 26
+  },
+  {
+   "index": 144,
+   "name": "GHZ32_PAR27",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 27
+  },
+  {
+   "index": 145,
+   "name": "GHZ32_PAR28",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 28
+  },
+  {
+   "index": 146,
+   "name": "GHZ32_PAR29",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 29
+  },
+  {
+   "index": 147,
+   "name": "GHZ32_PAR30",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 30
+  },
+  {
+   "index": 148,
+   "name": "GHZ32_PAR31",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 31
+  },
+  {
+   "index": 149,
+   "name": "GHZ32_PAR32",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 32
+  },
+  {
+   "index": 150,
+   "name": "GHZ32_PAR33",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 33
+  },
+  {
+   "index": 151,
+   "name": "GHZ32_PAR34",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 34
+  },
+  {
+   "index": 152,
+   "name": "GHZ32_PAR35",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 35
+  },
+  {
+   "index": 153,
+   "name": "GHZ32_PAR36",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 36
+  },
+  {
+   "index": 154,
+   "name": "GHZ32_PAR37",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 37
+  },
+  {
+   "index": 155,
+   "name": "GHZ32_PAR38",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 38
+  },
+  {
+   "index": 156,
+   "name": "GHZ32_PAR39",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 39
+  },
+  {
+   "index": 157,
+   "name": "GHZ32_PAR40",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 40
+  },
+  {
+   "index": 158,
+   "name": "GHZ32_PAR41",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 41
+  },
+  {
+   "index": 159,
+   "name": "GHZ32_PAR42",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 42
+  },
+  {
+   "index": 160,
+   "name": "GHZ32_PAR43",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 43
+  },
+  {
+   "index": 161,
+   "name": "GHZ32_PAR44",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 44
+  },
+  {
+   "index": 162,
+   "name": "GHZ32_PAR45",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 45
+  },
+  {
+   "index": 163,
+   "name": "GHZ32_PAR46",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 46
+  },
+  {
+   "index": 164,
+   "name": "GHZ32_PAR47",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 47
+  },
+  {
+   "index": 165,
+   "name": "GHZ32_PAR48",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 48
+  },
+  {
+   "index": 166,
+   "name": "GHZ32_PAR49",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 49
+  },
+  {
+   "index": 167,
+   "name": "GHZ32_PAR50",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 50
+  },
+  {
+   "index": 168,
+   "name": "GHZ32_PAR51",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 51
+  },
+  {
+   "index": 169,
+   "name": "GHZ32_PAR52",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 52
+  },
+  {
+   "index": 170,
+   "name": "GHZ32_PAR53",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 53
+  },
+  {
+   "index": 171,
+   "name": "GHZ32_PAR54",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 54
+  },
+  {
+   "index": 172,
+   "name": "GHZ32_PAR55",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 55
+  },
+  {
+   "index": 173,
+   "name": "GHZ32_PAR56",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 56
+  },
+  {
+   "index": 174,
+   "name": "GHZ32_PAR57",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 57
+  },
+  {
+   "index": 175,
+   "name": "GHZ32_PAR58",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 58
+  },
+  {
+   "index": 176,
+   "name": "GHZ32_PAR59",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 59
+  },
+  {
+   "index": 177,
+   "name": "GHZ32_PAR60",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 60
+  },
+  {
+   "index": 178,
+   "name": "GHZ32_PAR61",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 61
+  },
+  {
+   "index": 179,
+   "name": "GHZ32_PAR62",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 62
+  },
+  {
+   "index": 180,
+   "name": "GHZ32_PAR63",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 63
+  },
+  {
+   "index": 181,
+   "name": "GHZ32_PAR64",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 64
+  },
+  {
+   "index": 182,
+   "name": "GHZ32_PAR65",
+   "family": "GHZ",
+   "n": 32,
+   "kind": "PAR",
+   "j": 65
+  },
+  {
+   "index": 183,
+   "name": "GHZ48_POP",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 184,
+   "name": "GHZ48_PAR0",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 185,
+   "name": "GHZ48_PAR1",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 186,
+   "name": "GHZ48_PAR2",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 187,
+   "name": "GHZ48_PAR3",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 188,
+   "name": "GHZ48_PAR4",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 189,
+   "name": "GHZ48_PAR5",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 190,
+   "name": "GHZ48_PAR6",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 191,
+   "name": "GHZ48_PAR7",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 192,
+   "name": "GHZ48_PAR8",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 193,
+   "name": "GHZ48_PAR9",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 194,
+   "name": "GHZ48_PAR10",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 195,
+   "name": "GHZ48_PAR11",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 196,
+   "name": "GHZ48_PAR12",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 197,
+   "name": "GHZ48_PAR13",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 198,
+   "name": "GHZ48_PAR14",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 199,
+   "name": "GHZ48_PAR15",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 200,
+   "name": "GHZ48_PAR16",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 201,
+   "name": "GHZ48_PAR17",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 202,
+   "name": "GHZ48_PAR18",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 18
+  },
+  {
+   "index": 203,
+   "name": "GHZ48_PAR19",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 19
+  },
+  {
+   "index": 204,
+   "name": "GHZ48_PAR20",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 20
+  },
+  {
+   "index": 205,
+   "name": "GHZ48_PAR21",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 21
+  },
+  {
+   "index": 206,
+   "name": "GHZ48_PAR22",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 22
+  },
+  {
+   "index": 207,
+   "name": "GHZ48_PAR23",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 23
+  },
+  {
+   "index": 208,
+   "name": "GHZ48_PAR24",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 24
+  },
+  {
+   "index": 209,
+   "name": "GHZ48_PAR25",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 25
+  },
+  {
+   "index": 210,
+   "name": "GHZ48_PAR26",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 26
+  },
+  {
+   "index": 211,
+   "name": "GHZ48_PAR27",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 27
+  },
+  {
+   "index": 212,
+   "name": "GHZ48_PAR28",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 28
+  },
+  {
+   "index": 213,
+   "name": "GHZ48_PAR29",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 29
+  },
+  {
+   "index": 214,
+   "name": "GHZ48_PAR30",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 30
+  },
+  {
+   "index": 215,
+   "name": "GHZ48_PAR31",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 31
+  },
+  {
+   "index": 216,
+   "name": "GHZ48_PAR32",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 32
+  },
+  {
+   "index": 217,
+   "name": "GHZ48_PAR33",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 33
+  },
+  {
+   "index": 218,
+   "name": "GHZ48_PAR34",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 34
+  },
+  {
+   "index": 219,
+   "name": "GHZ48_PAR35",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 35
+  },
+  {
+   "index": 220,
+   "name": "GHZ48_PAR36",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 36
+  },
+  {
+   "index": 221,
+   "name": "GHZ48_PAR37",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 37
+  },
+  {
+   "index": 222,
+   "name": "GHZ48_PAR38",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 38
+  },
+  {
+   "index": 223,
+   "name": "GHZ48_PAR39",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 39
+  },
+  {
+   "index": 224,
+   "name": "GHZ48_PAR40",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 40
+  },
+  {
+   "index": 225,
+   "name": "GHZ48_PAR41",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 41
+  },
+  {
+   "index": 226,
+   "name": "GHZ48_PAR42",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 42
+  },
+  {
+   "index": 227,
+   "name": "GHZ48_PAR43",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 43
+  },
+  {
+   "index": 228,
+   "name": "GHZ48_PAR44",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 44
+  },
+  {
+   "index": 229,
+   "name": "GHZ48_PAR45",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 45
+  },
+  {
+   "index": 230,
+   "name": "GHZ48_PAR46",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 46
+  },
+  {
+   "index": 231,
+   "name": "GHZ48_PAR47",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 47
+  },
+  {
+   "index": 232,
+   "name": "GHZ48_PAR48",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 48
+  },
+  {
+   "index": 233,
+   "name": "GHZ48_PAR49",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 49
+  },
+  {
+   "index": 234,
+   "name": "GHZ48_PAR50",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 50
+  },
+  {
+   "index": 235,
+   "name": "GHZ48_PAR51",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 51
+  },
+  {
+   "index": 236,
+   "name": "GHZ48_PAR52",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 52
+  },
+  {
+   "index": 237,
+   "name": "GHZ48_PAR53",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 53
+  },
+  {
+   "index": 238,
+   "name": "GHZ48_PAR54",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 54
+  },
+  {
+   "index": 239,
+   "name": "GHZ48_PAR55",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 55
+  },
+  {
+   "index": 240,
+   "name": "GHZ48_PAR56",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 56
+  },
+  {
+   "index": 241,
+   "name": "GHZ48_PAR57",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 57
+  },
+  {
+   "index": 242,
+   "name": "GHZ48_PAR58",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 58
+  },
+  {
+   "index": 243,
+   "name": "GHZ48_PAR59",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 59
+  },
+  {
+   "index": 244,
+   "name": "GHZ48_PAR60",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 60
+  },
+  {
+   "index": 245,
+   "name": "GHZ48_PAR61",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 61
+  },
+  {
+   "index": 246,
+   "name": "GHZ48_PAR62",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 62
+  },
+  {
+   "index": 247,
+   "name": "GHZ48_PAR63",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 63
+  },
+  {
+   "index": 248,
+   "name": "GHZ48_PAR64",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 64
+  },
+  {
+   "index": 249,
+   "name": "GHZ48_PAR65",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 65
+  },
+  {
+   "index": 250,
+   "name": "GHZ48_PAR66",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 66
+  },
+  {
+   "index": 251,
+   "name": "GHZ48_PAR67",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 67
+  },
+  {
+   "index": 252,
+   "name": "GHZ48_PAR68",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 68
+  },
+  {
+   "index": 253,
+   "name": "GHZ48_PAR69",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 69
+  },
+  {
+   "index": 254,
+   "name": "GHZ48_PAR70",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 70
+  },
+  {
+   "index": 255,
+   "name": "GHZ48_PAR71",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 71
+  },
+  {
+   "index": 256,
+   "name": "GHZ48_PAR72",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 72
+  },
+  {
+   "index": 257,
+   "name": "GHZ48_PAR73",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 73
+  },
+  {
+   "index": 258,
+   "name": "GHZ48_PAR74",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 74
+  },
+  {
+   "index": 259,
+   "name": "GHZ48_PAR75",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 75
+  },
+  {
+   "index": 260,
+   "name": "GHZ48_PAR76",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 76
+  },
+  {
+   "index": 261,
+   "name": "GHZ48_PAR77",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 77
+  },
+  {
+   "index": 262,
+   "name": "GHZ48_PAR78",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 78
+  },
+  {
+   "index": 263,
+   "name": "GHZ48_PAR79",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 79
+  },
+  {
+   "index": 264,
+   "name": "GHZ48_PAR80",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 80
+  },
+  {
+   "index": 265,
+   "name": "GHZ48_PAR81",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 81
+  },
+  {
+   "index": 266,
+   "name": "GHZ48_PAR82",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 82
+  },
+  {
+   "index": 267,
+   "name": "GHZ48_PAR83",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 83
+  },
+  {
+   "index": 268,
+   "name": "GHZ48_PAR84",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 84
+  },
+  {
+   "index": 269,
+   "name": "GHZ48_PAR85",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 85
+  },
+  {
+   "index": 270,
+   "name": "GHZ48_PAR86",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 86
+  },
+  {
+   "index": 271,
+   "name": "GHZ48_PAR87",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 87
+  },
+  {
+   "index": 272,
+   "name": "GHZ48_PAR88",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 88
+  },
+  {
+   "index": 273,
+   "name": "GHZ48_PAR89",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 89
+  },
+  {
+   "index": 274,
+   "name": "GHZ48_PAR90",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 90
+  },
+  {
+   "index": 275,
+   "name": "GHZ48_PAR91",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 91
+  },
+  {
+   "index": 276,
+   "name": "GHZ48_PAR92",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 92
+  },
+  {
+   "index": 277,
+   "name": "GHZ48_PAR93",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 93
+  },
+  {
+   "index": 278,
+   "name": "GHZ48_PAR94",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 94
+  },
+  {
+   "index": 279,
+   "name": "GHZ48_PAR95",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 95
+  },
+  {
+   "index": 280,
+   "name": "GHZ48_PAR96",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 96
+  },
+  {
+   "index": 281,
+   "name": "GHZ48_PAR97",
+   "family": "GHZ",
+   "n": 48,
+   "kind": "PAR",
+   "j": 97
+  },
+  {
+   "index": 282,
+   "name": "MIX8_POP",
+   "family": "MIX",
+   "n": 8,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 283,
+   "name": "MIX8_PAR0",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 284,
+   "name": "MIX8_PAR1",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 285,
+   "name": "MIX8_PAR2",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 286,
+   "name": "MIX8_PAR3",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 287,
+   "name": "MIX8_PAR4",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 288,
+   "name": "MIX8_PAR5",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 289,
+   "name": "MIX8_PAR6",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 290,
+   "name": "MIX8_PAR7",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 291,
+   "name": "MIX8_PAR8",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 292,
+   "name": "MIX8_PAR9",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 293,
+   "name": "MIX8_PAR10",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 294,
+   "name": "MIX8_PAR11",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 295,
+   "name": "MIX8_PAR12",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 296,
+   "name": "MIX8_PAR13",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 297,
+   "name": "MIX8_PAR14",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 298,
+   "name": "MIX8_PAR15",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 299,
+   "name": "MIX8_PAR16",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 300,
+   "name": "MIX8_PAR17",
+   "family": "MIX",
+   "n": 8,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 301,
+   "name": "MIX32_POP",
+   "family": "MIX",
+   "n": 32,
+   "kind": "POP",
+   "j": null
+  },
+  {
+   "index": 302,
+   "name": "MIX32_PAR0",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 0
+  },
+  {
+   "index": 303,
+   "name": "MIX32_PAR1",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 1
+  },
+  {
+   "index": 304,
+   "name": "MIX32_PAR2",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 2
+  },
+  {
+   "index": 305,
+   "name": "MIX32_PAR3",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 3
+  },
+  {
+   "index": 306,
+   "name": "MIX32_PAR4",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 4
+  },
+  {
+   "index": 307,
+   "name": "MIX32_PAR5",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 5
+  },
+  {
+   "index": 308,
+   "name": "MIX32_PAR6",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 6
+  },
+  {
+   "index": 309,
+   "name": "MIX32_PAR7",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 7
+  },
+  {
+   "index": 310,
+   "name": "MIX32_PAR8",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 8
+  },
+  {
+   "index": 311,
+   "name": "MIX32_PAR9",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 9
+  },
+  {
+   "index": 312,
+   "name": "MIX32_PAR10",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 10
+  },
+  {
+   "index": 313,
+   "name": "MIX32_PAR11",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 11
+  },
+  {
+   "index": 314,
+   "name": "MIX32_PAR12",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 12
+  },
+  {
+   "index": 315,
+   "name": "MIX32_PAR13",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 13
+  },
+  {
+   "index": 316,
+   "name": "MIX32_PAR14",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 14
+  },
+  {
+   "index": 317,
+   "name": "MIX32_PAR15",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 15
+  },
+  {
+   "index": 318,
+   "name": "MIX32_PAR16",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 16
+  },
+  {
+   "index": 319,
+   "name": "MIX32_PAR17",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 17
+  },
+  {
+   "index": 320,
+   "name": "MIX32_PAR18",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 18
+  },
+  {
+   "index": 321,
+   "name": "MIX32_PAR19",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 19
+  },
+  {
+   "index": 322,
+   "name": "MIX32_PAR20",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 20
+  },
+  {
+   "index": 323,
+   "name": "MIX32_PAR21",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 21
+  },
+  {
+   "index": 324,
+   "name": "MIX32_PAR22",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 22
+  },
+  {
+   "index": 325,
+   "name": "MIX32_PAR23",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 23
+  },
+  {
+   "index": 326,
+   "name": "MIX32_PAR24",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 24
+  },
+  {
+   "index": 327,
+   "name": "MIX32_PAR25",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 25
+  },
+  {
+   "index": 328,
+   "name": "MIX32_PAR26",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 26
+  },
+  {
+   "index": 329,
+   "name": "MIX32_PAR27",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 27
+  },
+  {
+   "index": 330,
+   "name": "MIX32_PAR28",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 28
+  },
+  {
+   "index": 331,
+   "name": "MIX32_PAR29",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 29
+  },
+  {
+   "index": 332,
+   "name": "MIX32_PAR30",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 30
+  },
+  {
+   "index": 333,
+   "name": "MIX32_PAR31",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 31
+  },
+  {
+   "index": 334,
+   "name": "MIX32_PAR32",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 32
+  },
+  {
+   "index": 335,
+   "name": "MIX32_PAR33",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 33
+  },
+  {
+   "index": 336,
+   "name": "MIX32_PAR34",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 34
+  },
+  {
+   "index": 337,
+   "name": "MIX32_PAR35",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 35
+  },
+  {
+   "index": 338,
+   "name": "MIX32_PAR36",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 36
+  },
+  {
+   "index": 339,
+   "name": "MIX32_PAR37",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 37
+  },
+  {
+   "index": 340,
+   "name": "MIX32_PAR38",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 38
+  },
+  {
+   "index": 341,
+   "name": "MIX32_PAR39",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 39
+  },
+  {
+   "index": 342,
+   "name": "MIX32_PAR40",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 40
+  },
+  {
+   "index": 343,
+   "name": "MIX32_PAR41",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 41
+  },
+  {
+   "index": 344,
+   "name": "MIX32_PAR42",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 42
+  },
+  {
+   "index": 345,
+   "name": "MIX32_PAR43",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 43
+  },
+  {
+   "index": 346,
+   "name": "MIX32_PAR44",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 44
+  },
+  {
+   "index": 347,
+   "name": "MIX32_PAR45",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 45
+  },
+  {
+   "index": 348,
+   "name": "MIX32_PAR46",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 46
+  },
+  {
+   "index": 349,
+   "name": "MIX32_PAR47",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 47
+  },
+  {
+   "index": 350,
+   "name": "MIX32_PAR48",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 48
+  },
+  {
+   "index": 351,
+   "name": "MIX32_PAR49",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 49
+  },
+  {
+   "index": 352,
+   "name": "MIX32_PAR50",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 50
+  },
+  {
+   "index": 353,
+   "name": "MIX32_PAR51",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 51
+  },
+  {
+   "index": 354,
+   "name": "MIX32_PAR52",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 52
+  },
+  {
+   "index": 355,
+   "name": "MIX32_PAR53",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 53
+  },
+  {
+   "index": 356,
+   "name": "MIX32_PAR54",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 54
+  },
+  {
+   "index": 357,
+   "name": "MIX32_PAR55",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 55
+  },
+  {
+   "index": 358,
+   "name": "MIX32_PAR56",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 56
+  },
+  {
+   "index": 359,
+   "name": "MIX32_PAR57",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 57
+  },
+  {
+   "index": 360,
+   "name": "MIX32_PAR58",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 58
+  },
+  {
+   "index": 361,
+   "name": "MIX32_PAR59",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 59
+  },
+  {
+   "index": 362,
+   "name": "MIX32_PAR60",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 60
+  },
+  {
+   "index": 363,
+   "name": "MIX32_PAR61",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 61
+  },
+  {
+   "index": 364,
+   "name": "MIX32_PAR62",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 62
+  },
+  {
+   "index": 365,
+   "name": "MIX32_PAR63",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 63
+  },
+  {
+   "index": 366,
+   "name": "MIX32_PAR64",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 64
+  },
+  {
+   "index": 367,
+   "name": "MIX32_PAR65",
+   "family": "MIX",
+   "n": 32,
+   "kind": "PAR",
+   "j": 65
+  }
+ ]
+}

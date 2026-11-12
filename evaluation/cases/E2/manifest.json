@@ -1,0 +1,193 @@
+[
+  {
+    "case_id": "E2-01",
+    "set": "E2",
+    "fault_type": "nan_permissive_acceptance",
+    "expected_checks": [
+      "K5_HOLDS_ON_DEGENERATE"
+    ],
+    "faulty_file": "E2-01_faulty.py",
+    "fixed_file": "E2-01_fixed.py",
+    "kind": "realistic",
+    "note": "Acceptance written as 'not any(error > tol)'; NaN errors (0/0 on all-zero data) pass. Fixed: 'all(error <= tol)'.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-02",
+    "set": "E2",
+    "fault_type": "unseeded_global_rng",
+    "expected_checks": [
+      "K6_NONREPRODUCIBLE"
+    ],
+    "faulty_file": "E2-02_faulty.py",
+    "fixed_file": "E2-02_fixed.py",
+    "kind": "realistic",
+    "note": "Permutation test draws from the global numpy RNG (perm_rng = np.random); borderline p-values flip between the two evaluations. Fixed: local Generator with a fixed seed inside the criterion.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-03",
+    "set": "E2",
+    "fault_type": "hidden_state_across_calls",
+    "expected_checks": [
+      "NONDETERMINISTIC",
+      "K6_NONREPRODUCIBLE"
+    ],
+    "faulty_file": "E2-03_faulty.py",
+    "fixed_file": "E2-03_fixed.py",
+    "kind": "realistic",
+    "note": "Deterministic study. The acceptance bar ratchets to the best MSE seen so far (module-level list), so repeated identical calls change the outcome. Fixed: constant baseline 0.01.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-04",
+    "set": "E2",
+    "fault_type": "premise_mutator_noop",
+    "expected_checks": [
+      "K3_PREMISE_NOT_TESTED"
+    ],
+    "faulty_file": "E2-04_faulty.py",
+    "fixed_file": "E2-04_fixed.py",
+    "kind": "realistic",
+    "note": "The tested-premise mutator builds the perturbed copy but returns the original dict. Fixed: returns the copy (40 degree amplitude, period +3.1 %).",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-05",
+    "set": "E2",
+    "fault_type": "declared_change_not_implemented",
+    "expected_checks": [
+      "K2_NO_SEPARATION"
+    ],
+    "faulty_file": "E2-05_faulty.py",
+    "fixed_file": "E2-05_fixed.py",
+    "kind": "realistic",
+    "note": "The world generator uses the module constant COUPLING instead of its argument, so the declared minus change (coupling -> 0) is never applied and minus equals plus in distribution. K2_FAILS_UNREACHABLE may also appear.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-06",
+    "set": "E2",
+    "fault_type": "circular_selection",
+    "expected_checks": [
+      "K5_HOLDS_ON_NOISE",
+      "K2_NO_SEPARATION",
+      "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "faulty_file": "E2-06_faulty.py",
+    "fixed_file": "E2-06_fixed.py",
+    "kind": "realistic",
+    "note": "Double dipping: the voxel is selected and tested on the same trials; the max t over 2000 noise voxels exceeds 3 almost always. Fixed: select on odd trials, test on even trials.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-07",
+    "set": "E2",
+    "fault_type": "absence_as_undefined",
+    "expected_checks": [
+      "K1_UNDEFINED"
+    ],
+    "faulty_file": "E2-07_faulty.py",
+    "fixed_file": "E2-07_fixed.py",
+    "kind": "realistic",
+    "note": "When no peak is detected (effect absent) the criterion returns None instead of False, so it can never fail in minus. Fixed: returns False.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-08",
+    "set": "E2",
+    "fault_type": "control_not_wired",
+    "expected_checks": [
+      "K4_NO_CONTROL"
+    ],
+    "faulty_file": "E2-08_faulty.py",
+    "fixed_file": "E2-08_fixed.py",
+    "kind": "realistic",
+    "note": "The second criterion (phase) is not listed by the only control and has no waiver. Fixed: the control lists both criteria.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-09",
+    "set": "E2",
+    "fault_type": "marginal_instead_of_relation",
+    "expected_checks": [
+      "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "faulty_file": "E2-09_faulty.py",
+    "fixed_file": "E2-09_fixed.py",
+    "kind": "realistic",
+    "note": "A dose-response hypothesis tested by the marginal mean of y (a level), which survives shuffling y against dose. Minus and the vehicle control still fail it, so only the declared relational shuffle probe can catch it. Fixed: OLS slope.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-10",
+    "set": "E2",
+    "fault_type": "external_dependency_leak",
+    "expected_checks": [
+      "K6_LEAK_ATTEMPT"
+    ],
+    "faulty_file": "E2-10_faulty.py",
+    "fixed_file": "E2-10_fixed.py",
+    "kind": "adversarial",
+    "note": "The criterion lists a 'calib' directory (os.scandir) for the newest efficiency file and silently falls back to the nominal value on OSError, so its outcomes equal the fixed twin's; only the leak log reveals it. Differs from E1-05: a directory listing, not a results-file open.",
+    "origin": "Tenkit (E2, kind=adversarial); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-11",
+    "set": "E2",
+    "fault_type": "external_dependency_leak",
+    "expected_checks": [
+      "K6_LEAK_ATTEMPT"
+    ],
+    "faulty_file": "E2-11_faulty.py",
+    "fixed_file": "E2-11_fixed.py",
+    "kind": "realistic",
+    "note": "The reference solution is computed in a child Python process (subprocess.run). When blocked, the criterion raises, so K1_UNDEFINED is also expected. Fixed: the same formula in-process.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-12",
+    "set": "E2",
+    "fault_type": "unit_mismatch",
+    "expected_checks": [
+      "K2_FAILS_UNREACHABLE",
+      "K2_NO_SEPARATION",
+      "K3_PREMISE_NOT_TESTED",
+      "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "faulty_file": "E2-12_faulty.py",
+    "fixed_file": "E2-12_fixed.py",
+    "kind": "adversarial",
+    "note": "The tolerance is written in 1e-6/K but compared in 1/K (0.5 instead of 0.5e-6), so every physical sample passes. A legitimate physical-range guard (L > 0, T > 0) makes the noise and zero probes fail in both twins, so K5 cannot help (README known weakness); minus, premise and control must catch it. The declared tolerance stays resolvable.",
+    "origin": "Tenkit (E2, kind=adversarial); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-13",
+    "set": "E2",
+    "fault_type": "underpowered_design",
+    "expected_checks": [
+      "K2_NO_SEPARATION",
+      "K4_CONTROL_ALSO_HOLDS",
+      "K5_HOLDS_ON_NOISE"
+    ],
+    "faulty_file": "E2-13_faulty.py",
+    "fixed_file": "E2-13_fixed.py",
+    "kind": "realistic",
+    "note": "d = 0.1 with 8 per arm: power about 0.07, indistinguishable from the 0.05 size. Fixed: 2000 per arm (power about 0.94).",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  },
+  {
+    "case_id": "E2-14",
+    "set": "E2",
+    "fault_type": "unit_mismatch",
+    "expected_checks": [
+      "K2_HOLDS_UNREACHABLE",
+      "K2_NO_SEPARATION"
+    ],
+    "faulty_file": "E2-14_faulty.py",
+    "fixed_file": "E2-14_fixed.py",
+    "kind": "realistic",
+    "note": "Deterministic study. The analysis helper takes sin of angles in degrees without conversion, so the fitted index (-0.19) never matches 1.50. Fixed: np.radians.",
+    "origin": "Tenkit (E2, kind=realistic); verbatim fields from manifest_tenkit.json"
+  }
+]

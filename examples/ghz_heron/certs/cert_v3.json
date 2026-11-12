@@ -1,0 +1,327 @@
+{
+  "body": {
+    "alpha_per_bound": 0.0020833333333333333,
+    "components": [
+      {
+        "bounds": {
+          "control:stale_calibration": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:minus": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:plus": {
+            "lower": 0.960569965787,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:stale_calibration": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 137
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K5_INCONCLUSIVE:noise",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "G1_small_n_accuracy",
+        "minus_check": {
+          "changed_keys": [
+            "F_boot",
+            "F_hat"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "F_hat",
+            "F_pred"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      },
+      {
+        "bounds": {
+          "control:column_swap_16_48": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:minus": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:plus": {
+            "lower": 0.960569965787,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:column_swap_16_48": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K5_INCONCLUSIVE:noise",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "G2_excess_decay_grows",
+        "minus_check": {
+          "changed_keys": [
+            "F_boot",
+            "F_hat"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "F_boot",
+            "F_pred"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      },
+      {
+        "bounds": {
+          "control:device_worse_than_model": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:minus": {
+            "lower": 0.0,
+            "upper": 0.039430034213
+          },
+          "world:plus": {
+            "lower": 0.960569965787,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:device_worse_than_model": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 31
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "G3_gme_reach_matches",
+        "minus_check": {
+          "changed_keys": [
+            "F_boot",
+            "F_hat"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "F_boot",
+            "F_pred"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      }
+    ],
+    "kapi_version": "0.3.0",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 12,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "Kapı does not modify or repair criteria. It only reports."
+    ],
+    "numpy_version": "2.5.4",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.5",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "G1_small_n_accuracy"
+          ],
+          "id": "stale_calibration",
+          "kind": "transform"
+        },
+        {
+          "criteria": [
+            "G2_excess_decay_grows"
+          ],
+          "id": "column_swap_16_48",
+          "kind": "transform"
+        },
+        {
+          "criteria": [
+            "G3_gme_reach_matches"
+          ],
+          "id": "device_worse_than_model",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "G1_small_n_accuracy",
+          "regime": "all",
+          "tolerances": {}
+        },
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "G2_excess_decay_grows",
+          "regime": "all",
+          "tolerances": {}
+        },
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "G3_gme_reach_matches",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "cfe3f7de79683b47443a51eebe10a8170a40453a68cfff14da6d84bd94888473",
+      "name": "GHZ fidelity vs calibration model (Heron r2): G1-G3",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "measured fidelity is a constant 0.7 x model (no size-dependent excess)",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "verdict": "WEAK"
+  },
+  "body_sha256": "527a92a77762b12b0f9ab62ad8ab8992c49586a2dc2ca213c5d107157d134093",
+  "created_utc": "2026-11-11T23:17:16Z"
+}
