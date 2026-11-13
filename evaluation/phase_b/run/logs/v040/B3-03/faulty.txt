@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_radionuclide_volume, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B3-03\faulty.json
+body_sha256: 78a88a26df37c81acf6fb72ca3cd382634a7bece20a323a5dfab42c9edd2d1ed

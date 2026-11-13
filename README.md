@@ -246,9 +246,14 @@ The full account, with every number, is in [`docs/EVALUATION.md`](docs/EVALUATIO
   certificate as 0.3. Manifests reproduce the hand-written examples (7 of 7). Criteria written in Node give the same
   answers as in Python (6 of 6). The new invariance check caught a planted order dependence and changed its verdict.
   This is an internal check on the project's own examples, not external evidence.
-* **The evaluation is not independent.** The test cases were written by AI sessions that knew the spec, from the same
-  model family that wrote the code. There is no human-authored external benchmark yet; building one is Phase B (see the
-  [Roadmap](#roadmap)).
+* **Phase B, errors documented in the literature: one class of four met the pre-registered bar.** 54 faulty/fixed
+  pairs built from published errors, frozen and pushed before the run. Inflated-size decision rules (B-6): 11 of 12
+  detected, 11 of 12 fixed passed (holds). Circular analysis 7/12 and 7/12, procedure-level leakage 7/12 and 11/12,
+  coupling by construction 8/12 and 8/12 (fail). Detections depended on declared worlds that contained what the error
+  exploits; the world author had inferred the error for most briefs. Details in
+  [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md).
+* **The evaluation is not independent.** All test cases, including Phase B, were written by AI sessions from the same
+  model family that wrote the code. There is no human-authored external benchmark.
 
 ## Limits
 
@@ -309,10 +314,10 @@ What follows from that:
 * `files = glob` worlds.
 * YAML and Parquet input.
 
-**Next, Phase B: external evidence.** An external test set built from documented real errors in published research,
-where the correct answer comes from the literature, not from us. The evaluation criteria are pre-registered before the
-set is built, and the result is reported as coverage per error class. It runs on the frozen 0.4.0 and is reported when
-it is done.
+**Phase B: done (2026-11-13).** The external test set of documented errors ran on the frozen 0.4.0; results and limits
+in [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md). It points at two things for a later version, each to
+be pre-registered on its own: how K1 treats UNDEFINED outcomes that come from a criterion's own guard (they turned five
+flagged circular-analysis criteria into UNDEFINED), and human-written cases.
 
 Feedback is welcome as issues, especially real cases in which the gate caught, or missed, a defect.
 

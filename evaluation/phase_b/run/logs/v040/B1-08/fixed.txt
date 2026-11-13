@@ -1,0 +1,6 @@
+COMPONENT  VERDICT    FLAGS
+C          UNDEFINED  K1_UNDEFINED, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: UNDEFINED
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B1-08\fixed.json
+body_sha256: 6e94114d51e438da5ef754b72e4cae8528c662b07d4e83a208721590cfd1dd7c

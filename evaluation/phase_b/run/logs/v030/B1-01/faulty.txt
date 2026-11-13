@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:scramble_voxels_in_run_2, HIGH_RATE:probe:noise, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v030\B1-01\faulty.json
+body_sha256: d1f41aac20fe3068e37e4ed2f3bcb97dfbdc3763e9543af9e882eae93c436c42

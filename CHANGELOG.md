@@ -3,6 +3,13 @@
 Each release implements one frozen specification (`docs/SPEC.md` for 0.1 to 0.3, `docs/design/spec-0.6.md` for 0.4). The
 package version is `tool_version` in the certificate (`kapi_version` up to 0.3); the spec version is `spec_version`.
 
+## Evaluation, Phase B (2026-11-13)
+
+No change to the package or the spec. The pre-registered external evaluation of 0.4.0 on errors documented in the
+literature ran on the frozen cases (`evaluation/phase_b/`): one in-scope class of four held (B-6, inflated-size decision
+rules, 11/12 detected and 11/12 clean); B-1, B-2 and B-3 failed. Report: `evaluation/phase_b/REPORT.md`; summary in
+`docs/EVALUATION.md`.
+
 ## 0.4.0 (spec 0.6, 2026-11-12)
 
 Post-freeze decisions of the implementation are in `docs/design/spec-0.6-REVISIONS-post-freeze.md` (R-1 to R-34).

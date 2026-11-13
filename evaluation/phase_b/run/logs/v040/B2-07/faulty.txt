@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_diagnosis_by_patient, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B2-07\faulty.json
+body_sha256: 24dc67f9422a8e51ae1bd741640aed69b02ded5903725696045a197c25426b64

@@ -1,0 +1,158 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:permute_recall_old": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          },
+          "probe:noise": {
+            "lower": 0.023336523234,
+            "upper": 0.103887678284
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.126325818584,
+            "upper": 0.262731122479
+          },
+          "world:plus": {
+            "lower": 0.677440567069,
+            "upper": 0.826829894276
+          }
+        },
+        "counts": {
+          "control:permute_recall_old": {
+            "holds": 3,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 10,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 37,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 152,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K2_HIGH_SIZE",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "recall_old",
+            "recall_young"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "recall_old",
+            "recall_young",
+            "sleep_old",
+            "sleep_young"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "NOT_FALSIFIABLE"
+      }
+    ],
+    "kapi_version": "0.3.0",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "Kapı does not modify or repair criteria. It only reports."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.5",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "permute_recall_old",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "27af80f146559ec2bacec68d9590c454ffa68ef3c8f47b1fb144fc6a74439bfc",
+      "name": "W20",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "true correlations 0.15 (younger) and 0.60 (older) -> both 0.375, equal (each group still shows a moderate sleep-recall correlation); means, sds and sample sizes unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "verdict": "NOT_FALSIFIABLE"
+  },
+  "body_sha256": "2f8b74d9ee692a55868dd975358aa9fe48bcdbe7f9862519461679b6dc0c3062",
+  "created_utc": "2026-11-13T04:26:40Z"
+}

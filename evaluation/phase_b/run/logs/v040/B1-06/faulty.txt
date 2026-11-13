@@ -1,0 +1,6 @@
+COMPONENT  VERDICT    FLAGS
+C          UNDEFINED  HIGH_RATE:control:permute_subjects, HIGH_RATE:probe:noise, K1_UNDEFINED, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: UNDEFINED
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B1-06\faulty.json
+body_sha256: 1c20a809ab37fc11c3c7feb10467cef296286525337e28c71a846f84a7b1dee7

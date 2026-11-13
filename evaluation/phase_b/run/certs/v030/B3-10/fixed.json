@@ -1,0 +1,155 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:permute_relative_heart_weight": {
+            "lower": 0.006169959611,
+            "upper": 0.062869188675
+          },
+          "probe:noise": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          },
+          "world:plus": {
+            "lower": 0.969750887203,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:permute_relative_heart_weight": {
+            "holds": 4,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 3,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 3,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "systolic_pressure"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "body_weight",
+            "heart_weight",
+            "systolic_pressure"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      }
+    ],
+    "kapi_version": "0.3.0",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "Kapı does not modify or repair criteria. It only reports."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.5",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "permute_relative_heart_weight",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "7075193e277245938ecfc357e481a26baee6b4f1af09352d79bedf0be2b8243f",
+      "name": "W51",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "pressure rises with relative heart weight (7.5 mmHg per sd, correlation about 0.5) -> no dependence on relative heart weight; pressure still rises with body weight (10 mmHg per sd) so absolute heart weight (proportional to body weight) still correlates with pressure at about 0.6",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "verdict": "WEAK"
+  },
+  "body_sha256": "b608b19de744988a3dd9f1bf6eafa84295969db3b7026ee837cd3372a5027281",
+  "created_utc": "2026-11-13T04:26:35Z"
+}

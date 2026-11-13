@@ -95,3 +95,24 @@ answered "yes" on all seven items for both. No pair was dropped. The two pairs a
   audits and the designer's scripts. Source texts (PDF, HTML, XML and full-text extracts) are not published.
   **`FREEZE_RECORD.json`** (143 files), core `21E1520ADD1F0C18`.
 * Nobody has run Truth_Gate on any case. Next: the run (§6).
+
+## P-6 (2026-11-13): public timestamp before the run
+
+With the author's approval, the frozen pre-run state (pre-registration, cases, expected flags, record, this log up to
+P-5) was committed and pushed to the public repository as commit `fe86e96` before any gate run. The runner
+(`run_phase_b.py`) is written after that commit and is not part of it; it reads only the frozen files.
+
+## P-7 (2026-11-13): run, recomputation, report, post-run audit
+
+* **Run.** `run_phase_b.py` (written after `fe86e96`; it verifies `FREEZE_CASES.json` and the worktree's tag commit
+  before running) ran v0.4.0 and then v0.3.0 on all 108 files, one at a time, full mode: no timeout, at most 29 s per
+  check. v0.3.0 gave the same verdict on every file.
+* **Recomputation.** The designer's script `run/recompute_designer.py`, written without reading the runner, reproduced
+  every per-pair result and class count (0 differences over 54 pairs).
+* **Result (pre-registered, unchanged).** B-1 7/12 detected, 7/12 clean, FAILS; B-2 7/12, 11/12, FAILS; B-3 8/12,
+  8/12, FAILS; B-6 11/12, 11/12, HOLDS; out of scope 2/6, 5/6.
+* **Report and audit.** `REPORT.md` sections 1–4 give the pre-registered results, section 5 the interpretation of every
+  miss and failed clean pass. The blind post-run auditor answered (i) "yes" for all 33 in-scope detections, attributed
+  six failed clean passes to the fixed criterion and five to the skeleton, found four signs of brief steering (B2-07,
+  B3-05, O1a, O2a), and objected to four statements of section 5. The designer checked the objections against the
+  certificates; section 5 was corrected and says so. Nothing in sections 1–4 changed.

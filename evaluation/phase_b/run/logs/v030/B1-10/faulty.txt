@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_drug_labels, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS, K5_INCONCLUSIVE:noise, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v030\B1-10\faulty.json
+body_sha256: 992b4b9304b34c95319f192e2a5405683ceffc31d57736f211d0cbd575fda191

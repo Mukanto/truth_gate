@@ -1,0 +1,6 @@
+COMPONENT  VERDICT    FLAGS
+C          UNDEFINED  HIGH_RATE:control:swap_pre_post, HIGH_RATE:probe:noise, K1_UNDEFINED, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: UNDEFINED
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B1-08\faulty.json
+body_sha256: 2b3535ead185a1ed429dd1cdc8bbdc7481dbcf18c2b64e5f04b8e247d547a1b7

@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_DEGENERATE, K5_HOLDS_ON_NOISE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B3-12\fixed.json
+body_sha256: 8b43983405598745f40063b9e32528285707b46f3bf61ba28ec58979038f0055

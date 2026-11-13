@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_tumour, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v030\B2-01\faulty.json
+body_sha256: 180af383cfa4f0ec2c7fb822ea0ff79c7abc133952970eb2962ac279c53ff5d2

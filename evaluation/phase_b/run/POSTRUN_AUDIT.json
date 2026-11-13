@@ -1,0 +1,596 @@
+[
+ {
+  "case": "B1-01",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:scramble_voxels_in_run_2, HIGH_RATE:probe:noise, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE. HOLDS faulty vs fixed: faulty plus 200/200, minus 200/200, ctrl 200/200, noise 200/200; fixed plus 176/200, minus 0/200, ctrl 2/200, noise 1/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W05, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-02",
+  "i": "yes",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:shuffle_across_orientations, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K5_HOLDS_ON_NOISE. HOLDS faulty vs fixed: faulty plus 200/200, minus 124/200, ctrl 105/200, noise 199/200; fixed plus 200/200, minus 1/200, ctrl 0/200, noise 21/200. Caveat: the fixed twin is itself flagged HIGH_RATE:probe:noise (21/200, NOT_FALSIFIABLE) while the faulty has 199/200; the shared flag name is at a ten-fold lower rate, and the faulty's K2_HIGH_SIZE (124 vs 1) and control flag (105 vs 0) are absent from the fixed twin.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags HIGH_RATE:probe:noise; fixed plus 200/200, minus 1/200, ctrl 0/200, noise 21/200. The fixed twin is the documented split-half correction, but it holds on the noise probe in 21/200 (HIGH_RATE:probe:noise, above the size). The index (r_pref-r_orth)/(r_pref+r_orth) is unstable on the N(0,1) probe, which has negative values outside the declared non-negative domain; the criterion clips it instead of guarding. Worlds and control are fine (minus 1/200, control 0/200). The cause is the criterion on the generic probe, not the skeleton.",
+   "iii": "No sign beyond I-4 (world W07, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-03",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 154/200, ctrl 10/200, noise 0/200; fixed plus 139/200, minus 7/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W28, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-04",
+  "i": "n/a",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Flags are present (HIGH_RATE control/noise, K2_HIGH_SIZE) but the allowed empty-selection guard returns UNDEFINED in 173/200 minus samples and K1 makes the study UNDEFINED; needed: a minus stream in which the criterion is defined (no UNDEFINED guard, or a selection that is not empty in minus).",
+   "ii": "Fixed verdict UNDEFINED, flags K1_UNDEFINED, K4_INCONCLUSIVE; fixed plus 169/200, minus 1/200 (u137), ctrl 4/200 (u137), noise 2/200 (u116). Fixed twin UNDEFINED: its allowed empty-selection guard returns UNDEFINED in 137/200 minus samples (p<.01 repair after the fidelity audit); K1 then makes the study UNDEFINED. Plus is 169/200, defined. The minus is a legitimate null where nothing is selected; the criterion's guard (not the world) turns that into UNDEFINED.",
+   "iii": "No sign beyond I-4 (world W19, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-05",
+  "i": "n/a",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Flags present but the empty-selection guard gives UNDEFINED in 171/200 minus samples, so K1 dominates; needed: a minus stream where the criterion returns True/False in every sample.",
+   "ii": "Fixed verdict UNDEFINED, flags K1_UNDEFINED, K4_INCONCLUSIVE; fixed plus 176/200 (u12), minus 9/200 (u166), ctrl 14/200 (u168), noise 1/200 (u159). Fixed twin UNDEFINED: empty-selection guard returns UNDEFINED in 166/200 minus samples (12/200 plus); K1 decides. Same mechanism as B1-04; guard in the criterion.",
+   "iii": "No sign beyond I-4 (world W34, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-06",
+  "i": "n/a",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Flags present (K2_HIGH_SIZE, controls, noise) but 32/200 minus samples are UNDEFINED (empty selection); K1 turns the study UNDEFINED. Among defined minus samples the faulty holds in 86/168, not 'whenever defined' as REPORT 5.1 says. Needed: a defined outcome in every minus sample.",
+   "ii": "Fixed verdict UNDEFINED, flags K1_UNDEFINED, K2_LOW_POWER; fixed plus 104/200 (u2), minus 3/200 (u71), ctrl 3/200 (u62), noise 2/200 (u60). Fixed twin UNDEFINED: guards (empty selection, group size) give UNDEFINED in 71/200 minus and 2/200 plus samples; plus power is also low (104/200, K2_LOW_POWER) because the split halves leave 7+7 subjects. Mostly the guard; the low power is a skeleton size effect.",
+   "iii": "No sign beyond I-4 (world W09, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-07",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Strongest K1 case: flags are present (K2_HIGH_SIZE, noise 191/200, control 115/200) and only 4/200 minus samples (18 control, 9 noise) are UNDEFINED, yet that alone makes the verdict UNDEFINED. Among defined minus samples the faulty holds in 109/196, not 'whenever defined'. Needed: the same streams with no UNDEFINED outcome in plus/minus.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W15, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-08",
+  "i": "n/a",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Flags present but 68/200 minus samples UNDEFINED (guard: fewer than 5 responders); K1 gives UNDEFINED. Needed: a defined outcome in every minus sample (the guard could return False).",
+   "ii": "Fixed verdict UNDEFINED, flags K1_UNDEFINED; fixed plus 200/200, minus 15/200 (u75), ctrl 15/200 (u52), noise 16/200 (u52). Fixed twin UNDEFINED: guard 'fewer than 5 responders' gives UNDEFINED in 75/200 minus samples; K1 decides. Guard in the criterion.",
+   "iii": "No sign beyond I-4 (world W21, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-09",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 89/200, ctrl 0/200, noise 0/200; fixed plus 185/200, minus 2/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W41, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-10",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_drug_labels, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS. HOLDS faulty vs fixed: faulty plus 200/200, minus 138/200, ctrl 199/200, noise 0/200 (u200); fixed plus 187/200, minus 8/200, ctrl 10/200, noise 0/200 (u200).",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W22, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B1-11",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:remove_average_programme_effect, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K5_HOLDS_ON_NOISE. HOLDS faulty vs fixed: faulty plus 200/200, minus 146/200, ctrl 137/200, noise 200/200; fixed plus 190/200, minus 3/200, ctrl 10/200, noise 5/200.",
+   "ii": "Fixed twin is a clean pass (verdict FALSIFIABLE).",
+   "iii": "No sign beyond I-4 (world W52, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error. Key 'visit 1 = second assessment just before the programme' exists to enable the correction; the regression-to-the-mean structure in minus comes from the claim's 'top fifth' selection, not from this wording."
+  }
+ },
+ {
+  "case": "B1-12",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:remove_average_tutoring_gain, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 134/200, ctrl 140/200, noise 0/200; fixed plus 170/200, minus 0/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W12, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error. Key 'test 1 = a second test just before tutoring' enables the correction; the structure in minus comes from the claim's 'lowest fifth' selection."
+  }
+ },
+ {
+  "case": "B2-01",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_tumour, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE. HOLDS faulty vs fixed: faulty plus 200/200, minus 186/200, ctrl 191/200, noise 195/200; fixed plus 177/200, minus 8/200, ctrl 13/200, noise 13/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W38, awareness N): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-02",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_relapse, HIGH_RATE:probe:noise, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE. HOLDS faulty vs fixed: faulty plus 200/200, minus 200/200, ctrl 200/200, noise 200/200; fixed plus 165/200, minus 6/200, ctrl 7/200, noise 7/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W35, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-03",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds in minus only 9/200 (nominal). The selection-before-CV bias is small with 60 genes; needed: a minus stream with many more candidate features (thousands, as in the source) or fewer samples per feature.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W36, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-04",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_subtype, HIGH_RATE:probe:noise, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 67/200, ctrl 55/200, noise 60/200; fixed plus 133/200, minus 1/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W27, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-05",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:probe:noise. HOLDS faulty vs fixed: faulty plus 199/200, minus 3/200, ctrl 2/200, noise 22/200; fixed plus 140/200, minus 0/200, ctrl 0/200, noise 0/200. Fragile: the only expected flag is HIGH_RATE:probe:noise at 22/200 (fixed 0/200); faulty minus is 3/200 and its control 2/200. The detection is a marginal noise-probe flag, not a world-based separation.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W16, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error. Informative missingness (19% vs 27%) is the world author's judgement call (log W16), but the detection is a noise-probe flag that does not depend on the worlds."
+  }
+ },
+ {
+  "case": "B2-06",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty (SMOTE before folds) holds 0/200 in minus and 2/200 on the control: the synthetic rows do not leak a label in a null world with 30 independent markers. Needed: a minus where interpolated minority rows lie close to their originals (low dimension, tight minority cluster).",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W18, awareness N): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-07",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "yes",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_diagnosis_by_patient. HOLDS faulty vs fixed: faulty plus 200/200, minus 12/200, ctrl 20/200, noise 0/200; fixed plus 190/200, minus 0/200, ctrl 0/200, noise 0/200. Only expected flag is HIGH_RATE:control (20/200 vs 0/200 in the fixed twin); minus 12/200 is below the K2 size. Marginal but absent from the fixed twin.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "The brief itself states that about a quarter of the rows repeat an earlier entry exactly with its diagnosis (and the claim says 'some patients were entered more than once'). The duplicated structure that the detection relies on (the control flag) was dictated by the brief's wording, not by the claim of prediction accuracy."
+  }
+ },
+ {
+  "case": "B2-08",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_fraud, HIGH_RATE:probe:noise, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS. HOLDS faulty vs fixed: faulty plus 200/200, minus 200/200, ctrl 200/200, noise 41/200; fixed plus 194/200, minus 0/200, ctrl 0/200, noise 15/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W30, awareness N): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-09",
+  "i": "n/a",
+  "ii": "no",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds in minus 3/200. In the declared minus the indicators carry no relation to the slow hazard, so neighbouring rows in shuffled folds do not help. Needed: a minus where indicators and onsets share a slow time-varying component (so that shuffled folds leak through temporal neighbours).",
+   "ii": "Fixed verdict UNDEFINED, flags K1_UNDEFINED, K2_LOW_POWER; fixed plus 73/200 (u17), minus 11/200 (u6), ctrl 3/200, noise 1/200. Fixed twin UNDEFINED: the guard 'a class is missing in the training or test part' returns UNDEFINED in 17/200 plus and 6/200 minus samples (onsets cluster in time, a skeleton property), and the fixed holds in only 73/200 plus (K2_LOW_POWER). The guard decides the verdict; the clustering and low plus power are skeleton contributions.",
+   "iii": "No sign beyond I-4 (world W14, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-10",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds in minus 2/200. In minus the persistent driver is not measured by any indicator, so shuffled folds gain nothing. Needed: a minus where the indicators and the target share a slow component.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W37, awareness C): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-11",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_mutation_across_patients, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 39/200, ctrl 58/200, noise 0/200; fixed plus 115/200, minus 0/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W06, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B2-12",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds in minus 0/200. Hospital shifts in the characteristics are independent of the hospital effect on stay, so seeing the hospital in training cannot help. Needed: a minus where the hospital shift in the characteristics is correlated with the hospital effect on stay.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W49, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-01",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_vo2_expired, HIGH_RATE:probe:noise, K4_CONTROL_ALSO_HOLDS. HOLDS faulty vs fixed: faulty plus 200/200, minus 8/200, ctrl 200/200, noise 169/200; fixed plus 190/200, minus 0/200, ctrl 1/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W29, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-02",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 25/200, ctrl 2/200, noise 0/200; fixed plus 197/200, minus 0/200, ctrl 0/200, noise 0/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W26, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-03",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_radionuclide_volume, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS. HOLDS faulty vs fixed: faulty plus 196/200, minus 24/200, ctrl 196/200, noise 0/200; fixed plus 172/200, minus 2/200, ctrl 3/200, noise 3/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W53, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-04",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_vo2_expired, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS. HOLDS faulty vs fixed: faulty plus 198/200, minus 27/200, ctrl 198/200, noise 172/200; fixed plus 176/200, minus 1/200, ctrl 1/200, noise 3/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W45, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-05",
+  "i": "yes",
+  "ii": "yes",
+  "iii": "yes",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:probe:noise, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 75/200, ctrl 0/200, noise 56/200; fixed plus 198/200, minus 34/200, ctrl 0/200, noise 0/200. Two reasons: noise probe 56/200 (fixed 0/200, clean difference) and K2_HIGH_SIZE in minus (faulty 75/200, fixed 34/200). The fixed twin carries K2_HIGH_SIZE too, at under half the rate and for a skeleton reason (shared body-size factor), so the minus-based part is only partly due to the error; the noise-probe part is.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_HIGH_SIZE; fixed plus 198/200, minus 34/200, ctrl 0/200, noise 0/200. Fixed (partial correlation, column length held fixed) holds in 34/200 minus (K2_HIGH_SIZE). The skeleton keeps a shared body-size factor and a noisy shared column length in both worlds, so a residual correlation remains after partialling (the criterion author measured a mean partial correlation of 0.317 in minus). It is the documented correction; the skeleton's minus is not null after it.",
+   "iii": "Beyond I-4: the world log says the artefact was left close to the threshold 'on purpose' (minus ratio correlation about 0.37 vs threshold 0.4). That size choice only makes sense for the error and drives the K2_HIGH_SIZE part of the detection (faulty minus 75/200). The noise-probe flag (56/200) does not depend on it."
+  }
+ },
+ {
+  "case": "B3-06",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "The faulty criterion is literally the claim (rank correlation of two per-capita values computed from totals). Faulty holds 0/200 in minus because the world generates the per-capita values directly; the totals correlate (0.74) but the criterion never looks at totals. Needed: a minus where the per-capita values are derived from totals sharing a population error.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W17, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-07",
+  "i": "yes",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:probe:noise. HOLDS faulty vs fixed: faulty plus 200/200, minus 8/200, ctrl 0/200, noise 56/200; fixed plus 151/200, minus 23/200, ctrl 11/200, noise 0/200. Only expected flag is HIGH_RATE:probe:noise 56/200 (fixed 0/200). The fixed twin has K2_HIGH_SIZE (23/200) that the faulty does not.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_HIGH_SIZE; fixed plus 151/200, minus 23/200, ctrl 11/200, noise 0/200. Fixed (yield on fertilizer with area as covariate) holds in 23/200 minus and only 151/200 plus. The skeleton records area with a 15% error that enters both totals, so total fertilizer acts as a second area proxy and a positive residual stays in minus. Skeleton property; the correction is the documented one.",
+   "iii": "No sign beyond I-4 (world W43, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-08",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:probe:noise, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 172/200, minus 22/200, ctrl 0/200, noise 90/200; fixed plus 110/200, minus 1/200, ctrl 0/200, noise 2/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W24, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-09",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds 0/200 in minus: the world author found no ratio artefact (log level C: none beyond Poisson noise). Needed: a minus where infections and admissions share a size-driven component that the beds variable also tracks.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W23, awareness C): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-10",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty holds 2/200 in minus: relative heart weight is generated directly, so hw/bw carries no shared error. Needed: a minus where heart weight and body weight carry a common error (the ratio then correlates with pressure through body weight).",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W51, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-11",
+  "i": "yes",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 41/200, ctrl 0/200, noise 0/200; fixed plus 4/200, minus 0/200, ctrl 0/200, noise 0/200. Faulty K2_HIGH_SIZE (minus 41/200) is absent from the fixed twin (0/200). The fixed twin fails for another reason (plus 4/200).",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_DEGENERATE, K5_HOLDS_ON_NOISE; fixed plus 4/200, minus 0/200, ctrl 0/200, noise 0/200. Fixed (Spearman partial correlation given floor area) holds in plus 4/200: the plus world has a direct occupant effect of only -0.12 log units per sd, so the partial rank correlation (about -0.125) is far from the -0.3 threshold; K2_NO_SEPARATION, K4 and K5_HOLDS_ON_NOISE follow from not holding in plus. The skeleton's plus effect was calibrated to the raw claim, not to the corrected quantity. Caveat: the correction changes the estimand.",
+   "iii": "No sign beyond I-4 (world W02, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B3-12",
+  "i": "n/a",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty (R2 of turnover rate on payroll) holds 199/200 in plus and 0/200 in minus; REPORT 5.2 does not list this pair among the explained misses. World log level C: payroll = headcount x wage with the true rate independent of size in minus, so no ratio artefact. Needed: a minus where the leaver count shares an error with headcount or payroll.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_DEGENERATE, K5_HOLDS_ON_NOISE; fixed plus 1/200, minus 15/200, ctrl 0/200, noise 0/200. Fixed (payroll R2 given headcount) holds in plus 1/200: in the skeleton the true turnover rate depends on headcount only and payroll = headcount x independent wage, so payroll carries no information beyond headcount even in plus (partial R2 about 0.012). Skeleton plus has nothing for the correction to find. Caveat: partialling headcount changes the estimand.",
+   "iii": "No sign beyond I-4 (world W11, awareness C): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-01",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 117/200, minus 59/200, ctrl 13/200, noise 5/200; fixed plus 158/200, minus 7/200, ctrl 5/200, noise 7/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W32, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-02",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:swap_regions, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 165/200, minus 24/200, ctrl 37/200, noise 3/200; fixed plus 165/200, minus 8/200, ctrl 7/200, noise 3/200. Rates are modest: faulty minus 24/200 (fixed 8) and control 37/200 (fixed 7). Present in faulty, absent in fixed.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W48, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-03",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 152/200, minus 37/200, ctrl 3/200, noise 10/200; fixed plus 133/200, minus 3/200, ctrl 1/200, noise 4/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W20, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-04",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:reassign_ponds, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 195/200, minus 49/200, ctrl 44/200, noise 12/200; fixed plus 133/200, minus 6/200, ctrl 2/200, noise 5/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W25, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-05",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_dose, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 192/200, minus 34/200, ctrl 25/200, noise 10/200; fixed plus 160/200, minus 9/200, ctrl 7/200, noise 6/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W46, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-06",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:reassign_plots, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 200/200, minus 28/200, ctrl 44/200, noise 4/200; fixed plus 185/200, minus 3/200, ctrl 3/200, noise 5/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W39, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-07",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:reassign_animals, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 188/200, minus 33/200, ctrl 38/200, noise 5/200; fixed plus 126/200, minus 3/200, ctrl 3/200, noise 6/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W42, awareness N): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-08",
+  "i": "yes",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_trials_within_participant, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 198/200, minus 177/200, ctrl 148/200, noise 7/200; fixed plus 198/200, minus 51/200, ctrl 5/200, noise 7/200. Faulty minus 177/200 and control 148/200; the fixed twin still carries K2_HIGH_SIZE at 51/200 (shared linear drift in the skeleton), but at a third of the rate and the control flag is absent (5/200). The detection follows the error; the fixed twin's flag has a different cause.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_HIGH_SIZE; fixed plus 198/200, minus 51/200, ctrl 5/200, noise 7/200. Fixed (per-participant correlations, Fisher z, one-sample t) holds in minus 51/200: the skeleton keeps a shared linear trial drift in both measures in both worlds (real within-participant correlation about 0.065), which the participant-level analysis legitimately detects. The documented correction does not remove drift.",
+   "iii": "No sign beyond I-4 (world W50, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error. 'Trials in time order' in the key text is gratuitous and let the author add a shared drift, but the detection (pooled correlation holds in minus) comes from the between-participant link the log records as the error inference (I-4); the drift acts on the fixed twin's failure."
+  }
+ },
+ {
+  "case": "B6-09",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:swap_conditions_within_animals. HOLDS faulty vs fixed: faulty plus 199/200, minus 2/200, ctrl 58/200, noise 5/200; fixed plus 155/200, minus 3/200, ctrl 3/200, noise 5/200. Only expected flag is HIGH_RATE:control (swap within animals, 58/200 vs 3/200 fixed); minus holds only 2/200, so the pseudoreplication does not show in the declared minus.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W31, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-10",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty ('attended slope significant, unattended not') holds in minus 10/200 (5%). 10/200 fits each slope being significant in only about 7% of samples, so REPORT 5.2's 'borderline' is loose. Needed: a minus with equal slopes at about 50% power each, where the difference-of-significance rate peaks.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W13, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-11",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:permute_thickness, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 194/200, minus 28/200, ctrl 41/200, noise 8/200; fixed plus 178/200, minus 10/200, ctrl 14/200, noise 10/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W44, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "B6-12",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty expected flags: K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 87/200, minus 45/200, ctrl 11/200, noise 6/200; fixed plus 160/200, minus 8/200, ctrl 5/200, noise 6/200.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W10, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "O1a",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "yes",
+  "reasons": {
+   "i": "Faulty expected flags: K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION. HOLDS faulty vs fixed: faulty plus 200/200, minus 200/200, ctrl 6/200, noise 0/200; fixed plus 190/200, minus 15/200, ctrl 11/200, noise 0/200. Out of scope. Minus 200/200 vs 15/200 because the world keeps the therapy-dose leak in minus (K2 flags).",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "The data-key meaning names the leaking variable ('number of doses of the targeted therapy recorded during the stay'). The world kept its dependence on the diagnosis in minus (log: 'a leak: the therapy follows the diagnosis') and the detection (K2 flags, minus 200/200) rests on exactly that. A key that only makes sense for the error."
+  }
+ },
+ {
+  "case": "O1b",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Out of scope miss (expected): faulty 3/200 in minus. Needed: a minus where unstandardised-PCA scale differences make the top components follow the nuisance program and still predict the label.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W33, awareness C): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "O2a",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "yes",
+  "reasons": {
+   "i": "Faulty expected flags: HIGH_RATE:control:pool_and_resplit, HIGH_RATE:probe:noise, K2_HIGH_SIZE. HOLDS faulty vs fixed: faulty plus 186/200, minus 137/200, ctrl 20/200, noise 23/200; fixed plus 177/200, minus 10/200, ctrl 14/200, noise 12/200. Only K2_HIGH_SIZE separates the twins clearly (minus 137/200 vs 10/200). The HIGH_RATE flags on control (20 vs 14/200) and noise (23 vs 12/200) are near the fixed twin's rates.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "The brief introduces a secondary outcome 'correlated, r about 0.5' although the claim concerns measure 1 only; the world keeps the secondary effect (+7) in minus, which is what the faulty best-of-analyses exploits (K2_HIGH_SIZE, minus 137/200). The extra column and its correlation make sense only for the error."
+  }
+ },
+ {
+  "case": "O2b",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Out of scope miss (expected): the stopping rule needs sequential peeking; faulty holds 17/200 in minus (8.5%), below the HIGH_RATE size. Needed: a null stream with many interim looks, which fixed-size arrays only allow through row order.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W03, awareness C): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ },
+ {
+  "case": "O3a",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Out of scope miss (expected): an off-by-one column choice cannot create a spurious hold in a null; faulty 0/200 in minus. Needed: a minus where the mistakenly chosen column carries signal related to sensitivity.",
+   "ii": "Fixed twin is a clean pass (verdict WEAK).",
+   "iii": "No sign beyond I-4 (world W08, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error. No detection, so nothing relied on it, but the brief spells out 'columns 5 to 9 counting from 1' twice, which names the off-by-one procedure."
+  }
+ },
+ {
+  "case": "O3b",
+  "i": "n/a",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "Out of scope miss: the faulty criterion (drops countries, equal-weights means) holds in minus 9/200, LESS often than its pooled fixed twin (34/200). No stream of these worlds can separate them. Needed: a minus where the exclusions track the debt-growth gap.",
+   "ii": "Fixed verdict NOT_FALSIFIABLE, flags K2_HIGH_SIZE; fixed plus 200/200, minus 34/200, ctrl 3/200, noise 0/200 (u200). Fixed (pooled mean gap) holds in minus 34/200: the skeleton keeps country confounding and reverse causation in both worlds (observed minus gap about -1.0 vs threshold -1.5). Not an error the correction targets; a skeleton property. Out of scope.",
+   "iii": "No sign beyond I-4 (world W47, awareness P): the brief's keys and sizes follow the claim and the minus structure comes from the author's inference of the error."
+  }
+ }
+]

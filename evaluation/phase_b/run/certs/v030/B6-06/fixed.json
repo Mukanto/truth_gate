@@ -1,0 +1,155 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:reassign_plots": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          },
+          "probe:noise": {
+            "lower": 0.008647472624,
+            "upper": 0.070089184533
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          },
+          "world:plus": {
+            "lower": 0.864564660173,
+            "upper": 0.959723593949
+          }
+        },
+        "counts": {
+          "control:reassign_plots": {
+            "holds": 3,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 5,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 3,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 185,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "richness_mown",
+            "richness_unmown"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "richness_mown",
+            "richness_unmown"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      }
+    ],
+    "kapi_version": "0.3.0",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "Kapı does not modify or repair criteria. It only reports."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.5",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "reassign_plots",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "d7cfdbf5744d120794527b0d3f44212387080ecda8544f3c86d21ff810dc5bc5",
+      "name": "W39",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "mowing multiplies expected richness by exp(0.38) = 1.46 (about 15 -> 22 species) -> multiplier 1; plot effects (sd 0.15), seasonal cycle, autocorrelation across surveys and Poisson count noise unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "verdict": "WEAK"
+  },
+  "body_sha256": "d5924af25393f148d432c459335867501b362130ca1cb10d1a495270dead05fd",
+  "created_utc": "2026-11-13T04:26:42Z"
+}

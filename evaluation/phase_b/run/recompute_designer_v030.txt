@@ -1,0 +1,77 @@
+B-1            n=12 det= 7 (gen 3, decl 4, K2-only 0) clean= 7 LBdet=0.3560 LBclean=0.3560 FAILS | noise-only det=3 LB=0.1047 | declared-only det=7 LB=0.3560 | flag-all LBclean=0.0000
+B-2            n=12 det= 7 (gen 5, decl 2, K2-only 0) clean=11 LBdet=0.3560 LBclean=0.6988 FAILS | noise-only det=5 LB=0.2200 | declared-only det=6 LB=0.2855 | flag-all LBclean=0.0000
+B-3            n=12 det= 8 (gen 5, decl 3, K2-only 0) clean= 8 LBdet=0.4315 LBclean=0.4315 FAILS | noise-only det=5 LB=0.2200 | declared-only det=7 LB=0.3560 | flag-all LBclean=0.0000
+B-6            n=12 det=11 (gen 0, decl 11, K2-only 0) clean=11 LBdet=0.6988 LBclean=0.6988 HOLDS | noise-only det=0 LB=0.0000 | declared-only det=11 LB=0.6988 | flag-all LBclean=0.0000
+  B-2 L1.1     n= 2 det= 2 (gen 2, decl 0, K2-only 0) clean= 2 LBdet=0.4250 LBclean=0.4250 FAILS | noise-only det=2 LB=0.4250 | declared-only det=2 LB=0.4250 | flag-all LBclean=0.0000
+  B-2 L1.2     n= 2 det= 1 (gen 1, decl 0, K2-only 0) clean= 2 LBdet=0.1209 LBclean=0.4250 FAILS | noise-only det=1 LB=0.1209 | declared-only det=0 LB=0.0000 | flag-all LBclean=0.0000
+  B-2 L1.3     n= 2 det= 1 (gen 1, decl 0, K2-only 0) clean= 2 LBdet=0.1209 LBclean=0.4250 FAILS | noise-only det=1 LB=0.1209 | declared-only det=1 LB=0.1209 | flag-all LBclean=0.0000
+  B-2 L1.4     n= 2 det= 2 (gen 1, decl 1, K2-only 0) clean= 2 LBdet=0.4250 LBclean=0.4250 FAILS | noise-only det=1 LB=0.1209 | declared-only det=2 LB=0.4250 | flag-all LBclean=0.0000
+  B-2 L3.1     n= 2 det= 0 (gen 0, decl 0, K2-only 0) clean= 1 LBdet=0.0000 LBclean=0.1209 FAILS | noise-only det=0 LB=0.0000 | declared-only det=0 LB=0.0000 | flag-all LBclean=0.0000
+  B-2 L3.2     n= 2 det= 1 (gen 0, decl 1, K2-only 0) clean= 2 LBdet=0.1209 LBclean=0.4250 FAILS | noise-only det=0 LB=0.0000 | declared-only det=1 LB=0.1209 | flag-all LBclean=0.0000
+out of scope   n= 6 det= 2 (gen 1, decl 1, K2-only 0) clean= 5 LBdet=0.1173 LBclean=0.4976 FAILS | noise-only det=1 LB=0.0381 | declared-only det=2 LB=0.1173 | flag-all LBclean=0.0000
+
+awareness P B-1  n=12 det= 7 (gen 3, decl 4, K2-only 0) clean= 7
+awareness P B-2  n= 8 det= 5 (gen 3, decl 2, K2-only 0) clean= 7
+awareness P B-3  n=10 det= 8 (gen 5, decl 3, K2-only 0) clean= 7
+awareness P B-6  n=11 det=10 (gen 0, decl 10, K2-only 0) clean=10
+awareness P O    n= 4 det= 2 (gen 1, decl 1, K2-only 0) clean= 3
+awareness C B-2  n= 1 det= 0 (gen 0, decl 0, K2-only 0) clean= 1
+awareness C B-3  n= 2 det= 0 (gen 0, decl 0, K2-only 0) clean= 1
+awareness C O    n= 2 det= 0 (gen 0, decl 0, K2-only 0) clean= 2
+awareness N B-2  n= 3 det= 2 (gen 2, decl 0, K2-only 0) clean= 3
+awareness N B-6  n= 1 det= 1 (gen 0, decl 1, K2-only 0) clean= 1
+
+B1-01  B-1        W05 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:scramble_voxels_in_run_2,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE | fixed=WEAK             clean=Y 
+B1-02  B-1        W07 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:shuffle_across_orientations,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE | fixed=NOT_FALSIFIABLE  clean=n HIGH_RATE:probe:noise,K5_INCONCLUSIVE:zeros
+B1-03  B-1        W28 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B1-04  B-1        W19 P faulty=UNDEFINED        det=n          HIGH_RATE:control:permute_trait,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=UNDEFINED        clean=n K1_UNDEFINED,K4_INCONCLUSIVE,K5_INCONCLUSIVE:noise,K5_INCONCLUSIVE:zeros
+B1-05  B-1        W34 P faulty=UNDEFINED        det=n          HIGH_RATE:control:permute_trait,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=UNDEFINED        clean=n K1_UNDEFINED,K4_INCONCLUSIVE,K5_INCONCLUSIVE:noise,K5_INCONCLUSIVE:zeros
+B1-06  B-1        W09 P faulty=UNDEFINED        det=n          HIGH_RATE:control:permute_subjects,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=UNDEFINED        clean=n K1_UNDEFINED,K2_LOW_POWER,K5_INCONCLUSIVE:zeros
+B1-07  B-1        W15 P faulty=UNDEFINED        det=n          HIGH_RATE:control:permute_tumour_labels,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE | fixed=WEAK             clean=Y 
+B1-08  B-1        W21 P faulty=UNDEFINED        det=n          HIGH_RATE:control:swap_pre_post,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=UNDEFINED        clean=n K1_UNDEFINED,K5_INCONCLUSIVE:zeros
+B1-09  B-1        W41 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B1-10  B-1        W22 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_drug_labels,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS | fixed=WEAK             clean=Y 
+B1-11  B-1        W52 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:remove_average_programme_effect,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE | fixed=FALSIFIABLE      clean=Y 
+B1-12  B-1        W12 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:remove_average_tutoring_gain,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B2-01  B-2  L1.1  W38 N faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_tumour,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE | fixed=WEAK             clean=Y 
+B2-02  B-2  L1.1  W35 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_relapse,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE | fixed=WEAK             clean=Y 
+B2-03  B-2  L1.3  W36 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B2-04  B-2  L1.3  W27 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_subtype,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B2-05  B-2  L1.2  W16 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:probe:noise | fixed=WEAK             clean=Y 
+B2-06  B-2  L1.2  W18 N faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B2-07  B-2  L1.4  W04 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_diagnosis_by_patient | fixed=WEAK             clean=Y 
+B2-08  B-2  L1.4  W30 N faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_fraud,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS | fixed=WEAK             clean=Y 
+B2-09  B-2  L3.1  W14 P faulty=WEAK             det=n           | fixed=UNDEFINED        clean=n K1_UNDEFINED,K2_LOW_POWER,K5_INCONCLUSIVE:zeros
+B2-10  B-2  L3.1  W37 C faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B2-11  B-2  L3.2  W06 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_mutation_across_patients,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B2-12  B-2  L3.2  W49 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B3-01  B-3        W29 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_vo2_expired,HIGH_RATE:probe:noise,K4_CONTROL_ALSO_HOLDS | fixed=WEAK             clean=Y 
+B3-02  B-3        W26 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B3-03  B-3        W53 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_radionuclide_volume,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS | fixed=WEAK             clean=Y 
+B3-04  B-3        W45 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:permute_vo2_expired,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS | fixed=WEAK             clean=Y 
+B3-05  B-3        W01 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=NOT_FALSIFIABLE  clean=n K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros
+B3-06  B-3        W17 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B3-07  B-3        W43 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:probe:noise | fixed=NOT_FALSIFIABLE  clean=n K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros
+B3-08  B-3        W24 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B3-09  B-3        W23 C faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B3-10  B-3        W51 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B3-11  B-3        W02 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=NOT_FALSIFIABLE  clean=n K2_LOW_POWER,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_DEGENERATE,K5_HOLDS_ON_NOISE,K5_INCONCLUSIVE:zeros
+B3-12  B-3        W11 C faulty=WEAK             det=n           | fixed=NOT_FALSIFIABLE  clean=n K2_LOW_POWER,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_DEGENERATE,K5_HOLDS_ON_NOISE,K5_INCONCLUSIVE:zeros
+B6-01  B-6        W32 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-02  B-6        W48 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:swap_regions,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-03  B-6        W20 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-04  B-6        W25 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:reassign_ponds,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-05  B-6        W46 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_dose,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-06  B-6        W39 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:reassign_plots,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-07  B-6        W42 N faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:reassign_animals,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-08  B-6        W50 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_trials_within_participant,K2_HIGH_SIZE | fixed=NOT_FALSIFIABLE  clean=n K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros
+B6-09  B-6        W31 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:swap_conditions_within_animals | fixed=WEAK             clean=Y 
+B6-10  B-6        W13 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+B6-11  B-6        W44 P faulty=NOT_FALSIFIABLE  det=Y declared HIGH_RATE:control:permute_thickness,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+B6-12  B-6        W10 P faulty=NOT_FALSIFIABLE  det=Y declared K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+O1a    O    O-1   W54 P faulty=NOT_FALSIFIABLE  det=Y declared K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION | fixed=WEAK             clean=Y 
+O1b    O    O-1   W33 C faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+O2a    O    O-2   W40 P faulty=NOT_FALSIFIABLE  det=Y generic  HIGH_RATE:control:pool_and_resplit,HIGH_RATE:probe:noise,K2_HIGH_SIZE | fixed=WEAK             clean=Y 
+O2b    O    O-2   W03 C faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+O3a    O    O-3   W08 P faulty=WEAK             det=n           | fixed=WEAK             clean=Y 
+O3b    O    O-3   W47 P faulty=WEAK             det=n           | fixed=NOT_FALSIFIABLE  clean=n K2_HIGH_SIZE,K5_INCONCLUSIVE:noise,K5_INCONCLUSIVE:zeros

@@ -1,0 +1,6 @@
+COMPONENT  VERDICT      FLAGS
+C          FALSIFIABLE  -
+study flags: -
+mode: full   verdict: FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B1-11\fixed.json
+body_sha256: 91eb74104961bf84e28584eb06a785fdc2321bceacd6c9667a7b4cef5c6bfeaf

@@ -186,6 +186,52 @@ Windows 11. Four tests that need a POSIX system were skipped.
 Phase B: an external test set built from errors documented in the literature, with criteria pre-registered before the
 set is built (section 14 of the spec).
 
+## 0.4 (spec 0.6, package 0.4.0): Phase B, errors documented in the literature
+
+Phase B asks whether Truth_Gate 0.4.0, with worlds and controls declared by someone who does not know the error, flags
+acceptance criteria that contain errors documented in published research, and passes the corrected criteria. The rules
+were pre-registered and frozen before any case existed ([`../evaluation/phase_b/PREREG_PHASE_B.md`](../evaluation/phase_b/PREREG_PHASE_B.md));
+the cases were frozen and pushed (commit `fe86e96`) before the gate ran. Full report:
+[`../evaluation/phase_b/REPORT.md`](../evaluation/phase_b/REPORT.md).
+
+**How the cases were built.** Each case is a pair of studies, a faulty criterion with a documented error and a fixed
+one with its correction, in the same skeleton. Three roles kept the error away from the worlds: criterion authors who
+knew the error wrote neutral briefs; one world author who saw only the shuffled briefs wrote the worlds and controls
+(`minus` sets the claimed quantity to its null, everything else unchanged); the criterion authors then wrote only the
+two criterion bodies and could pre-check only the fixed one. A blind fidelity audit passed all 54 pairs after one
+repair round.
+
+| Class (sources) | Pairs | Detected | Clean passes | Wilson lower bounds | Verdict |
+|---|---|---|---|---|---|
+| B-1 circular analysis (KRI09, VUL09, MAK19, BAR05) | 12 | 7 | 7 | 0.36 / 0.36 | **FAILS** |
+| B-2 procedure-level leakage (KAP23, AMB02, SIM03) | 12 | 7 | 11 | 0.36 / 0.70 | **FAILS** |
+| B-3 coupling by construction (PEA97, ARC81, KRO93) | 12 | 8 | 8 | 0.43 / 0.43 | **FAILS** |
+| B-6 inflated-size decision rules (NIE11, HUR84, LAZ10, MAK19) | 12 | 11 | 11 | 0.70 / 0.70 | **HOLDS** |
+| Out of scope (data-level leakage, flexibility outside the criterion, data errors) | 6 | 2 | 5 | – | no threshold |
+
+A class holds when both one-sided 95% Wilson lower bounds are at least 0.6. Truth_Gate 0.3.0 gave the same verdict on
+all 108 files. Of the 33 in-scope detections, 13 came from the gate's own noise probe and 20 from the declared `minus`
+world or control; every B-6 detection came from declarations. A blind post-run audit found that every detection
+follows from the planted error.
+
+**Why the three classes failed (interpretation, after the run).**
+
+* **B-1:** five faulty criteria carried the flags of a detection but ended UNDEFINED, and four fixed ones too: the
+  criteria return UNDEFINED when a selection is empty (an allowed guard), and K1 makes a study UNDEFINED as soon as
+  one outcome on `plus` or `minus` is UNDEFINED.
+* **B-2:** in five pairs the documented leak was too small in the declared worlds at the size cap (60 features, 300
+  rows) for the faulty criterion to hold where the claim is false.
+* **B-3:** four misses came from worlds without the shared measurement error that makes ratios couple; four fixed
+  criteria failed because of the skeleton, two of them because the correction tests a different quantity than the one
+  the world made true.
+
+**What Phase B does and does not show.** The gate flagged documented errors when the declared worlds contained what the
+error exploits, and only then. The world author, a model of the same family, inferred the error from the claim for 45
+of the 54 briefs and kept the corresponding structure in `minus`; none of the pairs where it considered the structure
+but left none was detected. Every role was played by models of the same family that wrote the gate; no human domain
+reader took part. Twelve pairs per class give wide intervals. The result is evidence about the gate together with
+anticipated declarations, not about finding errors nobody anticipated.
+
 ## Limitations of the evaluation
 
 * **Not independent of the specification.** All case sets were written by AI sessions that had read the spec, and from
@@ -201,5 +247,7 @@ set is built (section 14 of the spec).
 
 Kapı reliably checks the logic of criteria against synthetic worlds. It does not detect flaws in model
 interpretation or in the real run's controls. In the prospective study, pre-registration, negative controls, a blind
-audit and independent recomputation found the major defects. The gate was one part of that process, which is why the
+audit and independent recomputation found the major defects. On errors documented in the literature (Phase B) it met
+the pre-registered bar for one class of four, and its detections depended on declared worlds that anticipated the
+error. The gate was one part of that process, which is why the
 methods protocol in [`../protocol/`](../protocol/PROTOCOL.md) is published with it.

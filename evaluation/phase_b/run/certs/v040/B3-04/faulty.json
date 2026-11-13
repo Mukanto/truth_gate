@@ -1,0 +1,169 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:permute_vo2_expired": {
+            "lower": 0.952392855498,
+            "upper": 0.997963013961
+          },
+          "probe:noise": {
+            "lower": 0.787786764991,
+            "upper": 0.910433873795
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.085590597821,
+            "upper": 0.206491254521
+          },
+          "world:plus": {
+            "lower": 0.952392855498,
+            "upper": 0.997963013961
+          }
+        },
+        "counts": {
+          "control:permute_vo2_expired": {
+            "holds": 198,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 172,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 27,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 198,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "HIGH_RATE:control:permute_vo2_expired",
+          "HIGH_RATE:probe:noise",
+          "K2_HIGH_SIZE",
+          "K4_CONTROL_ALSO_HOLDS",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "svo2",
+            "vo2_expired"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "cardiac_output",
+            "hemoglobin",
+            "sao2",
+            "svo2"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "NOT_FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.6",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "permute_vo2_expired",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "6a4ae3a74265a195271dc007692f952b5de1b7cb59d3292de0517fcd54b99489",
+      "name": "W45",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "the true change in oxygen consumption follows the true change in delivery (0.25 per unit; R squared of the measured changes about 0.4) -> independent of it (same variance and the same +60 mL/min mean rise); the Fick-consistent venous saturation, the shared thermodilution errors and the independent expired-gas error unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.4.0",
+    "verdict": "NOT_FALSIFIABLE"
+  },
+  "body_sha256": "61017859e51e13f20b5123a8feefa465b28bdaededa190b5a5ca15d817bb31a4",
+  "created_utc": "2026-11-13T04:23:36Z"
+}

@@ -1,0 +1,155 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:swap_conditions_within_animals": {
+            "lower": 0.217177543627,
+            "upper": 0.375527083748
+          },
+          "probe:noise": {
+            "lower": 0.008647472624,
+            "upper": 0.070089184533
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.002036986039,
+            "upper": 0.047607144502
+          },
+          "world:plus": {
+            "lower": 0.960669794437,
+            "upper": 0.999383583894
+          }
+        },
+        "counts": {
+          "control:swap_conditions_within_animals": {
+            "holds": 58,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 5,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 2,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 199,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "HIGH_RATE:control:swap_conditions_within_animals",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "amp_drug"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "amp_drug",
+            "amp_vehicle"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "NOT_FALSIFIABLE"
+      }
+    ],
+    "kapi_version": "0.3.0",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "Kapı does not modify or repair criteria. It only reports."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.5",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "swap_conditions_within_animals",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "90480d71925089160b7f83ac00b41f21df20a2bab80a4944adf729ad8ba819c4",
+      "name": "W31",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "drug raises amplitude by exp(0.30) = 1.35 on average (animal-specific sd 0.2) -> no drug effect; animal effects shared between conditions (sd 0.35), cell noise (sd 0.45) and 8 animals x 25 cells unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "verdict": "NOT_FALSIFIABLE"
+  },
+  "body_sha256": "df5376cf6eb7cbfdfa59f6a4f176a8b1948e9eb0e6c528de1f797616b9a79f1d",
+  "created_utc": "2026-11-13T04:26:45Z"
+}

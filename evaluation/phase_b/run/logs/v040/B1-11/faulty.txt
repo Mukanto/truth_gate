@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:remove_average_programme_effect, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K5_HOLDS_ON_NOISE
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B1-11\faulty.json
+body_sha256: 210397e7a287fbd2a23ad4b6cd0b7134719132795bca34e252b2f5591aa96021

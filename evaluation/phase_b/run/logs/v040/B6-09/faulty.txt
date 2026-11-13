@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:swap_conditions_within_animals, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_b\run\certs\v040\B6-09\faulty.json
+body_sha256: b7ee0a7b52635767975855b1bd76a8793a9e92ccddbee2c734bcd03297b141b2
