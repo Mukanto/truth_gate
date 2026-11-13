@@ -1,0 +1,172 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:weeks_reversed": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:plus": {
+            "lower": 0.969750887203,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:weeks_reversed": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:minus": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "hard_undefined": 0,
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [],
+        "id": "growth_gt_11",
+        "minus_check": {
+          "changed_keys": [
+            "cases"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "cases",
+            "week"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started.",
+      "A criterion's own UNDEFINED outcomes (None, a pattern's UNDEFINED, a command's UNDEFINED) on plus, minus and null count as no claim; K1 makes the verdict UNDEFINED only for failures (exceptions, failed generation, wrong return types, missing components, command errors) or when the criterion abstains on more than half of the plus samples.",
+      "K8 leaves pairs with an UNDEFINED side out of its change count; abstentions can therefore hide changes on up to half of the pairs."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.7",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "growth_gt_11"
+          ],
+          "id": "weeks_reversed",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "growth_gt_11",
+          "regime": "all",
+          "tolerances": {
+            "growth": [
+              0.1,
+              1.0
+            ]
+          }
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "a1e8b7a3556b6ad421a421bf3bfb0e6946ba355ac97683aef8418039ec8b0379",
+      "name": "E5-11 epidemic growth factor",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "weekly growth factor 1.3 -> 1.0",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.5.0",
+    "verdict": "FALSIFIABLE"
+  },
+  "body_sha256": "eed528277f56bfde86e5b5976778d20f891e20538356315e9be40481760a392d",
+  "created_utc": "2026-11-13T15:20:20Z"
+}

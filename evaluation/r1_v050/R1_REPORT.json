@@ -1,0 +1,6020 @@
+{
+ "criterion": "R1 (spec 0.7, section 6; R-1)",
+ "baseline_dir": "E:\\Claude Projects\\kapi-oss\\evaluation\\baseline_v041",
+ "new_dir": "E:\\Claude Projects\\kapi-oss\\evaluation\\r1_v050\\certs",
+ "baseline_tool": "truth-gate 0.4.1 (git tag v0.4.1)",
+ "new_versions": {
+  "0.5.0 / spec 0.7": 267
+ },
+ "studies": 267,
+ "not_recorded_in_baseline": [],
+ "baseline_problems": [],
+ "missing_certificates": [],
+ "groups": {
+  "item1": {
+   "components": 251,
+   "matched": 251,
+   "mismatched": 0,
+   "names": [
+    "evaluation/cases/E2/E2-01_faulty.py::rates_agree",
+    "evaluation/cases/E2/E2-01_fixed.py::rates_agree",
+    "evaluation/cases/E2/E2-02_fixed.py::treatment_effect",
+    "evaluation/cases/E2/E2-03_fixed.py::improves_on_baseline",
+    "evaluation/cases/E2/E2-04_faulty.py::period_law",
+    "evaluation/cases/E2/E2-04_fixed.py::period_law",
+    "evaluation/cases/E2/E2-05_faulty.py::correlated",
+    "evaluation/cases/E2/E2-05_fixed.py::correlated",
+    "evaluation/cases/E2/E2-06_faulty.py::responsive_voxel",
+    "evaluation/cases/E2/E2-06_fixed.py::responsive_voxel",
+    "evaluation/cases/E2/E2-07_fixed.py::peak_at_drive",
+    "evaluation/cases/E2/E2-08_faulty.py::amplitude",
+    "evaluation/cases/E2/E2-08_faulty.py::phase",
+    "evaluation/cases/E2/E2-08_fixed.py::amplitude",
+    "evaluation/cases/E2/E2-08_fixed.py::phase",
+    "evaluation/cases/E2/E2-09_faulty.py::dose_response",
+    "evaluation/cases/E2/E2-09_fixed.py::dose_response",
+    "evaluation/cases/E2/E2-10_faulty.py::activity_matches",
+    "evaluation/cases/E2/E2-10_fixed.py::activity_matches",
+    "evaluation/cases/E2/E2-11_fixed.py::follows_reference",
+    "evaluation/cases/E2/E2-12_faulty.py::alpha_matches",
+    "evaluation/cases/E2/E2-12_fixed.py::alpha_matches",
+    "evaluation/cases/E2/E2-13_faulty.py::welch_t",
+    "evaluation/cases/E2/E2-13_fixed.py::welch_t",
+    "evaluation/cases/E2/E2-14_faulty.py::index_matches",
+    "evaluation/cases/E2/E2-14_fixed.py::index_matches",
+    "evaluation/cases/E4/E4-01_faulty.py::treatment_effect",
+    "evaluation/cases/E4/E4-01_fixed.py::treatment_effect",
+    "evaluation/cases/E4/E4-02_faulty.py::any_endpoint",
+    "evaluation/cases/E4/E4-02_fixed.py::any_endpoint",
+    "evaluation/cases/E4/E4-03_faulty.py::benefit",
+    "evaluation/cases/E4/E4-03_fixed.py::benefit",
+    "evaluation/cases/E4/E4-04_faulty.py::high_risk",
+    "evaluation/cases/E4/E4-04_fixed.py::high_risk",
+    "evaluation/cases/E4/E4-05_faulty.py::treated_higher",
+    "evaluation/cases/E4/E4-05_fixed.py::treated_higher",
+    "evaluation/cases/E4/E4-06_faulty.py::equivalent",
+    "evaluation/cases/E4/E4-06_fixed.py::equivalent",
+    "evaluation/cases/E4/E4-07_faulty.py::treatment_effect",
+    "evaluation/cases/E4/E4-07_fixed.py::treatment_effect",
+    "evaluation/cases/E4/E4-08_faulty.py::treatment_effect",
+    "evaluation/cases/E4/E4-08_fixed.py::treatment_effect",
+    "evaluation/cases/E4/E4-09_faulty.py::less_heat_loss",
+    "evaluation/cases/E4/E4-09_fixed.py::less_heat_loss",
+    "evaluation/cases/E4/E4-10_faulty.py::lowers_pressure",
+    "evaluation/cases/E4/E4-10_fixed.py::lowers_pressure",
+    "evaluation/cases/E4/E4-11_faulty.py::treatment_helps",
+    "evaluation/cases/E4/E4-11_fixed.py::treatment_helps",
+    "evaluation/cases/E4/E4-12_faulty.py::conductance_matches",
+    "evaluation/cases/E4/E4-12_fixed.py::conductance_matches",
+    "evaluation/cases/E4/E4-13_fixed.py::g_matches",
+    "evaluation/cases/E4/E4-14_faulty.py::treatment_effect",
+    "evaluation/cases/E4/E4-14_fixed.py::treatment_effect",
+    "evaluation/cases/E4/E4-15_faulty.py::beats_climatology",
+    "evaluation/cases/E4/E4-15_fixed.py::beats_climatology",
+    "evaluation/cases/E4/E4-16_faulty.py::derivative_matches",
+    "evaluation/cases/E4/E4-16_fixed.py::derivative_matches",
+    "evaluation/cases/E5/E5-01_faulty.py::stiffness_40",
+    "evaluation/cases/E5/E5-01_fixed.py::stiffness_40",
+    "evaluation/cases/E5/E5-02_faulty.py::ea_80k",
+    "evaluation/cases/E5/E5-02_fixed.py::ea_80k",
+    "evaluation/cases/E5/E5-03_faulty.py::rate_half",
+    "evaluation/cases/E5/E5-03_fixed.py::rate_half",
+    "evaluation/cases/E5/E5-04_faulty.py::effect_gt_half",
+    "evaluation/cases/E5/E5-04_fixed.py::effect_gt_half",
+    "evaluation/cases/E5/E5-05_faulty.py::line_at_16",
+    "evaluation/cases/E5/E5-05_fixed.py::line_at_16",
+    "evaluation/cases/E5/E5-06_faulty.py::corr_gt_03",
+    "evaluation/cases/E5/E5-06_fixed.py::corr_gt_03",
+    "evaluation/cases/E5/E5-07_faulty.py::drift_gt_025",
+    "evaluation/cases/E5/E5-07_fixed.py::drift_gt_025",
+    "evaluation/cases/E5/E5-08_faulty.py::reduction_gt_4",
+    "evaluation/cases/E5/E5-08_fixed.py::reduction_gt_4",
+    "evaluation/cases/E5/E5-09_faulty.py::heights_match",
+    "evaluation/cases/E5/E5-09_fixed.py::heights_match",
+    "evaluation/cases/E5/E5-10_faulty.py::monotone_rise",
+    "evaluation/cases/E5/E5-10_fixed.py::monotone_rise",
+    "evaluation/cases/E5/E5-11_faulty.py::growth_gt_11",
+    "evaluation/cases/E5/E5-11_fixed.py::growth_gt_11",
+    "evaluation/cases/E5/E5-12_faulty.py::skew_lt_1",
+    "evaluation/cases/E5/E5-13_faulty.py::balance_closes",
+    "evaluation/cases/E5/E5-14_faulty.py::left_gt_right",
+    "evaluation/cases/E5/E5-15_faulty.py::boils_at_100",
+    "evaluation/cases/E5/E5-16_faulty.py::sums_to_one",
+    "evaluation/cases/E5/E5-17_faulty.py::half_life_5h",
+    "evaluation/cases/E5/E5-17_fixed.py::half_life_5h",
+    "evaluation/cases/E5/E5-18_faulty.py::welch_t_gt_3",
+    "evaluation/cases/E5/E5-18_fixed.py::welch_t_gt_3",
+    "evaluation/cases/E5/E5-19_faulty.py::mean_320k",
+    "evaluation/cases/E5/E5-19_fixed.py::mean_320k",
+    "evaluation/cases/E5/E5-20_faulty.py::lit_fraction_gt_08",
+    "evaluation/cases/E5/E5-20_fixed.py::lit_fraction_gt_08",
+    "examples/01_tautology/faulty.py::rule_agreement",
+    "examples/01_tautology/fixed.py::rule_agreement",
+    "examples/02_inert_minus_world/faulty.py::stiffness_40",
+    "examples/02_inert_minus_world/fixed.py::stiffness_40",
+    "examples/03_unit_epsilon_bug/faulty.py::lit_fraction_gt_08",
+    "examples/03_unit_epsilon_bug/fixed.py::lit_fraction_gt_08",
+    "examples/convergence_criteria/study.py::C1_local_attraction",
+    "examples/convergence_criteria/study.py::C2_convergence_N",
+    "examples/convergence_criteria/study.py::C3_in_domain",
+    "examples/ghz_heron/ghz_study.py::G1_small_n_accuracy",
+    "examples/ghz_heron/ghz_study.py::G2_excess_decay_grows",
+    "examples/ghz_heron/ghz_study.py::G3_gme_reach_matches",
+    "examples/ghz_heron_run2/ghz2_study.py::H1_small_n_accuracy",
+    "examples/ghz_heron_run2/ghz2_study.py::H2_gme_reach_matches",
+    "examples/ghz_heron_run2/ghz2_study.py::H3_population_specific",
+    "tests/toy_studies/toy_allowed_file.py::above_threshold",
+    "tests/toy_studies/toy_assumed_premise.py::mean_gt_1",
+    "tests/toy_studies/toy_components_ok.py::pair:lo",
+    "tests/toy_studies/toy_components_ok.py::pair:hi",
+    "tests/toy_studies/toy_control_also_holds.py::mean_gt_1",
+    "tests/toy_studies/toy_control_world.py::mean_gt_1",
+    "tests/toy_studies/toy_degenerate.py::all_below",
+    "tests/toy_studies/toy_det_always_true.py::always",
+    "tests/toy_studies/toy_det_noise_depends.py::first_positive",
+    "tests/toy_studies/toy_det_noise_one_undefined.py::above_twenty",
+    "tests/toy_studies/toy_det_noise_two_undefined.py::above_twenty",
+    "tests/toy_studies/toy_det_shuffle.py::paired",
+    "tests/toy_studies/toy_det_waived.py::near_three",
+    "tests/toy_studies/toy_fails_unreachable.py::always_true",
+    "tests/toy_studies/toy_good.py::mean_gt_1",
+    "tests/toy_studies/toy_good_det.py::near_three",
+    "tests/toy_studies/toy_high_rate.py::mean_gt_1",
+    "tests/toy_studies/toy_highsize.py::x_gt_3",
+    "tests/toy_studies/toy_holds_unreachable.py::mean_gt_100",
+    "tests/toy_studies/toy_inconclusive_control.py::mean_gt_1",
+    "tests/toy_studies/toy_inconclusive_premise.py::mean_gt_1",
+    "tests/toy_studies/toy_inconclusive_probe.py::pos_mean",
+    "tests/toy_studies/toy_leak_listdir.py::lists_directory",
+    "tests/toy_studies/toy_lowpower.py::x_gt_5",
+    "tests/toy_studies/toy_no_control.py::mean_gt_1",
+    "tests/toy_studies/toy_no_separation.py::mean_gt_0",
+    "tests/toy_studies/toy_no_separation_distinct.py::mean_gt_0",
+    "tests/toy_studies/toy_noise.py::unit_spread",
+    "tests/toy_studies/toy_not_tested_premise.py::mean_gt_1",
+    "tests/toy_studies/toy_null_holds.py::mean_gt_1",
+    "tests/toy_studies/toy_regime_covered.py::mean_a",
+    "tests/toy_studies/toy_regime_covered.py::median_b",
+    "tests/toy_studies/toy_regime_uncovered.py::mean_gt_1",
+    "tests/toy_studies/toy_shuffle_bad.py::sum_high",
+    "tests/toy_studies/toy_shuffle_good.py::corr_high",
+    "tests/toy_studies/toy_suppress_det.py::never",
+    "tests/toy_studies/toy_suppress_stoch.py::corr_gt_2",
+    "tests/toy_studies/toy_suppress_unresolvable.py::mean_gt_100",
+    "tests/toy_studies/toy_unresolvable_premise.py::mean_gt_1",
+    "tests/toy_studies/toy_unresolvable_tol.py::mean_gt_1",
+    "tests/toy_studies/toy_v03_trap.py::always",
+    "tests/toy_studies/toy_v03_unread.py::a_gt_1",
+    "tests/toy_studies/toy_v03_untested.py::mean_gt_1",
+    "tests/toy_studies/toy_v03_untested_det.py::near_three",
+    "tests/toy_studies/toy_waived.py::mean_gt_1",
+    "tests/toy_studies/toy_waived_with_control.py::mean_gt_1",
+    "evaluation/phase_b/cases/B1-01/faulty.py::C",
+    "evaluation/phase_b/cases/B1-01/fixed.py::C",
+    "evaluation/phase_b/cases/B1-02/faulty.py::C",
+    "evaluation/phase_b/cases/B1-02/fixed.py::C",
+    "evaluation/phase_b/cases/B1-03/faulty.py::C",
+    "evaluation/phase_b/cases/B1-03/fixed.py::C",
+    "evaluation/phase_b/cases/B1-07/fixed.py::C",
+    "evaluation/phase_b/cases/B1-09/faulty.py::C",
+    "evaluation/phase_b/cases/B1-09/fixed.py::C",
+    "evaluation/phase_b/cases/B1-10/faulty.py::C",
+    "evaluation/phase_b/cases/B1-10/fixed.py::C",
+    "evaluation/phase_b/cases/B1-11/faulty.py::C",
+    "evaluation/phase_b/cases/B1-11/fixed.py::C",
+    "evaluation/phase_b/cases/B1-12/faulty.py::C",
+    "evaluation/phase_b/cases/B1-12/fixed.py::C",
+    "evaluation/phase_b/cases/B2-01/faulty.py::C",
+    "evaluation/phase_b/cases/B2-01/fixed.py::C",
+    "evaluation/phase_b/cases/B2-02/faulty.py::C",
+    "evaluation/phase_b/cases/B2-02/fixed.py::C",
+    "evaluation/phase_b/cases/B2-03/faulty.py::C",
+    "evaluation/phase_b/cases/B2-03/fixed.py::C",
+    "evaluation/phase_b/cases/B2-04/faulty.py::C",
+    "evaluation/phase_b/cases/B2-04/fixed.py::C",
+    "evaluation/phase_b/cases/B2-05/faulty.py::C",
+    "evaluation/phase_b/cases/B2-05/fixed.py::C",
+    "evaluation/phase_b/cases/B2-06/faulty.py::C",
+    "evaluation/phase_b/cases/B2-06/fixed.py::C",
+    "evaluation/phase_b/cases/B2-07/faulty.py::C",
+    "evaluation/phase_b/cases/B2-07/fixed.py::C",
+    "evaluation/phase_b/cases/B2-08/faulty.py::C",
+    "evaluation/phase_b/cases/B2-08/fixed.py::C",
+    "evaluation/phase_b/cases/B2-09/faulty.py::C",
+    "evaluation/phase_b/cases/B2-10/faulty.py::C",
+    "evaluation/phase_b/cases/B2-10/fixed.py::C",
+    "evaluation/phase_b/cases/B2-11/faulty.py::C",
+    "evaluation/phase_b/cases/B2-11/fixed.py::C",
+    "evaluation/phase_b/cases/B2-12/faulty.py::C",
+    "evaluation/phase_b/cases/B2-12/fixed.py::C",
+    "evaluation/phase_b/cases/B3-01/faulty.py::C",
+    "evaluation/phase_b/cases/B3-01/fixed.py::C",
+    "evaluation/phase_b/cases/B3-02/faulty.py::C",
+    "evaluation/phase_b/cases/B3-02/fixed.py::C",
+    "evaluation/phase_b/cases/B3-03/faulty.py::C",
+    "evaluation/phase_b/cases/B3-03/fixed.py::C",
+    "evaluation/phase_b/cases/B3-04/faulty.py::C",
+    "evaluation/phase_b/cases/B3-04/fixed.py::C",
+    "evaluation/phase_b/cases/B3-05/faulty.py::C",
+    "evaluation/phase_b/cases/B3-05/fixed.py::C",
+    "evaluation/phase_b/cases/B3-06/faulty.py::C",
+    "evaluation/phase_b/cases/B3-06/fixed.py::C",
+    "evaluation/phase_b/cases/B3-07/faulty.py::C",
+    "evaluation/phase_b/cases/B3-07/fixed.py::C",
+    "evaluation/phase_b/cases/B3-08/faulty.py::C",
+    "evaluation/phase_b/cases/B3-08/fixed.py::C",
+    "evaluation/phase_b/cases/B3-09/faulty.py::C",
+    "evaluation/phase_b/cases/B3-09/fixed.py::C",
+    "evaluation/phase_b/cases/B3-10/faulty.py::C",
+    "evaluation/phase_b/cases/B3-10/fixed.py::C",
+    "evaluation/phase_b/cases/B3-11/faulty.py::C",
+    "evaluation/phase_b/cases/B3-11/fixed.py::C",
+    "evaluation/phase_b/cases/B3-12/faulty.py::C",
+    "evaluation/phase_b/cases/B3-12/fixed.py::C",
+    "evaluation/phase_b/cases/B6-01/faulty.py::C",
+    "evaluation/phase_b/cases/B6-01/fixed.py::C",
+    "evaluation/phase_b/cases/B6-02/faulty.py::C",
+    "evaluation/phase_b/cases/B6-02/fixed.py::C",
+    "evaluation/phase_b/cases/B6-03/faulty.py::C",
+    "evaluation/phase_b/cases/B6-03/fixed.py::C",
+    "evaluation/phase_b/cases/B6-04/faulty.py::C",
+    "evaluation/phase_b/cases/B6-04/fixed.py::C",
+    "evaluation/phase_b/cases/B6-05/faulty.py::C",
+    "evaluation/phase_b/cases/B6-05/fixed.py::C",
+    "evaluation/phase_b/cases/B6-06/faulty.py::C",
+    "evaluation/phase_b/cases/B6-06/fixed.py::C",
+    "evaluation/phase_b/cases/B6-07/faulty.py::C",
+    "evaluation/phase_b/cases/B6-07/fixed.py::C",
+    "evaluation/phase_b/cases/B6-08/faulty.py::C",
+    "evaluation/phase_b/cases/B6-08/fixed.py::C",
+    "evaluation/phase_b/cases/B6-09/faulty.py::C",
+    "evaluation/phase_b/cases/B6-09/fixed.py::C",
+    "evaluation/phase_b/cases/B6-10/faulty.py::C",
+    "evaluation/phase_b/cases/B6-10/fixed.py::C",
+    "evaluation/phase_b/cases/B6-11/faulty.py::C",
+    "evaluation/phase_b/cases/B6-11/fixed.py::C",
+    "evaluation/phase_b/cases/B6-12/faulty.py::C",
+    "evaluation/phase_b/cases/B6-12/fixed.py::C",
+    "evaluation/phase_b/cases/O1a/faulty.py::C",
+    "evaluation/phase_b/cases/O1a/fixed.py::C",
+    "evaluation/phase_b/cases/O1b/faulty.py::C",
+    "evaluation/phase_b/cases/O1b/fixed.py::C",
+    "evaluation/phase_b/cases/O2a/faulty.py::C",
+    "evaluation/phase_b/cases/O2a/fixed.py::C",
+    "evaluation/phase_b/cases/O2b/faulty.py::C",
+    "evaluation/phase_b/cases/O2b/fixed.py::C",
+    "evaluation/phase_b/cases/O3a/faulty.py::C",
+    "evaluation/phase_b/cases/O3a/fixed.py::C",
+    "evaluation/phase_b/cases/O3b/faulty.py::C",
+    "evaluation/phase_b/cases/O3b/fixed.py::C"
+   ]
+  },
+  "item2": {
+   "components": 6,
+   "matched": 6,
+   "mismatched": 0,
+   "names": [
+    "evaluation/cases/E2/E2-11_faulty.py::follows_reference",
+    "evaluation/cases/E4/E4-13_faulty.py::g_matches",
+    "tests/toy_studies/toy_det_undefined.py::first_positive",
+    "tests/toy_studies/toy_leak_open.py::reads_file",
+    "tests/toy_studies/toy_undefined_exc.py::raises",
+    "tests/toy_studies/toy_undefined_none.py::never_defined"
+   ]
+  },
+  "item3": {
+   "components": 11,
+   "matched": 11,
+   "mismatched": 0,
+   "names": [
+    "evaluation/cases/E2/E2-07_faulty.py::peak_at_drive",
+    "evaluation/phase_b/cases/B1-04/faulty.py::C",
+    "evaluation/phase_b/cases/B1-04/fixed.py::C",
+    "evaluation/phase_b/cases/B1-05/faulty.py::C",
+    "evaluation/phase_b/cases/B1-05/fixed.py::C",
+    "evaluation/phase_b/cases/B1-06/faulty.py::C",
+    "evaluation/phase_b/cases/B1-06/fixed.py::C",
+    "evaluation/phase_b/cases/B1-07/faulty.py::C",
+    "evaluation/phase_b/cases/B1-08/faulty.py::C",
+    "evaluation/phase_b/cases/B1-08/fixed.py::C",
+    "evaluation/phase_b/cases/B2-09/fixed.py::C"
+   ]
+  }
+ },
+ "bad_return_or_mismatch": {
+  "components": 3,
+  "matched": 3,
+  "mismatched": 0,
+  "names": [
+   "tests/toy_studies/toy_bad_return.py::returns_float",
+   "tests/toy_studies/toy_components_mismatch.py::pair:lo",
+   "tests/toy_studies/toy_components_mismatch.py::pair:hi"
+  ]
+ },
+ "nonreproducible": {
+  "studies": 4,
+  "studies_matched": 4,
+  "components": 4,
+  "mismatched": 0,
+  "names": [
+   "evaluation/cases/E2/E2-02_faulty.py::treatment_effect",
+   "evaluation/cases/E2/E2-03_faulty.py::improves_on_baseline",
+   "tests/toy_studies/toy_nondeterministic.py::flips",
+   "tests/toy_studies/toy_nonreproducible.py::coin"
+  ]
+ },
+ "deterministic": {
+  "studies": 35,
+  "components": 37,
+  "matched": 37,
+  "mismatched": 0
+ },
+ "first_group": {
+  "components": 268,
+  "mismatched": 0
+ },
+ "item4_failures": [],
+ "study_check_failures": [],
+ "anomalies": [],
+ "mismatches": [],
+ "r1_holds": true,
+ "other_checks_ok": true,
+ "results": [
+  {
+   "study": "evaluation/cases/E2/E2-01_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rates_agree",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-01_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rates_agree",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-02_faulty.py",
+   "set": "A1",
+   "nonreproducible": true,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-02_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-03_faulty.py",
+   "set": "A1",
+   "nonreproducible": true,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "improves_on_baseline",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-03_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "improves_on_baseline",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-04_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "period_law",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-04_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "period_law",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-05_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "correlated",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-05_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "correlated",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-06_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "responsive_voxel",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-06_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "responsive_voxel",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-07_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "peak_at_drive",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-07_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "peak_at_drive",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-08_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "amplitude",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "phase",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-08_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "amplitude",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "phase",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-09_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "dose_response",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-09_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "dose_response",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-10_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "activity_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-10_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "activity_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-11_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "follows_reference",
+     "group": "item2",
+     "E": 400,
+     "u_plus": 200,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-11_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "follows_reference",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-12_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "alpha_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-12_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "alpha_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-13_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "welch_t",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-13_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "welch_t",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-14_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "index_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E2/E2-14_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "index_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-01_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-01_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-02_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "any_endpoint",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-02_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "any_endpoint",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-03_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "benefit",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-03_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "benefit",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-04_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "high_risk",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-04_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "high_risk",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-05_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treated_higher",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-05_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treated_higher",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-06_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "equivalent",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-06_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "equivalent",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-07_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-07_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-08_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-08_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-09_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "less_heat_loss",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-09_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "less_heat_loss",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-10_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lowers_pressure",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-10_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lowers_pressure",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-11_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_helps",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-11_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_helps",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-12_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "conductance_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-12_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "conductance_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-13_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "g_matches",
+     "group": "item2",
+     "E": 400,
+     "u_plus": 200,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-13_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "g_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-14_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-14_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "treatment_effect",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-15_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "beats_climatology",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-15_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "beats_climatology",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-16_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "derivative_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E4/E4-16_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "derivative_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-01_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "stiffness_40",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-01_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "stiffness_40",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-02_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "ea_80k",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-02_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "ea_80k",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-03_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rate_half",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-03_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rate_half",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-04_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "effect_gt_half",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-04_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "effect_gt_half",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-05_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "line_at_16",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-05_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "line_at_16",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-06_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "corr_gt_03",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-06_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "corr_gt_03",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-07_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "drift_gt_025",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-07_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "drift_gt_025",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-08_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "reduction_gt_4",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-08_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "reduction_gt_4",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-09_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "heights_match",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-09_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "heights_match",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-10_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "monotone_rise",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-10_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "monotone_rise",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-11_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "growth_gt_11",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-11_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "growth_gt_11",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-12_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "skew_lt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-13_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "balance_closes",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-14_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "left_gt_right",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-15_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "boils_at_100",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-16_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "sums_to_one",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-17_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "half_life_5h",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-17_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "half_life_5h",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-18_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "welch_t_gt_3",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-18_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "welch_t_gt_3",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-19_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_320k",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-19_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_320k",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-20_faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lit_fraction_gt_08",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/cases/E5/E5-20_fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lit_fraction_gt_08",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/01_tautology/faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rule_agreement",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/01_tautology/fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "rule_agreement",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/02_inert_minus_world/faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "stiffness_40",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/02_inert_minus_world/fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "stiffness_40",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/03_unit_epsilon_bug/faulty.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lit_fraction_gt_08",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/03_unit_epsilon_bug/fixed.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lit_fraction_gt_08",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/convergence_criteria/study.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C1_local_attraction",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "C2_convergence_N",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "C3_in_domain",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/ghz_heron/ghz_study.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "G1_small_n_accuracy",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "G2_excess_decay_grows",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "G3_gme_reach_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "examples/ghz_heron_run2/ghz2_study.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "H1_small_n_accuracy",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "H2_gme_reach_matches",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "H3_population_specific",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_allowed_file.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "above_threshold",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_assumed_premise.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_bad_return.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "returns_float",
+     "group": "bad",
+     "E": 0,
+     "u_plus": 30,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_components_mismatch.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "pair:lo",
+     "group": "bad",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "pair:hi",
+     "group": "bad",
+     "E": 0,
+     "u_plus": 30,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_components_ok.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "pair:lo",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "pair:hi",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_control_also_holds.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_control_world.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_degenerate.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "all_below",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_always_true.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "always",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_noise_depends.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "first_positive",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_noise_one_undefined.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "above_twenty",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_noise_two_undefined.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "above_twenty",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_shuffle.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "paired",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_undefined.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "first_positive",
+     "group": "item2",
+     "E": 0,
+     "u_plus": 1,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_det_waived.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "near_three",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_dup_ids.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_fails_unreachable.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "always_true",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_good.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_good_det.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "near_three",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_high_rate.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_highsize.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "x_gt_3",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_holds_unreachable.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_100",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_import_allowed_file.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_import_leak.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_inconclusive_control.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_inconclusive_premise.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_inconclusive_probe.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "pos_mean",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_leak_listdir.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "lists_directory",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_leak_open.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "reads_file",
+     "group": "item2",
+     "E": 60,
+     "u_plus": 30,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_lowpower.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "x_gt_5",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_no_control.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_no_separation.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_0",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_no_separation_distinct.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_0",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_noise.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "unit_spread",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_nondeterministic.py",
+   "set": "A1",
+   "nonreproducible": true,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "flips",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_nonreproducible.py",
+   "set": "A1",
+   "nonreproducible": true,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "coin",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 60,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_not_tested_premise.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_null_holds.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_regime_covered.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_a",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    },
+    {
+     "component": "median_b",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_regime_uncovered.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_shuffle_bad.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "sum_high",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_shuffle_good.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "corr_high",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_suppress_det.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "never",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_suppress_stoch.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "corr_gt_2",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 60,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_suppress_unresolvable.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_100",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 60,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_undefined_exc.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "raises",
+     "group": "item2",
+     "E": 60,
+     "u_plus": 30,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_undefined_none.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "never_defined",
+     "group": "item2",
+     "E": 0,
+     "u_plus": 30,
+     "n_plus": 30,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_unresolvable_premise.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_unresolvable_tol.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_v03_trap.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "always",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_v03_unread.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "a_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_v03_untested.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_v03_untested_det.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": true,
+   "certificate": true,
+   "components": [
+    {
+     "component": "near_three",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 1,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_waived.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "tests/toy_studies/toy_waived_with_control.py",
+   "set": "A1",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "mean_gt_1",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 100,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-01/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-01/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-02/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-02/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-03/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-03/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-04/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-04/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-05/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 3,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-05/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 12,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-06/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-06/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 2,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-07/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-07/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-08/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-08/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-09/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-09/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-10/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-10/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-11/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-11/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-12/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B1-12/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-01/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-01/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-02/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-02/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-03/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-03/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-04/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-04/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-05/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-05/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-06/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-06/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-07/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-07/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-08/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-08/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-09/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-09/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item3",
+     "E": 0,
+     "u_plus": 17,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-10/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-10/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-11/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-11/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-12/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B2-12/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-01/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-01/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-02/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-02/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-03/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-03/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-04/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-04/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-05/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-05/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-06/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-06/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-07/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-07/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-08/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-08/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-09/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-09/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-10/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-10/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-11/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-11/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-12/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B3-12/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-01/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-01/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-02/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-02/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-03/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-03/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-04/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-04/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-05/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-05/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-06/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-06/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-07/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-07/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-08/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-08/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-09/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-09/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-10/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-10/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-11/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-11/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-12/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/B6-12/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O1a/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O1a/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O1b/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O1b/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O2a/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O2a/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O2b/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O2b/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O3a/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O3a/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O3b/faulty.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  },
+  {
+   "study": "evaluation/phase_b/cases/O3b/fixed.py",
+   "set": "phase_b",
+   "nonreproducible": false,
+   "deterministic": false,
+   "certificate": true,
+   "components": [
+    {
+     "component": "C",
+     "group": "item1",
+     "E": 0,
+     "u_plus": 0,
+     "n_plus": 200,
+     "reasons": [],
+     "anomalies": []
+    }
+   ],
+   "study_checks": [],
+   "item4_reasons": [],
+   "item4_ok": true
+  }
+ ]
+}

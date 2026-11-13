@@ -1,0 +1,236 @@
+{
+  "body": {
+    "alpha_per_bound": 0.005,
+    "components": [
+      {
+        "bounds": {
+          "control:heights_mispaired": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "premise:no_timer_latency": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "world:minus": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "world:plus": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          }
+        },
+        "counts": {
+          "control:heights_mispaired": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "premise:no_timer_latency": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "probe:noise": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "probe:zeros": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:plus": {
+            "hard_undefined": 200,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          }
+        },
+        "errors": {
+          "control:heights_mispaired": {
+            "URLError": 200
+          },
+          "premise:no_timer_latency": {
+            "URLError": 200
+          },
+          "probe:noise": {
+            "URLError": 200
+          },
+          "probe:zeros": {
+            "URLError": 200
+          },
+          "world:minus": {
+            "URLError": 200
+          },
+          "world:plus": {
+            "URLError": 200
+          }
+        },
+        "flags": [
+          "K1_UNDEFINED",
+          "K2_HOLDS_UNREACHABLE",
+          "K3_INCONCLUSIVE",
+          "K4_INCONCLUSIVE",
+          "K5_INCONCLUSIVE:noise",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "g_matches",
+        "minus_check": {
+          "changed_keys": [
+            "t"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": "ALL"
+        },
+        "regime": "all",
+        "suppressed": [
+          "K2_LOW_POWER",
+          "K2_NO_SEPARATION",
+          "K4_CONTROL_ALSO_HOLDS",
+          "K5_HOLDS_ON_DEGENERATE",
+          "K5_HOLDS_ON_NOISE"
+        ],
+        "suppressed_by": "K2_HOLDS_UNREACHABLE",
+        "unresolvable": [],
+        "verdict": "UNDEFINED"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started.",
+      "A criterion's own UNDEFINED outcomes (None, a pattern's UNDEFINED, a command's UNDEFINED) on plus, minus and null count as no claim; K1 makes the verdict UNDEFINED only for failures (exceptions, failed generation, wrong return types, missing components, command errors) or when the criterion abstains on more than half of the plus samples.",
+      "K8 leaves pairs with an UNDEFINED side out of its change count; abstentions can therefore hide changes on up to half of the pairs."
+    ],
+    "leak_log": [
+      {
+        "event": "socket.getaddrinfo",
+        "target": "('127.0.0.1', 8650)"
+      }
+    ],
+    "load_error": null,
+    "m_comparisons": 5,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {
+      "no_timer_latency": {
+        "g_matches": 0.0
+      }
+    },
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.7",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "g_matches"
+          ],
+          "id": "heights_mispaired",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "g_matches",
+          "regime": "all",
+          "tolerances": {
+            "rel": [
+              0.002,
+              1.0
+            ]
+          }
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "1db68643541b129971437468904828225c669d405a3f3e1264ee13756ce15310",
+      "name": "E4-13 free-fall gravimetry",
+      "premises": [
+        {
+          "criteria": [
+            "g_matches"
+          ],
+          "id": "no_timer_latency",
+          "magnitude": [
+            0.002,
+            0.5
+          ],
+          "role": "tested"
+        }
+      ],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "effective g reduced by 1 % (guide rail tilted 8 degrees)",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [
+      "K6_LEAK_ATTEMPT"
+    ],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.5.0",
+    "verdict": "UNDEFINED"
+  },
+  "body_sha256": "3b904f7aadbbb59ac2c3c5cf58ce813ed75e50c98ce8aa8a54760bed577b8a82",
+  "created_utc": "2026-11-13T15:20:08Z"
+}

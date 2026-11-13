@@ -234,6 +234,17 @@ but left none was detected. Every role was played by models of the same family t
 reader took part. Twelve pairs per class give wide intervals. The result is evidence about the gate together with
 anticipated declarations, not about finding errors nobody anticipated.
 
+## 0.5 (spec 0.7, package 0.5.0): regression check
+
+0.5.0 changes only how K1 treats a criterion's own UNDEFINED outcomes. Its pre-registered regression check (spec 0.7
+section 6, R1) compared 0.5.0 with a frozen 0.4.1 baseline on 267 studies (the 159 studies of Phase A criterion A1 and
+the 108 Phase B files), before the release was pushed: every component had the result that the spec's compatibility
+statement prescribes, and no 0.4.1 detection or clean pass changed. Eleven components that 0.4.1 made UNDEFINED only
+through abstentions now have verdicts: ten Phase B components (R2, five faulty twins detected, five fixed twins WEAK,
+development data, not evidence, because the rule was chosen after these cases were seen) and one older evaluation case,
+`E2-07_faulty`, which moves from UNDEFINED to WEAK. Details: [`../evaluation/r1_v050/RESULTS.md`](../evaluation/r1_v050/RESULTS.md).
+Evidence for 0.5 on new cases is the job of Phase C (`evaluation/phase_c/PREREG_PHASE_C.md`, frozen, not yet run).
+
 ## Limitations of the evaluation
 
 * **Not independent of the specification.** All case sets were written by AI sessions that had read the spec, and from

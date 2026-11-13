@@ -1,0 +1,170 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:reassign_ponds": {
+            "lower": 0.002036986039,
+            "upper": 0.047607144502
+          },
+          "probe:noise": {
+            "lower": 0.008647472624,
+            "upper": 0.070089184533
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.011317620529,
+            "upper": 0.077116545501
+          },
+          "world:plus": {
+            "lower": 0.577767439576,
+            "upper": 0.742250353201
+          }
+        },
+        "counts": {
+          "control:reassign_ponds": {
+            "hard_undefined": 0,
+            "holds": 2,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "hard_undefined": 0,
+            "holds": 5,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "hard_undefined": 0,
+            "holds": 6,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "hard_undefined": 0,
+            "holds": 133,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K2_LOW_POWER",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "biomass_fertilised"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "biomass_fertilised",
+            "biomass_unfertilised"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "WEAK"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started.",
+      "A criterion's own UNDEFINED outcomes (None, a pattern's UNDEFINED, a command's UNDEFINED) on plus, minus and null count as no claim; K1 makes the verdict UNDEFINED only for failures (exceptions, failed generation, wrong return types, missing components, command errors) or when the criterion abstains on more than half of the plus samples.",
+      "K8 leaves pairs with an UNDEFINED side out of its change count; abstentions can therefore hide changes on up to half of the pairs."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.7",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "reassign_ponds",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "a314fc7e30293807c32396d5db9f8ae58113148af3bd890a51c91d6a42bd3b1b",
+      "name": "W25",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "fertilisation multiplies biomass by exp(0.9) = 2.5 -> multiplier 1; pond effects (sd 0.4), sample noise (sd 0.3) and the 4 ponds x 10 samples layout unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.5.0",
+    "verdict": "WEAK"
+  },
+  "body_sha256": "75db555aa53db99610fa0dfe7578deddd2d01283db2faf3fc276b823baa5a8ba",
+  "created_utc": "2026-11-13T15:23:26Z"
+}

@@ -1,0 +1,180 @@
+{
+  "body": {
+    "alpha_per_bound": 0.005,
+    "components": [
+      {
+        "bounds": {},
+        "counts": {
+          "control:angles_mispaired": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "premise:protractor_zeroed": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "world:minus": {
+            "hard_undefined": 0,
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "world:plus": {
+            "hard_undefined": 0,
+            "holds": 1,
+            "n": 1,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [],
+        "id": "index_matches",
+        "minus_check": {
+          "changed_keys": [
+            "theta_t"
+          ],
+          "identical": false,
+          "paired": false,
+          "read_keys": [
+            "theta_i",
+            "theta_t"
+          ]
+        },
+        "probe_draws": {
+          "probe:noise": [
+            "FAILS",
+            "FAILS",
+            "FAILS"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started.",
+      "A criterion's own UNDEFINED outcomes (None, a pattern's UNDEFINED, a command's UNDEFINED) on plus, minus and null count as no claim; K1 makes the verdict UNDEFINED only for failures (exceptions, failed generation, wrong return types, missing components, command errors) or when the criterion abstains on more than half of the plus samples.",
+      "K8 leaves pairs with an UNDEFINED side out of its change count; abstentions can therefore hide changes on up to half of the pairs."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 5,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {
+      "protractor_zeroed": {
+        "index_matches": 1.0
+      }
+    },
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.7",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "index_matches"
+          ],
+          "id": "angles_mispaired",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "index_matches",
+          "regime": "all",
+          "tolerances": {
+            "n": [
+              0.01,
+              1.5
+            ]
+          }
+        }
+      ],
+      "deterministic": true,
+      "module_sha256": "4b8843e61fbdf60faa62966d086dfab3c6016f1daed058c62982699b4597e1f0",
+      "name": "E2-14 refractive index from Snell's law",
+      "premises": [
+        {
+          "criteria": [
+            "index_matches"
+          ],
+          "id": "protractor_zeroed",
+          "magnitude": [
+            2.0,
+            90.0
+          ],
+          "role": "tested"
+        }
+      ],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "medium glass (n = 1.50) -> water (n = 1.33)",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.5.0",
+    "verdict": "FALSIFIABLE"
+  },
+  "body_sha256": "69a6baf5f179a6617e9d83638b4ab1c9c0ebf89fd42c261d0620af12570f2510",
+  "created_utc": "2026-11-13T15:19:55Z"
+}

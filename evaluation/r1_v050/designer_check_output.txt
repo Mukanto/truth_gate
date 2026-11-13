@@ -1,0 +1,13 @@
+components by group and line:
+  bad    stoch  3
+  item1  R-1    4
+  item1  det    36
+  item1  stoch  215
+  item2  det    1
+  item2  stoch  5
+  item3  stoch  11
+total components: 275 | studies: 267
+streams where hard_undefined != sum of errors (expected only combined deterministic random probes, R-3): 0
+PROBLEMS: 0
+R2: 10 of 10 match the frozen prediction
+R1 (designer): HOLDS
