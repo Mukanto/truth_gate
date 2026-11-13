@@ -1,0 +1,167 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:negate": {
+            "lower": 0.36010266135,
+            "upper": 0.602246216211
+          },
+          "probe:noise": {
+            "lower": 0.407280752345,
+            "upper": 0.649195931312
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.058721939037
+          },
+          "world:minus": {
+            "lower": 0.455607912293,
+            "upper": 0.694996577461
+          },
+          "world:plus": {
+            "lower": 0.397753783789,
+            "upper": 0.63989733865
+          }
+        },
+        "counts": {
+          "control:negate": {
+            "holds": 48,
+            "n": 100,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 53,
+            "n": 100,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 100,
+            "undefined": 0
+          },
+          "world:minus": {
+            "holds": 58,
+            "n": 100,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 52,
+            "n": 100,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "HIGH_RATE:control:negate",
+          "HIGH_RATE:probe:noise",
+          "K2_HIGH_SIZE",
+          "K2_LOW_POWER",
+          "K2_NO_SEPARATION",
+          "K4_CONTROL_ALSO_HOLDS",
+          "K5_HOLDS_ON_NOISE"
+        ],
+        "id": "mean_gt_0",
+        "minus_check": {
+          "changed_keys": [
+            "x"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "x"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "NOT_FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.6",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 100
+      },
+      "controls": [
+        {
+          "criteria": [
+            "mean_gt_0"
+          ],
+          "id": "negate",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "mean_gt_0",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "e1b70bd2b8a43553beb70512343178ec4e1b7a8f01128dfe129ebd9bb9ce8e08",
+      "name": "toy_no_separation_distinct",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "spread 1 -> 2",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.4.1",
+    "verdict": "NOT_FALSIFIABLE"
+  },
+  "body_sha256": "b8132aceb48bf16417af7265e9b0097c95e1d66c7778837a65d2bcb258d1473e",
+  "created_utc": "2026-11-13T05:25:41Z"
+}

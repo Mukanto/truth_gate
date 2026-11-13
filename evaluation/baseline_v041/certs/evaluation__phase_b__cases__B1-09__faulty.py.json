@@ -1,0 +1,163 @@
+{
+  "body": {
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "bounds": {
+          "control:no_manipulation_effect": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "world:minus": {
+            "lower": 0.360214048024,
+            "upper": 0.533113354383
+          },
+          "world:plus": {
+            "lower": 0.969750887203,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:no_manipulation_effect": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 200
+          },
+          "world:minus": {
+            "holds": 89,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K2_HIGH_SIZE",
+          "K5_INCONCLUSIVE:zeros"
+        ],
+        "id": "C",
+        "minus_check": {
+          "changed_keys": [
+            "post"
+          ],
+          "identical": false,
+          "paired": true,
+          "read_keys": [
+            "base",
+            "post"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "NOT_FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 4,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.6",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "C"
+          ],
+          "id": "no_manipulation_effect",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "C",
+          "regime": "all",
+          "tolerances": {}
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "0dc458c54cc2910f731f613ce2883d7e483df4bceee7b5e62bd46adacf675fb4",
+      "name": "W41",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "the manipulation raises the rate of the truly low-baseline neurons by 4.5 spikes/s (sd 1.5) -> 0; the +1 spikes/s effect on the other neurons, the lognormal baselines, the Poisson counting noise (0.3 s epochs) and the two baseline epochs unchanged",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.4.1",
+    "verdict": "NOT_FALSIFIABLE"
+  },
+  "body_sha256": "f6d9bfd91c82d2c658aab53715c2fa0725596be9dbcf44942972cd85aa225563",
+  "created_utc": "2026-11-13T05:26:17Z"
+}

@@ -1,0 +1,183 @@
+{
+  "body": {
+    "alpha_per_bound": 0.005,
+    "components": [
+      {
+        "bounds": {
+          "control:response_shuffled": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "probe:noise": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "probe:shuffle:x,y": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "world:minus": {
+            "lower": 0.942651401081,
+            "upper": 0.996202602725
+          },
+          "world:plus": {
+            "lower": 0.967890725574,
+            "upper": 1.0
+          }
+        },
+        "counts": {
+          "control:response_shuffled": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:shuffle:x,y": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:minus": {
+            "holds": 197,
+            "n": 200,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 200,
+            "n": 200,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [
+          "K2_MINUS_IDENTICAL"
+        ],
+        "id": "correlated",
+        "minus_check": {
+          "changed_keys": [],
+          "identical": true,
+          "paired": true,
+          "read_keys": [
+            "x",
+            "y"
+          ]
+        },
+        "regime": "all",
+        "suppressed_minus": [
+          "K2_HIGH_SIZE",
+          "K2_NO_SEPARATION"
+        ],
+        "unresolvable": [],
+        "verdict": "UNTESTED"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 5,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {},
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.6",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "correlated"
+          ],
+          "id": "response_shuffled",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "correlated",
+          "regime": "all",
+          "tolerances": {
+            "r_min": [
+              0.5,
+              1.0
+            ]
+          }
+        }
+      ],
+      "deterministic": false,
+      "module_sha256": "8d158f50d41e4068af174e1f92d96d1bf44a6ad3e1eb8f9fb023bf280330cad9",
+      "name": "E2-05 stimulus-response coupling",
+      "premises": [],
+      "regimes": [
+        "all"
+      ],
+      "relational": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "coupling 1.0 -> 0",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.4.1",
+    "verdict": "UNTESTED"
+  },
+  "body_sha256": "cba89616f895d6ca6dfaa3d96961c17d3cba429a7736a43df3507cc0bfd14f75",
+  "created_utc": "2026-11-13T05:24:48Z"
+}

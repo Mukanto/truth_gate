@@ -1,0 +1,20 @@
+# Phase C: source addendum
+
+Sources added by the designer before any Phase C brief exists (PREREG_PHASE_C §1). Each documenting passage was read by
+the designer on 2026-11-13 at the location given (full text unless stated). None of these sources supplied a Phase B
+pair, so a Phase C pair resting on one of them cannot overlap Phase B (§1 overlap key). At least 4 of the 12 pairs of
+each in-scope class rest on sources of this addendum (§1).
+
+| Key | Class | Reference | Documenting passage (≤ 2 sentences) and location | Note |
+|---|---|---|---|---|
+| KRI10 | B-1 | Kriegeskorte N, Lindquist MA, Nichols TE, Poldrack RA, Vul E (2010). Everything you never wanted to know about circular analysis, but were afraid to ask. *J Cereb Blood Flow Metab* 30:1551–1557. doi:10.1038/jcbfm.2010.86 (PMC2949251) | Introduction: effect estimates and tests "based on selected data need to be independent of the selection process", which can be ensured "by using independent data for selection (e.g., using half of the data to select signal-carrying voxels, and the other half to estimate the signal)". | Shares authors with KRI09 and VUL09; a separate publication with its own examples (stated, not hidden). |
+| MOR03 | B-1 | Morton V, Torgerson DJ (2003). Effect of regression to the mean on decision making in health care. *BMJ* 326:1083–1084. doi:10.1136/bmj.326.7398.1083 (PMC1125994) | Summary points: "Any intervention aimed at a group or characteristic that is very different from the average will appear to be successful because of regression to the mean." Placebo-effect section: patients recruited for extreme symptom scores improve in placebo and active groups alike. | Extreme-group selection on a noisy measurement (PB §1 B-1). |
+| VAR06 | B-2 | Varma S, Simon R (2006). Bias in error estimation when using cross-validation for model selection. *BMC Bioinformatics* 7:91. doi:10.1186/1471-2105-7-91 (PMC1397873) | Abstract, Results: "The CV error estimate for the classifier with the optimal parameters was found to be a substantially biased estimate of the true error that the classifier would incur on independent data"; the correction is nested CV (inner loop tunes, outer loop estimates). | Subtype L1.3, read as selection on the data used for the error estimate, of features **or classifier parameters** (designer's reading, fixed here). |
+| CUR13 | B-3 | Curran-Everett D (2013). Explorations in statistics: the analysis of ratios and normalized data. *Adv Physiol Educ* 37:213–219. doi:10.1152/advan.00053.2013 (PMID 24022766) | Abstract: "only if the relationship between numerator and denominator is a straight line through the origin will the ratio be meaningful. If not, the ratio will misrepresent the true relationship between numerator and denominator." Correction: regression with the denominator (analysis of covariance). | Read as abstract only (the full text is not open); the passage is in the abstract. |
+| LAZ18 | B-6 | Lazic SE, Clarke-Williams CJ, Munafò MR (2018). What exactly is 'N' in cell culture and animal experiments? *PLoS Biol* 16(4):e2005282. doi:10.1371/journal.pbio.2005282 (PMC5902037) | "Animal experiments": "If treatments are randomly and independently applied to an entity other than the individual animal, then the sample size is not the number of animals." The reviewed studies treated pregnant females and counted the offspring as replicates. | Shares its first author with LAZ10; a separate publication with a literature review and its own settings (stated). |
+
+Independence count (§1, at least 3 independent read sources per in-scope class): the Phase B lists B-1 (KRI09, VUL09,
+MAK19, BAR05), B-2 (KAP23, AMB02, SIM03), B-3 (PEA97, ARC81, KRO93), B-6 (NIE11, HUR84, LAZ10, MAK19) can meet it alone.
+Of the addendum sources, MOR03 (B-1), VAR06 (B-2) and CUR13 (B-3) count as independent sources when they are read
+(§1); KRI10 and LAZ18 are not counted as independent of KRI09/VUL09 and LAZ10. A class meets the count with any 3
+independent read sources from both lists.

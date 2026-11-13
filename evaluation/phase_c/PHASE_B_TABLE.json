@@ -1,0 +1,879 @@
+{
+  "note": "Phase B pairs for the Phase C overlap rule (PREREG_PHASE_C.md section 1): source key, documenting passage, error mechanism (from the private notes), statistic terms found in the claim, and the claim. Built by the designer from evaluation/phase_b/record before any Phase C brief exists; designer's use only. Fields mechanism_tag and statistic_family added for the overlap key.",
+  "pairs": [
+    {
+      "case": "B1-01",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "passage": "KRI09, Introduction: 'In neuroimaging, an example of selection is the definition of a region of interest (ROI) by means of a statistical mapping that highlights voxels more strongly active during one condition than another.' Also: double dipping 'will give distorted descriptive statistics and invalid statistical inference'; independent data or a split-data analysis is the remedy (Fig. 4 policy). E",
+      "mechanism": "Per voxel, compute a face-minus-house t (or mean) over subjects and runs from ALL data; keep voxels with p<0.05 (or the top fraction, e.g. top 20%) positive; per-subject mean face-minus-house over the kept voxels and ALL runs; mean across subjects >= 0.30 and one-sided one-sample t p<0.05. Parameters: p<0.05 uncorrected, positive voxels only.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "In a 60-voxel region of ventral visual cortex, the voxels that respond more to faces than to houses show a mean face-minus-house response of at least 0.30 percent signal change. The claim holds when this mean (taken per subject and then averaged over the 20 subjects) is at least 0.30 and significantly above zero (one-sided one-sample t-test across subjects, p < 0.05).",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-02",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "passage": "KRI09, Example 1 discussion: 'In single-cell recording, for example, it is common to select neurons according to some criterion (e.g. visual responsiveness or selectivity) before applying further analyses to the selected subset. If the selection is based on the same data set as used for selective analysis, biases will arise.' (orientation tuning index is my instance of 'selectivity')",
+      "mechanism": "Per neuron, one-way ANOVA across orientations on ALL trials; keep neurons with p<0.05; preferred orientation = argmax of the mean over ALL trials; index from the same means; criterion = mean index of kept neurons >= 0.25. Guard: at least one neuron kept.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Among 150 recorded V1 neurons, the neurons that are tuned to orientation have a mean orientation selectivity index of at least 0.25, where each neuron's index is (r_pref - r_orth) / (r_pref + r_orth), r_pref is its mean rate at its preferred orientation and r_orth its mean rate at the orientation 90 degrees away.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-03",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "passage": "KRI09, Introduction (Fig. 1 text): 'In behavioral studies, an example of selection is the division of a group of subjects into subgroups based on task performance.' The same text states that selection inside the same data distorts descriptive statistics and tests.",
+      "mechanism": "Split participants at the median of block 0 (lower vs upper half); improvement = block 3 - block 0 per participant; independent-samples t (one-sided, lower half larger) p<0.05 and mean difference >= 4.",
+      "statistic_terms": [],
+      "claim": "In a study of 60 participants, those who perform worst at the start of a perceptual-learning task benefit most from training: the improvement (late-block score minus early-block score) of the lower-scoring half exceeds that of the higher-scoring half by at least 4 points, with an independent-samples t-test p < 0.05 (one-sided).",
+      "mechanism_tag": "split-by-baseline-compare-change",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-04",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "passage": "VUL09, 'The Nonindependence Error': 'This approach amounts to selecting one or more voxels based on a functional analysis and then reporting the results of the same analysis and functional data from just the selected voxels.' Fig. 4 simulates 10 subjects and 10,000 voxels of pure noise.",
+      "mechanism": "Voxel-wise correlation of act with trait over all 24 subjects; keep voxels with r > 0 and p<0.05 (or above a threshold of r such as 0.4); report the mean r of kept voxels and require >= 0.50. Guard: at least one voxel kept (else None).",
+      "statistic_terms": [
+        "Pearson",
+        "correlation",
+        "mean"
+      ],
+      "claim": "In a 60-voxel region of anterior insula, the voxels whose activity relates positively to trait empathy show a mean Pearson correlation of at least 0.50 with the trait score across the 24 subjects.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B1-05",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "passage": "VUL09, survey section: 53% of respondents said 'regression across subjects' was the functional constraint used to select voxels; the reliability discussion mentions two scanning sessions (Manoach et al. 2001). Using a second session as the independent measure is my construction, not stated in VUL09.",
+      "mechanism": "Average the two sessions; voxel-wise correlation with trait on all 16 subjects; keep voxels with r>0 and p<0.01; average their activity per subject; slope of z(trait) on z(mean activity) with one-sided slope t-test p<0.05, slope >= 0.5.",
+      "statistic_terms": [
+        "mean",
+        "slope"
+      ],
+      "claim": "In a 50-voxel region of medial prefrontal cortex, the voxels that track trait social anxiety have a mean activity that predicts the trait: the least-squares slope of the standardized trait score on the standardized mean activity of those voxels across the 16 subjects is at least 0.50, with one-sided p < 0.05.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B1-06",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "passage": "VUL09, discussion of gradations of nonindependence: Study 26 'split the data into two groups: those with high IAT scores and those with low IAT scores. They then found voxels that showed a main effect between these two groups and computed a correlation within those voxels.' The Welch-t statistic is my variant of reporting the group effect in those voxels.",
+      "mechanism": "Voxel-wise Welch t between groups on all subjects; keep voxels with t>2 (p<~0.05, high > low); average kept voxels per subject; Welch t between groups; require >= 3.0.",
+      "statistic_terms": [
+        "Welch",
+        "mean"
+      ],
+      "claim": "Among 28 subjects (14 high-anxiety and 14 low-anxiety by interview), in the voxels of a 40-voxel amygdala region that react more strongly to threatening pictures in the high-anxiety group, the group difference in mean reactivity has a Welch t statistic of at least 3.0.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-07",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19, 'Circular analysis': 'circular analysis is used to divide ... or reduce (e.g. defining a region of interest ...) the complete dataset using a selection criterion that is retrospective and inherently relevant to the statistical outcome.' KRI09 Introduction lists 'inferential analysis performed for a statistically selected subset of genes'. The tumour/normal panel is my instance.",
+      "mechanism": "Per gene Welch t on all 40 samples; keep genes with p<0.05; mean of |difference in group means| over kept genes >= 0.5. Guard: >=1 gene kept.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "In a panel of 60 candidate genes, the genes that differ between tumour and normal tissue have a mean absolute log2 fold change of at least 0.5, in 20 tumour and 20 normal samples.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-08",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19, 'Circular analysis': 'circular analysis recruits the noise (inherent to any empirical data) to inflate the statistical outcome'; its worked example is a neuronal population measured before and after a manipulation. KRI09 describes selecting neurons by visual responsiveness. The calcium-imaging responders with a tone are my instance.",
+      "mechanism": "Per cell paired t (post vs pre) over all 30 trials; responders = p<0.05 (either sign allowed? use post>pre only); proportion of responders with mean(post-pre) over all 30 trials > 0 must be >= 0.70. (Equals 1 by construction.)",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Of the 120 cells in a calcium-imaging field of view, those that respond to the tone are mostly genuine responders: at least 70% of them show a larger mean fluorescence after tone onset than before it.",
+      "mechanism_tag": "select-then-test-same-data",
+      "statistic_family": "proportion"
+    },
+    {
+      "case": "B1-09",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19, section 'Circular analysis': 'They therefore split the population to sub-groups, by binning the data based on the activity levels observed at baseline. This leads to a significant interaction effect - those neurons that initially produced low responses show response increases ... could therefore be observed in pure noise.'",
+      "mechanism": "Baseline = mean of the two baseline epochs; lowest-baseline third of neurons; increase = post - baseline for those neurons; one-sample t vs 0 (one-sided) p<0.05 and mean >= 2. Guard: >=5 neurons.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "In a recording of 200 cortical neurons, the neurons that fire least at baseline show an increase in firing rate after the manipulation of at least 2 spikes/s on average. The claim holds when a one-sample t-test of the per-neuron increase against zero, over the low-baseline neurons, is significant at p < 0.05 (one-sided) and the mean increase is at least 2.",
+      "mechanism_tag": "extreme-group-change",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-10",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "passage": "BAR05 abstract (verified): 'The effect of RTM in a sample becomes more noticeable with increasing measurement error and when follow-up measurements are only examined on a sub-sample selected using a baseline value.' Remedy per abstract: 'better study design and use of suitable statistical methods'. Full text not accessible: the blood-pressure setting and the placebo-arm remedy are NOT VERIFIED aga",
+      "mechanism": "Among drug-arm patients with entry sbp >= 150, paired change (entry - follow-up) mean >= 5 and one-sided paired t p<0.05; control arm not used. Guard: >=5 such patients.",
+      "statistic_terms": [],
+      "claim": "In patients whose systolic blood pressure is at least 150 mmHg at entry, the drug lowers systolic pressure by at least 5 mmHg over 12 weeks. The claim holds when the estimated lowering is at least 5 mmHg and one-sided p < 0.05.",
+      "mechanism_tag": "extreme-group-change",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B1-11",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "passage": "BAR05 abstract (verified): 'unusually large or small measurements tend to be followed by measurements that are closer to the mean.' The second-baseline remedy is NOT VERIFIED (full text not accessible). MAK19 'Circular analysis' also describes binning on baseline and then showing change as an artefact.",
+      "mechanism": "Select patients in the top fifth of visit 0; proportion with visit 2 < visit 0 must be >= 0.70. Guard: >=5 selected.",
+      "statistic_terms": [],
+      "claim": "Among patients with a depression score in the top fifth at the first assessment, at least 70% have a lower score after the 8-week programme than before it.",
+      "mechanism_tag": "extreme-group-change",
+      "statistic_family": "proportion"
+    },
+    {
+      "case": "B1-12",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "passage": "BAR05 abstract (verified): same sentence as B1-10 about a follow-up on a sub-sample selected using a baseline value. The education / test-score setting is NOT VERIFIED (full text not accessible).",
+      "mechanism": "Students in the bottom 20% of test 0; mean (test 2 - test 0) >= 5 and one-sided one-sample t p<0.05. Guard: >=5 students.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Students in the lowest fifth of the autumn test gain at least 5 points on the spring test after the tutoring programme: the claim holds when the mean gain of those students is at least 5 and one-sided one-sample t-test p < 0.05.",
+      "mechanism_tag": "extreme-group-change",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B2-01",
+      "class": "B-2",
+      "subtype": "L1.1",
+      "source": "SIM03",
+      "passage": "SIM03 via OpenAlex reconstruction: \"The resubstitution estimate of the error is biased for small datasets (11,12); our simulation confirms this, with 98.2% of the simulated datasets resulting in zero misclassifications, even though no true underlying difference existed between the two groups.\"",
+      "mechanism": "SIM03 resubstitution estimate: build the predictor on all 20 samples (select informative genes, weight them, apply the rule) and reapply it to the same 20 samples; accuracy = 1 - resubstitution error. Source reports 20 specimens, 6000 genes, 10 per class, and that 98.2% of null datasets gave zero misclassifications. Not reported in the text read (supplement not available): classifier and gene-sele",
+      "statistic_terms": [
+        "accuracy",
+        "classifier"
+      ],
+      "claim": "A classifier built from the expression levels of 60 genes recognises tumour tissue among new tissue samples with accuracy of at least 0.80.",
+      "mechanism_tag": "L1.1",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-02",
+      "class": "B-2",
+      "subtype": "L1.1",
+      "source": "SIM03",
+      "passage": "SIM03 via OpenAlex reconstruction: \"We also computed the resubstitution estimate of the error rate (this estimate results from building the predictor on the full dataset and then reapplying it to each specimen for classification purposes). [...] Consequently, it is essential to obtain an unbiased estimate of the true error rate of the predictor (i.e., the probability of incorrectly classifying a r",
+      "mechanism": "SIM03 resubstitution estimate: fit logistic regression (few Newton steps, small ridge) on all 30 patients and compute AUC on the same patients.",
+      "statistic_terms": [
+        "AUC"
+      ],
+      "claim": "A logistic model using 20 baseline markers predicts which patients will relapse within five years, in new patients, with AUC of at least 0.75.",
+      "mechanism_tag": "L1.1",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-03",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "AMB02",
+      "passage": "AMB02 (PMC124442, full text read): \"But, if it is calculated within the feature-selection process, there is a selection bias in it when it is used as an estimate of the prediction error. [...] it is essential that cross-validation or the bootstrap be used external to the gene-selection process.\"",
+      "mechanism": "AMB02 section Forward Selection with Fisher's Rule: Fisher's linear discriminant rule; genes pre-reduced (source: top 400 of 2000; here top 20 of 60 as a scaled analogue); sequential forward selection with the decision to add a gene based on leave-one-out CV error, using all 62 tissues and no test set; the reported error is the internal leave-one-out error CV1IE of the 3-gene rule (source: minimum",
+      "statistic_terms": [
+        "accuracy"
+      ],
+      "claim": "The expression levels of 60 genes predict cancer versus normal status in new tissue samples with accuracy of at least 0.80.",
+      "mechanism_tag": "L1.3",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-04",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "AMB02",
+      "passage": "AMB02 (PMC124442) Discussion: \"although the feature vectors have been generated independently of the class labels, we can form an SVM rule that has not only an average zero AE but also an average CV1IE error close to zero for a subset of 128 genes and about 10% for only eight genes in the selected subset.\"",
+      "mechanism": "AMB02 section Backward Elimination with SVM (RFE of Guyon et al.): linear classifier with recursive elimination by weight magnitude down to 8 genes on all 72 patients (source: eight-gene subset), then the leave-one-out (CV1IE) scores of the 8-gene rule give the AUC. Linear SVM replaced by a ridge linear classifier in numpy (adaptation, not in source).",
+      "statistic_terms": [
+        "AUC"
+      ],
+      "claim": "Patients with leukaemia subtype A can be told from subtype B using 60 gene expression values, with AUC of at least 0.80 in new patients.",
+      "mechanism_tag": "L1.3",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-05",
+      "class": "B-2",
+      "subtype": "L1.2",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L1.2 (verified): \"Using the entire dataset for any pre-processing steps such as imputation or over/under sampling.\" Appendix B.4: \"Correcting the imputation method dramatically reduces the performance of the ML models proposed.\"",
+      "mechanism": "Fill unobserved entries of each indicator with the mean of its observed values within the row's own outcome class (label-dependent imputation over all rows), then compute cross-validated AUC of a logistic regression.",
+      "statistic_terms": [
+        "AUC"
+      ],
+      "claim": "Using 12 country-level indicators, the model identifies which country-years will see a civil war onset, with AUC of at least 0.75 in new country-years.",
+      "mechanism_tag": "L1.2",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-06",
+      "class": "B-2",
+      "subtype": "L1.2",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L1.2 (verified in full text): \"For instance, using oversampling before splitting the data into training and test sets leads to an imperfect separation between the training and test sets since data generated using oversampling from the training set will also be present in the test set.\" Table 1 lists Blagus and Lusa 2015 (bioinformatics, 6 papers).",
+      "mechanism": "Oversample positives by SMOTE-style interpolation between random pairs of positive rows up to class balance over the whole data, then 5-fold cross-validate 3-NN and report balanced accuracy.",
+      "statistic_terms": [
+        "accuracy",
+        "nearest-neighbour"
+      ],
+      "claim": "In a screening cohort where about one sample in five is positive, a nearest-neighbour rule on 30 biomarkers attains balanced accuracy of at least 0.75 on new samples.",
+      "mechanism_tag": "L1.2",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-07",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L1.4 (verified): \"If a dataset with duplicates is used for the purposes of training and evaluating an ML model, the same data could exist in the training as well as test set.\"",
+      "mechanism": "Run 10-fold cross-validation of 1-NN accuracy over all rows including repeated entries.",
+      "statistic_terms": [
+        "accuracy",
+        "nearest-neighbour"
+      ],
+      "claim": "From 15 clinical measurements recorded in a patient registry, a nearest-neighbour rule predicts diagnosis in new patients with accuracy of at least 0.75. Some patients were entered more than once.",
+      "mechanism_tag": "L1.4",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-08",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L1.2 (verified): \"using oversampling before splitting the data into training and test sets leads to an imperfect separation between the training and test sets\"; L1.4: \"the same data could exist in the training as well as test set.\" Prereg tie rule: oversampling by copying rows is L1.4.",
+      "mechanism": "Copy fraud rows (sampling with replacement) until classes are balanced on the whole data, then 5-fold cross-validate 1-NN and compute fraud F1 on the rows of each fold.",
+      "statistic_terms": [
+        "F1",
+        "nearest-neighbour"
+      ],
+      "claim": "In a fraud-screening data set where about 12% of transactions are fraudulent, a nearest-neighbour rule on 10 transaction features achieves an F1 score of at least 0.60 for fraud on new transactions.",
+      "mechanism_tag": "L1.4",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-09",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "passage": "KAP23 Appendix B.5 (verified): \"When the dataset contains temporal data, the training dataset could contain data from a later date than the test dataset because of being shuffled.\"",
+      "mechanism": "Shuffle rows and run 5-fold cross-validated logistic AUC.",
+      "statistic_terms": [
+        "AUC"
+      ],
+      "claim": "From 8 yearly indicators, the model predicts civil war onset in future country-years with AUC of at least 0.75.",
+      "mechanism_tag": "L3.1",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-10",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L3.1 (verified): \"If the test set contains data from before the training set, the model is built using data from the future that it should not have access to during training, and can cause leakage.\"",
+      "mechanism": "Shuffle rows, 5-fold cross-validated ridge R^2.",
+      "statistic_terms": [
+        "regression"
+      ],
+      "claim": "Using 6 weekly indicators, a ridge regression forecasts next-week hospital admissions in future weeks with R^2 of at least 0.30.",
+      "mechanism_tag": "L3.1",
+      "statistic_family": "R-squared"
+    },
+    {
+      "case": "B2-11",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L3.2 (verified): \"Oner et al. 2020 find that a recent study on histopathology uses different observations of the same patient in the training and test sets.\" (The claim is about new patients.)",
+      "mechanism": "Flatten to 240 patch rows with the patient label repeated, shuffle, 5-fold cross-validated logistic AUC.",
+      "statistic_terms": [
+        "AUC"
+      ],
+      "claim": "From 20 image features of tissue patches, the model identifies the gene mutation status of new patients with AUC of at least 0.75.",
+      "mechanism_tag": "L3.2",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "B2-12",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "passage": "KAP23 Sec 2.4 L3.2 (verified): \"In the extreme (but unfortunately common) case, train and test samples come from the same people or units.\" Remedy named there: block cross validation (Roberts 2017, Valavi 2021).",
+      "mechanism": "Flatten to 240 rows, shuffle, 5-fold cross-validated ridge R^2.",
+      "statistic_terms": [
+        "regression"
+      ],
+      "claim": "From 15 patient characteristics, ridge regression predicts length of stay in patients from new hospitals with R^2 of at least 0.40.",
+      "mechanism_tag": "L3.2",
+      "statistic_family": "R-squared"
+    },
+    {
+      "case": "B3-01",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "passage": "Europe PMC abstract (PMID 7212790): 'Type 2 coupling is the functional relationship between two calculated variables which have one or more common component variables.' 'The common problem in each type of mathematic coupling is that one variable either directly or indirectly contains the whole or components of the second variable.'",
+      "mechanism": "Oxygen consumption is obtained by the Fick calculation VO2 = CO*Hb*1.34*(SaO2-SvO2)*10 and correlated (Pearson) with DO2 = CO*Hb*1.34*SaO2*10. Both share cardiac output, hemoglobin and SaO2 (and their measurement errors), so r is high even when true consumption is independent of delivery. Threshold r >= 0.5 as in the brief.",
+      "statistic_terms": [
+        "Pearson",
+        "correlation"
+      ],
+      "claim": "In critically ill adults, oxygen consumption rises with oxygen delivery: across 40 patients, the Pearson correlation between oxygen consumption and oxygen delivery is at least 0.5.",
+      "mechanism_tag": "shared-measured-component",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B3-02",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "passage": "Europe PMC abstract (PMID 7212790): 'Type 3, the most common type of mathematic coupling, is direct algebraic coupling between two variables, when one or more of the variables is derived and/or calculated.'",
+      "mechanism": "SVR = 80*(MAP-CVP)/CO_thermodilution, then Spearman rank correlation with the same CO_thermodilution. Shared measurement error in CO makes SVR and CO negatively associated even if true SVR and true CO are unrelated.",
+      "statistic_terms": [
+        "Spearman",
+        "correlation"
+      ],
+      "claim": "In critically ill adults, systemic vascular resistance falls as cardiac output rises: across 100 patients, the Spearman rank correlation between systemic vascular resistance and cardiac output is at most -0.4.",
+      "mechanism_tag": "shared-measured-component",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B3-03",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "passage": "Europe PMC abstract (PMID 7212790): 'Type 3, the most common type of mathematic coupling, is direct algebraic coupling between two variables, when one or more of the variables is derived and/or calculated.'",
+      "mechanism": "RV end-diastolic volume index = stroke_volume_index / rvef (both thermodilution), then standardised slope of that EDV index on rvef (threshold <= -0.4). EDV and EF share EF and its measurement error.",
+      "statistic_terms": [
+        "slope"
+      ],
+      "claim": "In patients with heart failure, a larger right ventricular end-diastolic volume goes with a lower right ventricular ejection fraction: across 30 patients, the standardised slope (both variables z-scored) of end-diastolic volume index on ejection fraction is at most -0.4.",
+      "mechanism_tag": "shared-measured-component",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B3-04",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "passage": "Europe PMC abstract (PMID 7212790): 'Type 1 coupling involves directional changes in two variables which are mathematically coupled.' (plus the Type 2 sentence on common component variables)",
+      "mechanism": "Per patient, delta VO2 = VO2_Fick(during) - VO2_Fick(before) and delta DO2 likewise from CO, Hb, SaO2; R squared of the regression of delta VO2 on delta DO2 (threshold 0.25). The change scores share the changes in CO, Hb and SaO2.",
+      "statistic_terms": [
+        "R squared",
+        "proportion",
+        "regression"
+      ],
+      "claim": "A dobutamine infusion in critically ill adults raises oxygen consumption in proportion to the rise in oxygen delivery: across 24 patients, the proportion of variance in the change in oxygen consumption explained by the change in oxygen delivery (R squared of a simple linear regression) is at least 0.25.",
+      "mechanism_tag": "shared-measured-component",
+      "statistic_family": "R-squared"
+    },
+    {
+      "case": "B3-05",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "passage": "Pearson 1897, p.490-491 (archive.org OCR text): 'Form the proper fractions x/y and z/y for each triplet, and correlation will be found between these indices.' and, for femur/humerus and tibia/humerus, 'there would be ... a correlation of about 0.4 to 0.5 between these indices had the bones been sorted absolutely at random.'",
+      "mechanism": "Pearson correlation of femur_length/vertebral_column_length with tibia_length/vertebral_column_length (threshold r >= 0.4). With independent femur and tibia lengths and a varying denominator the index correlation is about 0.4 to 0.5 at equal coefficients of variation (documented in Pearson).",
+      "statistic_terms": [
+        "Pearson",
+        "correlation"
+      ],
+      "claim": "Across 120 adult human skeletons, femur length relative to vertebral column length and tibia length relative to vertebral column length are positively related: the Pearson correlation between the two relative lengths is at least 0.4.",
+      "mechanism_tag": "ratio-shared-denominator",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B3-06",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+      "mechanism": "Spearman correlation of co2_emissions_total/population with gdp_total/population (threshold 0.5). With widely varying population the per-capita ratios correlate even if totals are unrelated.",
+      "statistic_terms": [
+        "Spearman",
+        "correlation"
+      ],
+      "claim": "Wealthier countries emit more carbon dioxide per person: across 150 countries, the Spearman rank correlation between per-capita carbon dioxide emissions and per-capita gross domestic product is at least 0.5.",
+      "mechanism_tag": "ratio-shared-denominator",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B3-07",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+      "mechanism": "Standardised slope of yield_total/farm_area on fertilizer_total/farm_area (threshold 0.3). Shared area denominator drives the slope when farm size varies.",
+      "statistic_terms": [
+        "regression",
+        "slope"
+      ],
+      "claim": "Across 90 farms, a farm that applies more fertilizer per hectare obtains a higher crop yield per hectare: the standardised regression slope (both variables z-scored) of yield per hectare on fertilizer per hectare is at least 0.3.",
+      "mechanism_tag": "ratio-shared-denominator",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B3-08",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+      "mechanism": "R squared of the regression of peak_power/body_mass on vo2max/body_mass (threshold 0.25), the shared body mass denominator producing explained variance.",
+      "statistic_terms": [
+        "R squared",
+        "proportion",
+        "regression"
+      ],
+      "claim": "In trained athletes, aerobic capacity per kilogram of body mass goes with sprint power per kilogram of body mass: across 30 athletes, the proportion of variance in peak power per kilogram explained by maximal oxygen uptake per kilogram (R squared of a simple linear regression) is at least 0.25.",
+      "mechanism_tag": "ratio-shared-denominator",
+      "statistic_family": "R-squared"
+    },
+    {
+      "case": "B3-09",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+      "mechanism": "Standardised slope of (infections/admissions) on beds (threshold <= -0.3). Admissions rise with beds, so the rate falls with beds even if infection counts are unrelated to beds.",
+      "statistic_terms": [
+        "regression",
+        "slope"
+      ],
+      "claim": "Larger hospitals have lower hospital-acquired infection rates per admission: across 100 hospitals, the standardised regression slope (variables z-scored) of infections per admission on the number of beds is at most -0.3.",
+      "mechanism_tag": "ratio-vs-denominator-proxy",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B3-10",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+      "mechanism": "Standardised slope of systolic_pressure on heart_weight/body_weight (threshold >= 0.3). If pressure depends on body weight (the denominator) but not on heart weight, the ratio still predicts pressure.",
+      "statistic_terms": [
+        "regression",
+        "slope"
+      ],
+      "claim": "In adult rats, a heavier heart relative to body weight goes with higher systolic blood pressure: across 60 rats, the standardised regression slope (variables z-scored) of systolic pressure on heart weight per body weight is at least 0.3.",
+      "mechanism_tag": "ratio-vs-denominator-proxy",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B3-11",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+      "mechanism": "Spearman correlation of occupants with energy_use/floor_area (threshold <= -0.3). Floor area grows with occupants, so the intensity falls with occupants even if energy use is unrelated to occupants.",
+      "statistic_terms": [
+        "Spearman",
+        "correlation"
+      ],
+      "claim": "Buildings with more occupants use less energy per square metre of floor area: across 150 office buildings, the Spearman rank correlation between the number of occupants and annual energy use per square metre is at most -0.3.",
+      "mechanism_tag": "ratio-vs-denominator-proxy",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B3-12",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+      "mechanism": "R squared of the regression of leavers/headcount on payroll (threshold 0.1). Headcount grows with payroll, so the turnover rate falls with payroll even if the number of leavers is unrelated to payroll.",
+      "statistic_terms": [
+        "R squared",
+        "proportion",
+        "regression"
+      ],
+      "claim": "Firms with a larger payroll have lower staff turnover rates: across 250 firms, the proportion of variance in the annual turnover rate (leavers per employee) explained by the payroll (R squared of a simple linear regression) is at least 0.1.",
+      "mechanism_tag": "ratio-vs-denominator-proxy",
+      "statistic_family": "R-squared"
+    },
+    {
+      "case": "B6-01",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"To support this claim, they needed to report a statistically significant interaction (between amount of training and type of mice), but instead they reported that one effect was statistically significant, whereas the other effect was not.\" Also Fig. 1b (pre-test vs post-test effect sizes between groups); MAK19 Fig. 1B ",
+      "mechanism": "Two within-group paired t-tests (post vs pre) at alpha 0.05; holds if the trained gain is significant and the untrained gain is not (and direction trained > untrained).",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "A training programme improves test scores more in the trained group than in the untrained group: the mean pre-to-post gain among trained participants is larger than the mean pre-to-post gain among untrained participants, at the two-sided 0.05 level.",
+      "mechanism_tag": "significant-here-not-there",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-02",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"Similarly, claims about differences in activation across brain regions must be supported by a significant interaction between brain region and the factor underlying the contrast of interest.\" The text also lists comparisons of a pharmacological agent versus placebo; Fig. 1d treats the repeated-measures case.",
+      "mechanism": "Paired t-test of drug-placebo in visual and in auditory region separately; holds if visual significant, auditory not.",
+      "statistic_terms": [],
+      "claim": "A drug changes the evoked response more in visual cortex than in auditory cortex: the drug-minus-placebo difference in response amplitude is larger in the visual region than in the auditory region across 16 participants, at the two-sided 0.05 level.",
+      "mechanism_tag": "significant-here-not-there",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-03",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"A fictive example would be 'Hippocampal firing synchrony correlated with memory performance in the placebo condition (r = 0.43, P = 0.01), but not in the drug condition (r = 0.19, P = 0.21)'.\" MAK19 Fig. 1A: correlations in two groups of 20.",
+      "mechanism": "Pearson r significant in the older group and not in the younger group (one-sided 0.05 each).",
+      "statistic_terms": [
+        "correlation"
+      ],
+      "claim": "The relationship between sleep duration and memory score is stronger in older adults than in younger adults: the correlation between hours of sleep and recall score is higher in the older group than in the younger group, at the one-sided 0.05 level.",
+      "mechanism_tag": "significant-here-not-there",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B6-04",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "passage": "HUR84 (Ecol Monogr 54:187, full text read), section 'Sacrificial pseudoreplication': \"This results when an experimental design involves true replication of treatments but where the data for replicates are pooled prior to statistical analysis ... or where the two or more samples or measurements taken from each experimental unit are treated as independent replicates (Fig. 5B).\"",
+      "mechanism": "Pool all 40 samples per treatment and run a two-sample t-test with the samples as replicates.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Adding nutrients to experimental ponds raises algal biomass: mean biomass in the fertilised ponds is higher than in the unfertilised ponds, at the two-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-05",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "passage": "HUR84, same passage as B6-04 (sacrificial pseudoreplication: several samples from each experimental unit treated as independent replicates; tanks are the units directly treated).",
+      "mechanism": "Regression of all 96 mussel values on dose repeated per mussel; slope t-test with df 94.",
+      "statistic_terms": [
+        "regression",
+        "slope"
+      ],
+      "claim": "Mussel growth increases with the amount of food supplement given to a tank: the regression slope of growth on the supplement dose is positive, at the one-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B6-06",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "passage": "HUR84, section 'Temporal pseudoreplication': \"This differs from simple pseudoreplication only in that the multiple samples from each experimental unit are not taken simultaneously but rather sequentially over each of several dates (Fig. 5C). Dates are then taken to represent replicated treatments ...\"",
+      "mechanism": "Two-sample t-test treating all 72 plot-by-survey values per treatment as replicates.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Mowing raises plant species richness in grassland: mean species richness in mown plots is higher than in unmown plots, at the two-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-07",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "passage": "LAZ10 (BMC Neurosci 11:5, PMC2817684 full text read), hierarchical data: \"If cells are the unit of interest, then typically many cells are examined per brain. Consider an experiment with two experimental conditions (treatment vs. control), with one rat in each condition. The outcome variable is the number of synapses on cells in the CA3 region of the hippocampus, and 100 cells are examined in each",
+      "mechanism": "Two-sample t-test with the 120 cells per genotype as units.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Neurons in knockout mice have larger mean firing rates than neurons in wild-type mice, at the two-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-08",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "passage": "LAZ10 abstract: \"Pseudoreplication occurs when observations are not statistically independent, but treated as if they are. This can occur when there are multiple observations on the same subjects, when samples are nested or hierarchically organised, or when measurements are correlated in time or space.\" Also MAK19 'Inflating the units of analysis' (pooled pre and post measures mix within- and betw",
+      "mechanism": "Pearson correlation of all 300 pooled trials, df 298, one-sided.",
+      "statistic_terms": [
+        "correlation"
+      ],
+      "claim": "Trial-by-trial neural activity in a frontal region is positively related to reaction time: the correlation between activity and reaction time is greater than zero at the one-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B6-09",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "passage": "LAZ10, hierarchical data and Fig. 1 example: \"the mean of the ten values for each rat are calculated first, and then only these two averaged values are used\"; the first (incorrect) interval \"uses all 20 data points and does not account for the hierarchical nature of the data\".",
+      "mechanism": "Paired t-test over all 200 cell pairs (animal, cell index) treated as pairs.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Applying the drug to brain slices increases the mean amplitude of synaptic responses relative to vehicle: mean response amplitude is higher with the drug than with vehicle, in slices taken from the same animals, at the two-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "B6-10",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19 (eLife 8:e48175, PMC6785265 full text read), section 'Interpreting comparisons between two effects without directly comparing them': \"Researchers often base their conclusions regarding the impact of an intervention (such as a pre- vs. post-intervention difference or a correlation between two variables) by noting that the intervention yields a significant effect in the experimental condition ",
+      "mechanism": "Regression slope of rt on contrast in each condition; holds if attended slope significant (negative sign convention per claim) and unattended not.",
+      "statistic_terms": [
+        "regression",
+        "slope"
+      ],
+      "claim": "Reaction time depends more strongly on stimulus contrast in the attended condition than in the unattended condition: the regression slope of reaction time on contrast is steeper in the attended condition than in the unattended condition across 30 participants, at the two-sided 0.05 level.",
+      "mechanism_tag": "significant-here-not-there",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "B6-11",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19, section 'Inflating the units of analysis': \"If the researchers combine the pre and post measures across participants, they will end up with df = 18, the critical R value is now 0.44, rendering it easier to observe a statistically significant effect.\" (10 participants, pre-post design, simple regression; correct df = 8.)",
+      "mechanism": "Pearson correlation over all 40 pooled measurements, df 38, one-sided.",
+      "statistic_terms": [
+        "correlation"
+      ],
+      "claim": "Across participants, grip strength is positively correlated with cortical thickness in the motor cortex: the correlation between the two measures is greater than zero at the one-sided 0.05 level.",
+      "mechanism_tag": "units-not-independent",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "B6-12",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "passage": "MAK19, section 'Interpreting comparisons between two effects without directly comparing them': \"A similar issue occurs when estimating the effect of an intervention measured in two different groups: the intervention could yield a significant effect in one group but not in the other.\" (Fig. 1B: pre-post training difference, n=20 per group.)",
+      "mechanism": "Per-group one-sample t-test on per-participant slopes across the 3 sessions; holds if trained significant, control not.",
+      "statistic_terms": [],
+      "claim": "Over three practice sessions the trained group improves faster than the control group: the average per-session change in performance is larger in the trained group than in the control group, at the two-sided 0.05 level.",
+      "mechanism_tag": "significant-here-not-there",
+      "statistic_family": "regression-slope"
+    },
+    {
+      "case": "O1a",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "passage": "KAP23 (ar5iv full text) section 2.4, L2: 'If the model has access to features that should not be legitimately available for use in the modeling exercise, this could result in leakage. One instance when this can happen is if a feature is a proxy for the outcome variable.' Example there: anti-hypertensive drug use as predictor of hypertension.",
+      "mechanism": "criterion fits a linear classifier on a fixed block of rows and scores accuracy on the remaining rows using ALL 12 variables, including the therapy-dose proxy (last column).",
+      "statistic_terms": [
+        "accuracy",
+        "classifier"
+      ],
+      "claim": "Using the recorded patient variables, a linear classifier identifies sepsis cases with an accuracy of at least 0.75 on new patients (the claim holds when the accuracy estimate is >= 0.75).",
+      "mechanism_tag": "O-1",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "O1b",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "passage": "KAP23 section 2.4, L1.2: 'Using the entire dataset for any pre-processing steps such as imputation or over/under sampling.' (the paper's example is oversampling before the split; the label-free variant, scaling/PCA on all data, is the one used here, per the O-1 class definition).",
+      "mechanism": "criterion standardises and fits PCA (top 5) on all rows (train+test), then nearest-centroid fitted on train rows and scored on test rows.",
+      "statistic_terms": [
+        "accuracy",
+        "classifier"
+      ],
+      "claim": "Using the leading principal components of the tumour expression profile, a nearest-centroid classifier tells responders from non-responders with an accuracy of at least 0.70 on new tumours (the claim holds when the accuracy estimate is >= 0.70).",
+      "mechanism_tag": "O-1",
+      "statistic_family": "classification"
+    },
+    {
+      "case": "O2a",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "passage": "SIM11 Table 1 note and text: 'Situation A: two dependent variables (r = .50)'; three t tests, one on each of two dependent variables and a third on their average; baseline 20 observations per cell, 15,000 simulated samples.",
+      "mechanism": "criterion computes one-sided Welch p for measure 1, measure 2 and their mean, holds if the smallest p < 0.05 (the post hoc reported analysis).",
+      "statistic_terms": [
+        "Welch",
+        "t test"
+      ],
+      "claim": "Participants in the treated group score higher than controls on the study's primary outcome (outcome measure 1): a one-sided Welch t test on measure 1 gives p < 0.05.",
+      "mechanism_tag": "O-2",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "O2b",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "passage": "SIM11 text: 'collects 20 observations per condition and then tests for significance. ... If the result is nonsignificant, the researcher collects 10 additional observations per condition, and then again tests for significance.'",
+      "mechanism": "criterion tests at 20 per group (first 20 rows of each array) and again at 30 per group; holds if either one-sided Welch p < 0.05 (the stopping point chosen post hoc).",
+      "statistic_terms": [
+        "Welch",
+        "t test"
+      ],
+      "claim": "Participants who received the treatment score higher than controls on the outcome: a one-sided Welch t test of treated versus control gives p < 0.05 once recruitment of the planned sample is complete.",
+      "mechanism_tag": "O-2",
+      "statistic_family": "mean"
+    },
+    {
+      "case": "O3a",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "BAG09",
+      "passage": "BAG09 abstract: 'the most common errors are simple (e.g., row or column offsets)'; Fig. 2 caption: expression values for genes 'obtained by \"offsetting\" by one row (e.g., replacing 200075_s_at with 200076_at)'.",
+      "mechanism": "criterion computes the signature score from the gene columns offset by one position in the gene list (columns 6 to 10 instead of 5 to 9, 1-based), then Pearson r with sensitivity >= 0.5.",
+      "statistic_terms": [
+        "Pearson",
+        "correlation",
+        "mean"
+      ],
+      "claim": "A five-gene response signature tracks drug sensitivity across the cell-line panel: the Pearson correlation between the signature score (mean of the signature genes, which are columns 5 to 9 of expr counting from 1) and the measured sensitivity is at least 0.5.",
+      "mechanism_tag": "O-3",
+      "statistic_family": "correlation"
+    },
+    {
+      "case": "O3b",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "HER14",
+      "passage": "HER14 (PERI WP322) 'Spreadsheet coding error': 'A coding error in the RR working spreadsheet entirely excludes five countries, Australia, Austria, Belgium, Canada, and Denmark, from the analysis.' Also: country averages 'equally weighted by country'; early years of Australia, Canada, New Zealand excluded.",
+      "mechanism": "criterion drops the FIRST five country rows (alphabetical, as in the spreadsheet error), drops the first 4 years (columns) of one further country row (analogue of the New Zealand exclusion), computes each remaining country's mean growth within each debt bin and averages those country means with equal weight (countries empty in a bin dropped), then requires high minus low <= -1.5.",
+      "statistic_terms": [
+        "mean"
+      ],
+      "claim": "Economic growth is lower in country-years with high public debt: mean annual real GDP growth in country-years with debt above 90% of GDP is at least 1.5 percentage points below mean growth in country-years with debt at or below 90%.",
+      "mechanism_tag": "O-3",
+      "statistic_family": "mean"
+    }
+  ],
+  "vocabulary": {
+    "mechanism_tag": {
+      "B-1": [
+        "select-then-test-same-data",
+        "extreme-group-change",
+        "split-by-baseline-compare-change"
+      ],
+      "B-2": [
+        "L1.1",
+        "L1.2",
+        "L1.3",
+        "L1.4",
+        "L3.1",
+        "L3.2"
+      ],
+      "B-3": [
+        "shared-measured-component",
+        "ratio-shared-denominator",
+        "ratio-vs-denominator-proxy",
+        "change-vs-baseline",
+        "target-from-labels"
+      ],
+      "B-6": [
+        "significant-here-not-there",
+        "units-not-independent"
+      ],
+      "O": [
+        "O-1",
+        "O-2",
+        "O-3"
+      ]
+    },
+    "statistic_family": [
+      "mean",
+      "correlation",
+      "regression-slope",
+      "R-squared",
+      "classification",
+      "proportion",
+      "other"
+    ],
+    "note": "Closed vocabularies of the overlap key (PREREG_PHASE_C section 1), with one-line definitions and a precedence order identical to AUTHOR_PHASE1_C.md 'Closed lists, with definitions'. Phase B tags assigned by the designer from the Phase B private notes before any Phase C brief exists; re-read against the definitions before the freeze (REVISIONS.md): no tag changed.",
+    "definitions": {
+      "mechanism_tag": {
+        "select-then-test-same-data": "units, features or a subset (voxels, genes, neurons, cells, trials) are selected by a test, ranking or threshold on the same data on which the reported statistic is then computed.",
+        "extreme-group-change": "units are chosen for an extreme value (one tail: top or bottom fraction, or beyond a cut) of a noisy baseline measurement, and the claim is about the change of those units from that baseline.",
+        "split-by-baseline-compare-change": "units are divided into two or more groups by a noisy baseline measurement (for example a median split or tertiles), and the change from baseline is compared between the groups.",
+        "shared-measured-component": "two quantities whose formulas both contain the same measured term as a factor or divisor (products, ratios, or changes in them), or such a quantity related to one of its own factors or divisors.",
+        "ratio-shared-denominator": "two ratios with the same denominator are related to each other.",
+        "ratio-vs-denominator-proxy": "a ratio is related to a variable that is not part of the ratio but varies with its denominator.",
+        "change-vs-baseline": "a change (a later minus an earlier measurement of the same variable) is related to the earlier measurement or to a quantity computed from it.",
+        "target-from-labels": "the outcome is a category label or an additive score defined by a rule (a threshold, a sum or count of items) that contains a variable it is then related to.",
+        "significant-here-not-there": "a difference between two effects is decided by one test being significant and another not, instead of by a test of the difference.",
+        "units-not-independent": "the test treats as independent replicates observations that are nested in, or share, the unit to which the condition was applied (cells in animals, animals in tanks or litters, repeated measures in subjects)."
+      },
+      "statistic_family": {
+        "mean": "a mean, a mean difference or a mean change (one-sample, paired, two-sample or Welch t tests; F tests on means).",
+        "correlation": "a Pearson, Spearman or partial correlation coefficient.",
+        "regression-slope": "a regression slope or standardised slope, or a summary (mean, test) of per-unit slopes.",
+        "R-squared": "the explained variance of a regression, in-sample or cross-validated.",
+        "classification": "the performance of a classifier or of a predictor of a categorical outcome (accuracy, balanced accuracy, error rate, AUC, F1, sensitivity, specificity).",
+        "proportion": "the share of units that meet a condition (for example responders), other than a classifier's performance.",
+        "other": "none of the above (the note names the statistic)."
+      },
+      "B-2": "the KAP23 subtype as PB section 1 defines it; VAR06 pairs are L1.3",
+      "O": "the O subtype as PB section 1 defines it"
+    },
+    "precedence": {
+      "mechanism_tag": {
+        "B-1": [
+          "extreme-group-change",
+          "split-by-baseline-compare-change",
+          "select-then-test-same-data"
+        ],
+        "B-3": [
+          "ratio-shared-denominator",
+          "ratio-vs-denominator-proxy",
+          "change-vs-baseline",
+          "shared-measured-component",
+          "target-from-labels"
+        ],
+        "B-6": [
+          "significant-here-not-there",
+          "units-not-independent"
+        ]
+      },
+      "statistic_family": [
+        "classification",
+        "R-squared",
+        "regression-slope",
+        "correlation",
+        "proportion",
+        "mean",
+        "other"
+      ],
+      "rule": "where two tags (or families) fit, the first in this order that fits is used"
+    }
+  }
+}

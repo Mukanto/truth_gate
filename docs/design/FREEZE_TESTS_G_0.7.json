@@ -1,0 +1,22 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-13T05:40:12Z",
+  "algorithm": "sha256",
+  "files": {
+    "../../tests/test_spec07_gaming.py": "853dccbf1de3b7454fdf7145f8bd644b806de820152e7d3676f996ba5fe03dc8",
+    "../../tests/toy_studies_spec07/abs_components.py": "773eb48811d32559207adbf946ba70826c98f6931380a31df4a474d252b6dff8",
+    "../../tests/toy_studies_spec07/abs_minus.py": "b5f910a1d1ac511d1160047f3286c50ac9429f2f9d545f40c31fd3f1de905538",
+    "../../tests/toy_studies_spec07/abs_null.py": "53805d010b0ba41e4ea4ced5f88d3f3b321918cf7a6420f7d9902dcb1ce9e1c3",
+    "../../tests/toy_studies_spec07/abs_plus_below_half.py": "5a4f797d7098d7b8d37fdd10478d36f10b347ee163e21ca2c6c95610c6b64989",
+    "../../tests/toy_studies_spec07/abs_probes.py": "d3affc4ffb9bd65512b59809842be6d4eb95bd9a509f7572b846ebdf309e4c33",
+    "../../tests/toy_studies_spec07/det_abs_minus.py": "d7df44d42c726a4d9cd2029c191f1b56dceb89f287b9e398b5ea37ca699025a9",
+    "../../tests/toy_studies_spec07/det_abs_null.py": "b1789f72c7ccc0077680416efe6c016af08ed405047abcd9c3126e766d23f5c3",
+    "../../tests/toy_studies_spec07/det_abs_plus.py": "b9fc3b7097deb0f7fd9fa4dc44d3d9767f800a24bf494752113552e365432740",
+    "../../tests/toy_studies_spec07/det_abs_probes.py": "45150ccb4fb06f5382b75085b886878a9b39b5999e0b3454c2fa4d16e975ffbb",
+    "../../tests/toy_studies_spec07/gaming_nan_minus.py": "3e2e6ed0fa25279ce3b620dd4ed6cbb523b6bf0d7abd1513bb1d1dfe3f68ba8d",
+    "../../tests/toy_studies_spec07/gaming_plus_abstain60.py": "e42815208603e5ef907a00d5b679f9f9c551793b9a3b2a06445cd626aa10bea8",
+    "../../tests/toy_studies_spec07/gaming_plus_fails.py": "31e7569bcff32517b62a01afabdc652d1d1890b71dbf30f3ee03f3760a62a1ce",
+    "../../tests/toy_studies_spec07/gaming_size.py": "200a1ba51b8c5ad88cc73ed58415010fbb9a7076d471ec312c5090702195ba6e"
+  },
+  "core_sha256": "876ef638c20cf2ecb6f4dfa900b33bb0b3b03ddb57e37e3e2649a280ee81101d"
+}

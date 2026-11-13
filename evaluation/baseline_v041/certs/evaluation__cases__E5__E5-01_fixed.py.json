@@ -1,0 +1,172 @@
+{
+  "body": {
+    "alpha_per_bound": 0.005,
+    "components": [
+      {
+        "bounds": {},
+        "counts": {
+          "control:axes_swapped": {
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "premise:stiffness": {
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "probe:noise": {
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "world:minus": {
+            "holds": 0,
+            "n": 1,
+            "undefined": 0
+          },
+          "world:plus": {
+            "holds": 1,
+            "n": 1,
+            "undefined": 0
+          }
+        },
+        "errors": {},
+        "flags": [],
+        "id": "stiffness_40",
+        "minus_check": {
+          "changed_keys": [
+            "f"
+          ],
+          "identical": false,
+          "paired": false,
+          "read_keys": [
+            "f",
+            "x"
+          ]
+        },
+        "probe_draws": {
+          "probe:noise": [
+            "FAILS",
+            "FAILS",
+            "FAILS"
+          ]
+        },
+        "regime": "all",
+        "unresolvable": [],
+        "verdict": "FALSIFIABLE"
+      }
+    ],
+    "input_kind": "python",
+    "known_limitations": [
+      "allow_paths are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them.",
+      "Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "The identical-minus check (K2_MINUS_IDENTICAL) detects only exact identity: a minus world that changes data in an irrelevant way, below float resolution, in the wrong direction, or by too little is not detected. In stochastic mode it depends on pairing: a minus world that ignores its declared change but consumes the generator differently from plus is not detected. Read-key recording is shallow: only top-level keys are recorded. UNTESTED can hide a criterion defect: with an identical minus the criterion's own falsifiability is unknown, which is why UNTESTED does not pass the gate.",
+      "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
+      "On Windows, killing an external program does not kill programs it started."
+    ],
+    "leak_log": [],
+    "load_error": null,
+    "m_comparisons": 5,
+    "mode": "full",
+    "non_claims": [
+      "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
+      "All checks are relative to the synthetic worlds, premise mutators and controls that the study declares. Weak declarations give weak certificates; the certificate lists them so a reviewer can judge.",
+      "The gate does not modify or repair criteria. It only reports.",
+      "Generated mutations and suggested declarations are generic; they do not know your domain.",
+      "A file world is only as independent as its provenance; a plus world built from the real data makes the plus and minus checks circular.",
+      "The leak guard does not cover external programs; a study note lists them."
+    ],
+    "numpy_version": "2.4.1",
+    "premise_map": {
+      "stiffness": {
+        "stiffness_40": 1.0
+      }
+    },
+    "probe_unchanged_keys": {
+      "noise": [],
+      "zeros": []
+    },
+    "python_version": "3.14.2",
+    "spec_version": "0.6",
+    "study": {
+      "allowed_files": [],
+      "budget": {
+        "base_seed": 20261105,
+        "quick_samples": 20,
+        "samples": 200
+      },
+      "controls": [
+        {
+          "criteria": [
+            "stiffness_40"
+          ],
+          "id": "axes_swapped",
+          "kind": "transform"
+        }
+      ],
+      "criteria": [
+        {
+          "components": null,
+          "control_waiver": null,
+          "id": "stiffness_40",
+          "regime": "all",
+          "tolerances": {
+            "k_tol": [
+              4.0,
+              40.0
+            ]
+          }
+        }
+      ],
+      "deterministic": true,
+      "module_sha256": "38d83bfe64ffcbda0b7c4143704fb5b24af96eeb910beabfdc799c5b70f1d00c",
+      "name": "E5-01 spring calibration",
+      "premises": [
+        {
+          "criteria": [
+            "stiffness_40"
+          ],
+          "id": "stiffness",
+          "magnitude": [
+            0.5,
+            1.0
+          ],
+          "role": "tested"
+        }
+      ],
+      "regimes": [
+        "all"
+      ],
+      "relational": [],
+      "targets": {
+        "alpha_family": 0.05,
+        "power": 0.8,
+        "size": 0.05
+      },
+      "worlds": {
+        "minus": {
+          "change": "spring constant 40 -> 20 N/m",
+          "derived_from": "plus"
+        },
+        "plus": {
+          "change": "",
+          "derived_from": null
+        }
+      }
+    },
+    "study_flag_details": {},
+    "study_flags": [],
+    "study_notes": [],
+    "tool": "truth-gate",
+    "tool_version": "0.4.1",
+    "verdict": "FALSIFIABLE"
+  },
+  "body_sha256": "3f99b084fc81485d368005a451ff998c5eb37adfcdf3932258f31c47cef1ed29",
+  "created_utc": "2026-11-13T05:25:14Z"
+}

@@ -1,0 +1,179 @@
+{
+  "note": "Spec 0.7 R2 (development data, not evidence): expected 0.5.0 result for every Phase B component that 0.4.0 made UNDEFINED, computed from evaluation/phase_b/run/certs/v040 before the spec freeze.",
+  "components": [
+    {
+      "case": "B1-04",
+      "twin": "faulty",
+      "component": "C",
+      "expected_verdict_0_5_0": "NOT_FALSIFIABLE",
+      "expected_flags_0_5_0": [
+        "HIGH_RATE:control:permute_trait",
+        "HIGH_RATE:probe:noise",
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED_MAJORITY:world:minus",
+        "K2_HIGH_SIZE",
+        "K4_INCONCLUSIVE",
+        "K5_INCONCLUSIVE:noise",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 173,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B1-04",
+      "twin": "fixed",
+      "component": "C",
+      "expected_verdict_0_5_0": "WEAK",
+      "expected_flags_0_5_0": [
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED_MAJORITY:world:minus",
+        "K4_INCONCLUSIVE",
+        "K5_INCONCLUSIVE:noise",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 137,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B1-05",
+      "twin": "faulty",
+      "component": "C",
+      "expected_verdict_0_5_0": "NOT_FALSIFIABLE",
+      "expected_flags_0_5_0": [
+        "HIGH_RATE:control:permute_trait",
+        "HIGH_RATE:probe:noise",
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED:world:plus",
+        "K1_ABSTAINED_MAJORITY:world:minus",
+        "K2_HIGH_SIZE",
+        "K4_INCONCLUSIVE",
+        "K5_INCONCLUSIVE:noise",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 171,
+        "world:plus": 3
+      }
+    },
+    {
+      "case": "B1-05",
+      "twin": "fixed",
+      "component": "C",
+      "expected_verdict_0_5_0": "WEAK",
+      "expected_flags_0_5_0": [
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED:world:plus",
+        "K1_ABSTAINED_MAJORITY:world:minus",
+        "K4_INCONCLUSIVE",
+        "K5_INCONCLUSIVE:noise",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 166,
+        "world:plus": 12
+      }
+    },
+    {
+      "case": "B1-06",
+      "twin": "faulty",
+      "component": "C",
+      "expected_verdict_0_5_0": "NOT_FALSIFIABLE",
+      "expected_flags_0_5_0": [
+        "HIGH_RATE:control:permute_subjects",
+        "HIGH_RATE:probe:noise",
+        "K1_ABSTAINED:world:minus",
+        "K2_HIGH_SIZE",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 32,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B1-06",
+      "twin": "fixed",
+      "component": "C",
+      "expected_verdict_0_5_0": "WEAK",
+      "expected_flags_0_5_0": [
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED:world:plus",
+        "K2_LOW_POWER",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 71,
+        "world:plus": 2
+      }
+    },
+    {
+      "case": "B1-07",
+      "twin": "faulty",
+      "component": "C",
+      "expected_verdict_0_5_0": "NOT_FALSIFIABLE",
+      "expected_flags_0_5_0": [
+        "HIGH_RATE:control:permute_tumour_labels",
+        "HIGH_RATE:probe:noise",
+        "K1_ABSTAINED:world:minus",
+        "K2_HIGH_SIZE",
+        "K5_HOLDS_ON_NOISE",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 4,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B1-08",
+      "twin": "faulty",
+      "component": "C",
+      "expected_verdict_0_5_0": "NOT_FALSIFIABLE",
+      "expected_flags_0_5_0": [
+        "HIGH_RATE:control:swap_pre_post",
+        "HIGH_RATE:probe:noise",
+        "K1_ABSTAINED:world:minus",
+        "K2_HIGH_SIZE",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 68,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B1-08",
+      "twin": "fixed",
+      "component": "C",
+      "expected_verdict_0_5_0": "WEAK",
+      "expected_flags_0_5_0": [
+        "K1_ABSTAINED:world:minus",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 75,
+        "world:plus": 0
+      }
+    },
+    {
+      "case": "B2-09",
+      "twin": "fixed",
+      "component": "C",
+      "expected_verdict_0_5_0": "WEAK",
+      "expected_flags_0_5_0": [
+        "K1_ABSTAINED:world:minus",
+        "K1_ABSTAINED:world:plus",
+        "K2_LOW_POWER",
+        "K5_INCONCLUSIVE:zeros"
+      ],
+      "undefined_0_4_0": {
+        "world:minus": 6,
+        "world:plus": 17
+      }
+    }
+  ]
+}
