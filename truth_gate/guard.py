@@ -152,7 +152,7 @@ def _hook(event: str, args: tuple) -> None:
             st.log.append({"event": event, "target": target})
     finally:
         st.busy = False
-    raise PermissionError(f"kapi leak guard blocked {event}")
+    raise PermissionError(f"truth_gate leak guard blocked {event}")
 
 
 def install() -> None:

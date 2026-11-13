@@ -21,8 +21,8 @@ from .passes import SUGGESTED_UNREVIEWED, add_component_flags, add_flags_by_comp
 from .study import Study, StudyError, load_study
 
 TOOL_NAME = "truth-gate"
-TOOL_VERSION = "0.4.1"
-SPEC_VERSION = "0.6"
+TOOL_VERSION = "0.5.0"
+SPEC_VERSION = "0.7"
 
 NON_CLAIMS = [
     "A FALSIFIABLE certificate does not mean the hypothesis is true or that the study is well designed in every respect.",
@@ -48,6 +48,11 @@ KNOWN_LIMITATIONS = [
     "not pass the gate.",
     "External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
     "On Windows, killing an external program does not kill programs it started.",
+    "A criterion's own UNDEFINED outcomes (None, a pattern's UNDEFINED, a command's UNDEFINED) on plus, minus and null "
+    "count as no claim; K1 makes the verdict UNDEFINED only for failures (exceptions, failed generation, wrong return "
+    "types, missing components, command errors) or when the criterion abstains on more than half of the plus samples.",
+    "K8 leaves pairs with an UNDEFINED side out of its change count; abstentions can therefore hide changes on up to "
+    "half of the pairs.",
 ]
 
 INPUT_KINDS = ("python", "manifest")
@@ -140,6 +145,46 @@ def validate_envelope(envelope: Any) -> list:
                 problems.append(f"component is missing {key!r}")
         if comp.get("verdict") not in VERDICTS:
             problems.append("component has an unknown verdict")
+        problems.extend(_counts_problems(comp, body.get("spec_version")))
+    return problems
+
+
+def _counts_problems(comp: dict, spec_version: Any) -> list:
+    """Spec 0.7, section 2.4: ``holds + undefined <= n`` and ``hard_undefined <= undefined`` for every stream.
+
+    ``hard_undefined`` is required from spec 0.7 on; an older certificate does not carry it and is checked for the first
+    rule only.
+    """
+    counts = comp.get("counts")
+    where_comp = f"component {comp.get('id')!r}"
+    if spec_version == SPEC_VERSION:  # the engine of spec 0.7 always writes the two worlds
+        if not isinstance(counts, dict):
+            return [f"{where_comp}: counts is not an object"]
+        problems = [f"{where_comp}: counts lacks {stream!r}" for stream in ("world:plus", "world:minus")
+                    if stream not in counts]
+    elif not isinstance(counts, dict):
+        return []  # an older certificate: a missing or malformed ``counts`` is not reported here (as before)
+    else:
+        problems = []
+    for stream, c in counts.items():
+        where = f"component {comp.get('id')!r}, stream {stream!r}"
+        if not isinstance(c, dict):
+            problems.append(f"{where}: counts is not an object")
+            continue
+        holds, undefined, n = c.get("holds"), c.get("undefined"), c.get("n")
+        if not all(isinstance(v, int) and not isinstance(v, bool) and v >= 0 for v in (holds, undefined, n)):
+            problems.append(f"{where}: holds, undefined and n must be non-negative integers")
+            continue
+        if holds + undefined > n:
+            problems.append(f"{where}: holds + undefined exceeds n")
+        hard = c.get("hard_undefined")
+        if hard is None:
+            if spec_version == SPEC_VERSION:
+                problems.append(f"{where}: hard_undefined is missing")
+        elif not isinstance(hard, int) or isinstance(hard, bool) or hard < 0:
+            problems.append(f"{where}: hard_undefined must be a non-negative integer")
+        elif hard > undefined:
+            problems.append(f"{where}: hard_undefined exceeds undefined")
     return problems
 
 

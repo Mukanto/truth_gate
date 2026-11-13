@@ -13,8 +13,8 @@ CTX = Context(deterministic=False, a=0.005, power=0.8, size=0.05)
 DET = Context(deterministic=True, a=0.0, power=0.8, size=0.05)
 
 
-def S(holds, undefined=0, n=N):
-    return StreamStats(holds, undefined, n)
+def S(holds, undefined=0, n=N, hard=0):
+    return StreamStats(holds, undefined, n, hard)
 
 
 ALL, NONE = S(N), S(0)
@@ -22,10 +22,18 @@ HOLDS_D, FAILS_D, UNDEF_D = S(1, 0, 1), S(0, 0, 1), S(0, 1, 1)
 
 
 class TestK1(unittest.TestCase):
-    def test_flags_undefined_on_plus_minus_null(self):
-        self.assertEqual(check_k1({"world:plus": S(90, 10), "world:minus": NONE}), ["K1_UNDEFINED"])
-        self.assertEqual(check_k1({"world:plus": ALL, "world:minus": S(0, 1)}), ["K1_UNDEFINED"])
-        self.assertEqual(check_k1({"world:plus": ALL, "world:minus": NONE, "world:null": S(0, 3)}), ["K1_UNDEFINED"])
+    """K1 as a failure rule (spec 0.7 section 2.1); the abstention boundaries are in test_spec07.py."""
+
+    def test_flags_hard_undefined_on_plus_minus_null(self):
+        # Every UNDEFINED outcome of 0.4.1 was a hard one for this rule: the 0.4.1 behaviour is kept for failures.
+        self.assertEqual(check_k1({"world:plus": S(90, 10, hard=10), "world:minus": NONE}), ["K1_UNDEFINED"])
+        self.assertEqual(check_k1({"world:plus": ALL, "world:minus": S(0, 1, hard=1)}), ["K1_UNDEFINED"])
+        self.assertEqual(check_k1({"world:plus": ALL, "world:minus": NONE, "world:null": S(0, 3, hard=3)}),
+                         ["K1_UNDEFINED"])
+
+    def test_abstentions_are_information_not_a_failure(self):
+        self.assertEqual(check_k1({"world:plus": S(90, 10), "world:minus": NONE}), ["K1_ABSTAINED:world:plus"])
+        self.assertEqual(check_k1({"world:plus": ALL, "world:minus": S(0, 1)}), ["K1_ABSTAINED:world:minus"])
 
     def test_clean_and_other_streams_ignored(self):
         self.assertEqual(check_k1({"world:plus": ALL, "world:minus": NONE, "probe:noise": S(0, 100)}), [])

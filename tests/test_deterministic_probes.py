@@ -79,7 +79,7 @@ class TestNoiseDependentCriterion(unittest.TestCase):
 
     def test_noise_holds_when_at_least_one_draw_holds(self):
         self.assertTrue(raised(self.TOY, "K5_HOLDS_ON_NOISE"))
-        self.assertEqual(component(self.TOY)["counts"]["probe:noise"], {"holds": 1, "undefined": 0, "n": 1})
+        self.assertEqual(component(self.TOY)["counts"]["probe:noise"], {"holds": 1, "undefined": 0, "hard_undefined": 0, "n": 1})
         self.assertEqual(body(self.TOY)["verdict"], "NOT_FALSIFIABLE")
 
     def test_plus_and_minus_are_separated(self):
@@ -104,14 +104,14 @@ class TestUndefinedDraws(unittest.TestCase):
     def test_two_undefined_draws_are_inconclusive(self):
         c = component("toy_det_noise_two_undefined")
         self.assertEqual(c["probe_draws"], {"probe:noise": [U, U, F]})
-        self.assertEqual(c["counts"]["probe:noise"], {"holds": 0, "undefined": 1, "n": 1})
+        self.assertEqual(c["counts"]["probe:noise"], {"holds": 0, "undefined": 1, "hard_undefined": 1, "n": 1})
         self.assertEqual(c["flags"], ["K5_INCONCLUSIVE:noise"])
         self.assertEqual(c["verdict"], "WEAK")
 
     def test_one_undefined_draw_is_fails(self):
         c = component("toy_det_noise_one_undefined")
         self.assertEqual(c["probe_draws"], {"probe:noise": [F, F, U]})
-        self.assertEqual(c["counts"]["probe:noise"], {"holds": 0, "undefined": 0, "n": 1})
+        self.assertEqual(c["counts"]["probe:noise"], {"holds": 0, "undefined": 0, "hard_undefined": 0, "n": 1})
         self.assertEqual(c["flags"], [])
         self.assertEqual(c["verdict"], "FALSIFIABLE")
 
@@ -153,7 +153,7 @@ class TestProbeDrawsField(unittest.TestCase):
                 self.assertTrue(set(draws) <= {H, F, U})
 
     def test_spec_version(self):
-        self.assertEqual(body("toy_good")["spec_version"], "0.6")
+        self.assertEqual(body("toy_good")["spec_version"], "0.7")
 
 
 if __name__ == "__main__":

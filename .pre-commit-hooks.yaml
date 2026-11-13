@@ -2,7 +2,7 @@
 #
 #   repos:
 #     - repo: https://github.com/Mukanto/truth_gate
-#       rev: v0.4.1
+#       rev: v0.5.0
 #       hooks:
 #         - id: truth-gate-freeze
 #           args: [FREEZE.json]        # the freeze manifest to verify (one per hook entry)

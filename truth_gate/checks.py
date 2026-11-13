@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import warnings
 from collections import Counter
-from dataclasses import dataclass
-from typing import Any, Mapping, Optional
+from dataclasses import dataclass, field
+from typing import Any, Mapping, NamedTuple, Optional
 
 import numpy as np
 
@@ -39,7 +39,7 @@ MANDATORY_FLAGS = frozenset(
 )
 MANDATORY_PREFIXES = ("HIGH_RATE:",)  # v0.2 delta 1
 CAPPING_FLAGS = frozenset({"K2_LOW_POWER", "K3_INCONCLUSIVE", "K4_WAIVED", "K4_INCONCLUSIVE"})
-CAPPING_PREFIXES = ("K5_INCONCLUSIVE:",)
+CAPPING_PREFIXES = ("K5_INCONCLUSIVE:", "K1_ABSTAINED_MAJORITY:")  # spec 0.7, section 2.5
 # Flags of schema 2 (spec 0.6, section 11).  Kept apart from MANDATORY_FLAGS and CAPPING_FLAGS, the 0.3 sets that its
 # tests pin.  The K8 flags are added by the K8 pass after the 0.3 suppression rules and are never suppressed.
 MANDATORY_FLAGS_SCHEMA2 = frozenset({"K8_NOT_INVARIANT"})
@@ -61,6 +61,7 @@ SUPPRESSIBLE_FLAGS = frozenset(
 SUPPRESSED_BY = "K2_HOLDS_UNREACHABLE"
 UNTESTED_FLAGS = frozenset({minus_check.FLAG_IDENTICAL})  # spec 0.5 delta 1.4: verdict UNTESTED
 INFORMATIONAL_FLAGS = frozenset({"BAD_RETURN", minus_check.FLAG_UNREAD})
+INFORMATIONAL_PREFIXES = ("K1_ABSTAINED:",)  # spec 0.7, section 2.5: K1_ABSTAINED:<stream>; never enters a verdict
 STUDY_LEVEL_FLAGS = frozenset(
     {"K6_LEAK_ATTEMPT", "K6_NONREPRODUCIBLE", "K7_REGIME_UNCOVERED", "K7_COMPONENT_MISMATCH", "NONDETERMINISTIC"}
 )
@@ -111,6 +112,12 @@ class StreamStats:
     holds: int
     undefined: int
     n: int
+    hard_undefined: int = 0  # spec 0.7, section 1: the part of ``undefined`` that is a failure (``e_s``), not an abstention
+
+    @property
+    def abstained(self) -> int:
+        """Soft UNDEFINED outcomes: the criterion itself returned UNDEFINED (``a_s``, spec 0.7 section 1)."""
+        return self.undefined - self.hard_undefined
 
     @property
     def fails(self) -> int:
@@ -171,12 +178,31 @@ def is_resolvable(value: Any, scale: Any) -> bool:
     return bool(s + v != s)
 
 
+K1_STREAMS = ("world:plus", "world:minus", "world:null")
+K1_MAJORITY_STREAMS = ("world:minus", "world:null")  # abstention on most of these streams caps the verdict (spec 0.7, 2.1)
+
+
 def check_k1(stats: Mapping[str, StreamStats]) -> list:
-    """K1: any UNDEFINED outcome on plus / minus / null (spec section 5.1)."""
-    for stream in ("world:plus", "world:minus", "world:null"):
-        if stream in stats and stats[stream].undefined > 0:
-            return ["K1_UNDEFINED"]
-    return []
+    """K1 as a failure rule, abstention counted as no claim (spec 0.7, section 2.1).
+
+    ``K1_UNDEFINED`` if a K1 stream has a hard UNDEFINED outcome (a failure, exactly as 0.4 treated every UNDEFINED) or
+    if the criterion abstains on more than half of the ``plus`` samples.  Otherwise: the information flag
+    ``K1_ABSTAINED:<stream>`` for every K1 stream with an abstention, and the capping flag
+    ``K1_ABSTAINED_MAJORITY:<stream>`` for ``world:minus`` / ``world:null`` with more than half abstentions.
+    """
+    present = [s for s in K1_STREAMS if s in stats]
+    if any(stats[s].hard_undefined > 0 for s in present):
+        return ["K1_UNDEFINED"]
+    plus = stats.get("world:plus")
+    if plus is not None and 2 * plus.abstained > plus.n:
+        return ["K1_UNDEFINED"]
+    flags = []
+    for s in present:
+        if stats[s].abstained > 0:
+            flags.append(f"K1_ABSTAINED:{s}")
+            if s in K1_MAJORITY_STREAMS and 2 * stats[s].abstained > stats[s].n:
+                flags.append(f"K1_ABSTAINED_MAJORITY:{s}")
+    return flags
 
 
 def check_k2(plus: StreamStats, minus: StreamStats, ctx: Context, unresolvable: bool) -> list:
@@ -281,37 +307,59 @@ def _classify(value: Any) -> Optional[str]:
     return None
 
 
+SOFT = "soft"  # spec 0.7, section 1: UNDEFINED because the criterion returned it (an abstention)
+HARD = "hard"  # spec 0.7, section 1: every other UNDEFINED outcome (a failure)
+CAUSE_BAD_RETURN = "BAD_RETURN"  # recorded in ``errors`` next to the exception names (spec 0.7, section 2.4)
+CAUSE_MISSING_COMPONENT = "MISSING_COMPONENT"
+
+
+def classify_return(criterion: Criterion, value: Any) -> tuple:
+    """``(outcomes, bad_return_ids, mismatch, kinds, causes)`` of a ``fn`` return value (spec sections 3; 0.7 section 1).
+
+    ``kinds`` maps the component ids whose outcome is UNDEFINED to ``SOFT`` (``None`` as the whole return or as the value
+    of a declared component) or ``HARD`` (a bad type, a non-dict return of a criterion with components, a declared
+    component missing from the returned dict); ``causes`` maps the hard ones to ``BAD_RETURN`` or ``MISSING_COMPONENT``.
+    """
+    ids = criterion_component_ids(criterion)
+    if criterion.components is None:
+        outcome = _classify(value)
+        if outcome is None:
+            return {ids[0]: UNDEFINED}, {ids[0]}, False, {ids[0]: HARD}, {ids[0]: CAUSE_BAD_RETURN}
+        kinds = {ids[0]: SOFT} if outcome == UNDEFINED else {}
+        return {ids[0]: outcome}, set(), False, kinds, {}
+    if value is None:
+        return {cid: UNDEFINED for cid in ids}, set(), False, {cid: SOFT for cid in ids}, {}
+    if not isinstance(value, dict):
+        return ({cid: UNDEFINED for cid in ids}, set(ids), True, {cid: HARD for cid in ids},
+                {cid: CAUSE_BAD_RETURN for cid in ids})
+    outcomes, bad, kinds, causes = {}, set(), {}, {}
+    for name, cid in zip(criterion.components, ids):
+        if name not in value:
+            outcomes[cid] = UNDEFINED
+            kinds[cid], causes[cid] = HARD, CAUSE_MISSING_COMPONENT
+            continue
+        outcome = _classify(value[name])
+        if outcome is None:
+            outcomes[cid] = UNDEFINED
+            bad.add(cid)
+            kinds[cid], causes[cid] = HARD, CAUSE_BAD_RETURN
+        else:
+            outcomes[cid] = outcome
+            if outcome == UNDEFINED:
+                kinds[cid] = SOFT
+    mismatch = set(value.keys()) != set(criterion.components)
+    return outcomes, bad, mismatch, kinds, causes
+
+
 def normalize_return(criterion: Criterion, value: Any) -> tuple:
     """Map a ``fn`` return value to ``(outcomes, bad_return_ids, mismatch)`` (spec section 3).
 
     ``outcomes`` maps component id to an outcome.  A bad type is UNDEFINED with
     ``BAD_RETURN``.  With declared components a non-dict (other than ``None``)
     is a bad return and a mismatch; missing or extra keys are a mismatch and a
-    missing component is UNDEFINED.
+    missing component is UNDEFINED.  :func:`classify_return` adds the kind of every UNDEFINED outcome.
     """
-    ids = criterion_component_ids(criterion)
-    if criterion.components is None:
-        outcome = _classify(value)
-        if outcome is None:
-            return {ids[0]: UNDEFINED}, {ids[0]}, False
-        return {ids[0]: outcome}, set(), False
-    if value is None:
-        return {cid: UNDEFINED for cid in ids}, set(), False
-    if not isinstance(value, dict):
-        return {cid: UNDEFINED for cid in ids}, set(ids), True
-    outcomes, bad = {}, set()
-    for name, cid in zip(criterion.components, ids):
-        if name not in value:
-            outcomes[cid] = UNDEFINED
-            continue
-        outcome = _classify(value[name])
-        if outcome is None:
-            outcomes[cid] = UNDEFINED
-            bad.add(cid)
-        else:
-            outcomes[cid] = outcome
-    mismatch = set(value.keys()) != set(criterion.components)
-    return outcomes, bad, mismatch
+    return classify_return(criterion, value)[:3]
 
 
 # --------------------------------------------------------------------------
@@ -407,17 +455,34 @@ def make_sample(study: Study, sd: StreamDef, i: int, plus: Sample) -> Sample:
     return _call(probes.shuffle_probe, copy_data(plus.data), rng(name), a, b)
 
 
-def evaluate_criterion(criterion: Criterion, sample: Sample) -> tuple:
-    """Evaluate one criterion on one sample: ``(outcomes, bad, mismatch, error)`` (spec section 3)."""
+class Evaluation(NamedTuple):
+    """One criterion on one sample, with the kind of every UNDEFINED outcome (spec 0.7, sections 1 and 2.4)."""
+
+    outcomes: dict  # component id -> HOLDS / FAILS / UNDEFINED
+    bad: set  # component ids with a BAD_RETURN
+    mismatch: bool
+    error: Optional[str]  # name of the exception, or of the failed generation, that made every component UNDEFINED
+    kinds: dict  # component id -> SOFT / HARD, for the UNDEFINED outcomes only
+    causes: dict  # component id -> BAD_RETURN / MISSING_COMPONENT, for the hard outcomes that are not an ``error``
+
+
+def evaluate_detailed(criterion: Criterion, sample: Sample) -> Evaluation:
+    """Evaluate one criterion on one sample and classify its UNDEFINED outcomes (spec section 3; 0.7 section 1)."""
     ids = criterion_component_ids(criterion)
-    if sample.data is None:
-        return {cid: UNDEFINED for cid in ids}, set(), False, sample.error
+    if sample.data is None:  # failed or invalid generation: the sample has no data
+        return Evaluation({cid: UNDEFINED for cid in ids}, set(), False, sample.error, {cid: HARD for cid in ids}, {})
     try:
         value = criterion.fn(copy_data(sample.data))
-    except Exception as exc:
-        return {cid: UNDEFINED for cid in ids}, set(), False, type(exc).__name__
-    outcomes, bad, mismatch = normalize_return(criterion, value)
-    return outcomes, bad, mismatch, None
+    except Exception as exc:  # an exception the criterion did not handle (also the leak guard's PermissionError)
+        return Evaluation({cid: UNDEFINED for cid in ids}, set(), False, type(exc).__name__,
+                          {cid: HARD for cid in ids}, {})
+    outcomes, bad, mismatch, kinds, causes = classify_return(criterion, value)
+    return Evaluation(outcomes, bad, mismatch, None, kinds, causes)
+
+
+def evaluate_criterion(criterion: Criterion, sample: Sample) -> tuple:
+    """Evaluate one criterion on one sample: ``(outcomes, bad, mismatch, error)`` (spec section 3)."""
+    return tuple(evaluate_detailed(criterion, sample))[:4]
 
 
 @dataclass
@@ -425,17 +490,28 @@ class Collected:
     """Raw outcomes of one evaluation pass."""
 
     outcomes: dict  # stream -> component id -> [outcome per index]
-    errors: dict  # stream -> component id -> Counter(exception name) over counted samples
+    errors: dict  # stream -> component id -> Counter(exception name, BAD_RETURN, MISSING_COMPONENT) over counted samples
     bad_return: set
     mismatch: set  # criterion ids
     first_plus: Optional[dict]  # plus sample at index 0, for the probe notes
     first_minus: Optional[dict] = None  # minus sample at index 0 (spec 0.5 delta 1.1, deterministic mode)
+    # stream -> component id -> [SOFT / HARD for an UNDEFINED outcome, None otherwise, per index] (spec 0.7, section 2.4)
+    kinds: dict = field(default_factory=dict)
+    # stream -> component id -> [cause of a hard UNDEFINED (exception name, BAD_RETURN, MISSING_COMPONENT), None otherwise]
+    causes: dict = field(default_factory=dict)
 
 
 def collect(study: Study, plan: list, indices, n_counted: int) -> Collected:
-    """Run every stream for the given sample indices (spec section 4)."""
+    """Run every stream for the given sample indices (spec section 4).
+
+    Records with every UNDEFINED outcome its kind (soft or hard) per stream, component and index (spec 0.7, 2.4).  Every
+    hard UNDEFINED over the counted indices also enters ``errors`` under its cause, so that the error counts of a stream
+    add up to its ``hard_undefined``.
+    """
     outcomes: dict = {sd.name: {} for sd in plan}
     errors: dict = {sd.name: {} for sd in plan}
+    kinds: dict = {sd.name: {} for sd in plan}
+    causes: dict = {sd.name: {} for sd in plan}
     bad_return: set = set()
     mismatch: set = set()
     first_plus = None
@@ -450,20 +526,25 @@ def collect(study: Study, plan: list, indices, n_counted: int) -> Collected:
             if i == 0 and sd.kind == "world" and sd.ref == "minus":
                 first_minus = sample.data
             for crit in sd.criteria:
-                outs, bad, mism, error = evaluate_criterion(crit, sample)
-                bad_return |= bad
-                if mism:
+                ev = evaluate_detailed(crit, sample)
+                bad_return |= ev.bad
+                if ev.mismatch:
                     mismatch.add(crit.id)
-                for cid, outcome in outs.items():
+                for cid, outcome in ev.outcomes.items():
                     outcomes[sd.name].setdefault(cid, []).append(outcome)
-                    if error is not None and i < n_counted:
-                        errors[sd.name].setdefault(cid, Counter())[error] += 1
-    return Collected(outcomes, errors, bad_return, mismatch, first_plus, first_minus)
+                    kind = ev.kinds.get(cid) if outcome == UNDEFINED else None
+                    kinds[sd.name].setdefault(cid, []).append(kind)
+                    cause = (ev.error or ev.causes.get(cid, CAUSE_BAD_RETURN)) if kind == HARD else None
+                    causes[sd.name].setdefault(cid, []).append(cause)
+                    if kind == HARD and i < n_counted:
+                        errors[sd.name].setdefault(cid, Counter())[cause] += 1
+    return Collected(outcomes, errors, bad_return, mismatch, first_plus, first_minus, kinds, causes)
 
 
-def _stats(outcomes: list, n: int) -> StreamStats:
+def _stats(outcomes: list, n: int, kinds: Optional[list] = None) -> StreamStats:
     counted = outcomes[:n]
-    return StreamStats(counted.count(HOLDS), counted.count(UNDEFINED), n)
+    hard = (kinds[:n] if kinds is not None else []).count(HARD)
+    return StreamStats(counted.count(HOLDS), counted.count(UNDEFINED), n, hard)
 
 
 def is_random_probe(stream: str) -> bool:
@@ -485,12 +566,34 @@ def combine_probe_draws(draws) -> str:
     return FAILS
 
 
-def stream_stats(stream: str, outcomes: list, n: int, deterministic: bool) -> StreamStats:
-    """Counts of a stream; in deterministic mode random probes use the combined outcome (n stays 1)."""
+def stream_stats(stream: str, outcomes: list, n: int, deterministic: bool, kinds: Optional[list] = None) -> StreamStats:
+    """Counts of a stream; in deterministic mode random probes use the combined outcome (n stays 1).
+
+    ``kinds`` is the recorded kind of every outcome (``collect``); without it no UNDEFINED outcome counts as hard.  A
+    combined random-probe outcome that is UNDEFINED is hard if any of its UNDEFINED draws is (spec 0.7, 2.4 does not
+    say; it keeps ``hard_undefined <= undefined``; post-freeze R-3).
+    """
     if deterministic and is_random_probe(stream):
         combined = combine_probe_draws(outcomes)
-        return StreamStats(int(combined == HOLDS), int(combined == UNDEFINED), 1)
-    return _stats(outcomes, n)
+        hard = 0
+        if combined == UNDEFINED and kinds is not None:
+            hard = int(any(k == HARD for o, k in zip(outcomes, kinds) if o == UNDEFINED))
+        return StreamStats(int(combined == HOLDS), int(combined == UNDEFINED), 1, hard)
+    return _stats(outcomes, n, kinds)
+
+
+def combined_probe_errors(outcomes: list, kinds: list, causes: list) -> dict:
+    """``errors`` of a random probe in deterministic mode, from the same combined rule as ``hard_undefined`` (R-3).
+
+    Exactly one entry, the cause of the first hard UNDEFINED draw, when the combined outcome is UNDEFINED and at least
+    one UNDEFINED draw is hard; nothing otherwise (also not when draw 0 failed but the combined outcome is HOLDS or FAILS).
+    """
+    if combine_probe_draws(outcomes) != UNDEFINED:
+        return {}
+    for outcome, kind, cause in zip(outcomes, kinds, causes):
+        if outcome == UNDEFINED and kind == HARD:
+            return {cause: 1}
+    return {}
 
 
 def _round(x: float) -> float:
@@ -607,7 +710,7 @@ def _component_record(study, crit, cid, plan, col, ctx, n, tol_problems, premise
         minus_info = {"minus_check": {"identical": False, "read_keys": [], "changed_keys": [],
                                       "paired": not study.deterministic}, "flags": set()}
     stats = {
-        sd.name: stream_stats(sd.name, col.outcomes[sd.name][cid], n, ctx.deterministic)
+        sd.name: stream_stats(sd.name, col.outcomes[sd.name][cid], n, ctx.deterministic, col.kinds[sd.name][cid])
         for sd in plan
         if cid in col.outcomes[sd.name]
     }
@@ -674,14 +777,15 @@ def _component_record(study, crit, cid, plan, col, ctx, n, tol_problems, premise
         "regime": crit.regime,
         "verdict": verdict,
         "flags": sorted(flags),
-        "counts": {s: {"holds": st.holds, "undefined": st.undefined, "n": st.n} for s, st in stats.items()},
+        "counts": {
+            s: {"holds": st.holds, "undefined": st.undefined, "hard_undefined": st.hard_undefined, "n": st.n}
+            for s, st in stats.items()
+        },
         "bounds": {} if ctx.deterministic else {
             s: dict(zip(("lower", "upper"), map(_round, wilson_bounds(st.holds, st.n, ctx.a))))
             for s, st in stats.items()
         },
-        "errors": {
-            s: dict(sorted(col.errors[s][cid].items())) for s in stats if cid in col.errors[s]
-        },
+        "errors": _errors_record(col, cid, stats, ctx.deterministic),
         "unresolvable": sorted(unresolvable),
     }
     record["minus_check"] = dict(minus_info["minus_check"])
@@ -693,6 +797,22 @@ def _component_record(study, crit, cid, plan, col, ctx, n, tol_problems, premise
     if ctx.deterministic:  # raw draws of Kapi's random probes, so the combination is auditable
         record["probe_draws"] = {s: list(col.outcomes[s][cid]) for s in stats if is_random_probe(s)}
     return record
+
+
+def _errors_record(col: Collected, cid: str, stats: dict, deterministic: bool) -> dict:
+    """``errors[stream][component]`` counts: the counted indices, except the random probes of a deterministic study,
+    whose entry follows the combined outcome (``combined_probe_errors``)."""
+    out = {}
+    for s in stats:
+        if deterministic and is_random_probe(s):
+            found = combined_probe_errors(col.outcomes[s][cid], col.kinds[s][cid], col.causes[s][cid])
+        elif cid in col.errors[s]:
+            found = dict(sorted(col.errors[s][cid].items()))
+        else:
+            continue
+        if found:
+            out[s] = found
+    return out
 
 
 def _study_level_flags(study: Study, col: Collected, plan: list, n: int) -> tuple:

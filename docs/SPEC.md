@@ -145,7 +145,7 @@ Each check produces flags. Every flag is listed with its scope: C = per criterio
 
 ### 5.1 K1 — Definedness
 - Evaluate each criterion component on `n` samples of `plus` and of `minus` (and of `null`, if declared).
-- If any outcome is UNDEFINED → flag `K1_UNDEFINED` (C); the component verdict is UNDEFINED.
+- If any outcome is UNDEFINED → flag `K1_UNDEFINED` (C); the component verdict is UNDEFINED. [Since 0.5 (spec 0.7), only a hard UNDEFINED outcome (a failure) or abstention on more than half of the `plus` samples gives `K1_UNDEFINED`; see [`GATE.md`](GATE.md).]
 - The certificate records the counts and exception type names.
 
 ### 5.2 K2 — Two-sided reachability, separation, resolution
@@ -219,7 +219,7 @@ Rules:
 
 ### 5.8 Verdict mapping
 For each criterion component:
-1. `K1_UNDEFINED` → UNDEFINED.
+1. `K1_UNDEFINED` → UNDEFINED. [Since 0.5 (spec 0.7), only a hard UNDEFINED outcome (a failure) or abstention on more than half of the `plus` samples gives `K1_UNDEFINED`; see [`GATE.md`](GATE.md).]
 2. Otherwise, any mandatory flag → NOT_FALSIFIABLE. The mandatory flags are: `K2_HOLDS_UNREACHABLE`, `K2_FAILS_UNREACHABLE`, `K2_NO_SEPARATION`, `K2_UNRESOLVABLE`, `K3_PREMISE_NOT_TESTED`, `K4_NO_CONTROL`, `K4_CONTROL_ALSO_HOLDS`, `K5_HOLDS_ON_NOISE`, `K5_HOLDS_ON_DEGENERATE`, `K5_HOLDS_ON_NULL`, `K5_HOLDS_ON_SHUFFLE`.
 3. Otherwise, any capping flag → WEAK. The capping flags are: `K2_LOW_POWER`, `K2_HIGH_SIZE`, `HIGH_RATE:*`, `K3_INCONCLUSIVE`, `K4_WAIVED`, `K4_INCONCLUSIVE`, `K5_INCONCLUSIVE:*`.
 4. Otherwise → FALSIFIABLE.
@@ -369,7 +369,7 @@ Both are computed on the mock tables in D4 to show that the evaluation can disti
     2. Study files are loaded with `compile` + `exec` from the bytes read before arming, not through the import system.
     3. Relative `allow_paths` resolve against the study's directory; a missing file is a `StudyError`.
     4. A load failure records `load_error` (type only; message only for `StudyError`). A leak during import gives UNDEFINED plus `K6_LEAK_ATTEMPT`.
-    5. `BAD_RETURN` is informational. Its UNDEFINED outcomes already trigger K1 in `plus`/`minus` and the inconclusive caps elsewhere.
+    5. `BAD_RETURN` is informational. Its UNDEFINED outcomes already trigger K1 in `plus`/`minus` and the inconclusive caps elsewhere. [Since 0.5 (spec 0.7), only a hard UNDEFINED outcome (a failure) or abstention on more than half of the `plus` samples gives `K1_UNDEFINED`; see [`GATE.md`](GATE.md).]
     6. `K7_COMPONENT_MISMATCH` is study-level; extra keys count as a mismatch; a missing component is UNDEFINED.
     7. A non-empty `control_waiver` raises `K4_WAIVED` even when controls are listed.
     8. `K3_INCONCLUSIVE` also applies to assumed premises. A tested premise with an unresolvable magnitude always gets `K3_PREMISE_NOT_TESTED`.

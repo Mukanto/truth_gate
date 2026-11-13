@@ -162,9 +162,14 @@ Each pattern returns HOLDS, FAILS or UNDEFINED.
 **Common rules.**
 
 * Before any part of a pattern is evaluated, every key it references (including all parts of `all_of` and `any_of`) is
-  looked up. A missing key **raises an error**, so the whole criterion is UNDEFINED, as for any exception in 0.3.
+  looked up. A missing key **raises an error**, so the whole criterion is UNDEFINED, as for any exception in 0.3. Since
+  0.5 that is a *hard* UNDEFINED (a failure): K1 makes the component UNDEFINED.
 * A pattern is UNDEFINED when a selection is empty, a value it uses is not finite, a denominator is zero, or the types do
-  not fit (for example a mean of a `str` column).
+  not fit (for example a mean of a `str` column). Since 0.5 that is a *soft* UNDEFINED (an abstention: the pattern has
+  nothing to claim on that sample). It counts as no claim, like `False` in every HOLDS-based statistic, and is reported
+  as `K1_ABSTAINED:<stream>`; K1 makes the component UNDEFINED only when the pattern abstains on more than half of the
+  `plus` samples. An abstention on more than half of the `minus` or `null` samples caps the verdict at WEAK
+  (`K1_ABSTAINED_MAJORITY:<stream>`). See [`GATE.md`](GATE.md#writing-a-study).
 * Statistics flatten n-dimensional arrays.
 * `op` is one of `>`, `>=`, `<`, `<=`. `==` exists only for `stat = "count"` and in `largest_true`, where both sides are
   integers or literal grid values.
@@ -250,13 +255,23 @@ uses = ["criterion.js", "tg_line.js"]    # copied into the program's working fol
 
 | Event | Result |
 |---|---|
-| `{"rid": k, "error": ...}` | that one outcome is UNDEFINED (`ExternalError`); the process keeps serving. A reply with both `outcome` and `error` counts as an error (R-14) |
+| `{"rid": k, "error": ...}` | that one outcome is UNDEFINED (`ExternalError`, a hard UNDEFINED); the process keeps serving. A reply with both `outcome` and `error` counts as an error (R-14) |
 | a timeout (`request_timeout_s`), a line that is not JSON, a wrong or missing `rid`, or a reply with neither `outcome` nor `error` | the process is **killed**. The outcome is `ExternalTimeout` or `ExternalProtocolError`; every later request to that argv is UNDEFINED (`ExternalDied`); the study note `EXTERNAL_DIED` is added |
 | the process dies (EOF, write error) while a reply is awaited | `ExternalDied`, like every later request (R-13) |
 | `outcome` is not one of `HOLDS`, `FAILS`, `UNDEFINED` | the process is not killed (the `rid` matches, so nothing can shift); the value counts as an invalid return: `BAD_RETURN` and UNDEFINED (R-14) |
 | a missing or unhashable executable, a `.cmd`/`.bat` on Windows, or a failed handshake | exit 4, no certificate |
 
 A killed process cannot answer late, so replies can never shift. The UNDEFINED outcomes reach the verdict through K1.
+
+**Abstention or failure (0.5).** Of the outcomes a command criterion can give, `"UNDEFINED"` is the criterion's own
+abstention (a soft UNDEFINED: no claim, reported as `K1_ABSTAINED:<stream>`, and K1 makes the verdict UNDEFINED only when
+it covers more than half of the `plus` samples). Every other UNDEFINED is a hard UNDEFINED, a failure, for which K1
+keeps its 0.4 rule (the component is UNDEFINED): an `{"error": ...}` answer, a timeout, a protocol or encoding error, a
+death (`EXTERNAL_DIED`), a missing component in a component dict, and an outcome string other than `HOLDS`, `FAILS` and
+`UNDEFINED` (`BAD_RETURN`). **A program must answer an uncaught exception with `{"rid": k, "error": ...}`, never with
+`"UNDEFINED"`**: the reference wrappers do, and a wrapper that answers `"UNDEFINED"` for a crash turns a failure into an
+abstention that the gate cannot detect. Answer `"UNDEFINED"` only when the analysis has nothing to claim (for example an
+empty selection).
 
 **Read-key recording.** 0.3 calls each criterion once more on a recording dictionary to learn which keys it reads. For a
 command criterion that is a real request, and the adapter serialises every key, so all keys count as read and
@@ -281,7 +296,7 @@ and K5 catch it. With `tg-line/1` the pipeline can stay in R, Julia or any other
 ## 7. Mutations
 
 A mutation is an inline table `{ op = "...", ... }`, applied to a copy of the sample, never in place. A mutation that
-references a missing key or does not fit the data raises an error, which the engine turns into UNDEFINED. Ops marked
+references a missing key or does not fit the data raises an error, which the engine turns into UNDEFINED. Since 0.5 this is a failed generation of that world, hence a *hard* UNDEFINED and `K1_UNDEFINED` on a K1 stream (an error in a mutation or a derived world, including a pattern-like `NotApplicable` raised there, is never an abstention; only a criterion's own UNDEFINED is). Ops marked
 with a dagger accept a `where` selection (same rules as in [section 5](#5-criteria-patterns)) that limits them to some rows.
 
 | Op | Arguments | Effect | Models |

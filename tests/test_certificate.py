@@ -84,7 +84,7 @@ class TestContents(unittest.TestCase):
     def test_versions_and_non_claims(self):
         b = body("toy_good")
         self.assertEqual(b["tool_version"], kapi.__version__)
-        self.assertEqual(b["spec_version"], "0.6")
+        self.assertEqual(b["spec_version"], "0.7")
         self.assertEqual(len(b["non_claims"]), 6)
         self.assertIn("does not mean the hypothesis is true", b["non_claims"][0])
         self.assertTrue(b["known_limitations"])
@@ -126,7 +126,7 @@ class TestContents(unittest.TestCase):
         self.assertEqual(set(c["bounds"]), set(c["counts"]))
         for bound in c["bounds"].values():
             self.assertLessEqual(bound["lower"], bound["upper"])
-        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "n": 100})
+        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "hard_undefined": 0, "n": 100})
         self.assertEqual(b["premise_map"], {"shift": {"mean_gt_1": 1.0}})
 
     def test_expected_streams_present(self):
@@ -157,8 +157,8 @@ class TestDefinedness(unittest.TestCase):
         counts = deterministic["components"][0]["counts"]
         self.assertTrue(all(v["n"] == 1 for v in counts.values()))
         self.assertEqual(deterministic["components"][0]["bounds"], {})
-        self.assertEqual(counts["world:plus"], {"holds": 1, "undefined": 0, "n": 1})
-        self.assertEqual(counts["world:minus"], {"holds": 0, "undefined": 0, "n": 1})
+        self.assertEqual(counts["world:plus"], {"holds": 1, "undefined": 0, "hard_undefined": 0, "n": 1})
+        self.assertEqual(counts["world:minus"], {"holds": 0, "undefined": 0, "hard_undefined": 0, "n": 1})
 
     def test_same_inputs_same_hash(self):
         for toy in ("toy_good", "toy_good_det", "toy_lowpower", "toy_components_ok", "toy_shuffle_good",

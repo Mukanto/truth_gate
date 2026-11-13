@@ -27,7 +27,7 @@ origin note removed from the first pair), so the verdicts below are what the eva
 | [`03_unit_epsilon_bug/fixed.py`](03_unit_epsilon_bug/fixed.py) | The offset is `LEVEL * UNIT`. | `FALSIFIABLE` | 0 | none |
 | [`convergence_criteria/study.py`](convergence_criteria/study.py) | A generic synthetic-world study with three criteria and three controls (see below). | `NOT_FALSIFIABLE` (C1), `WEAK` (C2), `FALSIFIABLE` (C3); study verdict `NOT_FALSIFIABLE` | 2 | C1: `K5_HOLDS_ON_NOISE`, `K5_HOLDS_ON_DEGENERATE`; C2: `K5_INCONCLUSIVE:noise`, `K5_INCONCLUSIVE:zeros` |
 
-The verdicts above were produced by `python -m kapi check` with this version (0.4.1) of the package (`truth-gate check`
+The verdicts above were produced by `python -m kapi check` with this version (0.5.0) of the package (`truth-gate check`
 gives the same); the certificates are reproducible (`verify` exits 0).
 
 ### A criterion in another language: [`node_criterion/`](node_criterion/README.md)

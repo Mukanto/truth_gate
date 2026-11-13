@@ -12,6 +12,8 @@ two small synthetic worlds (`world.py`) and the manifest (`truthgate.toml`).
    `"NaN"`, `"Infinity"`, `"-Infinity"`; integers beyond 2^53 are refused.
 4. The reply is `{"rid":k,"outcome":"HOLDS"}` (or `"FAILS"`, `"UNDEFINED"`, or an object of those for components), or
    `{"rid":k,"error":"text"}`, which makes that one outcome UNDEFINED. Answer every request, in order, with its `rid`.
+   Answer an uncaught exception with `error`, never with `"UNDEFINED"`: `"UNDEFINED"` is the criterion's own abstention
+   (no claim), `error` is a failure, and the gate treats them differently (spec 0.7).
 5. A timeout, a line that is not JSON, a wrong `rid` or a reply with neither `outcome` nor `error` kills the process;
    its later requests are UNDEFINED and the study note `EXTERNAL_DIED` is written.
 6. The leak guard cannot see inside another process: the certificate carries the study note `K6_EXTERNAL_UNGUARDED`

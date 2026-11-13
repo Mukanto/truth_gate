@@ -1,7 +1,49 @@
 # Changelog
 
-Each release implements one frozen specification (`docs/SPEC.md` for 0.1 to 0.3, `docs/design/spec-0.6.md` for 0.4). The
+Each release implements one frozen specification (`docs/SPEC.md` for 0.1 to 0.3, `docs/design/spec-0.6.md` for 0.4, `docs/design/spec-0.7.md` for 0.5). The
 package version is `tool_version` in the certificate (`kapi_version` up to 0.3); the spec version is `spec_version`.
+
+## 0.5.0 (spec 0.7, 2026-11-13)
+
+Implements `docs/design/spec-0.7.md` (frozen, `FREEZE_SPEC_0.7.json`). Post-freeze decisions of the implementation are in
+`docs/design/spec-0.7-REVISIONS-post-freeze.md` (R-1, R-2).
+
+**Changed**
+
+- **K1 separates abstention from failure.** A criterion's own UNDEFINED outcome (soft: `None`, also as a whole return or a
+  dict value; a pattern that is UNDEFINED by its own rules; a command's `"UNDEFINED"`) counts as no claim. Every other
+  UNDEFINED outcome is hard (an exception including a pattern's missing key and the leak guard's `PermissionError`, a failed
+  or invalid world generation, a wrong return type including `NaN`, a missing declared component, every command failure).
+  `K1_UNDEFINED` (verdict UNDEFINED, as before) now fires for a hard UNDEFINED on `plus`, `minus` or `null`, or when the
+  criterion abstains on more than half of the `plus` samples (`2 * abstentions > n`; 100 vs 101 of 200, 10 vs 11 in quick
+  mode). Otherwise the information flag `K1_ABSTAINED:<stream>` is recorded for every K1 stream with an abstention, and the
+  capping flag `K1_ABSTAINED_MAJORITY:<stream>` (verdict at most WEAK, never suppressed) when `world:minus` or `world:null`
+  has more than half abstentions. The same rules apply in deterministic mode (an abstention on `minus` or `null` is a rate
+  of 1) and in quick mode.
+- **Every other statistic is unchanged.** `None` counts as not-HOLDS exactly as before, so K2 to K5, the premise map,
+  `pattern_stats` and the suppression rules give the 0.4.1 numbers. K8 keeps its rule; its limitation (abstentions on the
+  "before" side can hide changes on up to half of the pairs) is documented in `known_limitations`.
+- **Certificate.** `spec_version` `"0.7"`, `tool_version` `"0.5.0"`. `counts[stream]` gains `hard_undefined`; `errors`
+  gains the names `BAD_RETURN` and `MISSING_COMPONENT`, so the error counts of a stream add up to its `hard_undefined`. For the random probes (noise, shuffle) of a deterministic study, whose three draws are combined into one outcome, `hard_undefined` is 1 when the combined outcome is UNDEFINED and one of its UNDEFINED draws is hard, and `errors` then has one entry, the cause of the first hard draw (post-freeze R-3); otherwise neither is recorded.
+  Validation checks `holds + undefined <= n` and `hard_undefined <= undefined`. `known_limitations` has two more sentences.
+  `verify` on a 0.4.x certificate exits 7.
+- `explain` has entries for `K1_ABSTAINED`, `K1_ABSTAINED_MAJORITY` and both causes of `K1_UNDEFINED`.
+- Names: the `StudyError` text is `STUDY is not a truth_gate.Study` (it is recorded in `load_error`), and the leak guard
+  message is `truth_gate leak guard blocked <event>`. The default certificate name stays `STUDY.kapi.json`.
+
+**User-visible effect.** A component that 0.4.1 made UNDEFINED only because its criterion returned `None` is now judged by
+its other flags and can be FALSIFIABLE, WEAK or NOT_FALSIFIABLE. A CI job that failed on such an UNDEFINED (exit 3) may
+now pass, or fail on a mandatory flag that 0.4.1 had already computed. A 0.4.1 detection or clean pass cannot change.
+One older evaluation case, `evaluation/cases/E2/E2-07_faulty.py`, moves from UNDEFINED to WEAK: its criterion returns
+`None` instead of `False` when no peak is detected, so it abstains on all `minus` samples and
+`K1_ABSTAINED_MAJORITY:world:minus` caps it at WEAK (R-2; the v0.2 evaluation counted the UNDEFINED as a detection).
+
+**Guidance.** Return `None` when the analysis has nothing to claim (for example an empty selection); let a genuine error
+raise. A criterion that catches its own exceptions and returns `None` turns a failure into an abstention. A command
+program must answer an uncaught exception with `error`, not `"UNDEFINED"`.
+
+**Not in 0.5** (moved to 0.6): command worlds and transforms, the mutations `copy`, `stale` and `relabel`, `files = glob`
+worlds, YAML and Parquet input.
 
 ## 0.4.1 (spec 0.6, 2026-11-13)
 

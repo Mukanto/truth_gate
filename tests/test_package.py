@@ -145,7 +145,7 @@ class TestLayout(unittest.TestCase):
         with open(os.path.join(_helpers.ROOT, "pyproject.toml"), encoding="utf-8") as handle:
             text = handle.read()
         self.assertIn('name = "truth-gate"', text)  # distribution name; the package is still imported as kapi
-        self.assertIn('version = "0.4.1"', text)
+        self.assertIn('version = "0.5.0"', text)
         self.assertIn('dependencies = ["numpy"]', text)
 
 
@@ -194,7 +194,7 @@ class TestPublicApi(unittest.TestCase):
     def test_names(self):
         for name in ("Study", "Criterion", "World", "Premise", "Control", "Budget", "Targets", "StudyError", "run_gate"):
             self.assertTrue(hasattr(kapi, name), name)
-        self.assertEqual(kapi.__version__, "0.4.1")
+        self.assertEqual(kapi.__version__, "0.5.0")
 
     def test_study_error_is_an_exception(self):
         self.assertTrue(issubclass(kapi.StudyError, Exception))

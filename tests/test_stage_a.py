@@ -48,8 +48,8 @@ class TestShim(unittest.TestCase):
 
     def test_version_is_truth_gates(self):
         self.assertEqual(kapi.__version__, truth_gate.__version__)
-        self.assertEqual(truth_gate.__version__, "0.4.1")
-        self.assertEqual(kapi.SPEC_VERSION, "0.6")
+        self.assertEqual(truth_gate.__version__, "0.5.0")
+        self.assertEqual(kapi.SPEC_VERSION, "0.7")
 
     def test_every_submodule_is_aliased(self):
         names = module_names(PACKAGE_DIR)
@@ -104,7 +104,7 @@ class TestSchema2(unittest.TestCase):
         b = body("toy_good")
         self.assertEqual(b["tool"], "truth-gate")
         self.assertEqual(b["tool_version"], truth_gate.__version__)
-        self.assertEqual(b["spec_version"], "0.6")
+        self.assertEqual(b["spec_version"], "0.7")
         self.assertEqual(b["input_kind"], "python")
         self.assertEqual(b["study_notes"], [])
         self.assertNotIn("kapi_version", b)
@@ -151,8 +151,9 @@ class TestSchema2(unittest.TestCase):
 
     def test_known_limitations_gain_the_two_external_program_entries(self):
         limits = body("toy_good")["known_limitations"]
+        self.assertEqual(len(limits), 7)  # spec 0.7 appends two more (test_spec07.py)
         self.assertEqual(
-            limits[3:],
+            limits[3:5],
             ["External programs are hashed by executable and `uses` files only; the libraries they load are not hashed.",
              "On Windows, killing an external program does not kill programs it started."],
         )
@@ -186,7 +187,7 @@ class TestVerifyExit7(unittest.TestCase):
         self.assertEqual(code, 7)
         self.assertIn("0.3.0", out)
         self.assertIn("v0.3.0", out)
-        self.assertIn("0.4.1", out)
+        self.assertIn("0.5.0", out)
 
     def test_certificate_of_another_tool_version(self):
         env = copy.deepcopy(run_toy("toy_good_det"))

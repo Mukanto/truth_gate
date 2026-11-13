@@ -155,7 +155,7 @@ class TestK1AndErrors(unittest.TestCase):
 
     def test_counts_record_undefined(self):
         self.assertEqual(component("toy_undefined_none")["counts"]["world:plus"],
-                         {"holds": 0, "undefined": 30, "n": 30})
+                         {"holds": 0, "undefined": 30, "hard_undefined": 0, "n": 30})
 
     def test_exception_inside_premise_is_recorded(self):
         self.assertEqual(component("toy_inconclusive_premise")["errors"]["premise:broken"], {"RuntimeError": 100})

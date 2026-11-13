@@ -1,6 +1,6 @@
 # Truth_Gate: gate reference
 
-This page is the full reference for the gate. The overview, the protocol and the evidence are in the [README](../README.md); the formal rules and statistics are in [`SPEC.md`](SPEC.md) (0.3). The manifest format of 0.4 (studies without Python code, criteria in any language) is in [`MANIFEST.md`](MANIFEST.md). Version 0.4 follows spec 0.6; the design record is in [`design/`](design/).
+This page is the full reference for the gate. The overview, the protocol and the evidence are in the [README](../README.md); the formal rules and statistics are in [`SPEC.md`](SPEC.md) (0.3; for K1 since 0.5 this page is the reference, see [What changed in 0.5](#what-changed-in-05-abstention-is-no-claim-a-failure-is-still-undefined)). The manifest format of 0.4 (studies without Python code, criteria in any language) is in [`MANIFEST.md`](MANIFEST.md). Version 0.5 follows spec 0.7 (0.4 followed spec 0.6); the design record is in [`design/`](design/).
 
 ## Quick start
 
@@ -43,7 +43,7 @@ manifest, `truth-gate check truthgate.toml`; see [`MANIFEST.md`](MANIFEST.md).
 The repository root holds a composite GitHub Action (`action.yml`) and `.pre-commit-hooks.yaml`.
 
 ```yaml
-- uses: Mukanto/truth_gate@v0.4.1
+- uses: Mukanto/truth_gate@v0.5.0
   with:
     target: truthgate.toml
     freeze: FREEZE.json          # optional
@@ -109,6 +109,17 @@ STUDY = Study(
   judged separately as `id:component`.
 * Exceptions in `fn`, `generate`, `mutate` or `transform` give UNDEFINED. The exception type name is recorded, never the
   message.
+* **Abstention or failure (0.5).** An UNDEFINED outcome is *soft* (an abstention) when the criterion itself returned it:
+  `None`, also as the whole return of a criterion with components or as the value of a declared component; a pattern
+  that is UNDEFINED by its own rules (empty selection, non-finite value, zero denominator, types that do not fit); the
+  outcome `"UNDEFINED"` of a command criterion. Every other UNDEFINED outcome is *hard* (a failure): an exception
+  (a pattern's missing key and the leak guard's `PermissionError` included), a failed or invalid world generation, a
+  wrong return type (`BAD_RETURN`: `float('nan')`, a number, a string, an array, a command outcome other than `HOLDS`,
+  `FAILS`, `UNDEFINED`), a declared component missing from the returned dict, and every command failure (an error
+  answer, a timeout, a protocol or encoding error, a death). A criterion that catches its own exceptions and returns
+  `None` turns a failure into an abstention; the gate cannot see that, so do not do it.
+* **Guidance.** Return `None` when the analysis has nothing to claim (for example an empty selection). Let a genuine
+  error raise.
 * `plus` is the world in which the criteria should hold. `minus` is `plus` with one declared change that should make
   them fail. `controls` break the theory on purpose; a criterion that still holds under its control is not testing
   the theory. `premises` perturb one assumption at a time.
@@ -128,7 +139,7 @@ The full rules, including the statistics and every interpretation that was fixed
 
 | Check | What it does |
 |---|---|
-| **K1** definedness | Every criterion must be defined (not an exception or `None`) on `plus`, `minus` and `null` samples. |
+| **K1** definedness | A criterion must not fail on `plus`, `minus` or `null` samples (an exception, a failed world, a wrong return type, a missing component, a command error), and must not abstain (return `None`) on more than half of the `plus` samples. Abstentions on at most half of `plus`, and on `minus` and `null`, count as no claim: they are reported (`K1_ABSTAINED`), and a majority on `minus` or `null` caps the verdict at WEAK (`K1_ABSTAINED_MAJORITY`). |
 | **K2** reachability, separation, resolution | The criterion must be able to hold in `plus`, fail in `minus`, and hold significantly more often in `plus` than in `minus`. Declared tolerances and magnitudes must be resolvable in float64. A `minus` world identical to `plus` gives UNTESTED. |
 | **K3** premise map | A premise declared as `tested` must make the criterion hold significantly less often. The rate change per premise is written to the certificate. |
 | **K4** negative controls | Every criterion needs a control that breaks the theory, and the criterion must not hold under it. A waiver with a written reason is allowed and caps the verdict at WEAK. |
@@ -144,7 +155,7 @@ The full rules, including the statistics and every interpretation that was fixed
 | `FALSIFIABLE` | every mandatory check passed and all targets were met | 0 |
 | `WEAK` | mandatory checks passed, but a target was missed, a check was inconclusive, or a control was waived | 1 |
 | `NOT_FALSIFIABLE` | at least one mandatory check failed | 2 |
-| `UNDEFINED` | the criterion could not be evaluated in the declared worlds (K1), or the study could not be loaded | 3 |
+| `UNDEFINED` | the criterion failed on a declared world, or abstained on more than half of the `plus` samples (K1), or the study could not be loaded | 3 |
 | `UNTESTED` | the `minus` world did not change the data, so the gate could not test whether the criterion can fail. Fix the world. It does not pass the gate, and it does not say the criterion is unfalsifiable | 6 |
 
 Other exit codes:
@@ -192,10 +203,10 @@ records the argv, the SHA-256 of the executable and of every `[external] uses` f
 timestamp is outside the hashed body, so identical inputs give identical hashes.
 
 The body records: the tool and its version (`tool`, `tool_version`; 0.3 had `kapi_version`), the spec version
-(`spec_version`, `"0.6"` in 0.4), the kind of input (`input_kind`: `python` or `manifest`), Python and numpy; the mode (`full` or `quick`); the study
+(`spec_version`, `"0.7"` in 0.5), the kind of input (`input_kind`: `python` or `manifest`), Python and numpy; the mode (`full` or `quick`); the study
 (`module_sha256`, the hashes of allowed files, budget, targets, regimes, every world with its `derived_from` and `change`
 text, premises, controls, criteria with tolerances and waivers); and, per criterion component, the verdict, the flags,
-the HOLDS/UNDEFINED counts and Wilson bounds per stream, and `minus_check` (whether `minus` was identical to `plus`,
+the HOLDS/UNDEFINED counts (and how many of the UNDEFINED outcomes are hard failures, `hard_undefined`) and Wilson bounds per stream, and `minus_check` (whether `minus` was identical to `plus`,
 which keys the criterion reads, which keys changed). It also holds the premise map, the study flags, the leak log, the
 verdict and the `non_claims`. Details are in [`SPEC.md`](SPEC.md).
 
@@ -210,7 +221,7 @@ verdict and the `non_claims`. Details are in [`SPEC.md`](SPEC.md).
 | `pattern_stats` | for every pattern criterion and each of the streams `plus`, `minus` and `null`: the 5%, 50% and 95% quantiles of the statistic it computes, its thresholds and the number of finite values. It never changes a verdict |
 | `suggested_unreviewed` | the number of declarations that still carry `origin = "suggested"` |
 | `study_notes` | informational study-level notes (see below); no verdict rule reads them. Each note is `{"note": NAME, "commands": [argv, ...]}` |
-| `non_claims`, `known_limitations` | six non-claims (the three of 0.3 with "The gate" for "Kapı", plus: generated and suggested declarations are generic; a file world is only as independent as its provenance; the leak guard does not cover external programs) and five known limitations (the three of 0.3, plus: libraries of external programs are not hashed; on Windows killing an external program does not kill what it started) |
+| `non_claims`, `known_limitations` | six non-claims (the three of 0.3 with "The gate" for "Kapı", plus: generated and suggested declarations are generic; a file world is only as independent as its provenance; the leak guard does not cover external programs) and seven known limitations (the three of 0.3, plus: libraries of external programs are not hashed; on Windows killing an external program does not kill what it started; since 0.5 two sentences on abstentions and on K8) |
 
 A 0.3 certificate (`kapi_version`, no `tool`) is not verified by 0.4: `verify` exits with 7 and names the tag to use.
 
@@ -227,7 +238,9 @@ wilson_lower(B)` at a Bonferroni-corrected level.
 
 | Flag | Class | Meaning |
 |---|---|---|
-| `K1_UNDEFINED` | K1 | some outcome on `plus`, `minus` or `null` was UNDEFINED; verdict UNDEFINED |
+| `K1_UNDEFINED` | K1 | a hard UNDEFINED outcome (a failure) on `plus`, `minus` or `null`, or the criterion abstained on more than half of the `plus` samples (`2 * abstentions > n`); verdict UNDEFINED. `counts` shows which: `hard_undefined > 0` on a K1 stream, otherwise the `plus` majority |
+| `K1_ABSTAINED:<stream>` | info (0.5) | the criterion returned UNDEFINED itself on some samples of `world:plus`, `world:minus` or `world:null` (a soft UNDEFINED, counted as no claim); it never enters a verdict, a suppression rule or an expected-flag list |
+| `K1_ABSTAINED_MAJORITY:<stream>` | capping (0.5) | the criterion abstained on more than half of the samples (`2 * abstentions > n`; in deterministic mode one abstention) of `world:minus` or `world:null`: it has not shown that it fails where the claim is false. Never suppressed |
 | `K2_HOLDS_UNREACHABLE` | mandatory | the criterion never holds in `plus` |
 | `K2_FAILS_UNREACHABLE` | mandatory | the criterion never fails in `minus` |
 | `K2_NO_SEPARATION` | mandatory | not `SL(minus, plus)`: the worlds are not distinguished |
@@ -253,13 +266,26 @@ wilson_lower(B)` at a Bonferroni-corrected level.
 | `K7_REGIME_UNCOVERED` | study-level | a declared regime has no criterion |
 | `K7_COMPONENT_MISMATCH` | study-level | a criterion returned keys different from its declared components |
 | `NONDETERMINISTIC` | study-level | deterministic mode only: a user-derived stream gave different outcomes at sample indices 0, 1, 2 |
-| `BAD_RETURN` | info | `fn` returned something other than bool/None (treated as UNDEFINED) |
+| `BAD_RETURN` | info | `fn` returned something other than bool/None (a hard UNDEFINED) |
 | `K8_NOT_INVARIANT` | mandatory (0.4) | a declared invariance changes the outcome too often: the one-sided Wilson lower bound of the change rate exceeds `targets.size` in `plus` or in `minus` |
 | `K8_INCONCLUSIVE` | capping (0.4) | more than 50% of the before/after pairs of an invariance have an UNDEFINED side in `plus` or in `minus` |
 | `K8_SOME_CHANGES` | info (0.4) | at least one outcome changed under an invariance, but the rate is not significantly above `targets.size` |
 | `SUGGESTED_UNREVIEWED` | capping (0.4), on every component | a declaration still carries `origin = "suggested"`: it was written by `truth-gate suggest` and nobody has reviewed it. The GitHub Action fails whenever it is present |
 
 K8 flags and `SUGGESTED_UNREVIEWED` are added after the suppression rules below and are never suppressed.
+
+### What changed in 0.5: abstention is no claim, a failure is still UNDEFINED
+
+In 0.4 every UNDEFINED outcome on `plus`, `minus` or `null` made the component UNDEFINED. In 0.5 that is kept for failures
+(hard UNDEFINED) and for a criterion that abstains on more than half of the `plus` samples. A component that was
+UNDEFINED in 0.4 only because its criterion returned `None` on some samples is now judged by its other flags: it can be
+FALSIFIABLE, WEAK or NOT_FALSIFIABLE. A CI job that failed on such an UNDEFINED (exit 3 is in the default `fail-on`) may
+therefore pass now, or fail on a mandatory flag that 0.4 had already computed and recorded. Nothing else changes: every
+HOLDS-based statistic counts an abstention as not-HOLDS, exactly as before (`None` and `False` are the same there), and a
+0.4.1 detection (NOT_FALSIFIABLE) or clean pass of a component cannot change. The K8 pass keeps its own rule and leaves a
+before/after pair with an UNDEFINED side out of its change count; abstentions on the "before" side can therefore hide
+changes on up to half of the pairs (a known limitation, recorded in every certificate). `verify` on a 0.4.x certificate
+exits 7.
 
 ### Study notes
 
@@ -269,7 +295,7 @@ prints them at the end of the table.
 | Note | Meaning |
 |---|---|
 | `K6_EXTERNAL_UNGUARDED` | the study has command criteria, which run in other programs that the leak guard cannot see. The commands are listed. The badge reads "(unguarded)" |
-| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run; every later request to it was UNDEFINED, and that reaches the verdict through K1 |
+| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run; every later request to it was UNDEFINED, and that reaches the verdict through K1 (command failures are hard UNDEFINED outcomes, never abstentions) |
 
 When a criterion never holds in `plus`, the flags that only compare against `plus` carry no information and are
 suppressed (listed in `suppressed_by`/`suppressed`). When `minus` is identical to `plus`, `K2_FAILS_UNREACHABLE`,
@@ -323,6 +349,9 @@ after the two evaluations of K1-K7, under the armed guard. It never feeds sample
   reasons unrelated to the criterion. See [`../examples/convergence_criteria`](../examples/convergence_criteria).
 * `allow_paths` are declared by the user and cannot be audited beyond hashing. Studies are single files; local helper
   modules cannot be imported. The leak guard is not a sandbox.
+* **Abstentions and K8.** A criterion's own UNDEFINED outcomes (`None`, a pattern's UNDEFINED, a command's UNDEFINED) on
+  `plus`, `minus` and `null` count as no claim. K8 leaves pairs with an UNDEFINED side out of its change count, so
+  abstentions can hide changes on up to half of the pairs.
 * **External programs** (command criteria) are not covered by the leak guard. They are hashed by executable and
   `uses` files only; the libraries they load are not hashed. On Windows, killing a program does not kill the programs it
   started. A program that carries state between requests shows up as `K6_NONREPRODUCIBLE`.

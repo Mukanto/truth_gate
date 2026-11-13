@@ -17,16 +17,39 @@ from .minus import FLAG_IDENTICAL, FLAG_UNREAD
 from .passes import SUGGESTED_UNREVIEWED
 
 NOTES = (NOTE_UNGUARDED, NOTE_DIED)
-FAMILIES = ("HIGH_RATE:", "K5_INCONCLUSIVE:")  # a flag name is the prefix plus the stream or probe name
+FAMILIES = ("HIGH_RATE:", "K5_INCONCLUSIVE:", "K1_ABSTAINED:", "K1_ABSTAINED_MAJORITY:")  # a flag name is the prefix plus the stream or probe name
 
 # name -> (meaning, usual cause, protocol rule)
 EXPLANATIONS: dict = {
     "K1_UNDEFINED": (
-        "An outcome of the criterion on the plus, minus or null world was UNDEFINED, so the component's verdict is UNDEFINED.",
-        "The criterion raised an exception, returned None, or hit an UNDEFINED condition of a pattern (a missing key, an "
-        "empty selection, a zero denominator, a non-finite value, types that do not fit) on some synthetic samples.",
+        "The component's verdict is UNDEFINED. Two causes, and the certificate shows which: (1) a failure: an outcome on "
+        "the plus, minus or null world was UNDEFINED because something went wrong (`counts` has hard_undefined > 0 on one "
+        "of these streams); (2) the criterion abstained (returned UNDEFINED itself) on more than half of the plus samples, "
+        "so it is not a test of the claim in the world where the claim is true (hard_undefined is 0 and "
+        "2 * (undefined - hard_undefined) > n on world:plus).",
+        "(1) The criterion raised an exception (a pattern's missing key included), a world failed to generate data, the "
+        "criterion returned something other than a bool or None (a NaN, a number, a string), a declared component is "
+        "missing from the returned dict, or a command program answered an error, timed out or died. "
+        "(2) A guard that returns None on most plus samples (an empty selection, a threshold the plus data rarely reach). "
+        "A deliberate None on at most half of the plus samples is not a cause: see K1_ABSTAINED.",
         "§1.10 (smoke test: the criterion must be defined on synthetic input) and §1.3 (the pre-registration says what "
         "UNDEFINED means).",
+    ),
+    "K1_ABSTAINED:": (
+        "Information only: the criterion returned UNDEFINED itself (None, a pattern's UNDEFINED, a command's UNDEFINED) on "
+        "some samples of the stream named after the colon (world:plus, world:minus or world:null). It counts as no claim "
+        "(not as HOLDS) and does not make the verdict UNDEFINED.",
+        "A guard in the criterion (`if selection.size == 0: return None`), or a pattern whose selection is empty on the "
+        "samples of that world. Look at `counts`: undefined minus hard_undefined is the number of abstentions.",
+        "§1.10 (the criterion must be defined where it is meant to be evaluated) and §1.5 (UNDEFINED is not a pass).",
+    ),
+    "K1_ABSTAINED_MAJORITY:": (
+        "Capping: the criterion returned UNDEFINED itself on more than half of the samples of the minus or null world "
+        "(named after the colon), so it has not shown that it fails where the claim is false. The verdict is capped at WEAK.",
+        "A guard that fires in the world without the effect (for example 'no peak found: return None'), or a broken world "
+        "(NaN data, a wrong dtype, an always empty selection) on which the criterion abstains. In deterministic mode one "
+        "abstention on minus or null is a rate of 1.",
+        "§1.5 (a control cannot pass by being UNDEFINED) and §1.10.",
     ),
     "K2_HOLDS_UNREACHABLE": (
         "The criterion never holds in the plus world.",
@@ -240,7 +263,8 @@ def kind_of(key: str) -> str:
         return "flag, capping (component verdict at most WEAK)"
     if key in checks.STUDY_LEVEL_FLAGS:
         return "flag, study-level (study verdict at least NOT_FALSIFIABLE)"
-    if key in checks.INFORMATIONAL_FLAGS or key in checks.INFORMATIONAL_FLAGS_SCHEMA2:
+    if (key in checks.INFORMATIONAL_FLAGS or key in checks.INFORMATIONAL_FLAGS_SCHEMA2
+            or key.startswith(checks.INFORMATIONAL_PREFIXES)):
         return "flag, information only"
     return "flag"
 

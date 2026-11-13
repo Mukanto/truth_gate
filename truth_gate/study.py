@@ -258,5 +258,5 @@ def load_study(path: str, source: bytes) -> Study:
     if study is None:
         raise StudyError("the study file does not define STUDY")
     if not isinstance(study, Study):
-        raise StudyError("STUDY is not a kapi.Study")
+        raise StudyError("STUDY is not a truth_gate.Study")
     return study

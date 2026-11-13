@@ -16,7 +16,7 @@ Truth_Gate has three parts:
 The name refers to the gate a claim has to pass before a test of it can tell you anything about the truth. A
 certificate is not a verdict on truth (see [Limits](#limits)).
 
-Version 0.4.1 (spec 0.6), MIT license. Until its first public release the project was called *Kapı* (Turkish for
+Version 0.5.0 (spec 0.7), MIT license. Until its first public release the project was called *Kapı* (Turkish for
 "gate"). Since 0.4 the package is `truth_gate` and the command is `truth-gate`. The package `kapi` and `python -m kapi`
 remain as a deprecated alias (they stay at least until 1.0), so existing studies and the frozen examples keep working.
 Certificates now record `tool` and `tool_version` instead of `kapi_version`; a 0.3 certificate is verified with the
@@ -176,7 +176,7 @@ dataset, never the real study data.
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: Mukanto/truth_gate@v0.4.1
+- uses: Mukanto/truth_gate@v0.5.0
   with:
     target: truthgate.toml
     freeze: FREEZE.json                                  # optional
@@ -214,7 +214,7 @@ The gate runs eight checks:
 
 | Check | Question |
 |---|---|
-| K1 | Is the criterion defined in every declared world? |
+| K1 | Does the criterion fail, or abstain on most `plus` samples, in a declared world? (An abstention elsewhere counts as no claim.) |
 | K2 | Can it hold in `plus`, fail in `minus`, and tell them apart? |
 | K3 | Does each premise it claims to test actually move it? |
 | K4 | Does it fail under a control that breaks the theory? |
@@ -307,7 +307,15 @@ What follows from that:
 * `suggest`, `init`, `freeze`, `badge`, `explain`; a GitHub Action and pre-commit hooks.
 * The package is `truth_gate`, with `kapi` kept as an alias. Certificate schema 2.
 
-**Moved to 0.5:**
+**Delivered in 0.5.0** (spec 0.7): K1 separates a criterion's own abstention (`None`, a pattern's UNDEFINED, a command's
+`"UNDEFINED"`) from a failure (an exception, a failed world, a wrong return type, a missing component, a command error).
+Failures keep making the component UNDEFINED; abstentions count as no claim, are reported as `K1_ABSTAINED:<stream>`,
+and cap the verdict at WEAK when they cover most of `minus` or `null` (`K1_ABSTAINED_MAJORITY:<stream>`). A component that
+0.4 made UNDEFINED only because its criterion returned `None` is now judged by its other flags, so a CI job that failed on
+such an UNDEFINED may now pass. Details in [`docs/GATE.md`](docs/GATE.md#what-changed-in-05-abstention-is-no-claim-a-failure-is-still-undefined)
+and [`CHANGELOG.md`](CHANGELOG.md).
+
+**Moved to 0.6:**
 
 * Worlds, controls and premises produced by external programs (command worlds and transforms).
 * The mutations `copy`, `stale` and `relabel`.
@@ -315,9 +323,10 @@ What follows from that:
 * YAML and Parquet input.
 
 **Phase B: done (2026-11-13).** The external test set of documented errors ran on the frozen 0.4.0; results and limits
-in [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md). It points at two things for a later version, each to
+in [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md). It pointed at two things for a later version, each to
 be pre-registered on its own: how K1 treats UNDEFINED outcomes that come from a criterion's own guard (they turned five
-flagged circular-analysis criteria into UNDEFINED), and human-written cases.
+flagged circular-analysis criteria into UNDEFINED), and human-written cases. 0.5.0 implements the K1 treatment of a
+criterion's own UNDEFINED outcomes (spec 0.7, see "Delivered in 0.5.0" above); the human-written cases remain open.
 
 Feedback is welcome as issues, especially real cases in which the gate caught, or missed, a defect.
 
@@ -330,7 +339,7 @@ truth_gate/  the gate (study, sampling, stats, probes, checks, minus, guard, cer
 kapi/         a deprecated alias of truth_gate (same objects, same command line)
 action.yml    the GitHub Action (composite); .pre-commit-hooks.yaml holds the pre-commit hooks
 examples/     faulty/fixed study pairs, a convergence-criteria study, a Node criterion, and the two GHZ hardware runs
-docs/         GATE.md, MANIFEST.md, SPEC.md, EVALUATION.md, CASE_STUDY_PROSPECTIVE.md, design/ (spec 0.6 and its revisions)
+docs/         GATE.md, MANIFEST.md, SPEC.md, EVALUATION.md, CASE_STUDY_PROSPECTIVE.md, design/ (specs 0.6 and 0.7 and their revisions)
 evaluation/   the evaluation case sets (hashed, unchanged) and their runners
 eval/         the evaluation harness (computes the pre-registered criteria from a results table)
 tests/        unit tests and toy studies (python -B -m unittest discover -s tests)

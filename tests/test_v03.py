@@ -412,7 +412,7 @@ class TestIdenticalMinusStochastic(unittest.TestCase):
         c = comp(s)
         # the extra draw and the recording calls come after the counted samples, so the counts equal those of a run
         # in which the criterion never sees a recorder: compare against the numbers of the unchanged toy_good logic
-        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "n": 100})
+        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "hard_undefined": 0, "n": 100})
         self.assertEqual(c["counts"]["world:minus"]["holds"], 0)
 
     def test_quick_mode_also_checks(self):
@@ -756,8 +756,8 @@ class TestVerdictOrder(unittest.TestCase):
 class TestCertificateFields(unittest.TestCase):
     def test_versions(self):
         b = body("toy_good")
-        self.assertEqual(b["tool_version"], "0.4.1")
-        self.assertEqual(b["spec_version"], "0.6")
+        self.assertEqual(b["tool_version"], "0.5.0")
+        self.assertEqual(b["spec_version"], "0.7")
 
     def test_minus_check_is_always_present(self):
         for toy in ("toy_good", "toy_good_det", "toy_v03_untested", "toy_v03_unread", "toy_waived", "toy_components_ok"):
@@ -794,7 +794,8 @@ class TestCertificateFields(unittest.TestCase):
         text = " ".join(body("toy_good")["known_limitations"])
         for phrase in ("exact identity", "pairing", "top-level keys", "UNTESTED can hide a criterion defect"):
             self.assertIn(phrase, text)
-        self.assertEqual(len(body("toy_good")["known_limitations"]), 5)  # spec 0.6 section 11 adds two (revision R-1)
+        # spec 0.6 section 11 adds two (revision R-1), spec 0.7 section 2.4 two more
+        self.assertEqual(len(body("toy_good")["known_limitations"]), 7)
 
     def test_untested_certificate_validates_and_round_trips(self):
         env = _helpers.run_toy("toy_v03_untested")
@@ -925,7 +926,7 @@ class TestReproducibility(unittest.TestCase):
 
     def test_counted_numbers_are_those_of_the_previous_version_for_a_sound_study(self):
         c = component("toy_good")
-        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "n": 100})
+        self.assertEqual(c["counts"]["world:plus"], {"holds": 100, "undefined": 0, "hard_undefined": 0, "n": 100})
         self.assertEqual(c["verdict"], "FALSIFIABLE")
         self.assertEqual(c["flags"], [])
 

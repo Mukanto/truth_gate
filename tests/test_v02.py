@@ -84,7 +84,7 @@ class TestSuppressionRaised(unittest.TestCase):
 
     def test_deterministic(self):
         c = component("toy_suppress_det")
-        self.assertEqual(c["counts"]["world:plus"], {"holds": 0, "undefined": 0, "n": 1})
+        self.assertEqual(c["counts"]["world:plus"], {"holds": 0, "undefined": 0, "hard_undefined": 0, "n": 1})
         self.assertEqual(c["suppressed_by"], "K2_HOLDS_UNREACHABLE")
         self.assertEqual(c["suppressed"], [n for n in CASCADE_NAMES if n != "K2_LOW_POWER"])  # skipped when deterministic
         self.assertEqual(c["flags"], ["K2_HOLDS_UNREACHABLE"])
@@ -222,10 +222,10 @@ class TestVerdictInvariance(unittest.TestCase):
 
 class TestVersions(unittest.TestCase):
     def test_versions(self):
-        self.assertEqual(kapi.__version__, "0.4.1")
-        self.assertEqual(body("toy_good")["tool_version"], "0.4.1")
-        self.assertEqual(body("toy_good")["spec_version"], "0.6")
-        self.assertEqual(kapi.SPEC_VERSION, "0.6")
+        self.assertEqual(kapi.__version__, "0.5.0")
+        self.assertEqual(body("toy_good")["tool_version"], "0.5.0")
+        self.assertEqual(body("toy_good")["spec_version"], "0.7")
+        self.assertEqual(kapi.SPEC_VERSION, "0.7")
 
 
 if __name__ == "__main__":

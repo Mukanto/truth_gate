@@ -218,7 +218,9 @@ follows from the planted error.
 
 * **B-1:** five faulty criteria carried the flags of a detection but ended UNDEFINED, and four fixed ones too: the
   criteria return UNDEFINED when a selection is empty (an allowed guard), and K1 makes a study UNDEFINED as soon as
-  one outcome on `plus` or `minus` is UNDEFINED.
+  one outcome on `plus` or `minus` is UNDEFINED. (Truth_Gate 0.5.0 changes this K1 rule, spec 0.7: a criterion's own
+  UNDEFINED outcome counts as no claim, and only a failure or abstention on more than half of the `plus` samples gives
+  `K1_UNDEFINED`. The Phase B record above describes 0.4.0 and is unchanged.)
 * **B-2:** in five pairs the documented leak was too small in the declared worlds at the size cap (60 features, 300
   rows) for the faulty criterion to hold where the claim is false.
 * **B-3:** four misses came from worlds without the shared measurement error that makes ratios couple; four fixed
