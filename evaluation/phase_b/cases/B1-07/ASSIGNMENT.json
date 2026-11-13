@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-07",
+  "world_id": "W15",
+  "class": "B-1",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W15",
+    "claim": "In a panel of 60 candidate genes, the genes that differ between tumour and normal tissue have a mean absolute log2 fold change of at least 0.5, in 20 tumour and 20 normal samples.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level, one value per sample and gene"
+      },
+      {
+        "key": "tumour",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for tumour samples (20), False for normal (20)"
+      }
+    ],
+    "sizes": "40 samples (20 + 20), 60 genes."
+  }
+}

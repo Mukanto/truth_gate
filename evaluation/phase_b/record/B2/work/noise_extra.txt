@@ -1,0 +1,3 @@
+b2-01 noise probe (fixed) n=1000: True 0.046 None 0.000
+b2-08 noise probe (fixed) n=1000: True 0.049 None 0.000
+b2-02 noise probe (fixed) n=1000: True 0.036 None 0.000

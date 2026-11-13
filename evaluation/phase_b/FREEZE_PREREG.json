@@ -1,0 +1,13 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-12T18:14:19Z",
+  "algorithm": "sha256",
+  "files": {
+    "PREREG_PHASE_B.md": "9cf1f0673b4a8247346a241b3c9a4f8f7f6e364bb3ee14fd04d5e1c43f923408",
+    "REVIEW1.md": "d92f43ae690940a1791cf68fde11d805a374a3362132de96156cb391a2ea449a",
+    "REVIEW2.md": "327ad2d58b3e6effa4dae1a2d4f60235f92d2995974e249cabe5734320941db1",
+    "REVISIONS.md": "1132989e00277a24acd94021ef304650207a4acb1d9a95e9785803707938c243",
+    "SOURCES.md": "6f2780ccd5abfb537da14116767dbabff775f8bd4f6f858129850a75d2173524"
+  },
+  "core_sha256": "31f2415ab2990d373110f0b9d2d8614cbdb9ce99f6aa6dba17604779b42f62cd"
+}

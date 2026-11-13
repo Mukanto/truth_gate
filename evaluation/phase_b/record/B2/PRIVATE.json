@@ -1,0 +1,110 @@
+[
+ {
+  "local_id": "b2-01",
+  "source": "SIM03",
+  "passage": "SIM03 via OpenAlex reconstruction: \"The resubstitution estimate of the error is biased for small datasets (11,12); our simulation confirms this, with 98.2% of the simulated datasets resulting in zero misclassifications, even though no true underlying difference existed between the two groups.\"",
+  "faulty": "SIM03 resubstitution estimate: build the predictor on all 20 samples (select informative genes, weight them, apply the rule) and reapply it to the same 20 samples; accuracy = 1 - resubstitution error. Source reports 20 specimens, 6000 genes, 10 per class, and that 98.2% of null datasets gave zero misclassifications. Not reported in the text read (supplement not available): classifier and gene-selection threshold; mine: nearest centroid on the 5 genes with largest absolute t statistic.",
+  "fixed": "SIM03 correction: leave-one-out cross-validation in which gene selection, weighting and the rule are all redone with the left-out specimen removed first (source: median 11 misclassifications of 20 under no difference); accuracy = 1 - that error.",
+  "subtype": "L1.1",
+  "notes": "Sizes note: 20 samples (10 per class), 60 genes (SIM03 simulation: 20 profiles of 6000 genes, 10 per class; genes capped at 60). | Source-reported: n=20, 10 per class, resubstitution vs fully cross-validated leave-one-out. Author choices: 60-gene cap, nearest centroid, top 5 genes by t, accuracy threshold 0.80."
+ },
+ {
+  "local_id": "b2-02",
+  "source": "SIM03",
+  "passage": "SIM03 via OpenAlex reconstruction: \"We also computed the resubstitution estimate of the error rate (this estimate results from building the predictor on the full dataset and then reapplying it to each specimen for classification purposes). [...] Consequently, it is essential to obtain an unbiased estimate of the true error rate of the predictor (i.e., the probability of incorrectly classifying a randomly selected future case).\"",
+  "faulty": "SIM03 resubstitution estimate: fit logistic regression (few Newton steps, small ridge) on all 30 patients and compute AUC on the same patients.",
+  "fixed": "Cross-validation that refits the whole predictor with each left-out group removed first (SIM03: leave-one-out or other cross-validation methods are nearly unbiased); AUC from pooled out-of-fold scores, here 5-fold.",
+  "subtype": "L1.1",
+  "notes": "Sizes note: 30 patients, 20 markers (SIM03: class prediction studies on fewer than 50 specimens are common; prognostic setting follows its van't Veer breast-cancer example, metastasis within 5 years versus disease-free at 5 years). | Source-reported: resubstitution definition, small-n prognostic setting, fully cross-validated correction. Author choices: logistic regression, n=30, 20 markers, 5 folds, AUC. Differs from b2-01 in statistic, model, n, no gene-selection step."
+ },
+ {
+  "local_id": "b2-03",
+  "source": "AMB02",
+  "passage": "AMB02 (PMC124442, full text read): \"But, if it is calculated within the feature-selection process, there is a selection bias in it when it is used as an estimate of the prediction error. [...] it is essential that cross-validation or the bootstrap be used external to the gene-selection process.\"",
+  "faulty": "AMB02 section Forward Selection with Fisher's Rule: Fisher's linear discriminant rule; genes pre-reduced (source: top 400 of 2000; here top 20 of 60 as a scaled analogue); sequential forward selection with the decision to add a gene based on leave-one-out CV error, using all 62 tissues and no test set; the reported error is the internal leave-one-out error CV1IE of the 3-gene rule (source: minimum 6.5% at three genes). Claim holds if 1 - error >= 0.80. Ridge-regularised LDA in numpy (source notes the covariance is singular for n small).",
+  "fixed": "AMB02 correction: 10-fold cross-validation external to the selection (CV10E; source about 15% for more than seven genes), the pre-reduction and forward selection repeated inside each training fold; accuracy = 1 - CV10E.",
+  "subtype": "L1.3",
+  "notes": "Sizes note: 62 tissues (40 cancer, 22 normal), 60 genes (AMB02 colon data: n = 62, p = 2,000; capped at 60). | Source-reported parameters: Fisher LDA, leave-one-out inside forward selection, 3 genes at the CV1IE minimum, external 10-fold. Adaptations not in source: pre-filter 20 instead of 400, ridge for LDA, gene cap 60."
+ },
+ {
+  "local_id": "b2-04",
+  "source": "AMB02",
+  "passage": "AMB02 (PMC124442) Discussion: \"although the feature vectors have been generated independently of the class labels, we can form an SVM rule that has not only an average zero AE but also an average CV1IE error close to zero for a subset of 128 genes and about 10% for only eight genes in the selected subset.\"",
+  "faulty": "AMB02 section Backward Elimination with SVM (RFE of Guyon et al.): linear classifier with recursive elimination by weight magnitude down to 8 genes on all 72 patients (source: eight-gene subset), then the leave-one-out (CV1IE) scores of the 8-gene rule give the AUC. Linear SVM replaced by a ridge linear classifier in numpy (adaptation, not in source).",
+  "fixed": "External 10-fold cross-validation (CV10E): RFE repeated inside each training fold; AUC from pooled out-of-fold scores.",
+  "subtype": "L1.3",
+  "notes": "Sizes note: 72 patients (47 subtype A, 25 subtype B), 60 genes (AMB02 leukaemia data: n = 72, p = 7,129; capped at 60). | Source-reported: RFE, an 8-gene subset, leave-one-out internal vs 10-fold external, leukaemia 47 ALL / 25 AML. Adaptations: ridge instead of SVM, 60-gene cap. Differs from b2-03 in classifier, selection procedure (backward), statistic, n."
+ },
+ {
+  "local_id": "b2-05",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L1.2 (verified): \"Using the entire dataset for any pre-processing steps such as imputation or over/under sampling.\" Appendix B.4: \"Correcting the imputation method dramatically reduces the performance of the ML models proposed.\"",
+  "faulty": "Fill unobserved entries of each indicator with the mean of its observed values within the row's own outcome class (label-dependent imputation over all rows), then compute cross-validated AUC of a logistic regression.",
+  "fixed": "Fill unobserved entries with the training-fold mean of the observed values (label-free), recomputed in each fold; AUC from pooled out-of-fold scores.",
+  "subtype": "L1.2",
+  "notes": "Sizes note: 250 country-years, 12 indicators, about 15% onsets and about 20% of entries unobserved. | Source uses random-forest imputation that uses the outcome, on the whole data; class-conditional mean is a simple numpy analogue (stated). Rows treated as exchangeable; no time order, to keep L3.1 out. Missingness carried by a bool mask to avoid NaN (finite-value guard)."
+ },
+ {
+  "local_id": "b2-06",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L1.2 (verified in full text): \"For instance, using oversampling before splitting the data into training and test sets leads to an imperfect separation between the training and test sets since data generated using oversampling from the training set will also be present in the test set.\" Table 1 lists Blagus and Lusa 2015 (bioinformatics, 6 papers).",
+  "faulty": "Oversample positives by SMOTE-style interpolation between random pairs of positive rows up to class balance over the whole data, then 5-fold cross-validate 3-NN and report balanced accuracy.",
+  "fixed": "Cross-validate on the original rows; oversample the training folds only; test folds untouched.",
+  "subtype": "L1.2",
+  "notes": "Sizes note: 100 samples (about 20 positive), 30 biomarkers (high-dimensional source data capped). | Synthesising rows -> L1.2 by the prereg tie rule. Synthetic points interpolate between positives, so a test positive has synthetic near neighbours derived from itself."
+ },
+ {
+  "local_id": "b2-07",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L1.4 (verified): \"If a dataset with duplicates is used for the purposes of training and evaluating an ML model, the same data could exist in the training as well as test set.\"",
+  "faulty": "Run 10-fold cross-validation of 1-NN accuracy over all rows including repeated entries.",
+  "fixed": "Collapse repeated rows to one before cross-validation (or keep repeats of a case together in a fold).",
+  "subtype": "L1.4",
+  "notes": "Sizes note: 200 rows, 15 measurements; about a quarter of the rows repeat an earlier entry exactly, with its diagnosis. | Brief states the repeats because they are a property of the data; wording does not mention splitting. Statistic accuracy, small n."
+ },
+ {
+  "local_id": "b2-08",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L1.2 (verified): \"using oversampling before splitting the data into training and test sets leads to an imperfect separation between the training and test sets\"; L1.4: \"the same data could exist in the training as well as test set.\" Prereg tie rule: oversampling by copying rows is L1.4.",
+  "faulty": "Copy fraud rows (sampling with replacement) until classes are balanced on the whole data, then 5-fold cross-validate 1-NN and compute fraud F1 on the rows of each fold.",
+  "fixed": "Oversample training folds only; compute F1 on untouched original test rows.",
+  "subtype": "L1.4",
+  "notes": "Sizes note: 150 transactions (about 18 fraudulent), 10 features. | Duplicates arise from oversampling, not from the data; differs from b2-07 in pipeline step, statistic (F1), class imbalance."
+ },
+ {
+  "local_id": "b2-09",
+  "source": "KAP23",
+  "passage": "KAP23 Appendix B.5 (verified): \"When the dataset contains temporal data, the training dataset could contain data from a later date than the test dataset because of being shuffled.\"",
+  "faulty": "Shuffle rows and run 5-fold cross-validated logistic AUC.",
+  "fixed": "Chronological split: fit on the first 70% of rows, compute AUC on the last 30% (or expanding-window folds).",
+  "subtype": "L3.1",
+  "notes": "Sizes note: 200 rows in time order, 8 indicators, about 15% onsets. | Source's corrected split: year < 1988 train, rest test. Binary outcome, AUC."
+ },
+ {
+  "local_id": "b2-10",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L3.1 (verified): \"If the test set contains data from before the training set, the model is built using data from the future that it should not have access to during training, and can cause leakage.\"",
+  "faulty": "Shuffle rows, 5-fold cross-validated ridge R^2.",
+  "fixed": "Fit on the first 100 weeks, compute R^2 on the last 50.",
+  "subtype": "L3.1",
+  "notes": "Sizes note: 150 weeks in time order, 6 indicators. | Continuous outcome, R^2, weekly series; differs from b2-09 in statistic, structure, size. The hospital setting is an illustration; the source documents only the mechanism."
+ },
+ {
+  "local_id": "b2-11",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L3.2 (verified): \"Oner et al. 2020 find that a recent study on histopathology uses different observations of the same patient in the training and test sets.\" (The claim is about new patients.)",
+  "faulty": "Flatten to 240 patch rows with the patient label repeated, shuffle, 5-fold cross-validated logistic AUC.",
+  "fixed": "Folds over the patient axis: patches of one patient never in both training and test.",
+  "subtype": "L3.2",
+  "notes": "Sizes note: 40 patients, 6 patches per patient (240 rows when flattened), 20 features. | Shared unit = patient. Patient-level or patch-level AUC left to the criterion author."
+ },
+ {
+  "local_id": "b2-12",
+  "source": "KAP23",
+  "passage": "KAP23 Sec 2.4 L3.2 (verified): \"In the extreme (but unfortunately common) case, train and test samples come from the same people or units.\" Remedy named there: block cross validation (Roberts 2017, Valavi 2021).",
+  "faulty": "Flatten to 240 rows, shuffle, 5-fold cross-validated ridge R^2.",
+  "fixed": "Leave-hospitals-out folds along the hospital axis.",
+  "subtype": "L3.2",
+  "notes": "Sizes note: 12 hospitals, 20 patients each (240 rows when flattened), 15 characteristics. | Shared unit = site; continuous R^2 differs from b2-11."
+ }
+]

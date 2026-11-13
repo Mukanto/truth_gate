@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-02",
+  "world_id": "W35",
+  "class": "B-2",
+  "subtype": "L1.1",
+  "source": "SIM03",
+  "brief": {
+    "id": "W35",
+    "claim": "A logistic model using 20 baseline markers predicts which patients will relapse within five years, in new patients, with AUC of at least 0.75.",
+    "data_keys": [
+      {
+        "key": "markers",
+        "shape": "(patients, markers)",
+        "dtype": "float",
+        "meaning": "standardised baseline marker values for each patient"
+      },
+      {
+        "key": "relapse",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True if the patient relapsed within five years"
+      }
+    ],
+    "sizes": "30 patients, 20 markers."
+  }
+}

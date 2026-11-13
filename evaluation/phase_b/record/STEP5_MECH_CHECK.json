@@ -1,0 +1,951 @@
+{
+  "B1-01": {
+    "world_id": "W05",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 68: if abs(de - 1.0) < 1e-13:",
+        "line 118: return bool(x.mean() >= 0.30 and _tsf(t, len(x) - 1) < 0.05)"
+      ],
+      "fixed": [
+        "line 68: if abs(de - 1.0) < 1e-13:",
+        "line 118: return bool(x.mean() >= 0.30 and _tsf(t, len(x) - 1) < 0.05)"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-02": {
+    "world_id": "W07",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 117: return bool(idx[tuned].mean() >= 0.25)",
+        "line 69: if abs(de - 1.0) < 1e-13:"
+      ],
+      "fixed": [
+        "line 117: return bool(idx[tuned].mean() >= 0.25)",
+        "line 69: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-03": {
+    "world_id": "W28",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 64: if abs(de - 1.0) < 1e-13:"
+      ],
+      "fixed": [
+        "line 64: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-04": {
+    "world_id": "W19",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 127: return bool(np.mean(means) >= 0.50)",
+        "line 68: if abs(de - 1.0) < 1e-13:",
+        "line 117: if not (np.var(trait[sel_idx]) > 0 and np.var(trait[ev_idx]) > 0):",
+        "line 117: if not (np.var(trait[sel_idx]) > 0 and np.var(trait[ev_idx]) > 0):"
+      ],
+      "fixed": [
+        "line 127: return bool(np.mean(means) >= 0.50)",
+        "line 68: if abs(de - 1.0) < 1e-13:",
+        "line 117: if not (np.var(trait[sel_idx]) > 0 and np.var(trait[ev_idx]) > 0):",
+        "line 117: if not (np.var(trait[sel_idx]) > 0 and np.var(trait[ev_idx]) > 0):"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-05": {
+    "world_id": "W34",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 114: if not np.var(trait) > 0:",
+        "line 122: if not np.var(m) > 0:",
+        "line 67: if abs(de - 1.0) < 1e-13:"
+      ],
+      "fixed": [
+        "line 114: if not np.var(trait) > 0:",
+        "line 122: if not np.var(m) > 0:",
+        "line 67: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-06": {
+    "world_id": "W09",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 124: if not (a.var(ddof=1) + b.var(ddof=1) > 0):",
+        "line 66: if abs(de - 1.0) < 1e-13:"
+      ],
+      "fixed": [
+        "line 124: if not (a.var(ddof=1) + b.var(ddof=1) > 0):",
+        "line 66: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-07": {
+    "world_id": "W15",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 124: return bool(np.mean(vals) >= 0.5)",
+        "line 66: if abs(de - 1.0) < 1e-13:",
+        "line 117: keep = np.array([2.0 * _tsf(abs(t[g]), df[g]) < 0.05 for g in range(len(t))])   # two-sided p < 0.05"
+      ],
+      "fixed": [
+        "line 124: return bool(np.mean(vals) >= 0.5)",
+        "line 66: if abs(de - 1.0) < 1e-13:",
+        "line 117: keep = np.array([2.0 * _tsf(abs(t[g]), df[g]) < 0.05 for g in range(len(t))])   # two-sided p < 0.05"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-08": {
+    "world_id": "W21",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 105: if resp.sum() < 5:",
+        "line 107: prop = np.mean(diff[resp][:, ev_t].mean(axis=1) > 0)",
+        "line 70: if abs(de - 1.0) < 1e-13:"
+      ],
+      "fixed": [
+        "line 105: if resp.sum() < 5:",
+        "line 107: prop = np.mean(diff[resp][:, ev_t].mean(axis=1) > 0)",
+        "line 70: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-09": {
+    "world_id": "W41",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 67: if abs(de - 1.0) < 1e-13:",
+        "line 104: return bool(inc.mean() >= 2.0 and _tsf(t, k - 1) < 0.05)"
+      ],
+      "fixed": [
+        "line 67: if abs(de - 1.0) < 1e-13:",
+        "line 104: return bool(inc.mean() >= 2.0 and _tsf(t, k - 1) < 0.05)"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-10": {
+    "world_id": "W22",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 67: if abs(de - 1.0) < 1e-13:",
+        "line 114: return bool(x.mean() >= 5.0 and _tsf(t, len(x) - 1) < 0.05)"
+      ],
+      "fixed": [
+        "line 110: if not (a.var(ddof=1) + b.var(ddof=1) > 0):",
+        "line 67: if abs(de - 1.0) < 1e-13:"
+      ]
+    },
+    "diff_lines": 12
+  },
+  "B1-11": {
+    "world_id": "W52",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 41: return bool(np.mean(s[top, 2] < ref[top]) >= 0.70)"
+      ],
+      "fixed": [
+        "line 41: return bool(np.mean(s[top, 2] < ref[top]) >= 0.70)"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B1-12": {
+    "world_id": "W12",
+    "class": "B-1",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 67: if abs(de - 1.0) < 1e-13:",
+        "line 102: return bool(gain.mean() >= 5.0 and _tsf(t, len(low) - 1) < 0.05)"
+      ],
+      "fixed": [
+        "line 67: if abs(de - 1.0) < 1e-13:",
+        "line 102: return bool(gain.mean() >= 5.0 and _tsf(t, len(low) - 1) < 0.05)"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "b2-01": {
+    "world_id": "W38",
+    "class": "B-2",
+    "subtype": "L1.1",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):",
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):",
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):",
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):",
+        "line 37: if y.sum() < 2 or (~y).sum() < 2 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 6
+  },
+  "b2-02": {
+    "world_id": "W35",
+    "class": "B-2",
+    "subtype": "L1.1",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 59: if np.max(np.abs(step)) < 1e-8:",
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 59: if np.max(np.abs(step)) < 1e-8:",
+        "line 67: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 8
+  },
+  "b2-03": {
+    "world_id": "W36",
+    "class": "B-2",
+    "subtype": "L1.3",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 48: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 11
+  },
+  "b2-04": {
+    "world_id": "W27",
+    "class": "B-2",
+    "subtype": "L1.3",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 52: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 13
+  },
+  "b2-05": {
+    "world_id": "W16",
+    "class": "B-2",
+    "subtype": "L1.2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 66: if np.max(np.abs(step)) < 1e-8:",
+        "line 82: if np.any(oo.sum(axis=0) == 0):",
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 66: if np.max(np.abs(step)) < 1e-8:",
+        "line 82: if np.any(oo.sum(axis=0) == 0):",
+        "line 75: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 17
+  },
+  "b2-06": {
+    "world_id": "W18",
+    "class": "B-2",
+    "subtype": "L1.2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 10
+  },
+  "b2-07": {
+    "world_id": "W04",
+    "class": "B-2",
+    "subtype": "L1.4",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 69: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 69: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 69: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 73: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 73: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):",
+        "line 73: if y.sum() < 10 or (~y).sum() < 10 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "b2-08": {
+    "world_id": "W30",
+    "class": "B-2",
+    "subtype": "L1.4",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 49: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 10
+  },
+  "b2-09": {
+    "world_id": "W14",
+    "class": "B-2",
+    "subtype": "L3.1",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 82: if np.max(np.abs(step)) < 1e-8:",
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 101: if y[tr].sum() < 2 or (~y[tr]).sum() < 2 or y[te].sum() < 2 or (~y[te]).sum() < 2:",
+        "line 101: if y[tr].sum() < 2 or (~y[tr]).sum() < 2 or y[te].sum() < 2 or (~y[te]).sum() < 2:",
+        "line 101: if y[tr].sum() < 2 or (~y[tr]).sum() < 2 or y[te].sum() < 2 or (~y[te]).sum() < 2:",
+        "line 101: if y[tr].sum() < 2 or (~y[tr]).sum() < 2 or y[te].sum() < 2 or (~y[te]).sum() < 2:",
+        "line 82: if np.max(np.abs(step)) < 1e-8:",
+        "line 90: if y.sum() < 5 or (~y).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 13
+  },
+  "b2-10": {
+    "world_id": "W37",
+    "class": "B-2",
+    "subtype": "L3.1",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 58: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:",
+        "line 58: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:"
+      ],
+      "fixed": [
+        "line 68: if not y[te].std() > 0:",
+        "line 58: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:",
+        "line 58: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:"
+      ]
+    },
+    "diff_lines": 14
+  },
+  "b2-11": {
+    "world_id": "W06",
+    "class": "B-2",
+    "subtype": "L3.2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 61: if np.max(np.abs(step)) < 1e-8:",
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ],
+      "fixed": [
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):",
+        "line 61: if np.max(np.abs(step)) < 1e-8:",
+        "line 72: if mut.sum() < 5 or (~mut).sum() < 5 or not np.all(x.std(axis=0) > 0):"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "b2-12": {
+    "world_id": "W49",
+    "class": "B-2",
+    "subtype": "L3.2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 50: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:",
+        "line 50: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:"
+      ],
+      "fixed": [
+        "line 50: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:",
+        "line 50: if not np.all(x.std(axis=0) > 0) or not y.std() > 0:"
+      ]
+    },
+    "diff_lines": 5
+  },
+  "B3-01": {
+    "world_id": "W29",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 52: if np.std(do2) == 0 or np.std(vo2) == 0:",
+        "line 52: if np.std(do2) == 0 or np.std(vo2) == 0:"
+      ],
+      "fixed": [
+        "line 51: if np.std(do2) == 0 or np.std(vo2) == 0:",
+        "line 51: if np.std(do2) == 0 or np.std(vo2) == 0:"
+      ]
+    },
+    "diff_lines": 3
+  },
+  "B3-02": {
+    "world_id": "W26",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 48: if np.std(svr) == 0 or np.std(co) == 0:",
+        "line 48: if np.std(svr) == 0 or np.std(co) == 0:"
+      ],
+      "fixed": [
+        "line 48: if np.std(svr) == 0 or np.std(co) == 0:",
+        "line 48: if np.std(svr) == 0 or np.std(co) == 0:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "B3-03": {
+    "world_id": "W53",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 41: if np.std(edv) == 0 or np.std(ef) == 0:",
+        "line 41: if np.std(edv) == 0 or np.std(ef) == 0:"
+      ],
+      "fixed": [
+        "line 40: if np.std(edv) == 0 or np.std(ef) == 0:",
+        "line 40: if np.std(edv) == 0 or np.std(ef) == 0:"
+      ]
+    },
+    "diff_lines": 3
+  },
+  "B3-04": {
+    "world_id": "W45",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 61: if np.std(ddo2) == 0 or np.std(dvo2) == 0:",
+        "line 61: if np.std(ddo2) == 0 or np.std(dvo2) == 0:"
+      ],
+      "fixed": [
+        "line 60: if np.std(ddo2) == 0 or np.std(dvo2) == 0:",
+        "line 60: if np.std(ddo2) == 0 or np.std(dvo2) == 0:"
+      ]
+    },
+    "diff_lines": 3
+  },
+  "B3-05": {
+    "world_id": "W01",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:",
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:",
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:",
+        "line 45: if not (np.all(np.isfinite(fi)) and np.all(np.isfinite(ti))) or np.std(fi) == 0 or np.std(ti) == 0:",
+        "line 45: if not (np.all(np.isfinite(fi)) and np.all(np.isfinite(ti))) or np.std(fi) == 0 or np.std(ti) == 0:"
+      ],
+      "fixed": [
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:",
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:",
+        "line 41: if np.std(fem) == 0 or np.std(tib) == 0 or np.std(vcl) == 0:"
+      ]
+    },
+    "diff_lines": 14
+  },
+  "B3-06": {
+    "world_id": "W17",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:",
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:",
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:",
+        "line 48: if not (np.all(np.isfinite(pc_co2)) and np.all(np.isfinite(pc_gdp))) or np.std(pc_co2) == 0 or np.std(pc_gdp) == 0:",
+        "line 48: if not (np.all(np.isfinite(pc_co2)) and np.all(np.isfinite(pc_gdp))) or np.std(pc_co2) == 0 or np.std(pc_gdp) == 0:"
+      ],
+      "fixed": [
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:",
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:",
+        "line 43: if np.std(co2) == 0 or np.std(gdp) == 0 or np.std(pop) == 0:"
+      ]
+    },
+    "diff_lines": 15
+  },
+  "B3-07": {
+    "world_id": "W43",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:",
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:",
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:",
+        "line 47: if not (np.all(np.isfinite(y)) and np.all(np.isfinite(f))) or np.std(y) == 0 or np.std(f) == 0:",
+        "line 47: if not (np.all(np.isfinite(y)) and np.all(np.isfinite(f))) or np.std(y) == 0 or np.std(f) == 0:"
+      ],
+      "fixed": [
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:",
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:",
+        "line 42: if np.std(yt) == 0 or np.std(ft) == 0 or np.std(area) == 0:"
+      ]
+    },
+    "diff_lines": 12
+  },
+  "B3-08": {
+    "world_id": "W24",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:",
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:",
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:",
+        "line 43: if np.std(x) == 0 or np.std(y) == 0:",
+        "line 43: if np.std(x) == 0 or np.std(y) == 0:"
+      ],
+      "fixed": [
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:",
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:",
+        "line 38: if np.std(vo2) == 0 or np.std(pw) == 0 or np.std(mass) == 0:"
+      ]
+    },
+    "diff_lines": 15
+  },
+  "B3-09": {
+    "world_id": "W23",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:",
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:",
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:",
+        "line 44: if not np.all(np.isfinite(rate)) or np.std(rate) == 0:"
+      ],
+      "fixed": [
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:",
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:",
+        "line 40: if np.std(inf) == 0 or np.std(adm) == 0 or np.std(beds) == 0:"
+      ]
+    },
+    "diff_lines": 11
+  },
+  "B3-10": {
+    "world_id": "W51",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:",
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:",
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:",
+        "line 45: if not np.all(np.isfinite(ratio)) or np.std(ratio) == 0:"
+      ],
+      "fixed": [
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:",
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:",
+        "line 41: if np.std(sbp) == 0 or np.std(hw) == 0 or np.std(bw) == 0:"
+      ]
+    },
+    "diff_lines": 11
+  },
+  "B3-11": {
+    "world_id": "W02",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:",
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:",
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:",
+        "line 49: if not np.all(np.isfinite(eui)) or np.std(eui) == 0:"
+      ],
+      "fixed": [
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:",
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:",
+        "line 45: if np.std(energy) == 0 or np.std(area) == 0 or np.std(occ) == 0:"
+      ]
+    },
+    "diff_lines": 14
+  },
+  "B3-12": {
+    "world_id": "W11",
+    "class": "B-3",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:",
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:",
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:",
+        "line 42: if not np.all(np.isfinite(rate)) or np.std(rate) == 0:"
+      ],
+      "fixed": [
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:",
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:",
+        "line 38: if np.std(leavers) == 0 or np.std(hc) == 0 or np.std(pay) == 0:"
+      ]
+    },
+    "diff_lines": 14
+  },
+  "B6-01": {
+    "world_id": "W32",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 79: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 79: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 9
+  },
+  "B6-02": {
+    "world_id": "W48",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 81: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 81: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 9
+  },
+  "B6-03": {
+    "world_id": "W20",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 80: if abs(de - 1.0) < 1e-14:",
+        "line 112: if not abs(r) < 1.0:"
+      ],
+      "fixed": [
+        "line 80: if abs(de - 1.0) < 1e-14:",
+        "line 112: if not abs(r) < 1.0:"
+      ]
+    },
+    "diff_lines": 7
+  },
+  "B6-04": {
+    "world_id": "W25",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 75: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 75: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-05": {
+    "world_id": "W46",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 73: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 73: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-06": {
+    "world_id": "W39",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 83: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 83: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-07": {
+    "world_id": "W42",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 75: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 75: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-08": {
+    "world_id": "W50",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 77: if abs(de - 1.0) < 1e-14:",
+        "line 120: if not abs(r) < 1.0:"
+      ],
+      "fixed": [
+        "line 77: if abs(de - 1.0) < 1e-14:",
+        "line 120: if not abs(r) < 1.0:"
+      ]
+    },
+    "diff_lines": 12
+  },
+  "B6-09": {
+    "world_id": "W31",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-10": {
+    "world_id": "W13",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 10
+  },
+  "B6-11": {
+    "world_id": "W44",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 75: if abs(de - 1.0) < 1e-14:",
+        "line 107: if not abs(r) < 1.0:"
+      ],
+      "fixed": [
+        "line 75: if abs(de - 1.0) < 1e-14:",
+        "line 107: if not abs(r) < 1.0:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "B6-12": {
+    "world_id": "W10",
+    "class": "B-6",
+    "subtype": "",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 79: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 79: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 9
+  },
+  "O1a": {
+    "world_id": "W54",
+    "class": "O",
+    "subtype": "O-1",
+    "issues": [],
+    "listed": {},
+    "diff_lines": 4
+  },
+  "O1b": {
+    "world_id": "W33",
+    "class": "O",
+    "subtype": "O-1",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 47: if sd.min() <= 1e-12:"
+      ],
+      "fixed": [
+        "line 47: if sd.min() <= 1e-12:"
+      ]
+    },
+    "diff_lines": 4
+  },
+  "O2a": {
+    "world_id": "W40",
+    "class": "O",
+    "subtype": "O-2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 113: return bool(min(ps) < 0.05)",
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 110: return bool(min(ps) < 0.05)",
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 5
+  },
+  "O2b": {
+    "world_id": "W03",
+    "class": "O",
+    "subtype": "O-2",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 104: return bool(min(ps) < 0.05)",
+        "line 69: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 103: return bool(min(ps) < 0.05)",
+        "line 69: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "diff_lines": 3
+  },
+  "O3a": {
+    "world_id": "W08",
+    "class": "O",
+    "subtype": "O-3",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 44: if score.std() <= 1e-12 or y.std() <= 1e-12:",
+        "line 44: if score.std() <= 1e-12 or y.std() <= 1e-12:"
+      ],
+      "fixed": [
+        "line 44: if score.std() <= 1e-12 or y.std() <= 1e-12:",
+        "line 44: if score.std() <= 1e-12 or y.std() <= 1e-12:"
+      ]
+    },
+    "diff_lines": 2
+  },
+  "O3b": {
+    "world_id": "W47",
+    "class": "O",
+    "subtype": "O-3",
+    "issues": [],
+    "listed": {},
+    "diff_lines": 12
+  }
+}

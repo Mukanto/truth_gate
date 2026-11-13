@@ -1,0 +1,12 @@
+B6-01 plus=165/200(und 0) minus=1/200(und 0) control(reshuffle_participants on plus)=4/200(und 0) noise N(0,1)=5/200(und 0) zeros=0/20(und 20) repeat=True t=0.04ms g=0.01ms S=5 est=0.1s
+B6-02 plus=158/200(und 0) minus=3/200(und 0) control(swap_regions on plus)=4/200(und 0) noise N(0,1)=9/200(und 0) zeros=0/20(und 20) repeat=True t=0.03ms g=0.01ms S=5 est=0.1s
+B6-03 plus=137/200(und 0) minus=4/200(und 0) control(permute_recall_old on plus)=1/200(und 0) noise N(0,1)=9/200(und 0) zeros=0/20(und 20) repeat=True t=0.02ms g=0.01ms S=5 est=0.1s
+B6-04 plus=122/200(und 0) minus=3/200(und 0) control(reassign_ponds on plus)=5/200(und 0) noise N(0,1)=5/200(und 0) zeros=0/20(und 20) repeat=True t=0.04ms g=0.01ms S=5 est=0.1s
+B6-05 plus=161/200(und 0) minus=10/200(und 0) control(permute_dose on plus)=14/200(und 0) noise N(0,1)=5/200(und 0) zeros=0/20(und 20) repeat=True t=0.03ms g=0.01ms S=5 est=0.1s
+B6-06 plus=185/200(und 0) minus=3/200(und 0) control(reassign_plots on plus)=8/200(und 0) noise N(0,1)=3/200(und 0) zeros=0/20(und 20) repeat=True t=0.04ms g=0.08ms S=5 est=0.3s
+B6-07 plus=126/200(und 0) minus=6/200(und 0) control(reassign_animals on plus)=3/200(und 0) noise N(0,1)=4/200(und 0) zeros=0/20(und 20) repeat=True t=0.04ms g=0.01ms S=5 est=0.1s
+B6-08 plus=197/200(und 0) minus=54/200(und 0) control(permute_trials_within_participant on plus)=11/200(und 0) noise N(0,1)=8/200(und 0) zeros=0/20(und 20) repeat=True t=0.18ms g=0.02ms S=5 est=0.5s
+B6-09 plus=149/200(und 0) minus=5/200(und 0) control(swap_conditions_within_animals on plus)=3/200(und 0) noise N(0,1)=7/200(und 0) zeros=0/20(und 20) repeat=True t=0.03ms g=0.01ms S=5 est=0.1s
+B6-10 plus=163/200(und 0) minus=8/200(und 0) control(permute_contrast on plus)=7/200(und 0) noise N(0,1)=4/200(und 0) zeros=0/20(und 20) repeat=True t=0.03ms g=0.01ms S=5 est=0.1s
+B6-11 plus=184/200(und 0) minus=8/200(und 0) control(permute_thickness on plus)=13/200(und 0) noise N(0,1)=11/200(und 0) zeros=0/20(und 20) repeat=True t=0.03ms g=0.01ms S=5 est=0.1s
+B6-12 plus=161/200(und 0) minus=6/200(und 0) control(reshuffle_groups on plus)=2/200(und 0) noise N(0,1)=5/200(und 0) zeros=0/20(und 20) repeat=True t=0.06ms g=0.02ms S=5 est=0.2s

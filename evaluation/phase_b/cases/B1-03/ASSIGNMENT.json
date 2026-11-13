@@ -1,0 +1,20 @@
+{
+  "local_id": "B1-03",
+  "world_id": "W28",
+  "class": "B-1",
+  "subtype": "",
+  "source": "KRI09",
+  "brief": {
+    "id": "W28",
+    "claim": "In a study of 60 participants, those who perform worst at the start of a perceptual-learning task benefit most from training: the improvement (late-block score minus early-block score) of the lower-scoring half exceeds that of the higher-scoring half by at least 4 points, with an independent-samples t-test p < 0.05 (one-sided).",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(participants, blocks)",
+        "dtype": "float",
+        "meaning": "percent correct (0 to 100) in each of 4 consecutive blocks of the task, block 0 first and block 3 last"
+      }
+    ],
+    "sizes": "60 participants, 4 blocks."
+  }
+}

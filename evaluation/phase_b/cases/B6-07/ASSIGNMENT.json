@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-07",
+  "world_id": "W42",
+  "class": "B-6",
+  "subtype": "",
+  "source": "LAZ10",
+  "brief": {
+    "id": "W42",
+    "claim": "Neurons in knockout mice have larger mean firing rates than neurons in wild-type mice, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "rate_knockout",
+        "shape": "(6, 20) axes: (animals, recorded cells per animal)",
+        "dtype": "float",
+        "meaning": "firing rate of each recorded cell, knockout animals"
+      },
+      {
+        "key": "rate_wildtype",
+        "shape": "(6, 20) axes: (animals, recorded cells per animal)",
+        "dtype": "float",
+        "meaning": "firing rate of each recorded cell, wild-type animals"
+      }
+    ],
+    "sizes": "6 animals per genotype, 20 cells per animal (240 cells in total)."
+  }
+}

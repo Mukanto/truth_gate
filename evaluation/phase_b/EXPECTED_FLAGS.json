@@ -1,0 +1,1096 @@
+{
+  "note": "PREREG_PHASE_B.md \u00a76: expected flags per case. In-scope classes (B-1, B-2, B-3, B-6) share one list by design; HIGH_RATE:control:<id> is enumerated from each case's declared controls and HIGH_RATE:probe:shuffle:<a>,<b> from its declared relational pairs (none were declared). The out-of-scope cases (O-1..O-3) carry the same list for descriptive reporting only: no threshold.",
+  "base": [
+    "K2_HIGH_SIZE",
+    "K2_FAILS_UNREACHABLE",
+    "K2_NO_SEPARATION",
+    "K4_CONTROL_ALSO_HOLDS",
+    "K5_HOLDS_ON_NOISE",
+    "K5_HOLDS_ON_NULL",
+    "K5_HOLDS_ON_SHUFFLE",
+    "HIGH_RATE:probe:noise",
+    "HIGH_RATE:world:null"
+  ],
+  "cases": {
+    "B1-01": {
+      "local_id": "B1-01",
+      "world_id": "W05",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:scramble_voxels_in_run_2"
+      ]
+    },
+    "B1-02": {
+      "local_id": "B1-02",
+      "world_id": "W07",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:shuffle_across_orientations"
+      ]
+    },
+    "B1-03": {
+      "local_id": "B1-03",
+      "world_id": "W28",
+      "class": "B-1",
+      "subtype": "",
+      "source": "KRI09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:decouple_gain_from_start"
+      ]
+    },
+    "B1-04": {
+      "local_id": "B1-04",
+      "world_id": "W19",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_trait"
+      ]
+    },
+    "B1-05": {
+      "local_id": "B1-05",
+      "world_id": "W34",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_trait"
+      ]
+    },
+    "B1-06": {
+      "local_id": "B1-06",
+      "world_id": "W09",
+      "class": "B-1",
+      "subtype": "",
+      "source": "VUL09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_subjects"
+      ]
+    },
+    "B1-07": {
+      "local_id": "B1-07",
+      "world_id": "W15",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_tumour_labels"
+      ]
+    },
+    "B1-08": {
+      "local_id": "B1-08",
+      "world_id": "W21",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_pre_post"
+      ]
+    },
+    "B1-09": {
+      "local_id": "B1-09",
+      "world_id": "W41",
+      "class": "B-1",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:no_manipulation_effect"
+      ]
+    },
+    "B1-10": {
+      "local_id": "B1-10",
+      "world_id": "W22",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_drug_labels"
+      ]
+    },
+    "B1-11": {
+      "local_id": "B1-11",
+      "world_id": "W52",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:remove_average_programme_effect"
+      ]
+    },
+    "B1-12": {
+      "local_id": "B1-12",
+      "world_id": "W12",
+      "class": "B-1",
+      "subtype": "",
+      "source": "BAR05",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:remove_average_tutoring_gain"
+      ]
+    },
+    "B2-01": {
+      "local_id": "b2-01",
+      "world_id": "W38",
+      "class": "B-2",
+      "subtype": "L1.1",
+      "source": "SIM03",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_tumour"
+      ]
+    },
+    "B2-02": {
+      "local_id": "b2-02",
+      "world_id": "W35",
+      "class": "B-2",
+      "subtype": "L1.1",
+      "source": "SIM03",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_relapse"
+      ]
+    },
+    "B2-03": {
+      "local_id": "b2-03",
+      "world_id": "W36",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "AMB02",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_cancer"
+      ]
+    },
+    "B2-04": {
+      "local_id": "b2-04",
+      "world_id": "W27",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "AMB02",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_subtype"
+      ]
+    },
+    "B2-05": {
+      "local_id": "b2-05",
+      "world_id": "W16",
+      "class": "B-2",
+      "subtype": "L1.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_onset"
+      ]
+    },
+    "B2-06": {
+      "local_id": "b2-06",
+      "world_id": "W18",
+      "class": "B-2",
+      "subtype": "L1.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_positive"
+      ]
+    },
+    "B2-07": {
+      "local_id": "b2-07",
+      "world_id": "W04",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_diagnosis_by_patient"
+      ]
+    },
+    "B2-08": {
+      "local_id": "b2-08",
+      "world_id": "W30",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_fraud"
+      ]
+    },
+    "B2-09": {
+      "local_id": "b2-09",
+      "world_id": "W14",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_onset"
+      ]
+    },
+    "B2-10": {
+      "local_id": "b2-10",
+      "world_id": "W37",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_weeks"
+      ]
+    },
+    "B2-11": {
+      "local_id": "b2-11",
+      "world_id": "W06",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_mutation_across_patients"
+      ]
+    },
+    "B2-12": {
+      "local_id": "b2-12",
+      "world_id": "W49",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_stay_within_hospitals"
+      ]
+    },
+    "B3-01": {
+      "local_id": "B3-01",
+      "world_id": "W29",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_vo2_expired"
+      ]
+    },
+    "B3-02": {
+      "local_id": "B3-02",
+      "world_id": "W26",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_resistance"
+      ]
+    },
+    "B3-03": {
+      "local_id": "B3-03",
+      "world_id": "W53",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_radionuclide_volume"
+      ]
+    },
+    "B3-04": {
+      "local_id": "B3-04",
+      "world_id": "W45",
+      "class": "B-3",
+      "subtype": "",
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_vo2_expired"
+      ]
+    },
+    "B3-05": {
+      "local_id": "B3-05",
+      "world_id": "W01",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_tibia"
+      ]
+    },
+    "B3-06": {
+      "local_id": "B3-06",
+      "world_id": "W17",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_per_capita_emissions"
+      ]
+    },
+    "B3-07": {
+      "local_id": "B3-07",
+      "world_id": "W43",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_yield_per_hectare"
+      ]
+    },
+    "B3-08": {
+      "local_id": "B3-08",
+      "world_id": "W24",
+      "class": "B-3",
+      "subtype": "",
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_power_per_kg"
+      ]
+    },
+    "B3-09": {
+      "local_id": "B3-09",
+      "world_id": "W23",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_beds"
+      ]
+    },
+    "B3-10": {
+      "local_id": "B3-10",
+      "world_id": "W51",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_relative_heart_weight"
+      ]
+    },
+    "B3-11": {
+      "local_id": "B3-11",
+      "world_id": "W02",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_occupants"
+      ]
+    },
+    "B3-12": {
+      "local_id": "B3-12",
+      "world_id": "W11",
+      "class": "B-3",
+      "subtype": "",
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_payroll"
+      ]
+    },
+    "B6-01": {
+      "local_id": "B6-01",
+      "world_id": "W32",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reshuffle_participants"
+      ]
+    },
+    "B6-02": {
+      "local_id": "B6-02",
+      "world_id": "W48",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_regions"
+      ]
+    },
+    "B6-03": {
+      "local_id": "B6-03",
+      "world_id": "W20",
+      "class": "B-6",
+      "subtype": "",
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_recall_old"
+      ]
+    },
+    "B6-04": {
+      "local_id": "B6-04",
+      "world_id": "W25",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_ponds"
+      ]
+    },
+    "B6-05": {
+      "local_id": "B6-05",
+      "world_id": "W46",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_dose"
+      ]
+    },
+    "B6-06": {
+      "local_id": "B6-06",
+      "world_id": "W39",
+      "class": "B-6",
+      "subtype": "",
+      "source": "HUR84",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_plots"
+      ]
+    },
+    "B6-07": {
+      "local_id": "B6-07",
+      "world_id": "W42",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_animals"
+      ]
+    },
+    "B6-08": {
+      "local_id": "B6-08",
+      "world_id": "W50",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_trials_within_participant"
+      ]
+    },
+    "B6-09": {
+      "local_id": "B6-09",
+      "world_id": "W31",
+      "class": "B-6",
+      "subtype": "",
+      "source": "LAZ10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_conditions_within_animals"
+      ]
+    },
+    "B6-10": {
+      "local_id": "B6-10",
+      "world_id": "W13",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_contrast"
+      ]
+    },
+    "B6-11": {
+      "local_id": "B6-11",
+      "world_id": "W44",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_thickness"
+      ]
+    },
+    "B6-12": {
+      "local_id": "B6-12",
+      "world_id": "W10",
+      "class": "B-6",
+      "subtype": "",
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reshuffle_groups"
+      ]
+    },
+    "O1a": {
+      "local_id": "O1a",
+      "world_id": "W54",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_sepsis"
+      ]
+    },
+    "O1b": {
+      "local_id": "O1b",
+      "world_id": "W33",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_responder"
+      ]
+    },
+    "O2a": {
+      "local_id": "O2a",
+      "world_id": "W40",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:pool_and_resplit"
+      ]
+    },
+    "O2b": {
+      "local_id": "O2b",
+      "world_id": "W03",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:pool_and_resplit"
+      ]
+    },
+    "O3a": {
+      "local_id": "O3a",
+      "world_id": "W08",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "BAG09",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_sensitivity"
+      ]
+    },
+    "O3b": {
+      "local_id": "O3b",
+      "world_id": "W47",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "HER14",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_countries_of_debt"
+      ]
+    }
+  }
+}

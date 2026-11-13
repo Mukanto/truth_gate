@@ -1,0 +1,32 @@
+{
+  "local_id": "b2-05",
+  "world_id": "W16",
+  "class": "B-2",
+  "subtype": "L1.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "W16",
+    "claim": "Using 12 country-level indicators, the model identifies which country-years will see a civil war onset, with AUC of at least 0.75 in new country-years.",
+    "data_keys": [
+      {
+        "key": "x",
+        "shape": "(rows, indicators)",
+        "dtype": "float",
+        "meaning": "indicator values, one row per country-year; entries flagged as unobserved hold 0"
+      },
+      {
+        "key": "observed",
+        "shape": "(rows, indicators)",
+        "dtype": "bool",
+        "meaning": "True where the indicator was recorded"
+      },
+      {
+        "key": "onset",
+        "shape": "(rows,)",
+        "dtype": "bool",
+        "meaning": "True if a civil war began in that country-year"
+      }
+    ],
+    "sizes": "250 country-years, 12 indicators, about 15% onsets and about 20% of entries unobserved."
+  }
+}

@@ -1,0 +1,110 @@
+[
+ {
+  "local_id": "B6-01",
+  "source": "NIE11",
+  "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"To support this claim, they needed to report a statistically significant interaction (between amount of training and type of mice), but instead they reported that one effect was statistically significant, whereas the other effect was not.\" Also Fig. 1b (pre-test vs post-test effect sizes between groups); MAK19 Fig. 1B (pre/post training, n=20 per group).",
+  "faulty": "Two within-group paired t-tests (post vs pre) at alpha 0.05; holds if the trained gain is significant and the untrained gain is not (and direction trained > untrained).",
+  "fixed": "Direct interaction test: Welch t-test on per-participant gains (post-pre) between groups, alpha 0.05, trained larger.",
+  "subtype": "",
+  "notes": "Minus world: equal true gain in both groups (nonzero, per fixed rule), so faulty holds often. n=20/group. | Source check: NIE11 gives no n; MAK19 uses 20 per group, brief uses 20."
+ },
+ {
+  "local_id": "B6-02",
+  "source": "NIE11",
+  "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"Similarly, claims about differences in activation across brain regions must be supported by a significant interaction between brain region and the factor underlying the contrast of interest.\" The text also lists comparisons of a pharmacological agent versus placebo; Fig. 1d treats the repeated-measures case.",
+  "faulty": "Paired t-test of drug-placebo in visual and in auditory region separately; holds if visual significant, auditory not.",
+  "fixed": "Paired t-test on the difference of differences ((vis_drug-vis_pl)-(aud_drug-aud_pl)) across participants.",
+  "subtype": "",
+  "notes": "Within-subject interaction; n=16. | Source check: NIE11 gives no n; 16 participants is a typical sample, not source-stated."
+ },
+ {
+  "local_id": "B6-03",
+  "source": "NIE11 (GEL06)",
+  "passage": "NIE11 (Nature Neurosci 14:1105, full text read via author-hosted PDF), p.1105: \"A fictive example would be 'Hippocampal firing synchrony correlated with memory performance in the placebo condition (r = 0.43, P = 0.01), but not in the drug condition (r = 0.19, P = 0.21)'.\" MAK19 Fig. 1A: correlations in two groups of 20.",
+  "faulty": "Pearson r significant in the older group and not in the younger group (one-sided 0.05 each).",
+  "fixed": "Fisher z test of difference between two independent correlations (z=(z1-z2)/sqrt(1/(n1-3)+1/(n2-3))), one-sided 0.05.",
+  "subtype": "",
+  "notes": "Correlation statistic; n=35/group. | Source check: Source examples imply roughly 20-60 per group; 35 per group is within."
+ },
+ {
+  "local_id": "B6-04",
+  "source": "HUR84",
+  "passage": "HUR84 (Ecol Monogr 54:187, full text read), section 'Sacrificial pseudoreplication': \"This results when an experimental design involves true replication of treatments but where the data for replicates are pooled prior to statistical analysis ... or where the two or more samples or measurements taken from each experimental unit are treated as independent replicates (Fig. 5B).\"",
+  "faulty": "Pool all 40 samples per treatment and run a two-sample t-test with the samples as replicates.",
+  "fixed": "Average samples within pond; t-test on 4 vs 4 pond means.",
+  "subtype": "",
+  "notes": "Simple pseudoreplication; very small n (4 per treatment) matches Hurlbert's ecological field experiments. | Source check: Source's own example is eight aquaria, four treated and four control (plankton, DDT); 2-4 replicate plots per treatment is typical in the surveyed studies. 4 ponds x 10 samples matches."
+ },
+ {
+  "local_id": "B6-05",
+  "source": "HUR84",
+  "passage": "HUR84, same passage as B6-04 (sacrificial pseudoreplication: several samples from each experimental unit treated as independent replicates; tanks are the units directly treated).",
+  "faulty": "Regression of all 96 mussel values on dose repeated per mussel; slope t-test with df 94.",
+  "fixed": "Regression of tank means (12) on dose; slope t-test with df 10.",
+  "subtype": "",
+  "notes": "Regression statistic; treatment applied at tank level. | Source check: The source does not discuss regression on a dose (it discusses ANOVA, t and chi-square tests). The unit-of-treatment logic carries over, but this brief is an extension of the documented setting. 12 tanks x 8 mussels: source's aquarium experiments have 2-8 units per treatment."
+ },
+ {
+  "local_id": "B6-06",
+  "source": "HUR84",
+  "passage": "HUR84, section 'Temporal pseudoreplication': \"This differs from simple pseudoreplication only in that the multiple samples from each experimental unit are not taken simultaneously but rather sequentially over each of several dates (Fig. 5C). Dates are then taken to represent replicated treatments ...\"",
+  "faulty": "Two-sample t-test treating all 72 plot-by-survey values per treatment as replicates.",
+  "fixed": "Average over surveys per plot; t-test on 6 vs 6 plot means.",
+  "subtype": "",
+  "notes": "Repeated measures over time; the sampling dates are not replicates of the treatment. | Source check: Source gives no exact counts; 6 plots per treatment with 12 monthly dates is within field-experiment practice."
+ },
+ {
+  "local_id": "B6-07",
+  "source": "LAZ10",
+  "passage": "LAZ10 (BMC Neurosci 11:5, PMC2817684 full text read), hierarchical data: \"If cells are the unit of interest, then typically many cells are examined per brain. Consider an experiment with two experimental conditions (treatment vs. control), with one rat in each condition. The outcome variable is the number of synapses on cells in the CA3 region of the hippocampus, and 100 cells are examined in each rat.\"",
+  "faulty": "Two-sample t-test with the 120 cells per genotype as units.",
+  "fixed": "Average cells per animal; t-test on 6 vs 6 animal means (a mixed model is an alternative standard correction).",
+  "subtype": "",
+  "notes": "Cells within animals, group comparison; animal-level variance component present in worlds. | Source check: Source example is the extreme 1 animal per group x 100 cells, and elsewhere n=5 rats per group x 3 days; brief uses 6 animals x 20 cells. Source: Type I error depends on within-group correlation (alpha 0.37 at n=10 per group, IC=0.30)."
+ },
+ {
+  "local_id": "B6-08",
+  "source": "LAZ10",
+  "passage": "LAZ10 abstract: \"Pseudoreplication occurs when observations are not statistically independent, but treated as if they are. This can occur when there are multiple observations on the same subjects, when samples are nested or hierarchically organised, or when measurements are correlated in time or space.\" Also MAK19 'Inflating the units of analysis' (pooled pre and post measures mix within- and between-participant units).",
+  "faulty": "Pearson correlation of all 300 pooled trials, df 298, one-sided.",
+  "fixed": "Per-participant correlations, Fisher z, one-sample t-test across the 12 participants against zero.",
+  "subtype": "",
+  "notes": "Trials within subjects; the worlds should keep subject-level offsets in minus. | Source check: Source covers repeated observations and hierarchical data but not a trial-level correlation explicitly; the pooled trial correlation follows the MAK19 pooled-correlation example. Sizes 12 x 25 are an extension (source examples: 3 observations per rat, 100 cells per rat)."
+ },
+ {
+  "local_id": "B6-09",
+  "source": "LAZ10",
+  "passage": "LAZ10, hierarchical data and Fig. 1 example: \"the mean of the ten values for each rat are calculated first, and then only these two averaged values are used\"; the first (incorrect) interval \"uses all 20 data points and does not account for the hierarchical nature of the data\".",
+  "faulty": "Paired t-test over all 200 cell pairs (animal, cell index) treated as pairs.",
+  "fixed": "Mean per animal for each condition; paired t-test across 8 animals.",
+  "subtype": "",
+  "notes": "Cells nested within animals, paired design. | Source check: Source examples are between-group designs; drug vs vehicle in tissue from the same animals is a paired extension (multiple observations on the same subjects, abstract). 8 animals x 25 cells is within the range of the examples."
+ },
+ {
+  "local_id": "B6-10",
+  "source": "MAK19",
+  "passage": "MAK19 (eLife 8:e48175, PMC6785265 full text read), section 'Interpreting comparisons between two effects without directly comparing them': \"Researchers often base their conclusions regarding the impact of an intervention (such as a pre- vs. post-intervention difference or a correlation between two variables) by noting that the intervention yields a significant effect in the experimental condition or group, whereas the corresponding effect in the control condition or group is not significant.\"",
+  "faulty": "Regression slope of rt on contrast in each condition; holds if attended slope significant (negative sign convention per claim) and unattended not.",
+  "fixed": "Regression of the per-participant difference (rt_attended - rt_unattended) on contrast; slope test, direction per claim.",
+  "subtype": "",
+  "notes": "Regression statistic, same participants in both conditions; slope difference test. | Source check: Source examples use groups of 20; here conditions within the same 30 participants and a regression slope (correlation of two variables is named in the same sentence)."
+ },
+ {
+  "local_id": "B6-11",
+  "source": "MAK19",
+  "passage": "MAK19, section 'Inflating the units of analysis': \"If the researchers combine the pre and post measures across participants, they will end up with df = 18, the critical R value is now 0.44, rendering it easier to observe a statistically significant effect.\" (10 participants, pre-post design, simple regression; correct df = 8.)",
+  "faulty": "Pearson correlation over all 40 pooled measurements, df 38, one-sided.",
+  "fixed": "Average sessions per participant; correlation across the 8 participant means, df 6 (or equivalent repeated-measures correlation).",
+  "subtype": "",
+  "notes": "Repeated measures at very small n (8 participants x 5 sessions). | Source check: Brief revised to match this setting: 10 participants x 2 sessions (was 8 x 5)."
+ },
+ {
+  "local_id": "B6-12",
+  "source": "MAK19",
+  "passage": "MAK19, section 'Interpreting comparisons between two effects without directly comparing them': \"A similar issue occurs when estimating the effect of an intervention measured in two different groups: the intervention could yield a significant effect in one group but not in the other.\" (Fig. 1B: pre-post training difference, n=20 per group.)",
+  "faulty": "Per-group one-sample t-test on per-participant slopes across the 3 sessions; holds if trained significant, control not.",
+  "fixed": "Two-sample t-test on per-participant slopes between groups.",
+  "subtype": "",
+  "notes": "Repeated measures x two groups, slope per participant; n=14/group. | Source check: Source uses a pre-post difference, n=20; brief uses 3 sessions and 14 per group (per-participant slope as the effect measure), a small extension of the same design."
+ }
+]

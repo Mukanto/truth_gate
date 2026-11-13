@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-09",
+  "world_id": "W41",
+  "class": "B-1",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W41",
+    "claim": "In a recording of 200 cortical neurons, the neurons that fire least at baseline show an increase in firing rate after the manipulation of at least 2 spikes/s on average. The claim holds when a one-sample t-test of the per-neuron increase against zero, over the low-baseline neurons, is significant at p < 0.05 (one-sided) and the mean increase is at least 2.",
+    "data_keys": [
+      {
+        "key": "base",
+        "shape": "(neurons, epochs)",
+        "dtype": "float",
+        "meaning": "mean firing rate in spikes/s in two separate pre-manipulation epochs of equal length"
+      },
+      {
+        "key": "post",
+        "shape": "(neurons,)",
+        "dtype": "float",
+        "meaning": "mean firing rate in spikes/s in the epoch after the manipulation"
+      }
+    ],
+    "sizes": "200 neurons, 2 baseline epochs."
+  }
+}

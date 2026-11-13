@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-08",
+  "world_id": "W24",
+  "class": "B-3",
+  "subtype": "",
+  "source": "PEA97",
+  "brief": {
+    "id": "W24",
+    "claim": "In trained athletes, aerobic capacity per kilogram of body mass goes with sprint power per kilogram of body mass: across 30 athletes, the proportion of variance in peak power per kilogram explained by maximal oxygen uptake per kilogram (R squared of a simple linear regression) is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "vo2max",
+        "shape": "(athletes,)",
+        "dtype": "float",
+        "meaning": "maximal oxygen uptake, L/min, from an incremental treadmill test"
+      },
+      {
+        "key": "peak_power",
+        "shape": "(athletes,)",
+        "dtype": "float",
+        "meaning": "peak power output in a 10-second cycle sprint, W"
+      },
+      {
+        "key": "body_mass",
+        "shape": "(athletes,)",
+        "dtype": "float",
+        "meaning": "body mass, kg"
+      }
+    ],
+    "sizes": "30 athletes"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-11",
+  "world_id": "W06",
+  "class": "B-2",
+  "subtype": "L3.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "W06",
+    "claim": "From 20 image features of tissue patches, the model identifies the gene mutation status of new patients with AUC of at least 0.75.",
+    "data_keys": [
+      {
+        "key": "patches",
+        "shape": "(patients, patches, features)",
+        "dtype": "float",
+        "meaning": "image features of each tissue patch of each patient"
+      },
+      {
+        "key": "mutated",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True if the patient's tumour carries the mutation"
+      }
+    ],
+    "sizes": "40 patients, 6 patches per patient, 20 features."
+  }
+}

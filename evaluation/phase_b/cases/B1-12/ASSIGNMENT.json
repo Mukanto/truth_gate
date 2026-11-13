@@ -1,0 +1,20 @@
+{
+  "local_id": "B1-12",
+  "world_id": "W12",
+  "class": "B-1",
+  "subtype": "",
+  "source": "BAR05",
+  "brief": {
+    "id": "W12",
+    "claim": "Students in the lowest fifth of the autumn test gain at least 5 points on the spring test after the tutoring programme: the claim holds when the mean gain of those students is at least 5 and one-sided one-sample t-test p < 0.05.",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(students, tests)",
+        "dtype": "float",
+        "meaning": "test scores out of 100: test 0 = autumn, test 1 = a second test given just before the tutoring began, test 2 = spring"
+      }
+    ],
+    "sizes": "250 students, 3 tests."
+  }
+}

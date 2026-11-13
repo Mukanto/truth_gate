@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-11",
+  "world_id": "W44",
+  "class": "B-6",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W44",
+    "claim": "Across participants, grip strength is positively correlated with cortical thickness in the motor cortex: the correlation between the two measures is greater than zero at the one-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "grip",
+        "shape": "(10, 2) axes: (participants, sessions: before and after the intervention)",
+        "dtype": "float",
+        "meaning": "grip strength at each of the two sessions"
+      },
+      {
+        "key": "thickness",
+        "shape": "(10, 2) axes: (participants, sessions: before and after the intervention)",
+        "dtype": "float",
+        "meaning": "motor cortex thickness measured at the same session"
+      }
+    ],
+    "sizes": "10 participants, 2 sessions each (20 measurements in total)."
+  }
+}

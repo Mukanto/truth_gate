@@ -1,0 +1,38 @@
+{
+  "local_id": "B6-02",
+  "world_id": "W48",
+  "class": "B-6",
+  "subtype": "",
+  "source": "NIE11",
+  "brief": {
+    "id": "W48",
+    "claim": "A drug changes the evoked response more in visual cortex than in auditory cortex: the drug-minus-placebo difference in response amplitude is larger in the visual region than in the auditory region across 16 participants, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "visual_placebo",
+        "shape": "(16,) axis: participants",
+        "dtype": "float",
+        "meaning": "evoked amplitude in visual region under placebo"
+      },
+      {
+        "key": "visual_drug",
+        "shape": "(16,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "evoked amplitude in visual region under drug"
+      },
+      {
+        "key": "auditory_placebo",
+        "shape": "(16,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "evoked amplitude in auditory region under placebo"
+      },
+      {
+        "key": "auditory_drug",
+        "shape": "(16,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "evoked amplitude in auditory region under drug"
+      }
+    ],
+    "sizes": "16 participants, every participant measured in both regions and both conditions."
+  }
+}

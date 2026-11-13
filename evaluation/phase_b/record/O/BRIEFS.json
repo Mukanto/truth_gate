@@ -1,0 +1,116 @@
+[
+ {
+  "local_id": "O1a",
+  "claim": "Using the recorded patient variables, a linear classifier identifies sepsis cases with an accuracy of at least 0.75 on new patients (the claim holds when the accuracy estimate is >= 0.75).",
+  "data_keys": [
+   {
+    "key": "vars",
+    "shape": "(patients, 12)",
+    "dtype": "float",
+    "meaning": "12 recorded variables per patient: vital signs and laboratory values at admission, age, and the number of doses of the targeted therapy recorded during the stay"
+   },
+   {
+    "key": "sepsis",
+    "shape": "(patients,)",
+    "dtype": "bool",
+    "meaning": "True if the patient received a sepsis diagnosis"
+   }
+  ],
+  "sizes": "250 patients; 12 variables"
+ },
+ {
+  "local_id": "O1b",
+  "claim": "Using the leading principal components of the tumour expression profile, a nearest-centroid classifier tells responders from non-responders with an accuracy of at least 0.70 on new tumours (the claim holds when the accuracy estimate is >= 0.70).",
+  "data_keys": [
+   {
+    "key": "expr",
+    "shape": "(tumours, 60)",
+    "dtype": "float",
+    "meaning": "log expression of 60 genes per tumour, on arbitrary instrument scales"
+   },
+   {
+    "key": "responder",
+    "shape": "(tumours,)",
+    "dtype": "bool",
+    "meaning": "True if the tumour responded to the drug"
+   }
+  ],
+  "sizes": "120 tumours; 60 genes"
+ },
+ {
+  "local_id": "O2a",
+  "claim": "Participants in the treated group score higher than controls on the study's primary outcome (outcome measure 1): a one-sided Welch t test on measure 1 gives p < 0.05.",
+  "data_keys": [
+   {
+    "key": "treated",
+    "shape": "(participants_treated, 2)",
+    "dtype": "float",
+    "meaning": "the two outcome measures (columns: measure 1 = primary, measure 2 = secondary; correlated, r about 0.5) for each treated participant"
+   },
+   {
+    "key": "control",
+    "shape": "(participants_control, 2)",
+    "dtype": "float",
+    "meaning": "the same two outcome measures for each control participant"
+   }
+  ],
+  "sizes": "20 participants per group"
+ },
+ {
+  "local_id": "O2b",
+  "claim": "Participants who received the treatment score higher than controls on the outcome: a one-sided Welch t test of treated versus control gives p < 0.05 once recruitment of the planned sample is complete.",
+  "data_keys": [
+   {
+    "key": "treated",
+    "shape": "(participants_treated,)",
+    "dtype": "float",
+    "meaning": "outcome score of each treated participant, rows in order of recruitment"
+   },
+   {
+    "key": "control",
+    "shape": "(participants_control,)",
+    "dtype": "float",
+    "meaning": "outcome score of each control participant, rows in order of recruitment"
+   }
+  ],
+  "sizes": "planned sample 30 participants per group"
+ },
+ {
+  "local_id": "O3a",
+  "claim": "A five-gene response signature tracks drug sensitivity across the cell-line panel: the Pearson correlation between the signature score (mean of the signature genes, which are columns 5 to 9 of expr counting from 1) and the measured sensitivity is at least 0.5.",
+  "data_keys": [
+   {
+    "key": "expr",
+    "shape": "(cell_lines, 20)",
+    "dtype": "float",
+    "meaning": "log expression of 20 genes per cell line, genes in the panel's list order (the five signature genes are columns 5 to 9, counting from 1); rows are cell lines"
+   },
+   {
+    "key": "sensitivity",
+    "shape": "(cell_lines,)",
+    "dtype": "float",
+    "meaning": "measured drug sensitivity (higher = more sensitive) per cell line, rows in the panel's order"
+   }
+  ],
+  "sizes": "60 cell lines; 20 genes"
+ },
+ {
+  "local_id": "O3b",
+  "claim": "Economic growth is lower in country-years with high public debt: mean annual real GDP growth in country-years with debt above 90% of GDP is at least 1.5 percentage points below mean growth in country-years with debt at or below 90%.",
+  "data_keys": [
+   {
+    "key": "growth",
+    "shape": "(countries, years)",
+    "dtype": "float",
+    "meaning": "annual real GDP growth, percent, for each country and year"
+   },
+   {
+    "key": "debt",
+    "shape": "(countries, years)",
+    "dtype": "float",
+    "meaning": "public debt as percent of GDP, same layout as growth"
+   }
+  ],
+  "sizes": "20 countries x 15 years = 300 country-years"
+ }
+]

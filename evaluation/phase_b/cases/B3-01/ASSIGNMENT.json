@@ -1,0 +1,44 @@
+{
+  "local_id": "B3-01",
+  "world_id": "W29",
+  "class": "B-3",
+  "subtype": "",
+  "source": "ARC81",
+  "brief": {
+    "id": "W29",
+    "claim": "In critically ill adults, oxygen consumption rises with oxygen delivery: across 40 patients, the Pearson correlation between oxygen consumption and oxygen delivery is at least 0.5.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output, L/min, from thermodilution"
+      },
+      {
+        "key": "hemoglobin",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "blood hemoglobin concentration, g/dL"
+      },
+      {
+        "key": "sao2",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "arterial oxygen saturation, fraction 0-1"
+      },
+      {
+        "key": "svo2",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "mixed venous oxygen saturation, fraction 0-1"
+      },
+      {
+        "key": "vo2_expired",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "oxygen consumption, mL/min, measured by expired-gas analysis at the same time as the haemodynamic measurements"
+      }
+    ],
+    "sizes": "40 patients"
+  }
+}

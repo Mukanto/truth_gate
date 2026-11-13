@@ -1,0 +1,206 @@
+[
+  {
+    "local_id": "B1-01",
+    "claim": "In a 60-voxel region of ventral visual cortex, the voxels that respond more to faces than to houses show a mean face-minus-house response of at least 0.30 percent signal change. The claim holds when this mean (taken per subject and then averaged over the 20 subjects) is at least 0.30 and significantly above zero (one-sided one-sample t-test across subjects, p < 0.05).",
+    "data_keys": [
+      {
+        "key": "face",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "percent signal change to face pictures, two scanning runs per subject"
+      },
+      {
+        "key": "house",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "percent signal change to house pictures, same layout as face"
+      }
+    ],
+    "sizes": "20 subjects, 2 runs, 60 voxels."
+  },
+  {
+    "local_id": "B1-02",
+    "claim": "Among 150 recorded V1 neurons, the neurons that are tuned to orientation have a mean orientation selectivity index of at least 0.25, where each neuron's index is (r_pref - r_orth) / (r_pref + r_orth), r_pref is its mean rate at its preferred orientation and r_orth its mean rate at the orientation 90 degrees away.",
+    "data_keys": [
+      {
+        "key": "rate",
+        "shape": "(neurons, orientations, trials)",
+        "dtype": "float",
+        "meaning": "non-negative firing rate in spikes/s of each neuron to each of 8 equally spaced grating orientations (0 to 157.5 degrees), 16 repeats of each"
+      }
+    ],
+    "sizes": "150 neurons, 8 orientations, 16 trials."
+  },
+  {
+    "local_id": "B1-03",
+    "claim": "In a study of 60 participants, those who perform worst at the start of a perceptual-learning task benefit most from training: the improvement (late-block score minus early-block score) of the lower-scoring half exceeds that of the higher-scoring half by at least 4 points, with an independent-samples t-test p < 0.05 (one-sided).",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(participants, blocks)",
+        "dtype": "float",
+        "meaning": "percent correct (0 to 100) in each of 4 consecutive blocks of the task, block 0 first and block 3 last"
+      }
+    ],
+    "sizes": "60 participants, 4 blocks."
+  },
+  {
+    "local_id": "B1-04",
+    "claim": "In a 60-voxel region of anterior insula, the voxels whose activity relates positively to trait empathy show a mean Pearson correlation of at least 0.50 with the trait score across the 24 subjects.",
+    "data_keys": [
+      {
+        "key": "act",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "activation (beta) to a pain-observation contrast, one value per subject and voxel"
+      },
+      {
+        "key": "trait",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "questionnaire empathy score per subject"
+      }
+    ],
+    "sizes": "24 subjects, 60 voxels."
+  },
+  {
+    "local_id": "B1-05",
+    "claim": "In a 50-voxel region of medial prefrontal cortex, the voxels that track trait social anxiety have a mean activity that predicts the trait: the least-squares slope of the standardized trait score on the standardized mean activity of those voxels across the 16 subjects is at least 0.50, with one-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "act",
+        "shape": "(subjects, sessions, voxels)",
+        "dtype": "float",
+        "meaning": "activation (beta) to a social-evaluation task; two scanning sessions on separate days"
+      },
+      {
+        "key": "trait",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "questionnaire social-anxiety score per subject"
+      }
+    ],
+    "sizes": "16 subjects, 2 sessions, 50 voxels."
+  },
+  {
+    "local_id": "B1-06",
+    "claim": "Among 28 subjects (14 high-anxiety and 14 low-anxiety by interview), in the voxels of a 40-voxel amygdala region that react more strongly to threatening pictures in the high-anxiety group, the group difference in mean reactivity has a Welch t statistic of at least 3.0.",
+    "data_keys": [
+      {
+        "key": "react",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "response to threat minus neutral pictures, one value per subject and voxel"
+      },
+      {
+        "key": "high_anx",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True for the 14 high-anxiety subjects; subjects ordered so that groups alternate (True, False, True, False, ...)"
+      }
+    ],
+    "sizes": "28 subjects (14 + 14), 40 voxels."
+  },
+  {
+    "local_id": "B1-07",
+    "claim": "In a panel of 60 candidate genes, the genes that differ between tumour and normal tissue have a mean absolute log2 fold change of at least 0.5, in 20 tumour and 20 normal samples.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level, one value per sample and gene"
+      },
+      {
+        "key": "tumour",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for tumour samples (20), False for normal (20)"
+      }
+    ],
+    "sizes": "40 samples (20 + 20), 60 genes."
+  },
+  {
+    "local_id": "B1-08",
+    "claim": "Of the 120 cells in a calcium-imaging field of view, those that respond to the tone are mostly genuine responders: at least 70% of them show a larger mean fluorescence after tone onset than before it.",
+    "data_keys": [
+      {
+        "key": "pre",
+        "shape": "(cells, trials)",
+        "dtype": "float",
+        "meaning": "mean fluorescence (dF/F) in the 1 s before tone onset, per cell and trial"
+      },
+      {
+        "key": "post",
+        "shape": "(cells, trials)",
+        "dtype": "float",
+        "meaning": "mean fluorescence (dF/F) in the 1 s after tone onset, per cell and trial"
+      }
+    ],
+    "sizes": "120 cells, 30 trials."
+  },
+  {
+    "local_id": "B1-09",
+    "claim": "In a recording of 200 cortical neurons, the neurons that fire least at baseline show an increase in firing rate after the manipulation of at least 2 spikes/s on average. The claim holds when a one-sample t-test of the per-neuron increase against zero, over the low-baseline neurons, is significant at p < 0.05 (one-sided) and the mean increase is at least 2.",
+    "data_keys": [
+      {
+        "key": "base",
+        "shape": "(neurons, epochs)",
+        "dtype": "float",
+        "meaning": "mean firing rate in spikes/s in two separate pre-manipulation epochs of equal length"
+      },
+      {
+        "key": "post",
+        "shape": "(neurons,)",
+        "dtype": "float",
+        "meaning": "mean firing rate in spikes/s in the epoch after the manipulation"
+      }
+    ],
+    "sizes": "200 neurons, 2 baseline epochs."
+  },
+  {
+    "local_id": "B1-10",
+    "claim": "In patients whose systolic blood pressure is at least 150 mmHg at entry, the drug lowers systolic pressure by at least 5 mmHg over 12 weeks. The claim holds when the estimated lowering is at least 5 mmHg and one-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "sbp",
+        "shape": "(patients, visits)",
+        "dtype": "float",
+        "meaning": "systolic pressure in mmHg at entry (visit 0) and after 12 weeks (visit 1)"
+      },
+      {
+        "key": "drug",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True for patients given the drug, False for patients given placebo"
+      }
+    ],
+    "sizes": "160 patients (about 80 per arm), 2 visits."
+  },
+  {
+    "local_id": "B1-11",
+    "claim": "Among patients with a depression score in the top fifth at the first assessment, at least 70% have a lower score after the 8-week programme than before it.",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(patients, visits)",
+        "dtype": "float",
+        "meaning": "depression questionnaire score: visit 0 = first assessment, visit 1 = second assessment just before the programme, visit 2 = after the programme"
+      }
+    ],
+    "sizes": "120 patients, 3 visits."
+  },
+  {
+    "local_id": "B1-12",
+    "claim": "Students in the lowest fifth of the autumn test gain at least 5 points on the spring test after the tutoring programme: the claim holds when the mean gain of those students is at least 5 and one-sided one-sample t-test p < 0.05.",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(students, tests)",
+        "dtype": "float",
+        "meaning": "test scores out of 100: test 0 = autumn, test 1 = a second test given just before the tutoring began, test 2 = spring"
+      }
+    ],
+    "sizes": "250 students, 3 tests."
+  }
+]

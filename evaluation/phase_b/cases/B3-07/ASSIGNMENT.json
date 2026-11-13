@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-07",
+  "world_id": "W43",
+  "class": "B-3",
+  "subtype": "",
+  "source": "PEA97",
+  "brief": {
+    "id": "W43",
+    "claim": "Across 90 farms, a farm that applies more fertilizer per hectare obtains a higher crop yield per hectare: the standardised regression slope (both variables z-scored) of yield per hectare on fertilizer per hectare is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "yield_total",
+        "shape": "(farms,)",
+        "dtype": "float",
+        "meaning": "total annual crop harvest of the farm, tonnes"
+      },
+      {
+        "key": "fertilizer_total",
+        "shape": "(farms,)",
+        "dtype": "float",
+        "meaning": "total annual fertilizer applied on the farm, kg of nitrogen"
+      },
+      {
+        "key": "farm_area",
+        "shape": "(farms,)",
+        "dtype": "float",
+        "meaning": "cropped area of the farm, hectares"
+      }
+    ],
+    "sizes": "90 farms"
+  }
+}

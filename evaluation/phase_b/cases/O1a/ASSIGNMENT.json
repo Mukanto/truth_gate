@@ -1,0 +1,26 @@
+{
+  "local_id": "O1a",
+  "world_id": "W54",
+  "class": "O",
+  "subtype": "O-1",
+  "source": "KAP23",
+  "brief": {
+    "id": "W54",
+    "claim": "Using the recorded patient variables, a linear classifier identifies sepsis cases with an accuracy of at least 0.75 on new patients (the claim holds when the accuracy estimate is >= 0.75).",
+    "data_keys": [
+      {
+        "key": "vars",
+        "shape": "(patients, 12)",
+        "dtype": "float",
+        "meaning": "12 recorded variables per patient: vital signs and laboratory values at admission, age, and the number of doses of the targeted therapy recorded during the stay"
+      },
+      {
+        "key": "sepsis",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True if the patient received a sepsis diagnosis"
+      }
+    ],
+    "sizes": "250 patients; 12 variables"
+  }
+}

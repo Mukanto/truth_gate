@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-05",
+  "world_id": "W46",
+  "class": "B-6",
+  "subtype": "",
+  "source": "HUR84",
+  "brief": {
+    "id": "W46",
+    "claim": "Mussel growth increases with the amount of food supplement given to a tank: the regression slope of growth on the supplement dose is positive, at the one-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "dose",
+        "shape": "(12,) axis: tanks",
+        "dtype": "float",
+        "meaning": "supplement dose assigned to each tank"
+      },
+      {
+        "key": "growth",
+        "shape": "(12, 8) axes: (tanks, individual mussels per tank)",
+        "dtype": "float",
+        "meaning": "shell growth of each measured mussel, in the tank given by the first axis"
+      }
+    ],
+    "sizes": "12 tanks, 8 mussels per tank (96 growth values)."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "local_id": "B1-02",
+  "world_id": "W07",
+  "class": "B-1",
+  "subtype": "",
+  "source": "KRI09",
+  "brief": {
+    "id": "W07",
+    "claim": "Among 150 recorded V1 neurons, the neurons that are tuned to orientation have a mean orientation selectivity index of at least 0.25, where each neuron's index is (r_pref - r_orth) / (r_pref + r_orth), r_pref is its mean rate at its preferred orientation and r_orth its mean rate at the orientation 90 degrees away.",
+    "data_keys": [
+      {
+        "key": "rate",
+        "shape": "(neurons, orientations, trials)",
+        "dtype": "float",
+        "meaning": "non-negative firing rate in spikes/s of each neuron to each of 8 equally spaced grating orientations (0 to 157.5 degrees), 16 repeats of each"
+      }
+    ],
+    "sizes": "150 neurons, 8 orientations, 16 trials."
+  }
+}

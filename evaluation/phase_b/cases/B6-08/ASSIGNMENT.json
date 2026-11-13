@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-08",
+  "world_id": "W50",
+  "class": "B-6",
+  "subtype": "",
+  "source": "LAZ10",
+  "brief": {
+    "id": "W50",
+    "claim": "Trial-by-trial neural activity in a frontal region is positively related to reaction time: the correlation between activity and reaction time is greater than zero at the one-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "reaction_time",
+        "shape": "(12, 25) axes: (participants, trials)",
+        "dtype": "float",
+        "meaning": "reaction time on each trial, trials in time order within a participant"
+      },
+      {
+        "key": "activity",
+        "shape": "(12, 25) axes: (participants, trials)",
+        "dtype": "float",
+        "meaning": "frontal activity estimate on the same trial"
+      }
+    ],
+    "sizes": "12 participants, 25 trials each (300 trials in total)."
+  }
+}

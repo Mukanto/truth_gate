@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-08",
+  "world_id": "W21",
+  "class": "B-1",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W21",
+    "claim": "Of the 120 cells in a calcium-imaging field of view, those that respond to the tone are mostly genuine responders: at least 70% of them show a larger mean fluorescence after tone onset than before it.",
+    "data_keys": [
+      {
+        "key": "pre",
+        "shape": "(cells, trials)",
+        "dtype": "float",
+        "meaning": "mean fluorescence (dF/F) in the 1 s before tone onset, per cell and trial"
+      },
+      {
+        "key": "post",
+        "shape": "(cells, trials)",
+        "dtype": "float",
+        "meaning": "mean fluorescence (dF/F) in the 1 s after tone onset, per cell and trial"
+      }
+    ],
+    "sizes": "120 cells, 30 trials."
+  }
+}

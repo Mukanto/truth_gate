@@ -1,0 +1,80 @@
+[
+ {
+  "case": "O1a", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "KAP23 L2 (feature that is a proxy for the outcome; example anti-hypertensive use predicting hypertension). Faulty fits the least-squares linear classifier on rows 0-149 and scores rows 150-249 using x[:, :12], i.e. including column 11 (doses of targeted therapy recorded during the stay), a post-diagnosis proxy of sepsis. The split itself is clean, as intended for an out-of-scope data-level case.",
+   "b": "Fixed uses x[:, :11] (admission variables only), the standard remedy of removing the illegitimate feature; nothing else changes.",
+   "c": "diff faulty vs fixed is exactly two lines (the column slice and its comment).",
+   "d": "MECH report lists no comparison for O1a. Only guards: finiteness, enough rows, both classes in the training block (all return None). No probe-aware branch. The 0.75 comparison is the claim threshold on the held-out accuracy.",
+   "e": "No banned term of section 4 occurs in the brief (own regex over BRIEFS.json, ASSIGNMENT.json, skeletons: no hit); the claim is positive and does not say what 'claim false' means.",
+   "f": "'250 patients; 12 variables': KAP23 states no sizes (methodological survey); read under P-2 item 1: within caps (<=300 rows, <=60 features) and of the order of a clinical cohort study, as the private note argues. Listed as 'sizes not documented by the source'.",
+   "g": "Same split, same fit, same statistic (accuracy on 100 held-out rows) and threshold; cost differs by one column."
+  },
+  "overall": "pass", "repair_request": ""
+ },
+ {
+  "case": "O1b", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "KAP23 L1.2 (pre-processing on the entire data set; label-free variant per the O-1 definition of section 1). Faulty sets fit = x (all 120 rows) for the standardisation mean/sd and the SVD, then fits centroids on rows 0-71 and scores rows 72-119, so test rows enter the pre-processing. No labels are used in the leak, as the O-1 definition requires.",
+   "b": "Fixed sets fit = x[:72] (training rows only) and applies the same mu, sd and components to all rows: the standard correction.",
+   "c": "diff is two lines (fit = x vs fit = x[:n_train], and the comment); 5 components, centroids and the 0.70 threshold are identical.",
+   "d": "MECH lists only 'sd.min() <= 1e-12' in both twins: a zero-variance guard returning None, allowed. Nothing inspects noise, zeros or shuffles.",
+   "e": "No banned term occurs in the brief; the claim is positive and does not define 'claim false'.",
+   "f": "'120 tumours; 60 genes': KAP23 states no sizes; P-2 item 1: 60 genes is exactly the section 2 cap and 120 tumours is within the cap and typical of an expression-classification study (private note argues the same). Listed as 'sizes not documented by the source' and 'at the cap'.",
+   "g": "Same statistic, threshold and rule; SVD on 120x60 versus 72x60 is a negligible cost difference inherent to the correction."
+  },
+  "overall": "pass", "repair_request": ""
+ },
+ {
+  "case": "O2a", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "SIM11 Situation A: two dependent variables, r = .50, three tests (DV1, DV2, their average), 20 observations per cell, the significant one reported. Faulty computes one-sided Welch p for measure 1, measure 2 and the row mean and holds if min p < 0.05. Parameters match. Isolated helper check (text-extracted nested functions run on fixed and random vectors; the criterion itself was not called): the hand-written one-sided Welch p agrees with scipy to 4e-14. Remark: SIM11 may count tests two-sided; the brief fixes a one-sided test and the code follows the brief.",
+   "b": "Fixed tests the declared primary (measure 1) only, ps = [welch_p(a[:,0], b[:,0])]; nothing else changes.",
+   "c": "diff is the single statement building ps (three tests vs one) and its comments; helper code and guards are identical.",
+   "d": "MECH lists 'min(ps) < 0.05' (the claimed p threshold) and the 1e-14 convergence tolerance of the incomplete-beta loop; neither tests a data distribution. Guards: finite values, >= 2 rows, vx+vy > 1e-24 (zero variance), all return None. No probe-aware branch.",
+   "e": "No banned term occurs in the brief; naming measure 1 as primary states the planned analysis, not a negation of the claim.",
+   "f": "'20 participants per group' equals SIM11's baseline of 20 observations per cell (checked against the passage quoted in PRIVATE.json/LOG.md; not re-fetched by me). Within range.",
+   "g": "Same Welch statistic and 0.05 threshold; the faulty evaluates three tests instead of one, which is the error itself (negligible absolute cost)."
+  },
+  "overall": "pass", "repair_request": ""
+ },
+ {
+  "case": "O2b", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "SIM11 optional stopping: test at 20 per condition, if not significant add 10 and test again. Faulty computes one-sided Welch p on the first 20 and on all 30 rows of each arm and holds if min p < 0.05 (either look). Same helper as O2a, checked in isolation (agrees with scipy to 4e-14; criterion not called).",
+   "b": "Fixed tests once at the planned 30 per group; nothing else changes.",
+   "c": "diff is the tuple of sample sizes (20, 30) vs (30,) and a comment; the guard a.shape[0] < 30 is identical.",
+   "d": "MECH lists only 'min(ps) < 0.05' (claim threshold) and the 1e-14 loop tolerance. Guards: finite, at least 30 rows, zero variance, all return None. Using the first 20 rows is the look schedule of the error, not a probe test.",
+   "e": "No banned term occurs in the brief; 'once recruitment of the planned sample is complete' states the planned analysis, not a negation.",
+   "f": "'planned sample 30 participants per group': SIM11 ends at 20+10 = 30 per cell with a first look at 20. Within range.",
+   "g": "Same statistic, threshold and helper; one vs two tests is the error itself."
+  },
+  "overall": "pass", "repair_request": ""
+ },
+ {
+  "case": "O3a", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "BAG09: values taken from the neighbouring row of the gene list (offset by one). Faulty averages x[:, 5:10] (columns 6 to 10, 1-based) instead of the stated columns 5 to 9, then Pearson r >= 0.5: the offset along the gene axis, the documented direction. Remark, not an audit item: the skeleton's signature genes are columns 5-9, so the shifted window shares four of five signature genes and the faulty criterion may still hold in plus; this is a skeleton property and the code is a faithful embodiment.",
+   "b": "Fixed uses x[:, 4:9] (columns 5 to 9, 1-based), the named signature genes, with the identical r >= 0.5 test.",
+   "c": "diff is the one slice line and its comment.",
+   "d": "MECH lists the variance guard 'score.std() <= 1e-12 or y.std() <= 1e-12' (zero variance, returns None), allowed. No other branch.",
+   "e": "No banned term occurs in the brief; stating the signature columns is part of the claim, not a negation.",
+   "f": "'60 cell lines; 20 genes': BAG09 is a genome-scale study on a cell-line panel (to my recollection the NCI-60 panel of about 60 lines; not re-verified online) with thousands of probe sets; genes reduced to 20 for the case. Read under P-2 (not documented / reduced); listed.",
+   "g": "Same statistic (Pearson r of the 5-gene mean score), threshold and cost."
+  },
+  "overall": "pass", "repair_request": ""
+ },
+ {
+  "case": "O3b", "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes",
+  "reasons": {
+   "a": "HER14: a spreadsheet coding error excludes five countries (first five alphabetically), early years of some countries are dropped, and country averages are equally weighted by country. Faulty drops rows 0-4, the first four years of country 13 (analogue of the early-year exclusions), averages per-country bin means with equal weight, then requires high-minus-low <= -1.5 with the 90% split. The error is a bundle of three documented items from the same passage. Remark: the source uses four debt bins and 64 years; the brief uses two bins, a simplification the brief states.",
+   "b": "Fixed uses all countries and years and pools country-years within each bin, which is what the brief's claim (mean growth in country-years) literally states.",
+   "c": "All differences (exclusions, equal weighting vs pooled mean) are the documented error bundle and its correction; split, threshold and guards unchanged. Yes, noting the error is three-part.",
+   "d": "MECH lists no comparison for O3b. Guards: finite, equal 2-D shapes, at least 14 countries (needed for index 13), empty bin -> None. Hard-coded indices are the documented exclusions, not probe handling.",
+   "e": "No banned term occurs in the brief; the claim is positive and does not define 'claim false'.",
+   "f": "'20 countries x 15 years = 300 country-years': HER14 has 20 advanced economies, 1946-2009 (64 years); years reduced to the 300-row cap (P-2 item 2); listed as 'reduced to the cap'.",
+   "g": "Same statistic (difference of bin means), threshold and decision rule; per-country masks vs pooled mean have comparable negligible cost."
+  },
+  "overall": "pass", "repair_request": ""
+ }
+]

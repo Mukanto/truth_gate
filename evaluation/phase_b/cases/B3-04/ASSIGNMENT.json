@@ -1,0 +1,44 @@
+{
+  "local_id": "B3-04",
+  "world_id": "W45",
+  "class": "B-3",
+  "subtype": "",
+  "source": "ARC81",
+  "brief": {
+    "id": "W45",
+    "claim": "A dobutamine infusion in critically ill adults raises oxygen consumption in proportion to the rise in oxygen delivery: across 24 patients, the proportion of variance in the change in oxygen consumption explained by the change in oxygen delivery (R squared of a simple linear regression) is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients, 2)",
+        "dtype": "float",
+        "meaning": "cardiac output, L/min, by thermodilution; axis 1 = [before infusion, during infusion]"
+      },
+      {
+        "key": "hemoglobin",
+        "shape": "(patients, 2)",
+        "dtype": "float",
+        "meaning": "blood hemoglobin concentration, g/dL; axis 1 = [before, during]"
+      },
+      {
+        "key": "sao2",
+        "shape": "(patients, 2)",
+        "dtype": "float",
+        "meaning": "arterial oxygen saturation, fraction 0-1; axis 1 = [before, during]"
+      },
+      {
+        "key": "svo2",
+        "shape": "(patients, 2)",
+        "dtype": "float",
+        "meaning": "mixed venous oxygen saturation, fraction 0-1; axis 1 = [before, during]"
+      },
+      {
+        "key": "vo2_expired",
+        "shape": "(patients, 2)",
+        "dtype": "float",
+        "meaning": "oxygen consumption, mL/min, from expired-gas analysis; axis 1 = [before, during]"
+      }
+    ],
+    "sizes": "24 patients, 2 time points each"
+  }
+}

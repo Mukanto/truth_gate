@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-12",
+  "world_id": "W49",
+  "class": "B-2",
+  "subtype": "L3.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "W49",
+    "claim": "From 15 patient characteristics, ridge regression predicts length of stay in patients from new hospitals with R^2 of at least 0.40.",
+    "data_keys": [
+      {
+        "key": "x",
+        "shape": "(hospitals, patients, characteristics)",
+        "dtype": "float",
+        "meaning": "characteristics of each patient in each hospital"
+      },
+      {
+        "key": "stay",
+        "shape": "(hospitals, patients)",
+        "dtype": "float",
+        "meaning": "length of stay in days"
+      }
+    ],
+    "sizes": "12 hospitals, 20 patients each, 15 characteristics."
+  }
+}

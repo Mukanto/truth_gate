@@ -1,0 +1,38 @@
+{
+  "local_id": "B6-03",
+  "world_id": "W20",
+  "class": "B-6",
+  "subtype": "",
+  "source": "NIE11",
+  "brief": {
+    "id": "W20",
+    "claim": "The relationship between sleep duration and memory score is stronger in older adults than in younger adults: the correlation between hours of sleep and recall score is higher in the older group than in the younger group, at the one-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "sleep_young",
+        "shape": "(35,) axis: participants",
+        "dtype": "float",
+        "meaning": "average nightly sleep in hours, younger group"
+      },
+      {
+        "key": "recall_young",
+        "shape": "(35,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "recall score, younger group"
+      },
+      {
+        "key": "sleep_old",
+        "shape": "(35,) axis: participants",
+        "dtype": "float",
+        "meaning": "average nightly sleep in hours, older group"
+      },
+      {
+        "key": "recall_old",
+        "shape": "(35,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "recall score, older group"
+      }
+    ],
+    "sizes": "35 participants per group (70 in total)."
+  }
+}

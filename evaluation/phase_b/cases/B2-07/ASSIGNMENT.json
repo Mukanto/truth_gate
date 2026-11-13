@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-07",
+  "world_id": "W04",
+  "class": "B-2",
+  "subtype": "L1.4",
+  "source": "KAP23",
+  "brief": {
+    "id": "W04",
+    "claim": "From 15 clinical measurements recorded in a patient registry, a nearest-neighbour rule predicts diagnosis in new patients with accuracy of at least 0.75. Some patients were entered more than once.",
+    "data_keys": [
+      {
+        "key": "records",
+        "shape": "(rows, measurements)",
+        "dtype": "float",
+        "meaning": "clinical measurements, one row per registry entry"
+      },
+      {
+        "key": "diagnosis",
+        "shape": "(rows,)",
+        "dtype": "bool",
+        "meaning": "True if the patient has the diagnosis"
+      }
+    ],
+    "sizes": "200 rows, 15 measurements; about a quarter of the rows repeat an earlier entry exactly, with its diagnosis."
+  }
+}

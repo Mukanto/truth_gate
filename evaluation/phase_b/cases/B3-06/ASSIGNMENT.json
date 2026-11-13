@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-06",
+  "world_id": "W17",
+  "class": "B-3",
+  "subtype": "",
+  "source": "PEA97",
+  "brief": {
+    "id": "W17",
+    "claim": "Wealthier countries emit more carbon dioxide per person: across 150 countries, the Spearman rank correlation between per-capita carbon dioxide emissions and per-capita gross domestic product is at least 0.5.",
+    "data_keys": [
+      {
+        "key": "co2_emissions_total",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "annual national carbon dioxide emissions, megatonnes"
+      },
+      {
+        "key": "gdp_total",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "national gross domestic product, billions of US dollars (purchasing-power adjusted)"
+      },
+      {
+        "key": "population",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "national population, millions"
+      }
+    ],
+    "sizes": "150 countries"
+  }
+}

@@ -1,0 +1,280 @@
+[
+ {
+  "case": "B1-01",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty selects, per subject, voxels whose face-minus-house map (mean of both runs) exceeds 1.645 x rms, then tests the per-subject mean contrast of those same voxels from the same map (folds=[(mean,mean)]): selection and evaluation on the same data, the KRI09 double-dipping form (ROI from a statistical map, then statistics on it).",
+   "b": "Fixed is a two-fold run split (select on run 0, evaluate on run 1, and reverse), the split-data remedy of KRI09; same map, cut-off, per-subject mean, mean>=0.30 and one-sided t.",
+   "c": "The twins differ in exactly one line (the folds list), checked with diff; everything outside the criterion body equals the frozen skeleton.",
+   "d": "Listed comparisons: the incomplete-beta convergence test (numerical), x.mean()>=0.30 (the claim's own threshold), len(x)<5 and sd>0 guards (allowed). Nothing inspects the input distribution.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "20 subjects, 2 runs, 60 voxels: KRI09 gives no subject counts (its Example 2 simulates 30x30x20 voxels); voxels at the 60 cap. Sizes not documented by the source; reduced to the cap.",
+   "g": "Same helpers, statistic, cut-off, threshold and test; the fixed does two cheap passes instead of one."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-02",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty runs a one-way ANOVA across orientations on all 16 trials, takes the preferred orientation (argmax of the same means) and computes the selectivity index from the same means (sel_r, ev_r = r, r): selecting neurons by selectivity and then reporting their selectivity on the same data (KRI09 single-cell example).",
+   "b": "Fixed selects tuned neurons and preferred orientation on even trials and computes the index on odd trials (standard split-trial remedy); same ANOVA, p<0.05, index and 0.25 threshold.",
+   "c": "One line differs (sel_r, ev_r). The index clip and the den>0 guard are in both twins.",
+   "d": "Listed: idx[tuned].mean()>=0.25 (claim threshold). Borderline note only: np.clip(idx,-1,1) was added after a pre-check of the fixed criterion on noise (LOG: index ratio exploding on N(0,1) data). It is not a branch, does not test the input, is a no-op for the non-negative rates of the brief, and is identical in both twins, so I answer yes; the designer may wish to disclose it.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "150 neurons, 8 orientations, 16 trials: KRI09 states no counts for single-unit studies. Sizes not documented by the source; within the 300-unit cap.",
+   "g": "Same ANOVA, index, guard and threshold; the halves change only the number of trials used."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-03",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty splits participants at the median of block 0 and tests improvement = block 3 - block 0 between halves, so the split variable and the outcome share the noisy block-0 measurement (KRI09 Introduction: division of a group of subjects into subgroups based on task performance; also the regression-to-the-mean artefact of BAR05/MAK19).",
+   "b": "Fixed splits on block 1, a separate early measurement whose noise is independent of block 0 in the skeleton (iid per-block noise), keeping the claim's own improvement definition; a standard independent-measure correction. It differs from the private note (split on block 0, outcome block 3 - block 1) but is an equivalent device and matches CASE.md.",
+   "c": "One line differs (split = s[:,0] vs s[:,1]).",
+   "d": "Listed: only the numerical convergence test. diff>=4.0 is the claim's own constant; guards are len<3 and sp2>0 (allowed).",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "60 participants, 4 blocks: KRI09 states no behavioural sample sizes. Sizes not documented by the source; within caps.",
+   "g": "Same pooled t, threshold, direction and cost."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-04",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Post-repair: the selection is now r > 0 and two-sided p < 0.01 (`_tq(0.005, df)`) in both twins, the level documented in the VUL09 Fig. 4 caption ('a positive correlation with p < .01'); the caption does not state the sidedness, and the two-sided reading is accepted. Faulty still selects and evaluates the correlation on the same 24 subjects (folds=[(all,all)]), the VUL09 nonindependence error.",
+   "b": "Fixed selects on one interleaved half of the subjects and evaluates the correlation on the other half, in both directions (cross-validated selection, the usual independent-data remedy). Re-checked after the repair: the only change is the selection level, identical in both twins.",
+   "c": "One line differs (the folds list). Re-diffed after the repair: still one differing line; the repaired selection line is identical in both twins.",
+   "d": "Re-checked after the repair against the mechanical report (issues: none; listed comparisons unchanged): only the numerical convergence test, the claim threshold and zero-variance guards; the selection level is now the documented one and nothing inspects the input. The empty-selection None return is an allowed guard. The earlier disclosure note about the noise-motivated threshold is resolved.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "24 subjects, 60 voxels: the VUL09 extracts state no typical n (Fig. 4 simulates 10 subjects, 10,000 voxels); studies there have thousands of voxels. Sizes not documented by the source; voxels reduced to the 60 cap.",
+   "g": "Same correlation, selection test, threshold and loop structure; only the degrees of freedom follow the half size."
+  },
+  "overall": "pass",
+  "repair_request": "",
+  "superseded_a": {
+   "answer": "yes",
+   "reason": "Faulty correlates every voxel with the trait over all 24 subjects, keeps positive significant voxels and reports their mean correlation computed on the same subjects (folds=[(all,all)]): the VUL09 nonindependence-error sentence, selection by correlation then the same correlation on the selected voxels."
+  },
+  "history": {
+   "first_audit": {
+    "a": "yes"
+   },
+   "after_designer_reexamination": {
+    "a": "no",
+    "repair_request": "Change the selection level in BOTH twins (`keep = (r_sel > 0) & (tt > _tq(0.025, df))`) to the documented p < 0.01 (`_tq(0.005, df)`); with half-size df = 10 the fixed criterion will return None more often (allowed guard). If the designer accepts p < 0.05 as 'typical' because the source states thresholds vary, this repair can be waived, but that is the designer's decision, not mine."
+   }
+  }
+ },
+ {
+  "case": "B1-05",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Post-repair: the selection is now r > 0 and two-sided p < 0.01 (`_tq(0.005, n - 2)`) in both twins, the documented level (VUL09 Fig. 4 caption); sidedness is not stated in the source and the two-sided reading is accepted. Faulty still selects voxels on the session mean and regresses the trait on the same session mean of those voxels (VUL09 selection by regression across subjects).",
+   "b": "Fixed selects on session 0 and evaluates on session 1, an independent measurement of the same subjects; same slope, one-sided test and 0.50 threshold. The private note admits the second-session device is the author's construction, not in VUL09; it is a standard independent-data remedy. Re-checked after the repair: the only change is the selection level, identical in both twins.",
+   "c": "One line differs. Re-diffed after the repair: still one differing line; the repaired selection line is identical in both twins.",
+   "d": "Re-checked after the repair against the mechanical report (issues: none; listed comparisons unchanged): only the numerical convergence test, the claim threshold and zero-variance guards; the selection level is now the documented one and nothing inspects the input. The empty-selection None return is an allowed guard. The earlier disclosure note about the noise-motivated threshold is resolved.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "16 subjects, 2 sessions, 50 voxels: no n in the VUL09 extracts (Fig. 4: 10 subjects). Sizes not documented by the source; voxels within the cap (50).",
+   "g": "Same selection test, slope and test; identical cost."
+  },
+  "overall": "pass",
+  "repair_request": "",
+  "superseded_a": {
+   "answer": "yes",
+   "reason": "Faulty averages the two sessions, selects voxels by correlation with the trait over the 16 subjects and then regresses the trait on the mean activity of those voxels from the same averaged data (sel_act, ev_act = mean, mean): the VUL09 selection-by-regression-across-subjects error (53% of surveyed studies)."
+  },
+  "history": {
+   "first_audit": {
+    "a": "yes"
+   },
+   "after_designer_reexamination": {
+    "a": "no",
+    "repair_request": "Change the selection level in BOTH twins (the line `keep = (r_sel > 0) & (tt > _tq(0.025, n - 2))`) to the documented p < 0.01 two-sided with r > 0, i.e. `_tq(0.005, n - 2)`; the None returns that result on empty selections are allowed guards. If the author prefers p < 0.05, the designer must treat it as a disputed pair (section 5.3)."
+   }
+  }
+ },
+ {
+  "case": "B1-06",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty selects voxels by a one-sided Welch t between the groups on all 28 subjects, averages them per subject and computes the Welch t between the same groups on the same subjects (folds=[(all,all)]): VUL09 Study 26 (split into groups, find voxels showing the group effect, then analyse those voxels).",
+   "b": "Fixed selects on a group-balanced half and evaluates on the other half, in both directions (7+7 per half), then computes the Welch t over all 28 out-of-sample values; same threshold 3.0.",
+   "c": "One line differs (the folds list; half_a and half_b are defined in both twins).",
+   "d": "Listed: a.var+b.var>0 (zero-variance guard, allowed), convergence test; len<3 and 'not keep.any()' guards (allowed).",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "28 subjects (14+14), 40 voxels: no n in the VUL09 extracts. Sizes not documented by the source; voxels within the cap.",
+   "g": "Same Welch statistic, selection rule and t>=3.0 decision."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-07",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty chooses genes with a Welch p<0.05 on all 40 samples and takes the mean of the fold change times the selection sign, i.e. the absolute fold change, of the kept genes on the same samples (folds=[(all,all)]): MAK19 Circular analysis (retrospective selection criterion relevant to the outcome; KRI09 lists selected genes).",
+   "b": "Fixed chooses genes and sign on one half (balanced tumour/normal) and measures the signed fold change on the other half, in both directions; the sign alignment removes the selection bias in the effect size.",
+   "c": "One line differs.",
+   "d": "Listed: mean>=0.5 (claim threshold), convergence test, selection p<0.05 (a selection rule, not an input check). Size guards len<4 and empty-selection are allowed.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "40 samples, 60 genes: MAK19 gives no numbers; real gene panels are larger. Sizes not documented by the source; genes at the 60 cap.",
+   "g": "Same Welch selection, statistic and threshold."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-08",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty selects cells by a paired t (post>pre) over all 30 trials and counts the share with positive mean (post-pre) over the same 30 trials, which is 1.0 by construction whenever at least 5 cells pass: the circular statistic MAK19 describes (selection criterion inherently relevant to the outcome; noise recruited).",
+   "b": "Fixed selects on the first 15 trials and measures the share on the last 15 (split-trial remedy); same t test, guard and 0.70 threshold.",
+   "c": "One line differs (sel_t, ev_t).",
+   "d": "Listed: resp.sum()<5 (a selection-size guard, allowed), the proportion of positive evaluation means (the claim's own statistic) and the convergence test.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "120 cells, 30 trials: MAK19's neuron example gives no numbers. Sizes not documented by the source; within caps.",
+   "g": "Same t test, guard, statistic and threshold."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-09",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty bins neurons on the mean of the two baseline epochs and computes the increase post minus that same baseline mean for the lowest third (sel_b, ref_b = mean, mean): exactly the MAK19 example (neurons binned by baseline, low-baseline neurons show response increases that could be observed in pure noise; regression to the mean). Quote confirmed in mak.txt.",
+   "b": "Fixed selects on baseline epoch 0 and measures the increase against baseline epoch 1; same third, t test and threshold 2.",
+   "c": "One line differs.",
+   "d": "Listed: inc.mean()>=2.0 (claim threshold), convergence test; k<5 and sd>0 guards (allowed).",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "200 neurons, 2 baseline epochs: the MAK19 example has no numbers. Sizes not documented by the source; within the 300 cap.",
+   "g": "Same selection fraction, one-sample t and threshold."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-10",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty restricts to patients with entry SBP>=150, then tests the mean 12-week lowering in the drug arm alone (one-sample t, mean>=5, one-sided), ignoring the placebo arm: change in a sub-sample selected on the noisy baseline value (BAR05 abstract, verified). The full text was not accessible and I did not obtain it.",
+   "b": "Fixed compares the lowering between drug and placebo among patients with entry SBP>=150 (Welch, difference>=5, one-sided): a control arm selected the same way cancels regression to the mean; a standard remedy (control-group design).",
+   "c": "The twins differ in one decision block (lines 107-114), but that block is the whole correction (the test changes from one-sample to two-sample because a control arm is added); no other line differs.",
+   "d": "Listed: convergence test, a.var+b.var>0 (zero-variance guard) in the fixed, claim thresholds x.mean()>=5.0 and diff>=5.0 (claim constants). Nothing inspects the input distribution.",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "160 patients (about 80 per arm), 2 visits: the BAR05 abstract states no sizes; full text not read. Sizes not documented by the source; within caps.",
+   "g": "The statistic changes from a one-sample to a two-sample Welch t, which is inherent to adding the control arm; threshold 5, the one-sided p<0.05 rule and the cost are the same. Weakest pair for (c) and (g); accepted because the difference is the correction itself. Guard sizes differ (5 vs 3 per arm), both allowed."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-11",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty takes the top fifth at visit 0 and requires that at least 70% score lower at visit 2 than at visit 0, the selection measurement itself (BAR05: unusually extreme values are followed by values closer to the mean). Only the abstract was verified.",
+   "b": "Fixed compares visit 2 with visit 1, the second assessment just before the programme (a baseline not used for selection); a standard second-baseline remedy.",
+   "c": "One line differs (ref = s[:,0] vs s[:,1]).",
+   "d": "Listed: the single line np.mean(s[top,2]<ref[top])>=0.70 is the claim's own proportion and threshold. The len(top)<5 guard is a selection-size guard (allowed).",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "120 patients, 3 visits: the BAR05 abstract gives no sizes. Sizes not documented by the source; within caps.",
+   "g": "Same selection, statistic and threshold."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "B1-12",
+  "a": "yes",
+  "b": "yes",
+  "c": "yes",
+  "d": "yes",
+  "e": "yes",
+  "f": "yes",
+  "g": "yes",
+  "reasons": {
+   "a": "Faulty takes the lowest fifth on test 0 and tests the gain test 2 - test 0 (one-sample t, mean>=5): improvement of units selected for an extreme value of the same noisy measurement (BAR05 abstract).",
+   "b": "Fixed uses the same students but measures gain relative to test 1, a second pre-programme measurement not used for selection; a standard second-baseline remedy.",
+   "c": "One line differs (ref = s[:,0] vs s[:,1]).",
+   "d": "Listed: convergence test and gain.mean()>=5.0 (claim threshold); guards len<5 and sd>0 (allowed).",
+   "e": "No banned stem of PREREG section 4 occurs in the claim, data keys, meanings or sizes (substring scan of the whole brief); the brief gives a positive claim with its statistic and threshold and never says what 'claim false' means.",
+   "f": "250 students, 3 tests: the BAR05 abstract gives no sizes. Sizes not documented by the source; within the 300 cap.",
+   "g": "Same selection, one-sample t and threshold."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ }
+]

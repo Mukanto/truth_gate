@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-10",
+  "world_id": "W37",
+  "class": "B-2",
+  "subtype": "L3.1",
+  "source": "KAP23",
+  "brief": {
+    "id": "W37",
+    "claim": "Using 6 weekly indicators, a ridge regression forecasts next-week hospital admissions in future weeks with R^2 of at least 0.30.",
+    "data_keys": [
+      {
+        "key": "indicators",
+        "shape": "(weeks, indicators)",
+        "dtype": "float",
+        "meaning": "weekly indicator values, rows in time order"
+      },
+      {
+        "key": "admissions_next",
+        "shape": "(weeks,)",
+        "dtype": "float",
+        "meaning": "admissions in the following week"
+      }
+    ],
+    "sizes": "150 weeks in time order, 6 indicators."
+  }
+}

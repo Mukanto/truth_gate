@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-03",
+  "world_id": "W36",
+  "class": "B-2",
+  "subtype": "L1.3",
+  "source": "AMB02",
+  "brief": {
+    "id": "W36",
+    "claim": "The expression levels of 60 genes predict cancer versus normal status in new tissue samples with accuracy of at least 0.80.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(tissues, genes)",
+        "dtype": "float",
+        "meaning": "log expression of each gene in each tissue"
+      },
+      {
+        "key": "cancer",
+        "shape": "(tissues,)",
+        "dtype": "bool",
+        "meaning": "True if the tissue is cancerous"
+      }
+    ],
+    "sizes": "62 tissues (40 cancer, 22 normal), 60 genes."
+  }
+}

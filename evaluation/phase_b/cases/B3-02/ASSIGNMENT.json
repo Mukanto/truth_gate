@@ -1,0 +1,38 @@
+{
+  "local_id": "B3-02",
+  "world_id": "W26",
+  "class": "B-3",
+  "subtype": "",
+  "source": "ARC81",
+  "brief": {
+    "id": "W26",
+    "claim": "In critically ill adults, systemic vascular resistance falls as cardiac output rises: across 100 patients, the Spearman rank correlation between systemic vascular resistance and cardiac output is at most -0.4.",
+    "data_keys": [
+      {
+        "key": "map",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "mean arterial pressure, mmHg"
+      },
+      {
+        "key": "cvp",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "central venous pressure, mmHg"
+      },
+      {
+        "key": "co_thermodilution",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output, L/min, by pulmonary-artery thermodilution"
+      },
+      {
+        "key": "co_doppler",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output, L/min, by echocardiographic Doppler, measured at the same time by a separate operator"
+      }
+    ],
+    "sizes": "100 patients"
+  }
+}

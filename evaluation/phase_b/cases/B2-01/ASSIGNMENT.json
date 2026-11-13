@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-01",
+  "world_id": "W38",
+  "class": "B-2",
+  "subtype": "L1.1",
+  "source": "SIM03",
+  "brief": {
+    "id": "W38",
+    "claim": "A classifier built from the expression levels of 60 genes recognises tumour tissue among new tissue samples with accuracy of at least 0.80.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "log expression level of each gene in each tissue sample"
+      },
+      {
+        "key": "tumour",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True if the sample is tumour tissue, False if normal"
+      }
+    ],
+    "sizes": "20 samples (10 per class), 60 genes."
+  }
+}

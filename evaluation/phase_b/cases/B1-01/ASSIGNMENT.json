@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-01",
+  "world_id": "W05",
+  "class": "B-1",
+  "subtype": "",
+  "source": "KRI09",
+  "brief": {
+    "id": "W05",
+    "claim": "In a 60-voxel region of ventral visual cortex, the voxels that respond more to faces than to houses show a mean face-minus-house response of at least 0.30 percent signal change. The claim holds when this mean (taken per subject and then averaged over the 20 subjects) is at least 0.30 and significantly above zero (one-sided one-sample t-test across subjects, p < 0.05).",
+    "data_keys": [
+      {
+        "key": "face",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "percent signal change to face pictures, two scanning runs per subject"
+      },
+      {
+        "key": "house",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "percent signal change to house pictures, same layout as face"
+      }
+    ],
+    "sizes": "20 subjects, 2 runs, 60 voxels."
+  }
+}

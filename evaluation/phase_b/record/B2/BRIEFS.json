@@ -1,0 +1,236 @@
+[
+ {
+  "local_id": "b2-01",
+  "claim": "A classifier built from the expression levels of 60 genes recognises tumour tissue among new tissue samples with accuracy of at least 0.80.",
+  "data_keys": [
+   {
+    "key": "expr",
+    "shape": "(samples, genes)",
+    "dtype": "float",
+    "meaning": "log expression level of each gene in each tissue sample"
+   },
+   {
+    "key": "tumour",
+    "shape": "(samples,)",
+    "dtype": "bool",
+    "meaning": "True if the sample is tumour tissue, False if normal"
+   }
+  ],
+  "sizes": "20 samples (10 per class), 60 genes."
+ },
+ {
+  "local_id": "b2-02",
+  "claim": "A logistic model using 20 baseline markers predicts which patients will relapse within five years, in new patients, with AUC of at least 0.75.",
+  "data_keys": [
+   {
+    "key": "markers",
+    "shape": "(patients, markers)",
+    "dtype": "float",
+    "meaning": "standardised baseline marker values for each patient"
+   },
+   {
+    "key": "relapse",
+    "shape": "(patients,)",
+    "dtype": "bool",
+    "meaning": "True if the patient relapsed within five years"
+   }
+  ],
+  "sizes": "30 patients, 20 markers."
+ },
+ {
+  "local_id": "b2-03",
+  "claim": "The expression levels of 60 genes predict cancer versus normal status in new tissue samples with accuracy of at least 0.80.",
+  "data_keys": [
+   {
+    "key": "expr",
+    "shape": "(tissues, genes)",
+    "dtype": "float",
+    "meaning": "log expression of each gene in each tissue"
+   },
+   {
+    "key": "cancer",
+    "shape": "(tissues,)",
+    "dtype": "bool",
+    "meaning": "True if the tissue is cancerous"
+   }
+  ],
+  "sizes": "62 tissues (40 cancer, 22 normal), 60 genes."
+ },
+ {
+  "local_id": "b2-04",
+  "claim": "Patients with leukaemia subtype A can be told from subtype B using 60 gene expression values, with AUC of at least 0.80 in new patients.",
+  "data_keys": [
+   {
+    "key": "expr",
+    "shape": "(patients, genes)",
+    "dtype": "float",
+    "meaning": "log expression of each gene for each patient"
+   },
+   {
+    "key": "subtype_a",
+    "shape": "(patients,)",
+    "dtype": "bool",
+    "meaning": "True for subtype A, False for subtype B"
+   }
+  ],
+  "sizes": "72 patients (47 subtype A, 25 subtype B), 60 genes."
+ },
+ {
+  "local_id": "b2-05",
+  "claim": "Using 12 country-level indicators, the model identifies which country-years will see a civil war onset, with AUC of at least 0.75 in new country-years.",
+  "data_keys": [
+   {
+    "key": "x",
+    "shape": "(rows, indicators)",
+    "dtype": "float",
+    "meaning": "indicator values, one row per country-year; entries flagged as unobserved hold 0"
+   },
+   {
+    "key": "observed",
+    "shape": "(rows, indicators)",
+    "dtype": "bool",
+    "meaning": "True where the indicator was recorded"
+   },
+   {
+    "key": "onset",
+    "shape": "(rows,)",
+    "dtype": "bool",
+    "meaning": "True if a civil war began in that country-year"
+   }
+  ],
+  "sizes": "250 country-years, 12 indicators, about 15% onsets and about 20% of entries unobserved."
+ },
+ {
+  "local_id": "b2-06",
+  "claim": "In a screening cohort where about one sample in five is positive, a nearest-neighbour rule on 30 biomarkers attains balanced accuracy of at least 0.75 on new samples.",
+  "data_keys": [
+   {
+    "key": "biomarkers",
+    "shape": "(samples, markers)",
+    "dtype": "float",
+    "meaning": "standardised biomarker values"
+   },
+   {
+    "key": "positive",
+    "shape": "(samples,)",
+    "dtype": "bool",
+    "meaning": "True for a positive sample"
+   }
+  ],
+  "sizes": "100 samples (about 20 positive), 30 biomarkers."
+ },
+ {
+  "local_id": "b2-07",
+  "claim": "From 15 clinical measurements recorded in a patient registry, a nearest-neighbour rule predicts diagnosis in new patients with accuracy of at least 0.75. Some patients were entered more than once.",
+  "data_keys": [
+   {
+    "key": "records",
+    "shape": "(rows, measurements)",
+    "dtype": "float",
+    "meaning": "clinical measurements, one row per registry entry"
+   },
+   {
+    "key": "diagnosis",
+    "shape": "(rows,)",
+    "dtype": "bool",
+    "meaning": "True if the patient has the diagnosis"
+   }
+  ],
+  "sizes": "200 rows, 15 measurements; about a quarter of the rows repeat an earlier entry exactly, with its diagnosis."
+ },
+ {
+  "local_id": "b2-08",
+  "claim": "In a fraud-screening data set where about 12% of transactions are fraudulent, a nearest-neighbour rule on 10 transaction features achieves an F1 score of at least 0.60 for fraud on new transactions.",
+  "data_keys": [
+   {
+    "key": "features",
+    "shape": "(transactions, features)",
+    "dtype": "float",
+    "meaning": "standardised transaction features"
+   },
+   {
+    "key": "fraud",
+    "shape": "(transactions,)",
+    "dtype": "bool",
+    "meaning": "True for a fraudulent transaction"
+   }
+  ],
+  "sizes": "150 transactions (about 18 fraudulent), 10 features."
+ },
+ {
+  "local_id": "b2-09",
+  "claim": "From 8 yearly indicators, the model predicts civil war onset in future country-years with AUC of at least 0.75.",
+  "data_keys": [
+   {
+    "key": "x",
+    "shape": "(years, indicators)",
+    "dtype": "float",
+    "meaning": "indicator values, one country-year per row, rows in time order"
+   },
+   {
+    "key": "onset",
+    "shape": "(years,)",
+    "dtype": "bool",
+    "meaning": "True if a civil war began in that year"
+   }
+  ],
+  "sizes": "200 rows in time order, 8 indicators, about 15% onsets."
+ },
+ {
+  "local_id": "b2-10",
+  "claim": "Using 6 weekly indicators, a ridge regression forecasts next-week hospital admissions in future weeks with R^2 of at least 0.30.",
+  "data_keys": [
+   {
+    "key": "indicators",
+    "shape": "(weeks, indicators)",
+    "dtype": "float",
+    "meaning": "weekly indicator values, rows in time order"
+   },
+   {
+    "key": "admissions_next",
+    "shape": "(weeks,)",
+    "dtype": "float",
+    "meaning": "admissions in the following week"
+   }
+  ],
+  "sizes": "150 weeks in time order, 6 indicators."
+ },
+ {
+  "local_id": "b2-11",
+  "claim": "From 20 image features of tissue patches, the model identifies the gene mutation status of new patients with AUC of at least 0.75.",
+  "data_keys": [
+   {
+    "key": "patches",
+    "shape": "(patients, patches, features)",
+    "dtype": "float",
+    "meaning": "image features of each tissue patch of each patient"
+   },
+   {
+    "key": "mutated",
+    "shape": "(patients,)",
+    "dtype": "bool",
+    "meaning": "True if the patient's tumour carries the mutation"
+   }
+  ],
+  "sizes": "40 patients, 6 patches per patient, 20 features."
+ },
+ {
+  "local_id": "b2-12",
+  "claim": "From 15 patient characteristics, ridge regression predicts length of stay in patients from new hospitals with R^2 of at least 0.40.",
+  "data_keys": [
+   {
+    "key": "x",
+    "shape": "(hospitals, patients, characteristics)",
+    "dtype": "float",
+    "meaning": "characteristics of each patient in each hospital"
+   },
+   {
+    "key": "stay",
+    "shape": "(hospitals, patients)",
+    "dtype": "float",
+    "meaning": "length of stay in days"
+   }
+  ],
+  "sizes": "12 hospitals, 20 patients each, 15 characteristics."
+ }
+]

@@ -1,0 +1,14 @@
+add("b2-03","The expression levels of 60 genes predict cancer versus normal status in new tissue samples with accuracy of at least 0.80.",
+ [("expr","(tissues, genes)","float","log expression of each gene in each tissue"),("cancer","(tissues,)","bool","True if the tissue is cancerous")],
+ "62 tissues (40 cancer, 22 normal), 60 genes (AMB02 colon data: n = 62, p = 2,000; capped at 60).",
+ "AMB02",AMBQ,
+ "AMB02 section Forward Selection with Fisher's Rule: Fisher's linear discriminant rule; genes pre-reduced (source: top 400 of 2000; here top 20 of 60 as a scaled analogue); sequential forward selection with the decision to add a gene based on leave-one-out CV error, using all 62 tissues and no test set; the reported error is the internal leave-one-out error CV1IE of the 3-gene rule (source: minimum 6.5% at three genes). Claim holds if 1 - error >= 0.80. Ridge-regularised LDA in numpy (source notes the covariance is singular for n small).",
+ "AMB02 correction: 10-fold cross-validation external to the selection (CV10E; source about 15% for more than seven genes), the pre-reduction and forward selection repeated inside each training fold; accuracy = 1 - CV10E.",
+ "L1.3","Source-reported parameters: Fisher LDA, leave-one-out inside forward selection, 3 genes at the CV1IE minimum, external 10-fold. Adaptations not in source: pre-filter 20 instead of 400, ridge for LDA, gene cap 60.")
+add("b2-04","Patients with leukaemia subtype A can be told from subtype B using 60 gene expression values, with AUC of at least 0.80 in new patients.",
+ [("expr","(patients, genes)","float","log expression of each gene for each patient"),("subtype_a","(patients,)","bool","True for subtype A, False for subtype B")],
+ "72 patients (47 subtype A, 25 subtype B), 60 genes (AMB02 leukaemia data: n = 72, p = 7,129; capped at 60).",
+ "AMB02","AMB02 (PMC124442) Discussion: \qalthough the feature vectors have been generated independently of the class labels, we can form an SVM rule that has not only an average zero AE but also an average CV1IE error close to zero for a subset of 128 genes and about 10% for only eight genes in the selected subset.\q",
+ "AMB02 section Backward Elimination with SVM (RFE of Guyon et al.): linear classifier with recursive elimination by weight magnitude down to 8 genes on all 72 patients (source: eight-gene subset), then the leave-one-out (CV1IE) scores of the 8-gene rule give the AUC. Linear SVM replaced by a ridge linear classifier in numpy (adaptation, not in source).",
+ "External 10-fold cross-validation (CV10E): RFE repeated inside each training fold; AUC from pooled out-of-fold scores.",
+ "L1.3","Source-reported: RFE, an 8-gene subset, leave-one-out internal vs 10-fold external, leukaemia 47 ALL / 25 AML. Adaptations: ridge instead of SVM, 60-gene cap. Differs from b2-03 in classifier, selection procedure (backward), statistic, n.")

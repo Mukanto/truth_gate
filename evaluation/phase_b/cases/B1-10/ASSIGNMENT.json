@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-10",
+  "world_id": "W22",
+  "class": "B-1",
+  "subtype": "",
+  "source": "BAR05",
+  "brief": {
+    "id": "W22",
+    "claim": "In patients whose systolic blood pressure is at least 150 mmHg at entry, the drug lowers systolic pressure by at least 5 mmHg over 12 weeks. The claim holds when the estimated lowering is at least 5 mmHg and one-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "sbp",
+        "shape": "(patients, visits)",
+        "dtype": "float",
+        "meaning": "systolic pressure in mmHg at entry (visit 0) and after 12 weeks (visit 1)"
+      },
+      {
+        "key": "drug",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True for patients given the drug, False for patients given placebo"
+      }
+    ],
+    "sizes": "160 patients (about 80 per arm), 2 visits."
+  }
+}

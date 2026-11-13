@@ -1,0 +1,20 @@
+{
+  "local_id": "B1-11",
+  "world_id": "W52",
+  "class": "B-1",
+  "subtype": "",
+  "source": "BAR05",
+  "brief": {
+    "id": "W52",
+    "claim": "Among patients with a depression score in the top fifth at the first assessment, at least 70% have a lower score after the 8-week programme than before it.",
+    "data_keys": [
+      {
+        "key": "score",
+        "shape": "(patients, visits)",
+        "dtype": "float",
+        "meaning": "depression questionnaire score: visit 0 = first assessment, visit 1 = second assessment just before the programme, visit 2 = after the programme"
+      }
+    ],
+    "sizes": "120 patients, 3 visits."
+  }
+}

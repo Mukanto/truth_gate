@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-09",
+  "world_id": "W23",
+  "class": "B-3",
+  "subtype": "",
+  "source": "KRO93",
+  "brief": {
+    "id": "W23",
+    "claim": "Larger hospitals have lower hospital-acquired infection rates per admission: across 100 hospitals, the standardised regression slope (variables z-scored) of infections per admission on the number of beds is at most -0.3.",
+    "data_keys": [
+      {
+        "key": "infections",
+        "shape": "(hospitals,)",
+        "dtype": "float",
+        "meaning": "number of hospital-acquired infections recorded in one year"
+      },
+      {
+        "key": "admissions",
+        "shape": "(hospitals,)",
+        "dtype": "float",
+        "meaning": "number of patient admissions in the same year"
+      },
+      {
+        "key": "beds",
+        "shape": "(hospitals,)",
+        "dtype": "float",
+        "meaning": "number of staffed beds"
+      }
+    ],
+    "sizes": "100 hospitals"
+  }
+}

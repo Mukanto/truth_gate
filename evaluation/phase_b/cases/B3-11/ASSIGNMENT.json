@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-11",
+  "world_id": "W02",
+  "class": "B-3",
+  "subtype": "",
+  "source": "KRO93",
+  "brief": {
+    "id": "W02",
+    "claim": "Buildings with more occupants use less energy per square metre of floor area: across 150 office buildings, the Spearman rank correlation between the number of occupants and annual energy use per square metre is at most -0.3.",
+    "data_keys": [
+      {
+        "key": "energy_use",
+        "shape": "(buildings,)",
+        "dtype": "float",
+        "meaning": "annual metered energy use, MWh"
+      },
+      {
+        "key": "floor_area",
+        "shape": "(buildings,)",
+        "dtype": "float",
+        "meaning": "gross floor area, square metres"
+      },
+      {
+        "key": "occupants",
+        "shape": "(buildings,)",
+        "dtype": "float",
+        "meaning": "typical number of occupants (headcount)"
+      }
+    ],
+    "sizes": "150 buildings"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-09",
+  "world_id": "W14",
+  "class": "B-2",
+  "subtype": "L3.1",
+  "source": "KAP23",
+  "brief": {
+    "id": "W14",
+    "claim": "From 8 yearly indicators, the model predicts civil war onset in future country-years with AUC of at least 0.75.",
+    "data_keys": [
+      {
+        "key": "x",
+        "shape": "(years, indicators)",
+        "dtype": "float",
+        "meaning": "indicator values, one country-year per row, rows in time order"
+      },
+      {
+        "key": "onset",
+        "shape": "(years,)",
+        "dtype": "bool",
+        "meaning": "True if a civil war began in that year"
+      }
+    ],
+    "sizes": "200 rows in time order, 8 indicators, about 15% onsets."
+  }
+}

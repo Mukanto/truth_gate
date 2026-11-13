@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-12",
+  "world_id": "W11",
+  "class": "B-3",
+  "subtype": "",
+  "source": "KRO93",
+  "brief": {
+    "id": "W11",
+    "claim": "Firms with a larger payroll have lower staff turnover rates: across 250 firms, the proportion of variance in the annual turnover rate (leavers per employee) explained by the payroll (R squared of a simple linear regression) is at least 0.1.",
+    "data_keys": [
+      {
+        "key": "leavers",
+        "shape": "(firms,)",
+        "dtype": "float",
+        "meaning": "number of employees who left the firm during the year"
+      },
+      {
+        "key": "headcount",
+        "shape": "(firms,)",
+        "dtype": "float",
+        "meaning": "average number of employees during the year"
+      },
+      {
+        "key": "payroll",
+        "shape": "(firms,)",
+        "dtype": "float",
+        "meaning": "total annual payroll, millions of currency units"
+      }
+    ],
+    "sizes": "250 firms"
+  }
+}

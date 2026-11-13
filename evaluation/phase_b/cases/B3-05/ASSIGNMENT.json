@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-05",
+  "world_id": "W01",
+  "class": "B-3",
+  "subtype": "",
+  "source": "PEA97",
+  "brief": {
+    "id": "W01",
+    "claim": "Across 120 adult human skeletons, femur length relative to vertebral column length and tibia length relative to vertebral column length are positively related: the Pearson correlation between the two relative lengths is at least 0.4.",
+    "data_keys": [
+      {
+        "key": "femur_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "maximum femur length, mm"
+      },
+      {
+        "key": "tibia_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "maximum tibia length, mm"
+      },
+      {
+        "key": "vertebral_column_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "length of the articulated vertebral column, mm"
+      }
+    ],
+    "sizes": "120 skeletons"
+  }
+}

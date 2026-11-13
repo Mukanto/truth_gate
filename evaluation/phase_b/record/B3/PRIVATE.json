@@ -1,0 +1,110 @@
+[
+ {
+  "local_id": "B3-01",
+  "source": "ARC81",
+  "passage": "Europe PMC abstract (PMID 7212790): 'Type 2 coupling is the functional relationship between two calculated variables which have one or more common component variables.' 'The common problem in each type of mathematic coupling is that one variable either directly or indirectly contains the whole or components of the second variable.'",
+  "faulty": "Oxygen consumption is obtained by the Fick calculation VO2 = CO*Hb*1.34*(SaO2-SvO2)*10 and correlated (Pearson) with DO2 = CO*Hb*1.34*SaO2*10. Both share cardiac output, hemoglobin and SaO2 (and their measurement errors), so r is high even when true consumption is independent of delivery. Threshold r >= 0.5 as in the brief.",
+  "fixed": "Correlate DO2 (from CO, Hb, SaO2) with the independently measured vo2_expired (expired-gas analysis), whose errors are not shared with the delivery terms.",
+  "subtype": "",
+  "notes": "n=40, within the ICU studies Archie discusses (tens of patients). Under the null the coupling comes only through shared measurement error of CO/Hb/SaO2 and, if the world derives SvO2, through that. Recall, not in the abstract: the VO2/DO2 Fick formula and its use as the paper's example."
+ },
+ {
+  "local_id": "B3-02",
+  "source": "ARC81",
+  "passage": "Europe PMC abstract (PMID 7212790): 'Type 3, the most common type of mathematic coupling, is direct algebraic coupling between two variables, when one or more of the variables is derived and/or calculated.'",
+  "faulty": "SVR = 80*(MAP-CVP)/CO_thermodilution, then Spearman rank correlation with the same CO_thermodilution. Shared measurement error in CO makes SVR and CO negatively associated even if true SVR and true CO are unrelated.",
+  "fixed": "Spearman correlation of SVR (computed from thermodilution CO) with the independent Doppler cardiac output, so the measurement error of the CO that enters SVR is not shared with the CO it is correlated with.",
+  "subtype": "",
+  "notes": "n=100 (a larger ICU series). Rank statistic. Strength of the null-world coupling depends on the measurement error the world author chooses. Recall, not in the abstract: the SVR/cardiac-output example and the thermodilution setting."
+ },
+ {
+  "local_id": "B3-03",
+  "source": "ARC81",
+  "passage": "Europe PMC abstract (PMID 7212790): 'Type 3, the most common type of mathematic coupling, is direct algebraic coupling between two variables, when one or more of the variables is derived and/or calculated.'",
+  "faulty": "RV end-diastolic volume index = stroke_volume_index / rvef (both thermodilution), then standardised slope of that EDV index on rvef (threshold <= -0.4). EDV and EF share EF and its measurement error.",
+  "fixed": "Regress the radionuclide end-diastolic volume index (independent measurement) on rvef, same standardised slope and threshold.",
+  "subtype": "",
+  "notes": "n=30 (small cardiology series). Regression slope as statistic. The brief does not say which EDV key the criterion must use. Recall, not in the abstract: the right-ventricular EF/EDV example."
+ },
+ {
+  "local_id": "B3-04",
+  "source": "ARC81",
+  "passage": "Europe PMC abstract (PMID 7212790): 'Type 1 coupling involves directional changes in two variables which are mathematically coupled.' (plus the Type 2 sentence on common component variables)",
+  "faulty": "Per patient, delta VO2 = VO2_Fick(during) - VO2_Fick(before) and delta DO2 likewise from CO, Hb, SaO2; R squared of the regression of delta VO2 on delta DO2 (threshold 0.25). The change scores share the changes in CO, Hb and SaO2.",
+  "fixed": "Regress delta of the measured vo2_expired on delta DO2 (from CO, Hb, SaO2); the same R squared and threshold.",
+  "subtype": "",
+  "notes": "n=24, 2 time points: a paired, change-score structure, smaller sample regime than B3-01. Recall, not in the abstract: the dobutamine setting and delta VO2 vs delta DO2."
+ },
+ {
+  "local_id": "B3-05",
+  "source": "PEA97",
+  "passage": "Pearson 1897, p.490-491 (archive.org OCR text): 'Form the proper fractions x/y and z/y for each triplet, and correlation will be found between these indices.' and, for femur/humerus and tibia/humerus, 'there would be ... a correlation of about 0.4 to 0.5 between these indices had the bones been sorted absolutely at random.'",
+  "faulty": "Pearson correlation of femur_length/vertebral_column_length with tibia_length/vertebral_column_length (threshold r >= 0.4). With independent femur and tibia lengths and a varying denominator the index correlation is about 0.4 to 0.5 at equal coefficients of variation (documented in Pearson).",
+  "fixed": "Partial correlation of femur_length and tibia_length controlling for vertebral_column_length (all in logs, or residuals of linear regression on vertebral column length); same threshold. Standard correction (Pearson's expected-index correlation, or partial correlation).",
+  "subtype": "",
+  "notes": "n=120 (sample size not documented in the abstract-level sources; chosen for plausibility). Risk noted: the world author may read the null as 'the two relative lengths are independent', in which case the faulty criterion will not flag; that is a property of the brief wording, left as is. Source difference: Pearson's example uses humerus as the denominator; this brief uses vertebral column length (same structure, a variation)."
+ },
+ {
+  "local_id": "B3-06",
+  "source": "PEA97",
+  "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+  "faulty": "Spearman correlation of co2_emissions_total/population with gdp_total/population (threshold 0.5). With widely varying population the per-capita ratios correlate even if totals are unrelated.",
+  "fixed": "Spearman partial correlation of the two totals (log) controlling for population (log), same threshold 0.5.",
+  "subtype": "",
+  "notes": "n=150 countries (the real set is ~190; cut to the 300-row cap well below it). Rank statistic, economic setting, per-capita rate. Per-capita economics is NOT in Pearson 1897 (a later application of Proposition III; recall)."
+ },
+ {
+  "local_id": "B3-07",
+  "source": "PEA97",
+  "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+  "faulty": "Standardised slope of yield_total/farm_area on fertilizer_total/farm_area (threshold 0.3). Shared area denominator drives the slope when farm size varies.",
+  "fixed": "Standardised partial coefficient of fertilizer_total in the regression of yield_total on fertilizer_total and farm_area (all z-scored, logs optional but identical in structure), threshold 0.3.",
+  "subtype": "",
+  "notes": "n=90 farms. Per-area rates; regression slope. Per-area agricultural rates are NOT in Pearson 1897 (application of the same proposition; recall). Regression of one index on another is not treated in the paper (it gives the correlation)."
+ },
+ {
+  "local_id": "B3-08",
+  "source": "PEA97",
+  "passage": "Pearson 1897, Proposition III and its conclusions (i)-(ii): the correlation between two indices with the same denominator (x1/x3 and x2/x3) does not vanish when the remaining organs are uncorrelated; text: 'The particular case that is likely to occur is when u and v are indices with the same denominator.'",
+  "faulty": "R squared of the regression of peak_power/body_mass on vo2max/body_mass (threshold 0.25), the shared body mass denominator producing explained variance.",
+  "fixed": "Squared partial correlation of peak_power and vo2max controlling for body_mass (threshold 0.25).",
+  "subtype": "",
+  "notes": "n=30 (small sports-physiology sample). Proportion of variance; body-size-normalised measures. Body-mass-normalised physiology and R squared are NOT in Pearson 1897 (application; recall)."
+ },
+ {
+  "local_id": "B3-09",
+  "source": "KRO93",
+  "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+  "faulty": "Standardised slope of (infections/admissions) on beds (threshold <= -0.3). Admissions rise with beds, so the rate falls with beds even if infection counts are unrelated to beds.",
+  "fixed": "Standardised coefficient of beds in the regression of infections on beds and admissions (the ratio-free form, with the denominator as a covariate), threshold <= -0.3.",
+  "subtype": "",
+  "notes": "n=100 hospitals. Ratio as the dependent variable, predictor correlated with the denominator. Full text (JSTOR) not read; the specific mechanism (predictor correlated with the denominator) is recall."
+ },
+ {
+  "local_id": "B3-10",
+  "source": "KRO93",
+  "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+  "faulty": "Standardised slope of systolic_pressure on heart_weight/body_weight (threshold >= 0.3). If pressure depends on body weight (the denominator) but not on heart weight, the ratio still predicts pressure.",
+  "fixed": "Standardised coefficient of heart_weight in the regression of systolic_pressure on heart_weight and body_weight, threshold >= 0.3.",
+  "subtype": "",
+  "notes": "n=60 rats. Ratio as the independent variable. Full text (JSTOR) not read; the specific mechanism (outcome related to the denominator) is recall."
+ },
+ {
+  "local_id": "B3-11",
+  "source": "KRO93",
+  "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+  "faulty": "Spearman correlation of occupants with energy_use/floor_area (threshold <= -0.3). Floor area grows with occupants, so the intensity falls with occupants even if energy use is unrelated to occupants.",
+  "fixed": "Spearman-type partial correlation of energy_use and occupants controlling for floor_area (ranks or logs), threshold <= -0.3.",
+  "subtype": "",
+  "notes": "n=150 buildings. Rank statistic; economic/engineering per-area rate. Full text (JSTOR) not read; Spearman and the floor-area/occupants setting are my application; the abstract's regression setting is the source."
+ },
+ {
+  "local_id": "B3-12",
+  "source": "KRO93",
+  "passage": "Kronmal 1993 abstract (IDEAS/RePEc): 'The consequences of using a single ratio as either the dependent or one of the independent variables in a multiple-regression analysis are described. It is shown that the use of ratios in regression analyses can lead to incorrect or misleading inferences.'",
+  "faulty": "R squared of the regression of leavers/headcount on payroll (threshold 0.1). Headcount grows with payroll, so the turnover rate falls with payroll even if the number of leavers is unrelated to payroll.",
+  "fixed": "Partial R squared of payroll in the regression of leavers on payroll and headcount, threshold 0.1.",
+  "subtype": "",
+  "notes": "n=250 firms (largest sample regime in the set). Proportion of variance; economic ratio. Full text (JSTOR) not read; R squared and the firm setting are my application."
+ }
+]

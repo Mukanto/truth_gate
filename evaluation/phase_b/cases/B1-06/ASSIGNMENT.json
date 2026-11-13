@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-06",
+  "world_id": "W09",
+  "class": "B-1",
+  "subtype": "",
+  "source": "VUL09",
+  "brief": {
+    "id": "W09",
+    "claim": "Among 28 subjects (14 high-anxiety and 14 low-anxiety by interview), in the voxels of a 40-voxel amygdala region that react more strongly to threatening pictures in the high-anxiety group, the group difference in mean reactivity has a Welch t statistic of at least 3.0.",
+    "data_keys": [
+      {
+        "key": "react",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "response to threat minus neutral pictures, one value per subject and voxel"
+      },
+      {
+        "key": "high_anx",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True for the 14 high-anxiety subjects; subjects ordered so that groups alternate (True, False, True, False, ...)"
+      }
+    ],
+    "sizes": "28 subjects (14 + 14), 40 voxels."
+  }
+}

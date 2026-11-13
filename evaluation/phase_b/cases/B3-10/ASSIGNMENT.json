@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-10",
+  "world_id": "W51",
+  "class": "B-3",
+  "subtype": "",
+  "source": "KRO93",
+  "brief": {
+    "id": "W51",
+    "claim": "In adult rats, a heavier heart relative to body weight goes with higher systolic blood pressure: across 60 rats, the standardised regression slope (variables z-scored) of systolic pressure on heart weight per body weight is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "systolic_pressure",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure, mmHg, by tail-cuff"
+      },
+      {
+        "key": "heart_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "wet heart weight at necropsy, g"
+      },
+      {
+        "key": "body_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "body weight at necropsy, g"
+      }
+    ],
+    "sizes": "60 rats"
+  }
+}

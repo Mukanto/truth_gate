@@ -1,0 +1,42 @@
+== O1a  (S=5, repeatable=True)
+   plus           holds 280/300  fails 20  undefined 0  rate_holds=0.933
+   minus          holds 23/300  fails 277  undefined 0  rate_holds=0.077
+   control(plus)  holds 16/300  fails 284  undefined 0  rate_holds=0.053
+   noise          holds 0/100  fails 100  undefined 0  rate_holds=0.000
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=0.052 ms  g=0.042 ms  estimate=0.2 s
+== O1b  (S=5, repeatable=True)
+   plus           holds 261/300  fails 39  undefined 0  rate_holds=0.870
+   minus          holds 2/300  fails 298  undefined 0  rate_holds=0.007
+   control(plus)  holds 1/300  fails 299  undefined 0  rate_holds=0.003
+   noise          holds 0/100  fails 100  undefined 0  rate_holds=0.000
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=1.164 ms  g=0.088 ms  estimate=3.0 s
+== O2a  (S=5, repeatable=True)
+   plus           holds 256/300  fails 44  undefined 0  rate_holds=0.853
+   minus          holds 20/300  fails 280  undefined 0  rate_holds=0.067
+   control(plus)  holds 10/300  fails 290  undefined 0  rate_holds=0.033
+   noise          holds 5/100  fails 95  undefined 0  rate_holds=0.050
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=0.063 ms  g=0.014 ms  estimate=0.2 s
+== O2b  (S=5, repeatable=True)
+   plus           holds 273/300  fails 27  undefined 0  rate_holds=0.910
+   minus          holds 19/300  fails 281  undefined 0  rate_holds=0.063
+   control(plus)  holds 20/300  fails 280  undefined 0  rate_holds=0.067
+   noise          holds 3/100  fails 97  undefined 0  rate_holds=0.030
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=0.045 ms  g=0.007 ms  estimate=0.1 s
+== O3a  (S=5, repeatable=True)
+   plus           holds 284/300  fails 16  undefined 0  rate_holds=0.947
+   minus          holds 0/300  fails 300  undefined 0  rate_holds=0.000
+   control(plus)  holds 0/300  fails 300  undefined 0  rate_holds=0.000
+   noise          holds 0/100  fails 100  undefined 0  rate_holds=0.000
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=0.041 ms  g=0.023 ms  estimate=0.2 s
+== O3b  (S=5, repeatable=True)
+   plus           holds 300/300  fails 0  undefined 0  rate_holds=1.000
+   minus          holds 46/300  fails 254  undefined 0  rate_holds=0.153
+   control(plus)  holds 12/300  fails 288  undefined 0  rate_holds=0.040
+   noise          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   zeros          holds 0/100  fails 0  undefined 100  rate_holds=0.000
+   timing: t=0.015 ms  g=0.109 ms  estimate=0.3 s

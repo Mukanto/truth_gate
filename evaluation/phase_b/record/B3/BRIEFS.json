@@ -1,0 +1,127 @@
+[
+  {
+    "local_id": "B3-01",
+    "claim": "In critically ill adults, oxygen consumption rises with oxygen delivery: across 40 patients, the Pearson correlation between oxygen consumption and oxygen delivery is at least 0.5.",
+    "data_keys": [
+      {"key": "cardiac_output", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output, L/min, from thermodilution"},
+      {"key": "hemoglobin", "shape": "(patients,)", "dtype": "float", "meaning": "blood hemoglobin concentration, g/dL"},
+      {"key": "sao2", "shape": "(patients,)", "dtype": "float", "meaning": "arterial oxygen saturation, fraction 0-1"},
+      {"key": "svo2", "shape": "(patients,)", "dtype": "float", "meaning": "mixed venous oxygen saturation, fraction 0-1"},
+      {"key": "vo2_expired", "shape": "(patients,)", "dtype": "float", "meaning": "oxygen consumption, mL/min, measured by expired-gas analysis at the same time as the haemodynamic measurements"}
+    ],
+    "sizes": "40 patients"
+  },
+  {
+    "local_id": "B3-02",
+    "claim": "In critically ill adults, systemic vascular resistance falls as cardiac output rises: across 100 patients, the Spearman rank correlation between systemic vascular resistance and cardiac output is at most -0.4.",
+    "data_keys": [
+      {"key": "map", "shape": "(patients,)", "dtype": "float", "meaning": "mean arterial pressure, mmHg"},
+      {"key": "cvp", "shape": "(patients,)", "dtype": "float", "meaning": "central venous pressure, mmHg"},
+      {"key": "co_thermodilution", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output, L/min, by pulmonary-artery thermodilution"},
+      {"key": "co_doppler", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output, L/min, by echocardiographic Doppler, measured at the same time by a separate operator"}
+    ],
+    "sizes": "100 patients"
+  },
+  {
+    "local_id": "B3-03",
+    "claim": "In patients with heart failure, a larger right ventricular end-diastolic volume goes with a lower right ventricular ejection fraction: across 30 patients, the standardised slope (both variables z-scored) of end-diastolic volume index on ejection fraction is at most -0.4.",
+    "data_keys": [
+      {"key": "stroke_volume_index", "shape": "(patients,)", "dtype": "float", "meaning": "stroke volume index, mL/m2, from thermodilution"},
+      {"key": "rvef", "shape": "(patients,)", "dtype": "float", "meaning": "right ventricular ejection fraction, fraction 0-1, from a fast-response thermistor catheter"},
+      {"key": "rv_edv_index_radionuclide", "shape": "(patients,)", "dtype": "float", "meaning": "right ventricular end-diastolic volume index, mL/m2, from gated radionuclide ventriculography done in the same session"}
+    ],
+    "sizes": "30 patients"
+  },
+  {
+    "local_id": "B3-04",
+    "claim": "A dobutamine infusion in critically ill adults raises oxygen consumption in proportion to the rise in oxygen delivery: across 24 patients, the proportion of variance in the change in oxygen consumption explained by the change in oxygen delivery (R squared of a simple linear regression) is at least 0.25.",
+    "data_keys": [
+      {"key": "cardiac_output", "shape": "(patients, 2)", "dtype": "float", "meaning": "cardiac output, L/min, by thermodilution; axis 1 = [before infusion, during infusion]"},
+      {"key": "hemoglobin", "shape": "(patients, 2)", "dtype": "float", "meaning": "blood hemoglobin concentration, g/dL; axis 1 = [before, during]"},
+      {"key": "sao2", "shape": "(patients, 2)", "dtype": "float", "meaning": "arterial oxygen saturation, fraction 0-1; axis 1 = [before, during]"},
+      {"key": "svo2", "shape": "(patients, 2)", "dtype": "float", "meaning": "mixed venous oxygen saturation, fraction 0-1; axis 1 = [before, during]"},
+      {"key": "vo2_expired", "shape": "(patients, 2)", "dtype": "float", "meaning": "oxygen consumption, mL/min, from expired-gas analysis; axis 1 = [before, during]"}
+    ],
+    "sizes": "24 patients, 2 time points each"
+  },
+  {
+    "local_id": "B3-05",
+    "claim": "Across 120 adult human skeletons, femur length relative to vertebral column length and tibia length relative to vertebral column length are positively related: the Pearson correlation between the two relative lengths is at least 0.4.",
+    "data_keys": [
+      {"key": "femur_length", "shape": "(skeletons,)", "dtype": "float", "meaning": "maximum femur length, mm"},
+      {"key": "tibia_length", "shape": "(skeletons,)", "dtype": "float", "meaning": "maximum tibia length, mm"},
+      {"key": "vertebral_column_length", "shape": "(skeletons,)", "dtype": "float", "meaning": "length of the articulated vertebral column, mm"}
+    ],
+    "sizes": "120 skeletons"
+  },
+  {
+    "local_id": "B3-06",
+    "claim": "Wealthier countries emit more carbon dioxide per person: across 150 countries, the Spearman rank correlation between per-capita carbon dioxide emissions and per-capita gross domestic product is at least 0.5.",
+    "data_keys": [
+      {"key": "co2_emissions_total", "shape": "(countries,)", "dtype": "float", "meaning": "annual national carbon dioxide emissions, megatonnes"},
+      {"key": "gdp_total", "shape": "(countries,)", "dtype": "float", "meaning": "national gross domestic product, billions of US dollars (purchasing-power adjusted)"},
+      {"key": "population", "shape": "(countries,)", "dtype": "float", "meaning": "national population, millions"}
+    ],
+    "sizes": "150 countries"
+  },
+  {
+    "local_id": "B3-07",
+    "claim": "Across 90 farms, a farm that applies more fertilizer per hectare obtains a higher crop yield per hectare: the standardised regression slope (both variables z-scored) of yield per hectare on fertilizer per hectare is at least 0.3.",
+    "data_keys": [
+      {"key": "yield_total", "shape": "(farms,)", "dtype": "float", "meaning": "total annual crop harvest of the farm, tonnes"},
+      {"key": "fertilizer_total", "shape": "(farms,)", "dtype": "float", "meaning": "total annual fertilizer applied on the farm, kg of nitrogen"},
+      {"key": "farm_area", "shape": "(farms,)", "dtype": "float", "meaning": "cropped area of the farm, hectares"}
+    ],
+    "sizes": "90 farms"
+  },
+  {
+    "local_id": "B3-08",
+    "claim": "In trained athletes, aerobic capacity per kilogram of body mass goes with sprint power per kilogram of body mass: across 30 athletes, the proportion of variance in peak power per kilogram explained by maximal oxygen uptake per kilogram (R squared of a simple linear regression) is at least 0.25.",
+    "data_keys": [
+      {"key": "vo2max", "shape": "(athletes,)", "dtype": "float", "meaning": "maximal oxygen uptake, L/min, from an incremental treadmill test"},
+      {"key": "peak_power", "shape": "(athletes,)", "dtype": "float", "meaning": "peak power output in a 10-second cycle sprint, W"},
+      {"key": "body_mass", "shape": "(athletes,)", "dtype": "float", "meaning": "body mass, kg"}
+    ],
+    "sizes": "30 athletes"
+  },
+  {
+    "local_id": "B3-09",
+    "claim": "Larger hospitals have lower hospital-acquired infection rates per admission: across 100 hospitals, the standardised regression slope (variables z-scored) of infections per admission on the number of beds is at most -0.3.",
+    "data_keys": [
+      {"key": "infections", "shape": "(hospitals,)", "dtype": "float", "meaning": "number of hospital-acquired infections recorded in one year"},
+      {"key": "admissions", "shape": "(hospitals,)", "dtype": "float", "meaning": "number of patient admissions in the same year"},
+      {"key": "beds", "shape": "(hospitals,)", "dtype": "float", "meaning": "number of staffed beds"}
+    ],
+    "sizes": "100 hospitals"
+  },
+  {
+    "local_id": "B3-10",
+    "claim": "In adult rats, a heavier heart relative to body weight goes with higher systolic blood pressure: across 60 rats, the standardised regression slope (variables z-scored) of systolic pressure on heart weight per body weight is at least 0.3.",
+    "data_keys": [
+      {"key": "systolic_pressure", "shape": "(rats,)", "dtype": "float", "meaning": "systolic blood pressure, mmHg, by tail-cuff"},
+      {"key": "heart_weight", "shape": "(rats,)", "dtype": "float", "meaning": "wet heart weight at necropsy, g"},
+      {"key": "body_weight", "shape": "(rats,)", "dtype": "float", "meaning": "body weight at necropsy, g"}
+    ],
+    "sizes": "60 rats"
+  },
+  {
+    "local_id": "B3-11",
+    "claim": "Buildings with more occupants use less energy per square metre of floor area: across 150 office buildings, the Spearman rank correlation between the number of occupants and annual energy use per square metre is at most -0.3.",
+    "data_keys": [
+      {"key": "energy_use", "shape": "(buildings,)", "dtype": "float", "meaning": "annual metered energy use, MWh"},
+      {"key": "floor_area", "shape": "(buildings,)", "dtype": "float", "meaning": "gross floor area, square metres"},
+      {"key": "occupants", "shape": "(buildings,)", "dtype": "float", "meaning": "typical number of occupants (headcount)"}
+    ],
+    "sizes": "150 buildings"
+  },
+  {
+    "local_id": "B3-12",
+    "claim": "Firms with a larger payroll have lower staff turnover rates: across 250 firms, the proportion of variance in the annual turnover rate (leavers per employee) explained by the payroll (R squared of a simple linear regression) is at least 0.1.",
+    "data_keys": [
+      {"key": "leavers", "shape": "(firms,)", "dtype": "float", "meaning": "number of employees who left the firm during the year"},
+      {"key": "headcount", "shape": "(firms,)", "dtype": "float", "meaning": "average number of employees during the year"},
+      {"key": "payroll", "shape": "(firms,)", "dtype": "float", "meaning": "total annual payroll, millions of currency units"}
+    ],
+    "sizes": "250 firms"
+  }
+]

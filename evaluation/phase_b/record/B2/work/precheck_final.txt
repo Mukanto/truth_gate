@@ -1,0 +1,72 @@
+b2-01 plus True 0.895  False 0.105  None 0.000  (n=200)
+b2-01 minus True 0.055  False 0.945  None 0.000  (n=200)
+b2-01 noise probe True 0.050  False 0.950  None 0.000  (n=100)
+b2-01 zeros probe [None, None, None]
+b2-01 deterministic: True
+b2-01 timing t=0.0009 s  g=0.0000 s  S=5  estimate=2 s
+b2-02 plus True 0.900  False 0.100  None 0.000  (n=200)
+b2-02 minus True 0.035  False 0.965  None 0.000  (n=200)
+b2-02 noise probe True 0.030  False 0.970  None 0.000  (n=100)
+b2-02 zeros probe [None, None, None]
+b2-02 deterministic: True
+b2-02 timing t=0.0009 s  g=0.0000 s  S=5  estimate=2 s
+b2-03 plus True 0.390  False 0.610  None 0.000  (n=200)
+b2-03 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-03 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-03 zeros probe [None, None, None]
+b2-03 deterministic: True
+b2-03 timing t=0.0261 s  g=0.0001 s  S=5  estimate=63 s
+b2-04 plus True 0.675  False 0.325  None 0.000  (n=200)
+b2-04 minus True 0.005  False 0.995  None 0.000  (n=200)
+b2-04 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-04 zeros probe [None, None, None]
+b2-04 deterministic: True
+b2-04 timing t=0.0220 s  g=0.0001 s  S=5  estimate=53 s
+b2-05 plus True 0.680  False 0.320  None 0.000  (n=200)
+b2-05 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-05 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-05 zeros probe [None, None, None]
+b2-05 deterministic: True
+b2-05 timing t=0.0013 s  g=0.0001 s  S=5  estimate=3 s
+b2-06 plus True 1.000  False 0.000  None 0.000  (n=200)
+b2-06 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-06 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-06 zeros probe [None, None, None]
+b2-06 deterministic: True
+b2-06 timing t=0.0025 s  g=0.0001 s  S=5  estimate=6 s
+b2-07 plus True 0.940  False 0.060  None 0.000  (n=200)
+b2-07 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-07 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-07 zeros probe [None, None, None]
+b2-07 deterministic: True
+b2-07 timing t=0.0013 s  g=0.0001 s  S=5  estimate=3 s
+b2-08 plus True 0.950  False 0.050  None 0.000  (n=200)
+b2-08 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-08 noise probe True 0.110  False 0.890  None 0.000  (n=100)
+b2-08 zeros probe [None, None, None]
+b2-08 deterministic: True
+b2-08 timing t=0.0019 s  g=0.0000 s  S=5  estimate=5 s
+b2-09 plus True 0.425  False 0.500  None 0.075  (n=200)
+b2-09 minus True 0.030  False 0.960  None 0.010  (n=200)
+b2-09 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-09 zeros probe [None, None, None]
+b2-09 deterministic: True
+b2-09 timing t=0.0002 s  g=0.0010 s  S=5  estimate=3 s
+b2-10 plus True 0.430  False 0.570  None 0.000  (n=200)
+b2-10 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-10 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-10 zeros probe [None, None, None]
+b2-10 deterministic: True
+b2-10 timing t=0.0001 s  g=0.0010 s  S=5  estimate=3 s
+b2-11 plus True 0.620  False 0.380  None 0.000  (n=200)
+b2-11 minus True 0.005  False 0.995  None 0.000  (n=200)
+b2-11 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-11 zeros probe [None, None, None]
+b2-11 deterministic: True
+b2-11 timing t=0.0013 s  g=0.0001 s  S=5  estimate=3 s
+b2-12 plus True 0.595  False 0.405  None 0.000  (n=200)
+b2-12 minus True 0.000  False 1.000  None 0.000  (n=200)
+b2-12 noise probe True 0.000  False 1.000  None 0.000  (n=100)
+b2-12 zeros probe [None, None, None]
+b2-12 deterministic: True
+b2-12 timing t=0.0005 s  g=0.0000 s  S=5  estimate=1 s

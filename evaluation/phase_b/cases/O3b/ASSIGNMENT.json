@@ -1,0 +1,26 @@
+{
+  "local_id": "O3b",
+  "world_id": "W47",
+  "class": "O",
+  "subtype": "O-3",
+  "source": "HER14",
+  "brief": {
+    "id": "W47",
+    "claim": "Economic growth is lower in country-years with high public debt: mean annual real GDP growth in country-years with debt above 90% of GDP is at least 1.5 percentage points below mean growth in country-years with debt at or below 90%.",
+    "data_keys": [
+      {
+        "key": "growth",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "annual real GDP growth, percent, for each country and year"
+      },
+      {
+        "key": "debt",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "public debt as percent of GDP, same layout as growth"
+      }
+    ],
+    "sizes": "20 countries x 15 years = 300 country-years"
+  }
+}

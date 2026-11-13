@@ -1,0 +1,26 @@
+{
+  "local_id": "O3a",
+  "world_id": "W08",
+  "class": "O",
+  "subtype": "O-3",
+  "source": "BAG09",
+  "brief": {
+    "id": "W08",
+    "claim": "A five-gene response signature tracks drug sensitivity across the cell-line panel: the Pearson correlation between the signature score (mean of the signature genes, which are columns 5 to 9 of expr counting from 1) and the measured sensitivity is at least 0.5.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(cell_lines, 20)",
+        "dtype": "float",
+        "meaning": "log expression of 20 genes per cell line, genes in the panel's list order (the five signature genes are columns 5 to 9, counting from 1); rows are cell lines"
+      },
+      {
+        "key": "sensitivity",
+        "shape": "(cell_lines,)",
+        "dtype": "float",
+        "meaning": "measured drug sensitivity (higher = more sensitive) per cell line, rows in the panel's order"
+      }
+    ],
+    "sizes": "60 cell lines; 20 genes"
+  }
+}

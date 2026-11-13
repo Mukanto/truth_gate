@@ -1,0 +1,26 @@
+{
+  "local_id": "O2a",
+  "world_id": "W40",
+  "class": "O",
+  "subtype": "O-2",
+  "source": "SIM11",
+  "brief": {
+    "id": "W40",
+    "claim": "Participants in the treated group score higher than controls on the study's primary outcome (outcome measure 1): a one-sided Welch t test on measure 1 gives p < 0.05.",
+    "data_keys": [
+      {
+        "key": "treated",
+        "shape": "(participants_treated, 2)",
+        "dtype": "float",
+        "meaning": "the two outcome measures (columns: measure 1 = primary, measure 2 = secondary; correlated, r about 0.5) for each treated participant"
+      },
+      {
+        "key": "control",
+        "shape": "(participants_control, 2)",
+        "dtype": "float",
+        "meaning": "the same two outcome measures for each control participant"
+      }
+    ],
+    "sizes": "20 participants per group"
+  }
+}

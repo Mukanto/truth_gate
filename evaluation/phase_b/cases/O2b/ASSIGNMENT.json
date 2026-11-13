@@ -1,0 +1,26 @@
+{
+  "local_id": "O2b",
+  "world_id": "W03",
+  "class": "O",
+  "subtype": "O-2",
+  "source": "SIM11",
+  "brief": {
+    "id": "W03",
+    "claim": "Participants who received the treatment score higher than controls on the outcome: a one-sided Welch t test of treated versus control gives p < 0.05 once recruitment of the planned sample is complete.",
+    "data_keys": [
+      {
+        "key": "treated",
+        "shape": "(participants_treated,)",
+        "dtype": "float",
+        "meaning": "outcome score of each treated participant, rows in order of recruitment"
+      },
+      {
+        "key": "control",
+        "shape": "(participants_control,)",
+        "dtype": "float",
+        "meaning": "outcome score of each control participant, rows in order of recruitment"
+      }
+    ],
+    "sizes": "planned sample 30 participants per group"
+  }
+}

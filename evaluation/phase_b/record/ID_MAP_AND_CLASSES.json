@@ -1,0 +1,434 @@
+[
+  {
+    "local_id": "B3-05",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "PEA97",
+    "world_id": "W01"
+  },
+  {
+    "local_id": "B3-11",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "KRO93",
+    "world_id": "W02"
+  },
+  {
+    "local_id": "O2b",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-2",
+    "source": "SIM11",
+    "world_id": "W03"
+  },
+  {
+    "local_id": "b2-07",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.4",
+    "source": "KAP23",
+    "world_id": "W04"
+  },
+  {
+    "local_id": "B1-01",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "KRI09",
+    "world_id": "W05"
+  },
+  {
+    "local_id": "b2-11",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L3.2",
+    "source": "KAP23",
+    "world_id": "W06"
+  },
+  {
+    "local_id": "B1-02",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "KRI09",
+    "world_id": "W07"
+  },
+  {
+    "local_id": "O3a",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-3",
+    "source": "BAG09",
+    "world_id": "W08"
+  },
+  {
+    "local_id": "B1-06",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "VUL09",
+    "world_id": "W09"
+  },
+  {
+    "local_id": "B6-12",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W10"
+  },
+  {
+    "local_id": "B3-12",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "KRO93",
+    "world_id": "W11"
+  },
+  {
+    "local_id": "B1-12",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "BAR05",
+    "world_id": "W12"
+  },
+  {
+    "local_id": "B6-10",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W13"
+  },
+  {
+    "local_id": "b2-09",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L3.1",
+    "source": "KAP23",
+    "world_id": "W14"
+  },
+  {
+    "local_id": "B1-07",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W15"
+  },
+  {
+    "local_id": "b2-05",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.2",
+    "source": "KAP23",
+    "world_id": "W16"
+  },
+  {
+    "local_id": "B3-06",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "PEA97",
+    "world_id": "W17"
+  },
+  {
+    "local_id": "b2-06",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.2",
+    "source": "KAP23",
+    "world_id": "W18"
+  },
+  {
+    "local_id": "B1-04",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "VUL09",
+    "world_id": "W19"
+  },
+  {
+    "local_id": "B6-03",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "NIE11",
+    "world_id": "W20"
+  },
+  {
+    "local_id": "B1-08",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W21"
+  },
+  {
+    "local_id": "B1-10",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "BAR05",
+    "world_id": "W22"
+  },
+  {
+    "local_id": "B3-09",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "KRO93",
+    "world_id": "W23"
+  },
+  {
+    "local_id": "B3-08",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "PEA97",
+    "world_id": "W24"
+  },
+  {
+    "local_id": "B6-04",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "HUR84",
+    "world_id": "W25"
+  },
+  {
+    "local_id": "B3-02",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "ARC81",
+    "world_id": "W26"
+  },
+  {
+    "local_id": "b2-04",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.3",
+    "source": "AMB02",
+    "world_id": "W27"
+  },
+  {
+    "local_id": "B1-03",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "KRI09",
+    "world_id": "W28"
+  },
+  {
+    "local_id": "B3-01",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "ARC81",
+    "world_id": "W29"
+  },
+  {
+    "local_id": "b2-08",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.4",
+    "source": "KAP23",
+    "world_id": "W30"
+  },
+  {
+    "local_id": "B6-09",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "LAZ10",
+    "world_id": "W31"
+  },
+  {
+    "local_id": "B6-01",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "NIE11",
+    "world_id": "W32"
+  },
+  {
+    "local_id": "O1b",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-1",
+    "source": "KAP23",
+    "world_id": "W33"
+  },
+  {
+    "local_id": "B1-05",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "VUL09",
+    "world_id": "W34"
+  },
+  {
+    "local_id": "b2-02",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.1",
+    "source": "SIM03",
+    "world_id": "W35"
+  },
+  {
+    "local_id": "b2-03",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.3",
+    "source": "AMB02",
+    "world_id": "W36"
+  },
+  {
+    "local_id": "b2-10",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L3.1",
+    "source": "KAP23",
+    "world_id": "W37"
+  },
+  {
+    "local_id": "b2-01",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L1.1",
+    "source": "SIM03",
+    "world_id": "W38"
+  },
+  {
+    "local_id": "B6-06",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "HUR84",
+    "world_id": "W39"
+  },
+  {
+    "local_id": "O2a",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-2",
+    "source": "SIM11",
+    "world_id": "W40"
+  },
+  {
+    "local_id": "B1-09",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W41"
+  },
+  {
+    "local_id": "B6-07",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "LAZ10",
+    "world_id": "W42"
+  },
+  {
+    "local_id": "B3-07",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "PEA97",
+    "world_id": "W43"
+  },
+  {
+    "local_id": "B6-11",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "MAK19",
+    "world_id": "W44"
+  },
+  {
+    "local_id": "B3-04",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "ARC81",
+    "world_id": "W45"
+  },
+  {
+    "local_id": "B6-05",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "HUR84",
+    "world_id": "W46"
+  },
+  {
+    "local_id": "O3b",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-3",
+    "source": "HER14",
+    "world_id": "W47"
+  },
+  {
+    "local_id": "B6-02",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "NIE11",
+    "world_id": "W48"
+  },
+  {
+    "local_id": "b2-12",
+    "author_folder": "B2",
+    "class": "B-2",
+    "subtype": "L3.2",
+    "source": "KAP23",
+    "world_id": "W49"
+  },
+  {
+    "local_id": "B6-08",
+    "author_folder": "B6",
+    "class": "B-6",
+    "subtype": "",
+    "source": "LAZ10",
+    "world_id": "W50"
+  },
+  {
+    "local_id": "B3-10",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "KRO93",
+    "world_id": "W51"
+  },
+  {
+    "local_id": "B1-11",
+    "author_folder": "B1",
+    "class": "B-1",
+    "subtype": "",
+    "source": "BAR05",
+    "world_id": "W52"
+  },
+  {
+    "local_id": "B3-03",
+    "author_folder": "B3",
+    "class": "B-3",
+    "subtype": "",
+    "source": "ARC81",
+    "world_id": "W53"
+  },
+  {
+    "local_id": "O1a",
+    "author_folder": "O",
+    "class": "O",
+    "subtype": "O-1",
+    "source": "KAP23",
+    "world_id": "W54"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "local_id": "B1-05",
+  "world_id": "W34",
+  "class": "B-1",
+  "subtype": "",
+  "source": "VUL09",
+  "brief": {
+    "id": "W34",
+    "claim": "In a 50-voxel region of medial prefrontal cortex, the voxels that track trait social anxiety have a mean activity that predicts the trait: the least-squares slope of the standardized trait score on the standardized mean activity of those voxels across the 16 subjects is at least 0.50, with one-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "act",
+        "shape": "(subjects, sessions, voxels)",
+        "dtype": "float",
+        "meaning": "activation (beta) to a social-evaluation task; two scanning sessions on separate days"
+      },
+      {
+        "key": "trait",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "questionnaire social-anxiety score per subject"
+      }
+    ],
+    "sizes": "16 subjects, 2 sessions, 50 voxels."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "local_id": "B6-10",
+  "world_id": "W13",
+  "class": "B-6",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W13",
+    "claim": "Reaction time depends more strongly on stimulus contrast in the attended condition than in the unattended condition: the regression slope of reaction time on contrast is steeper in the attended condition than in the unattended condition across 30 participants, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "contrast",
+        "shape": "(30,) axis: participants",
+        "dtype": "float",
+        "meaning": "stimulus contrast level shown to each participant"
+      },
+      {
+        "key": "rt_attended",
+        "shape": "(30,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "mean reaction time in the attended condition"
+      },
+      {
+        "key": "rt_unattended",
+        "shape": "(30,) axis: participants (same order)",
+        "dtype": "float",
+        "meaning": "mean reaction time in the unattended condition, same participants"
+      }
+    ],
+    "sizes": "30 participants, each measured in both conditions."
+  }
+}

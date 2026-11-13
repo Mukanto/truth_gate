@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-06",
+  "world_id": "W18",
+  "class": "B-2",
+  "subtype": "L1.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "W18",
+    "claim": "In a screening cohort where about one sample in five is positive, a nearest-neighbour rule on 30 biomarkers attains balanced accuracy of at least 0.75 on new samples.",
+    "data_keys": [
+      {
+        "key": "biomarkers",
+        "shape": "(samples, markers)",
+        "dtype": "float",
+        "meaning": "standardised biomarker values"
+      },
+      {
+        "key": "positive",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for a positive sample"
+      }
+    ],
+    "sizes": "100 samples (about 20 positive), 30 biomarkers."
+  }
+}

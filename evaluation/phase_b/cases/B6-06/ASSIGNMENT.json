@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-06",
+  "world_id": "W39",
+  "class": "B-6",
+  "subtype": "",
+  "source": "HUR84",
+  "brief": {
+    "id": "W39",
+    "claim": "Mowing raises plant species richness in grassland: mean species richness in mown plots is higher than in unmown plots, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "richness_mown",
+        "shape": "(6, 12) axes: (plots, monthly surveys)",
+        "dtype": "float",
+        "meaning": "species count in each mown plot at each monthly survey, in time order"
+      },
+      {
+        "key": "richness_unmown",
+        "shape": "(6, 12) axes: (plots, monthly surveys)",
+        "dtype": "float",
+        "meaning": "species count in each unmown plot at each monthly survey, in time order"
+      }
+    ],
+    "sizes": "6 plots per treatment, 12 monthly surveys per plot (144 values in total)."
+  }
+}

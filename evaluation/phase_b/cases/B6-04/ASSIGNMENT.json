@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-04",
+  "world_id": "W25",
+  "class": "B-6",
+  "subtype": "",
+  "source": "HUR84",
+  "brief": {
+    "id": "W25",
+    "claim": "Adding nutrients to experimental ponds raises algal biomass: mean biomass in the fertilised ponds is higher than in the unfertilised ponds, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "biomass_fertilised",
+        "shape": "(4, 10) axes: (ponds, water samples per pond)",
+        "dtype": "float",
+        "meaning": "algal biomass per water sample, fertilised ponds"
+      },
+      {
+        "key": "biomass_unfertilised",
+        "shape": "(4, 10) axes: (ponds, water samples per pond)",
+        "dtype": "float",
+        "meaning": "algal biomass per water sample, unfertilised ponds"
+      }
+    ],
+    "sizes": "4 ponds per treatment, 10 water samples per pond (80 values in total)."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-04",
+  "world_id": "W27",
+  "class": "B-2",
+  "subtype": "L1.3",
+  "source": "AMB02",
+  "brief": {
+    "id": "W27",
+    "claim": "Patients with leukaemia subtype A can be told from subtype B using 60 gene expression values, with AUC of at least 0.80 in new patients.",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log expression of each gene for each patient"
+      },
+      {
+        "key": "subtype_a",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True for subtype A, False for subtype B"
+      }
+    ],
+    "sizes": "72 patients (47 subtype A, 25 subtype B), 60 genes."
+  }
+}

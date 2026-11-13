@@ -1,0 +1,32 @@
+{
+  "local_id": "B3-03",
+  "world_id": "W53",
+  "class": "B-3",
+  "subtype": "",
+  "source": "ARC81",
+  "brief": {
+    "id": "W53",
+    "claim": "In patients with heart failure, a larger right ventricular end-diastolic volume goes with a lower right ventricular ejection fraction: across 30 patients, the standardised slope (both variables z-scored) of end-diastolic volume index on ejection fraction is at most -0.4.",
+    "data_keys": [
+      {
+        "key": "stroke_volume_index",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "stroke volume index, mL/m2, from thermodilution"
+      },
+      {
+        "key": "rvef",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "right ventricular ejection fraction, fraction 0-1, from a fast-response thermistor catheter"
+      },
+      {
+        "key": "rv_edv_index_radionuclide",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "right ventricular end-diastolic volume index, mL/m2, from gated radionuclide ventriculography done in the same session"
+      }
+    ],
+    "sizes": "30 patients"
+  }
+}

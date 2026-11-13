@@ -1,0 +1,272 @@
+[
+ {
+  "local_id": "B6-01",
+  "claim": "A training programme improves test scores more in the trained group than in the untrained group: the mean pre-to-post gain among trained participants is larger than the mean pre-to-post gain among untrained participants, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "pre_trained",
+    "shape": "(20,) axis: participants",
+    "dtype": "float",
+    "meaning": "score before the programme, trained group, one value per participant"
+   },
+   {
+    "key": "post_trained",
+    "shape": "(20,) axis: participants (same order as pre_trained)",
+    "dtype": "float",
+    "meaning": "score after the programme, same trained participants"
+   },
+   {
+    "key": "pre_untrained",
+    "shape": "(20,) axis: participants",
+    "dtype": "float",
+    "meaning": "score before, untrained group, one value per participant"
+   },
+   {
+    "key": "post_untrained",
+    "shape": "(20,) axis: participants (same order as pre_untrained)",
+    "dtype": "float",
+    "meaning": "score after, same untrained participants"
+   }
+  ],
+  "sizes": "20 participants per group (40 in total)."
+ },
+ {
+  "local_id": "B6-02",
+  "claim": "A drug changes the evoked response more in visual cortex than in auditory cortex: the drug-minus-placebo difference in response amplitude is larger in the visual region than in the auditory region across 16 participants, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "visual_placebo",
+    "shape": "(16,) axis: participants",
+    "dtype": "float",
+    "meaning": "evoked amplitude in visual region under placebo"
+   },
+   {
+    "key": "visual_drug",
+    "shape": "(16,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "evoked amplitude in visual region under drug"
+   },
+   {
+    "key": "auditory_placebo",
+    "shape": "(16,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "evoked amplitude in auditory region under placebo"
+   },
+   {
+    "key": "auditory_drug",
+    "shape": "(16,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "evoked amplitude in auditory region under drug"
+   }
+  ],
+  "sizes": "16 participants, every participant measured in both regions and both conditions."
+ },
+ {
+  "local_id": "B6-03",
+  "claim": "The relationship between sleep duration and memory score is stronger in older adults than in younger adults: the correlation between hours of sleep and recall score is higher in the older group than in the younger group, at the one-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "sleep_young",
+    "shape": "(35,) axis: participants",
+    "dtype": "float",
+    "meaning": "average nightly sleep in hours, younger group"
+   },
+   {
+    "key": "recall_young",
+    "shape": "(35,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "recall score, younger group"
+   },
+   {
+    "key": "sleep_old",
+    "shape": "(35,) axis: participants",
+    "dtype": "float",
+    "meaning": "average nightly sleep in hours, older group"
+   },
+   {
+    "key": "recall_old",
+    "shape": "(35,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "recall score, older group"
+   }
+  ],
+  "sizes": "35 participants per group (70 in total)."
+ },
+ {
+  "local_id": "B6-04",
+  "claim": "Adding nutrients to experimental ponds raises algal biomass: mean biomass in the fertilised ponds is higher than in the unfertilised ponds, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "biomass_fertilised",
+    "shape": "(4, 10) axes: (ponds, water samples per pond)",
+    "dtype": "float",
+    "meaning": "algal biomass per water sample, fertilised ponds"
+   },
+   {
+    "key": "biomass_unfertilised",
+    "shape": "(4, 10) axes: (ponds, water samples per pond)",
+    "dtype": "float",
+    "meaning": "algal biomass per water sample, unfertilised ponds"
+   }
+  ],
+  "sizes": "4 ponds per treatment, 10 water samples per pond (80 values in total)."
+ },
+ {
+  "local_id": "B6-05",
+  "claim": "Mussel growth increases with the amount of food supplement given to a tank: the regression slope of growth on the supplement dose is positive, at the one-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "dose",
+    "shape": "(12,) axis: tanks",
+    "dtype": "float",
+    "meaning": "supplement dose assigned to each tank"
+   },
+   {
+    "key": "growth",
+    "shape": "(12, 8) axes: (tanks, individual mussels per tank)",
+    "dtype": "float",
+    "meaning": "shell growth of each measured mussel, in the tank given by the first axis"
+   }
+  ],
+  "sizes": "12 tanks, 8 mussels per tank (96 growth values)."
+ },
+ {
+  "local_id": "B6-06",
+  "claim": "Mowing raises plant species richness in grassland: mean species richness in mown plots is higher than in unmown plots, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "richness_mown",
+    "shape": "(6, 12) axes: (plots, monthly surveys)",
+    "dtype": "float",
+    "meaning": "species count in each mown plot at each monthly survey, in time order"
+   },
+   {
+    "key": "richness_unmown",
+    "shape": "(6, 12) axes: (plots, monthly surveys)",
+    "dtype": "float",
+    "meaning": "species count in each unmown plot at each monthly survey, in time order"
+   }
+  ],
+  "sizes": "6 plots per treatment, 12 monthly surveys per plot (144 values in total)."
+ },
+ {
+  "local_id": "B6-07",
+  "claim": "Neurons in knockout mice have larger mean firing rates than neurons in wild-type mice, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "rate_knockout",
+    "shape": "(6, 20) axes: (animals, recorded cells per animal)",
+    "dtype": "float",
+    "meaning": "firing rate of each recorded cell, knockout animals"
+   },
+   {
+    "key": "rate_wildtype",
+    "shape": "(6, 20) axes: (animals, recorded cells per animal)",
+    "dtype": "float",
+    "meaning": "firing rate of each recorded cell, wild-type animals"
+   }
+  ],
+  "sizes": "6 animals per genotype, 20 cells per animal (240 cells in total)."
+ },
+ {
+  "local_id": "B6-08",
+  "claim": "Trial-by-trial neural activity in a frontal region is positively related to reaction time: the correlation between activity and reaction time is greater than zero at the one-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "reaction_time",
+    "shape": "(12, 25) axes: (participants, trials)",
+    "dtype": "float",
+    "meaning": "reaction time on each trial, trials in time order within a participant"
+   },
+   {
+    "key": "activity",
+    "shape": "(12, 25) axes: (participants, trials)",
+    "dtype": "float",
+    "meaning": "frontal activity estimate on the same trial"
+   }
+  ],
+  "sizes": "12 participants, 25 trials each (300 trials in total)."
+ },
+ {
+  "local_id": "B6-09",
+  "claim": "Applying the drug to brain slices increases the mean amplitude of synaptic responses relative to vehicle: mean response amplitude is higher with the drug than with vehicle, in slices taken from the same animals, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "amp_drug",
+    "shape": "(8, 25) axes: (animals, recorded cells per animal)",
+    "dtype": "float",
+    "meaning": "response amplitude of each cell recorded in drug-treated tissue"
+   },
+   {
+    "key": "amp_vehicle",
+    "shape": "(8, 25) axes: (animals, recorded cells per animal)",
+    "dtype": "float",
+    "meaning": "response amplitude of each cell recorded in vehicle-treated tissue from the same animals"
+   }
+  ],
+  "sizes": "8 animals, 25 cells per condition per animal (200 cells per array)."
+ },
+ {
+  "local_id": "B6-10",
+  "claim": "Reaction time depends more strongly on stimulus contrast in the attended condition than in the unattended condition: the regression slope of reaction time on contrast is steeper in the attended condition than in the unattended condition across 30 participants, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "contrast",
+    "shape": "(30,) axis: participants",
+    "dtype": "float",
+    "meaning": "stimulus contrast level shown to each participant"
+   },
+   {
+    "key": "rt_attended",
+    "shape": "(30,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "mean reaction time in the attended condition"
+   },
+   {
+    "key": "rt_unattended",
+    "shape": "(30,) axis: participants (same order)",
+    "dtype": "float",
+    "meaning": "mean reaction time in the unattended condition, same participants"
+   }
+  ],
+  "sizes": "30 participants, each measured in both conditions."
+ },
+ {
+  "local_id": "B6-11",
+  "claim": "Across participants, grip strength is positively correlated with cortical thickness in the motor cortex: the correlation between the two measures is greater than zero at the one-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "grip",
+    "shape": "(10, 2) axes: (participants, sessions: before and after the intervention)",
+    "dtype": "float",
+    "meaning": "grip strength at each of the two sessions"
+   },
+   {
+    "key": "thickness",
+    "shape": "(10, 2) axes: (participants, sessions: before and after the intervention)",
+    "dtype": "float",
+    "meaning": "motor cortex thickness measured at the same session"
+   }
+  ],
+  "sizes": "10 participants, 2 sessions each (20 measurements in total)."
+ },
+ {
+  "local_id": "B6-12",
+  "claim": "Over three practice sessions the trained group improves faster than the control group: the average per-session change in performance is larger in the trained group than in the control group, at the two-sided 0.05 level.",
+  "data_keys": [
+   {
+    "key": "perf_trained",
+    "shape": "(14, 3) axes: (participants, sessions in time order)",
+    "dtype": "float",
+    "meaning": "performance score of each trained participant at each session"
+   },
+   {
+    "key": "perf_control",
+    "shape": "(14, 3) axes: (participants, sessions in time order)",
+    "dtype": "float",
+    "meaning": "performance score of each control participant at each session"
+   }
+  ],
+  "sizes": "14 participants per group, 3 sessions each (84 values in total)."
+ }
+]

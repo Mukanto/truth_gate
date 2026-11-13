@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-12",
+  "world_id": "W10",
+  "class": "B-6",
+  "subtype": "",
+  "source": "MAK19",
+  "brief": {
+    "id": "W10",
+    "claim": "Over three practice sessions the trained group improves faster than the control group: the average per-session change in performance is larger in the trained group than in the control group, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "perf_trained",
+        "shape": "(14, 3) axes: (participants, sessions in time order)",
+        "dtype": "float",
+        "meaning": "performance score of each trained participant at each session"
+      },
+      {
+        "key": "perf_control",
+        "shape": "(14, 3) axes: (participants, sessions in time order)",
+        "dtype": "float",
+        "meaning": "performance score of each control participant at each session"
+      }
+    ],
+    "sizes": "14 participants per group, 3 sessions each (84 values in total)."
+  }
+}

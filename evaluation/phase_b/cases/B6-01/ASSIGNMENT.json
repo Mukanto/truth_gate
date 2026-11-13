@@ -1,0 +1,38 @@
+{
+  "local_id": "B6-01",
+  "world_id": "W32",
+  "class": "B-6",
+  "subtype": "",
+  "source": "NIE11",
+  "brief": {
+    "id": "W32",
+    "claim": "A training programme improves test scores more in the trained group than in the untrained group: the mean pre-to-post gain among trained participants is larger than the mean pre-to-post gain among untrained participants, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "pre_trained",
+        "shape": "(20,) axis: participants",
+        "dtype": "float",
+        "meaning": "score before the programme, trained group, one value per participant"
+      },
+      {
+        "key": "post_trained",
+        "shape": "(20,) axis: participants (same order as pre_trained)",
+        "dtype": "float",
+        "meaning": "score after the programme, same trained participants"
+      },
+      {
+        "key": "pre_untrained",
+        "shape": "(20,) axis: participants",
+        "dtype": "float",
+        "meaning": "score before, untrained group, one value per participant"
+      },
+      {
+        "key": "post_untrained",
+        "shape": "(20,) axis: participants (same order as pre_untrained)",
+        "dtype": "float",
+        "meaning": "score after, same untrained participants"
+      }
+    ],
+    "sizes": "20 participants per group (40 in total)."
+  }
+}

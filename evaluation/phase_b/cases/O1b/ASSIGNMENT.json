@@ -1,0 +1,26 @@
+{
+  "local_id": "O1b",
+  "world_id": "W33",
+  "class": "O",
+  "subtype": "O-1",
+  "source": "KAP23",
+  "brief": {
+    "id": "W33",
+    "claim": "Using the leading principal components of the tumour expression profile, a nearest-centroid classifier tells responders from non-responders with an accuracy of at least 0.70 on new tumours (the claim holds when the accuracy estimate is >= 0.70).",
+    "data_keys": [
+      {
+        "key": "expr",
+        "shape": "(tumours, 60)",
+        "dtype": "float",
+        "meaning": "log expression of 60 genes per tumour, on arbitrary instrument scales"
+      },
+      {
+        "key": "responder",
+        "shape": "(tumours,)",
+        "dtype": "bool",
+        "meaning": "True if the tumour responded to the drug"
+      }
+    ],
+    "sizes": "120 tumours; 60 genes"
+  }
+}

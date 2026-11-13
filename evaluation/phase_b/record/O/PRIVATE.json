@@ -1,0 +1,56 @@
+[
+ {
+  "local_id": "O1a",
+  "source": "KAP23",
+  "passage": "KAP23 (ar5iv full text) section 2.4, L2: 'If the model has access to features that should not be legitimately available for use in the modeling exercise, this could result in leakage. One instance when this can happen is if a feature is a proxy for the outcome variable.' Example there: anti-hypertensive drug use as predictor of hypertension.",
+  "faulty": "criterion fits a linear classifier on a fixed block of rows and scores accuracy on the remaining rows using ALL 12 variables, including the therapy-dose proxy (last column).",
+  "fixed": "same pipeline with the proxy column dropped (11 legitimate variables).",
+  "subtype": "O-1 L2",
+  "notes": "Within caps. Split and fitting are clean, so the tool is expected not to see it. KAP23 verified in full text."
+ },
+ {
+  "local_id": "O1b",
+  "source": "KAP23",
+  "passage": "KAP23 section 2.4, L1.2: 'Using the entire dataset for any pre-processing steps such as imputation or over/under sampling.' (the paper's example is oversampling before the split; the label-free variant, scaling/PCA on all data, is the one used here, per the O-1 class definition).",
+  "faulty": "criterion standardises and fits PCA (top 5) on all rows (train+test), then nearest-centroid fitted on train rows and scored on test rows.",
+  "fixed": "standardisation and PCA fitted on train rows only, applied to test rows.",
+  "subtype": "O-1 L1.2 (label-free)",
+  "notes": "60 features = cap. Effect small by nature; invisible expected. KAP23 L1.2 example is label-dependent oversampling; label-free variant per class definition."
+ },
+ {
+  "local_id": "O2a",
+  "source": "SIM11",
+  "passage": "SIM11 Table 1 note and text: 'Situation A: two dependent variables (r = .50)'; three t tests, one on each of two dependent variables and a third on their average; baseline 20 observations per cell, 15,000 simulated samples.",
+  "faulty": "criterion computes one-sided Welch p for measure 1, measure 2 and their mean, holds if the smallest p < 0.05 (the post hoc reported analysis).",
+  "fixed": "tests only measure 1 (the planned primary).",
+  "subtype": "O-2 outcome flexibility",
+  "notes": "Verified: n=20 per cell, r=.50, three tests (DV1, DV2, mean). Recall was correct."
+ },
+ {
+  "local_id": "O2b",
+  "source": "SIM11",
+  "passage": "SIM11 text: 'collects 20 observations per condition and then tests for significance. ... If the result is nonsignificant, the researcher collects 10 additional observations per condition, and then again tests for significance.'",
+  "faulty": "criterion tests at 20 per group (first 20 rows of each array) and again at 30 per group; holds if either one-sided Welch p < 0.05 (the stopping point chosen post hoc).",
+  "fixed": "tests once at the planned 30 per group.",
+  "subtype": "O-2 optional stopping",
+  "notes": "Verified: two looks (20, then 30 per cell). CORRECTION: look schedule is 20 and 30 only (not 20, 25, 30). Planned n=30 per group fits."
+ },
+ {
+  "local_id": "O3a",
+  "source": "BAG09",
+  "passage": "BAG09 abstract: 'the most common errors are simple (e.g., row or column offsets)'; Fig. 2 caption: expression values for genes 'obtained by \"offsetting\" by one row (e.g., replacing 200075_s_at with 200076_at)'.",
+  "faulty": "criterion computes the signature score from the gene columns offset by one position in the gene list (columns 6 to 10 instead of 5 to 9, 1-based), then Pearson r with sensitivity >= 0.5.",
+  "fixed": "signature score from the named columns 5 to 9 (1-based); same r >= 0.5.",
+  "subtype": "O-3 row offset",
+  "notes": "CORRECTION: in BAG09 the offset is along the GENE (row of the gene list) axis, not between samples and labels as in my first draft; brief and faulty criterion changed (expr now 20 genes). Faulty criterion will usually fail on plus (offset genes carry no signal); in BAG09 the offset list produced wrong results; closest a criterion can embody it."
+ },
+ {
+  "local_id": "O3b",
+  "source": "HER14",
+  "passage": "HER14 (PERI WP322) 'Spreadsheet coding error': 'A coding error in the RR working spreadsheet entirely excludes five countries, Australia, Austria, Belgium, Canada, and Denmark, from the analysis.' Also: country averages 'equally weighted by country'; early years of Australia, Canada, New Zealand excluded.",
+  "faulty": "criterion drops the FIRST five country rows (alphabetical, as in the spreadsheet error), drops the first 4 years (columns) of one further country row (analogue of the New Zealand exclusion), computes each remaining country's mean growth within each debt bin and averages those country means with equal weight (countries empty in a bin dropped), then requires high minus low <= -1.5.",
+  "fixed": "all 20 countries, pooled country-year means per bin; difference <= -1.5.",
+  "subtype": "O-3 spreadsheet/exclusion/averaging",
+  "notes": "CORRECTION: the omitted five countries are the first five (alphabetical), not the last five. Source: 20 advanced economies, 1946-2009 (64 years); brief uses 15 years to respect the 300-row cap (stated in sizes). Debt bins in source are four (0-30,30-60,60-90,>90); brief uses the two-way 90% split. Guard: both bins non-empty."
+ }
+]

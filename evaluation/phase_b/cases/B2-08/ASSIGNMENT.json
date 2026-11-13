@@ -1,0 +1,26 @@
+{
+  "local_id": "b2-08",
+  "world_id": "W30",
+  "class": "B-2",
+  "subtype": "L1.4",
+  "source": "KAP23",
+  "brief": {
+    "id": "W30",
+    "claim": "In a fraud-screening data set where about 12% of transactions are fraudulent, a nearest-neighbour rule on 10 transaction features achieves an F1 score of at least 0.60 for fraud on new transactions.",
+    "data_keys": [
+      {
+        "key": "features",
+        "shape": "(transactions, features)",
+        "dtype": "float",
+        "meaning": "standardised transaction features"
+      },
+      {
+        "key": "fraud",
+        "shape": "(transactions,)",
+        "dtype": "bool",
+        "meaning": "True for a fraudulent transaction"
+      }
+    ],
+    "sizes": "150 transactions (about 18 fraudulent), 10 features."
+  }
+}

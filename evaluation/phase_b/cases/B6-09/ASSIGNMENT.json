@@ -1,0 +1,26 @@
+{
+  "local_id": "B6-09",
+  "world_id": "W31",
+  "class": "B-6",
+  "subtype": "",
+  "source": "LAZ10",
+  "brief": {
+    "id": "W31",
+    "claim": "Applying the drug to brain slices increases the mean amplitude of synaptic responses relative to vehicle: mean response amplitude is higher with the drug than with vehicle, in slices taken from the same animals, at the two-sided 0.05 level.",
+    "data_keys": [
+      {
+        "key": "amp_drug",
+        "shape": "(8, 25) axes: (animals, recorded cells per animal)",
+        "dtype": "float",
+        "meaning": "response amplitude of each cell recorded in drug-treated tissue"
+      },
+      {
+        "key": "amp_vehicle",
+        "shape": "(8, 25) axes: (animals, recorded cells per animal)",
+        "dtype": "float",
+        "meaning": "response amplitude of each cell recorded in vehicle-treated tissue from the same animals"
+      }
+    ],
+    "sizes": "8 animals, 25 cells per condition per animal (200 cells per array)."
+  }
+}
