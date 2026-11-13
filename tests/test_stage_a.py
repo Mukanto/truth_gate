@@ -48,7 +48,7 @@ class TestShim(unittest.TestCase):
 
     def test_version_is_truth_gates(self):
         self.assertEqual(kapi.__version__, truth_gate.__version__)
-        self.assertEqual(truth_gate.__version__, "0.4.0")
+        self.assertEqual(truth_gate.__version__, "0.4.1")
         self.assertEqual(kapi.SPEC_VERSION, "0.6")
 
     def test_every_submodule_is_aliased(self):
@@ -186,17 +186,17 @@ class TestVerifyExit7(unittest.TestCase):
         self.assertEqual(code, 7)
         self.assertIn("0.3.0", out)
         self.assertIn("v0.3.0", out)
-        self.assertIn("0.4.0", out)
+        self.assertIn("0.4.1", out)
 
     def test_certificate_of_another_tool_version(self):
         env = copy.deepcopy(run_toy("toy_good_det"))
-        env["body"]["tool_version"] = "0.4.1"
+        env["body"]["tool_version"] = "0.4.0"
         env["body_sha256"] = certificate.body_sha256(env["body"])
         with self.never_rerun():
             code, out, _ = run_cli("verify", self.write_cert("other.json", env), self.study)
         self.assertEqual(code, 7)
-        self.assertIn("0.4.1", out)
-        self.assertIn("v0.4.1", out)
+        self.assertIn("0.4.0", out)
+        self.assertIn("v0.4.0", out)
 
     def test_altered_old_certificate_reads_as_altered(self):
         """Revision R-2: integrity is checked before the version, so tampering gives 5, not 7."""

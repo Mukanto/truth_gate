@@ -89,9 +89,9 @@ class TestReadme(unittest.TestCase):
         text = read("README.md")
         for heading in ("### Quick start without Python code", "### The command line", "### In CI", "## Roadmap"):
             self.assertIn(heading, text)
-        for needle in ("tg-line/1", "examples/node_criterion/", "uses: Mukanto/truth_gate@v0.4.0", "Moved to 0.5",
+        for needle in ("tg-line/1", "examples/node_criterion/", "uses: Mukanto/truth_gate@v0.4.1", "Moved to 0.5",
                        "Phase B", "K6_EXTERNAL_UNGUARDED", "2 · alpha_family", "docs/EVALUATION.md",
-                       "not covered by the leak guard", "Version 0.4.0"):
+                       "not covered by the leak guard", "Version 0.4.1"):
             self.assertIn(needle, text, needle)
         # The Phase A placeholder was replaced by the results after the final run (designer, 2026-11-12).
         self.assertIn("Phase A evaluation of 0.4: all four pre-registered criteria held.", text)

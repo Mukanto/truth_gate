@@ -3,6 +3,12 @@
 Each release implements one frozen specification (`docs/SPEC.md` for 0.1 to 0.3, `docs/design/spec-0.6.md` for 0.4). The
 package version is `tool_version` in the certificate (`kapi_version` up to 0.3); the spec version is `spec_version`.
 
+## 0.4.1 (spec 0.6, 2026-11-13)
+
+The command's help and error messages use the name Truth_Gate / `truth-gate` instead of Kapı / `kapi`. No change to
+verdicts, flags, counts or the spec. Certificates now carry `tool_version` `0.4.1`, so `verify` on a 0.4.0 certificate
+exits 7 and names tag `v0.4.0`, as for any other version (R-2).
+
 ## Evaluation, Phase B (2026-11-13)
 
 No change to the package or the spec. The pre-registered external evaluation of 0.4.0 on errors documented in the

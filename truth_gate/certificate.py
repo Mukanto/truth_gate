@@ -21,7 +21,7 @@ from .passes import SUGGESTED_UNREVIEWED, add_component_flags, add_flags_by_comp
 from .study import Study, StudyError, load_study
 
 TOOL_NAME = "truth-gate"
-TOOL_VERSION = "0.4.0"
+TOOL_VERSION = "0.4.1"
 SPEC_VERSION = "0.6"
 
 NON_CLAIMS = [

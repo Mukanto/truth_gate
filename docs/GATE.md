@@ -43,7 +43,7 @@ manifest, `truth-gate check truthgate.toml`; see [`MANIFEST.md`](MANIFEST.md).
 The repository root holds a composite GitHub Action (`action.yml`) and `.pre-commit-hooks.yaml`.
 
 ```yaml
-- uses: Mukanto/truth_gate@v0.4.0
+- uses: Mukanto/truth_gate@v0.4.1
   with:
     target: truthgate.toml
     freeze: FREEZE.json          # optional

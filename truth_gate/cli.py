@@ -33,7 +33,7 @@ class _Parser(argparse.ArgumentParser):
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = _Parser(prog="kapi", description="Kapı: falsifiability gate for pre-registered studies.")
+    parser = _Parser(prog="truth-gate", description="Truth_Gate: falsifiability gate for pre-registered studies.")
     sub = parser.add_subparsers(dest="command", required=True)
     check = sub.add_parser("check", help="run the gate on a study file")
     check.add_argument("study")
@@ -103,7 +103,7 @@ def format_table(body: dict) -> str:
 
 def _cmd_check(args: argparse.Namespace) -> int:
     if not os.path.isfile(args.study):
-        sys.stderr.write(f"kapi: study file not found: {args.study}\n")
+        sys.stderr.write(f"truth-gate: study file not found: {args.study}\n")
         return EXIT_USAGE
     try:
         envelope = run_gate(args.study, quick=args.quick)
@@ -116,7 +116,7 @@ def _cmd_check(args: argparse.Namespace) -> int:
             json.dump(envelope, handle, indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False)
             handle.write("\n")
     except OSError as exc:
-        sys.stderr.write(f"kapi: cannot write {out}: {type(exc).__name__}\n")
+        sys.stderr.write(f"truth-gate: cannot write {out}: {type(exc).__name__}\n")
         return EXIT_USAGE
     print(format_table(envelope["body"]))
     print(f"certificate: {out}")
@@ -144,20 +144,20 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     try:
         stored = load_certificate_file(args.certificate)
     except (OSError, ValueError) as exc:
-        sys.stderr.write(f"kapi: cannot read certificate: {type(exc).__name__}\n")
+        sys.stderr.write(f"truth-gate: cannot read certificate: {type(exc).__name__}\n")
         return EXIT_USAGE
     if not os.path.isfile(args.study):
-        sys.stderr.write(f"kapi: study file not found: {args.study}\n")
+        sys.stderr.write(f"truth-gate: study file not found: {args.study}\n")
         return EXIT_USAGE
     try:
         mode = stored["body"]["mode"]
         recorded = stored["body_sha256"]
     except (KeyError, TypeError):
-        sys.stderr.write("kapi: not a Kapi certificate\n")
+        sys.stderr.write("truth-gate: not a Truth_Gate certificate\n")
         return EXIT_USAGE
     body = stored["body"]
     if not isinstance(body, dict):
-        sys.stderr.write("kapi: not a Kapi certificate\n")
+        sys.stderr.write("truth-gate: not a Truth_Gate certificate\n")
         return EXIT_USAGE
     # Integrity first (post-freeze revision R-2): an altered certificate reads as altered, whatever version it claims.
     if body_sha256(body) != recorded:
@@ -166,7 +166,7 @@ def _cmd_verify(args: argparse.Namespace) -> int:
     if body.get("tool") != TOOL_NAME or body.get("tool_version") != TOOL_VERSION:
         return _version_mismatch(body)
     if mode not in ("full", "quick"):
-        sys.stderr.write("kapi: unknown mode in certificate\n")
+        sys.stderr.write("truth-gate: unknown mode in certificate\n")
         return EXIT_USAGE
     try:
         fresh = run_gate(args.study, quick=(mode == "quick"))

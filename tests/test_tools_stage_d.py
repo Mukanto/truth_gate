@@ -89,7 +89,7 @@ class TestInit(TempCase):
         code, out, err = run_cli("init", self.dir, "--ci")
         self.assertEqual(code, 0, err)
         text = read(os.path.join(self.dir, self.WORKFLOW), "r")
-        self.assertIn("uses: Mukanto/truth_gate@v0.4.0", text)
+        self.assertIn("uses: Mukanto/truth_gate@v0.4.1", text)
         for key in ("target:", "# freeze:", "# quick:", "# fail-on:"):  # the inputs of spec section 10
             self.assertIn(key, text)
         self.assertIn("pull_request", text)

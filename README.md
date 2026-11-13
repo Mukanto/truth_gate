@@ -16,7 +16,7 @@ Truth_Gate has three parts:
 The name refers to the gate a claim has to pass before a test of it can tell you anything about the truth. A
 certificate is not a verdict on truth (see [Limits](#limits)).
 
-Version 0.4.0 (spec 0.6), MIT license. Until its first public release the project was called *Kapı* (Turkish for
+Version 0.4.1 (spec 0.6), MIT license. Until its first public release the project was called *Kapı* (Turkish for
 "gate"). Since 0.4 the package is `truth_gate` and the command is `truth-gate`. The package `kapi` and `python -m kapi`
 remain as a deprecated alias (they stay at least until 1.0), so existing studies and the frozen examples keep working.
 Certificates now record `tool` and `tool_version` instead of `kapi_version`; a 0.3 certificate is verified with the
@@ -176,7 +176,7 @@ dataset, never the real study data.
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: Mukanto/truth_gate@v0.4.0
+- uses: Mukanto/truth_gate@v0.4.1
   with:
     target: truthgate.toml
     freeze: FREEZE.json                                  # optional
