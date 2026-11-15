@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_dose_across_animals, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B6-03\faulty.json
+body_sha256: 80d829dc035f1b25f93423b6a7d9c9cd277dfee452f5c77c1e7ee2a18fc9375f

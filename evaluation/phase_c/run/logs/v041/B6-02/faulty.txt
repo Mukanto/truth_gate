@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:reassign_wells_to_treatment, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B6-02\faulty.json
+body_sha256: cc15c6e3afdf7c2d1d35bdd7cfa3e63c0813581b1f9f7ff890a6d158fbfa5752

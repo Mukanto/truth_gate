@@ -243,7 +243,68 @@ statement prescribes, and no 0.4.1 detection or clean pass changed. Eleven compo
 through abstentions now have verdicts: ten Phase B components (R2, five faulty twins detected, five fixed twins WEAK,
 development data, not evidence, because the rule was chosen after these cases were seen) and one older evaluation case,
 `E2-07_faulty`, which moves from UNDEFINED to WEAK. Details: [`../evaluation/r1_v050/RESULTS.md`](../evaluation/r1_v050/RESULTS.md).
-Evidence for 0.5 on new cases is the job of Phase C (`evaluation/phase_c/PREREG_PHASE_C.md`, frozen, not yet run).
+Evidence for 0.5 on new cases is the job of Phase C (next section).
+
+## 0.5 (spec 0.7, package 0.5.0): Phase C, documented errors with worlds by a different Claude model line
+
+Phase C asks Phase B's question of Truth_Gate 0.5.0, with two changes. The worlds and controls were declared by Fable,
+a different Claude model line from the one that wrote the gate and the criteria, which was not told the error, the class
+or the source. And 0.4.1 ran on the same files, to measure what spec 0.7 changes. The rules were pre-registered and
+frozen before any case existed ([`../evaluation/phase_c/PREREG_PHASE_C.md`](../evaluation/phase_c/PREREG_PHASE_C.md));
+the cases were frozen and pushed (commit `aecd613`) before the gate ran. Full report:
+[`../evaluation/phase_c/REPORT.md`](../evaluation/phase_c/REPORT.md).
+
+**How the cases were built.** As in Phase B, with fresh agents in separate sandboxes: brief authors per class (at least
+4 of 12 pairs per class on sources new to Phase C), Fable world authors in batches of 15 shuffled briefs, criterion
+authors who wrote only the two criterion bodies, and a blind fidelity audit per class (nine items) with one repair round.
+Two B-3 pairs were dropped for brief or size defects; 52 pairs remained.
+
+Awareness P / C / N gives, per class, how many declared worlds may contain what the error exploits (P), how many were
+considered and left without it (C), and how many show no sign (N). Every verdict below holds with these shares.
+
+| Class (sources) | Pairs | Detected | Clean passes | Wilson lower bounds | Awareness P / C / N | Verdict (0.5.0) |
+|---|---|---|---|---|---|---|
+| B-1 circular analysis (MOR03, KRI10, KRI09, VUL09, MAK19, BAR05) | 12 | 12 | 11 | 0.82 / 0.70 | 10 / 2 / 0 | **HOLDS** |
+| B-2 procedure-level leakage (KAP23, VAR06, AMB02) | 12 | 7 | 8 | 0.36 / 0.43 | 10 / 2 / 0 | **FAILS** |
+| B-3 coupling by construction (CUR13, PEA97, ARC81, KRO93) | 10 | 8 | 8 | 0.54 / 0.54 | 10 / 0 / 0 | **FAILS** |
+| B-6 inflated-size decision rules (LAZ18, NIE11, HUR84, LAZ10, MAK19) | 12 | 10 | 12 | 0.60 / 0.82 | 12 / 0 / 0 | **HOLDS** |
+| Out of scope | 6 | 2 | 6 | – | 5 / 1 / 0 | no threshold |
+
+Of the 37 in-scope detections, 18 carry a flag of the gate's own noise probe and 19 only flags of the declared streams;
+every B-6 detection came from declarations. B-6 holds at the edge: 10 of 12 is the fewest detections that pass with 12
+pairs.
+
+**What 0.5.0 changed (primary comparison).** Eight files, the twins of four B-1 pairs, had a component that 0.4.1 made
+UNDEFINED, every one through abstentions only (an allowed "empty selection" guard). Under 0.5.0 the four faulty twins
+are detected and the four fixed twins pass. Nothing was lost, and the other classes are identical. Under 0.4.1, B-1
+fails on the same files (8 of 12 detected, 7 of 12 clean; awareness P 10, C 2, N 0 of 12). The B-1 verdict therefore
+depends on 0.5.0's abstention rule.
+
+**Why two classes failed (interpretation, after the run).**
+
+* **B-2:** five of the seven KAP23 pairs (oversampling before the split, random folds on time series, records of one
+  person on both sides) were misses labelled "error too small in the declared worlds at this size"; in three of them
+  the low-capacity model of both twins also lets little leak. The four VAR06
+  pairs (tuning without nested cross-validation) were all detected. Their fixed criteria failed, because the claims'
+  thresholds are reached by chance with 40 samples: the corrected criteria hold on pure noise in 25 to 65 of 200
+  samples.
+* **B-3:** two misses were too small in the declared worlds. Two fixed criteria failed at this size: B3-04's threshold
+  has a large sampling spread, and B3-12's test ignores autocorrelation in the months. The B3-12 detection rests on a
+  flag that its fixed twin carries at the same rate.
+
+A blind post-run audit by a fresh agent found one detection that does not follow from the planted error (B3-12). In
+five more (B2-08 to B2-11, B3-04) the fixed twin carries the same expected flags at lower or similar rates; none of
+these six is in B-1 or B-6. It found brief steering in one in-scope pair (B3-09, whose detection stands without it) and
+two out-of-scope pairs. Its objections to the first version of the report were checked and the report corrected; the
+pre-registered table is unchanged.
+
+**What Phase C does and does not show.** Phase C repeats Phase B's pattern with a world author from a different Claude
+model line: the gate flagged documented errors when the declared worlds contained what the error exploits. 47 of the 52
+declared worlds may contain it (15 of these count as P because their batch stopped before writing a log). Fable is not
+a different vendor or family. Brief and criterion authors, auditors and designer are of the line that wrote the gate,
+and no human domain reader took part. With 10 to 12 pairs per class the intervals are wide, and 19 of the 46 in-scope
+pairs overlap Phase B. Every fixed file is at best WEAK, because the allowed zero-variance guard abstains on the
+all-zeros probe.
 
 ## Limitations of the evaluation
 
@@ -260,7 +321,8 @@ Evidence for 0.5 on new cases is the job of Phase C (`evaluation/phase_c/PREREG_
 
 Kapı reliably checks the logic of criteria against synthetic worlds. It does not detect flaws in model
 interpretation or in the real run's controls. In the prospective study, pre-registration, negative controls, a blind
-audit and independent recomputation found the major defects. On errors documented in the literature (Phase B) it met
-the pre-registered bar for one class of four, and its detections depended on declared worlds that anticipated the
-error. The gate was one part of that process, which is why the
+audit and independent recomputation found the major defects. On errors documented in the literature it met the
+pre-registered bar for one class of four in Phase B (0.4.0: B-6, awareness P 11, C 0, N 1 of 12). In Phase C (0.5.0,
+worlds by a different Claude model line) it met the bar for two of four: B-1 (P 10, C 2, N 0 of 12) and B-6 (P 12 of
+12). In both phases its detections depended on declared worlds that may contain what the error exploits. The gate was one part of that process, which is why the
 methods protocol in [`../protocol/`](../protocol/PROTOCOL.md) is published with it.

@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_group_labels, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:expression,group_b, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B2-11\fixed.json
+body_sha256: 5ac38174a086af984911e9eccec61678aa1ca41d9ea09d10a150cc16905c94dd

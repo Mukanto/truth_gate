@@ -1,0 +1,6 @@
+COMPONENT  VERDICT    FLAGS
+C          UNDEFINED  HIGH_RATE:control:permute_contrast_across_trials, HIGH_RATE:probe:shuffle:response,contrast, K1_UNDEFINED, K2_HIGH_SIZE, K5_HOLDS_ON_SHUFFLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: UNDEFINED
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B1-06\faulty.json
+body_sha256: ee73ed6796a2a98d2099913ccc52f5bc0daf0aeae0756acefe6da16b17db6c07

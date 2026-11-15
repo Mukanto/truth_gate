@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_cortisol_subjects, HIGH_RATE:probe:shuffle:heart_rate,cortisol, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B6-11\faulty.json
+body_sha256: 7dca920a79f8540e139d93864a277cf60c956cfaac2f9fdc3fdd56c35e99d2f6

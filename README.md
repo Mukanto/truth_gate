@@ -252,8 +252,19 @@ The full account, with every number, is in [`docs/EVALUATION.md`](docs/EVALUATIO
   coupling by construction 8/12 and 8/12 (fail). Detections depended on declared worlds that contained what the error
   exploits; the world author had inferred the error for most briefs. Details in
   [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md).
-* **The evaluation is not independent.** All test cases, including Phase B, were written by AI sessions from the same
-  model family that wrote the code. There is no human-authored external benchmark.
+* **Phase C, documented errors with worlds by a different Claude model line: two classes of four met the
+  pre-registered bar with 0.5.0.** 52 new pairs were frozen and pushed before the run. Their worlds and controls were
+  declared by Fable, a different Claude model line that was not told the error.
+  * Circular analysis (B-1): 12 of 12 detected, 11 of 12 fixed passed (holds; awareness P 10, C 2, N 0 of 12).
+  * Inflated-size decision rules (B-6): 10 of 12 and 12 of 12 (holds; P 12 of 12).
+  * Procedure-level leakage: 7 of 12 and 8 of 12 (fails; P 10, C 2, N 0 of 12).
+  * Coupling by construction: 8 of 10 and 8 of 10 (fails; P 10 of 10).
+
+  P counts declared worlds that may contain what the error exploits. The B-1 result depends on 0.5.0: under 0.4.1 the
+  same files fail (8 of 12 and 7 of 12). Details in [`evaluation/phase_c/REPORT.md`](evaluation/phase_c/REPORT.md).
+* **The evaluation is not independent.** All test cases, including Phases B and C, were written by AI sessions from the
+  model family (Claude) that wrote the code; Phase C's world author is a different Claude model line, not a different
+  family. There is no human-authored external benchmark.
 
 ## Limits
 
@@ -327,6 +338,10 @@ in [`evaluation/phase_b/REPORT.md`](evaluation/phase_b/REPORT.md). It pointed at
 be pre-registered on its own: how K1 treats UNDEFINED outcomes that come from a criterion's own guard (they turned five
 flagged circular-analysis criteria into UNDEFINED), and human-written cases. 0.5.0 implements the K1 treatment of a
 criterion's own UNDEFINED outcomes (spec 0.7, see "Delivered in 0.5.0" above); the human-written cases remain open.
+
+**Phase C: done (2026-11-15).** New documented-error cases, with worlds declared by a different Claude model line, ran
+on 0.5.0 and on 0.4.1; results, the comparison of the two versions and limits in
+[`evaluation/phase_c/REPORT.md`](evaluation/phase_c/REPORT.md).
 
 Feedback is welcome as issues, especially real cases in which the gate caught, or missed, a defect.
 

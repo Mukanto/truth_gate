@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_onset_across_country_years, HIGH_RATE:control:permute_onset_histories_across_countries, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v050\B2-01\faulty.json
+body_sha256: 5f8023e6f2817d85f8c9145a39515274543619349ba8a94458062c26ee018e63

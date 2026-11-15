@@ -21,8 +21,8 @@ such. Section 6 lists the limits.
 | B-6 inflated-size decision rules | 12 | 11 (0 / 11 / 0) | 11 | 0.699 | 0.699 | **HOLDS** |
 | Out of scope (O-1 to O-3) | 6 | 2 (1 / 1 / 0) | 5 | – | – | no threshold |
 
-One-sided 95% Wilson bounds; a class holds when both lower bounds are at least 0.6 (with 12 pairs: at least 11 of 12
-on both). B-2 per subtype (2 pairs each, no verdict): L1.1 2 detected / 2 clean, L1.2 1 / 2, L1.3 1 / 2, L1.4 2 / 2,
+One-sided 95% Wilson bounds; a class holds when both lower bounds are at least 0.6 (with 12 pairs: at least 10 of 12
+on both; 10 of 12 gives 0.601. Corrected on 2026-11-16: the first version said 11 of 12). B-2 per subtype (2 pairs each, no verdict): L1.1 2 detected / 2 clean, L1.2 1 / 2, L1.3 1 / 2, L1.4 2 / 2,
 L3.1 0 / 1, L3.2 1 / 2. B-4 and B-5: no documented cases; no evidence either way.
 
 **Answer to the pre-registered question (§0).** Truth_Gate 0.4.0, with worlds and controls declared by someone who
@@ -125,8 +125,9 @@ and called the B6-10 slopes "borderline".
   (P-2 lists the pairs). Some settings are applications of the sources rather than the sources' own studies; ARC81,
   KRO93 and BAR05 were read as abstracts only. MAK19 counts in two classes; the structured B-2 subtypes rest mostly on
   KAP23 (I-5).
-* **12 pairs per class.** A class with a true detection rate near 0.85 passes the bar about half the time; the
-  intervals in section 1 are the result, the verdicts a summary.
+* **12 pairs per class.** A class with a true detection rate near 0.8 passes the bar on detection about half the time
+  (0.85: about three times in four); the intervals in section 1 are the result, the verdicts a summary. (Corrected on
+  2026-11-16: the first version, computed with 11 of 12 as the bar, said 0.85.)
 * **Allowed guards and K1.** The pre-registration allowed guards that return UNDEFINED; the gate's K1 rule makes any
   UNDEFINED outcome on `plus` or `minus` decisive. This interaction caused nine of the ten B-1 misses and failed clean
   passes, and one B-2 failed clean pass (5.1). It is a property of the gate as released, reported as found; any change belongs to a later version and its own

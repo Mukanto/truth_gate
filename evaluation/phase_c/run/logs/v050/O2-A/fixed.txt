@@ -1,0 +1,6 @@
+COMPONENT  VERDICT  FLAGS
+C          WEAK     K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: WEAK
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v050\O2-A\fixed.json
+body_sha256: fe0d00f8bca6e23af15891395d8b4d8c1ffafb02b87ebc1cf2be5f810fd055ba

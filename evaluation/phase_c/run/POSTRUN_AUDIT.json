@@ -1,0 +1,210 @@
+[
+  {"case": "B1-01", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty NOT_FALSIFIABLE on K2_HIGH_SIZE, K2_FAILS_UNREACHABLE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS and HIGH_RATE:control:permute_active (minus 200/200, control 200/200). Fixed twin on the same worlds: minus 0/200, control 0/200, no expected flag. The within-arm fall of the active arm keeps the placebo-course fall (4 points in both worlds, above the claim's 3) and the regression of the selected starters; the arm contrast of the fixed twin removes both.",
+    "ii": "Clean pass (WEAK; plus 199/200, minus 0/200).",
+    "iii": "No world log (batch 03). The brief states the claim's cut (start index >= 20) and three keys; the skeleton gives both arms a placebo course and occasion error (MEASUREMENT_SD 3), ordinary trial structure. Nothing beyond I-4."}},
+  {"case": "B1-02", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty flags K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS and K5_HOLDS_ON_NOISE arise because the faulty twin holds in plus only 10/200 (minus 0, control 0, noise 1/200); the fixed twin holds in plus 200/200 and carries none of them. They follow from the planted error (one 12-month reading both defines the group and starts the second-year change), but as lost power, not as holding where the claim is false. The 'generic' label rests on K5_HOLDS_ON_NOISE with the noise probe holding on 1/200.",
+    "ii": "Clean pass (WEAK; plus 200/200, minus 7/200).",
+    "iii": "No world log. The two 12-month scans are named in the claim itself (the estimand needs them); the skeleton gives every scan an independent precision error (SCAN_CV 0.015). Not beyond the claim."}},
+  {"case": "B1-03", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 65/200), HIGH_RATE:control and K4 (swap of readings 2 and 3: 189/200). Fixed: minus 0/200, control 0/200, no flag. Selecting on reading 2 makes the 2-to-3 fall carry regression to the mean; selecting on reading 1 does not.",
+    "ii": "Clean pass (WEAK; plus 197/200).",
+    "iii": "Log C50 (P) states the reading 1-to-2 regression in both worlds (I-4). The three readings and the screening cut are in the claim. Nothing beyond I-4."}},
+  {"case": "B1-04", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Detected only through the noise probe (HIGH_RATE:probe:noise, K5_HOLDS_ON_NOISE; faulty 200/200 on noise); fixed 0/200 on noise and no expected flag. The declared streams did not show the error (faulty minus 0/200, control 0/200).",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C05 read C by both readers. The brief names the faces-versus-houses region only as the estimand requires."}},
+  {"case": "B1-05", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: HIGH_RATE on both controls (93/200 and 199/200), noise 136/200, K2_HIGH_SIZE (minus 99/200, 101 abstentions), K4. Fixed: 6, 17, 8 and 4/200, no expected flag. Voxels selected and tested on the same 40 participants versus a split by participants.",
+    "ii": "Clean pass by rule (WEAK, capped by K1_ABSTAINED_MAJORITY:world:minus with 101/200 abstentions and K4_INCONCLUSIVE); plus 200/200, minus 4/200.",
+    "iii": "No world log. Minus has no responsive voxel; the controls scramble voxels or flip signs per participant. Nothing in the brief beyond the claim's 'voxels where participants respond'."}},
+  {"case": "B1-06", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 184/200), HIGH_RATE:control (185/200), shuffle probe 188/200 and K5_HOLDS_ON_SHUFFLE. Fixed: 11, 6 and 9/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C06 read C (selected set empty in minus). The claim names the selected voxels as its estimand. Nothing beyond I-4."}},
+  {"case": "B1-07", "i": "yes", "ii": "no", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE and K2_FAILS_UNREACHABLE (minus 200/200), HIGH_RATE:control and K4 (control 200/200), K2_NO_SEPARATION, and HIGH_RATE:probe:noise (81/200). The fixed twin lacks every declared flag (minus 2/200, control 16/200). The noise flag is shared with the fixed twin at the same rate (78/200), so the 'generic' label does not show the error; the declared flags do.",
+    "ii": "Not from the skeleton: the fixed twin fails only on the gate's noise probe (78/200) and passes in the declared worlds and control (minus 2/200, control 16/200). Cause: the claim's index (V-H)/(V+H) on sign-indefinite N(0,1) data, where sums near zero or below zero occur; the fixed criterion must keep the claim's statistic and the allowed guards cannot exclude such sums. The correction itself (selection and index on different presentations) is the documented one. Reported in CASE.md section 7 before the run (99/200).",
+    "iii": "Log C28 (P): trial noise in minus (I-4). The brief gives rates and the claim only."}},
+  {"case": "B1-08", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 22/200, 74 abstentions), HIGH_RATE:control (28/200), HIGH_RATE:probe:noise (117/200). Fixed: 2, 2 and 5/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 185/200).",
+    "iii": "Log C54 (P) names selection effects in minus (I-4). The brief gives the keys and the claim only."}},
+  {"case": "B1-09", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: noise 200/200, minus 180/200, control 183/200 (K5_HOLDS_ON_NOISE, HIGH_RATE:probe:noise, K2_HIGH_SIZE, HIGH_RATE:control). Fixed (repaired: split by participants): 0, 5 and 3/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 194/200).",
+    "iii": "The two session keys are not named by the claim; they served the original session-split correction (replaced at the repair round), and the world author gave both sessions a stable subject component (log C19). Neither twin's detection relies on them: the faulty twin averages the sessions and is detected on noise. No sign that the brief decided the structure the detection uses."}},
+  {"case": "B1-10", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: noise 200/200, control 200/200 (it ranks by rate_pre, so permuting rate_rest cannot affect it), minus 42/200 (K2_HIGH_SIZE, K4). Fixed: 0, 0 and 3/200.",
+    "ii": "Clean pass (WEAK; plus 190/200).",
+    "iii": "No world log. The resting recording is named in the claim and rate_pre is needed for the change; the skeleton's recording-to-recording fluctuation (STATE_SD 0.15) is ordinary."}},
+  {"case": "B1-11", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 99/200) and HIGH_RATE:control (86/200). Fixed: 16 and 14/200, below the flag level. Window picked and tested on the same participants versus split participants.",
+    "ii": "Clean pass (WEAK; plus 176/200, minus 16/200).",
+    "iii": "No world log. Autocorrelated EEG residuals (NOISE_RHO 0.9) give the window means their variance; 'time samples in order' is an axis name. Nothing beyond I-4."}},
+  {"case": "B1-12", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty K2_HIGH_SIZE (minus 145/200); fixed minus 0/200, no flag.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C11 (P) notes that screening and start are separate noisy visits (I-4). Both scores are named in the claim."}},
+  {"case": "B2-01", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty (in-sample AUC): minus 178/200, controls 47/200 and 186/200. Fixed (5-fold CV): 5, 0 and 6/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 179/200).",
+    "iii": "No world log. Rare onsets (about 5%) and country blocks are the world author's choices (docstring); the brief says only 'new country-years'."}},
+  {"case": "B2-02", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 25/200), HIGH_RATE:control (29/200). Fixed: 0 and 1/200. Copies of oversampled minority rows fall on both sides of the folds.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "No world log. 'The less frequent outcome' is in the claim (sensitivity for that class) and tells the world author the classes are unequal; the detection needs that imbalance (prevalence 0.22 in the skeleton), but it is the claim's own wording (I-4)."}},
+  {"case": "B2-03", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (faulty WEAK, minus 2/200). Needed: a minus world in which the ridge logistic fit can reproduce copied minority rows (far fewer units per feature than 1000 x 50); at this size the copies carry almost no weight, as CASE.md section 7 expected for a logistic model.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C21 read C/N. 'Balanced accuracy' is the claim's statistic."}},
+  {"case": "B2-04", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 1/200). Needed: a minus world in which the indicators and the next-day outcome share a slow common component, so that randomly folded neighbouring days pass the outcome to the 15-NN fit; in the declared minus the rises follow an independent copy of the process and the lift stays far below 0.58.",
+    "ii": "Clean pass (WEAK; plus 166/200).",
+    "iii": "No world log. 'Days in chronological order' is an axis name."}},
+  {"case": "B2-05", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 0/200). Needed: a minus world in which demand and the drivers share a slowly varying, non-extrapolating component that shuffled folds interpolate and forward evaluation cannot; with demand independent of the drivers a linear fit gains nothing from neighbouring weeks.",
+    "ii": "Clean pass (WEAK; plus 199/200).",
+    "iii": "Log C51 (C/P): deterministic seasonal drivers avoided to keep minus a clean null. Nothing from the brief beyond an axis name."}},
+  {"case": "B2-06", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 0/200). Needed: a minus world with patient-specific feature profiles strong and numerous enough relative to the 80 patients and the patch noise (or more features per patient) for a ridge logistic fit trained on other patches of the same patient to recover that patient's label; the declared offsets (SD 0.8 on 20 features) gave no lift.",
+    "ii": "Clean pass (WEAK; plus 197/200).",
+    "iii": "Log C47 names the patch-versus-patient mechanism (P; I-4). The brief gives axes and 'new patients' only."}},
+  {"case": "B2-07", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 12/200 against fixed 2/200, below the flag level). Needed: a minus world with a larger stable participant component in the score and fewer participants per measurement, so that OLS on pooled sessions exploits participant identity.",
+    "ii": "Clean pass (WEAK; plus 198/200).",
+    "iii": "No world log. Axes and 'new participants' only."}},
+  {"case": "B2-08", "i": "yes", "ii": "no", "iii": "no", "reasons": {
+    "i": "Qualified. Faulty: minus 86, control 94, noise 130/200 (K2_HIGH_SIZE, HIGH_RATE:control, HIGH_RATE:probe:noise). The fixed twin carries the same three flags at about half the rates (47, 48, 65/200). By the rule ('markedly different rate') the detection follows from the error, but the fixed twin is itself NOT_FALSIFIABLE with expected flags: the pair would count as detected with a correct criterion.",
+    "ii": "Not from the skeleton: minus carries no class information (log C26) and the fixed twin also fails on the noise probe (65/200). Cause: the claim's accuracy threshold 0.60 without a test at the brief's 40 samples (nested-CV SD 0.114, P(>= 0.6) about 0.24, CASE.md section 7), kept by the fixed criterion; the correction (nested CV) is the documented one.",
+    "iii": "Log C26 (P). The claim names the classifier family, not the tuning procedure; the detection holds on the noise probe and needs no world structure."}},
+  {"case": "B2-09", "i": "yes", "ii": "no", "iii": "no", "reasons": {
+    "i": "Qualified. Faulty: minus 26, control 23, noise 67/200; fixed: 18, 20, 25/200 with the same three flags. On the declared streams the rates are nearly equal; only the noise rate differs markedly (67 vs 25). The fixed twin is itself NOT_FALSIFIABLE with expected flags.",
+    "ii": "Not from the skeleton (minus has no response information; the noise probe gives 25/200). Cause: the claim's AUC threshold 0.65 without a test at 40 patients, kept by the fixed criterion (CASE.md reported 8 to 8.5% in minus); the correction is the documented nested CV.",
+    "iii": "No world log. Nothing in the brief beyond the claim (classifier family named)."}},
+  {"case": "B2-10", "i": "yes", "ii": "no", "iii": "no", "reasons": {
+    "i": "Qualified. Faulty: minus 89, control 85, noise 122/200; fixed: 31, 41, 50/200 with the same three flags. Markedly different rates, but the fixed twin is itself NOT_FALSIFIABLE with expected flags.",
+    "ii": "Not from the skeleton (no class information in minus; noise 50/200). Cause: the claim's accuracy threshold 0.60 without a test at 40 samples, kept by the fixed criterion; the nested CV with gene reselection is the documented correction.",
+    "iii": "Log C48 read C. The claim names a kernel-based classifier; no world structure is used by the detection."}},
+  {"case": "B2-11", "i": "yes", "ii": "no", "iii": "no", "reasons": {
+    "i": "Qualified. Faulty: minus 132, control 110, shuffle 102, noise 122/200; fixed: 46, 44, 46, 39/200 with the same four flags. Markedly different rates, but the fixed twin is itself NOT_FALSIFIABLE with expected flags.",
+    "ii": "Not from the skeleton (no group information in minus; noise 39/200). Cause: the claim's balanced-accuracy threshold 0.60 without a test at 40 subjects (CASE.md: mean 0.506, SD 0.106, P(>= 0.6) 0.21), kept by the fixed criterion; the correction is the documented nested CV.",
+    "iii": "Log C01 (C/P). Nothing beyond the claim."}},
+  {"case": "B2-12", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: noise 188, minus 165, control 173, shuffle 166/200. Fixed: 6, 5, 6, 5/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C07 (P): class proportions 40/22 kept (the world author's own choice). 'Three genes' is the claim's own; the detection is on the noise probe and needs no world structure."}},
+  {"case": "B3-01", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty K2_HIGH_SIZE (minus 33/200); fixed minus 13/200, below the flag level (control 10, noise 10/200). Ratio of heart to body mass versus covariate adjustment, with groups differing in body mass and a non-zero intercept.",
+    "ii": "Clean pass (WEAK; plus 188/200).",
+    "iii": "Log C16 (P) keeps the drug's body-mass effect and the intercept in minus; body mass is the adjusted-for quantity the claim names (I-6)."}},
+  {"case": "B3-02", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 2/200). Needed: a minus world in which creatinine falls much more steeply with age relative to albumin's other variation, or albumin scales far less than proportionally with creatinine, so that the quotient's correlation with age reaches 0.15.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C53 (P); the adjusted-for quantity is named (I-6)."}},
+  {"case": "B3-03", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 0/200). Needed: a minus world with a strong dependence of systolic pressure on body surface area and LV mass far from proportional to it, so that LV mass / BSA carries body-size information; here pressure depends on BSA weakly (3 mmHg per SD against noise SD 17.5).",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "No world log; the adjusted-for quantity is named (I-6)."}},
+  {"case": "B3-04", "i": "yes", "ii": "yes", "iii": "no", "reasons": {
+    "i": "Qualified. The noise flag is absent from the fixed twin (faulty noise 65/200, fixed 0/200), so the detection follows from the error through that flag. The declared flags are carried by the fixed twin at similar rates (minus 46 vs 32, control 53 vs 42), and the fixed twin is itself NOT_FALSIFIABLE with expected flags.",
+    "ii": "From the skeleton with the claim's rule: the fixed twin fails in minus (32/200) and under the control (42/200) but not on noise (0/200). In this world the kidney variation at fixed body mass is small against the liver noise, so the coefficient's sampling SD is about 0.30 at n = 150 (log C13: in minus it 'exceeds 0.25 by chance in about a fifth of the draws'), and the claim has a threshold without a test. The fixed criterion is the documented regression with body mass as covariate.",
+    "iii": "Log C13 (P); I-6."}},
+  {"case": "B3-05", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Generic only: faulty noise 67/200 against fixed 0/200; the declared streams give 0/200 in both twins.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C12 (P); I-6."}},
+  {"case": "B3-06", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 61, control 62, noise 38/200. Fixed: 0/200 in all three.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "Log C09 (P); I-6."}},
+  {"case": "B3-08", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: noise 200/200, control 200/200 (it correlates the fall with the first baseline reading, so permuting the second cannot affect it), minus 72/200. Fixed: 0/200 in all three.",
+    "ii": "Clean pass (WEAK; plus 188/200).",
+    "iii": "Log C30 (P). The second baseline reading is named in the claim because the estimand needs it."}},
+  {"case": "B3-09", "i": "yes", "ii": "n/a", "iii": "yes", "reasons": {
+    "i": "Faulty: noise 199/200, control 200/200 (it ignores o2_uptake_expired), minus 34/200. Fixed: 2, 3, 4/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 200/200).",
+    "iii": "The key venous_o2_content is used by no part of the claim (delivery versus expired-gas uptake) and only by the faulty statistic (Fick-calculated uptake). The world author made it Fick-consistent with the measured cardiac output and wrote that the computed uptake 'shares the cardiac-output measurement error with delivery in minus too' (log C04). K2_HIGH_SIZE (minus 34/200) relies on that structure; the noise and control flags do not, so the detection would stand without it."}},
+  {"case": "B3-11", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: noise 155, control 200, minus 200/200. Fixed: 9, 0, 0/200, no expected flag.",
+    "ii": "Clean pass (WEAK; plus 182/200).",
+    "iii": "Log C24 (P); I-6."}},
+  {"case": "B3-12", "i": "no", "ii": "yes", "iii": "no", "reasons": {
+    "i": "The only expected flag is K2_HIGH_SIZE (minus 25/200); the fixed twin carries the same flag at 23/200 for the same reason (autocorrelated, seasonal monthly residuals that the claim's OLS t test does not model). The detection does not show the error.",
+    "ii": "The fixed twin fails only by K2_HIGH_SIZE (minus 23/200; noise 4/200, controls 11 and 0/200): the skeleton keeps AR(1) waves and a seasonal cycle in both worlds (log C25), which inflate the size of the claim's ordinary t test. The fixed criterion is the documented covariate adjustment.",
+    "iii": "Log C25 (P); I-6."}},
+  {"case": "B6-01", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 32/200), HIGH_RATE:control (26/200). Fixed: 7 and 1/200. Pups counted as replicates with a litter effect kept in minus.",
+    "ii": "Clean pass (WEAK; plus 181/200).",
+    "iii": "Log C27 (P): litter effect in both worlds (I-4). The (dams, pups) axes are named in the shape."}},
+  {"case": "B6-02", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 32/200, control 42/200. Fixed: 4 and 3/200.",
+    "ii": "Clean pass (WEAK; plus 186/200).",
+    "iii": "No world log; between-well variation (WELL_SD 0.30) is ordinary; axes only."}},
+  {"case": "B6-03", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 67/200, control 69/200. Fixed: 4 and 5/200.",
+    "ii": "Clean pass (WEAK; plus 186/200).",
+    "iii": "Log C17 (P): animal > section > neuron hierarchy in both worlds (I-4)."}},
+  {"case": "B6-04", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 7/200; control 13, shuffle 16/200). Needed: a minus world with more animals per cage or a larger cage share of variance; with the brief's 2 animals per cage and an intra-cage correlation near 0.58 the animal-level test stays near its nominal rate.",
+    "ii": "Clean pass (WEAK; plus 187/200).",
+    "iii": "Log C10 (P): cage component kept (I-4)."}},
+  {"case": "B6-05", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: K2_HIGH_SIZE (minus 47/200) and K2_NO_SEPARATION (plus 76/200). Fixed: minus 6/200, plus 184/200. 'Significant here, not there' with a practice gain in both groups.",
+    "ii": "Clean pass (WEAK; plus 184/200).",
+    "iii": "No world log; a practice gain in both groups (GAIN_CONTROL 0.035) is ordinary; the claim names the correct test."}},
+  {"case": "B6-06", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss: the faulty twin never holds (plus, minus and control 0/200; K2_HOLDS_UNREACHABLE, not an expected flag). Needed: worlds in which each group's own slope is near its detection limit (for example a common slope of a few ms per session in minus), so that 'significant in healthy, not in patients' occurs by chance; at -12 (minus) and -16/-8 (plus) both groups are always significant.",
+    "ii": "Clean pass (WEAK; plus 187/200).",
+    "iii": "Log C52 (N/P). Nothing from the brief."}},
+  {"case": "B6-07", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 69/200, control 34/200. Fixed: 4 and 3/200.",
+    "ii": "Clean pass (WEAK; plus 180/200).",
+    "iii": "Log C08 (P): region B more variable than region A in both worlds, the world author's own choice (I-4); the brief says nothing about variability."}},
+  {"case": "B6-08", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 34/200, control 47/200. Fixed: 5 and 1/200.",
+    "ii": "Clean pass (WEAK; plus 184/200).",
+    "iii": "Log C22 (P). Four tanks per group (twice the source) does not favour the error."}},
+  {"case": "B6-09", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 23/200, control 38/200. Fixed: 5 and 1/200.",
+    "ii": "Clean pass (WEAK; plus 189/200).",
+    "iii": "No world log; plot and date variation are ordinary; axes only."}},
+  {"case": "B6-10", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 20/200, control 22/200. Fixed: 5 and 3/200.",
+    "ii": "Clean pass (WEAK; plus 179/200).",
+    "iii": "Log C23 (P): repeated days of one rat (I-4)."}},
+  {"case": "B6-11", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 83/200, control 37/200, shuffle 43/200. Fixed: 5, 9 and 2/200.",
+    "ii": "Clean pass (WEAK; plus 179/200).",
+    "iii": "Log C03 (P): a within-subject day correlation of 0.3 added by the world author as a property 'the claim is not about' (I-4); the claim itself specifies subject means."}},
+  {"case": "B6-12", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 39/200, control 59/200. Fixed: 2 and 15/200 (below the flag level).",
+    "ii": "Clean pass (WEAK; plus 178/200).",
+    "iii": "Log C15 (N/P): correlation 0.4 in both groups in minus. Nothing from the brief."}},
+  {"case": "O1-A", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 0/200). No fixed-rule null stream can show it: scaling and PCA on all rows carry no outcome information when the outcome is independent of the markers; only a world with a true out-of-sample R-squared just below 0.15 could show the small optimism (out of scope).",
+    "ii": "Clean pass (WEAK; plus 192/200).",
+    "iii": "No world log. The claim names PCA and 5-fold CV as its own statistic; no world structure favours the error."}},
+  {"case": "O1-B", "i": "n/a", "ii": "n/a", "iii": "yes", "reasons": {
+    "i": "Miss (minus 0/200). Dropping the middle severity band cannot create speech information in a minus world without any; a world with weak but real speech information (true balanced accuracy below 0.70) would be needed (out of scope).",
+    "ii": "Clean pass (WEAK; plus 173/200).",
+    "iii": "severity_rating is used by no part of the claim and only by the faulty criterion. The world author linked it to diagnosis and built a control for 'an analysis that gets its accuracy from the severity rating' (log C49). Steering is present, but the pair was missed, so no detection depends on it."}},
+  {"case": "O2-A", "i": "yes", "ii": "n/a", "iii": "yes", "reasons": {
+    "i": "Faulty K2_HIGH_SIZE (minus 65/200); fixed minus 7/200, no flag.",
+    "ii": "Clean pass (WEAK; plus 188/200).",
+    "iii": "The willingness-to-pay keys are used by no part of the claim (liking only) and only by the faulty criterion (any of three outcomes). The world author gave willingness to pay its own treatment effect and kept it in minus under the fixed rule (log C18). The detection rests entirely on that effect."}},
+  {"case": "O2-B", "i": "yes", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Faulty: minus 21, control 21, noise 19/200 (just above the flag level). Fixed: 7, 7, 6/200, no flag. Optional stopping.",
+    "ii": "Clean pass (WEAK; plus 188/200).",
+    "iii": "Log C20 (C). 'On all participants' led the world author to keep a low-effort tail, which the detection does not use (it also holds on i.i.d. noise)."}},
+  {"case": "O3-A", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss: the faulty twin never holds (plus 0/200; K2_HOLDS_UNREACHABLE, not an expected flag). Needed: that flag on the list, or a minus world in which the rows next to the signature carry a sensitivity difference that the signature lacks.",
+    "ii": "Clean pass (WEAK; plus 199/200).",
+    "iii": "Log C29 (C/P). The signature mask key is needed by the claim."}},
+  {"case": "O3-B", "i": "n/a", "ii": "n/a", "iii": "no", "reasons": {
+    "i": "Miss (minus 0/200). Needed: a world in which the five dropped country rows differ systematically from the rest; the declared countries are exchangeable draws.",
+    "ii": "Clean pass (WEAK; plus 199/200).",
+    "iii": "Log C14 (C/P): trends and country links avoided to keep minus clean. Nothing from the brief."}}
+]

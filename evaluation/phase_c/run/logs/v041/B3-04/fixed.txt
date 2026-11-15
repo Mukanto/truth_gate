@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:permute_kidney_within_body_mass_blocks, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\B3-04\fixed.json
+body_sha256: e0fc314492ebff16e1a9122439a601129ad41ecf2c46e72d8a1148a4fb324e59

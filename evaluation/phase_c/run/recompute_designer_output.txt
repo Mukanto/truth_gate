@@ -1,0 +1,356 @@
+PHASE C - designer's recomputation (independent of the runner)
+run folder: evaluation/phase_c/run
+pairs in EXPECTED_FLAGS.json: 52; timeouts given: none
+
+Readings fixed in this script (see the final message of the author of the script):
+R1 detection: file ok (certificate present, readable, no load_error, no timeout), STUDY verdict NOT_FALSIFIABLE, and at
+   least one component carries a flag of the case's expected list. Information flags and K1_ABSTAINED* are removed
+   from the list before use. Labels: generic = a noise flag is among the expected flags found, else declared;
+   K2-only = every expected flag found is K2_NO_SEPARATION or K2_FAILS_UNREACHABLE (reported in addition).
+R2 clean pass: fixed file ok and STUDY verdict FALSIFIABLE or WEAK.
+R3 threshold per in-scope class: n >= 10, one-sided 95% Wilson lower bound of detection >= 0.6 and of clean pass >= 0.6.
+   Fewer than 10 pairs: INSUFFICIENT. B-2 subtype rows show the class rule (both bounds >= 0.6 -> HOLDS, else FAILS)
+   marked descriptive (P-8 item 5); O and the without-overlap tables carry no threshold (descriptive).
+R4 baselines: noise-only / declared-only detection = NOT_FALSIFIABLE plus a noise / a non-noise expected flag;
+   clean passes of the baselines equal the gate's; flag-everything = every faulty detected, no fixed passing.
+R5 primary comparison unit = the component verdict of the file (single component; study verdict when no component).
+   A 0.4.1 UNDEFINED component = certificate ok and component verdict UNDEFINED. Cause (P-7 item 3) from the 0.5.0
+   certificate. Comparable = certificate present (no timeout) in both versions; a gain or loss is judged on comparable files.
+   Not informative when fewer than 5 of all Phase C files (faulty and fixed, all classes incl. O) are UNDEFINED under 0.4.1.
+R6 abstention share (P-7 item 4) = sum(undefined - hard_undefined) / sum(n) over world:plus, world:minus, world:null
+   of the components of ok 0.5.0 certificates; files without certificate or component do not enter.
+R7 'error too small' (P-7 item 5, P-8 item 4): a miss, file ok with one component, faulty study verdict WEAK or
+   FALSIFIABLE, no expected flag found, world:minus holds/n <= 0.05 + 2*sqrt(0.05*0.95/n).
+
+====================================================================================================
+TRUTH_GATE 0.5.0 (pre-registered primary table) (v050) - detection, clean pass, thresholds
+====================================================================================================
+certificates present for 52 of 52 pairs (a missing certificate is a miss / failed clean pass)
+
+-- in-scope classes (threshold: both one-sided 95% Wilson lower bounds >= 0.6, n >= 10) --
+B-1              pairs=12 det=12 (generic 7, declared 5, K2-only 0) clean=11 LBdet=0.8160 LBclean=0.6988 HOLDS
+    noise-only      det= 7 LBdet=0.3560 clean=11 LBclean=0.6988 would-pass-threshold=no
+    declared-only   det=11 LBdet=0.6988 clean=11 LBclean=0.6988 would-pass-threshold=yes
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-2              pairs=12 det= 7 (generic 5, declared 2, K2-only 0) clean= 8 LBdet=0.3560 LBclean=0.4315 FAILS
+    noise-only      det= 5 LBdet=0.2200 clean= 8 LBclean=0.4315 would-pass-threshold=no
+    declared-only   det= 7 LBdet=0.3560 clean= 8 LBclean=0.4315 would-pass-threshold=no
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-3              pairs=10 det= 8 (generic 6, declared 2, K2-only 0) clean= 8 LBdet=0.5408 LBclean=0.5408 FAILS
+    noise-only      det= 6 LBdet=0.3516 clean= 8 LBclean=0.5408 would-pass-threshold=no
+    declared-only   det= 7 LBdet=0.4417 clean= 8 LBclean=0.5408 would-pass-threshold=no
+    flag-everything det=10 LBdet=0.7871 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-6              pairs=12 det=10 (generic 0, declared 10, K2-only 0) clean=12 LBdet=0.6008 LBclean=0.8160 HOLDS
+    noise-only      det= 0 LBdet=0.0000 clean=12 LBclean=0.8160 would-pass-threshold=no
+    declared-only   det=10 LBdet=0.6008 clean=12 LBclean=0.8160 would-pass-threshold=yes
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+
+-- B-2 subtypes (result of the class rule shown, descriptive; the threshold applies to the class) --
+B-2 L1.1         pairs= 1 det= 1 (generic 0, declared 1, K2-only 0) clean= 1 LBdet=0.2699 LBclean=0.2699 class-rule FAILS (descriptive; not a class verdict)
+B-2 L1.3         pairs= 5 det= 5 (generic 5, declared 0, K2-only 0) clean= 1 LBdet=0.6489 LBclean=0.0460 class-rule FAILS (descriptive; not a class verdict)
+B-2 L1.4         pairs= 2 det= 1 (generic 0, declared 1, K2-only 0) clean= 2 LBdet=0.1209 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+B-2 L3.1         pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+B-2 L3.2         pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+
+-- out of scope (descriptive, no threshold) --
+O O-1            pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+O O-2            pairs= 2 det= 2 (generic 1, declared 1, K2-only 0) clean= 2 LBdet=0.4250 LBclean=0.4250 descriptive
+O O-3            pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+O all            pairs= 6 det= 2 (generic 1, declared 1, K2-only 0) clean= 6 LBdet=0.1173 LBclean=0.6892 descriptive
+
+-- without the pairs that overlap Phase B (descriptive) --
+B-1 no-overlap   pairs= 8 det= 8 (generic 5, declared 3, K2-only 0) clean= 8 LBdet=0.7473 LBclean=0.7473 descriptive
+B-2 no-overlap   pairs= 6 det= 5 (generic 4, declared 1, K2-only 0) clean= 2 LBdet=0.4976 LBclean=0.1173 descriptive
+B-3 no-overlap   pairs= 6 det= 4 (generic 3, declared 1, K2-only 0) clean= 5 LBdet=0.3470 LBclean=0.4976 descriptive
+B-6 no-overlap   pairs= 7 det= 5 (generic 0, declared 5, K2-only 0) clean= 7 LBdet=0.4087 LBclean=0.7212 descriptive
+O no-overlap     pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+
+-- per pair --
+B1-01  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_active,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B1-02  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y generic  [K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-03  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:swap_readings_2_and_3_at_random_within_patient,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B1-04  B-1        KRI10  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:probe:noise,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-05  B-1        KRI10  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:random_sign_per_participant,HIGH_RATE:control:scramble_voxels_within_participant,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B1-06  B-1        KRI10  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_contrast_across_trials,HIGH_RATE:probe:shuffle:response,contrast,K2_HIGH_SIZE,K5_HOLDS_ON_SHUFFLE] | fixed=WEAK             clean=Y []
+B1-07  B-1        KRI09  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:shuffle_orientation_labels_within_neuron,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:probe:noise,K5_INCONCLUSIVE:zeros]
+B1-08  B-1        KRI09  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_stimulus_condition_across_trials,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B1-09  B-1        VUL09  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_trait_across_participants,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-10  B-1        MAK19  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_rate_rest,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-11  B-1        MAK19  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_patient,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B1-12  B-1        BAR05  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-01  B-2  L1.1  KAP23  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_onset_across_country_years,HIGH_RATE:control:permute_onset_histories_across_countries,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-02  B-2  L1.4  KAP23  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_outcome,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-03  B-2  L1.4  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-04  B-2  L3.1  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-05  B-2  L3.1  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-06  B-2  L3.2  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-07  B-2  L3.2  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-08  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-09  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_responder,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_responder,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-10  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-11  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_group_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,group_b,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_group_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,group_b,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-12  B-2  L1.3  AMB02  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_tumour_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,tumour,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-01  B-3        CUR13  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B3-02  B-3        CUR13  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B3-03  B-3        CUR13  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B3-04  B-3        CUR13  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_kidney_within_body_mass_blocks,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_kidney_within_body_mass_blocks,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B3-05  B-3        PEA97  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:probe:noise] | fixed=WEAK             clean=Y []
+B3-06  B-3        PEA97  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:decouple_observers_within_true_value_blocks,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B3-08  B-3        ARC81  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_second_baseline_across_patients,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-09  B-3        ARC81  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_uptake_across_patients,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-11  B-3        KRO93  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_gene_a_across_samples,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B3-12  B-3        KRO93  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B6-01  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_exposed_across_dams,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-02  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:reassign_wells_to_treatment,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-03  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_dose_across_animals,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-04  B-6        LAZ18  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B6-05  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE,K2_NO_SEPARATION] | fixed=WEAK             clean=Y []
+B6-06  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=n          [] | fixed=WEAK             clean=Y []
+B6-07  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:swap_region_labels_in_half_the_subjects,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-08  B-6        HUR84  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_treated_across_tanks,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-09  B-6        HUR84  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:reassign_plots_to_treatment,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-10  B-6        LAZ10  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_treated_across_rats,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-11  B-6        LAZ10  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_cortisol_subjects,HIGH_RATE:probe:shuffle:heart_rate,cortisol,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-12  B-6        MAK19  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_group_labels,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O1-A   O    O-1   KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+O1-B   O    O-1   KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+O2-A   O    O-2   SIM11  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O2-B   O    O-2   SIM11  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:reassign_conditions,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O3-A   O    O-3   BAG09  faulty=NOT_FALSIFIABLE  det=n          [] | fixed=WEAK             clean=Y []
+O3-B   O    O-3   HER14  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+
+====================================================================================================
+'ERROR TOO SMALL IN THE DECLARED WORLDS AT THIS SIZE' (0.5.0 misses; P-7 item 5)
+====================================================================================================
+B2-03  B-2  miss: faulty=WEAK minus holds/n=2/200=0.0100 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B2-04  B-2  miss: faulty=WEAK minus holds/n=1/200=0.0050 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B2-05  B-2  miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B2-06  B-2  miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B2-07  B-2  miss: faulty=WEAK minus holds/n=12/200=0.0600 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B3-02  B-3  miss: faulty=WEAK minus holds/n=2/200=0.0100 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B3-03  B-3  miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B6-04  B-6  miss: faulty=WEAK minus holds/n=7/200=0.0350 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+B6-06  B-6  miss: faulty=NOT_FALSIFIABLE -> no label (study verdict NOT_FALSIFIABLE is not WEAK or FALSIFIABLE (P-8 item 4))
+O1-A   O    miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+O1-B   O    miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+O3-A   O    miss: faulty=NOT_FALSIFIABLE -> no label (study verdict NOT_FALSIFIABLE is not WEAK or FALSIFIABLE (P-8 item 4))
+O3-B   O    miss: faulty=WEAK minus holds/n=0/200=0.0000 bound=0.0808 -> LABEL: error too small in the declared worlds at this size
+labelled pairs (11): B2-03 B2-04 B2-05 B2-06 B2-07 B3-02 B3-03 B6-04 O1-A O1-B O3-B
+
+====================================================================================================
+OVERLAP WITH PHASE B AND NEW SOURCES (descriptive; PREREG section 1, P-7 items 6 and 7)
+====================================================================================================
+B-1: pairs=12 overlapping Phase B=4 addendum-source pairs=6 new-source minimum (>=4) met
+B-2: pairs=12 overlapping Phase B=6 addendum-source pairs=4 new-source minimum (>=4) met
+B-3: pairs=10 overlapping Phase B=4 addendum-source pairs=4 new-source minimum (>=4) met
+B-6: pairs=12 overlapping Phase B=5 addendum-source pairs=4 new-source minimum (>=4) met
+
+====================================================================================================
+TRUTH_GATE 0.4.1 (secondary table) (v041) - detection, clean pass, thresholds
+====================================================================================================
+certificates present for 52 of 52 pairs (a missing certificate is a miss / failed clean pass)
+
+-- in-scope classes (threshold: both one-sided 95% Wilson lower bounds >= 0.6, n >= 10) --
+B-1              pairs=12 det= 8 (generic 4, declared 4, K2-only 0) clean= 7 LBdet=0.4315 LBclean=0.3560 FAILS
+    noise-only      det= 4 LBdet=0.1595 clean= 7 LBclean=0.3560 would-pass-threshold=no
+    declared-only   det= 7 LBdet=0.3560 clean= 7 LBclean=0.3560 would-pass-threshold=no
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-2              pairs=12 det= 7 (generic 5, declared 2, K2-only 0) clean= 8 LBdet=0.3560 LBclean=0.4315 FAILS
+    noise-only      det= 5 LBdet=0.2200 clean= 8 LBclean=0.4315 would-pass-threshold=no
+    declared-only   det= 7 LBdet=0.3560 clean= 8 LBclean=0.4315 would-pass-threshold=no
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-3              pairs=10 det= 8 (generic 6, declared 2, K2-only 0) clean= 8 LBdet=0.5408 LBclean=0.5408 FAILS
+    noise-only      det= 6 LBdet=0.3516 clean= 8 LBclean=0.5408 would-pass-threshold=no
+    declared-only   det= 7 LBdet=0.4417 clean= 8 LBclean=0.5408 would-pass-threshold=no
+    flag-everything det=10 LBdet=0.7871 clean= 0 LBclean=0.0000 would-pass-threshold=no
+B-6              pairs=12 det=10 (generic 0, declared 10, K2-only 0) clean=12 LBdet=0.6008 LBclean=0.8160 HOLDS
+    noise-only      det= 0 LBdet=0.0000 clean=12 LBclean=0.8160 would-pass-threshold=no
+    declared-only   det=10 LBdet=0.6008 clean=12 LBclean=0.8160 would-pass-threshold=yes
+    flag-everything det=12 LBdet=0.8160 clean= 0 LBclean=0.0000 would-pass-threshold=no
+
+-- B-2 subtypes (result of the class rule shown, descriptive; the threshold applies to the class) --
+B-2 L1.1         pairs= 1 det= 1 (generic 0, declared 1, K2-only 0) clean= 1 LBdet=0.2699 LBclean=0.2699 class-rule FAILS (descriptive; not a class verdict)
+B-2 L1.3         pairs= 5 det= 5 (generic 5, declared 0, K2-only 0) clean= 1 LBdet=0.6489 LBclean=0.0460 class-rule FAILS (descriptive; not a class verdict)
+B-2 L1.4         pairs= 2 det= 1 (generic 0, declared 1, K2-only 0) clean= 2 LBdet=0.1209 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+B-2 L3.1         pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+B-2 L3.2         pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 class-rule FAILS (descriptive; not a class verdict)
+
+-- out of scope (descriptive, no threshold) --
+O O-1            pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+O O-2            pairs= 2 det= 2 (generic 1, declared 1, K2-only 0) clean= 2 LBdet=0.4250 LBclean=0.4250 descriptive
+O O-3            pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+O all            pairs= 6 det= 2 (generic 1, declared 1, K2-only 0) clean= 6 LBdet=0.1173 LBclean=0.6892 descriptive
+
+-- without the pairs that overlap Phase B (descriptive) --
+B-1 no-overlap   pairs= 8 det= 5 (generic 3, declared 2, K2-only 0) clean= 5 LBdet=0.3480 LBclean=0.3480 descriptive
+B-2 no-overlap   pairs= 6 det= 5 (generic 4, declared 1, K2-only 0) clean= 2 LBdet=0.4976 LBclean=0.1173 descriptive
+B-3 no-overlap   pairs= 6 det= 4 (generic 3, declared 1, K2-only 0) clean= 5 LBdet=0.3470 LBclean=0.4976 descriptive
+B-6 no-overlap   pairs= 7 det= 5 (generic 0, declared 5, K2-only 0) clean= 7 LBdet=0.4087 LBclean=0.7212 descriptive
+O no-overlap     pairs= 2 det= 0 (generic 0, declared 0, K2-only 0) clean= 2 LBdet=0.0000 LBclean=0.4250 descriptive
+
+-- per pair --
+B1-01  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_active,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B1-02  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y generic  [K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-03  B-1        MOR03  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:swap_readings_2_and_3_at_random_within_patient,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B1-04  B-1        KRI10  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:probe:noise,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-05  B-1        KRI10  faulty=UNDEFINED        det=n          [HIGH_RATE:control:random_sign_per_participant,HIGH_RATE:control:scramble_voxels_within_participant,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS] | fixed=UNDEFINED        clean=n [K1_UNDEFINED,K4_INCONCLUSIVE,K5_INCONCLUSIVE:zeros]
+B1-06  B-1        KRI10  faulty=UNDEFINED        det=n          [HIGH_RATE:control:permute_contrast_across_trials,HIGH_RATE:probe:shuffle:response,contrast,K2_HIGH_SIZE,K5_HOLDS_ON_SHUFFLE] | fixed=UNDEFINED        clean=n [K1_UNDEFINED,K5_INCONCLUSIVE:zeros]
+B1-07  B-1        KRI09  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:shuffle_orientation_labels_within_neuron,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:probe:noise,K5_INCONCLUSIVE:zeros]
+B1-08  B-1        KRI09  faulty=UNDEFINED        det=n          [HIGH_RATE:control:permute_stimulus_condition_across_trials,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=UNDEFINED        clean=n [K1_UNDEFINED,K5_INCONCLUSIVE:zeros]
+B1-09  B-1        VUL09  faulty=UNDEFINED        det=n          [HIGH_RATE:control:permute_trait_across_participants,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE] | fixed=UNDEFINED        clean=n [K1_UNDEFINED,K5_INCONCLUSIVE:zeros]
+B1-10  B-1        MAK19  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_rate_rest,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B1-11  B-1        MAK19  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_patient,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B1-12  B-1        BAR05  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-01  B-2  L1.1  KAP23  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_onset_across_country_years,HIGH_RATE:control:permute_onset_histories_across_countries,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-02  B-2  L1.4  KAP23  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_outcome,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B2-03  B-2  L1.4  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-04  B-2  L3.1  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-05  B-2  L3.1  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-06  B-2  L3.2  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-07  B-2  L3.2  KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B2-08  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-09  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_responder,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_responder,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-10  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_class_across_samples,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-11  B-2  L1.3  VAR06  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_group_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,group_b,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_group_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,group_b,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B2-12  B-2  L1.3  AMB02  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_tumour_labels,HIGH_RATE:probe:noise,HIGH_RATE:probe:shuffle:expression,tumour,K2_HIGH_SIZE,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-01  B-3        CUR13  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B3-02  B-3        CUR13  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B3-03  B-3        CUR13  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B3-04  B-3        CUR13  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_kidney_within_body_mass_blocks,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [HIGH_RATE:control:permute_kidney_within_body_mass_blocks,K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B3-05  B-3        PEA97  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:probe:noise] | fixed=WEAK             clean=Y []
+B3-06  B-3        PEA97  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:decouple_observers_within_true_value_blocks,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B3-08  B-3        ARC81  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_second_baseline_across_patients,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-09  B-3        ARC81  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_uptake_across_patients,HIGH_RATE:probe:noise,K2_HIGH_SIZE,K4_CONTROL_ALSO_HOLDS,K5_HOLDS_ON_NOISE] | fixed=WEAK             clean=Y []
+B3-11  B-3        KRO93  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:permute_gene_a_across_samples,HIGH_RATE:probe:noise,K2_FAILS_UNREACHABLE,K2_HIGH_SIZE,K2_NO_SEPARATION,K4_CONTROL_ALSO_HOLDS] | fixed=WEAK             clean=Y []
+B3-12  B-3        KRO93  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=NOT_FALSIFIABLE  clean=n [K2_HIGH_SIZE,K5_INCONCLUSIVE:zeros]
+B6-01  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_exposed_across_dams,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-02  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:reassign_wells_to_treatment,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-03  B-6        LAZ18  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_dose_across_animals,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-04  B-6        LAZ18  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+B6-05  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE,K2_NO_SEPARATION] | fixed=WEAK             clean=Y []
+B6-06  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=n          [] | fixed=WEAK             clean=Y []
+B6-07  B-6        NIE11  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:swap_region_labels_in_half_the_subjects,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-08  B-6        HUR84  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_treated_across_tanks,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-09  B-6        HUR84  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:reassign_plots_to_treatment,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-10  B-6        LAZ10  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_treated_across_rats,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-11  B-6        LAZ10  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_cortisol_subjects,HIGH_RATE:probe:shuffle:heart_rate,cortisol,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+B6-12  B-6        MAK19  faulty=NOT_FALSIFIABLE  det=Y declared [HIGH_RATE:control:permute_group_labels,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O1-A   O    O-1   KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+O1-B   O    O-1   KAP23  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+O2-A   O    O-2   SIM11  faulty=NOT_FALSIFIABLE  det=Y declared [K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O2-B   O    O-2   SIM11  faulty=NOT_FALSIFIABLE  det=Y generic  [HIGH_RATE:control:reassign_conditions,HIGH_RATE:probe:noise,K2_HIGH_SIZE] | fixed=WEAK             clean=Y []
+O3-A   O    O-3   BAG09  faulty=NOT_FALSIFIABLE  det=n          [] | fixed=WEAK             clean=Y []
+O3-B   O    O-3   HER14  faulty=WEAK             det=n          [] | fixed=WEAK             clean=Y []
+
+====================================================================================================
+PRIMARY COMPARISON 0.5.0 vs 0.4.1 (PREREG section 6, P-7 item 3; unit: the component of each file)
+====================================================================================================
+files with a 0.4.1 component verdict UNDEFINED: 8 of 104 (threshold for an informative comparison: at least 5)
+list (case:twin class cause):
+   B1-05:faulty B-1 cause=soft only
+   B1-05:fixed B-1 cause=soft only
+   B1-06:faulty B-1 cause=soft only
+   B1-06:fixed B-1 cause=soft only
+   B1-08:faulty B-1 cause=soft only
+   B1-08:fixed B-1 cause=soft only
+   B1-09:faulty B-1 cause=soft only
+   B1-09:fixed B-1 cause=soft only
+not comparable (certificate missing or timeout in a version), 0: none
+
+LOSSES (by spec 0.7 section 4 none can occur; a loss counts against 0.5.0, whatever a later release does):
+   detections lost : none
+   clean passes lost: none
+anomalies (component verdict changed although 0.4.1 was not UNDEFINED; 0.5.0 should change only UNDEFINED):
+   none
+
+per class (informative comparison):
+B-1: undefined under 0.4.1=8 causes={'soft only': 8}
+    detections gained : B1-05 B1-06 B1-08 B1-09
+    clean passes gained: B1-05 B1-06 B1-08 B1-09
+    faulty UNDEFINED->FALSIFIABLE/WEAK (misses 0.4.1 hid): none
+    fixed UNDEFINED->NOT_FALSIFIABLE (false alarms 0.4.1 hid): none
+    losses: detections none; clean passes none
+    components with K1_ABSTAINED_MAJORITY (0.5.0): B1-05:faulty B1-05:fixed
+B-2: undefined under 0.4.1=0 causes={}
+    detections gained : none
+    clean passes gained: none
+    faulty UNDEFINED->FALSIFIABLE/WEAK (misses 0.4.1 hid): none
+    fixed UNDEFINED->NOT_FALSIFIABLE (false alarms 0.4.1 hid): none
+    losses: detections none; clean passes none
+    components with K1_ABSTAINED_MAJORITY (0.5.0): none
+B-3: undefined under 0.4.1=0 causes={}
+    detections gained : none
+    clean passes gained: none
+    faulty UNDEFINED->FALSIFIABLE/WEAK (misses 0.4.1 hid): none
+    fixed UNDEFINED->NOT_FALSIFIABLE (false alarms 0.4.1 hid): none
+    losses: detections none; clean passes none
+    components with K1_ABSTAINED_MAJORITY (0.5.0): none
+B-6: undefined under 0.4.1=0 causes={}
+    detections gained : none
+    clean passes gained: none
+    faulty UNDEFINED->FALSIFIABLE/WEAK (misses 0.4.1 hid): none
+    fixed UNDEFINED->NOT_FALSIFIABLE (false alarms 0.4.1 hid): none
+    losses: detections none; clean passes none
+    components with K1_ABSTAINED_MAJORITY (0.5.0): none
+O: undefined under 0.4.1=0 causes={}
+    detections gained : none
+    clean passes gained: none
+    faulty UNDEFINED->FALSIFIABLE/WEAK (misses 0.4.1 hid): none
+    fixed UNDEFINED->NOT_FALSIFIABLE (false alarms 0.4.1 hid): none
+    losses: detections none; clean passes none
+    components with K1_ABSTAINED_MAJORITY (0.5.0): none
+
+all component verdict moves 0.4.1 -> 0.5.0 (comparable files):
+   B1-05:faulty B-1 UNDEFINED -> NOT_FALSIFIABLE
+   B1-05:fixed B-1 UNDEFINED -> WEAK
+   B1-06:faulty B-1 UNDEFINED -> NOT_FALSIFIABLE
+   B1-06:fixed B-1 UNDEFINED -> WEAK
+   B1-08:faulty B-1 UNDEFINED -> NOT_FALSIFIABLE
+   B1-08:fixed B-1 UNDEFINED -> WEAK
+   B1-09:faulty B-1 UNDEFINED -> NOT_FALSIFIABLE
+   B1-09:fixed B-1 UNDEFINED -> WEAK
+
+====================================================================================================
+ABSTENTION SHARES, 0.5.0 (P-7 item 4; Phase B from evaluation/r1_v050/certs)
+====================================================================================================
+share = sum(undefined - hard_undefined) / sum(n) over world:plus, world:minus, world:null of 0.5.0 certificates
+class  twin     Phase C share (num/den, files)         Phase B share (num/den, files, missing)
+B-1    faulty   0.0440 (211/4800, 12 files)            0.0940 (451/4800, 12 files, 0 missing)
+B-1    fixed    0.0390 (187/4800, 12 files)            0.0965 (463/4800, 12 files, 0 missing)
+B-2    faulty   0.0000 (0/4800, 12 files)              0.0000 (0/4800, 12 files, 0 missing)
+B-2    fixed    0.0000 (0/4800, 12 files)              0.0048 (23/4800, 12 files, 0 missing)
+B-3    faulty   0.0000 (0/4000, 10 files)              0.0000 (0/4800, 12 files, 0 missing)
+B-3    fixed    0.0000 (0/4000, 10 files)              0.0000 (0/4800, 12 files, 0 missing)
+B-6    faulty   0.0000 (0/4800, 12 files)              0.0000 (0/4800, 12 files, 0 missing)
+B-6    fixed    0.0000 (0/4800, 12 files)              0.0000 (0/4800, 12 files, 0 missing)
+O      faulty   0.0000 (0/2400, 6 files)               0.0000 (0/2400, 6 files, 0 missing)
+O      fixed    0.0000 (0/2400, 6 files)               0.0000 (0/2400, 6 files, 0 missing)
+
+====================================================================================================
+AWARENESS (resolved reading; 'no log' counted in P and shown on its own) - declared worlds that may contain what the error exploits
+====================================================================================================
+B-1  n=12 P=10 (0.8333) C=2 (0.1667) N=0 (0.0000) of which no-log (in P)=5 unknown=0
+       reader1 {'P': 5, 'C': 2, 'N': 0, 'no log': 5}  reader2 {'P': 5, 'C': 2, 'N': 0, 'no log': 5}
+B-2  n=12 P=10 (0.8333) C=2 (0.1667) N=0 (0.0000) of which no-log (in P)=5 unknown=0
+       reader1 {'P': 3, 'C': 4, 'N': 0, 'no log': 5}  reader2 {'P': 5, 'C': 1, 'N': 1, 'no log': 5}
+B-3  n=10 P=10 (1.0000) C=0 (0.0000) N=0 (0.0000) of which no-log (in P)=1 unknown=0
+       reader1 {'P': 9, 'C': 0, 'N': 0, 'no log': 1}  reader2 {'P': 9, 'C': 0, 'N': 0, 'no log': 1}
+B-6  n=12 P=12 (1.0000) C=0 (0.0000) N=0 (0.0000) of which no-log (in P)=3 unknown=0
+       reader1 {'P': 7, 'C': 0, 'N': 2, 'no log': 3}  reader2 {'P': 9, 'C': 0, 'N': 0, 'no log': 3}
+O    n= 6 P=5 (0.8333) C=1 (0.1667) N=0 (0.0000) of which no-log (in P)=1 unknown=0
+       reader1 {'P': 2, 'C': 3, 'N': 0, 'no log': 1}  reader2 {'P': 3, 'C': 2, 'N': 0, 'no log': 1}
+
+0.5.0 detections and clean passes by resolved level (descriptive):
+   P B-1  n=10 det=10 (generic 6, declared 4, K2-only 0) clean= 9
+   P B-2  n=10 det= 6 (generic 4, declared 2, K2-only 0) clean= 7
+   P B-3  n=10 det= 8 (generic 6, declared 2, K2-only 0) clean= 8
+   P B-6  n=12 det=10 (generic 0, declared 10, K2-only 0) clean=12
+   P O    n= 5 det= 1 (generic 0, declared 1, K2-only 0) clean= 5
+   C B-1  n= 2 det= 2 (generic 1, declared 1, K2-only 0) clean= 2
+   C B-2  n= 2 det= 1 (generic 1, declared 0, K2-only 0) clean= 1
+   C O    n= 1 det= 1 (generic 1, declared 0, K2-only 0) clean= 1
+
+====================================================================================================
+WARNINGS (0)
+====================================================================================================
+  none

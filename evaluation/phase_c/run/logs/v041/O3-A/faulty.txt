@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  K2_HOLDS_UNREACHABLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\kapi-oss\evaluation\phase_c\run\certs\v041\O3-A\faulty.json
+body_sha256: bfc6b2f986d1be0dfb3ac6303084cf67a7d742d0fd5a52c7960fd49ff50c912b
