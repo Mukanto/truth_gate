@@ -154,3 +154,51 @@ scripts in `work\`. Because the harness suggests the session scratchpad to every
    source texts and extracts; the package copies; the designer's archive of the session scratchpad; and the read-only copies
    in the audit and reader sandboxes. The designer's scan of the published files for personal data is logged in
    `record/designer/PUBLISH_SCAN.txt`.
+
+## P-7 (2026-11-15, after the case freeze and its push, before the runner exists and before any gate run): readings of §6 for the run and the report
+
+The frozen §6 leaves these operational points open; they are fixed here, before any certificate exists (Claude under the
+author's delegation).
+
+1. **Builds.** Two clean worktrees outside the repository, `git worktree add <dir> v0.5.0` and `... v0.4.1`. The runner
+   refuses a worktree whose HEAD is not the tag's commit or whose `git status --porcelain` is not empty, and records both
+   commits in the run log.
+2. **Timeout and infrastructure failure.** The 60-minute rule (§2) is a per-check timeout of 3600 s. An infrastructure
+   failure is a check that ends without a certificate and with an exit code that is not a gate exit code (0–7), or a crash
+   of the runner or the machine; it is rerun once and both attempts are logged. A gate exit with no certificate, or a
+   timeout, is a result, not rerun.
+3. **Cause of a component that 0.4.1 made UNDEFINED** (primary comparison), from the 0.5.0 certificate of the same file:
+   **hard** if a K1 stream (`world:plus`, `world:minus`, `world:null`) has `hard_undefined > 0`; otherwise **plus
+   majority** if `2 * undefined > n` on `world:plus`; otherwise **soft only**. If the 0.5.0 certificate is missing, the
+   cause is "unknown". (These are the cases of spec 0.7 section 4, items 2 and 3.)
+4. **Abstention share** per class and twin (faulty, fixed): the sum of `undefined - hard_undefined` over the K1 streams of
+   the class's 0.5.0 certificates, divided by the sum of `n` over the same streams. Phase B's share is computed the same way
+   from the 0.5.0 certificates of the Phase B files recorded by the official R1 (`evaluation/r1_v050/certs/`), per class.
+5. **"Error too small in the declared worlds at this size"** (§6 Report): applied to a miss whose faulty file carries no
+   expected flag under 0.5.0 and whose `world:minus` rate `holds / n` in the 0.5.0 certificate is at most
+   `0.05 + 2 * sqrt(0.05 * 0.95 / n)` (0.081 at n = 200), the nominal level plus two standard errors.
+6. **Inputs of the report.** Awareness: `record/designer/AWARENESS_RESULT.json` (resolved reading; "no log" counted in P
+   and also shown on its own). Overlap and size ratio: `record/designer/DESIGNER_LINES.json`; addendum pairs: the source
+   lists of PREREG §1 and `SOURCES_ADDENDUM.md`. Phase B side by side: the class rows of `evaluation/phase_b/run/RESULTS.json`
+   (descriptive). Nothing else is read besides the frozen cases, `EXPECTED_FLAGS.json` and the certificates and run logs.
+7. **Wording rule of §1.** A class table "largely repeats Phase B settings with a new world author" when strictly more than
+   half of its pairs carry "yes" in the overlap line.
+
+## P-8 (2026-11-15, after the runner and the designer's recomputation script were written independently, before any gate run): points both scripts raised
+
+Both scripts were written from the frozen texts and P-7 (the recomputation script without reading the runner); their
+authors listed the points below. Decisions (Claude under the author's delegation), before any certificate exists:
+
+1. **Missing certificate.** A check that ends with a gate exit code but no certificate counts like a timeout: a miss or a
+   failed clean pass in that version's table, and "not comparable" in the primary comparison (gains and losses are judged
+   only for twins with a certificate in both versions). The count for "not informative" uses every readable 0.4.1
+   certificate.
+2. **Cause "unknown"** also when the 0.5.0 certificate exists but has no component for the file.
+3. **Losses** of 0.4.1 detections or clean passes are reported by name in every case, also when the comparison is "not
+   informative" (they test the guarantee of spec 0.7 section 4; they are not a per-class statement).
+4. **"Error too small in the declared worlds at this size"** (P-7 item 5) applies only to a miss whose faulty study verdict
+   under 0.5.0 is WEAK or FALSIFIABLE (the Phase B §5.2 category); an UNDEFINED or NOT_FALSIFIABLE-without-expected-flag
+   miss gets no such label. Files with more than one component get no label.
+5. **B-2 subtype rows** report pairs, detections, clean passes, Wilson bounds and the result of the class rule, as Phase B
+   did; with fewer than 10 pairs they are descriptive and are not class verdicts.
+6. A study that fails to load (`load_error`) has a certificate and is comparable between versions.
