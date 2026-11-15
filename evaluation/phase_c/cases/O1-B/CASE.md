@@ -1,0 +1,18 @@
+# CASE O1-B
+
+1. **Case id** O1-B; **world id** C49; **class** O; **subtype** O-1 (KAP23 L3.3, biased test sample).
+2. **Source** KAP23, section 2.4 (taxonomy), [L3.3] Sampling bias in test distribution; the entry's selection-bias example cites Bone et al. (2015) on autism: "excluding the data corresponding to borderline cases of autism leads to leakage" (short quote as returned by the brief author's reading tool; entry located by section). Read by the brief author at https://ar5iv.labs.arxiv.org/html/2207.07048 (LOG.md part 1); the part-2 author did not re-read it.
+3. **Brief**: claim "Among children referred for a developmental assessment, a logistic regression on the speech measures identifies the children who received a diagnosis with a balanced accuracy of at least 0.70 for new children, estimated by 5-fold cross-validation." Keys: `speech_measures` float (children, measures), `diagnosis` bool (children,), `severity_rating` float (children,) (clinician's 0 to 10 rating). Sizes: 400 children, 30 measures.
+4. **Mapping.** Faulty: children whose severity rating lies in the middle 30 percent of the rating distribution (strictly between the 35th and 65th percentile, `np.percentile`) are dropped before the cross-validation, so borderline children are never evaluated; the 30 percent band is the brief author's choice (KAP23 documents the practice, no percentage). Fixed: the same pipeline on all children (the fixed file does not read `severity_rating`). Both: 5-fold cross-validation stratified by diagnosis (fold from a seeded permutation within each class, `default_rng(20261116)`), logistic regression by 25 Newton steps on standardised measures (standardisation fitted on the training fold, slope ridge 1e-4 for numerical stability, predicted class = positive linear score), balanced accuracy = mean of sensitivity and specificity over the pooled out-of-fold predictions, threshold 0.70. The only difference is the line that computes `keep`.
+   **Estimand line.** Faulty: balanced accuracy for new children whose severity rating lies outside the middle band. Fixed: balanced accuracy for new children referred for assessment (the whole referred population the claim is about).
+5. **Pre-checks of the fixed criterion** (200 samples each): `plus` 170 hold, 30 fail, 0 None (hold rate 0.85); `minus` 0 hold; control `permute_speech_across_children` 0 hold; control `permute_diagnosis_across_children` 0 hold; noise probe 0 hold; zeros probe (20) all None. Revisions: 0. The fixed criterion fails in about 15 percent of `plus` samples; per the rules the skeleton is not changed and the correction is not bent.
+6. **Timing**: t = 0.0054 s, g = 0.0002 s, S = 2 + 2 + 0 + 0 + 2 = 6; estimate 2 x 200 x 7 x 0.0056 = 15.6 s.
+7. **Deviations, problems, skeleton requests.** None from the note. The note's wording "fixed number of Newton steps" is realised as 25 steps plus a 1e-4 ridge (a numerical choice, identical in both files). Guards: non-finite values; fewer than 10 children or fewer than 2 of either diagnosis value after the selection; a measure with zero standard deviation (zero variance). No skeleton request.
+
+## Designer lines (PREREG_PHASE_C §3; added by the designer after the fidelity audit)
+
+- Overlap with Phase B: yes, Phase B case O1a.
+- Mechanism tag / statistic family (private note): O-1 / classification.
+- Allowed-guard minimum (private note): 10 children with at least 2 of each diagnosis value (so that each class is present in training and test folds of a 5-fold evaluation); non-finite values return None
+- Size ratio (brief size to source size): source states none.
+- The estimand line is in item 4 (criterion author).

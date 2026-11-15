@@ -1,0 +1,97 @@
+B2-01 n = 200 (holds, fails, None)
+  plus                                                         (179, 21, 0)  rate 0.895
+  minus                                                        (7, 193, 0)  rate 0.035
+  control:permute_onset_across_country_years                   (0, 200, 0)  rate 0.000
+  control:permute_onset_histories_across_countries             (3, 197, 0)  rate 0.015
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0040 s   g (mean plus generation) = 0.0010 s
+  S = 6, estimate 2*200*(S+1)*(t+g) = 14 s
+B2-02 n = 200 (holds, fails, None)
+  plus                                                         (199, 1, 0)  rate 0.995
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:permute_outcome                                      (0, 200, 0)  rate 0.000
+  noise                                                        (1, 199, 0)  rate 0.005
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0017 s   g (mean plus generation) = 0.0001 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 4 s
+B2-03 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:permute_defective_across_units                       (0, 200, 0)  rate 0.000
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0091 s   g (mean plus generation) = 0.0008 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 24 s
+B2-04 n = 200 (holds, fails, None)
+  plus                                                         (157, 43, 0)  rate 0.785
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:shift_rises_in_time                                  (0, 200, 0)  rate 0.000
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0011 s   g (mean plus generation) = 0.0011 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 5 s
+B2-05 n = 200 (holds, fails, None)
+  plus                                                         (195, 5, 0)  rate 0.975
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:circular_shift_of_drivers_by_52_or_more_weeks        (0, 200, 0)  rate 0.000
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0004 s   g (mean plus generation) = 0.0010 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 3 s
+B2-06 n = 200 (holds, fails, None)
+  plus                                                         (197, 3, 0)  rate 0.985
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:permute_malignancy_across_patients                   (0, 200, 0)  rate 0.000
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0023 s   g (mean plus generation) = 0.0003 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 6 s
+B2-07 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (2, 198, 0)  rate 0.010
+  control:permute_scores_across_participants                   (2, 198, 0)  rate 0.010
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0005 s   g (mean plus generation) = 0.0001 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 1 s
+B2-08 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (47, 153, 0)  rate 0.235
+  control:permute_class_across_samples                         (39, 161, 0)  rate 0.195
+  noise                                                        (69, 131, 0)  rate 0.345
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0372 s   g (mean plus generation) = 0.0006 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 91 s
+B2-09 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (17, 183, 0)  rate 0.085
+  control:permute_responder                                    (15, 185, 0)  rate 0.075
+  noise                                                        (26, 174, 0)  rate 0.130
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0414 s   g (mean plus generation) = 0.0006 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 101 s
+B2-11 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (45, 155, 0)  rate 0.225
+  control:permute_group_labels                                 (42, 158, 0)  rate 0.210
+  noise                                                        (39, 161, 0)  rate 0.195
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0195 s   g (mean plus generation) = 0.0006 s
+  S = 6, estimate 2*200*(S+1)*(t+g) = 56 s
+B2-12 n = 200 (holds, fails, None)
+  plus                                                         (200, 0, 0)  rate 1.000
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:permute_tumour_labels                                (8, 192, 0)  rate 0.040
+  noise                                                        (2, 198, 0)  rate 0.010
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0022 s   g (mean plus generation) = 0.0009 s
+  S = 6, estimate 2*200*(S+1)*(t+g) = 9 s
+B2-10 n = 40 (holds, fails, None)
+  plus                                                         (33, 7, 0)  rate 0.825
+  minus                                                        (12, 28, 0)  rate 0.300
+  control:permute_class_across_samples                         (4, 36, 0)  rate 0.100
+  noise                                                        (8, 32, 0)  rate 0.200
+  zeros                                                        (0, 0, 40)  rate 0.000
+  t (mean call on plus, 40 calls) = 0.2340 s   g (mean plus generation) = 0.0007 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 563 s

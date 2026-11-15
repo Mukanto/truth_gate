@@ -1,0 +1,18 @@
+# CASE O1-A
+
+1. **Case id** O1-A; **world id** C40; **class** O; **subtype** O-1 (KAP23 L1.2 extension, pre-processing that does not use the outcome labels).
+2. **Source** KAP23, section 2.4 (taxonomy), entry [L1.2] "Pre-processing on training and test set": the entire dataset is used for pre-processing steps "such as imputation or over/under sampling". Read by the brief author (earlier agent in this role) in the ar5iv full text https://ar5iv.labs.arxiv.org/html/2207.07048 (see LOG.md part 1); the part-2 author did not re-read the source and worked from `PRIVATE.json`. The extension from the entry's own example (oversampling) to scaling, unsupervised imputation and PCA on all data is PB section 1's, not KAP23's wording.
+3. **Brief** (`ASSIGNMENT.json`): claim "In a cohort of patients, a linear regression of the clinical outcome score on the first 10 principal components of the biomarker panel predicts the outcome of new patients with an R-squared of at least 0.15, estimated by 5-fold cross-validation." Keys: `biomarkers` float (patients, markers), `outcome` float (patients,). Sizes: 300 patients, 80 markers.
+4. **Mapping.** Faulty: standardise the markers and compute the principal component projection (first 10 components) once on all patients, then 5-fold cross-validate the linear regression of outcome on those 10 scores (the test rows contributed to centring, scaling and directions); documented parameters 10 components, 5 folds, KAP23 gives no more. Fixed: standardisation and components are fitted inside each fold on the training rows only, the test rows are projected with them, the regression is fitted on the training scores; R-squared over the pooled out-of-fold predictions, threshold 0.15 in both. Same statistic family, threshold, decision rule, fold assignment (a permutation from `default_rng(20261115)`, array_split into 5) and code; the only difference is where `scores(fit, apply)` is called (once on all rows vs inside each fold).
+   **Estimand line.** Faulty: cross-validated R-squared of outcome on 10 principal components whose basis was computed from all rows, test rows included. Fixed: out-of-sample R-squared of the whole pipeline (standardisation, components, regression) for new patients, estimated by 5-fold cross-validation with every step fitted inside the training folds.
+5. **Pre-checks of the fixed criterion** (own seeds, plain Python, `work\precheck_fixed.py`): 200 `plus` samples: 196 hold, 4 fail, 0 None; 200 `minus`: 0 hold; control `permute_outcome` (200): 0 hold; noise probe (200 samples, all arrays N(0,1) of the same shape): 0 hold; zeros probe (20): all None (guard). Revisions of the fixed criterion: 0.
+6. **Timing** (200 plus calls): t = 0.0298 s, g = 0.0004 s, S = 2 worlds + 1 control + 0 premises + 0 relational + 2 = 5; estimate 2 x 200 x 6 x 0.0302 = 72.5 s (limit 900 s).
+7. **Deviations, problems, skeleton requests.** None. Guards used: non-finite values; fewer than 15 patients; zero variance of the outcome; a marker with zero standard deviation in the rows used for fitting (zero variance). The note leaves the fold assignment open; a seeded random permutation is used (the skeleton's rows carry no order).
+
+## Designer lines (PREREG_PHASE_C §3; added by the designer after the fidelity audit)
+
+- Overlap with Phase B: no.
+- Mechanism tag / statistic family (private note): O-1 / R-squared.
+- Allowed-guard minimum (private note): 15 patients (5 folds, at least 3 rows per test fold and at least 11 training rows for 10 components plus intercept); also non-finite values and zero variance of outcome return None
+- Size ratio (brief size to source size): source states none.
+- The estimand line is in item 4 (criterion author).

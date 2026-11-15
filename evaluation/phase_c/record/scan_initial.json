@@ -1,0 +1,985 @@
+{
+  "dir": "E:\\Claude Projects\\Kapi\\phase_c_private\\agent_docs",
+  "n_hits": 119,
+  "hits": [
+    {
+      "file": "GATE.md",
+      "line": 36,
+      "text": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, `.github/workflows/truth-gate.yml`; never overwrites a file |",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 142,
+      "text": "| **K1** definedness | A criterion must not fail on `plus`, `minus` or `null` samples (an exception, a failed world, a wrong return type, a missing component, a command error), and must not abstain (return `None`) on more than half of the `plus` samples. Abstentions on at most half of `plus`, and on `minus` and `null`, count as no claim: they are reported (`K1_ABSTAINED`), and a majority on `minus` or `null` caps the verdict at WEAK (`K1_ABSTAINED_MAJORITY`). |",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 147,
+      "text": "| **K6** leak guard and reproducibility | The study may not read files outside its allow-list, use the network or start a process. Two evaluations in one process must give the same result. |",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 156,
+      "text": "| `WEAK` | mandatory checks passed, but a target was missed, a check was inconclusive, or a control was waived | 1 |",
+      "tokens": [
+        "miss"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 185,
+      "text": "Before the study module is executed, the gate installs a `sys.addaudithook` hook and arms it. While armed it blocks, with",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 192,
+      "text": "**The guard does not cover external programs.** A command criterion (`command = [...]`) runs in another process, which",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 193,
+      "text": "the guard cannot see: it may read any file the operating system lets it read. The program runs in a private working",
+      "tokens": [
+        "private"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 195,
+      "text": "`K6_EXTERNAL_UNGUARDED` lists the commands, and the table, the Action summary and the badge show it. The certificate",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 196,
+      "text": "records the argv, the SHA-256 of the executable and of every `[external] uses` file; the libraries a program loads",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 224,
+      "text": "| `non_claims`, `known_limitations` | six non-claims (the three of 0.3 with \"The gate\" for \"Kapı\", plus: generated and suggested declarations are generic; a file world is only as independent as its provenance; the leak guard does not cover external programs) and seven known limitations (the three of 0.3, plus: libraries of external programs are not hashed; on Windows killing an external program does not kill what it started; since 0.5 two sentences on abstentions and on K8) |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 265,
+      "text": "| `K6_NONREPRODUCIBLE` | study-level | two evaluations in one process differed (unseeded randomness, hidden state) |",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 297,
+      "text": "| `K6_EXTERNAL_UNGUARDED` | the study has command criteria, which run in other programs that the leak guard cannot see. The commands are listed. The badge reads \"(unguarded)\" |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 298,
+      "text": "| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run; every later request to it was UNDEFINED, and that reaches the verdict through K1 (command failures are hard UNDEFINED outcomes, never abstentions) |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 310,
+      "text": "after the two evaluations of K1-K7, under the armed guard. It never feeds samples or outcomes back into K1-K7.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 350,
+      "text": "* `allow_paths` are declared by the user and cannot be audited beyond hashing. Studies are single files; local helper",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 355,
+      "text": "* **External programs** (command criteria) are not covered by the leak guard. They are hashed by executable and",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "GATE.md",
+      "line": 365,
+      "text": "* Tiny denominators: several evaluation criteria rest on a handful of cases and are reported as they are.",
+      "tokens": [
+        "evaluation",
+        "REPORT"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 97,
+      "text": "| `[external]` | `uses = []` (files copied into the programs' working folder and hashed), `env = []` (extra variable names passed through), `startup_timeout_s = 120`, `request_timeout_s = 60` |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 169,
+      "text": "  nothing to claim on that sample). It counts as no claim, like `False` in every HOLDS-based statistic, and is reported",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 201,
+      "text": "**`pattern_stats`.** After the two evaluations the gate regenerates the counted samples of the `plus`, `minus` and `null`",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 218,
+      "text": "[external]",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 228,
+      "text": "* One process per distinct argv, started before the leak guard is armed. It serves both evaluations and the K8 pass.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 231,
+      "text": "* **Working folder:** a fresh temporary folder holding copies of the `[external] uses` files and the `allow_paths`, with",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 234,
+      "text": "  through, plus `LANG = C.UTF-8`, `TG_PROTOCOL = tg-line/1` and the names in `[external] env`. Nothing else.",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 258,
+      "text": "| `{\"rid\": k, \"error\": ...}` | that one outcome is UNDEFINED (`ExternalError`, a hard UNDEFINED); the process keeps serving. A reply with both `outcome` and `error` counts as an error (R-14) |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 259,
+      "text": "| a timeout (`request_timeout_s`), a line that is not JSON, a wrong or missing `rid`, or a reply with neither `outcome` nor `error` | the process is **killed**. The outcome is `ExternalTimeout` or `ExternalProtocolError`; every later request to that argv is UNDEFINED (`ExternalDied`); the study note `EXTERNAL_DIED` is added |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 260,
+      "text": "| the process dies (EOF, write error) while a reply is awaited | `ExternalDied`, like every later request (R-13) |",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 267,
+      "text": "abstention (a soft UNDEFINED: no claim, reported as `K1_ABSTAINED:<stream>`, and K1 makes the verdict UNDEFINED only when",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 270,
+      "text": "death (`EXTERNAL_DIED`), a missing component in a component dict, and an outcome string other than `HOLDS`, `FAILS` and",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 286,
+      "text": "`K6_EXTERNAL_UNGUARDED` lists the commands (`{\"note\": \"K6_EXTERNAL_UNGUARDED\", \"commands\": [[argv...], ...]}`, R-15); the",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 289,
+      "text": "not hashed. The gate isolates external programs against accidents, not against deliberate evasion.",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 293,
+      "text": "(selection, fitting, evaluation) on the data it is given, a circular selection or a leak makes it hold on noise, and K4",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 361,
+      "text": "K8 runs as a separate pass after the two evaluations, under the armed guard; it never feeds anything back into K1-K7.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 391,
+      "text": "`DATA.csv` must be a realistic synthetic or pilot dataset, **not the real study data**. `suggest` prints this warning",
+      "tokens": [
+        "pilot"
+      ]
+    },
+    {
+      "file": "MANIFEST.md",
+      "line": 424,
+      "text": "**Not in 0.4 (moved to 0.5):** worlds, controls and premises produced by external programs; the mutations `copy`,",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 1,
+      "text": "<!-- Agent document set, Phase C (PREREG_PHASE_C section 4 item 0): the parts of README.md at tag v0.5.0 that describe the tool. Sections left out: worked example, protocol, evidence, roadmap, repository layout, how it was built, license. -->",
+      "tokens": [
+        "Phase C"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 14,
+      "text": "| **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies. Standard library only. | [`protocol/templates/`](protocol/templates/), [`protocol/tools/`](protocol/tools/freeze.py) |",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 30,
+      "text": "  learning evaluations, hardware experiments.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 33,
+      "text": "  roles to the designer, the coder, a blind auditor and a verifier.",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 109,
+      "text": "the certificate carries the study note `K6_EXTERNAL_UNGUARDED` (see [Limits](#limits)).",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 111,
+      "text": "**Starting from a dataset.** `truth-gate suggest pilot.csv --outcome yield --group group --reference control` writes a",
+      "tokens": [
+        "pilot"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 113,
+      "text": "`origin = \"suggested\"`, which caps the verdict at WEAK until you review it. Feed it a realistic synthetic or pilot",
+      "tokens": [
+        "pilot"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 123,
+      "text": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, the workflow |",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 190,
+      "text": "* It does not modify or repair criteria. It only reports.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 200,
+      "text": "  declarations. The blind audit covers the rest.",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 209,
+      "text": "* **External programs are not covered by the leak guard.** A command criterion runs in another process; the guard",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "README_TOOL.md",
+      "line": 210,
+      "text": "  cannot see what it reads. The certificate says so (the note `K6_EXTERNAL_UNGUARDED` and a non-claim), and the badge",
+      "tokens": [
+        "external"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 7,
+      "text": "> (spec 0.3), the v0.2 delta (spec 0.4) and the v0.3 delta (spec 0.5). Private project names, local paths, the",
+      "tokens": [
+        "private"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 8,
+      "text": "> Turkish decision quotes and the details of the private pilot were removed or replaced by neutral wording; the",
+      "tokens": [
+        "pilot",
+        "private"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 9,
+      "text": "> technical content (rules, flags, verdict mapping, evaluation criteria) was not changed. Section numbers inside a",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 27,
+      "text": "- **Freeze rule:** This file is frozen (SHA-256 recorded in a freeze record) after the D4 pre-freeze smoke test (§11) and **before any evaluation case (§12) is executed**. After the freeze, changes go to a new spec version with a deviation note; results are reported against the frozen version.",
+      "tokens": [
+        "evaluation",
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 28,
+      "text": "- **Roles:** The author owns product decisions. An AI assistant (the drafting session) wrote this spec and reviewed all code. Implementation was delegated to a coding subagent. An independent reviewer session (Tenkit) authored evaluation set E2.",
+      "tokens": [
+        "evaluation",
+        "Tenkit",
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 41,
+      "text": "3. Kapı does not modify or repair criteria. It only reports.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 54,
+      "text": "- `WEAK`: every mandatory check passed, but a target was missed, a check was inconclusive, or a control was waived with a reason.",
+      "tokens": [
+        "miss"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 125,
+      "text": "For `k` HOLDS out of `n` evaluations (UNDEFINED counts as not-HOLDS unless stated otherwise), one-sided Wilson score bounds at level `a` use `z = NormalDist().inv_cdf(1 - a)` from the Python standard library.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 161,
+      "text": "- Targets (not mandatory). These produce `WEAK`, not `NOT_FALSIFIABLE`. They use the same per-bound level `a` as SL (§4.2), so a target counts as missed only when the miss is significant:",
+      "tokens": [
+        "miss"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 172,
+      "text": "- for `role == \"assumed\"`, no requirement; the rate difference is reported in the premise map.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 197,
+      "text": "- **Leak guard.** Before the study module is imported, Kapı installs (once per process) a `sys.addaudithook` hook and arms it. While armed, the hook intercepts these events:",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 212,
+      "text": "  Known limitation (printed in the certificate): `allow_paths` are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them. Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 214,
+      "text": "- **Reproducibility.** The complete evaluation (all streams, all checks) is computed twice in the same process. If the canonical result bodies (§7) differ → study flag `K6_NONREPRODUCIBLE` (S). This catches unseeded global randomness and hidden state.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 266,
+      "text": "- Pure functions where possible. The only global state is the audit hook and its armed flag.",
+      "tokens": [
+        "audit"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 267,
+      "text": "- Every check is individually unit-tested (§11). Tests use only toy studies written for the tests; they must not use or imitate evaluation cases (§12).",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 279,
+      "text": "## 11. D4 pre-freeze smoke test (for this spec and the evaluation harness)",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 280,
+      "text": "Run after implementation and before the freeze. Print only \"defined / reachable / covered\". Never print evaluation results, and never run evaluation cases.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 285,
+      "text": "   - for each evaluation criterion P1–P4 (§12.4), both outcomes are reachable when computed on **synthetic mock result tables** (not real gate outputs on evaluation cases).",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 289,
+      "text": "   - every evaluation case in §12 has a declared expected check and a fixed twin.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 292,
+      "text": "## 12. Evaluation (pre-registered; frozen with this file)",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 295,
+      "text": "- **E1, retrospective (self-authored).** Ten fault/fixed pairs reconstructed from documented incidents. The faulty version must be flagged with the expected check; the fixed twin must not be NOT_FALSIFIABLE or UNDEFINED.",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 299,
+      "text": "| E1-01 | earlier study (tolerance below float resolution) | HOLDS iff \\|mean(x) − μ₀\\| < 1e-40, with scale 0.735 | K2_UNRESOLVABLE (and K2_HOLDS_UNREACHABLE) | tolerance 1e-3 |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 300,
+      "text": "| E1-02 | earlier study (uncovered regime) | regimes early and late, criterion only for early | K7_REGIME_UNCOVERED | criterion added for late |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 301,
+      "text": "| E1-03 | earlier study (component mismatch) | components time and position declared, only time returned | K7_COMPONENT_MISMATCH | both returned |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 302,
+      "text": "| E1-04 | earlier study (interpolating fit) | \"flexible model fits with loss < ε\" (interpolating fit) | K4_CONTROL_ALSO_HOLDS (and K2_NO_SEPARATION) | fixed-form theory model with no free parameters |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 303,
+      "text": "| E1-05 | earlier review (results-file leak) | criterion reads a results file to decide | K6_LEAK_ATTEMPT | no file access |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 304,
+      "text": "| E1-06 | earlier review (precision note) | tested premise mutation of magnitude 1e-25 at scale 1 | K2_UNRESOLVABLE or K3_PREMISE_NOT_TESTED | magnitude 1e-6, verdict flips |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 305,
+      "text": "| E1-07 | earlier study (dominant tolerance) | angle criterion whose tolerance dominates; geometry premise (tested) does not flip | K3_PREMISE_NOT_TESTED | tolerance at which geometry break flips |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 306,
+      "text": "| E1-08 | earlier study (self-labelled targets) | targets defined by the same labels the criterion checks | K5_HOLDS_ON_NOISE or K5_HOLDS_ON_DEGENERATE | targets computed from data |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 307,
+      "text": "| E1-09 | earlier study (direction invariance) | direction criterion invariant under path swap (mirror-symmetric field) | K3_PREMISE_NOT_TESTED | chiral statistic |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 308,
+      "text": "| E1-10 | earlier study (run-completed label) | HOLDS when execution completes regardless of residual | K2_FAILS_UNREACHABLE or K2_NO_SEPARATION | requires true residual ≤ tolerance |",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 310,
+      "text": "- **E2, independent.** At least 12 fault/fixed pairs covering at least 6 fault types. Each case states its expected check(s). The set is authored from §3, §5 and §12 of this spec only; the reviewer session does not see the implementation. The set is hashed and the hash recorded before Kapı is run on it. If the reviewer session is not used (author's decision), E2 is reported as \"not run\" and P1b/P2b are not evaluated.",
+      "tokens": [
+        "REPORT",
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 311,
+      "text": "- **E3, external.** Two pairs reconstructed from published cases:",
+      "tokens": [
+        "external",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 312,
+      "text": "  - **E3-01 (Wu 2026, arXiv 2610.22445).** The constant reduction passes a closure criterion. Faulty version: the criterion is \"closure error < ε\" for a candidate reduction of a slow–fast system. Expected check: K5_HOLDS_ON_DEGENERATE or K5_HOLDS_ON_NOISE. Fixed twin: closure AND observable preservation.",
+      "tokens": [
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 313,
+      "text": "  - **E3-02 (same paper, linear CKA).** Faulty version: correspondence validity judged by linear CKA > τ, which is invariant to a random rotation of the proposed map. Expected check: K3_PREMISE_NOT_TESTED, with the premise \"the correspondence is correct\" mutated by a random rotation. Fixed twin: held-out prediction R² under the proposed map.",
+      "tokens": [
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 319,
+      "text": "4. The E1 and E3 case files are then written from the table above without modifying Kapı. They are hashed before the first run.",
+      "tokens": [
+        "E1",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 320,
+      "text": "5. E2 is received from the reviewer session and its hash recorded.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 322,
+      "text": "7. A bug found during evaluation is fixed in a new version; results with that version are labelled secondary.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 328,
+      "text": "- **P1a:** detected faulty cases / all faulty cases (E1 ∪ E2 ∪ E3) ≥ 0.90.",
+      "tokens": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 329,
+      "text": "- **P1b:** the same rate restricted to E2 ≥ 0.80.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 330,
+      "text": "- **P1c:** no fault type (E2 types; E1 and E3 count by expected check) has zero detections.",
+      "tokens": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 331,
+      "text": "- **P2a:** cleared fixed twins / all fixed twins ≥ 0.90. **P2b:** the same rate restricted to E2 ≥ 0.80.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 335,
+      "text": "Each criterion is reported as Held (`Tuttu`) or Failed (`Tutmadı`) with counts. Small denominators are reported as they are; no pooling hides a failed subset.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 341,
+      "text": "Both are computed on the mock tables in D4 to show that the evaluation can distinguish them.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 355,
+      "text": "- E1 is self-authored, which is why E2 and E3 exist.",
+      "tokens": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 381,
+      "text": "    14. Harness: an expected check matches an equal flag or the prefix of a parametrised flag; P1c counts E2 by `fault_type` and E1/E3 by expected check; the P4 denominator is two runs-pairs per case.",
+      "tokens": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 382,
+      "text": "  - E1-06 expected checks written as alternatives.",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 385,
+      "text": "  - Reachable: all 25 flag families raised and not raised; all four verdicts; P1a–P4 both outcomes, computed on synthetic mock tables; P1b/P2b \"not evaluated\" without E2; both baselines fail as intended.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 386,
+      "text": "  - Covered: every flag in the README; E1 has 10 complete rows; E3 has 2 cases; no evaluation case files exist.",
+      "tokens": [
+        "evaluation",
+        "E1",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 387,
+      "text": "  - Two first-pass \"no\" results came from the smoke script itself, not from Kapı: a text search for \"Tuttu\" missed tests that use constants, and escaped pipes broke the table parse. Both were replaced by direct computation. No spec or code change was needed.",
+      "tokens": [
+        "miss"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 396,
+      "text": "- **Why v0.2:** The v0 evaluation gave P1a–P3 Held and P4 Failed. It produced three findings:",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 439,
+      "text": "## Δ4 — Evaluation of v0.2 (pre-registered; frozen with this file)",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 442,
+      "text": "- **R (regression).** The v0 sets E1E3 (`CASES_SHA256.json` D012088E5128DDD5) and E2 (E6EAD83AD9FC934B), unchanged. Their v0 outcomes are known, so R is a regression check only. It is not evidence of detection power.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 470,
+      "text": "Each criterion is reported as Held (`Tuttu`) or Failed (`Tutmadı`) with counts. Small denominators are reported as they are. Exploratory analyses are labelled as such.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 478,
+      "text": "6. Run R and E4 once, in full mode, with a new runner (`evaluation/run_eval_v02.py`). The v0 runner stays untouched.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 487,
+      "text": "  - Interpretations adopted: the kept unresolvable-magnitude `K3_PREMISE_NOT_TESTED` is not listed in `suppressed`; suppression also triggers when `plus` is entirely UNDEFINED (zero HOLDS); `suppressed_by`/`suppressed` appear only if something was suppressed; P4′ input lists are named `faulty_runs`/`fixed_runs`; regression rows use `set` = R-E1/R-E2/R-E3.",
+      "tokens": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 502,
+      "text": "- **Why v0.3:** In a retrospective pilot on converted past studies, Kapı v0.2 cleared 7 of 75 clean criteria. A case review found that 35 of the 37 clean units flagged by K2 were flagged because of how the worlds were built, not because of the criteria. One pattern is mechanically detectable: a `minus` world whose data are identical to `plus`. In one pilot study all 22 data keys of the `minus` world were bit-identical to `plus` (measured outside Kapı). v0.2 reports such a case as NOT_FALSIFIABLE, which blames the criterion for a defect of the world.",
+      "tokens": [
+        "REPORT",
+        "pilot"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 507,
+      "text": "  - Rule: UNTESTED only if all data is identical. UNTESTED requires identity in **all** keys. If only the keys the criterion reads are unchanged, the verdict is unchanged and an informational flag is added. Reason: otherwise a criterion that ignores the changed quantity (case E1-10) would be reported as a world defect.",
+      "tokens": [
+        "REPORT",
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 509,
+      "text": "- **Drafting-session defaults** (open to objection before the freeze): exact equality (Δ1.2), the paired draw in stochastic mode (Δ1.1), the read-key recording rules (Δ1.3), the severity position of UNTESTED and exit code 6 (Δ2), the certificate field names (Δ3), the evaluation design (Δ4).",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 516,
+      "text": "- The comparison is made once per study evaluation. Under K6 reproducibility it is made in both passes, like every other check.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 531,
+      "text": "- These extra calls only record keys. Their outcomes are not used. All counted evaluations keep receiving plain `dict` samples, as in 0.3.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 578,
+      "text": "## Δ4 — Evaluation of v0.3 (pre-registered; frozen with this file)",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 581,
+      "text": "- **R (regression).** E1E3 (`CASES_SHA256.json` D012088E5128DDD5), E2 (E6EAD83AD9FC934B) and E4 (C61A4856D7AF100E), unchanged. Their v0.2 outcomes are known, so R is a regression check only.",
+      "tokens": [
+        "E2"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 584,
+      "text": "  - **U (unread change), at least 4 pairs.** `minus` changes a quantity that the faulty criterion does not read (as in E1-10): expected **NOT_FALSIFIABLE** with `K2_FAILS_UNREACHABLE` or `K2_NO_SEPARATION`, and `K2_MINUS_UNREAD`. Fixed twin: the criterion reads the changed quantity; expected FALSIFIABLE or WEAK.",
+      "tokens": [
+        "E1"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 592,
+      "text": "- R cases use the 0.3 §12.3 rule unchanged. An R faulty case that becomes UNTESTED counts as **not** detected. Such cases are also listed separately in the report, with their `minus_check`. This listing is a reporting rule only; the count does not change.",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 604,
+      "text": "Each criterion is reported as Held (`Tuttu`) or Failed (`Tutmadı`) with counts. Small denominators are reported as they are. Fewer cases than the minimum for a type → that criterion is \"not evaluated\".",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 607,
+      "text": "Exploratory re-runs on converted past studies and a listing of regression cases whose verdict changed between v0.2 and v0.3 were planned. They motivated the design, so they are not evidence and are not reported here. The retrospective pilot is summarised in `docs/EVALUATION.md`.",
+      "tokens": [
+        "evaluation",
+        "REPORT",
+        "pilot"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 619,
+      "text": "8. Run R and E5 once, in full mode, with a new runner (`evaluation/run_eval_v03.py`). The earlier runners and archives stay untouched.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 622,
+      "text": "- **Detects only exact identity.** A `minus` that changes data in an irrelevant way, or only below float resolution, is not UNTESTED. Kapı then reports NOT_FALSIFIABLE, possibly with `K2_MINUS_UNREAD`. Wrong-direction worlds and worlds that change the right key by too little are not detected at all. ",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 624,
+      "text": "- **A same-generator minus is now UNTESTED.** A stochastic `minus` whose generator is the `plus` generator (same distribution, same use of the generator) is identical under pairing. v0.2 reported it as NOT_FALSIFIABLE with `K2_NO_SEPARATION`. v0.3 raises `K2_MINUS_IDENTICAL` and suppresses `K2_NO_SEPARATION`, so the verdict is UNTESTED unless another mandatory flag is raised. The toy `toy_no_separation` stays NOT_FALSIFIABLE through `K5_HOLDS_ON_NOISE`, `K4_CONTROL_ALSO_HOLDS` and `HIGH_RATE:*`. This is intended by the author's decision (identical data = world defect). It was found in the toy `toy_no_separation` during implementation. Any regression case built this way loses its R1 detection (Δ4.2).",
+      "tokens": [
+        "REPORT"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 641,
+      "text": "  - **The frozen v0.2 runner test** (`evaluation/test_run_eval_v02.py`) fails in the main tree by design, because it asserts the v0.2 version strings. The archived copy passes. The same thing happened to the v0 runner at v0.2.",
+      "tokens": [
+        "evaluation"
+      ]
+    },
+    {
+      "file": "SPEC.md",
+      "line": 661,
+      "text": "        - the mode composition (at least 2 deterministic and 2 stochastic W pairs) is reported under `bookkeeping`, not as a criterion;",
+      "tokens": [
+        "REPORT"
+      ]
+    }
+  ],
+  "n_listed": 0,
+  "listed": [],
+  "stale": []
+}

@@ -1,0 +1,313 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "C01": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_group_labels"
+    ],
+    "control_max_ms": {
+      "permute_group_labels": 0.082
+    },
+    "shapes": {
+      "expression": [
+        40,
+        1000
+      ],
+      "group_b": [
+        40
+      ]
+    },
+    "max_ms": 1.077
+  },
+  "C02": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_abdomen_within_species"
+    ],
+    "control_max_ms": {
+      "permute_abdomen_within_species": 0.033
+    },
+    "shapes": {
+      "abdomen_length": [
+        15,
+        40
+      ],
+      "claw_length": [
+        15,
+        40
+      ],
+      "body_length": [
+        15,
+        40
+      ]
+    },
+    "max_ms": 0.065
+  },
+  "C03": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_cortisol_subjects"
+    ],
+    "control_max_ms": {
+      "permute_cortisol_subjects": 0.025
+    },
+    "shapes": {
+      "heart_rate": [
+        16,
+        10
+      ],
+      "cortisol": [
+        16,
+        10
+      ]
+    },
+    "max_ms": 0.045
+  },
+  "C04": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_uptake_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_uptake_across_patients": 0.02
+    },
+    "shapes": {
+      "cardiac_output": [
+        60
+      ],
+      "arterial_o2_content": [
+        60
+      ],
+      "venous_o2_content": [
+        60
+      ],
+      "o2_uptake_expired": [
+        60
+      ]
+    },
+    "max_ms": 0.113
+  },
+  "C05": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C06": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C07": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_tumour_labels"
+    ],
+    "control_max_ms": {
+      "permute_tumour_labels": 0.034
+    },
+    "shapes": {
+      "expression": [
+        62,
+        1000
+      ],
+      "tumour": [
+        62
+      ]
+    },
+    "max_ms": 1.537
+  },
+  "C08": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "swap_region_labels_in_half_the_subjects"
+    ],
+    "control_max_ms": {
+      "swap_region_labels_in_half_the_subjects": 0.026
+    },
+    "shapes": {
+      "task_a": [
+        24
+      ],
+      "rest_a": [
+        24
+      ],
+      "task_b": [
+        24
+      ],
+      "rest_b": [
+        24
+      ]
+    },
+    "max_ms": 0.029
+  },
+  "C09": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "decouple_observers_within_true_value_blocks"
+    ],
+    "control_max_ms": {
+      "decouple_observers_within_true_value_blocks": 0.106
+    },
+    "shapes": {
+      "true_value": [
+        200
+      ],
+      "estimates": [
+        200,
+        3
+      ]
+    },
+    "max_ms": 0.055
+  },
+  "C10": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_treatment_across_cages"
+    ],
+    "control_max_ms": {
+      "permute_treatment_across_cages": 0.015
+    },
+    "shapes": {
+      "weight_gain": [
+        40,
+        2
+      ],
+      "treated": [
+        40
+      ]
+    },
+    "max_ms": 0.03
+  },
+  "C11": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C12": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_tibia_within_humerus_blocks"
+    ],
+    "control_max_ms": {
+      "permute_tibia_within_humerus_blocks": 0.077
+    },
+    "shapes": {
+      "femur_length": [
+        1000
+      ],
+      "tibia_length": [
+        1000
+      ],
+      "humerus_length": [
+        1000
+      ]
+    },
+    "max_ms": 0.068
+  },
+  "C13": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_kidney_within_body_mass_blocks"
+    ],
+    "control_max_ms": {
+      "permute_kidney_within_body_mass_blocks": 0.041
+    },
+    "shapes": {
+      "liver_weight": [
+        150
+      ],
+      "kidney_weight": [
+        150
+      ],
+      "body_mass": [
+        150
+      ]
+    },
+    "max_ms": 0.022
+  },
+  "C14": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C15": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_group_labels"
+    ],
+    "control_max_ms": {
+      "permute_group_labels": 0.015
+    },
+    "shapes": {
+      "task_score": [
+        40
+      ],
+      "symptom_score": [
+        40
+      ],
+      "group_a": [
+        40
+      ]
+    },
+    "max_ms": 0.029
+  }
+}

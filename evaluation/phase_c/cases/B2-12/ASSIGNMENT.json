@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-12",
+  "world_id": "C07",
+  "class": "B-2",
+  "subtype": "L1.3",
+  "source": "AMB02",
+  "brief": {
+    "id": "C07",
+    "claim": "A classifier that uses three genes distinguishes tumour from normal colon tissue with an accuracy of at least 0.70 on new tissue samples.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(tissues, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each colon tissue sample"
+      },
+      {
+        "key": "tumour",
+        "shape": "(tissues,)",
+        "dtype": "bool",
+        "meaning": "True when the tissue sample is tumour tissue"
+      }
+    ],
+    "sizes": "tissues = 62; genes = 1000"
+  }
+}

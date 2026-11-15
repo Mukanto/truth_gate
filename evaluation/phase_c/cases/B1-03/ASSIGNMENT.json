@@ -1,0 +1,23 @@
+{
+  "case_id": "B1-03",
+  "world_id": "C50",
+  "class": "B-1",
+  "subtype": null,
+  "source": "MOR03",
+  "brief": {
+    "id": "C50",
+    "claim": "Among patients whose first systolic blood-pressure reading was at least 160 mmHg, antihypertensive treatment lowers systolic pressure: the mean fall from the second reading (taken before treatment began) to the third reading (taken after 8 weeks of treatment) is at least 8 mmHg, and a one-sided paired t test of the fall is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "sbp",
+        "shape": "(patients, readings)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure in mmHg; readings in time order: reading 1 at the screening visit, reading 2 at the pre-treatment visit, reading 3 after 8 weeks of treatment"
+      }
+    ],
+    "sizes": {
+      "patients": 250,
+      "readings": 3
+    }
+  }
+}

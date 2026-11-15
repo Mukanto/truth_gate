@@ -1,0 +1,53 @@
+[
+  {
+    "case": "B2-01",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty unchanged: the ridge logistic is fitted on all 896 rows and the AUC is scored on the same rows, which is KAP23 L1.1 'No test set'.",
+      "b": "Fixed: stratified 5-fold CV of the same fit, with held-out scores pooled into one AUC; the repair touched only the guard line.",
+      "c": "Twins differ in the CV block and the guard. The repaired fixed guard `n - (-(-(n) // 5)) < 2` is now n - ceil(n/5) >= 2 per class (None for n <= 2, checked in isolation), the training-fold minimum of the 5-fold structure, and stricter than the faulty's >= 2 per class. That difference follows from the correction.",
+      "d": "Guards: non-finite values, and class counts at the minima the note and CASE.md state (faulty >= 2 per class in its single fitting set; fixed >= 2 per class in every training fold). Both MECH_CHECK lines judged: an allowed guard, and the Newton step-size stopping rule, which inspects no input.",
+      "e": "Brief unchanged and identical to MECH_CHECK; no PB section 4 term; no negation of the claim.",
+      "f": "Unchanged: 896 country-years is the Muchlinski et al. test set in KAP23 Table A6; 30 indicators lies within the source's models; under the caps.",
+      "g": "Same classifier, AUC, threshold 0.75 and decision rule; 1 fit against 5 (the correction itself).",
+      "h": "Brief unchanged: sizes, axes, key meanings and the claim; 'new country-years' is what the estimand needs.",
+      "i": "Claim is AUC on new country-years; the fixed estimates AUC on rows not used for fitting."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B2-06",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty pools patches as rows and runs 5-fold CV over patches, so patches of one patient are in training and test (KAP23 L3.2, Oner et al. 2020); only its guard line changed.",
+      "b": "Fixed assigns folds by patient (stratified on the patient's label), the block CV KAP23 names; only the guard line changed.",
+      "c": "Both bodies now carry the identical guard line, and the only remaining difference is the fold assignment (patch-level vs patient-level).",
+      "d": "Guards: non-finite values, plus the patient-level n - ceil(n/5) >= 2 per class in both twins, as the note and CASE.md state (None for <= 2 patients of a class, checked in isolation). In the faulty this is one patient stricter than its own patch-level folds need; it is accepted as the pair's single stated minimum for the claim's statistic. It is identical in both twins and cannot fire in the worlds (32 of 80 malignant), the controls or the probes. Both MECH_CHECK lines judged: an allowed guard, and the Newton step test.",
+      "e": "Brief unchanged and identical to MECH_CHECK; no banned term; no negation of the claim.",
+      "f": "Unchanged: the source states no sizes (P-2 reading 1); 80 x 10 x 20 is a small pathology cohort, under the caps.",
+      "g": "Same classifier, AUC, threshold 0.75, 5 folds in both.",
+      "h": "Brief unchanged: axes, key meanings and the claim; 'patches from new patients' is required by the estimand.",
+      "i": "Claim is AUC on patches of new patients; the fixed estimates it on patches of held-out patients."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B2-10",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty unchanged: it reports the best LOOCV accuracy over the (C, gamma) grid of a Gaussian-kernel classifier, with the top 3 t-statistic genes reselected in every LOO fit (VAR06's SVM setting). The kernel ridge and 5 x 5 grid substitutions are stated and can only shrink the bias.",
+      "b": "Fixed: nested CV (outer 10-fold, inner LOOCV over the grid); only the guard line changed.",
+      "c": "Twins differ in the final block and the guard. The repaired fixed guard `n - (-(-(n) // 10)) < 3` is n - ceil(n/10) >= 3 per class in every outer training set (None for n <= 3, checked in isolation), so each inner LOO fitting set keeps 2 per class. It is stricter than the faulty's >= 3 per class, and that difference follows from the correction.",
+      "d": "Guards: non-finite values and class counts at the stated minima (faulty >= 3 per class, so every LOO fitting set keeps the 2 per group the t statistic needs; fixed the same condition one level deeper). Both MECH_CHECK lines judged as allowed guards; the numerical safeguards are identical in both twins.",
+      "e": "Brief unchanged and identical to MECH_CHECK; no banned term; no negation of the claim.",
+      "f": "Unchanged: 40 samples is the source's; genes reduced from 6000 to the 1000 cap (P-2 reading 2).",
+      "g": "Same classifier, grid, accuracy, threshold 0.60; the extra cost is the nested CV (timing estimate 567 s, under 900 s).",
+      "h": "Brief unchanged: sizes, axes, key meanings and the claim.",
+      "i": "Claim is accuracy on new samples; the fixed estimates the accuracy of the whole tuned procedure on held-out samples."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  }
+]

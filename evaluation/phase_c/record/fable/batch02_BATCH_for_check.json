@@ -1,0 +1,335 @@
+[
+ {
+  "id": "C16",
+  "claim": "In adult rats, animals given the drug have a larger heart weight than untreated animals after accounting for body mass: in a linear regression of heart weight on treatment status and body mass, the coefficient of treatment status is positive and significant at the one-sided 5% level (t test).",
+  "data_keys": [
+   {
+    "key": "heart_weight",
+    "shape": "(animals,)",
+    "dtype": "float",
+    "meaning": "Wet heart weight of each animal, in mg."
+   },
+   {
+    "key": "body_mass",
+    "shape": "(animals,)",
+    "dtype": "float",
+    "meaning": "Body mass of each animal, in g."
+   },
+   {
+    "key": "treated",
+    "shape": "(animals,)",
+    "dtype": "bool",
+    "meaning": "True for animals given the drug, False for untreated animals."
+   }
+  ],
+  "sizes": "animals = 48; heart_weight, body_mass and treated each have shape (48,)."
+ },
+ {
+  "id": "C17",
+  "claim": "Spine density on hippocampal CA1 pyramidal neurons rises with the dose of the drug the animal received: the regression slope of spine density on dose is positive, and a test of the slope gives two-sided p < 0.05.",
+  "data_keys": [
+   {
+    "key": "spine_density",
+    "shape": "(animals, sections, neurons)",
+    "dtype": "float",
+    "meaning": "spines per 10 micrometres of dendrite on each sampled neuron, in each histological section, of each animal"
+   },
+   {
+    "key": "dose",
+    "shape": "(animals,)",
+    "dtype": "float",
+    "meaning": "dose of the drug (mg/kg) that each animal received"
+   }
+  ],
+  "sizes": "animals = 12; sections = 4; neurons = 25 (spine_density: 12 x 4 x 25 = 1200 values; dose: 12 values)"
+ },
+ {
+  "id": "C18",
+  "claim": "Participants in the treatment condition report higher liking of the product than participants in the control condition: the difference in mean liking is positive and a two-sided two-sample t test (equal variances assumed) gives p < .05.",
+  "data_keys": [
+   {
+    "key": "liking_control",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "liking of the product reported by each participant in the control condition"
+   },
+   {
+    "key": "liking_treatment",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "liking of the product reported by each participant in the treatment condition"
+   },
+   {
+    "key": "willingness_to_pay_control",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "willingness to pay for the product reported by each participant in the control condition"
+   },
+   {
+    "key": "willingness_to_pay_treatment",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "willingness to pay for the product reported by each participant in the treatment condition"
+   }
+  ],
+  "sizes": "{\"participants\": 20}"
+ },
+ {
+  "id": "C19",
+  "claim": "Across 16 participants, activation in the brain region whose response relates to the personality trait is correlated with the trait: the mean, over the voxels of that region, of the voxel-wise correlations (across participants) between activation and trait score is at least 0.5.",
+  "data_keys": [
+   {
+    "key": "act_session1",
+    "shape": "(subjects, voxels)",
+    "dtype": "float",
+    "meaning": "activation of each voxel in each participant, measured in the first scanning session"
+   },
+   {
+    "key": "act_session2",
+    "shape": "(subjects, voxels)",
+    "dtype": "float",
+    "meaning": "activation of each voxel in each participant, measured in a second scanning session"
+   },
+   {
+    "key": "trait",
+    "shape": "(subjects,)",
+    "dtype": "float",
+    "meaning": "questionnaire score on the personality trait for each participant"
+   }
+  ],
+  "sizes": "{\"subjects\": 16, \"voxels\": 1000}"
+ },
+ {
+  "id": "C20",
+  "claim": "The mean score of the treatment condition exceeds that of the control condition: the difference in means is positive and a two-sided two-sample t test (equal variances assumed) on all participants gives p < .05.",
+  "data_keys": [
+   {
+    "key": "score_control",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "task score of each participant in the control condition"
+   },
+   {
+    "key": "score_treatment",
+    "shape": "(participants,)",
+    "dtype": "float",
+    "meaning": "task score of each participant in the treatment condition"
+   }
+  ],
+  "sizes": "{\"participants\": 50}"
+ },
+ {
+  "id": "C21",
+  "claim": "A classifier built from the 50 sensor features separates defective units from sound units with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65 on new units.",
+  "data_keys": [
+   {
+    "key": "sensor_features",
+    "shape": "(units, sensor_features)",
+    "dtype": "float",
+    "meaning": "50 features computed from the sensor recording of each unit"
+   },
+   {
+    "key": "defective",
+    "shape": "(units,)",
+    "dtype": "bool",
+    "meaning": "True when the unit is defective"
+   }
+  ],
+  "sizes": "units = 1000; sensor_features = 50"
+ },
+ {
+  "id": "C22",
+  "claim": "The insecticide lowers invertebrate density: the mean density in treated tanks is lower than in control tanks, and a Welch two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+  "data_keys": [
+   {
+    "key": "density",
+    "shape": "(tanks, samples)",
+    "dtype": "float",
+    "meaning": "invertebrates per litre counted in each of the water samples taken from each tank"
+   },
+   {
+    "key": "treated",
+    "shape": "(tanks,)",
+    "dtype": "bool",
+    "meaning": "whether the tank received the insecticide"
+   }
+  ],
+  "sizes": "tanks = 8; samples = 10 (density: 8 x 10 = 80 values; treated: 8 values)"
+ },
+ {
+  "id": "C23",
+  "claim": "The drug improves motor coordination: the mean time spent on the rotarod is longer in the treatment group than in the control group, and a two-tailed two-sample t test of the difference between the two group means gives p < 0.05.",
+  "data_keys": [
+   {
+    "key": "latency",
+    "shape": "(rats, days)",
+    "dtype": "float",
+    "meaning": "time in seconds that each rat stayed on the rotarod on each of the consecutive test days"
+   },
+   {
+    "key": "treated",
+    "shape": "(rats,)",
+    "dtype": "bool",
+    "meaning": "whether the rat was in the treatment group (true) or the control group (false)"
+   }
+  ],
+  "sizes": "rats = 10; days = 3 (latency: 10 x 3 = 30 values; treated: 10 values)"
+ },
+ {
+  "id": "C24",
+  "claim": "Across tumour samples, the expression of gene A and the expression of gene B are positively related after accounting for the expression of gene C: the gain in R-squared when gene A expression is added to a linear regression of gene B expression on gene C expression is at least 0.05.",
+  "data_keys": [
+   {
+    "key": "gene_a_expression",
+    "shape": "(samples,)",
+    "dtype": "float",
+    "meaning": "Quantitative PCR expression signal of gene A in each tumour sample, in arbitrary linear units."
+   },
+   {
+    "key": "gene_b_expression",
+    "shape": "(samples,)",
+    "dtype": "float",
+    "meaning": "Quantitative PCR expression signal of gene B in each tumour sample, in arbitrary linear units."
+   },
+   {
+    "key": "gene_c_expression",
+    "shape": "(samples,)",
+    "dtype": "float",
+    "meaning": "Quantitative PCR expression signal of gene C in each tumour sample, in arbitrary linear units."
+   }
+  ],
+  "sizes": "samples = 96; gene_a_expression, gene_b_expression and gene_c_expression each have shape (96,)."
+ },
+ {
+  "id": "C25",
+  "claim": "Over a ten-year record, monthly hospital admissions rose after accounting for catchment population: in a linear regression of monthly admissions on time and catchment population, the coefficient of time is positive and significant at the one-sided 5% level (t test).",
+  "data_keys": [
+   {
+    "key": "admissions",
+    "shape": "(months,)",
+    "dtype": "float",
+    "meaning": "Number of hospital admissions in each month."
+   },
+   {
+    "key": "population",
+    "shape": "(months,)",
+    "dtype": "float",
+    "meaning": "Catchment population in each month, in thousands."
+   },
+   {
+    "key": "time_years",
+    "shape": "(months,)",
+    "dtype": "float",
+    "meaning": "Time of each month in years since the start of the record."
+   }
+  ],
+  "sizes": "months = 120; admissions, population and time_years each have shape (120,)."
+ },
+ {
+  "id": "C26",
+  "claim": "A shrunken-centroid classifier built from the 1000 gene-expression measurements separates the two tumour classes with an accuracy of at least 0.60 on new samples.",
+  "data_keys": [
+   {
+    "key": "expression",
+    "shape": "(samples, genes)",
+    "dtype": "float",
+    "meaning": "expression level of each gene in each tumour sample"
+   },
+   {
+    "key": "class_b",
+    "shape": "(samples,)",
+    "dtype": "bool",
+    "meaning": "True when the sample belongs to the second tumour class"
+   }
+  ],
+  "sizes": "samples = 40; genes = 1000"
+ },
+ {
+  "id": "C27",
+  "claim": "Prenatal exposure raises adult open-field activity: the mean activity score of offspring of exposed dams is higher than that of offspring of control dams, and a two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+  "data_keys": [
+   {
+    "key": "activity",
+    "shape": "(dams, pups)",
+    "dtype": "float",
+    "meaning": "open-field activity score (distance travelled, arbitrary units) measured in adulthood on each pup of each dam"
+   },
+   {
+    "key": "exposed",
+    "shape": "(dams,)",
+    "dtype": "bool",
+    "meaning": "whether the dam received the exposure during pregnancy"
+   }
+  ],
+  "sizes": "dams = 20; pups = 8 (activity: 20 x 8 = 160 values; exposed: 20 values)"
+ },
+ {
+  "id": "C28",
+  "claim": "Among the recorded visual neurons that fire more to vertical than to horizontal bars, the mean orientation index, (vertical minus horizontal) / (vertical plus horizontal) computed from trial-averaged firing rates, is at least 0.1.",
+  "data_keys": [
+   {
+    "key": "rate_vertical",
+    "shape": "(neurons, trials)",
+    "dtype": "float",
+    "meaning": "firing rate (spikes/s) of each neuron on each presentation of a vertical bar"
+   },
+   {
+    "key": "rate_horizontal",
+    "shape": "(neurons, trials)",
+    "dtype": "float",
+    "meaning": "firing rate (spikes/s) of each neuron on each presentation of a horizontal bar"
+   }
+  ],
+  "sizes": "{\"neurons\": 250, \"trials\": 15}"
+ },
+ {
+  "id": "C29",
+  "claim": "Across the cell lines, the average expression of the probe sets on the published drug-response signature is higher in the cell lines sensitive to the drug than in the resistant cell lines, by at least 0.5 log2 units (Welch two-sample t test on the per-cell-line signature averages, p < .01).",
+  "data_keys": [
+   {
+    "key": "expression",
+    "shape": "(probe_sets, cell_lines)",
+    "dtype": "float",
+    "meaning": "log2 expression of each microarray probe set in each cell line"
+   },
+   {
+    "key": "on_signature",
+    "shape": "(probe_sets,)",
+    "dtype": "bool",
+    "meaning": "True if the probe set is on the published drug-response signature list"
+   },
+   {
+    "key": "sensitive",
+    "shape": "(cell_lines,)",
+    "dtype": "bool",
+    "meaning": "True if the cell line is classed as sensitive to the drug, False if resistant"
+   }
+  ],
+  "sizes": "{\"probe_sets\": 1000, \"cell_lines\": 60}"
+ },
+ {
+  "id": "C30",
+  "claim": "In adults with hypertension, the fall in systolic pressure over a 12-week programme is larger in patients with a higher starting pressure: the correlation, across patients, between the fall (first baseline reading minus week-12 reading) and the second baseline reading is at least 0.3.",
+  "data_keys": [
+   {
+    "key": "sbp_baseline_first",
+    "shape": "(patients,)",
+    "dtype": "float",
+    "meaning": "Systolic blood pressure, first reading at the baseline visit, in mmHg."
+   },
+   {
+    "key": "sbp_baseline_second",
+    "shape": "(patients,)",
+    "dtype": "float",
+    "meaning": "Systolic blood pressure, second reading at the baseline visit, in mmHg."
+   },
+   {
+    "key": "sbp_week12",
+    "shape": "(patients,)",
+    "dtype": "float",
+    "meaning": "Systolic blood pressure at the week-12 visit, in mmHg."
+   }
+  ],
+  "sizes": "patients = 120; sbp_baseline_first, sbp_baseline_second and sbp_week12 each have shape (120,)."
+ }
+]

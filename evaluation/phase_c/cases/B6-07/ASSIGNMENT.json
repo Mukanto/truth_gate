@@ -1,0 +1,38 @@
+{
+  "case_id": "B6-07",
+  "world_id": "C08",
+  "class": "B-6",
+  "subtype": null,
+  "source": "NIE11",
+  "brief": {
+    "id": "C08",
+    "claim": "The task engages region A more than region B: the task-evoked signal change (task minus rest) is larger in region A than in region B, with the mean across subjects of the within-subject difference of the two signal changes positive, and a paired t test of that difference gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "task_a",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region A of each subject during task blocks (percent signal change units)"
+      },
+      {
+        "key": "rest_a",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region A of each subject during rest blocks"
+      },
+      {
+        "key": "task_b",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region B of each subject during task blocks"
+      },
+      {
+        "key": "rest_b",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region B of each subject during rest blocks"
+      }
+    ],
+    "sizes": "subjects = 24 (each of the four keys: 24 values)"
+  }
+}

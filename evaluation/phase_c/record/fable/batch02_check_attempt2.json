@@ -1,0 +1,284 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "C16": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_treated"
+    ],
+    "control_max_ms": {
+      "permute_treated": 0.035
+    },
+    "shapes": {
+      "heart_weight": [
+        48
+      ],
+      "body_mass": [
+        48
+      ],
+      "treated": [
+        48
+      ]
+    },
+    "max_ms": 0.077
+  },
+  "C17": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_dose_across_animals"
+    ],
+    "control_max_ms": {
+      "permute_dose_across_animals": 0.021
+    },
+    "shapes": {
+      "spine_density": [
+        12,
+        4,
+        25
+      ],
+      "dose": [
+        12
+      ]
+    },
+    "max_ms": 0.085
+  },
+  "C18": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C19": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C20": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C21": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_defective_across_units"
+    ],
+    "control_max_ms": {
+      "permute_defective_across_units": 0.051
+    },
+    "shapes": {
+      "sensor_features": [
+        1000,
+        50
+      ],
+      "defective": [
+        1000
+      ]
+    },
+    "max_ms": 1.43
+  },
+  "C22": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_treated_across_tanks"
+    ],
+    "control_max_ms": {
+      "permute_treated_across_tanks": 0.023
+    },
+    "shapes": {
+      "density": [
+        8,
+        10
+      ],
+      "treated": [
+        8
+      ]
+    },
+    "max_ms": 0.073
+  },
+  "C23": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_treated_across_rats"
+    ],
+    "control_max_ms": {
+      "permute_treated_across_rats": 0.02
+    },
+    "shapes": {
+      "latency": [
+        10,
+        3
+      ],
+      "treated": [
+        10
+      ]
+    },
+    "max_ms": 0.037
+  },
+  "C24": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_gene_a_across_samples"
+    ],
+    "control_max_ms": {
+      "permute_gene_a_across_samples": 0.022
+    },
+    "shapes": {
+      "gene_a_expression": [
+        96
+      ],
+      "gene_b_expression": [
+        96
+      ],
+      "gene_c_expression": [
+        96
+      ]
+    },
+    "max_ms": 0.028
+  },
+  "C25": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_time_across_months",
+      "reverse_time"
+    ],
+    "control_max_ms": {
+      "permute_time_across_months": 0.022,
+      "reverse_time": 0.013
+    },
+    "shapes": {
+      "admissions": [
+        120
+      ],
+      "population": [
+        120
+      ],
+      "time_years": [
+        120
+      ]
+    },
+    "max_ms": 0.09
+  },
+  "C26": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_class_across_samples"
+    ],
+    "control_max_ms": {
+      "permute_class_across_samples": 0.07
+    },
+    "shapes": {
+      "expression": [
+        40,
+        1000
+      ],
+      "class_b": [
+        40
+      ]
+    },
+    "max_ms": 0.866
+  },
+  "C27": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_exposed_across_dams"
+    ],
+    "control_max_ms": {
+      "permute_exposed_across_dams": 0.02
+    },
+    "shapes": {
+      "activity": [
+        20,
+        8
+      ],
+      "exposed": [
+        20
+      ]
+    },
+    "max_ms": 0.031
+  },
+  "C28": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C29": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "C30": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_second_baseline_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_second_baseline_across_patients": 0.023
+    },
+    "shapes": {
+      "sbp_baseline_first": [
+        120
+      ],
+      "sbp_baseline_second": [
+        120
+      ],
+      "sbp_week12": [
+        120
+      ]
+    },
+    "max_ms": 0.029
+  }
+}

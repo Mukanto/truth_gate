@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-04",
+  "world_id": "C13",
+  "class": "B-3",
+  "subtype": null,
+  "source": "CUR13",
+  "brief": {
+    "id": "C13",
+    "claim": "In adult mice, liver weight is positively related to kidney weight after accounting for body mass: the coefficient of kidney weight in a linear regression of liver weight on kidney weight and body mass is at least 0.25 (g of liver weight per g of kidney weight).",
+    "data_keys": [
+      {
+        "key": "liver_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Wet liver weight of each mouse, in g."
+      },
+      {
+        "key": "kidney_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Combined wet weight of both kidneys of each mouse, in g."
+      },
+      {
+        "key": "body_mass",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Body mass of each mouse, in g."
+      }
+    ],
+    "sizes": "mice = 150; liver_weight, kidney_weight and body_mass each have shape (150,)."
+  }
+}

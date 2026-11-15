@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-11",
+  "world_id": "C01",
+  "class": "B-2",
+  "subtype": "L1.3",
+  "source": "VAR06",
+  "brief": {
+    "id": "C01",
+    "claim": "A classifier built from the 1000 gene-expression measurements separates the two groups of subjects with a balanced accuracy (mean of sensitivity and specificity) of at least 0.60 on new subjects.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(subjects, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in the blood sample of each subject"
+      },
+      {
+        "key": "group_b",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True when the subject belongs to the second group"
+      }
+    ],
+    "sizes": "subjects = 40; genes = 1000"
+  }
+}

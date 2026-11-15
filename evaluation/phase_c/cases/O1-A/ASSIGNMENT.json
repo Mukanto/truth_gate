@@ -1,0 +1,29 @@
+{
+  "case_id": "O1-A",
+  "world_id": "C40",
+  "class": "O",
+  "subtype": "O-1",
+  "source": "KAP23",
+  "brief": {
+    "id": "C40",
+    "claim": "In a cohort of patients, a linear regression of the clinical outcome score on the first 10 principal components of the biomarker panel predicts the outcome of new patients with an R-squared of at least 0.15, estimated by 5-fold cross-validation.",
+    "data_keys": [
+      {
+        "key": "biomarkers",
+        "shape": "(patients, markers)",
+        "dtype": "float",
+        "meaning": "baseline blood biomarker concentrations (log scale) measured on each patient"
+      },
+      {
+        "key": "outcome",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "clinical outcome score of each patient at 12-month follow-up"
+      }
+    ],
+    "sizes": {
+      "patients": 300,
+      "markers": 80
+    }
+  }
+}

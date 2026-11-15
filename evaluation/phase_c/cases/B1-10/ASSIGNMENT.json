@@ -1,0 +1,34 @@
+{
+  "case_id": "B1-10",
+  "world_id": "C41",
+  "class": "B-1",
+  "subtype": null,
+  "source": "MAK19",
+  "brief": {
+    "id": "C41",
+    "claim": "Neurons that are least active at rest increase their firing more with the manipulation than neurons that are most active at rest: ranking the 240 neurons by firing rate in the resting recording, the mean change in rate (post-manipulation minus pre-manipulation) of the lowest third exceeds that of the highest third by at least 1.0 spikes/s, and a one-sided Welch t test of that difference is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "rate_rest",
+        "shape": "(neurons,)",
+        "dtype": "float",
+        "meaning": "firing rate (spikes/s) of each neuron in a resting recording"
+      },
+      {
+        "key": "rate_pre",
+        "shape": "(neurons,)",
+        "dtype": "float",
+        "meaning": "firing rate (spikes/s) of each neuron before the manipulation"
+      },
+      {
+        "key": "rate_post",
+        "shape": "(neurons,)",
+        "dtype": "float",
+        "meaning": "firing rate (spikes/s) of each neuron after the manipulation"
+      }
+    ],
+    "sizes": {
+      "neurons": 240
+    }
+  }
+}

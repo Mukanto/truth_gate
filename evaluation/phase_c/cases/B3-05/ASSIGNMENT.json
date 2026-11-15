@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-05",
+  "world_id": "C12",
+  "class": "B-3",
+  "subtype": null,
+  "source": "PEA97",
+  "brief": {
+    "id": "C12",
+    "claim": "Across adult skeletons, femur length and tibia length are positively associated after accounting for humerus length: the partial correlation between femur length and tibia length, given humerus length, is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "femur_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the femur of each skeleton, in mm."
+      },
+      {
+        "key": "tibia_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the tibia of each skeleton, in mm."
+      },
+      {
+        "key": "humerus_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the humerus of each skeleton, in mm."
+      }
+    ],
+    "sizes": "skeletons = 1000; femur_length, tibia_length and humerus_length each have shape (1000,)."
+  }
+}

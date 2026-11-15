@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-02",
+  "world_id": "C37",
+  "class": "B-2",
+  "subtype": "L1.4",
+  "source": "KAP23",
+  "brief": {
+    "id": "C37",
+    "claim": "A classifier built from the 12 clinical measurements detects at least 60% of the patients who have the less frequent outcome among new patients (sensitivity of at least 0.60).",
+    "data_keys": [
+      {
+        "key": "measurements",
+        "shape": "(patients, measurements)",
+        "dtype": "float",
+        "meaning": "12 clinical measurements of each patient"
+      },
+      {
+        "key": "outcome",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True when the patient has the less frequent of the two outcomes"
+      }
+    ],
+    "sizes": "patients = 400; measurements = 12"
+  }
+}

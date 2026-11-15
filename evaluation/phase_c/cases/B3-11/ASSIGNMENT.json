@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-11",
+  "world_id": "C24",
+  "class": "B-3",
+  "subtype": null,
+  "source": "KRO93",
+  "brief": {
+    "id": "C24",
+    "claim": "Across tumour samples, the expression of gene A and the expression of gene B are positively related after accounting for the expression of gene C: the gain in R-squared when gene A expression is added to a linear regression of gene B expression on gene C expression is at least 0.05.",
+    "data_keys": [
+      {
+        "key": "gene_a_expression",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "Quantitative PCR expression signal of gene A in each tumour sample, in arbitrary linear units."
+      },
+      {
+        "key": "gene_b_expression",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "Quantitative PCR expression signal of gene B in each tumour sample, in arbitrary linear units."
+      },
+      {
+        "key": "gene_c_expression",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "Quantitative PCR expression signal of gene C in each tumour sample, in arbitrary linear units."
+      }
+    ],
+    "sizes": "samples = 96; gene_a_expression, gene_b_expression and gene_c_expression each have shape (96,)."
+  }
+}

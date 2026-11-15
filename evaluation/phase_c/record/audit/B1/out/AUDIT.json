@@ -1,0 +1,206 @@
+[
+  {
+    "case": "B1-01",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty keeps women with start index >= 20 (an extreme group on a noisy measurement) and tests the within-arm fall of the active arm only (mean >= 3, one-sided paired t, 0.05), which is the improvement MOR03's placebo-effect passage attributes to regression in both arms; cut, threshold and level are the claim's own.",
+      "b": "Fixed compares the same selected women between arms (difference of mean falls >= 3, one-sided Welch t, 0.05); a randomised control arm selected the same way is the standard correction for regression in an extreme group.",
+      "c": "Bodies differ only in the test helper (paired one-sample t vs Welch) and in using the placebo arm; both follow from the error and its correction.",
+      "d": "Guards: non-finite inputs, fewer than 2 women in the (active / each) selected arm (note's minimum, smallest size for the t statistics), zero variance; all return None. MECH_CHECK lists no comparison; the remaining comparisons (start >= 20, mean >= 3, p < 0.05) are the claim's cut, threshold and level.",
+      "e": "No banned term of PB section 4 in the brief (script re-run by the auditor); the only 'false' is the key meaning 'False if to placebo'; no negation of the claim.",
+      "f": "Source states no sizes (short commentary). 300 women (150 per arm) compared with typical two-arm hormone-therapy symptom trials (hundreds of women); within the caps. Listed as 'not documented by the source'.",
+      "g": "Same helper code, threshold 3, level 0.05, same decision rule, cost of a few array operations in both; the statistic differs only as the error requires (one arm vs arm contrast).",
+      "h": "States the size, each key's axis and what it measured, and the claim (the cut on the start index is named in the claim, as the estimand line requires). 'Randomised to active therapy' is read as naming the measured allocation variable, not as a statement about how rows are related or selected (borderline wording, reported).",
+      "i": "Claim = arm difference in mean fall among women with start >= 20; fixed estimates exactly that (estimand line of CASE.md and note)."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-02",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty groups women by the first-year change measured to the first 12-month scan and measures the second-year percentage change from that same 12-month reading, which is the analysis of MOR03's Figure 1 (groups by 12-month change, 24-month values as change from the 12-month value). See the remark: this documented bias runs against the claim's direction.",
+      "b": "Fixed starts the second-year change from the second 12-month scan, so the reading that defines the groups does not start the compared change; an independent measurement for grouping vs baseline is a standard regression-to-the-mean correction.",
+      "c": "One line differs (ref = m1 vs ref = m2).",
+      "d": "MECH_CHECK line 91 'rose.sum() < 2 or fell.sum() < 2' is the note's minimum of 2 per group (smallest size for Welch t). Other guards: non-finite inputs and non-finite ratios, zero variance; all return None. first > 0 / first < 0 is the claim's rose/fell definition.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "Source states no sample size for the figure. 600 women compared with osteoporosis-treatment trial cohorts (hundreds to thousands); within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the reference reading.",
+      "h": "Claim names the two 12-month scans because the estimand requires them (estimand line); key meanings state what each scan measured; no key names a role in the error.",
+      "i": "The claim itself defines the second-year change from the second 12-month scan, which is what the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-03",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty selects patients by reading 2 >= 160 and tests the fall from that same reading to reading 3 (mean >= 8, one-sided paired t, 0.05): selection on the baseline of the change, MOR03 diagnostic-tests passage; cut is the claim's own.",
+      "b": "Fixed selects by the earlier screening reading (reading 1) and tests the same fall; selecting on an independent earlier measurement (serial measurements) is the documented/standard correction.",
+      "c": "One line differs (column 1 vs column 0 for the selection).",
+      "d": "Guards: non-finite input, fewer than 2 selected patients (note's minimum), zero variance; return None. No MECH_CHECK listing; other comparisons are the claim's cut, threshold and level.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "Source states no sizes. 250 patients x 3 readings compared with a hypertension clinic cohort with repeated visits; within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the selection column.",
+      "h": "Readings axis named in the shape and described in time order (setting); claim names reading 1 as the qualifying reading because the estimand requires it.",
+      "i": "Claim = mean fall reading 2 to 3 among patients with reading 1 >= 160; fixed estimates that."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-04",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty defines each participant's region by faces-minus-houses t > 2.0 over all 8 runs and measures faces-minus-bodies in the same runs (shared faces term), the non-independent subject-specific ROI analysis of KRI10 Q7 (cf. KRI09 Example 2); t > 2.0 is a typical cut (source states none).",
+      "b": "Fixed defines the region on the even-numbered runs and measures on the odd-numbered runs: KRI10 Q7 (EV) says a subject-specific ROI claim needs only independent data from the same subjects.",
+      "c": "Only the run index sets differ (all runs for both vs runs 2,4,6,8 for selection and 1,3,5,7 for estimation).",
+      "d": "MECH_CHECK line 92 'keep.sum() < 2' is the note's minimum of 2 participants with a non-empty region (paired t needs 2). Other guards: fewer than 2 selection runs / 1 estimation run (smallest defined sizes), any zero-variance voxel, non-finite input; all return None. t > 2.0 is the region definition, mean >= 0.3 and p < 0.05 the claim.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "KRI10 states no sizes. 12 participants x 8 runs x 300 voxels compared with typical fMRI localizer studies (10-20 participants, 6-10 runs); 300 voxels is at the small end for a visual-cortex mask and below the 1000 cap, and the note gives no section 2 reason for it; fewer voxels gives fewer selectable null voxels, so the choice does not favour detection. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the run index sets.",
+      "h": "Keys state axes and what was measured; the claim names the faces-versus-houses region because the estimand requires it.",
+      "i": "Claim = faces-minus-bodies in each participant's face-over-house region across participants; fixed estimates it with an independently defined region."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-05",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty selects voxels by a group one-sample t at p < 0.001 uncorrected on all 40 participants and estimates/tests the voxel-averaged effect on the same participants (KRI10 Q6/Q7; TN names 'P<0.001 uncorrected' as pervasive, located in the extract).",
+      "b": "Fixed selects on participants 0-19 and estimates on 20-39: independent subjects, the correction KRI10 Q7 requires for a group-level region claim.",
+      "c": "Only the participant index sets differ.",
+      "d": "Guards: non-finite input, fewer than 2 participants in either half, any zero-variance voxel, empty selection, zero variance in the final t; all return None. No MECH_CHECK listing; p < 0.001 is the documented selection rule, >= 0.25 and p < 0.05 the claim.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "KRI10 states no sizes. 40 participants compared with typical group fMRI samples (20-50); 1000 voxels is the cap (real cortical masks are far larger), counted as reduced to the cap (P-2 reading 2). Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the index sets.",
+      "h": "Single key with axes and meaning; claim names the responsive voxels as the estimand requires.",
+      "i": "Claim = mean task effect in the responsive voxels across participants; fixed estimates it on participants not used for selection."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-06",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty selects voxels correlating positively with contrast (one-sided p < 0.01) over all 240 trials and regresses their average on contrast over the same trials (slope >= 0.2, p < 0.05): the selection-then-estimate on the same data of KRI10's introduction; p < 0.01 typical.",
+      "b": "Fixed selects on the even-numbered trials and estimates the slope on the odd-numbered trials, the half-the-data recipe quoted from KRI10's introduction (single-participant inference, so a trial split suffices).",
+      "c": "Only the trial index sets differ.",
+      "d": "Guards: non-finite input, fewer than 3 trials in either half (smallest size for a correlation / slope p), zero variance of contrast or any voxel, empty selection, zero residual variance; all return None. No MECH_CHECK listing.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "KRI10 gives no sizes. 240 trials x 500 voxels compared with a single-participant event-related visual experiment (a few hundred trials; visual-cortex voxel counts in the thousands, cap 1000); 500 voxels is below the cap without a stated reason, which does not favour detection. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the index sets.",
+      "h": "Keys state axes and what was measured; claim names the contrast-following voxels as the estimand requires.",
+      "i": "Claim = slope of the contrast-following voxel average on contrast; fixed estimates it on trials not used for selection."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-07",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty keeps neurons with vertical > horizontal (one-sided Welch, p < 0.05, all 15 trials) and computes their orientation index from the same trials: restriction of analysis to neurons with certain response properties without independent data (KRI09 introduction); p < 0.05 typical.",
+      "b": "Fixed selects on the odd-numbered trials (8) and computes the index on the even-numbered trials (7): the independent data set for the selected channels that KRI09 names.",
+      "c": "Only the trial index sets differ.",
+      "d": "MECH_CHECK line 86 'index.mean() >= 0.1' is the claim's statistic and threshold, not an inspection of the input. Guards: non-finite input or index, fewer than 2 trials per half, zero variance, empty selection; all return None.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "KRI09 states no recording sizes for neurons. 250 neurons x 15 presentations compared with multi-electrode population recordings (hundreds of neurons, 10-20 repetitions); within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the index sets.",
+      "h": "Keys state axes and what was measured; claim names the vertical-preferring neurons as the estimand requires.",
+      "i": "Claim = mean index of vertical-preferring neurons; fixed estimates it on trials not used for selection."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-08",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty keeps electrodes with stimulus > control (one-sided Welch, p < 0.05, all 100 trials) and computes R-squared of the condition on their average over the same trials: restriction to sensors showing expected responses (KRI09 introduction); p < 0.05 typical.",
+      "b": "Fixed selects electrodes on the odd-numbered trials and computes R-squared on the even-numbered trials (independent data for the selected channels, KRI09).",
+      "c": "Only the trial index sets differ.",
+      "d": "Guards: non-finite input, fewer than 3 trials in the test half, fewer than 2 trials per condition in the selection half, any zero-variance electrode, empty selection, zero variance of condition or average; all return None, at the note's minima. No MECH_CHECK listing.",
+      "e": "No banned term; 'False on control trials' is a key value, not a negation.",
+      "f": "KRI09 states no EEG sizes. 100 trials x 64 electrodes compared with a standard 64-channel EEG session; within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the index sets.",
+      "h": "Keys state axes and what was measured; claim names the responding electrodes as the estimand requires.",
+      "i": "Claim = R-squared of condition on the responding-electrode average; fixed estimates it on trials not used for selection (an explained variance, not a prediction score)."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-09",
+    "a": "yes", "b": "no", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty computes voxel-wise correlations with the trait across the 16 participants (sessions averaged), keeps voxels with one-sided p < 0.005 and reports the mean of their correlations: the strategy of VUL09's abstract (confirmed online); p < 0.005 typical.",
+      "b": "Fixed selects on session 1 and estimates on session 2 of the same 16 participants. For an across-participant (population-level) correlation the selection recruits the chance alignment of each participant's stable activation with the single trait vector, which is the same in both sessions; KRI10 Q7 (TN: splitting an individual's data 'does not yield independence at the group level'; ML; RP; EV, first author of VUL09: a group-level region effect 'must validate with independent subjects') documents that this split is not independent. The correction is partial (CASE.md itself attributes the fixed twin's 5.5% minus holds to this carry-over).",
+      "c": "Only the selection and estimation data differ (averaged sessions for both vs session 1 / session 2).",
+      "d": "MECH_CHECK line 98 'r_est[chosen].mean() >= 0.5' is the claim's statistic and threshold. Guards: non-finite input, fewer than 3 participants (correlation), zero variance of trait or any voxel, empty selection; all return None.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "VUL09 (abstract) reports no sizes. 16 participants compared with the small-sample brain-trait correlation studies VUL09 surveys and the PB illustration; 1000 voxels is the cap (whole-brain counts far larger, P-2 reading 2). Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the two data lines.",
+      "h": "Keys state axes and what each session measured; claim names the trait-related region as the estimand requires; no key names a role.",
+      "i": "Claim = mean voxel-wise correlation in the trait-related region across participants; the fixed criterion is aimed at that quantity (the defect is how independent its data are, item b)."
+    },
+    "overall": "fail",
+    "repair_request": "Criterion body (fixed only): choose the voxels and estimate the correlation on different participants, not on different sessions of the same participants, e.g. apply the same p < 0.005 voxel rule on one half of the participants (sessions may be averaged, as in the faulty twin) and compute the mean correlation of the chosen voxels on the other half, or use a leave-participants-out scheme; keep the threshold 0.5, the guards (at least 3 participants for a correlation) and the faulty body unchanged, and update the CASE.md estimand/mapping lines accordingly. Not a brief, skeleton or size defect: the brief's 16 participants and two sessions allow a participant split."
+  },
+  {
+    "case": "B1-10",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty ranks neurons by the pre-manipulation rate, the baseline of the change, and compares the change of the lowest vs highest third (difference >= 1.0, one-sided Welch, 0.05): MAK19's binning by baseline activity followed by a change comparison.",
+      "b": "Fixed ranks by the independent resting recording: MAK19's solution, a different dataset for specifying the sub-groups.",
+      "c": "One line differs (argsort of pre vs rest).",
+      "d": "Guards: non-finite input, fewer than 2 neurons per third (note's minimum), zero variance; all return None. No MECH_CHECK listing.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "MAK19 gives no sizes for its example. 240 neurons compared with population recordings of a few hundred neurons; within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the ranking variable.",
+      "h": "Keys state what each recording measured; the claim names the resting-recording ranking and thirds because the estimand is defined by them.",
+      "i": "Claim = change difference between neurons lowest vs highest in resting rate; fixed estimates exactly that."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-11",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty slides a 10-sample window, picks the one with the largest patient-minus-control gap on all 60 participants and tests that window on the same participants: MAK19's reduction by 'defining a region of interest' with an outcome-relevant criterion; width 10 typical.",
+      "b": "Fixed picks the window on even-indexed participants and tests on odd-indexed participants: MAK19's participant-level division.",
+      "c": "Only the participant index sets differ.",
+      "d": "MECH_CHECK line 90 'pat[sel].sum() < 1 or (~pat[sel]).sum() < 1' is an empty-group guard in the selection half (a mean is defined from 1). Other guards: non-finite input, fewer time samples than the window, fewer than 2 per group in the test half (note's minimum), zero variance; all return None.",
+      "e": "No banned term; 'False for a control participant' is a key value, not a negation.",
+      "f": "MAK19 states no sizes for this example. 60 participants (two groups) x 200 time samples compared with a clinical ERP study (about 30 per group, a few hundred samples per epoch); within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the index sets.",
+      "h": "Time axis named in the shape ('in order' is setting); claim names the window in which the groups differ as the estimand requires.",
+      "i": "Claim = patient-control difference in the window where the groups differ; fixed estimates it on participants not used to choose the window."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B1-12",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty selects patients by the start score >= 60 and measures improvement from that same score (share improving by >= 10 is >= 0.40): follow-up examined on a sub-sample selected by the baseline value (BAR05 abstract, confirmed online); cut is the claim's own.",
+      "b": "Fixed selects by the separate screening score and measures the same improvement from the start score: selecting on one measurement and using another as baseline is a standard regression-to-the-mean correction.",
+      "c": "One line differs (start vs screen in the selection).",
+      "d": "MECH_CHECK line 45 'keep.sum() < 1' is the empty-selection guard (a proportion is defined from 1, note's minimum). Also non-finite inputs; all return None. share >= 0.40 is the claim.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "BAR05 abstract states no sizes. 500 patients compared with a clinical programme cohort with screening and follow-up visits; within the caps. Listed as 'not documented by the source'.",
+      "g": "Identical code apart from the selection variable.",
+      "h": "Keys state what each visit's score measured; claim names the screening, start and 6-month scores as the estimand requires.",
+      "i": "Claim = share improving among patients qualifying at screening; fixed estimates exactly that."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  }
+]

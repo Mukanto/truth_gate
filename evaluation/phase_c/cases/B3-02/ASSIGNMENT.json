@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-02",
+  "world_id": "C53",
+  "class": "B-3",
+  "subtype": null,
+  "source": "CUR13",
+  "brief": {
+    "id": "C53",
+    "claim": "Among adults, 24-hour urinary albumin excretion increases with age after accounting for 24-hour urinary creatinine excretion: the partial correlation between albumin excretion and age, given creatinine excretion, is at least 0.15.",
+    "data_keys": [
+      {
+        "key": "albumin_excretion",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Urinary albumin excreted over 24 hours, in mg per 24 h, for each participant."
+      },
+      {
+        "key": "creatinine_excretion",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Urinary creatinine excreted over 24 hours, in mg per 24 h, for each participant."
+      },
+      {
+        "key": "age",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Age of each participant, in years."
+      }
+    ],
+    "sizes": "participants = 800; albumin_excretion, creatinine_excretion and age each have shape (800,)."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-07",
+  "world_id": "C42",
+  "class": "B-2",
+  "subtype": "L3.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "C42",
+    "claim": "A regression on the 10 session measurements predicts a participant's score in a session, with a Pearson correlation of at least 0.30 between predicted and observed scores for new participants.",
+    "data_keys": [
+      {
+        "key": "measurements",
+        "shape": "(participants, sessions, measurements)",
+        "dtype": "float",
+        "meaning": "10 measurements recorded in each session of each participant"
+      },
+      {
+        "key": "score",
+        "shape": "(participants, sessions)",
+        "dtype": "float",
+        "meaning": "score of the participant in that session"
+      }
+    ],
+    "sizes": "participants = 40; sessions = 4; measurements = 10"
+  }
+}

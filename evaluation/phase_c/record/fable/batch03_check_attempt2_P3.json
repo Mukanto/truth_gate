@@ -1,0 +1,381 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "C31": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_patient"
+    ],
+    "control_max_ms": {
+      "permute_patient": 0.043
+    },
+    "shapes": {
+      "erp": [
+        60,
+        200
+      ],
+      "patient": [
+        60
+      ]
+    },
+    "max_ms": 0.938
+  },
+  "C32": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_responder"
+    ],
+    "control_max_ms": {
+      "permute_responder": 0.09
+    },
+    "shapes": {
+      "expression": [
+        40,
+        1000
+      ],
+      "responder": [
+        40
+      ]
+    },
+    "max_ms": 0.934
+  },
+  "C33": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_active"
+    ],
+    "control_max_ms": {
+      "permute_active": 0.024
+    },
+    "shapes": {
+      "index_start": [
+        300
+      ],
+      "index_week12": [
+        300
+      ],
+      "active": [
+        300
+      ]
+    },
+    "max_ms": 0.087
+  },
+  "C34": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "shift_rises_in_time"
+    ],
+    "control_max_ms": {
+      "shift_rises_in_time": 0.06
+    },
+    "shapes": {
+      "indicators": [
+        500,
+        10
+      ],
+      "rises": [
+        500
+      ]
+    },
+    "max_ms": 8.826
+  },
+  "C35": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "reassign_plots_to_treatment"
+    ],
+    "control_max_ms": {
+      "reassign_plots_to_treatment": 0.032
+    },
+    "shapes": {
+      "abundance": [
+        12,
+        12
+      ],
+      "treated": [
+        12
+      ]
+    },
+    "max_ms": 0.14
+  },
+  "C36": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "scramble_voxels_within_participant",
+      "random_sign_per_participant"
+    ],
+    "control_max_ms": {
+      "random_sign_per_participant": 0.134,
+      "scramble_voxels_within_participant": 0.625
+    },
+    "shapes": {
+      "effect": [
+        40,
+        1000
+      ]
+    },
+    "max_ms": 0.922
+  },
+  "C37": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_outcome"
+    ],
+    "control_max_ms": {
+      "permute_outcome": 0.031
+    },
+    "shapes": {
+      "measurements": [
+        400,
+        12
+      ],
+      "outcome": [
+        400
+      ]
+    },
+    "max_ms": 0.221
+  },
+  "C38": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "reassign_wells_to_treatment"
+    ],
+    "control_max_ms": {
+      "reassign_wells_to_treatment": 0.024
+    },
+    "shapes": {
+      "responded": [
+        12,
+        150
+      ],
+      "treated": [
+        12
+      ]
+    },
+    "max_ms": 0.051
+  },
+  "C39": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_lv_mass",
+      "permute_lv_mass_residual"
+    ],
+    "control_max_ms": {
+      "permute_lv_mass": 0.023,
+      "permute_lv_mass_residual": 0.199
+    },
+    "shapes": {
+      "lv_mass": [
+        300
+      ],
+      "body_surface_area": [
+        300
+      ],
+      "systolic_bp": [
+        300
+      ]
+    },
+    "max_ms": 0.053
+  },
+  "C40": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_outcome"
+    ],
+    "control_max_ms": {
+      "permute_outcome": 0.029
+    },
+    "shapes": {
+      "biomarkers": [
+        300,
+        80
+      ],
+      "outcome": [
+        300
+      ]
+    },
+    "max_ms": 0.474
+  },
+  "C41": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_rate_rest"
+    ],
+    "control_max_ms": {
+      "permute_rate_rest": 0.023
+    },
+    "shapes": {
+      "rate_rest": [
+        240
+      ],
+      "rate_pre": [
+        240
+      ],
+      "rate_post": [
+        240
+      ]
+    },
+    "max_ms": 0.13
+  },
+  "C42": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_scores_across_participants"
+    ],
+    "control_max_ms": {
+      "permute_scores_across_participants": 0.029
+    },
+    "shapes": {
+      "measurements": [
+        40,
+        4,
+        10
+      ],
+      "score": [
+        40,
+        4
+      ]
+    },
+    "max_ms": 0.174
+  },
+  "C43": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "reassign_second_year_records"
+    ],
+    "control_max_ms": {
+      "reassign_second_year_records": 0.03
+    },
+    "shapes": {
+      "bmd_start": [
+        600
+      ],
+      "bmd_m12_scan1": [
+        600
+      ],
+      "bmd_m12_scan2": [
+        600
+      ],
+      "bmd_m24": [
+        600
+      ]
+    },
+    "max_ms": 0.096
+  },
+  "C44": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_onset_across_country_years",
+      "permute_onset_histories_across_countries"
+    ],
+    "control_max_ms": {
+      "permute_onset_across_country_years": 0.076,
+      "permute_onset_histories_across_countries": 0.034
+    },
+    "shapes": {
+      "indicators": [
+        896,
+        30
+      ],
+      "onset": [
+        896
+      ]
+    },
+    "max_ms": 1.119
+  },
+  "C45": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_trained"
+    ],
+    "control_max_ms": {
+      "permute_trained": 0.021
+    },
+    "shapes": {
+      "pre": [
+        40
+      ],
+      "post": [
+        40
+      ],
+      "trained": [
+        40
+      ]
+    },
+    "max_ms": 0.113
+  }
+}

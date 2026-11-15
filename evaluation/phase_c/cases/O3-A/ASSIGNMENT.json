@@ -1,0 +1,35 @@
+{
+  "case_id": "O3-A",
+  "world_id": "C29",
+  "class": "O",
+  "subtype": "O-3",
+  "source": "BAG09",
+  "brief": {
+    "id": "C29",
+    "claim": "Across the cell lines, the average expression of the probe sets on the published drug-response signature is higher in the cell lines sensitive to the drug than in the resistant cell lines, by at least 0.5 log2 units (Welch two-sample t test on the per-cell-line signature averages, p < .01).",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(probe_sets, cell_lines)",
+        "dtype": "float",
+        "meaning": "log2 expression of each microarray probe set in each cell line"
+      },
+      {
+        "key": "on_signature",
+        "shape": "(probe_sets,)",
+        "dtype": "bool",
+        "meaning": "True if the probe set is on the published drug-response signature list"
+      },
+      {
+        "key": "sensitive",
+        "shape": "(cell_lines,)",
+        "dtype": "bool",
+        "meaning": "True if the cell line is classed as sensitive to the drug, False if resistant"
+      }
+    ],
+    "sizes": {
+      "probe_sets": 1000,
+      "cell_lines": 60
+    }
+  }
+}

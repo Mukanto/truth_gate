@@ -1,0 +1,29 @@
+{
+  "case_id": "B1-11",
+  "world_id": "C31",
+  "class": "B-1",
+  "subtype": null,
+  "source": "MAK19",
+  "brief": {
+    "id": "C31",
+    "claim": "Patients show a larger evoked response than controls in the time window in which the two groups' responses differ: the mean amplitude over a window of 10 consecutive samples is at least 0.5 microvolts greater for patients than for controls, and a one-sided Welch t test of that difference is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "erp",
+        "shape": "(participants, time)",
+        "dtype": "float",
+        "meaning": "evoked-response amplitude (microvolts) of each participant at each time sample after stimulus onset, time samples in order"
+      },
+      {
+        "key": "patient",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "True for a patient, False for a control participant"
+      }
+    ],
+    "sizes": {
+      "participants": 60,
+      "time": 200
+    }
+  }
+}

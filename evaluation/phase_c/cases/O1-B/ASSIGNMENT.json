@@ -1,0 +1,35 @@
+{
+  "case_id": "O1-B",
+  "world_id": "C49",
+  "class": "O",
+  "subtype": "O-1",
+  "source": "KAP23",
+  "brief": {
+    "id": "C49",
+    "claim": "Among children referred for a developmental assessment, a logistic regression on the speech measures identifies the children who received a diagnosis with a balanced accuracy of at least 0.70 for new children, estimated by 5-fold cross-validation.",
+    "data_keys": [
+      {
+        "key": "speech_measures",
+        "shape": "(children, measures)",
+        "dtype": "float",
+        "meaning": "acoustic and conversational measures computed from a recorded speech sample of each child"
+      },
+      {
+        "key": "diagnosis",
+        "shape": "(children,)",
+        "dtype": "bool",
+        "meaning": "True if the child received the diagnosis at the end of the assessment"
+      },
+      {
+        "key": "severity_rating",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "clinician's overall symptom severity rating of the child on a continuous 0 to 10 scale, higher means more severe"
+      }
+    ],
+    "sizes": {
+      "children": 400,
+      "measures": 30
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-02",
+  "world_id": "C38",
+  "class": "B-6",
+  "subtype": null,
+  "source": "LAZ18",
+  "brief": {
+    "id": "C38",
+    "claim": "The compound raises the share of cells that respond to stimulation: the proportion of responding cells is higher in treated wells than in untreated wells, and a test of the difference between the two groups gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "responded",
+        "shape": "(wells, cells)",
+        "dtype": "bool",
+        "meaning": "whether each imaged cell of each well showed a calcium response to the stimulus"
+      },
+      {
+        "key": "treated",
+        "shape": "(wells,)",
+        "dtype": "bool",
+        "meaning": "whether the well was given the compound before stimulation"
+      }
+    ],
+    "sizes": "wells = 12; cells = 150 (responded: 12 x 150 = 1800 values; treated: 12 values)"
+  }
+}

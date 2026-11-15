@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-12",
+  "world_id": "C25",
+  "class": "B-3",
+  "subtype": null,
+  "source": "KRO93",
+  "brief": {
+    "id": "C25",
+    "claim": "Over a ten-year record, monthly hospital admissions rose after accounting for catchment population: in a linear regression of monthly admissions on time and catchment population, the coefficient of time is positive and significant at the one-sided 5% level (t test).",
+    "data_keys": [
+      {
+        "key": "admissions",
+        "shape": "(months,)",
+        "dtype": "float",
+        "meaning": "Number of hospital admissions in each month."
+      },
+      {
+        "key": "population",
+        "shape": "(months,)",
+        "dtype": "float",
+        "meaning": "Catchment population in each month, in thousands."
+      },
+      {
+        "key": "time_years",
+        "shape": "(months,)",
+        "dtype": "float",
+        "meaning": "Time of each month in years since the start of the record."
+      }
+    ],
+    "sizes": "months = 120; admissions, population and time_years each have shape (120,)."
+  }
+}

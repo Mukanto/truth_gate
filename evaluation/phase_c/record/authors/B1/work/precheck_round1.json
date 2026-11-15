@@ -1,0 +1,544 @@
+{
+ "B1-01": {
+  "plus": {
+   "holds": 198,
+   "fails": 2,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_active": {
+   "holds": 1,
+   "fails": 199,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 0,
+   "none": 200,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 8.012333297907996e-05,
+   "g": 3.219666723452974e-05,
+   "S": 5,
+   "estimate_s": 0.2695680005126633,
+   "calls": 30
+  }
+ },
+ "B1-02": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 3,
+   "fails": 197,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:reassign_second_year_records": {
+   "holds": 6,
+   "fails": 194,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 5,
+   "fails": 195,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 9.653333327150904e-05,
+   "g": 6.871666664665099e-05,
+   "S": 5,
+   "estimate_s": 0.39659999980358407,
+   "calls": 30
+  }
+ },
+ "B1-03": {
+  "plus": {
+   "holds": 196,
+   "fails": 4,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:swap_readings_2_and_3_at_random_within_patient": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 0,
+   "none": 200,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 7.099000043429745e-05,
+   "g": 2.0546666443503152e-05,
+   "S": 5,
+   "estimate_s": 0.21968800050672146,
+   "calls": 30
+  }
+ },
+ "B1-04": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:swap_face_body_labels_per_run": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.00020620333319432878,
+   "g": 0.0011731733331544092,
+   "S": 5,
+   "estimate_s": 3.310503999236971,
+   "calls": 30
+  }
+ },
+ "B1-05": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 2,
+   "fails": 107,
+   "none": 91,
+   "errors": 0,
+   "n": 200
+  },
+  "control:scramble_voxels_within_participant": {
+   "holds": 9,
+   "fails": 171,
+   "none": 20,
+   "errors": 0,
+   "n": 200
+  },
+  "control:random_sign_per_participant": {
+   "holds": 3,
+   "fails": 93,
+   "none": 104,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 5,
+   "fails": 110,
+   "none": 85,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.03264374000003348,
+   "g": 0.0006099366665390942,
+   "S": 6,
+   "estimate_s": 93.11029466640319,
+   "calls": 30
+  }
+ },
+ "B1-06": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 4,
+   "fails": 187,
+   "none": 9,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_contrast_across_trials": {
+   "holds": 4,
+   "fails": 182,
+   "none": 14,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 199,
+   "none": 1,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "probe:shuffle:response,contrast": {
+   "holds": 4,
+   "fails": 186,
+   "none": 10,
+   "errors": 0,
+   "n": 200
+  },
+  "timing": {
+   "t": 0.018113966666714987,
+   "g": 0.0014244833336609494,
+   "S": 6,
+   "estimate_s": 54.70766000105262,
+   "calls": 30
+  }
+ },
+ "B1-07": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 4,
+   "fails": 196,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:shuffle_orientation_labels_within_neuron": {
+   "holds": 8,
+   "fails": 192,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 99,
+   "fails": 101,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.009242686666402733,
+   "g": 0.0004922866666068633,
+   "S": 5,
+   "estimate_s": 23.36393599922303,
+   "calls": 30
+  }
+ },
+ "B1-08": {
+  "plus": {
+   "holds": 179,
+   "fails": 21,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 3,
+   "fails": 133,
+   "none": 64,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_stimulus_condition_across_trials": {
+   "holds": 3,
+   "fails": 131,
+   "none": 66,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 9,
+   "fails": 183,
+   "none": 8,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.0017883700000917693,
+   "g": 0.00010127333334821741,
+   "S": 5,
+   "estimate_s": 4.5351440002559675,
+   "calls": 30
+  }
+ },
+ "B1-09": {
+  "plus": {
+   "holds": 199,
+   "fails": 1,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 11,
+   "fails": 170,
+   "none": 19,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_trait_across_participants": {
+   "holds": 8,
+   "fails": 171,
+   "none": 21,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 1,
+   "fails": 199,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.03723086333363123,
+   "g": 0.0006254966665437678,
+   "S": 5,
+   "estimate_s": 90.85526400042,
+   "calls": 30
+  }
+ },
+ "B1-10": {
+  "plus": {
+   "holds": 187,
+   "fails": 13,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 1,
+   "fails": 199,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_rate_rest": {
+   "holds": 4,
+   "fails": 196,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 8.590999981000399e-05,
+   "g": 7.121666640159674e-05,
+   "S": 5,
+   "estimate_s": 0.37710399890784174,
+   "calls": 30
+  }
+ },
+ "B1-11": {
+  "plus": {
+   "holds": 177,
+   "fails": 23,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 10,
+   "fails": 190,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_patient": {
+   "holds": 9,
+   "fails": 191,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.00016175666666337445,
+   "g": 0.0006541133335607204,
+   "S": 5,
+   "estimate_s": 1.9580880005378276,
+   "calls": 30
+  }
+ },
+ "B1-12": {
+  "plus": {
+   "holds": 200,
+   "fails": 0,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "control:exchange_start_and_6_month_scores": {
+   "holds": 0,
+   "fails": 200,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 0,
+   "fails": 0,
+   "none": 200,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 1.6353333315540415e-05,
+   "g": 3.610666681197472e-05,
+   "S": 5,
+   "estimate_s": 0.12590400030603632,
+   "calls": 30
+  }
+ }
+}

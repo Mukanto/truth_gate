@@ -1,0 +1,29 @@
+{
+  "case_id": "B1-06",
+  "world_id": "C06",
+  "class": "B-1",
+  "subtype": null,
+  "source": "KRI10",
+  "brief": {
+    "id": "C06",
+    "claim": "In the voxels of this participant's visual cortex whose responses follow stimulus contrast, the response rises with contrast: the regression slope of the voxel-averaged response (percent signal change) on stimulus contrast across the 240 trials is at least 0.2 percent signal change per unit of contrast, with a one-sided p value below 0.05.",
+    "data_keys": [
+      {
+        "key": "response",
+        "shape": "(trials, voxels)",
+        "dtype": "float",
+        "meaning": "response of each visual-cortex voxel on each trial, in percent signal change"
+      },
+      {
+        "key": "contrast",
+        "shape": "(trials,)",
+        "dtype": "float",
+        "meaning": "stimulus contrast shown on each trial, in units where full contrast equals 1"
+      }
+    ],
+    "sizes": {
+      "trials": 240,
+      "voxels": 500
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+ "B1-01": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "extreme-group-change",
+  "statistic_family": "mean",
+  "guard_minimum": "2 women per arm after the cut for the Welch t statistic (faulty: 2 active-arm women for the paired t statistic)",
+  "size_ratio": "source states none"
+ },
+ "B1-02": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "split-by-baseline-compare-change",
+  "statistic_family": "mean",
+  "guard_minimum": "2 women per group for the two-sample (Welch) t statistic",
+  "size_ratio": "source states none"
+ },
+ "B1-03": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "extreme-group-change",
+  "statistic_family": "mean",
+  "guard_minimum": "2 patients after the cut for the paired t statistic",
+  "size_ratio": "source states none"
+ },
+ "B1-04": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "mean",
+  "guard_minimum": "at least 1 voxel per participant and at least 2 participants with a non-empty region (paired t across participants needs 2)",
+  "size_ratio": "source states none"
+ },
+ "B1-05": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "mean",
+  "guard_minimum": "at least 1 voxel selected and at least 2 participants in the estimation half (one-sample t needs 2)",
+  "size_ratio": "source states none"
+ },
+ "B1-06": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "at least 1 voxel selected and at least 3 trials in the test half (a slope p value needs 3 points)",
+  "size_ratio": "source states none"
+ },
+ "B1-07": {
+  "overlap": "yes, Phase B case B1-01",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "mean",
+  "guard_minimum": "at least 1 neuron selected (a mean is defined from 1) and at least 2 trials per stimulus in each half",
+  "size_ratio": "source states none"
+ },
+ "B1-08": {
+  "overlap": "no",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "R-squared",
+  "guard_minimum": "at least 1 electrode selected and at least 3 trials in the test half (R-squared of a one-predictor regression needs 3 points), both conditions present",
+  "size_ratio": "source states none"
+ },
+ "B1-09": {
+  "overlap": "yes, Phase B case B1-04",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "correlation",
+  "guard_minimum": "at least 1 voxel selected and at least 3 participants (a correlation needs 3 pairs)",
+  "size_ratio": "source states none"
+ },
+ "B1-10": {
+  "overlap": "no",
+  "mechanism_tag": "split-by-baseline-compare-change",
+  "statistic_family": "mean",
+  "guard_minimum": "2 neurons per third for the Welch t statistic",
+  "size_ratio": "source states none"
+ },
+ "B1-11": {
+  "overlap": "yes, Phase B case B1-07",
+  "mechanism_tag": "select-then-test-same-data",
+  "statistic_family": "mean",
+  "guard_minimum": "2 participants per group in the test half (Welch t needs 2 per group)",
+  "size_ratio": "source states none"
+ },
+ "B1-12": {
+  "overlap": "yes, Phase B case B1-11",
+  "mechanism_tag": "extreme-group-change",
+  "statistic_family": "proportion",
+  "guard_minimum": "1 patient after the cut (a proportion is defined from 1)",
+  "size_ratio": "source states none"
+ },
+ "B2-01": {
+  "overlap": "no",
+  "mechanism_tag": "L1.1",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 positive and 1 negative row among the scored rows (smallest size at which AUC is defined); in each training fold at least 2 rows per class.",
+  "size_ratio": "country-years 896/896 = 1.0; indicators 30/90 = 0.33"
+ },
+ "B2-02": {
+  "overlap": "yes, Phase B case B2-07",
+  "mechanism_tag": "L1.4",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 positive row in the held-out set to define sensitivity (and at least 2 positive rows in the data before oversampling); in each training fold at least 2 rows per class.",
+  "size_ratio": "source states none"
+ },
+ "B2-03": {
+  "overlap": "yes, Phase B case B2-07",
+  "mechanism_tag": "L1.4",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 row of each class in the held-out set (balanced accuracy needs both sensitivity and specificity); in each training fold at least 2 rows per class.",
+  "size_ratio": "source states none"
+ },
+ "B2-04": {
+  "overlap": "yes, Phase B case B2-09",
+  "mechanism_tag": "L3.1",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 row in the scored later block (accuracy defined for 1 row); at least 2 rows per class in the fitting block.",
+  "size_ratio": "source states none"
+ },
+ "B2-05": {
+  "overlap": "yes, Phase B case B2-10",
+  "mechanism_tag": "L3.1",
+  "statistic_family": "R-squared",
+  "guard_minimum": "at least 2 weeks in the scored block with non-zero variance of demand (smallest size at which R-squared is defined); fitting block larger than the number of drivers plus 1.",
+  "size_ratio": "source states none"
+ },
+ "B2-06": {
+  "overlap": "yes, Phase B case B2-11",
+  "mechanism_tag": "L3.2",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 malignant and 1 non-malignant patient among the held-out patients (smallest size at which AUC is defined); in each fitting set at least 2 patients per class.",
+  "size_ratio": "source states none"
+ },
+ "B2-07": {
+  "overlap": "no",
+  "mechanism_tag": "L3.2",
+  "statistic_family": "correlation",
+  "guard_minimum": "at least 3 held-out rows (smallest size for a correlation) with non-zero variance of predictions and of scores.",
+  "size_ratio": "source states none"
+ },
+ "B2-08": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "L1.3",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 2 samples per class in every fitting set (inner and outer) and at least 1 sample in each scored set.",
+  "size_ratio": "samples 40/40 = 1.0; genes 1000/6000 = 0.17 (reduced to the cap)"
+ },
+ "B2-09": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "L1.3",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 sample of each class among the scored samples (AUC defined) and at least 2 per class in every fitting set.",
+  "size_ratio": "samples 40/40 = 1.0; genes 1000/6000 = 0.17 (reduced to the cap)"
+ },
+ "B2-10": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "L1.3",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 2 samples per class in every fitting set and at least 1 sample in each scored set.",
+  "size_ratio": "samples 40/40 = 1.0; genes 1000/6000 = 0.17 (reduced to the cap)"
+ },
+ "B2-11": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "L1.3",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 1 subject of each class among the scored subjects (balanced accuracy defined) and at least 2 per class in every fitting set.",
+  "size_ratio": "samples 40/40 = 1.0; genes 1000/6000 = 0.17 (reduced to the cap)"
+ },
+ "B2-12": {
+  "overlap": "yes, Phase B case B2-03",
+  "mechanism_tag": "L1.3",
+  "statistic_family": "classification",
+  "guard_minimum": "at least 2 tissues per class in every fitting set and at least 1 tissue in each scored set (two classes needed for the t statistic: at least 2 per class).",
+  "size_ratio": "source states none (as read; the author's 62 x 2000 from memory is unverified)"
+ },
+ "B3-01": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "4 animals with at least 1 animal in each group (smallest size at which the treatment coefficient and its t statistic exist: 3 parameters, 1 residual degree of freedom); zero variance of body_mass -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-02": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "correlation",
+  "guard_minimum": "4 participants (partial correlation with one covariate has 1 residual degree of freedom at n = 4; n = 3 gives a perfect fit); zero variance of any variable or of a residual -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-03": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "R-squared",
+  "guard_minimum": "4 patients (2 predictors plus intercept: 1 residual degree of freedom; the R-squared gain is defined from n = 4); zero variance of any variable -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-04": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "ratio-shared-denominator",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "4 mice (3 parameters, 1 residual degree of freedom); zero variance of kidney_weight or collinearity making the coefficient undefined -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-05": {
+  "overlap": "yes, Phase B case B3-05",
+  "mechanism_tag": "ratio-shared-denominator",
+  "statistic_family": "correlation",
+  "guard_minimum": "4 skeletons (partial correlation with 1 covariate); zero variance of any variable or residual -> None; non-finite -> None.",
+  "size_ratio": "skeletons 1000/'some thousand' = about 1.0"
+ },
+ "B3-06": {
+  "overlap": "yes, Phase B case B3-05",
+  "mechanism_tag": "ratio-shared-denominator",
+  "statistic_family": "correlation",
+  "guard_minimum": "4 trials (partial correlation with 1 covariate); fewer than 2 observers -> None; zero variance of any residual -> None; non-finite -> None.",
+  "size_ratio": "observers 3/3 = 1.0; trials: source states none"
+ },
+ "B3-08": {
+  "overlap": "no",
+  "mechanism_tag": "change-vs-baseline",
+  "statistic_family": "correlation",
+  "guard_minimum": "3 patients (smallest size at which a Pearson correlation is defined); zero variance of the fall or of the second reading -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-09": {
+  "overlap": "yes, Phase B case B3-01",
+  "mechanism_tag": "shared-measured-component",
+  "statistic_family": "correlation",
+  "guard_minimum": "3 patients (Pearson correlation); zero variance of delivery or of the uptake -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-11": {
+  "overlap": "no",
+  "mechanism_tag": "ratio-shared-denominator",
+  "statistic_family": "R-squared",
+  "guard_minimum": "4 samples (2 predictors plus intercept, 1 residual degree of freedom); zero variance -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B3-12": {
+  "overlap": "yes, Phase B case B3-09",
+  "mechanism_tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "4 months (3 parameters, 1 residual degree of freedom); zero variance of time_years or collinearity -> None; non-finite -> None.",
+  "size_ratio": "source states none"
+ },
+ "B6-01": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "mean",
+  "guard_minimum": "2 dams per group (smallest size at which the two-sample t statistic on dam means is defined); also non-finite and zero-variance guards. Same guards in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-02": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "proportion",
+  "guard_minimum": "2 wells per group (smallest size for a Welch t statistic on well proportions); at least 1 cell per well; non-finite not applicable for bool, zero-variance guard returns None. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-03": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "3 animals (smallest size at which a slope t statistic with 1 df is defined); positive variance of dose; non-finite guard. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-04": {
+  "overlap": "no (addendum source)",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "mean",
+  "guard_minimum": "2 cages per group (smallest size at which a Welch t statistic on cage means is defined); non-finite and zero-variance guards. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-05": {
+  "overlap": "yes, Phase B case B6-01",
+  "mechanism_tag": "significant-here-not-there",
+  "statistic_family": "mean",
+  "guard_minimum": "2 subjects per group (smallest size for two-sample t on change scores); each within-group paired test is also defined at 2. Same guards in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-06": {
+  "overlap": "no",
+  "mechanism_tag": "significant-here-not-there",
+  "statistic_family": "regression-slope",
+  "guard_minimum": "2 subjects per group and 2 sessions (a per-subject slope is defined from 2 points; the two-sample t statistic from 2 per group); zero variance of session numbers is excluded by design. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-07": {
+  "overlap": "yes, Phase B case B6-01",
+  "mechanism_tag": "significant-here-not-there",
+  "statistic_family": "mean",
+  "guard_minimum": "2 subjects (smallest size for a paired t statistic); zero-variance and non-finite guards. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-08": {
+  "overlap": "yes, Phase B case B6-04",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "mean",
+  "guard_minimum": "2 tanks per group (smallest size for the Welch t statistic on tank means); non-finite and zero-variance guards. Same in both twins.",
+  "size_ratio": "tanks per treatment 4/2 = 2.0 (Hurlbert: twofold replication in such examples); samples per tank: source states none"
+ },
+ "B6-09": {
+  "overlap": "no",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "other",
+  "guard_minimum": "2 plots per group (smallest size at which the rank-sum statistic is defined for the plot means); non-finite and all-values-equal guards. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-10": {
+  "overlap": "yes, Phase B case B6-07",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "mean",
+  "guard_minimum": "2 rats per group (smallest size for a two-sample t statistic); non-finite and zero-variance guards. Same in both twins.",
+  "size_ratio": "rats 10/10 = 1.0; days 3/3 = 1.0"
+ },
+ "B6-11": {
+  "overlap": "yes, Phase B case B6-08",
+  "mechanism_tag": "units-not-independent",
+  "statistic_family": "correlation",
+  "guard_minimum": "3 subjects (smallest number of pairs for which a Pearson correlation and its t statistic are defined); zero-variance and non-finite guards. Same in both twins.",
+  "size_ratio": "source states none"
+ },
+ "B6-12": {
+  "overlap": "no",
+  "mechanism_tag": "significant-here-not-there",
+  "statistic_family": "correlation",
+  "guard_minimum": "4 participants per group (smallest size at which the Fisher z standard error, with n - 3 > 0, is defined; each Pearson correlation needs 3); zero-variance and non-finite guards. Same in both twins.",
+  "size_ratio": "participants 40/40 = 1.0"
+ },
+ "O1-A": {
+  "overlap": "no",
+  "mechanism_tag": "O-1",
+  "statistic_family": "R-squared",
+  "guard_minimum": "15 patients (5 folds, at least 3 rows per test fold and at least 11 training rows for 10 components plus intercept); also non-finite values and zero variance of outcome return None",
+  "size_ratio": "source states none"
+ },
+ "O1-B": {
+  "overlap": "yes, Phase B case O1a",
+  "mechanism_tag": "O-1",
+  "statistic_family": "classification",
+  "guard_minimum": "10 children with at least 2 of each diagnosis value (so that each class is present in training and test folds of a 5-fold evaluation); non-finite values return None",
+  "size_ratio": "source states none"
+ },
+ "O2-A": {
+  "overlap": "yes, Phase B case O2a",
+  "mechanism_tag": "O-2",
+  "statistic_family": "mean",
+  "guard_minimum": "2 participants per condition (smallest size at which a two-sample t statistic is defined); non-finite values and zero pooled variance return None",
+  "size_ratio": "participants per cell 20/20 = 1.0"
+ },
+ "O2-B": {
+  "overlap": "yes, Phase B case O2a",
+  "mechanism_tag": "O-2",
+  "statistic_family": "mean",
+  "guard_minimum": "2 participants per condition; non-finite values and zero pooled variance return None",
+  "size_ratio": "maximum participants per condition 50/50 = 1.0"
+ },
+ "O3-A": {
+  "overlap": "no",
+  "mechanism_tag": "O-3",
+  "statistic_family": "mean",
+  "guard_minimum": "2 sensitive and 2 resistant cell lines, and at least 1 probe set on the signature; non-finite values and zero variance return None",
+  "size_ratio": "cell lines 60/60 = 1.0; probe sets 1000/12 558-22 283 = 0.045-0.080 (reduced to the cap)"
+ },
+ "O3-B": {
+  "overlap": "yes, Phase B case O3b",
+  "mechanism_tag": "O-3",
+  "statistic_family": "mean",
+  "guard_minimum": "1 country-year in each debt group (difference of two means is defined from one value each); non-finite values return None",
+  "size_ratio": "countries 20/20 = 1.0; years 64/64 = 1.0"
+ }
+}

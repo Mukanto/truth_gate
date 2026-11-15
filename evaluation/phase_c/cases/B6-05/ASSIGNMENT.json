@@ -1,0 +1,32 @@
+{
+  "case_id": "B6-05",
+  "world_id": "C45",
+  "class": "B-6",
+  "subtype": null,
+  "source": "NIE11",
+  "brief": {
+    "id": "C45",
+    "claim": "The training programme improves task accuracy more than the control activity: the mean change in accuracy (post minus pre) is larger in the trained group than in the control group, and a two-sample t test of the difference between the two groups' mean changes gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "pre",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "task accuracy (proportion correct) of each subject before the programme"
+      },
+      {
+        "key": "post",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "task accuracy (proportion correct) of each subject after the programme"
+      },
+      {
+        "key": "trained",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "whether the subject took part in the training programme (true) or in the control activity (false)"
+      }
+    ],
+    "sizes": "subjects = 40 (pre, post and trained: 40 values each)"
+  }
+}

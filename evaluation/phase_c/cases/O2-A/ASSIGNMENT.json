@@ -1,0 +1,40 @@
+{
+  "case_id": "O2-A",
+  "world_id": "C18",
+  "class": "O",
+  "subtype": "O-2",
+  "source": "SIM11",
+  "brief": {
+    "id": "C18",
+    "claim": "Participants in the treatment condition report higher liking of the product than participants in the control condition: the difference in mean liking is positive and a two-sided two-sample t test (equal variances assumed) gives p < .05.",
+    "data_keys": [
+      {
+        "key": "liking_control",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "liking of the product reported by each participant in the control condition"
+      },
+      {
+        "key": "liking_treatment",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "liking of the product reported by each participant in the treatment condition"
+      },
+      {
+        "key": "willingness_to_pay_control",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "willingness to pay for the product reported by each participant in the control condition"
+      },
+      {
+        "key": "willingness_to_pay_treatment",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "willingness to pay for the product reported by each participant in the treatment condition"
+      }
+    ],
+    "sizes": {
+      "participants": 20
+    }
+  }
+}

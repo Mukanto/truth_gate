@@ -1,0 +1,29 @@
+{
+  "case_id": "B1-08",
+  "world_id": "C54",
+  "class": "B-1",
+  "subtype": null,
+  "source": "KRI09",
+  "brief": {
+    "id": "C54",
+    "claim": "Over the scalp electrodes that respond to the stimulus, the stimulus condition explains at least 10% of the variance of the electrode-averaged post-stimulus amplitude across trials (R-squared of at least 0.10 in a regression of that amplitude on the stimulus condition).",
+    "data_keys": [
+      {
+        "key": "amplitude",
+        "shape": "(trials, electrodes)",
+        "dtype": "float",
+        "meaning": "mean post-stimulus EEG amplitude (microvolts) at each electrode on each trial"
+      },
+      {
+        "key": "stimulus",
+        "shape": "(trials,)",
+        "dtype": "bool",
+        "meaning": "True on trials with the stimulus present, False on control trials"
+      }
+    ],
+    "sizes": {
+      "trials": 100,
+      "electrodes": 64
+    }
+  }
+}

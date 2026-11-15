@@ -1,0 +1,460 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "B1-01": {
+    "world_id": "C33",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-01",
+    "class": "B-1",
+    "subtype": null,
+    "source": "MOR03",
+    "brief": {
+      "id": "C33",
+      "claim": "Among women whose menopausal symptom index at the start of the trial was at least 20 points, active hormone therapy lowers the index more than placebo does: the mean fall in the index (start minus week 12) is at least 3 points greater on active therapy than on placebo, and a one-sided Welch t test of that difference between the two arms is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "index_start",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "menopausal symptom index of each woman at the start of the trial (higher is worse)"
+        },
+        {
+          "key": "index_week12",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "symptom index of each woman at week 12"
+        },
+        {
+          "key": "active",
+          "shape": "(women,)",
+          "dtype": "bool",
+          "meaning": "True if the woman was randomised to active hormone therapy, False if to placebo"
+        }
+      ],
+      "sizes": {
+        "women": 300
+      }
+    },
+    "diff_lines": 22
+  },
+  "B1-02": {
+    "world_id": "C43",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 91: if rose.sum() < 2 or fell.sum() < 2:",
+        "line 91: if rose.sum() < 2 or fell.sum() < 2:"
+      ],
+      "fixed": [
+        "line 91: if rose.sum() < 2 or fell.sum() < 2:",
+        "line 91: if rose.sum() < 2 or fell.sum() < 2:"
+      ]
+    },
+    "case_id": "B1-02",
+    "class": "B-1",
+    "subtype": null,
+    "source": "MOR03",
+    "brief": {
+      "id": "C43",
+      "claim": "In women treated for osteoporosis, first-year responders keep gaining more bone than first-year non-responders: women whose bone mineral density rose over the first year (from the start of treatment to the first 12-month scan) gain at least 0.5 percentage points more over the second year (percentage change from the second 12-month scan to the 24-month scan) than women whose density fell over the first year, and a one-sided Welch t test of that difference between the two groups of women is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "bmd_start",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "bone mineral density of each woman at the start of treatment (g/cm2)"
+        },
+        {
+          "key": "bmd_m12_scan1",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "bone mineral density at the 12-month visit, first of two scans taken at that visit (g/cm2)"
+        },
+        {
+          "key": "bmd_m12_scan2",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "bone mineral density at the 12-month visit, second of two scans taken at that visit (g/cm2)"
+        },
+        {
+          "key": "bmd_m24",
+          "shape": "(women,)",
+          "dtype": "float",
+          "meaning": "bone mineral density at the 24-month visit (g/cm2)"
+        }
+      ],
+      "sizes": {
+        "women": 600
+      }
+    },
+    "diff_lines": 2
+  },
+  "B1-03": {
+    "world_id": "C50",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-03",
+    "class": "B-1",
+    "subtype": null,
+    "source": "MOR03",
+    "brief": {
+      "id": "C50",
+      "claim": "Among patients whose first systolic blood-pressure reading was at least 160 mmHg, antihypertensive treatment lowers systolic pressure: the mean fall from the second reading (taken before treatment began) to the third reading (taken after 8 weeks of treatment) is at least 8 mmHg, and a one-sided paired t test of the fall is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "sbp",
+          "shape": "(patients, readings)",
+          "dtype": "float",
+          "meaning": "systolic blood pressure in mmHg; readings in time order: reading 1 at the screening visit, reading 2 at the pre-treatment visit, reading 3 after 8 weeks of treatment"
+        }
+      ],
+      "sizes": {
+        "patients": 250,
+        "readings": 3
+      }
+    },
+    "diff_lines": 2
+  },
+  "B1-04": {
+    "world_id": "C05",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 92: if keep.sum() < 2:"
+      ],
+      "fixed": [
+        "line 92: if keep.sum() < 2:"
+      ]
+    },
+    "case_id": "B1-04",
+    "class": "B-1",
+    "subtype": null,
+    "source": "KRI10",
+    "brief": {
+      "id": "C05",
+      "claim": "In each participant's own region of visual cortex that responds more to faces than to houses, the response to faces exceeds the response to bodies: across the 12 participants the mean difference (faces minus bodies) of the response in that region is at least 0.3 percent signal change, and a one-sided paired t test across participants is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "resp_faces",
+          "shape": "(subjects, runs, voxels)",
+          "dtype": "float",
+          "meaning": "response to face images (percent signal change) of each visual-cortex voxel in each scanning run of each participant"
+        },
+        {
+          "key": "resp_bodies",
+          "shape": "(subjects, runs, voxels)",
+          "dtype": "float",
+          "meaning": "response to body images (percent signal change), same layout"
+        },
+        {
+          "key": "resp_houses",
+          "shape": "(subjects, runs, voxels)",
+          "dtype": "float",
+          "meaning": "response to house images (percent signal change), same layout"
+        }
+      ],
+      "sizes": {
+        "subjects": 12,
+        "runs": 8,
+        "voxels": 300
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-05": {
+    "world_id": "C36",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-05",
+    "class": "B-1",
+    "subtype": null,
+    "source": "KRI10",
+    "brief": {
+      "id": "C36",
+      "claim": "In the cortical voxels where participants respond to the task, the response is at least 0.25 percent signal change: the mean task effect, averaged over those voxels and across participants, is at least 0.25, and a one-sided one-sample t test across participants of the voxel-averaged effect is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "effect",
+          "shape": "(subjects, voxels)",
+          "dtype": "float",
+          "meaning": "task effect (task minus rest, percent signal change) of each cortical voxel in each participant"
+        }
+      ],
+      "sizes": {
+        "subjects": 40,
+        "voxels": 1000
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-06": {
+    "world_id": "C06",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-06",
+    "class": "B-1",
+    "subtype": null,
+    "source": "KRI10",
+    "brief": {
+      "id": "C06",
+      "claim": "In the voxels of this participant's visual cortex whose responses follow stimulus contrast, the response rises with contrast: the regression slope of the voxel-averaged response (percent signal change) on stimulus contrast across the 240 trials is at least 0.2 percent signal change per unit of contrast, with a one-sided p value below 0.05.",
+      "data_keys": [
+        {
+          "key": "response",
+          "shape": "(trials, voxels)",
+          "dtype": "float",
+          "meaning": "response of each visual-cortex voxel on each trial, in percent signal change"
+        },
+        {
+          "key": "contrast",
+          "shape": "(trials,)",
+          "dtype": "float",
+          "meaning": "stimulus contrast shown on each trial, in units where full contrast equals 1"
+        }
+      ],
+      "sizes": {
+        "trials": 240,
+        "voxels": 500
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-07": {
+    "world_id": "C28",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 86: return bool(index.mean() >= 0.1)"
+      ],
+      "fixed": [
+        "line 86: return bool(index.mean() >= 0.1)"
+      ]
+    },
+    "case_id": "B1-07",
+    "class": "B-1",
+    "subtype": null,
+    "source": "KRI09",
+    "brief": {
+      "id": "C28",
+      "claim": "Among the recorded visual neurons that fire more to vertical than to horizontal bars, the mean orientation index, (vertical minus horizontal) / (vertical plus horizontal) computed from trial-averaged firing rates, is at least 0.1.",
+      "data_keys": [
+        {
+          "key": "rate_vertical",
+          "shape": "(neurons, trials)",
+          "dtype": "float",
+          "meaning": "firing rate (spikes/s) of each neuron on each presentation of a vertical bar"
+        },
+        {
+          "key": "rate_horizontal",
+          "shape": "(neurons, trials)",
+          "dtype": "float",
+          "meaning": "firing rate (spikes/s) of each neuron on each presentation of a horizontal bar"
+        }
+      ],
+      "sizes": {
+        "neurons": 250,
+        "trials": 15
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-08": {
+    "world_id": "C54",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-08",
+    "class": "B-1",
+    "subtype": null,
+    "source": "KRI09",
+    "brief": {
+      "id": "C54",
+      "claim": "Over the scalp electrodes that respond to the stimulus, the stimulus condition explains at least 10% of the variance of the electrode-averaged post-stimulus amplitude across trials (R-squared of at least 0.10 in a regression of that amplitude on the stimulus condition).",
+      "data_keys": [
+        {
+          "key": "amplitude",
+          "shape": "(trials, electrodes)",
+          "dtype": "float",
+          "meaning": "mean post-stimulus EEG amplitude (microvolts) at each electrode on each trial"
+        },
+        {
+          "key": "stimulus",
+          "shape": "(trials,)",
+          "dtype": "bool",
+          "meaning": "True on trials with the stimulus present, False on control trials"
+        }
+      ],
+      "sizes": {
+        "trials": 100,
+        "electrodes": 64
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-09": {
+    "world_id": "C19",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 98: return bool(r_est[chosen].mean() >= 0.5)"
+      ],
+      "fixed": [
+        "line 99: return bool(r_est[chosen].mean() >= 0.5)"
+      ]
+    },
+    "case_id": "B1-09",
+    "class": "B-1",
+    "subtype": null,
+    "source": "VUL09",
+    "brief": {
+      "id": "C19",
+      "claim": "Across 16 participants, activation in the brain region whose response relates to the personality trait is correlated with the trait: the mean, over the voxels of that region, of the voxel-wise correlations (across participants) between activation and trait score is at least 0.5.",
+      "data_keys": [
+        {
+          "key": "act_session1",
+          "shape": "(subjects, voxels)",
+          "dtype": "float",
+          "meaning": "activation of each voxel in each participant, measured in the first scanning session"
+        },
+        {
+          "key": "act_session2",
+          "shape": "(subjects, voxels)",
+          "dtype": "float",
+          "meaning": "activation of each voxel in each participant, measured in a second scanning session"
+        },
+        {
+          "key": "trait",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "questionnaire score on the personality trait for each participant"
+        }
+      ],
+      "sizes": {
+        "subjects": 16,
+        "voxels": 1000
+      }
+    },
+    "diff_lines": 25
+  },
+  "B1-10": {
+    "world_id": "C41",
+    "issues": [],
+    "listed": {},
+    "case_id": "B1-10",
+    "class": "B-1",
+    "subtype": null,
+    "source": "MAK19",
+    "brief": {
+      "id": "C41",
+      "claim": "Neurons that are least active at rest increase their firing more with the manipulation than neurons that are most active at rest: ranking the 240 neurons by firing rate in the resting recording, the mean change in rate (post-manipulation minus pre-manipulation) of the lowest third exceeds that of the highest third by at least 1.0 spikes/s, and a one-sided Welch t test of that difference is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "rate_rest",
+          "shape": "(neurons,)",
+          "dtype": "float",
+          "meaning": "firing rate (spikes/s) of each neuron in a resting recording"
+        },
+        {
+          "key": "rate_pre",
+          "shape": "(neurons,)",
+          "dtype": "float",
+          "meaning": "firing rate (spikes/s) of each neuron before the manipulation"
+        },
+        {
+          "key": "rate_post",
+          "shape": "(neurons,)",
+          "dtype": "float",
+          "meaning": "firing rate (spikes/s) of each neuron after the manipulation"
+        }
+      ],
+      "sizes": {
+        "neurons": 240
+      }
+    },
+    "diff_lines": 2
+  },
+  "B1-11": {
+    "world_id": "C31",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 90: if pat[sel].sum() < 1 or (~pat[sel]).sum() < 1:",
+        "line 90: if pat[sel].sum() < 1 or (~pat[sel]).sum() < 1:"
+      ],
+      "fixed": [
+        "line 90: if pat[sel].sum() < 1 or (~pat[sel]).sum() < 1:",
+        "line 90: if pat[sel].sum() < 1 or (~pat[sel]).sum() < 1:"
+      ]
+    },
+    "case_id": "B1-11",
+    "class": "B-1",
+    "subtype": null,
+    "source": "MAK19",
+    "brief": {
+      "id": "C31",
+      "claim": "Patients show a larger evoked response than controls in the time window in which the two groups' responses differ: the mean amplitude over a window of 10 consecutive samples is at least 0.5 microvolts greater for patients than for controls, and a one-sided Welch t test of that difference is significant at the 0.05 level.",
+      "data_keys": [
+        {
+          "key": "erp",
+          "shape": "(participants, time)",
+          "dtype": "float",
+          "meaning": "evoked-response amplitude (microvolts) of each participant at each time sample after stimulus onset, time samples in order"
+        },
+        {
+          "key": "patient",
+          "shape": "(participants,)",
+          "dtype": "bool",
+          "meaning": "True for a patient, False for a control participant"
+        }
+      ],
+      "sizes": {
+        "participants": 60,
+        "time": 200
+      }
+    },
+    "diff_lines": 4
+  },
+  "B1-12": {
+    "world_id": "C11",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 45: if keep.sum() < 1:"
+      ],
+      "fixed": [
+        "line 45: if keep.sum() < 1:"
+      ]
+    },
+    "case_id": "B1-12",
+    "class": "B-1",
+    "subtype": null,
+    "source": "BAR05",
+    "brief": {
+      "id": "C11",
+      "claim": "Among patients whose symptom score at the screening visit was at least 60, at least 40% improve by 10 points or more between the start of the programme and the 6-month follow-up (score at the start minus score at 6 months of at least 10); the claim is that the proportion of such patients is at least 0.40.",
+      "data_keys": [
+        {
+          "key": "score_screen",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "symptom score of each patient at the screening visit (higher is worse)"
+        },
+        {
+          "key": "score_start",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "symptom score of each patient at the start of the programme"
+        },
+        {
+          "key": "score_6m",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "symptom score of each patient at the 6-month follow-up"
+        }
+      ],
+      "sizes": {
+        "patients": 500
+      }
+    },
+    "diff_lines": 2
+  }
+}

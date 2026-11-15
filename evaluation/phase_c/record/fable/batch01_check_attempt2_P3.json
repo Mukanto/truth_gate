@@ -1,0 +1,396 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "C01": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_group_labels"
+    ],
+    "control_max_ms": {
+      "permute_group_labels": 0.079
+    },
+    "shapes": {
+      "expression": [
+        40,
+        1000
+      ],
+      "group_b": [
+        40
+      ]
+    },
+    "max_ms": 0.973
+  },
+  "C02": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_abdomen_within_species"
+    ],
+    "control_max_ms": {
+      "permute_abdomen_within_species": 0.037
+    },
+    "shapes": {
+      "abdomen_length": [
+        15,
+        40
+      ],
+      "claw_length": [
+        15,
+        40
+      ],
+      "body_length": [
+        15,
+        40
+      ]
+    },
+    "max_ms": 0.09
+  },
+  "C03": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_cortisol_subjects"
+    ],
+    "control_max_ms": {
+      "permute_cortisol_subjects": 0.027
+    },
+    "shapes": {
+      "heart_rate": [
+        16,
+        10
+      ],
+      "cortisol": [
+        16,
+        10
+      ]
+    },
+    "max_ms": 0.048
+  },
+  "C04": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_uptake_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_uptake_across_patients": 0.021
+    },
+    "shapes": {
+      "cardiac_output": [
+        60
+      ],
+      "arterial_o2_content": [
+        60
+      ],
+      "venous_o2_content": [
+        60
+      ],
+      "o2_uptake_expired": [
+        60
+      ]
+    },
+    "max_ms": 0.115
+  },
+  "C05": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "swap_face_body_labels_per_run"
+    ],
+    "control_max_ms": {
+      "swap_face_body_labels_per_run": 0.186
+    },
+    "shapes": {
+      "resp_faces": [
+        12,
+        8,
+        300
+      ],
+      "resp_bodies": [
+        12,
+        8,
+        300
+      ],
+      "resp_houses": [
+        12,
+        8,
+        300
+      ]
+    },
+    "max_ms": 1.616
+  },
+  "C06": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_contrast_across_trials"
+    ],
+    "control_max_ms": {
+      "permute_contrast_across_trials": 0.08
+    },
+    "shapes": {
+      "response": [
+        240,
+        500
+      ],
+      "contrast": [
+        240
+      ]
+    },
+    "max_ms": 2.24
+  },
+  "C07": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_tumour_labels"
+    ],
+    "control_max_ms": {
+      "permute_tumour_labels": 0.03
+    },
+    "shapes": {
+      "expression": [
+        62,
+        1000
+      ],
+      "tumour": [
+        62
+      ]
+    },
+    "max_ms": 1.622
+  },
+  "C08": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "swap_region_labels_in_half_the_subjects"
+    ],
+    "control_max_ms": {
+      "swap_region_labels_in_half_the_subjects": 0.027
+    },
+    "shapes": {
+      "task_a": [
+        24
+      ],
+      "rest_a": [
+        24
+      ],
+      "task_b": [
+        24
+      ],
+      "rest_b": [
+        24
+      ]
+    },
+    "max_ms": 0.031
+  },
+  "C09": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "decouple_observers_within_true_value_blocks"
+    ],
+    "control_max_ms": {
+      "decouple_observers_within_true_value_blocks": 0.111
+    },
+    "shapes": {
+      "true_value": [
+        200
+      ],
+      "estimates": [
+        200,
+        3
+      ]
+    },
+    "max_ms": 0.061
+  },
+  "C10": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_treatment_across_cages"
+    ],
+    "control_max_ms": {
+      "permute_treatment_across_cages": 0.016
+    },
+    "shapes": {
+      "weight_gain": [
+        40,
+        2
+      ],
+      "treated": [
+        40
+      ]
+    },
+    "max_ms": 0.032
+  },
+  "C11": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "exchange_start_and_6_month_scores"
+    ],
+    "control_max_ms": {
+      "exchange_start_and_6_month_scores": 0.012
+    },
+    "shapes": {
+      "score_screen": [
+        500
+      ],
+      "score_start": [
+        500
+      ],
+      "score_6m": [
+        500
+      ]
+    },
+    "max_ms": 0.055
+  },
+  "C12": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_tibia_within_humerus_blocks"
+    ],
+    "control_max_ms": {
+      "permute_tibia_within_humerus_blocks": 0.085
+    },
+    "shapes": {
+      "femur_length": [
+        1000
+      ],
+      "tibia_length": [
+        1000
+      ],
+      "humerus_length": [
+        1000
+      ]
+    },
+    "max_ms": 0.074
+  },
+  "C13": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_kidney_within_body_mass_blocks"
+    ],
+    "control_max_ms": {
+      "permute_kidney_within_body_mass_blocks": 0.047
+    },
+    "shapes": {
+      "liver_weight": [
+        150
+      ],
+      "kidney_weight": [
+        150
+      ],
+      "body_mass": [
+        150
+      ]
+    },
+    "max_ms": 0.023
+  },
+  "C14": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "reassign_debt_histories_between_countries"
+    ],
+    "control_max_ms": {
+      "reassign_debt_histories_between_countries": 0.033
+    },
+    "shapes": {
+      "growth": [
+        20,
+        64
+      ],
+      "debt_ratio": [
+        20,
+        64
+      ]
+    },
+    "max_ms": 0.333
+  },
+  "C15": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_group_labels"
+    ],
+    "control_max_ms": {
+      "permute_group_labels": 0.016
+    },
+    "shapes": {
+      "task_score": [
+        40
+      ],
+      "symptom_score": [
+        40
+      ],
+      "group_a": [
+        40
+      ]
+    },
+    "max_ms": 0.032
+  }
+}

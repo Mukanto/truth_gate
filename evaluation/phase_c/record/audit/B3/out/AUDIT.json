@@ -1,0 +1,206 @@
+[
+  {
+    "case": "B3-01",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty divides heart_weight by body_mass and compares the quotient between groups (one-sided two-sample t via OLS on the treatment dummy, p < 0.05, treated larger): the ratio adjustment that CUR13's abstract says misrepresents the relation unless the line passes through the origin. The note named Welch; the pooled t is a typical form, and with 24 + 24 animals both give the same t value (only df differ).",
+      "b": "Fixed is analysis of covariance (OLS of heart_weight on treated and body_mass, one-sided t of the treatment coefficient), the correction named in CUR13's abstract.",
+      "c": "Diff is limited to the quotient (with its non-finite check) versus adding body_mass as a covariate; the OLS-t and t-tail routines and the decision line are identical.",
+      "d": "Guards: non-finite inputs or quotient; residual df < 1 (faulty n < 3, fixed n < 4, the note's one-residual-df minimum); treatment column constant or collinear; zero variance of y or zero residual variance (numerical tolerances 1e-10, 1e-12); each returns None. MECH_CHECK lists no comparison. Nothing tests for noise, zeros or a shuffle.",
+      "e": "No banned PB section 4 term in claim, keys or sizes (own scan; designer's script also passed); 'False' occurs only in the meaning of the bool key. No statement of what 'claim false' means.",
+      "f": "CUR13 was read as abstract only and states no sizes (P-2 reading 1). Compared 48 animals (24 per group) with a typical small-animal organ-weight experiment, as the note argues; within 1000 per axis and 500 000 values. Listed as 'not documented by the source'.",
+      "g": "Same OLS-t routine, same one-sided 5% rule with the sign condition, same statistic (coefficient of treatment); 2 versus 3 design columns, comparable cost.",
+      "h": "The brief states the size, the axis 'animals', what each key measured and the claim; body mass is named in the claim because the estimand conditions on it; no key is named by its role in the error.",
+      "i": "The claim is the body-mass-adjusted treatment coefficient, which is what the fixed criterion estimates (estimand line of the note and CASE.md)."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-02",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty correlates age with albumin_excretion / creatinine_excretion (Pearson r >= 0.15): the denominator-control-by-ratio that CUR13's abstract warns against.",
+      "b": "Fixed is the partial correlation of albumin and age given creatinine (residuals on intercept and creatinine), i.e. regression adjustment for the denominator, the abstract's correction.",
+      "c": "Diff is the quotient versus the covariate; one shared partial_r routine (empty covariate list in the faulty).",
+      "d": "Guards: n < 3 / n < 4 (smallest defined sizes stated in the note), zero variance of a variable or a residual (tolerance 1e-12), non-finite; MECH_CHECK lists nothing.",
+      "e": "No banned term (own scan); no negation of the claim.",
+      "f": "CUR13 states no sizes; compared 800 participants with a typical urinary-excretion cohort as the note argues; within caps. 'Not documented by the source'.",
+      "g": "Same statistic family (correlation), threshold 0.15 and rule; one versus two least-squares fits.",
+      "h": "Only sizes, axis 'participants', what each key measured and the claim; creatinine excretion named in the claim as the estimand requires.",
+      "i": "Claim is the partial correlation given creatinine, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-03",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty uses the standardised variable lv_mass / body_surface_area as the only predictor and its R-squared (>= 0.05) as evidence beyond body size: CUR13's 'standardized variable' ratio adjustment.",
+      "b": "Fixed is the R-squared gain of lv_mass over a model with body_surface_area (regression with the denominator as covariate).",
+      "c": "Diff is the quotient model versus the two-model gain, plus zero-variance guards on the variables that enter each version's statistic.",
+      "d": "MECH_CHECK line 63 (flat(): sum of squares > 0) is the zero-variance guard, identical in both twins; n < 3 / n < 4 (one residual df, the reading PREREG uses for 'three pairs for a correlation'); non-finite. No probe-aware branch.",
+      "e": "No banned term; no negation.",
+      "f": "CUR13 states no sizes; compared 300 patients with a clinic series as argued; within caps. 'Not documented by the source'.",
+      "g": "R-squared family, same threshold 0.05 and rule; one versus two least-squares fits.",
+      "h": "Brief within the text; body surface area named in the claim as the estimand requires.",
+      "i": "Claim is the R-squared gain of LV mass beyond body surface area, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-04",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty regresses liver/body_mass on kidney/body_mass (slope >= 0.25): both organ weights divided by body mass to control for it, CUR13's ratio adjustment (here with a shared denominator).",
+      "b": "Fixed is the coefficient of kidney weight with body mass as covariate.",
+      "c": "Diff is the two quotients versus the covariate; shared slope routine.",
+      "d": "Guards: n < 3 / n < 4 (one residual df, as the note; unreachable at n = 150), constant or collinear predictor, non-finite; MECH_CHECK lists nothing.",
+      "e": "No banned term; no negation.",
+      "f": "CUR13 states no sizes; compared 150 mice with a rodent cohort as argued; within caps. 'Not documented by the source'.",
+      "g": "Same point-estimate slope, threshold 0.25 and rule; comparable cost.",
+      "h": "Brief within the text; body mass named in the claim as the estimand requires.",
+      "i": "Claim is the body-mass-adjusted kidney coefficient, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-05",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty is Pearson's own example: correlation of femur/humerus with tibia/humerus (r >= 0.3), indices sharing a denominator (PEA97 section 1, verified in the OCR text).",
+      "b": "Fixed is the partial correlation of femur and tibia given humerus, the standard adjustment for the shared denominator.",
+      "c": "Diff is the two indices versus the covariate; shared partial_r routine.",
+      "d": "Guards: n < 3 / n < 4, zero variance of a variable or residual, non-finite; MECH_CHECK lists nothing.",
+      "e": "No banned term; no negation.",
+      "f": "1000 skeletons equals PEA97's '1000 skeletons' illustration (and 'some thousand individuals'); size ratio 1; at the 1000-per-axis cap.",
+      "g": "Same correlation statistic, threshold and rule.",
+      "h": "Brief within the text; humerus length named in the claim as the estimand requires.",
+      "i": "Claim is the partial correlation given humerus length, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-06",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty divides each observer's error by the true value and averages the pairwise Pearson correlations (>= 0.2): PEA97's personal-equation example with three observers (verified in the OCR text).",
+      "b": "Fixed takes, per observer pair, the partial correlation of the estimates given the true value (regression adjustment for the denominator instead of division) and averages over pairs.",
+      "c": "Diff is the relative-error construction versus the covariate adjustment; the pair loop, guard and decision line are identical.",
+      "d": "Guards: fewer than 2 observers (no pair, empty selection), n < 3 / n < 4, zero residual variance, non-finite. MECH_CHECK lines 82 (faulty) and 78 (fixed) compare the mean of the pairwise statistics with the claim's threshold 0.2, i.e. the decision rule.",
+      "e": "No banned term; no negation.",
+      "f": "observers = 3 as in PEA97; PEA97 gives no number of trials ('a considerable series'), so trials = 200 is read by P-2 reading 1 (note: a typical session); within caps. Listed 'not documented by the source' for trials.",
+      "g": "Same statistic (mean of three pairwise correlations), threshold and rule.",
+      "h": "Brief within the text; 'in the same units as true_value' read as the unit of what the key measured; true value named in the claim as the estimand requires.",
+      "i": "Claim is the mean pairwise partial correlation given the true value, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-07",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "no", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty averages per-species slopes of claw/body_length on abdomen/body_length (>= 0.15): PEA97's crustacean indices with total body length as denominator (slope instead of correlation follows the claim's statistic).",
+      "b": "Fixed averages the per-species coefficients of abdomen length with body length as covariate.",
+      "c": "Diff is the indices versus the covariate; loop, guards and decision identical.",
+      "d": "Guards: n < 3 / n < 4 individuals (unreachable at 40), constant or collinear predictor in a species returns None (a zero-variance guard; disclosed deviation from 'skip'), non-finite. MECH_CHECK lines 71 / 66 compare the mean coefficient with the claim's 0.15 (decision rule).",
+      "e": "No banned term ('individuals' only as substring); no negation.",
+      "f": "PEA97 does state sizes for this setting: right after the passage the note quotes, Pearson's crustacean illustration uses a table of 'some thousand individuals', and Weldon's appended note reports 420 constructed shrimps. The brief has 40 individuals per species (15 species). Source sizes would fit the caps and timing (for example 15 x 1000 = 15 000 values), so the PREREG_PHASE_C section 2 rule 'source sizes where the timing rule allows' is not met, and the note's 'PEA97 states no sizes for the crustacean setting' is inaccurate. Neither P-2 reading applies (the source states sizes; they are not above the cap).",
+      "g": "Same statistic (mean of per-species coefficients), threshold and rule; comparable cost.",
+      "h": "Brief within the text; body length named in the claim as the estimand requires.",
+      "i": "Claim is the mean within-species body-length-adjusted coefficient, which the fixed criterion computes."
+    },
+    "overall": "fail",
+    "repair_request": "The defect is in the sizes of the brief (and hence the skeleton), not in the criterion bodies: individuals = 40 per species where the source describes about 420 to 1000 individuals in this setting and the caps and timing allow that. The criterion author cannot repair it; per PB section 5.3 such a pair is dropped after the repair round."
+  },
+  {
+    "case": "B3-08",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty correlates the fall (first baseline minus week 12) with the first baseline reading (r >= 0.3): one variable contains the other (ARC81 abstract, verified).",
+      "b": "Fixed correlates the same fall with the second baseline reading, which does not enter the fall: the standard remedy of a separate baseline measurement.",
+      "c": "Only the baseline key in the correlation differs (one line plus comment).",
+      "d": "Guards: n < 3, zero variance of a variable or residual, non-finite; MECH_CHECK lists nothing.",
+      "e": "No banned term; no negation.",
+      "f": "ARC81 read as abstract, no sizes; compared 120 patients with a trial arm as argued; within caps. 'Not documented by the source'.",
+      "g": "Identical structure; only the input array differs.",
+      "h": "The first and second baseline readings are named in the claim itself (as the estimand requires); key meanings state what each reading measured.",
+      "i": "Claim is the correlation of the fall with the second reading, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-09",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty correlates oxygen delivery (CO x CaO2) with Fick uptake CO x (CaO2 - CvO2): two calculated variables with the common component cardiac output (ARC81 Type 2, verified).",
+      "b": "Fixed correlates the same delivery with the independently measured expired-gas uptake, the standard remedy for this coupling.",
+      "c": "Only the uptake variable differs; the non-finite check over all four keys is identical in both twins.",
+      "d": "Guards: n < 3, zero variance of a variable or residual, non-finite; MECH_CHECK lists nothing.",
+      "e": "No banned term; no negation.",
+      "f": "ARC81 states no sizes; compared 60 patients with an intensive-care study as argued; within caps. 'Not documented by the source'.",
+      "g": "Identical structure (one Pearson correlation, threshold 0.3).",
+      "h": "Brief within the text; the measurement method and the delivery formula are part of the claim and of what the keys measured.",
+      "i": "Claim is the correlation of measured uptake with delivery, which the fixed criterion computes."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-10",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "no", "i": "yes",
+    "reasons": {
+      "a": "Faulty labels patients by the total of all eight items (including item 1) >= 12 and takes the AUC of item 1 (>= 0.65): the label contains the predictor (ARC81 abstract, one variable contains components of the other).",
+      "b": "Fixed builds the label from items 2 to 8 only (corrected item-total), the standard correction.",
+      "c": "One line differs (columns summed for the label).",
+      "d": "MECH_CHECK line 68 is the label definition from the claim (total >= 12), not a probe check. The empty-class guard (AUC undefined) returns None; it fires on the noise probe in both twins because no N(0,1) row reaches 12, which is the allowed empty-selection guard, not a noise test.",
+      "e": "No banned term; no negation.",
+      "f": "ARC81 states no sizes; compared 300 x 8 with a checklist validation as argued; within caps. 'Not documented by the source'.",
+      "g": "Identical structure (rank AUC, threshold 0.65).",
+      "h": "The meaning of item_scores says 'columns are in checklist order, item 1 first': a statement of how the variables on the items axis are ordered, beyond the axis name, which the quoted text does not allow (it admits such a fact only as an axis name, like 'time in order', or as what the claim states). Answered by the text: the fact is needed to find item 1's column and does not concern the error, but the text makes no exception.",
+      "i": "Claim is the AUC of item 1 for a label from items 2 to 8, which the fixed criterion computes."
+    },
+    "overall": "fail",
+    "repair_request": "The defect is in the brief (data-key meaning states the column order), not in the criterion bodies, which need no change. It cannot be repaired by the criterion author; per PB section 5.3 such a pair is dropped after the repair round."
+  },
+  {
+    "case": "B3-11",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty takes the R-squared of gene_b/gene_c on gene_a/gene_c (>= 0.05): indices with a common component, a ratio as dependent and independent variable (KRO93 abstract, verified).",
+      "b": "Fixed is the R-squared gain of gene A over a model with gene C (denominator as covariate).",
+      "c": "Diff is the quotients versus the two-model gain, with zero-variance guards on the variables entering each statistic.",
+      "d": "MECH_CHECK line 49 (flat()) is the zero-variance guard, identical in both; n < 3 / n < 4; non-finite.",
+      "e": "No banned term; no negation.",
+      "f": "KRO93 read as abstract, no sizes; compared 96 samples with one qPCR plate as argued; within caps. 'Not documented by the source'.",
+      "g": "R-squared family, same threshold and rule; one versus two least-squares fits.",
+      "h": "Brief within the text; gene C named in the claim as the estimand requires; keys neutral.",
+      "i": "Claim's statistic is the R-squared gain of gene A beyond gene C, which the fixed criterion computes (see the sign remark in AUDIT.md)."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B3-12",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Faulty regresses admissions / population on time (one-sided t of the time coefficient): a ratio as the dependent variable of a regression (KRO93 abstract, verified).",
+      "b": "Fixed regresses admissions on time and population (denominator as covariate), same one-sided t test.",
+      "c": "Diff is the rate versus the covariate; OLS-t and t-tail routines identical.",
+      "d": "Guards: non-finite inputs or rate, residual df < 1, constant or collinear time column, zero variance of y or residuals; MECH_CHECK lists nothing.",
+      "e": "No banned term; no negation.",
+      "f": "KRO93 states no sizes (abstract); 120 months matches the claim's ten-year monthly record; within caps. 'Not documented by the source'.",
+      "g": "Same OLS-t routine, one-sided 5% rule and sign condition; 2 versus 3 columns.",
+      "h": "The brief states no ordering of the months (the 'in time order' phrase is only in the world author's docstring); catchment population named in the claim as the estimand requires.",
+      "i": "Claim is the population-adjusted time coefficient, which the fixed criterion tests."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  }
+]

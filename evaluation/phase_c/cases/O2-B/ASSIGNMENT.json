@@ -1,0 +1,28 @@
+{
+  "case_id": "O2-B",
+  "world_id": "C20",
+  "class": "O",
+  "subtype": "O-2",
+  "source": "SIM11",
+  "brief": {
+    "id": "C20",
+    "claim": "The mean score of the treatment condition exceeds that of the control condition: the difference in means is positive and a two-sided two-sample t test (equal variances assumed) on all participants gives p < .05.",
+    "data_keys": [
+      {
+        "key": "score_control",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "task score of each participant in the control condition"
+      },
+      {
+        "key": "score_treatment",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "task score of each participant in the treatment condition"
+      }
+    ],
+    "sizes": {
+      "participants": 50
+    }
+  }
+}

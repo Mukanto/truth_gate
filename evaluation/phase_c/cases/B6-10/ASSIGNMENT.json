@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-10",
+  "world_id": "C23",
+  "class": "B-6",
+  "subtype": null,
+  "source": "LAZ10",
+  "brief": {
+    "id": "C23",
+    "claim": "The drug improves motor coordination: the mean time spent on the rotarod is longer in the treatment group than in the control group, and a two-tailed two-sample t test of the difference between the two group means gives p < 0.05.",
+    "data_keys": [
+      {
+        "key": "latency",
+        "shape": "(rats, days)",
+        "dtype": "float",
+        "meaning": "time in seconds that each rat stayed on the rotarod on each of the consecutive test days"
+      },
+      {
+        "key": "treated",
+        "shape": "(rats,)",
+        "dtype": "bool",
+        "meaning": "whether the rat was in the treatment group (true) or the control group (false)"
+      }
+    ],
+    "sizes": "rats = 10; days = 3 (latency: 10 x 3 = 30 values; treated: 10 values)"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "B6-12",
+  "world_id": "C15",
+  "class": "B-6",
+  "subtype": null,
+  "source": "MAK19",
+  "brief": {
+    "id": "C15",
+    "claim": "Scores on the task and on the symptom scale are more strongly related in group A than in group B: the Pearson correlation between task score and symptom score is higher in group A than in group B, and a Fisher z test of the difference between the two correlations gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "task_score",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "score of each participant on the experimental task"
+      },
+      {
+        "key": "symptom_score",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "score of each participant on the symptom questionnaire"
+      },
+      {
+        "key": "group_a",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "whether the participant belongs to group A (true) or group B (false)"
+      }
+    ],
+    "sizes": "participants = 40 (each of the three keys: 40 values)"
+  }
+}

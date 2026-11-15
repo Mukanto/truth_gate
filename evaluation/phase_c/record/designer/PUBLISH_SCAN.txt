@@ -1,0 +1,29 @@
+Publish scan (designer, 2026-11-15) over 423 files: record/, cases/, EXPECTED_FLAGS.json, REVISIONS-post-freeze.md
+
+## personal email: 0 hit(s)
+
+## any gmail: 0 hit(s)
+
+## other email: 0 hit(s)
+
+## github token: 0 hit(s)
+
+## api key words: 0 hit(s)
+
+## IBM: 0 hit(s)
+
+## openai-style key: 0 hit(s)
+
+## memory index: 0 hit(s)
+
+## CLAUDE.md: 2 hit(s)
+- REVISIONS-post-freeze.md: ...learnt source keys. 3. The harness also injects the user's `CLAUDE.md` files and the auto-memory index into every agent's context...
+- record\fable\WORLD_RUN.md: ...en to no later agent. The   harness-injected context (user `CLAUDE.md` files, memory index) holds no class, source or error term ...
+
+## Users path: 6 hit(s)
+- record\designer\part2_transcripts\summary_B1.json: ...{  "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...
+- record\designer\part2_transcripts\summary_B2.json: ...{  "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...
+- record\designer\part2_transcripts\summary_B2.json: ...(inside t",   "Bash.command: /e/Claude\\",   "Bash.command: C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...
+- record\designer\part2_transcripts\summary_B3.json: ...{  "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...
+- record\designer\part2_transcripts\summary_B6.json: ...{  "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...
+- record\designer\part2_transcripts\summary_O.json: ...{  "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a...

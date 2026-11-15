@@ -1,0 +1,359 @@
+[
+  {
+    "id": "C01",
+    "claim": "A classifier built from the 1000 gene-expression measurements separates the two groups of subjects with a balanced accuracy (mean of sensitivity and specificity) of at least 0.60 on new subjects.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(subjects, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in the blood sample of each subject"
+      },
+      {
+        "key": "group_b",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True when the subject belongs to the second group"
+      }
+    ],
+    "sizes": "subjects = 40; genes = 1000"
+  },
+  {
+    "id": "C02",
+    "claim": "Within crustacean species, claw length rises with abdomen length after accounting for total body length: across species, the mean of the within-species coefficients of abdomen length in a linear regression of claw length on abdomen length and body length is at least 0.15.",
+    "data_keys": [
+      {
+        "key": "abdomen_length",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "Abdomen length of each measured individual, in mm."
+      },
+      {
+        "key": "claw_length",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "Length of the larger claw of each measured individual, in mm."
+      },
+      {
+        "key": "body_length",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "Total body length of each measured individual, in mm."
+      }
+    ],
+    "sizes": "species = 15, individuals = 40 per species; abdomen_length, claw_length and body_length each have shape (15, 40)."
+  },
+  {
+    "id": "C03",
+    "claim": "Across subjects, mean resting heart rate and mean salivary cortisol (each subject's mean over the recording days) are positively correlated: the Pearson correlation between the two subject means is positive, and a test of that correlation gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "heart_rate",
+        "shape": "(subjects, days)",
+        "dtype": "float",
+        "meaning": "resting heart rate in beats per minute of each subject on each recording day"
+      },
+      {
+        "key": "cortisol",
+        "shape": "(subjects, days)",
+        "dtype": "float",
+        "meaning": "morning salivary cortisol concentration of each subject on each recording day"
+      }
+    ],
+    "sizes": "subjects = 16; days = 10 (heart_rate and cortisol: 16 x 10 = 160 values each)"
+  },
+  {
+    "id": "C04",
+    "claim": "Across critically ill patients, whole-body oxygen uptake measured by expired-gas analysis is positively correlated with systemic oxygen delivery (cardiac output times arterial oxygen content): the Pearson correlation is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Cardiac output of each patient by thermodilution, in L/min."
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Arterial blood oxygen content of each patient, in mL O2 per dL."
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Mixed venous blood oxygen content of each patient, in mL O2 per dL."
+      },
+      {
+        "key": "o2_uptake_expired",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Whole-body oxygen uptake of each patient from expired-gas analysis, in mL/min."
+      }
+    ],
+    "sizes": "patients = 60; cardiac_output, arterial_o2_content, venous_o2_content and o2_uptake_expired each have shape (60,)."
+  },
+  {
+    "id": "C05",
+    "claim": "In each participant's own region of visual cortex that responds more to faces than to houses, the response to faces exceeds the response to bodies: across the 12 participants the mean difference (faces minus bodies) of the response in that region is at least 0.3 percent signal change, and a one-sided paired t test across participants is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "resp_faces",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to face images (percent signal change) of each visual-cortex voxel in each scanning run of each participant"
+      },
+      {
+        "key": "resp_bodies",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to body images (percent signal change), same layout"
+      },
+      {
+        "key": "resp_houses",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to house images (percent signal change), same layout"
+      }
+    ],
+    "sizes": {
+      "subjects": 12,
+      "runs": 8,
+      "voxels": 300
+    }
+  },
+  {
+    "id": "C06",
+    "claim": "In the voxels of this participant's visual cortex whose responses follow stimulus contrast, the response rises with contrast: the regression slope of the voxel-averaged response (percent signal change) on stimulus contrast across the 240 trials is at least 0.2 percent signal change per unit of contrast, with a one-sided p value below 0.05.",
+    "data_keys": [
+      {
+        "key": "response",
+        "shape": "(trials, voxels)",
+        "dtype": "float",
+        "meaning": "response of each visual-cortex voxel on each trial, in percent signal change"
+      },
+      {
+        "key": "contrast",
+        "shape": "(trials,)",
+        "dtype": "float",
+        "meaning": "stimulus contrast shown on each trial, in units where full contrast equals 1"
+      }
+    ],
+    "sizes": {
+      "trials": 240,
+      "voxels": 500
+    }
+  },
+  {
+    "id": "C07",
+    "claim": "A classifier that uses three genes distinguishes tumour from normal colon tissue with an accuracy of at least 0.70 on new tissue samples.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(tissues, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each colon tissue sample"
+      },
+      {
+        "key": "tumour",
+        "shape": "(tissues,)",
+        "dtype": "bool",
+        "meaning": "True when the tissue sample is tumour tissue"
+      }
+    ],
+    "sizes": "tissues = 62; genes = 1000"
+  },
+  {
+    "id": "C08",
+    "claim": "The task engages region A more than region B: the task-evoked signal change (task minus rest) is larger in region A than in region B, with the mean across subjects of the within-subject difference of the two signal changes positive, and a paired t test of that difference gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "task_a",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region A of each subject during task blocks (percent signal change units)"
+      },
+      {
+        "key": "rest_a",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region A of each subject during rest blocks"
+      },
+      {
+        "key": "task_b",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region B of each subject during task blocks"
+      },
+      {
+        "key": "rest_b",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mean signal in region B of each subject during rest blocks"
+      }
+    ],
+    "sizes": "subjects = 24 (each of the four keys: 24 values)"
+  },
+  {
+    "id": "C09",
+    "claim": "Across trials of an estimation task, the estimates of the three observers are positively associated after accounting for the true value of the quantity: the mean, over the three pairs of observers, of the partial correlation between the two observers' estimates given the true value is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "true_value",
+        "shape": "(trials,)",
+        "dtype": "float",
+        "meaning": "Actual value of the quantity presented on each trial, in arbitrary units."
+      },
+      {
+        "key": "estimates",
+        "shape": "(trials, observers)",
+        "dtype": "float",
+        "meaning": "Estimate of the quantity made by each observer on each trial, in the same units as true_value."
+      }
+    ],
+    "sizes": "trials = 200, observers = 3; true_value has shape (200,); estimates has shape (200, 3)."
+  },
+  {
+    "id": "C10",
+    "claim": "Giving the compound in the drinking water reduces body-weight gain: the mean weight gain of animals receiving the compound is lower than that of controls, and a Welch two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "weight_gain",
+        "shape": "(cages, animals)",
+        "dtype": "float",
+        "meaning": "body-weight gain in grams over the study of each animal housed in each cage"
+      },
+      {
+        "key": "treated",
+        "shape": "(cages,)",
+        "dtype": "bool",
+        "meaning": "whether the drinking water supplied to the cage contained the compound"
+      }
+    ],
+    "sizes": "cages = 40; animals = 2 (weight_gain: 40 x 2 = 80 values; treated: 40 values)"
+  },
+  {
+    "id": "C11",
+    "claim": "Among patients whose symptom score at the screening visit was at least 60, at least 40% improve by 10 points or more between the start of the programme and the 6-month follow-up (score at the start minus score at 6 months of at least 10); the claim is that the proportion of such patients is at least 0.40.",
+    "data_keys": [
+      {
+        "key": "score_screen",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the screening visit (higher is worse)"
+      },
+      {
+        "key": "score_start",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the start of the programme"
+      },
+      {
+        "key": "score_6m",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the 6-month follow-up"
+      }
+    ],
+    "sizes": {
+      "patients": 500
+    }
+  },
+  {
+    "id": "C12",
+    "claim": "Across adult skeletons, femur length and tibia length are positively associated after accounting for humerus length: the partial correlation between femur length and tibia length, given humerus length, is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "femur_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the femur of each skeleton, in mm."
+      },
+      {
+        "key": "tibia_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the tibia of each skeleton, in mm."
+      },
+      {
+        "key": "humerus_length",
+        "shape": "(skeletons,)",
+        "dtype": "float",
+        "meaning": "Maximum length of the humerus of each skeleton, in mm."
+      }
+    ],
+    "sizes": "skeletons = 1000; femur_length, tibia_length and humerus_length each have shape (1000,)."
+  },
+  {
+    "id": "C13",
+    "claim": "In adult mice, liver weight is positively related to kidney weight after accounting for body mass: the coefficient of kidney weight in a linear regression of liver weight on kidney weight and body mass is at least 0.25 (g of liver weight per g of kidney weight).",
+    "data_keys": [
+      {
+        "key": "liver_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Wet liver weight of each mouse, in g."
+      },
+      {
+        "key": "kidney_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Combined wet weight of both kidneys of each mouse, in g."
+      },
+      {
+        "key": "body_mass",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "Body mass of each mouse, in g."
+      }
+    ],
+    "sizes": "mice = 150; liver_weight, kidney_weight and body_mass each have shape (150,)."
+  },
+  {
+    "id": "C14",
+    "claim": "Across the advanced economies in the post-war period, average real GDP growth in country-years with a public debt ratio above 90 percent of GDP is at least 2 percentage points lower than average real GDP growth in country-years with a debt ratio of 90 percent or below.",
+    "data_keys": [
+      {
+        "key": "growth",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "real GDP growth rate in percent of each country in each year"
+      },
+      {
+        "key": "debt_ratio",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "public debt as a percentage of GDP of each country in each year"
+      }
+    ],
+    "sizes": {
+      "countries": 20,
+      "years": 64
+    }
+  },
+  {
+    "id": "C15",
+    "claim": "Scores on the task and on the symptom scale are more strongly related in group A than in group B: the Pearson correlation between task score and symptom score is higher in group A than in group B, and a Fisher z test of the difference between the two correlations gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "task_score",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "score of each participant on the experimental task"
+      },
+      {
+        "key": "symptom_score",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "score of each participant on the symptom questionnaire"
+      },
+      {
+        "key": "group_a",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "whether the participant belongs to group A (true) or group B (false)"
+      }
+    ],
+    "sizes": "participants = 40 (each of the three keys: 40 values)"
+  }
+]

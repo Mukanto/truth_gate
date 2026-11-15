@@ -1,0 +1,110 @@
+[
+  {
+    "local_id": "B2-01",
+    "claim": "A statistical classifier built from the 30 annual indicators of a country distinguishes the country-years in which a civil war begins from the country-years in which none begins, with an area under the ROC curve of at least 0.75 on new country-years.",
+    "data_keys": [
+      {"key": "indicators", "shape": "(country_years, indicators)", "dtype": "float", "meaning": "30 annual political, economic and demographic indicators of the country in that year"},
+      {"key": "onset", "shape": "(country_years,)", "dtype": "bool", "meaning": "True when a civil war begins in that country-year"}
+    ],
+    "sizes": "country_years = 896; indicators = 30"
+  },
+  {
+    "local_id": "B2-02",
+    "claim": "A classifier built from the 12 clinical measurements detects at least 60% of the patients who have the less frequent outcome among new patients (sensitivity of at least 0.60).",
+    "data_keys": [
+      {"key": "measurements", "shape": "(patients, measurements)", "dtype": "float", "meaning": "12 clinical measurements of each patient"},
+      {"key": "outcome", "shape": "(patients,)", "dtype": "bool", "meaning": "True when the patient has the less frequent of the two outcomes"}
+    ],
+    "sizes": "patients = 400; measurements = 12"
+  },
+  {
+    "local_id": "B2-03",
+    "claim": "A classifier built from the 50 sensor features separates defective units from sound units with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65 on new units.",
+    "data_keys": [
+      {"key": "sensor_features", "shape": "(units, sensor_features)", "dtype": "float", "meaning": "50 features computed from the sensor recording of each unit"},
+      {"key": "defective", "shape": "(units,)", "dtype": "bool", "meaning": "True when the unit is defective"}
+    ],
+    "sizes": "units = 1000; sensor_features = 50"
+  },
+  {
+    "local_id": "B2-04",
+    "claim": "A classifier built from the 10 daily indicators predicts whether the series rises over the following day with an accuracy of at least 0.58 on later days.",
+    "data_keys": [
+      {"key": "indicators", "shape": "(days, indicators)", "dtype": "float", "meaning": "10 indicators observed on each day, days in chronological order"},
+      {"key": "rises", "shape": "(days,)", "dtype": "bool", "meaning": "True when the series rises over the day that follows"}
+    ],
+    "sizes": "days = 500; indicators = 10"
+  },
+  {
+    "local_id": "B2-05",
+    "claim": "A regression on the 8 weekly drivers explains at least 30% of the variance of weekly demand in later weeks (R-squared of at least 0.30).",
+    "data_keys": [
+      {"key": "drivers", "shape": "(weeks, drivers)", "dtype": "float", "meaning": "8 weather and calendar drivers of each week, weeks in chronological order"},
+      {"key": "demand", "shape": "(weeks,)", "dtype": "float", "meaning": "demand observed in that week"}
+    ],
+    "sizes": "weeks = 400; drivers = 8"
+  },
+  {
+    "local_id": "B2-06",
+    "claim": "A classifier built from the 20 image features of a tissue patch identifies malignant tissue in patches from new patients with an area under the ROC curve of at least 0.75.",
+    "data_keys": [
+      {"key": "patch_features", "shape": "(patients, patches, features)", "dtype": "float", "meaning": "20 image features of each tissue patch of each patient"},
+      {"key": "malignant", "shape": "(patients,)", "dtype": "bool", "meaning": "True when the patient's tissue is malignant"}
+    ],
+    "sizes": "patients = 80; patches = 10; features = 20"
+  },
+  {
+    "local_id": "B2-07",
+    "claim": "A regression on the 10 session measurements predicts a participant's score in a session, with a Pearson correlation of at least 0.30 between predicted and observed scores for new participants.",
+    "data_keys": [
+      {"key": "measurements", "shape": "(participants, sessions, measurements)", "dtype": "float", "meaning": "10 measurements recorded in each session of each participant"},
+      {"key": "score", "shape": "(participants, sessions)", "dtype": "float", "meaning": "score of the participant in that session"}
+    ],
+    "sizes": "participants = 40; sessions = 4; measurements = 10"
+  },
+  {
+    "local_id": "B2-08",
+    "claim": "A shrunken-centroid classifier built from the 1000 gene-expression measurements separates the two tumour classes with an accuracy of at least 0.60 on new samples.",
+    "data_keys": [
+      {"key": "expression", "shape": "(samples, genes)", "dtype": "float", "meaning": "expression level of each gene in each tumour sample"},
+      {"key": "class_b", "shape": "(samples,)", "dtype": "bool", "meaning": "True when the sample belongs to the second tumour class"}
+    ],
+    "sizes": "samples = 40; genes = 1000"
+  },
+  {
+    "local_id": "B2-09",
+    "claim": "A shrunken-centroid classifier built from the 1000 gene-expression measurements separates patients who respond to the treatment from those who do not, with an area under the ROC curve of at least 0.65 on new patients.",
+    "data_keys": [
+      {"key": "expression", "shape": "(patients, genes)", "dtype": "float", "meaning": "expression level of each gene in the tumour of each patient"},
+      {"key": "responder", "shape": "(patients,)", "dtype": "bool", "meaning": "True when the patient responds to the treatment"}
+    ],
+    "sizes": "patients = 40; genes = 1000"
+  },
+  {
+    "local_id": "B2-10",
+    "claim": "A kernel-based classifier built from the 1000 gene-expression measurements separates the two tumour classes with an accuracy of at least 0.60 on new samples.",
+    "data_keys": [
+      {"key": "expression", "shape": "(samples, genes)", "dtype": "float", "meaning": "expression level of each gene in each tumour sample"},
+      {"key": "class_b", "shape": "(samples,)", "dtype": "bool", "meaning": "True when the sample belongs to the second tumour class"}
+    ],
+    "sizes": "samples = 40; genes = 1000"
+  },
+  {
+    "local_id": "B2-11",
+    "claim": "A classifier built from the 1000 gene-expression measurements separates the two groups of subjects with a balanced accuracy (mean of sensitivity and specificity) of at least 0.60 on new subjects.",
+    "data_keys": [
+      {"key": "expression", "shape": "(subjects, genes)", "dtype": "float", "meaning": "expression level of each gene in the blood sample of each subject"},
+      {"key": "group_b", "shape": "(subjects,)", "dtype": "bool", "meaning": "True when the subject belongs to the second group"}
+    ],
+    "sizes": "subjects = 40; genes = 1000"
+  },
+  {
+    "local_id": "B2-12",
+    "claim": "A classifier that uses three genes distinguishes tumour from normal colon tissue with an accuracy of at least 0.70 on new tissue samples.",
+    "data_keys": [
+      {"key": "expression", "shape": "(tissues, genes)", "dtype": "float", "meaning": "expression level of each gene in each colon tissue sample"},
+      {"key": "tumour", "shape": "(tissues,)", "dtype": "bool", "meaning": "True when the tissue sample is tumour tissue"}
+    ],
+    "sizes": "tissues = 62; genes = 1000"
+  }
+]

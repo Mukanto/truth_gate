@@ -1,0 +1,438 @@
+{
+ "reader": "designer (Claude, main session)",
+ "written_utc": "2026-11-13T15:35:42Z",
+ "note": "written before reading READER2.json",
+ "decisions": [
+  {
+   "n": 0,
+   "file": "GATE.md",
+   "line": 36,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 1,
+   "file": "GATE.md",
+   "line": 142,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 2,
+   "file": "GATE.md",
+   "line": 147,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 3,
+   "file": "GATE.md",
+   "line": 156,
+   "decision": "keep",
+   "reason": "tool vocabulary (miss)"
+  },
+  {
+   "n": 4,
+   "file": "GATE.md",
+   "line": 185,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 5,
+   "file": "GATE.md",
+   "line": 192,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 6,
+   "file": "GATE.md",
+   "line": 193,
+   "decision": "keep",
+   "reason": "tool vocabulary (private)"
+  },
+  {
+   "n": 7,
+   "file": "GATE.md",
+   "line": 195,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 8,
+   "file": "GATE.md",
+   "line": 196,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 9,
+   "file": "GATE.md",
+   "line": 224,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 10,
+   "file": "GATE.md",
+   "line": 265,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 11,
+   "file": "GATE.md",
+   "line": 297,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 12,
+   "file": "GATE.md",
+   "line": 298,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 13,
+   "file": "GATE.md",
+   "line": 309,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 14,
+   "file": "GATE.md",
+   "line": 349,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 15,
+   "file": "GATE.md",
+   "line": 354,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 16,
+   "file": "MANIFEST.md",
+   "line": 97,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 17,
+   "file": "MANIFEST.md",
+   "line": 169,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 18,
+   "file": "MANIFEST.md",
+   "line": 201,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 19,
+   "file": "MANIFEST.md",
+   "line": 218,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 20,
+   "file": "MANIFEST.md",
+   "line": 228,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 21,
+   "file": "MANIFEST.md",
+   "line": 231,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 22,
+   "file": "MANIFEST.md",
+   "line": 234,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 23,
+   "file": "MANIFEST.md",
+   "line": 258,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 24,
+   "file": "MANIFEST.md",
+   "line": 259,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 25,
+   "file": "MANIFEST.md",
+   "line": 260,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 26,
+   "file": "MANIFEST.md",
+   "line": 267,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 27,
+   "file": "MANIFEST.md",
+   "line": 270,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 28,
+   "file": "MANIFEST.md",
+   "line": 286,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 29,
+   "file": "MANIFEST.md",
+   "line": 289,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 30,
+   "file": "MANIFEST.md",
+   "line": 293,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 31,
+   "file": "MANIFEST.md",
+   "line": 361,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 32,
+   "file": "MANIFEST.md",
+   "line": 391,
+   "decision": "keep",
+   "reason": "tool vocabulary (pilot)"
+  },
+  {
+   "n": 33,
+   "file": "MANIFEST.md",
+   "line": 424,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 34,
+   "file": "README_TOOL.md",
+   "line": 13,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 35,
+   "file": "README_TOOL.md",
+   "line": 29,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 36,
+   "file": "README_TOOL.md",
+   "line": 32,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 37,
+   "file": "README_TOOL.md",
+   "line": 108,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 38,
+   "file": "README_TOOL.md",
+   "line": 110,
+   "decision": "keep",
+   "reason": "tool vocabulary (pilot)"
+  },
+  {
+   "n": 39,
+   "file": "README_TOOL.md",
+   "line": 112,
+   "decision": "keep",
+   "reason": "tool vocabulary (pilot)"
+  },
+  {
+   "n": 40,
+   "file": "README_TOOL.md",
+   "line": 122,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 41,
+   "file": "README_TOOL.md",
+   "line": 189,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 42,
+   "file": "README_TOOL.md",
+   "line": 199,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 43,
+   "file": "README_TOOL.md",
+   "line": 208,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 44,
+   "file": "README_TOOL.md",
+   "line": 209,
+   "decision": "keep",
+   "reason": "tool vocabulary (external)"
+  },
+  {
+   "n": 45,
+   "file": "SPEC.md",
+   "line": 23,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 46,
+   "file": "SPEC.md",
+   "line": 36,
+   "decision": "keep",
+   "reason": "tool vocabulary (miss)"
+  },
+  {
+   "n": 47,
+   "file": "SPEC.md",
+   "line": 107,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 48,
+   "file": "SPEC.md",
+   "line": 143,
+   "decision": "keep",
+   "reason": "tool vocabulary (miss)"
+  },
+  {
+   "n": 49,
+   "file": "SPEC.md",
+   "line": 154,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 50,
+   "file": "SPEC.md",
+   "line": 179,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 51,
+   "file": "SPEC.md",
+   "line": 194,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 52,
+   "file": "SPEC.md",
+   "line": 196,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 53,
+   "file": "SPEC.md",
+   "line": 248,
+   "decision": "keep",
+   "reason": "tool vocabulary (audit)"
+  },
+  {
+   "n": 54,
+   "file": "SPEC.md",
+   "line": 249,
+   "decision": "remove",
+   "sentence": "- Every check is individually unit-tested (§11). Tests use only toy studies written for the tests; they must not use or imitate evaluation cases (§12).",
+   "reason": "refers to evaluation cases of an evaluation"
+  },
+  {
+   "n": 55,
+   "file": "SPEC.md",
+   "line": 328,
+   "decision": "remove",
+   "sentence": "Reason: otherwise a criterion that ignores the changed quantity (case E1-10) would be reported as a world defect.",
+   "reason": "names an evaluation case"
+  },
+  {
+   "n": 56,
+   "file": "SPEC.md",
+   "line": 329,
+   "decision": "remove",
+   "sentence": "- **Drafting-session defaults** (open to objection before the freeze): ... the evaluation design (Δ4).",
+   "reason": "states an evaluation (its design)"
+  },
+  {
+   "n": 57,
+   "file": "SPEC.md",
+   "line": 336,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 58,
+   "file": "SPEC.md",
+   "line": 351,
+   "decision": "keep",
+   "reason": "tool vocabulary (evaluation)"
+  },
+  {
+   "n": 59,
+   "file": "SPEC.md",
+   "line": 399,
+   "decision": "keep",
+   "reason": "tool vocabulary (REPORT)"
+  },
+  {
+   "n": 60,
+   "file": "SPEC.md",
+   "line": 401,
+   "decision": "remove",
+   "sentence": "Any regression case built this way loses its R1 detection (Δ4.2).",
+   "reason": "states an evaluation and its detection"
+  }
+ ]
+}

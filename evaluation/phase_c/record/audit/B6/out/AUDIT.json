@@ -1,0 +1,230 @@
+[
+  {
+    "case": "B6-01",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Pooled two-sample t test on all 160 pup values (df 158), offspring counted as replicates of a dam-level treatment, exactly the practice LAZ18 'Animal experiments' documents; alpha 0.05 two-sided, exposed higher.",
+      "b": "One value per dam (mean over its pups), the same pooled t test on the 20 dam means (df 18): reduction to the experimental unit (LAZ18; LAZ10 'Averaging dependent observations'); nothing else changed.",
+      "c": "The twins differ in two lines only (x, y built with .ravel() versus .mean(axis=1)).",
+      "d": "Guards: non-finite, fewer than 2 dams per group (note minimum, smallest size for a two-sample t), zero standard error. MECH_CHECK line 91 is that group-size guard; line 70 is the convergence test of the continued fraction inside the p-value helper, not an inspection of the input.",
+      "e": "No banned PB section 4 term in claim, key meanings or sizes (own scan; MECH_CHECK issues empty); the brief does not say what 'claim false' means.",
+      "f": "20 dams x 8 pups = 160 values, within 1000 per axis and 500 000 per array; LAZ18 reports no study sizes (its review classifies N by residual df versus number of parents), so P-2 reading 1: of the order of rodent prenatal studies with litters of about 8. Listed as not documented by the source.",
+      "g": "Identical statistic, threshold, decision rule and code; only the length of the analysed arrays differs.",
+      "h": "States sizes, the axes (dams, pups), what each key measured and the claim; nothing about how pups of a dam are related; key names are neutral.",
+      "i": "Claim: exposed versus control offspring mean difference with a two-sample t test; the fixed criterion estimates that group difference from dam means (equal to the pup-level group means for balanced litters) with the dam as replicate, as the estimand line says.",
+      "check": "Fixed returns True exactly when exposed mean > control mean and two-sided p < 0.05.",
+      "class": "B-6 (non-independent units counted as independent); no other PB section 1 rule applies. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-02",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Welch t test on the 1800 cell-level 0/1 responses, cells counted as replicates of a well-level treatment (LAZ18 'Cell culture experiments'); alpha 0.05 two-sided, treated higher. The deviation from the note (two-proportion z test replaced by Welch t on 0/1 values) is numerically near-identical at about 900 cells per group and keeps the error and its parameters.",
+      "b": "Proportion of responding cells per well, the same Welch test on the 12 well proportions (well as experimental unit, LAZ18).",
+      "c": "Two lines differ (x, y built with .ravel() versus .mean(axis=1)).",
+      "d": "Guards: non-finite (vacuous for bool data), fewer than 2 wells per group, fewer than 1 cell per well (empty selection), zero standard error. MECH_CHECK line 99 is that guard; line 78 is the convergence test in the p-value helper.",
+      "e": "No banned term (own scan); no negation of the claim.",
+      "f": "12 wells x 150 cells = 1800 values, within caps; LAZ18 describes microtitre-plate culture but states no sizes, so P-2 reading 1 (plate scale). Listed as not documented by the source.",
+      "g": "Same Welch function, threshold and decision; cost differs only by array length.",
+      "h": "Sizes, axes (wells, cells), what each key measured and the claim only; nothing about cells in a well being related.",
+      "i": "Claim: response proportion higher in treated wells with a test of the group difference; the fixed criterion estimates the difference in mean well-level proportion with the well as replicate, as the estimand line says.",
+      "check": "Fixed returns True exactly when the treated mean proportion is higher and two-sided p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-03",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "OLS slope of all 1200 neuron-level densities on the animal's dose (dose repeated), slope t test with df 1198: subsamples of an animal-level treatment counted as N, which LAZ18's slice and histology passage rules out (N is the number of animals); alpha 0.05 two-sided, slope positive.",
+      "b": "Animal means (over sections and neurons) regressed on dose, slope t test with df 10; nothing else changed.",
+      "c": "Two lines differ (x = repeated dose and y = ravel, versus x = dose and y = animal means).",
+      "d": "Guards: non-finite, fewer than 3 animals (note minimum, smallest size for a slope t statistic), zero dose variance, zero residual variance. MECH_CHECK lists only line 71, the convergence test in the p-value helper.",
+      "e": "No banned term ('regression slope' is not the banned phrase 'regression to the mean'); no negation of the claim.",
+      "f": "12 x 4 x 25 = 1200 values, within caps; LAZ18 states no sizes for this setting, so P-2 reading 1. Listed as not documented by the source.",
+      "g": "Same slope statistic, test, threshold and decision.",
+      "h": "Sizes, the three axes, what each key measured and the claim; nothing about how neurons or sections are related.",
+      "i": "Claim: slope of spine density on dose; the fixed criterion estimates that slope at the animal level (equal point estimate in this balanced design) with the animal as replicate.",
+      "check": "Fixed returns True exactly when the slope is > 0 and two-sided p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-04",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Welch t test on all 80 animals although the compound is given cage-wise in the drinking water; LAZ18 states that cages are the experimental units when a treatment is applied cage-wise, and that animals in a cage influence each other. Alpha 0.05 two-sided, treated lower.",
+      "b": "Cage means (2 animals), the same Welch test on 40 cage means.",
+      "c": "Two lines differ.",
+      "d": "Guards: non-finite, fewer than 2 cages per group, zero standard error. MECH_CHECK line 87 is that guard; line 66 is the helper's convergence test.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "40 cages x 2 animals = 80 values, within caps; 2 per cage is LAZ18's own example, while the number of cages is not stated (P-2 reading 1). Listed as not documented by the source.",
+      "g": "Identical statistic, threshold and decision.",
+      "h": "'drinking water supplied to the cage' says what the (cages,) key measured; 'each animal housed in each cage' names the axes; nothing about animals in a cage influencing each other.",
+      "i": "Claim: treated mean weight gain lower, Welch test; the fixed criterion estimates the group difference of cage means with the cage as replicate.",
+      "check": "Fixed returns True exactly when the treated mean is lower and two-sided Welch p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-05",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Separate paired tests of post minus pre in each group at alpha 0.05; holds when the trained change is significant and positive and the control change has p >= 0.05. This is NIE11's documented procedure (abstract): effects declared different because one is significant and the other is not.",
+      "b": "Pooled two-sample t test of the change scores, trained versus control: the test of the difference (interaction) NIE11 requires.",
+      "c": "Inputs, change scores, group and finiteness guards are identical; only the test block differs (two one-sample tests plus the pattern rule versus one two-sample test).",
+      "d": "Guards: non-finite, fewer than 2 per group (note minimum; both statistics are defined from 2), zero variance of the statistic each twin computes. MECH_CHECK line 98 is that guard; line 76 is the helper's convergence test.",
+      "e": "No banned term; '(false)' appears only as the bool value meaning of 'trained'; no negation of the claim.",
+      "f": "40 subjects, within caps; the NIE11 abstract states no sizes, so P-2 reading 1 (typical behavioural sample). Listed as not documented by the source.",
+      "g": "Both twins use t statistics of the same change scores, the same helper and alpha; cost comparable (sub-millisecond); the difference in statistic and decision rule is the documented error itself.",
+      "h": "The claim names the test of the difference of mean changes, which the estimand line requires; keys state only what was measured per subject.",
+      "i": "The fixed criterion estimates the difference between groups in mean change, the quantity the claim is about.",
+      "check": "Fixed returns True exactly when the trained mean change > control mean change and two-sided p < 0.05.",
+      "class": "B-6 ('significant here, not there'). Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-06",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "One-sample t tests of the per-subject slopes within each group; holds when the healthy mean slope is significantly negative and the patient group's p >= 0.05: NIE11's pattern rule, alpha 0.05.",
+      "b": "Pooled two-sample t test of the per-subject slopes, healthy versus patient (test of the group x session interaction on a summary measure).",
+      "c": "The per-subject slope step and guards are identical; only the test block differs.",
+      "d": "Guards: non-finite, fewer than 2 subjects per group or fewer than 2 sessions (smallest sizes for the slope and the t statistic), zero variance. MECH_CHECK line 102 is that guard; line 81 is the helper's convergence test.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "30 subjects x 8 sessions = 240 values; NIE11 states no sizes (P-2 reading 1). Listed as not documented by the source.",
+      "g": "Same slopes, helper and alpha, comparable cost; the statistic and decision differ only by the error.",
+      "h": "The claim names the per-subject slope and the test of the difference, which the estimand line requires; 'sessions in order' is the setting of a time axis.",
+      "i": "The fixed criterion estimates the group difference in mean per-subject slope, as the claim states.",
+      "check": "Fixed returns True exactly when the healthy mean slope < patient mean slope and two-sided p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-07",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "One-sample t test of task minus rest in each region; holds when region A is significant and positive and region B has p >= 0.05: NIE11's pattern rule in a within-subject design, alpha 0.05.",
+      "b": "Paired t test on (task_a - rest_a) - (task_b - rest_b), the direct test of the difference NIE11 requires.",
+      "c": "Inputs, effects and guards are identical; only the test block differs.",
+      "d": "Guards: non-finite, fewer than 2 subjects, zero variance. MECH_CHECK lists line 83 (the helper's convergence test) and, in fixed, line 115, which is the claim's own decision rule (mean difference > 0 and p < 0.05), not an input check.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "24 subjects (4 keys of 24 values); NIE11 states no sizes (P-2 reading 1, a typical imaging sample). Listed as not documented by the source.",
+      "g": "Same helper and alpha, comparable cost; the statistic differs only by the error.",
+      "h": "The claim names the within-subject difference and the paired test, which the estimand line requires; keys state only what was measured per subject.",
+      "i": "The fixed criterion estimates the mean within-subject difference of the two effects, as the claim states.",
+      "check": "Fixed returns True exactly when the mean difference > 0 and two-sided p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-08",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Welch t test on all 80 water samples from 8 tanks, samples treated as independent replicates: HUR84's sacrificial pseudoreplication; alpha 0.05 two-sided, treated lower. The auditor could not re-read HUR84 (the PDF returned binary data); the private note's quotation matches the paper's definition.",
+      "b": "Tank means, the same Welch test on the 8 tank means.",
+      "c": "Two lines differ.",
+      "d": "Guards: non-finite, fewer than 2 tanks per group, zero standard error. MECH_CHECK line 90 is that guard; line 69 is the helper's convergence test.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "8 tanks (4 per treatment) x 10 samples = 80 values, within caps; per the note, HUR84's sacrificial examples were twofold replicated, and samples per unit are not stated. Small-replication tank experiments are the source's setting, and fourfold rather than twofold does not favour detection (it gives the fixed test usable df). Listed as not documented by the source.",
+      "g": "Identical statistic, threshold and decision.",
+      "h": "Sizes, axes (tanks, samples), what each key measured and the claim only.",
+      "i": "The fixed criterion estimates the group difference of tank means with the tank as replicate.",
+      "check": "Fixed returns True exactly when the treated mean is lower and two-sided Welch p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-09",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Two-sided Mann-Whitney test on all 144 plot-by-date values, each sampling date counted as a replicate: HUR84 temporal pseudoreplication ('dates are then taken to represent replicated treatments'). Remark: HUR84 defines the temporal type against one unit per treatment; with 6 plots per treatment the same act is also HUR84's sacrificial type, so the documented error is present. HUR84 was not re-read (binary PDF).",
+      "b": "Mean over dates per plot, the same Mann-Whitney test on the 12 plot means.",
+      "c": "Two lines differ.",
+      "d": "Guards: non-finite, fewer than 1 plot per group (an empty-selection guard; CASE.md lowers the note's 2 to 1, which does not exceed the smallest defined size), zero rank variance. MECH_CHECK line 56 is that guard; line 70 is the decision rule with the two-sided 5% normal critical value.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "12 plots x 12 dates = 144 values; HUR84 gives no sizes for this setting (P-2 reading 1, a weekly field season). Listed as not documented by the source.",
+      "g": "Identical rank-sum code, threshold and decision.",
+      "h": "'dates in order' names a time axis (setting); nothing else about how dates or plots are related.",
+      "i": "The fixed criterion estimates the location shift of plot-level time-averaged abundance with the plot as replicate.",
+      "check": "Fixed returns True exactly when the treated rank sum is above its expectation and |z| > 1.96. Midranks, tie-corrected variance and continuity correction were checked by reading the code. The normal approximation at 6 versus 6 is a standard implementation, though an exact test would also be standard; it is the same in both twins.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-10",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Pooled t test on all 30 rat-by-day latencies with df 28, exactly LAZ10's opening example (t28), where df 8 is correct; alpha 0.05 two-tailed, treated higher.",
+      "b": "Mean over the 3 days per rat, pooled t test on the 10 rat means (df 8): LAZ10 'Averaging dependent observations', read online by the auditor.",
+      "c": "Two lines differ.",
+      "d": "Guards: non-finite, fewer than 2 rats per group, zero pooled variance. MECH_CHECK line 92 is that guard; line 71 is the helper's convergence test.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "10 rats x 3 consecutive days: the source's own sizes.",
+      "g": "Identical statistic, threshold and decision.",
+      "h": "'consecutive test days' names a time axis; nothing else.",
+      "i": "The fixed criterion estimates the group difference of rat means with the rat as replicate.",
+      "check": "Fixed returns True exactly when the treated mean is higher and two-tailed p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-11",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Pearson correlation over all 160 subject-by-day pairs tested with df 158: all observations are summed into N, which LAZ10 (Background, read online) says cannot be done. The note records this as an extension of LAZ10 from a group comparison to a correlation. Alpha 0.05 two-sided, r positive.",
+      "b": "Subject means of both variables, Pearson correlation of the 16 means with df 14: LAZ10's averaging / summary-measure solution.",
+      "c": "Two lines differ.",
+      "d": "Guards: non-finite, fewer than 3 subjects (smallest size for r and its t), zero variance of either variable. MECH_CHECK lists only line 71, the helper's convergence test.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "16 subjects x 10 days = 160 values per key; LAZ10 gives no sizes for a correlation setting (P-2 reading 1). Listed as not documented by the source.",
+      "g": "Identical correlation code, test, threshold and decision.",
+      "h": "The claim names the subject means, which the estimand line (a between-subject correlation of subject means) requires; it states no fact about how days within a subject are related.",
+      "i": "The fixed criterion estimates the between-subject correlation of subject means, as the claim states.",
+      "check": "Fixed returns True exactly when r > 0 and two-sided p < 0.05.",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  },
+  {
+    "case": "B6-12",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "Pearson correlation with its t test in each group; holds when group A is significant and positive and group B has p >= 0.05. This is MAK19's 'Interpreting comparisons between two effects without directly comparing them' (read online), in its Figure 1A setting of a correlation in two groups of 20.",
+      "b": "Fisher z test of the difference between the two correlations: the standard direct comparison.",
+      "c": "The group correlations come from identical code; only the final test differs. The fixed twin drops the then-unused Student-t helper, a consequence of the z test and no other change.",
+      "d": "Guards: non-finite, fewer than 4 per group, zero variance. 4 is the note's minimum (the smallest n at which the Fisher z standard error is defined). The faulty twin mirrors it although its own Pearson t tests are defined from 3; judged acceptable because 4 is the minimum of the claim's statistic and keeps the twins identical outside the error. It is never reached in the skeleton (20 per group) and has no purpose regarding probes. MECH_CHECK fixed line 61 is the decision rule.",
+      "e": "No banned term; no negation of the claim.",
+      "f": "40 participants: MAK19 Figure 1A's two groups of 20 (documented).",
+      "g": "Same correlations and alpha; cost comparable (both sub-millisecond); the statistic differs only by the error.",
+      "h": "The claim names the difference of the two correlations and the Fisher z test, which the estimand line requires; keys state only what was measured.",
+      "i": "The fixed criterion estimates the difference between the two groups' correlations.",
+      "check": "Fixed returns True exactly when r_A > r_B and two-sided p < 0.05 (|z| > 1.959964).",
+      "class": "B-6. Agree."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "case_id": "B1-04",
+  "world_id": "C05",
+  "class": "B-1",
+  "subtype": null,
+  "source": "KRI10",
+  "brief": {
+    "id": "C05",
+    "claim": "In each participant's own region of visual cortex that responds more to faces than to houses, the response to faces exceeds the response to bodies: across the 12 participants the mean difference (faces minus bodies) of the response in that region is at least 0.3 percent signal change, and a one-sided paired t test across participants is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "resp_faces",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to face images (percent signal change) of each visual-cortex voxel in each scanning run of each participant"
+      },
+      {
+        "key": "resp_bodies",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to body images (percent signal change), same layout"
+      },
+      {
+        "key": "resp_houses",
+        "shape": "(subjects, runs, voxels)",
+        "dtype": "float",
+        "meaning": "response to house images (percent signal change), same layout"
+      }
+    ],
+    "sizes": {
+      "subjects": 12,
+      "runs": 8,
+      "voxels": 300
+    }
+  }
+}

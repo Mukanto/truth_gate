@@ -1,0 +1,446 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "B3-01": {
+    "world_id": "C16",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-01",
+    "class": "B-3",
+    "subtype": null,
+    "source": "CUR13",
+    "brief": {
+      "id": "C16",
+      "claim": "In adult rats, animals given the drug have a larger heart weight than untreated animals after accounting for body mass: in a linear regression of heart weight on treatment status and body mass, the coefficient of treatment status is positive and significant at the one-sided 5% level (t test).",
+      "data_keys": [
+        {
+          "key": "heart_weight",
+          "shape": "(animals,)",
+          "dtype": "float",
+          "meaning": "Wet heart weight of each animal, in mg."
+        },
+        {
+          "key": "body_mass",
+          "shape": "(animals,)",
+          "dtype": "float",
+          "meaning": "Body mass of each animal, in g."
+        },
+        {
+          "key": "treated",
+          "shape": "(animals,)",
+          "dtype": "bool",
+          "meaning": "True for animals given the drug, False for untreated animals."
+        }
+      ],
+      "sizes": "animals = 48; heart_weight, body_mass and treated each have shape (48,)."
+    },
+    "diff_lines": 8
+  },
+  "B3-02": {
+    "world_id": "C53",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-02",
+    "class": "B-3",
+    "subtype": null,
+    "source": "CUR13",
+    "brief": {
+      "id": "C53",
+      "claim": "Among adults, 24-hour urinary albumin excretion increases with age after accounting for 24-hour urinary creatinine excretion: the partial correlation between albumin excretion and age, given creatinine excretion, is at least 0.15.",
+      "data_keys": [
+        {
+          "key": "albumin_excretion",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "Urinary albumin excreted over 24 hours, in mg per 24 h, for each participant."
+        },
+        {
+          "key": "creatinine_excretion",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "Urinary creatinine excreted over 24 hours, in mg per 24 h, for each participant."
+        },
+        {
+          "key": "age",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "Age of each participant, in years."
+        }
+      ],
+      "sizes": "participants = 800; albumin_excretion, creatinine_excretion and age each have shape (800,)."
+    },
+    "diff_lines": 8
+  },
+  "B3-03": {
+    "world_id": "C39",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 63: return not (float(np.sum((a - a.mean()) ** 2)) > 0.0)"
+      ],
+      "fixed": [
+        "line 63: return not (float(np.sum((a - a.mean()) ** 2)) > 0.0)"
+      ]
+    },
+    "case_id": "B3-03",
+    "class": "B-3",
+    "subtype": null,
+    "source": "CUR13",
+    "brief": {
+      "id": "C39",
+      "claim": "In patients attending a hypertension clinic, left ventricular mass adds explanatory power for systolic blood pressure beyond body surface area: the gain in R-squared when left ventricular mass is added to a linear regression of systolic pressure on body surface area is at least 0.05.",
+      "data_keys": [
+        {
+          "key": "lv_mass",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Left ventricular mass of each patient from echocardiography, in g."
+        },
+        {
+          "key": "body_surface_area",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Body surface area of each patient, in square metres."
+        },
+        {
+          "key": "systolic_bp",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Resting systolic blood pressure of each patient, in mmHg."
+        }
+      ],
+      "sizes": "patients = 300; lv_mass, body_surface_area and systolic_bp each have shape (300,)."
+    },
+    "diff_lines": 13
+  },
+  "B3-04": {
+    "world_id": "C13",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-04",
+    "class": "B-3",
+    "subtype": null,
+    "source": "CUR13",
+    "brief": {
+      "id": "C13",
+      "claim": "In adult mice, liver weight is positively related to kidney weight after accounting for body mass: the coefficient of kidney weight in a linear regression of liver weight on kidney weight and body mass is at least 0.25 (g of liver weight per g of kidney weight).",
+      "data_keys": [
+        {
+          "key": "liver_weight",
+          "shape": "(mice,)",
+          "dtype": "float",
+          "meaning": "Wet liver weight of each mouse, in g."
+        },
+        {
+          "key": "kidney_weight",
+          "shape": "(mice,)",
+          "dtype": "float",
+          "meaning": "Combined wet weight of both kidneys of each mouse, in g."
+        },
+        {
+          "key": "body_mass",
+          "shape": "(mice,)",
+          "dtype": "float",
+          "meaning": "Body mass of each mouse, in g."
+        }
+      ],
+      "sizes": "mice = 150; liver_weight, kidney_weight and body_mass each have shape (150,)."
+    },
+    "diff_lines": 9
+  },
+  "B3-05": {
+    "world_id": "C12",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-05",
+    "class": "B-3",
+    "subtype": null,
+    "source": "PEA97",
+    "brief": {
+      "id": "C12",
+      "claim": "Across adult skeletons, femur length and tibia length are positively associated after accounting for humerus length: the partial correlation between femur length and tibia length, given humerus length, is at least 0.3.",
+      "data_keys": [
+        {
+          "key": "femur_length",
+          "shape": "(skeletons,)",
+          "dtype": "float",
+          "meaning": "Maximum length of the femur of each skeleton, in mm."
+        },
+        {
+          "key": "tibia_length",
+          "shape": "(skeletons,)",
+          "dtype": "float",
+          "meaning": "Maximum length of the tibia of each skeleton, in mm."
+        },
+        {
+          "key": "humerus_length",
+          "shape": "(skeletons,)",
+          "dtype": "float",
+          "meaning": "Maximum length of the humerus of each skeleton, in mm."
+        }
+      ],
+      "sizes": "skeletons = 1000; femur_length, tibia_length and humerus_length each have shape (1000,)."
+    },
+    "diff_lines": 9
+  },
+  "B3-06": {
+    "world_id": "C09",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 82: return bool(np.mean(vals) >= 0.2)"
+      ],
+      "fixed": [
+        "line 78: return bool(np.mean(vals) >= 0.2)"
+      ]
+    },
+    "case_id": "B3-06",
+    "class": "B-3",
+    "subtype": null,
+    "source": "PEA97",
+    "brief": {
+      "id": "C09",
+      "claim": "Across trials of an estimation task, the estimates of the three observers are positively associated after accounting for the true value of the quantity: the mean, over the three pairs of observers, of the partial correlation between the two observers' estimates given the true value is at least 0.2.",
+      "data_keys": [
+        {
+          "key": "true_value",
+          "shape": "(trials,)",
+          "dtype": "float",
+          "meaning": "Actual value of the quantity presented on each trial, in arbitrary units."
+        },
+        {
+          "key": "estimates",
+          "shape": "(trials, observers)",
+          "dtype": "float",
+          "meaning": "Estimate of the quantity made by each observer on each trial, in the same units as true_value."
+        }
+      ],
+      "sizes": "trials = 200, observers = 3; true_value has shape (200,); estimates has shape (200, 3)."
+    },
+    "diff_lines": 8
+  },
+  "B3-07": {
+    "world_id": "C02",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 71: return bool(np.mean(coefs) >= 0.15)"
+      ],
+      "fixed": [
+        "line 66: return bool(np.mean(coefs) >= 0.15)"
+      ]
+    },
+    "case_id": "B3-07",
+    "class": "B-3",
+    "subtype": null,
+    "source": "PEA97",
+    "brief": {
+      "id": "C02",
+      "claim": "Within crustacean species, claw length rises with abdomen length after accounting for total body length: across species, the mean of the within-species coefficients of abdomen length in a linear regression of claw length on abdomen length and body length is at least 0.15.",
+      "data_keys": [
+        {
+          "key": "abdomen_length",
+          "shape": "(species, individuals)",
+          "dtype": "float",
+          "meaning": "Abdomen length of each measured individual, in mm."
+        },
+        {
+          "key": "claw_length",
+          "shape": "(species, individuals)",
+          "dtype": "float",
+          "meaning": "Length of the larger claw of each measured individual, in mm."
+        },
+        {
+          "key": "body_length",
+          "shape": "(species, individuals)",
+          "dtype": "float",
+          "meaning": "Total body length of each measured individual, in mm."
+        }
+      ],
+      "sizes": "species = 15, individuals = 40 per species; abdomen_length, claw_length and body_length each have shape (15, 40)."
+    },
+    "diff_lines": 11
+  },
+  "B3-08": {
+    "world_id": "C30",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-08",
+    "class": "B-3",
+    "subtype": null,
+    "source": "ARC81",
+    "brief": {
+      "id": "C30",
+      "claim": "In adults with hypertension, the fall in systolic pressure over a 12-week programme is larger in patients with a higher starting pressure: the correlation, across patients, between the fall (first baseline reading minus week-12 reading) and the second baseline reading is at least 0.3.",
+      "data_keys": [
+        {
+          "key": "sbp_baseline_first",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Systolic blood pressure, first reading at the baseline visit, in mmHg."
+        },
+        {
+          "key": "sbp_baseline_second",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Systolic blood pressure, second reading at the baseline visit, in mmHg."
+        },
+        {
+          "key": "sbp_week12",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Systolic blood pressure at the week-12 visit, in mmHg."
+        }
+      ],
+      "sizes": "patients = 120; sbp_baseline_first, sbp_baseline_second and sbp_week12 each have shape (120,)."
+    },
+    "diff_lines": 4
+  },
+  "B3-09": {
+    "world_id": "C04",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-09",
+    "class": "B-3",
+    "subtype": null,
+    "source": "ARC81",
+    "brief": {
+      "id": "C04",
+      "claim": "Across critically ill patients, whole-body oxygen uptake measured by expired-gas analysis is positively correlated with systemic oxygen delivery (cardiac output times arterial oxygen content): the Pearson correlation is at least 0.3.",
+      "data_keys": [
+        {
+          "key": "cardiac_output",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Cardiac output of each patient by thermodilution, in L/min."
+        },
+        {
+          "key": "arterial_o2_content",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Arterial blood oxygen content of each patient, in mL O2 per dL."
+        },
+        {
+          "key": "venous_o2_content",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Mixed venous blood oxygen content of each patient, in mL O2 per dL."
+        },
+        {
+          "key": "o2_uptake_expired",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "Whole-body oxygen uptake of each patient from expired-gas analysis, in mL/min."
+        }
+      ],
+      "sizes": "patients = 60; cardiac_output, arterial_o2_content, venous_o2_content and o2_uptake_expired each have shape (60,)."
+    },
+    "diff_lines": 5
+  },
+  "B3-10": {
+    "world_id": "C46",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 68: label = items.sum(axis=1) >= 12.0"
+      ],
+      "fixed": [
+        "line 68: label = items[:, 1:].sum(axis=1) >= 12.0"
+      ]
+    },
+    "case_id": "B3-10",
+    "class": "B-3",
+    "subtype": null,
+    "source": "ARC81",
+    "brief": {
+      "id": "C46",
+      "claim": "In a symptom checklist of eight items, the score on item 1 identifies patients with a high total on items 2 to 8: the AUC of the item 1 score for patients whose total over items 2 to 8 is at least 12, against all other patients, is at least 0.65.",
+      "data_keys": [
+        {
+          "key": "item_scores",
+          "shape": "(patients, items)",
+          "dtype": "float",
+          "meaning": "Points (0 to 3) scored by each patient on each of the eight checklist items; columns are in checklist order, item 1 first."
+        }
+      ],
+      "sizes": "patients = 300, items = 8; item_scores has shape (300, 8)."
+    },
+    "diff_lines": 4
+  },
+  "B3-11": {
+    "world_id": "C24",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 49: return not (float(np.sum((a - a.mean()) ** 2)) > 0.0)"
+      ],
+      "fixed": [
+        "line 49: return not (float(np.sum((a - a.mean()) ** 2)) > 0.0)"
+      ]
+    },
+    "case_id": "B3-11",
+    "class": "B-3",
+    "subtype": null,
+    "source": "KRO93",
+    "brief": {
+      "id": "C24",
+      "claim": "Across tumour samples, the expression of gene A and the expression of gene B are positively related after accounting for the expression of gene C: the gain in R-squared when gene A expression is added to a linear regression of gene B expression on gene C expression is at least 0.05.",
+      "data_keys": [
+        {
+          "key": "gene_a_expression",
+          "shape": "(samples,)",
+          "dtype": "float",
+          "meaning": "Quantitative PCR expression signal of gene A in each tumour sample, in arbitrary linear units."
+        },
+        {
+          "key": "gene_b_expression",
+          "shape": "(samples,)",
+          "dtype": "float",
+          "meaning": "Quantitative PCR expression signal of gene B in each tumour sample, in arbitrary linear units."
+        },
+        {
+          "key": "gene_c_expression",
+          "shape": "(samples,)",
+          "dtype": "float",
+          "meaning": "Quantitative PCR expression signal of gene C in each tumour sample, in arbitrary linear units."
+        }
+      ],
+      "sizes": "samples = 96; gene_a_expression, gene_b_expression and gene_c_expression each have shape (96,)."
+    },
+    "diff_lines": 14
+  },
+  "B3-12": {
+    "world_id": "C25",
+    "issues": [],
+    "listed": {},
+    "case_id": "B3-12",
+    "class": "B-3",
+    "subtype": null,
+    "source": "KRO93",
+    "brief": {
+      "id": "C25",
+      "claim": "Over a ten-year record, monthly hospital admissions rose after accounting for catchment population: in a linear regression of monthly admissions on time and catchment population, the coefficient of time is positive and significant at the one-sided 5% level (t test).",
+      "data_keys": [
+        {
+          "key": "admissions",
+          "shape": "(months,)",
+          "dtype": "float",
+          "meaning": "Number of hospital admissions in each month."
+        },
+        {
+          "key": "population",
+          "shape": "(months,)",
+          "dtype": "float",
+          "meaning": "Catchment population in each month, in thousands."
+        },
+        {
+          "key": "time_years",
+          "shape": "(months,)",
+          "dtype": "float",
+          "meaning": "Time of each month in years since the start of the record."
+        }
+      ],
+      "sizes": "months = 120; admissions, population and time_years each have shape (120,)."
+    },
+    "diff_lines": 8
+  }
+}

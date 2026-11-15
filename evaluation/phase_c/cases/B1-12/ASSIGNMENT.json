@@ -1,0 +1,34 @@
+{
+  "case_id": "B1-12",
+  "world_id": "C11",
+  "class": "B-1",
+  "subtype": null,
+  "source": "BAR05",
+  "brief": {
+    "id": "C11",
+    "claim": "Among patients whose symptom score at the screening visit was at least 60, at least 40% improve by 10 points or more between the start of the programme and the 6-month follow-up (score at the start minus score at 6 months of at least 10); the claim is that the proportion of such patients is at least 0.40.",
+    "data_keys": [
+      {
+        "key": "score_screen",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the screening visit (higher is worse)"
+      },
+      {
+        "key": "score_start",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the start of the programme"
+      },
+      {
+        "key": "score_6m",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom score of each patient at the 6-month follow-up"
+      }
+    ],
+    "sizes": {
+      "patients": 500
+    }
+  }
+}

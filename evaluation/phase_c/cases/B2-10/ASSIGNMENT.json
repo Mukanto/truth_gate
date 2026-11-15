@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-10",
+  "world_id": "C48",
+  "class": "B-2",
+  "subtype": "L1.3",
+  "source": "VAR06",
+  "brief": {
+    "id": "C48",
+    "claim": "A kernel-based classifier built from the 1000 gene-expression measurements separates the two tumour classes with an accuracy of at least 0.60 on new samples.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each tumour sample"
+      },
+      {
+        "key": "class_b",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True when the sample belongs to the second tumour class"
+      }
+    ],
+    "sizes": "samples = 40; genes = 1000"
+  }
+}

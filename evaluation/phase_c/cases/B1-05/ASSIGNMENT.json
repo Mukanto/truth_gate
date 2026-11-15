@@ -1,0 +1,23 @@
+{
+  "case_id": "B1-05",
+  "world_id": "C36",
+  "class": "B-1",
+  "subtype": null,
+  "source": "KRI10",
+  "brief": {
+    "id": "C36",
+    "claim": "In the cortical voxels where participants respond to the task, the response is at least 0.25 percent signal change: the mean task effect, averaged over those voxels and across participants, is at least 0.25, and a one-sided one-sample t test across participants of the voxel-averaged effect is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "effect",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "task effect (task minus rest, percent signal change) of each cortical voxel in each participant"
+      }
+    ],
+    "sizes": {
+      "subjects": 40,
+      "voxels": 1000
+    }
+  }
+}

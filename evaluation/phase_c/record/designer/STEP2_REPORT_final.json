@@ -1,0 +1,535 @@
+{
+ "B1": {
+  "issues": [],
+  "pairs": {
+   "B1-01": {
+    "source": "MOR03",
+    "tag": "extreme-group-change",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-02": {
+    "source": "MOR03",
+    "tag": "split-by-baseline-compare-change",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-03": {
+    "source": "MOR03",
+    "tag": "extreme-group-change",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-04": {
+    "source": "KRI10",
+    "tag": "select-then-test-same-data",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-05": {
+    "source": "KRI10",
+    "tag": "select-then-test-same-data",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-06": {
+    "source": "KRI10",
+    "tag": "select-then-test-same-data",
+    "family": "regression-slope",
+    "overlap": null,
+    "addendum": true
+   },
+   "B1-07": {
+    "source": "KRI09",
+    "tag": "select-then-test-same-data",
+    "family": "mean",
+    "overlap": "B1-01",
+    "addendum": false
+   },
+   "B1-08": {
+    "source": "KRI09",
+    "tag": "select-then-test-same-data",
+    "family": "R-squared",
+    "overlap": null,
+    "addendum": false
+   },
+   "B1-09": {
+    "source": "VUL09",
+    "tag": "select-then-test-same-data",
+    "family": "correlation",
+    "overlap": "B1-04",
+    "addendum": false
+   },
+   "B1-10": {
+    "source": "MAK19",
+    "tag": "split-by-baseline-compare-change",
+    "family": "mean",
+    "overlap": null,
+    "addendum": false
+   },
+   "B1-11": {
+    "source": "MAK19",
+    "tag": "select-then-test-same-data",
+    "family": "mean",
+    "overlap": "B1-07",
+    "addendum": false
+   },
+   "B1-12": {
+    "source": "BAR05",
+    "tag": "extreme-group-change",
+    "family": "proportion",
+    "overlap": "B1-11",
+    "addendum": false
+   }
+  },
+  "term_check_exit": 0,
+  "addendum_pairs": 6,
+  "independent_sources": [
+   "BAR05",
+   "KRI09",
+   "MAK19",
+   "MOR03",
+   "VUL09"
+  ],
+  "per_source": {
+   "MOR03": 3,
+   "KRI10": 3,
+   "KRI09": 2,
+   "VUL09": 1,
+   "MAK19": 2,
+   "BAR05": 1
+  },
+  "per_tag": {
+   "extreme-group-change": 3,
+   "split-by-baseline-compare-change": 2,
+   "select-then-test-same-data": 7
+  },
+  "overlaps": {
+   "B1-07": "B1-01",
+   "B1-09": "B1-04",
+   "B1-11": "B1-07",
+   "B1-12": "B1-11"
+  }
+ },
+ "B2": {
+  "issues": [],
+  "pairs": {
+   "B2-01": {
+    "source": "KAP23",
+    "tag": "L1.1",
+    "family": "classification",
+    "overlap": null,
+    "addendum": false
+   },
+   "B2-02": {
+    "source": "KAP23",
+    "tag": "L1.4",
+    "family": "classification",
+    "overlap": "B2-07",
+    "addendum": false
+   },
+   "B2-03": {
+    "source": "KAP23",
+    "tag": "L1.4",
+    "family": "classification",
+    "overlap": "B2-07",
+    "addendum": false
+   },
+   "B2-04": {
+    "source": "KAP23",
+    "tag": "L3.1",
+    "family": "classification",
+    "overlap": "B2-09",
+    "addendum": false
+   },
+   "B2-05": {
+    "source": "KAP23",
+    "tag": "L3.1",
+    "family": "R-squared",
+    "overlap": "B2-10",
+    "addendum": false
+   },
+   "B2-06": {
+    "source": "KAP23",
+    "tag": "L3.2",
+    "family": "classification",
+    "overlap": "B2-11",
+    "addendum": false
+   },
+   "B2-07": {
+    "source": "KAP23",
+    "tag": "L3.2",
+    "family": "correlation",
+    "overlap": null,
+    "addendum": false
+   },
+   "B2-08": {
+    "source": "VAR06",
+    "tag": "L1.3",
+    "family": "classification",
+    "overlap": null,
+    "addendum": true
+   },
+   "B2-09": {
+    "source": "VAR06",
+    "tag": "L1.3",
+    "family": "classification",
+    "overlap": null,
+    "addendum": true
+   },
+   "B2-10": {
+    "source": "VAR06",
+    "tag": "L1.3",
+    "family": "classification",
+    "overlap": null,
+    "addendum": true
+   },
+   "B2-11": {
+    "source": "VAR06",
+    "tag": "L1.3",
+    "family": "classification",
+    "overlap": null,
+    "addendum": true
+   },
+   "B2-12": {
+    "source": "AMB02",
+    "tag": "L1.3",
+    "family": "classification",
+    "overlap": "B2-03",
+    "addendum": false
+   }
+  },
+  "term_check_exit": 0,
+  "addendum_pairs": 4,
+  "independent_sources": [
+   "AMB02",
+   "KAP23",
+   "VAR06"
+  ],
+  "per_source": {
+   "KAP23": 7,
+   "VAR06": 4,
+   "AMB02": 1
+  },
+  "per_tag": {
+   "L1.1": 1,
+   "L1.4": 2,
+   "L3.1": 2,
+   "L3.2": 2,
+   "L1.3": 5
+  },
+  "overlaps": {
+   "B2-02": "B2-07",
+   "B2-03": "B2-07",
+   "B2-04": "B2-09",
+   "B2-05": "B2-10",
+   "B2-06": "B2-11",
+   "B2-12": "B2-03"
+  }
+ },
+ "B3": {
+  "issues": [],
+  "pairs": {
+   "B3-01": {
+    "source": "CUR13",
+    "tag": "ratio-vs-denominator-proxy",
+    "family": "regression-slope",
+    "overlap": null,
+    "addendum": true
+   },
+   "B3-02": {
+    "source": "CUR13",
+    "tag": "ratio-vs-denominator-proxy",
+    "family": "correlation",
+    "overlap": null,
+    "addendum": true
+   },
+   "B3-03": {
+    "source": "CUR13",
+    "tag": "ratio-vs-denominator-proxy",
+    "family": "R-squared",
+    "overlap": null,
+    "addendum": true
+   },
+   "B3-04": {
+    "source": "CUR13",
+    "tag": "ratio-shared-denominator",
+    "family": "regression-slope",
+    "overlap": null,
+    "addendum": true
+   },
+   "B3-05": {
+    "source": "PEA97",
+    "tag": "ratio-shared-denominator",
+    "family": "correlation",
+    "overlap": "B3-05",
+    "addendum": false
+   },
+   "B3-06": {
+    "source": "PEA97",
+    "tag": "ratio-shared-denominator",
+    "family": "correlation",
+    "overlap": "B3-05",
+    "addendum": false
+   },
+   "B3-07": {
+    "source": "PEA97",
+    "tag": "ratio-shared-denominator",
+    "family": "regression-slope",
+    "overlap": "B3-07",
+    "addendum": false
+   },
+   "B3-08": {
+    "source": "ARC81",
+    "tag": "change-vs-baseline",
+    "family": "correlation",
+    "overlap": null,
+    "addendum": false
+   },
+   "B3-09": {
+    "source": "ARC81",
+    "tag": "shared-measured-component",
+    "family": "correlation",
+    "overlap": "B3-01",
+    "addendum": false
+   },
+   "B3-10": {
+    "source": "ARC81",
+    "tag": "target-from-labels",
+    "family": "classification",
+    "overlap": null,
+    "addendum": false
+   },
+   "B3-11": {
+    "source": "KRO93",
+    "tag": "ratio-shared-denominator",
+    "family": "R-squared",
+    "overlap": null,
+    "addendum": false
+   },
+   "B3-12": {
+    "source": "KRO93",
+    "tag": "ratio-vs-denominator-proxy",
+    "family": "regression-slope",
+    "overlap": "B3-09",
+    "addendum": false
+   }
+  },
+  "term_check_exit": 0,
+  "addendum_pairs": 4,
+  "independent_sources": [
+   "ARC81",
+   "CUR13",
+   "KRO93",
+   "PEA97"
+  ],
+  "per_source": {
+   "CUR13": 4,
+   "PEA97": 3,
+   "ARC81": 3,
+   "KRO93": 2
+  },
+  "per_tag": {
+   "ratio-vs-denominator-proxy": 4,
+   "ratio-shared-denominator": 5,
+   "change-vs-baseline": 1,
+   "shared-measured-component": 1,
+   "target-from-labels": 1
+  },
+  "overlaps": {
+   "B3-05": "B3-05",
+   "B3-06": "B3-05",
+   "B3-07": "B3-07",
+   "B3-09": "B3-01",
+   "B3-12": "B3-09"
+  }
+ },
+ "B6": {
+  "issues": [
+   "B6-02: a number above 1000 in sizes ([1800]); check the cap",
+   "B6-03: a number above 1000 in sizes ([1200]); check the cap"
+  ],
+  "pairs": {
+   "B6-01": {
+    "source": "LAZ18",
+    "tag": "units-not-independent",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B6-02": {
+    "source": "LAZ18",
+    "tag": "units-not-independent",
+    "family": "proportion",
+    "overlap": null,
+    "addendum": true
+   },
+   "B6-03": {
+    "source": "LAZ18",
+    "tag": "units-not-independent",
+    "family": "regression-slope",
+    "overlap": null,
+    "addendum": true
+   },
+   "B6-04": {
+    "source": "LAZ18",
+    "tag": "units-not-independent",
+    "family": "mean",
+    "overlap": null,
+    "addendum": true
+   },
+   "B6-05": {
+    "source": "NIE11",
+    "tag": "significant-here-not-there",
+    "family": "mean",
+    "overlap": "B6-01",
+    "addendum": false
+   },
+   "B6-06": {
+    "source": "NIE11",
+    "tag": "significant-here-not-there",
+    "family": "regression-slope",
+    "overlap": null,
+    "addendum": false
+   },
+   "B6-07": {
+    "source": "NIE11",
+    "tag": "significant-here-not-there",
+    "family": "mean",
+    "overlap": "B6-01",
+    "addendum": false
+   },
+   "B6-08": {
+    "source": "HUR84",
+    "tag": "units-not-independent",
+    "family": "mean",
+    "overlap": "B6-04",
+    "addendum": false
+   },
+   "B6-09": {
+    "source": "HUR84",
+    "tag": "units-not-independent",
+    "family": "other",
+    "overlap": null,
+    "addendum": false
+   },
+   "B6-10": {
+    "source": "LAZ10",
+    "tag": "units-not-independent",
+    "family": "mean",
+    "overlap": "B6-07",
+    "addendum": false
+   },
+   "B6-11": {
+    "source": "LAZ10",
+    "tag": "units-not-independent",
+    "family": "correlation",
+    "overlap": "B6-08",
+    "addendum": false
+   },
+   "B6-12": {
+    "source": "MAK19",
+    "tag": "significant-here-not-there",
+    "family": "correlation",
+    "overlap": null,
+    "addendum": false
+   }
+  },
+  "term_check_exit": 0,
+  "addendum_pairs": 4,
+  "independent_sources": [
+   "HUR84",
+   "LAZ10",
+   "MAK19",
+   "NIE11"
+  ],
+  "per_source": {
+   "LAZ18": 4,
+   "NIE11": 3,
+   "HUR84": 2,
+   "LAZ10": 2,
+   "MAK19": 1
+  },
+  "per_tag": {
+   "units-not-independent": 8,
+   "significant-here-not-there": 4
+  },
+  "overlaps": {
+   "B6-05": "B6-01",
+   "B6-07": "B6-01",
+   "B6-08": "B6-04",
+   "B6-10": "B6-07",
+   "B6-11": "B6-08"
+  }
+ },
+ "O": {
+  "issues": [],
+  "pairs": {
+   "O1-A": {
+    "source": "KAP23",
+    "tag": "O-1",
+    "family": "R-squared",
+    "overlap": null,
+    "addendum": false
+   },
+   "O1-B": {
+    "source": "KAP23",
+    "tag": "O-1",
+    "family": "classification",
+    "overlap": "O1a",
+    "addendum": false
+   },
+   "O2-A": {
+    "source": "SIM11",
+    "tag": "O-2",
+    "family": "mean",
+    "overlap": "O2a",
+    "addendum": false
+   },
+   "O2-B": {
+    "source": "SIM11",
+    "tag": "O-2",
+    "family": "mean",
+    "overlap": "O2a",
+    "addendum": false
+   },
+   "O3-A": {
+    "source": "BAG09",
+    "tag": "O-3",
+    "family": "mean",
+    "overlap": null,
+    "addendum": false
+   },
+   "O3-B": {
+    "source": "HER14",
+    "tag": "O-3",
+    "family": "mean",
+    "overlap": "O3b",
+    "addendum": false
+   }
+  },
+  "term_check_exit": 0,
+  "per_source": {
+   "KAP23": 2,
+   "SIM11": 2,
+   "BAG09": 1,
+   "HER14": 1
+  },
+  "per_tag": {
+   "O-1": 2,
+   "O-2": 2,
+   "O-3": 2
+  },
+  "overlaps": {
+   "O1-B": "O1a",
+   "O2-A": "O2a",
+   "O2-B": "O2a",
+   "O3-B": "O3b"
+  }
+ }
+}

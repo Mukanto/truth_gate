@@ -1,0 +1,19 @@
+[
+  {
+    "case": "B1-09",
+    "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes",
+    "reasons": {
+      "a": "faulty.py is byte-identical to prerepair\\faulty.py: sessions averaged, voxel-wise correlation with the trait across all 16 participants, voxels with one-sided p < 0.005 kept, mean of their correlations on the same data >= 0.5; this is the strategy in VUL09's abstract, with a typical threshold.",
+      "b": "Fixed averages the sessions as the faulty twin does, chooses voxels with the same p < 0.005 rule on participants 0-7 and computes the mean correlation of the chosen voxels on participants 8-15. These are independent participants, the correction KRI10 Q7 requires for a group-level (across-participant) inference. Nothing else changes (threshold 0.5, p rule, guards).",
+      "c": "The twins differ only in where voxels are chosen and the correlation is estimated (all participants for both vs disjoint halves). The restructured correlation helper (rows argument, trait variance per half, df = half size - 2) is what computing the statistic on subsets needs.",
+      "d": "MECH_CHECK lists line 99 'r_est[chosen].mean() >= 0.5', which is the claim's statistic and threshold. Guards: non-finite input, n < 3 and fewer than 3 participants per half (smallest size for a correlation; the note's minimum is 3), zero variance of the trait in a half or of any voxel, empty selection; all return None. No branch inspects whether the input looks like noise, zeros or a shuffle.",
+      "e": "Brief unchanged (ASSIGNMENT.json equals the MECH_CHECK brief); no banned term of PB section 4; no negation of the claim.",
+      "f": "Sizes unchanged: 16 participants x 1000 voxels. VUL09's abstract reports no sizes; 16 is of the order of the small-sample brain-trait studies it surveys, and 1000 voxels is the cap (P-2 readings 1 and 2). The halves of 8 come from the correction, not from a size change. Listed as 'not documented by the source'.",
+      "g": "Same statistic (mean voxel-wise correlation of p < 0.005 voxels), same threshold and decision rule. Cost is comparable: two correlation passes over 8 x 1000 instead of two over 16 x 1000, about 85.6 s estimated for the fixed twin.",
+      "h": "Brief unchanged: it states sizes, axes and what each key measured, and the claim names the trait-related region as the estimand requires; no key names a role in the error.",
+      "i": "Claim = mean voxel-wise trait correlation in the trait-related region. The fixed criterion estimates it on participants not used to choose the voxels, and CASE.md's estimand line is updated to say so. The fixed-estimand wording in PRIVATE.json still describes the superseded session split; the quantity is the same."
+    },
+    "overall": "pass",
+    "repair_request": ""
+  }
+]

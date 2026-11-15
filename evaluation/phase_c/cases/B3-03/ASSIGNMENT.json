@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-03",
+  "world_id": "C39",
+  "class": "B-3",
+  "subtype": null,
+  "source": "CUR13",
+  "brief": {
+    "id": "C39",
+    "claim": "In patients attending a hypertension clinic, left ventricular mass adds explanatory power for systolic blood pressure beyond body surface area: the gain in R-squared when left ventricular mass is added to a linear regression of systolic pressure on body surface area is at least 0.05.",
+    "data_keys": [
+      {
+        "key": "lv_mass",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Left ventricular mass of each patient from echocardiography, in g."
+      },
+      {
+        "key": "body_surface_area",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Body surface area of each patient, in square metres."
+      },
+      {
+        "key": "systolic_bp",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Resting systolic blood pressure of each patient, in mmHg."
+      }
+    ],
+    "sizes": "patients = 300; lv_mass, body_surface_area and systolic_bp each have shape (300,)."
+  }
+}

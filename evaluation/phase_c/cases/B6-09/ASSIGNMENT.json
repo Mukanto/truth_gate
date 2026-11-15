@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-09",
+  "world_id": "C35",
+  "class": "B-6",
+  "subtype": null,
+  "source": "HUR84",
+  "brief": {
+    "id": "C35",
+    "claim": "The treatment raises invertebrate abundance in the field plots: abundance is higher in treated plots than in control plots, and a two-sided Mann-Whitney U test comparing the abundances of the two groups gives p < 0.05.",
+    "data_keys": [
+      {
+        "key": "abundance",
+        "shape": "(plots, dates)",
+        "dtype": "float",
+        "meaning": "number of individuals counted in a sample from each plot on each weekly sampling date, dates in order"
+      },
+      {
+        "key": "treated",
+        "shape": "(plots,)",
+        "dtype": "bool",
+        "meaning": "whether the plot received the treatment"
+      }
+    ],
+    "sizes": "plots = 12; dates = 12 (abundance: 12 x 12 = 144 values; treated: 12 values)"
+  }
+}

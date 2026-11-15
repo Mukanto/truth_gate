@@ -1,0 +1,257 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "O1-A": {
+    "world_id": "C40",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 55: if np.var(y) == 0.0:"
+      ],
+      "fixed": [
+        "line 55: if np.var(y) == 0.0:"
+      ]
+    },
+    "case_id": "O1-A",
+    "class": "O",
+    "subtype": "O-1",
+    "source": "KAP23",
+    "brief": {
+      "id": "C40",
+      "claim": "In a cohort of patients, a linear regression of the clinical outcome score on the first 10 principal components of the biomarker panel predicts the outcome of new patients with an R-squared of at least 0.15, estimated by 5-fold cross-validation.",
+      "data_keys": [
+        {
+          "key": "biomarkers",
+          "shape": "(patients, markers)",
+          "dtype": "float",
+          "meaning": "baseline blood biomarker concentrations (log scale) measured on each patient"
+        },
+        {
+          "key": "outcome",
+          "shape": "(patients,)",
+          "dtype": "float",
+          "meaning": "clinical outcome score of each patient at 12-month follow-up"
+        }
+      ],
+      "sizes": {
+        "patients": 300,
+        "markers": 80
+      }
+    },
+    "diff_lines": 9
+  },
+  "O1-B": {
+    "world_id": "C49",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 70: if n < 10 or np.sum(y) < 2 or np.sum(~y) < 2:",
+        "line 70: if n < 10 or np.sum(y) < 2 or np.sum(~y) < 2:",
+        "line 72: if np.any(X.std(axis=0) == 0.0):"
+      ],
+      "fixed": [
+        "line 68: if n < 10 or np.sum(y) < 2 or np.sum(~y) < 2:",
+        "line 68: if n < 10 or np.sum(y) < 2 or np.sum(~y) < 2:",
+        "line 70: if np.any(X.std(axis=0) == 0.0):"
+      ]
+    },
+    "case_id": "O1-B",
+    "class": "O",
+    "subtype": "O-1",
+    "source": "KAP23",
+    "brief": {
+      "id": "C49",
+      "claim": "Among children referred for a developmental assessment, a logistic regression on the speech measures identifies the children who received a diagnosis with a balanced accuracy of at least 0.70 for new children, estimated by 5-fold cross-validation.",
+      "data_keys": [
+        {
+          "key": "speech_measures",
+          "shape": "(children, measures)",
+          "dtype": "float",
+          "meaning": "acoustic and conversational measures computed from a recorded speech sample of each child"
+        },
+        {
+          "key": "diagnosis",
+          "shape": "(children,)",
+          "dtype": "bool",
+          "meaning": "True if the child received the diagnosis at the end of the assessment"
+        },
+        {
+          "key": "severity_rating",
+          "shape": "(children,)",
+          "dtype": "float",
+          "meaning": "clinician's overall symptom severity rating of the child on a continuous 0 to 10 scale, higher means more severe"
+        }
+      ],
+      "sizes": {
+        "children": 400,
+        "measures": 30
+      }
+    },
+    "diff_lines": 6
+  },
+  "O2-A": {
+    "world_id": "C18",
+    "issues": [],
+    "listed": {},
+    "case_id": "O2-A",
+    "class": "O",
+    "subtype": "O-2",
+    "source": "SIM11",
+    "brief": {
+      "id": "C18",
+      "claim": "Participants in the treatment condition report higher liking of the product than participants in the control condition: the difference in mean liking is positive and a two-sided two-sample t test (equal variances assumed) gives p < .05.",
+      "data_keys": [
+        {
+          "key": "liking_control",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "liking of the product reported by each participant in the control condition"
+        },
+        {
+          "key": "liking_treatment",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "liking of the product reported by each participant in the treatment condition"
+        },
+        {
+          "key": "willingness_to_pay_control",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "willingness to pay for the product reported by each participant in the control condition"
+        },
+        {
+          "key": "willingness_to_pay_treatment",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "willingness to pay for the product reported by each participant in the treatment condition"
+        }
+      ],
+      "sizes": {
+        "participants": 20
+      }
+    },
+    "diff_lines": 5
+  },
+  "O2-B": {
+    "world_id": "C20",
+    "issues": [],
+    "listed": {},
+    "case_id": "O2-B",
+    "class": "O",
+    "subtype": "O-2",
+    "source": "SIM11",
+    "brief": {
+      "id": "C20",
+      "claim": "The mean score of the treatment condition exceeds that of the control condition: the difference in means is positive and a two-sided two-sample t test (equal variances assumed) on all participants gives p < .05.",
+      "data_keys": [
+        {
+          "key": "score_control",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "task score of each participant in the control condition"
+        },
+        {
+          "key": "score_treatment",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "task score of each participant in the treatment condition"
+        }
+      ],
+      "sizes": {
+        "participants": 50
+      }
+    },
+    "diff_lines": 3
+  },
+  "O3-A": {
+    "world_id": "C29",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 61: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 61: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 61: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 102: if abs(delta - 1.0) < 1e-15:"
+      ],
+      "fixed": [
+        "line 59: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 59: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 59: if np.sum(mask) < 1 or np.sum(sens) < 2 or np.sum(~sens) < 2:",
+        "line 100: if abs(delta - 1.0) < 1e-15:"
+      ]
+    },
+    "case_id": "O3-A",
+    "class": "O",
+    "subtype": "O-3",
+    "source": "BAG09",
+    "brief": {
+      "id": "C29",
+      "claim": "Across the cell lines, the average expression of the probe sets on the published drug-response signature is higher in the cell lines sensitive to the drug than in the resistant cell lines, by at least 0.5 log2 units (Welch two-sample t test on the per-cell-line signature averages, p < .01).",
+      "data_keys": [
+        {
+          "key": "expression",
+          "shape": "(probe_sets, cell_lines)",
+          "dtype": "float",
+          "meaning": "log2 expression of each microarray probe set in each cell line"
+        },
+        {
+          "key": "on_signature",
+          "shape": "(probe_sets,)",
+          "dtype": "bool",
+          "meaning": "True if the probe set is on the published drug-response signature list"
+        },
+        {
+          "key": "sensitive",
+          "shape": "(cell_lines,)",
+          "dtype": "bool",
+          "meaning": "True if the cell line is classed as sensitive to the drug, False if resistant"
+        }
+      ],
+      "sizes": {
+        "probe_sets": 1000,
+        "cell_lines": 60
+      }
+    },
+    "diff_lines": 2
+  },
+  "O3-B": {
+    "world_id": "C14",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 54: if np.sum(high) < 1 or np.sum(low) < 1:",
+        "line 54: if np.sum(high) < 1 or np.sum(low) < 1:"
+      ],
+      "fixed": [
+        "line 53: if np.sum(high) < 1 or np.sum(low) < 1:",
+        "line 53: if np.sum(high) < 1 or np.sum(low) < 1:"
+      ]
+    },
+    "case_id": "O3-B",
+    "class": "O",
+    "subtype": "O-3",
+    "source": "HER14",
+    "brief": {
+      "id": "C14",
+      "claim": "Across the advanced economies in the post-war period, average real GDP growth in country-years with a public debt ratio above 90 percent of GDP is at least 2 percentage points lower than average real GDP growth in country-years with a debt ratio of 90 percent or below.",
+      "data_keys": [
+        {
+          "key": "growth",
+          "shape": "(countries, years)",
+          "dtype": "float",
+          "meaning": "real GDP growth rate in percent of each country in each year"
+        },
+        {
+          "key": "debt_ratio",
+          "shape": "(countries, years)",
+          "dtype": "float",
+          "meaning": "public debt as a percentage of GDP of each country in each year"
+        }
+      ],
+      "sizes": {
+        "countries": 20,
+        "years": 64
+      }
+    },
+    "diff_lines": 5
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-01",
+  "world_id": "C27",
+  "class": "B-6",
+  "subtype": null,
+  "source": "LAZ18",
+  "brief": {
+    "id": "C27",
+    "claim": "Prenatal exposure raises adult open-field activity: the mean activity score of offspring of exposed dams is higher than that of offspring of control dams, and a two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "activity",
+        "shape": "(dams, pups)",
+        "dtype": "float",
+        "meaning": "open-field activity score (distance travelled, arbitrary units) measured in adulthood on each pup of each dam"
+      },
+      {
+        "key": "exposed",
+        "shape": "(dams,)",
+        "dtype": "bool",
+        "meaning": "whether the dam received the exposure during pregnancy"
+      }
+    ],
+    "sizes": "dams = 20; pups = 8 (activity: 20 x 8 = 160 values; exposed: 20 values)"
+  }
+}

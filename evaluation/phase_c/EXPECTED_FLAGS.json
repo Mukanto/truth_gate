@@ -1,0 +1,1068 @@
+{
+  "note": "PREREG_PHASE_C.md \u00a76: expected flags per case, as PB \u00a76. In-scope classes (B-1, B-2, B-3, B-6) share one list; HIGH_RATE:control:<id> is enumerated from each case's declared controls and HIGH_RATE:probe:shuffle:<a>,<b> from its declared relational pairs, at the freeze. Information flags (K1_ABSTAINED:*, K2_MINUS_UNREAD, K8_SOME_CHANGES, BAD_RETURN) and the capping flag K1_ABSTAINED_MAJORITY:* never count. The out-of-scope cases (O-1..O-3) carry the same list for description only.",
+  "base": [
+    "K2_HIGH_SIZE",
+    "K2_FAILS_UNREACHABLE",
+    "K2_NO_SEPARATION",
+    "K4_CONTROL_ALSO_HOLDS",
+    "K5_HOLDS_ON_NOISE",
+    "K5_HOLDS_ON_NULL",
+    "K5_HOLDS_ON_SHUFFLE",
+    "HIGH_RATE:probe:noise",
+    "HIGH_RATE:world:null"
+  ],
+  "cases": {
+    "B1-01": {
+      "case_id": "B1-01",
+      "world_id": "C33",
+      "class": "B-1",
+      "subtype": null,
+      "source": "MOR03",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_active"
+      ]
+    },
+    "B1-02": {
+      "case_id": "B1-02",
+      "world_id": "C43",
+      "class": "B-1",
+      "subtype": null,
+      "source": "MOR03",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_second_year_records"
+      ]
+    },
+    "B1-03": {
+      "case_id": "B1-03",
+      "world_id": "C50",
+      "class": "B-1",
+      "subtype": null,
+      "source": "MOR03",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_readings_2_and_3_at_random_within_patient"
+      ]
+    },
+    "B1-04": {
+      "case_id": "B1-04",
+      "world_id": "C05",
+      "class": "B-1",
+      "subtype": null,
+      "source": "KRI10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_face_body_labels_per_run"
+      ]
+    },
+    "B1-05": {
+      "case_id": "B1-05",
+      "world_id": "C36",
+      "class": "B-1",
+      "subtype": null,
+      "source": "KRI10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:scramble_voxels_within_participant",
+        "HIGH_RATE:control:random_sign_per_participant"
+      ]
+    },
+    "B1-06": {
+      "case_id": "B1-06",
+      "world_id": "C06",
+      "class": "B-1",
+      "subtype": null,
+      "source": "KRI10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_contrast_across_trials",
+        "HIGH_RATE:probe:shuffle:response,contrast"
+      ]
+    },
+    "B1-07": {
+      "case_id": "B1-07",
+      "world_id": "C28",
+      "class": "B-1",
+      "subtype": null,
+      "source": "KRI09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:shuffle_orientation_labels_within_neuron"
+      ]
+    },
+    "B1-08": {
+      "case_id": "B1-08",
+      "world_id": "C54",
+      "class": "B-1",
+      "subtype": null,
+      "source": "KRI09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_stimulus_condition_across_trials"
+      ]
+    },
+    "B1-09": {
+      "case_id": "B1-09",
+      "world_id": "C19",
+      "class": "B-1",
+      "subtype": null,
+      "source": "VUL09",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_trait_across_participants"
+      ]
+    },
+    "B1-10": {
+      "case_id": "B1-10",
+      "world_id": "C41",
+      "class": "B-1",
+      "subtype": null,
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_rate_rest"
+      ]
+    },
+    "B1-11": {
+      "case_id": "B1-11",
+      "world_id": "C31",
+      "class": "B-1",
+      "subtype": null,
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_patient"
+      ]
+    },
+    "B1-12": {
+      "case_id": "B1-12",
+      "world_id": "C11",
+      "class": "B-1",
+      "subtype": null,
+      "source": "BAR05",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:exchange_start_and_6_month_scores"
+      ]
+    },
+    "B2-01": {
+      "case_id": "B2-01",
+      "world_id": "C44",
+      "class": "B-2",
+      "subtype": "L1.1",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_onset_across_country_years",
+        "HIGH_RATE:control:permute_onset_histories_across_countries"
+      ]
+    },
+    "B2-02": {
+      "case_id": "B2-02",
+      "world_id": "C37",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_outcome"
+      ]
+    },
+    "B2-03": {
+      "case_id": "B2-03",
+      "world_id": "C21",
+      "class": "B-2",
+      "subtype": "L1.4",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_defective_across_units"
+      ]
+    },
+    "B2-04": {
+      "case_id": "B2-04",
+      "world_id": "C34",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:shift_rises_in_time"
+      ]
+    },
+    "B2-05": {
+      "case_id": "B2-05",
+      "world_id": "C51",
+      "class": "B-2",
+      "subtype": "L3.1",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:circular_shift_of_drivers_by_52_or_more_weeks"
+      ]
+    },
+    "B2-06": {
+      "case_id": "B2-06",
+      "world_id": "C47",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_malignancy_across_patients"
+      ]
+    },
+    "B2-07": {
+      "case_id": "B2-07",
+      "world_id": "C42",
+      "class": "B-2",
+      "subtype": "L3.2",
+      "source": "KAP23",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_scores_across_participants"
+      ]
+    },
+    "B2-08": {
+      "case_id": "B2-08",
+      "world_id": "C26",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "VAR06",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_class_across_samples"
+      ]
+    },
+    "B2-09": {
+      "case_id": "B2-09",
+      "world_id": "C32",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "VAR06",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_responder"
+      ]
+    },
+    "B2-10": {
+      "case_id": "B2-10",
+      "world_id": "C48",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "VAR06",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_class_across_samples"
+      ]
+    },
+    "B2-11": {
+      "case_id": "B2-11",
+      "world_id": "C01",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "VAR06",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_group_labels",
+        "HIGH_RATE:probe:shuffle:expression,group_b"
+      ]
+    },
+    "B2-12": {
+      "case_id": "B2-12",
+      "world_id": "C07",
+      "class": "B-2",
+      "subtype": "L1.3",
+      "source": "AMB02",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_tumour_labels",
+        "HIGH_RATE:probe:shuffle:expression,tumour"
+      ]
+    },
+    "B3-01": {
+      "case_id": "B3-01",
+      "world_id": "C16",
+      "class": "B-3",
+      "subtype": null,
+      "source": "CUR13",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_treated"
+      ]
+    },
+    "B3-02": {
+      "case_id": "B3-02",
+      "world_id": "C53",
+      "class": "B-3",
+      "subtype": null,
+      "source": "CUR13",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_age_across_participants"
+      ]
+    },
+    "B3-03": {
+      "case_id": "B3-03",
+      "world_id": "C39",
+      "class": "B-3",
+      "subtype": null,
+      "source": "CUR13",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_lv_mass",
+        "HIGH_RATE:control:permute_lv_mass_residual"
+      ]
+    },
+    "B3-04": {
+      "case_id": "B3-04",
+      "world_id": "C13",
+      "class": "B-3",
+      "subtype": null,
+      "source": "CUR13",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_kidney_within_body_mass_blocks"
+      ]
+    },
+    "B3-05": {
+      "case_id": "B3-05",
+      "world_id": "C12",
+      "class": "B-3",
+      "subtype": null,
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_tibia_within_humerus_blocks"
+      ]
+    },
+    "B3-06": {
+      "case_id": "B3-06",
+      "world_id": "C09",
+      "class": "B-3",
+      "subtype": null,
+      "source": "PEA97",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:decouple_observers_within_true_value_blocks"
+      ]
+    },
+    "B3-08": {
+      "case_id": "B3-08",
+      "world_id": "C30",
+      "class": "B-3",
+      "subtype": null,
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_second_baseline_across_patients"
+      ]
+    },
+    "B3-09": {
+      "case_id": "B3-09",
+      "world_id": "C04",
+      "class": "B-3",
+      "subtype": null,
+      "source": "ARC81",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_uptake_across_patients"
+      ]
+    },
+    "B3-11": {
+      "case_id": "B3-11",
+      "world_id": "C24",
+      "class": "B-3",
+      "subtype": null,
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_gene_a_across_samples"
+      ]
+    },
+    "B3-12": {
+      "case_id": "B3-12",
+      "world_id": "C25",
+      "class": "B-3",
+      "subtype": null,
+      "source": "KRO93",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_time_across_months",
+        "HIGH_RATE:control:reverse_time"
+      ]
+    },
+    "B6-01": {
+      "case_id": "B6-01",
+      "world_id": "C27",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ18",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_exposed_across_dams"
+      ]
+    },
+    "B6-02": {
+      "case_id": "B6-02",
+      "world_id": "C38",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ18",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_wells_to_treatment"
+      ]
+    },
+    "B6-03": {
+      "case_id": "B6-03",
+      "world_id": "C17",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ18",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_dose_across_animals"
+      ]
+    },
+    "B6-04": {
+      "case_id": "B6-04",
+      "world_id": "C10",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ18",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_treatment_across_cages",
+        "HIGH_RATE:probe:shuffle:weight_gain,treated"
+      ]
+    },
+    "B6-05": {
+      "case_id": "B6-05",
+      "world_id": "C45",
+      "class": "B-6",
+      "subtype": null,
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_trained"
+      ]
+    },
+    "B6-06": {
+      "case_id": "B6-06",
+      "world_id": "C52",
+      "class": "B-6",
+      "subtype": null,
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_group_membership_across_subjects"
+      ]
+    },
+    "B6-07": {
+      "case_id": "B6-07",
+      "world_id": "C08",
+      "class": "B-6",
+      "subtype": null,
+      "source": "NIE11",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:swap_region_labels_in_half_the_subjects"
+      ]
+    },
+    "B6-08": {
+      "case_id": "B6-08",
+      "world_id": "C22",
+      "class": "B-6",
+      "subtype": null,
+      "source": "HUR84",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_treated_across_tanks"
+      ]
+    },
+    "B6-09": {
+      "case_id": "B6-09",
+      "world_id": "C35",
+      "class": "B-6",
+      "subtype": null,
+      "source": "HUR84",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_plots_to_treatment"
+      ]
+    },
+    "B6-10": {
+      "case_id": "B6-10",
+      "world_id": "C23",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_treated_across_rats"
+      ]
+    },
+    "B6-11": {
+      "case_id": "B6-11",
+      "world_id": "C03",
+      "class": "B-6",
+      "subtype": null,
+      "source": "LAZ10",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_cortisol_subjects",
+        "HIGH_RATE:probe:shuffle:heart_rate,cortisol"
+      ]
+    },
+    "B6-12": {
+      "case_id": "B6-12",
+      "world_id": "C15",
+      "class": "B-6",
+      "subtype": null,
+      "source": "MAK19",
+      "in_scope": true,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_group_labels"
+      ]
+    },
+    "O1-A": {
+      "case_id": "O1-A",
+      "world_id": "C40",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_outcome"
+      ]
+    },
+    "O1-B": {
+      "case_id": "O1-B",
+      "world_id": "C49",
+      "class": "O",
+      "subtype": "O-1",
+      "source": "KAP23",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_speech_across_children",
+        "HIGH_RATE:control:permute_diagnosis_across_children"
+      ]
+    },
+    "O2-A": {
+      "case_id": "O2-A",
+      "world_id": "C18",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_conditions"
+      ]
+    },
+    "O2-B": {
+      "case_id": "O2-B",
+      "world_id": "C20",
+      "class": "O",
+      "subtype": "O-2",
+      "source": "SIM11",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_conditions"
+      ]
+    },
+    "O3-A": {
+      "case_id": "O3-A",
+      "world_id": "C29",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "BAG09",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_sensitive_across_cell_lines",
+        "HIGH_RATE:control:random_signature_same_size"
+      ]
+    },
+    "O3-B": {
+      "case_id": "O3-B",
+      "world_id": "C14",
+      "class": "O",
+      "subtype": "O-3",
+      "source": "HER14",
+      "in_scope": false,
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:reassign_debt_histories_between_countries",
+        "HIGH_RATE:probe:shuffle:growth,debt_ratio"
+      ]
+    }
+  }
+}

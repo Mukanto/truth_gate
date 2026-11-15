@@ -1,0 +1,413 @@
+{
+ "_note": "resolved = higher of the two readings (N < C < P); 'no log' (C31-C45) resolved P (P-4). log_words = words of the entry (own section + other passages of the same log naming the id).",
+ "ids": {
+  "C01": {
+   "reader1": "C",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 121
+  },
+  "C02": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 132
+  },
+  "C03": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 147
+  },
+  "C04": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 135
+  },
+  "C05": {
+   "reader1": "C",
+   "reader2": "C",
+   "resolved": "C",
+   "no_log": false,
+   "log_words": 157
+  },
+  "C06": {
+   "reader1": "C",
+   "reader2": "C",
+   "resolved": "C",
+   "no_log": false,
+   "log_words": 122
+  },
+  "C07": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 103
+  },
+  "C08": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 149
+  },
+  "C09": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 139
+  },
+  "C10": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 95
+  },
+  "C11": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 168
+  },
+  "C12": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 115
+  },
+  "C13": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 155
+  },
+  "C14": {
+   "reader1": "C",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 162
+  },
+  "C15": {
+   "reader1": "N",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 153
+  },
+  "C16": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 107
+  },
+  "C17": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 85
+  },
+  "C18": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 107
+  },
+  "C19": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 188
+  },
+  "C20": {
+   "reader1": "C",
+   "reader2": "C",
+   "resolved": "C",
+   "no_log": false,
+   "log_words": 67
+  },
+  "C21": {
+   "reader1": "C",
+   "reader2": "N",
+   "resolved": "C",
+   "no_log": false,
+   "log_words": 86
+  },
+  "C22": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 91
+  },
+  "C23": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 87
+  },
+  "C24": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 129
+  },
+  "C25": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 106
+  },
+  "C26": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 121
+  },
+  "C27": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 68
+  },
+  "C28": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 119
+  },
+  "C29": {
+   "reader1": "C",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 103
+  },
+  "C30": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 207
+  },
+  "C31": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C32": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C33": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C34": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C35": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C36": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C37": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C38": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C39": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C40": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C41": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C42": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C43": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C44": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C45": {
+   "reader1": "no log",
+   "reader2": "no log",
+   "resolved": "P",
+   "no_log": true,
+   "log_words": 0
+  },
+  "C46": {
+   "reader1": "N",
+   "reader2": "N",
+   "resolved": "N",
+   "no_log": false,
+   "log_words": 130
+  },
+  "C47": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 106
+  },
+  "C48": {
+   "reader1": "C",
+   "reader2": "C",
+   "resolved": "C",
+   "no_log": false,
+   "log_words": 109
+  },
+  "C49": {
+   "reader1": "P",
+   "reader2": "C",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 156
+  },
+  "C50": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 144
+  },
+  "C51": {
+   "reader1": "C",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 116
+  },
+  "C52": {
+   "reader1": "N",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 71
+  },
+  "C53": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 171
+  },
+  "C54": {
+   "reader1": "P",
+   "reader2": "P",
+   "resolved": "P",
+   "no_log": false,
+   "log_words": 149
+  }
+ },
+ "counts": {
+  "reader1": {
+   "C": 9,
+   "P": 27,
+   "N": 3,
+   "no log": 15
+  },
+  "reader2": {
+   "P": 32,
+   "C": 5,
+   "N": 2,
+   "no log": 15
+  },
+  "resolved": {
+   "P": 48,
+   "C": 5,
+   "N": 1
+  },
+  "no_log": 15,
+  "disagreements": [
+   "C01",
+   "C14",
+   "C15",
+   "C21",
+   "C29",
+   "C49",
+   "C51",
+   "C52"
+  ]
+ }
+}

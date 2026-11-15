@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-01",
+  "world_id": "C44",
+  "class": "B-2",
+  "subtype": "L1.1",
+  "source": "KAP23",
+  "brief": {
+    "id": "C44",
+    "claim": "A statistical classifier built from the 30 annual indicators of a country distinguishes the country-years in which a civil war begins from the country-years in which none begins, with an area under the ROC curve of at least 0.75 on new country-years.",
+    "data_keys": [
+      {
+        "key": "indicators",
+        "shape": "(country_years, indicators)",
+        "dtype": "float",
+        "meaning": "30 annual political, economic and demographic indicators of the country in that year"
+      },
+      {
+        "key": "onset",
+        "shape": "(country_years,)",
+        "dtype": "bool",
+        "meaning": "True when a civil war begins in that country-year"
+      }
+    ],
+    "sizes": "country_years = 896; indicators = 30"
+  }
+}

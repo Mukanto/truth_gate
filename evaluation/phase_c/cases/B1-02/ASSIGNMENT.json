@@ -1,0 +1,40 @@
+{
+  "case_id": "B1-02",
+  "world_id": "C43",
+  "class": "B-1",
+  "subtype": null,
+  "source": "MOR03",
+  "brief": {
+    "id": "C43",
+    "claim": "In women treated for osteoporosis, first-year responders keep gaining more bone than first-year non-responders: women whose bone mineral density rose over the first year (from the start of treatment to the first 12-month scan) gain at least 0.5 percentage points more over the second year (percentage change from the second 12-month scan to the 24-month scan) than women whose density fell over the first year, and a one-sided Welch t test of that difference between the two groups of women is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "bmd_start",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "bone mineral density of each woman at the start of treatment (g/cm2)"
+      },
+      {
+        "key": "bmd_m12_scan1",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "bone mineral density at the 12-month visit, first of two scans taken at that visit (g/cm2)"
+      },
+      {
+        "key": "bmd_m12_scan2",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "bone mineral density at the 12-month visit, second of two scans taken at that visit (g/cm2)"
+      },
+      {
+        "key": "bmd_m24",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "bone mineral density at the 24-month visit (g/cm2)"
+      }
+    ],
+    "sizes": {
+      "women": 600
+    }
+  }
+}

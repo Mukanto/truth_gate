@@ -1,0 +1,35 @@
+{
+  "case_id": "B1-09",
+  "world_id": "C19",
+  "class": "B-1",
+  "subtype": null,
+  "source": "VUL09",
+  "brief": {
+    "id": "C19",
+    "claim": "Across 16 participants, activation in the brain region whose response relates to the personality trait is correlated with the trait: the mean, over the voxels of that region, of the voxel-wise correlations (across participants) between activation and trait score is at least 0.5.",
+    "data_keys": [
+      {
+        "key": "act_session1",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "activation of each voxel in each participant, measured in the first scanning session"
+      },
+      {
+        "key": "act_session2",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "activation of each voxel in each participant, measured in a second scanning session"
+      },
+      {
+        "key": "trait",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "questionnaire score on the personality trait for each participant"
+      }
+    ],
+    "sizes": {
+      "subjects": 16,
+      "voxels": 1000
+    }
+  }
+}

@@ -1,0 +1,25 @@
+B2-01 n = 200 (holds, fails, None)
+  plus                                                         (179, 21, 0)  rate 0.895
+  minus                                                        (8, 192, 0)  rate 0.040
+  control:permute_onset_across_country_years                   (0, 200, 0)  rate 0.000
+  control:permute_onset_histories_across_countries             (4, 196, 0)  rate 0.020
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0041 s   g (mean plus generation) = 0.0009 s
+  S = 6, estimate 2*200*(S+1)*(t+g) = 14 s
+B2-06 n = 200 (holds, fails, None)
+  plus                                                         (198, 2, 0)  rate 0.990
+  minus                                                        (0, 200, 0)  rate 0.000
+  control:permute_malignancy_across_patients                   (0, 200, 0)  rate 0.000
+  noise                                                        (0, 200, 0)  rate 0.000
+  zeros                                                        (0, 0, 200)  rate 0.000
+  t (mean call on plus, 200 calls) = 0.0024 s   g (mean plus generation) = 0.0003 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 6 s
+B2-10 n = 40 (holds, fails, None)
+  plus                                                         (32, 8, 0)  rate 0.800
+  minus                                                        (7, 33, 0)  rate 0.175
+  control:permute_class_across_samples                         (7, 33, 0)  rate 0.175
+  noise                                                        (7, 33, 0)  rate 0.175
+  zeros                                                        (0, 0, 40)  rate 0.000
+  t (mean call on plus, 40 calls) = 0.2357 s   g (mean plus generation) = 0.0007 s
+  S = 5, estimate 2*200*(S+1)*(t+g) = 567 s

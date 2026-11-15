@@ -1,0 +1,38 @@
+B6-01 C27  plus 361/400=0.902 (None 0)  minus 15/400=0.037 (None 0)  control(permute_exposed_across_dams) 11/400=0.028 (None 0)  noise 5/400=0.013 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.052 ms  g=0.011 ms  S=5  estimate=0.15 s  (calls 100)
+B6-02 C38  plus 369/400=0.922 (None 0)  minus 7/400=0.018 (None 0)  control(reassign_wells_to_treatment) 15/400=0.037 (None 0)  noise 9/400=0.022 (None 6)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.058 ms  g=0.015 ms  S=5  estimate=0.17 s  (calls 100)
+B6-03 C17  plus 368/400=0.920 (None 0)  minus 9/400=0.022 (None 0)  control(permute_dose_across_animals) 8/400=0.020 (None 0)  noise 4/400=0.010 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.034 ms  g=0.025 ms  S=5  estimate=0.14 s  (calls 100)
+B6-04 C10  plus 370/400=0.925 (None 0)  minus 9/400=0.022 (None 0)  control(permute_treatment_across_cages) 12/400=0.030 (None 0)  noise 8/400=0.020 (None 0)  zeros 0/20=0.000 (None 20)
+   shuffle(weight_gain,treated) 13/400=0.033 (None 0)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.082 ms  g=0.009 ms  S=6  estimate=0.25 s  (calls 100)
+B6-05 C45  plus 369/400=0.922 (None 0)  minus 9/400=0.022 (None 0)  control(permute_trained) 13/400=0.033 (None 0)  noise 11/400=0.028 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.049 ms  g=0.036 ms  S=5  estimate=0.20 s  (calls 100)
+B6-06 C52  plus 372/400=0.930 (None 0)  minus 7/400=0.018 (None 0)  control(permute_group_membership_across_subjects) 10/400=0.025 (None 0)  noise 10/400=0.025 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.060 ms  g=0.016 ms  S=5  estimate=0.18 s  (calls 100)
+B6-07 C08  plus 362/400=0.905 (None 0)  minus 13/400=0.033 (None 0)  control(swap_region_labels_in_half_the_subjects) 0/400=0.000 (None 0)  noise 10/400=0.025 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.038 ms  g=0.016 ms  S=5  estimate=0.13 s  (calls 100)
+B6-08 C22  plus 369/400=0.922 (None 0)  minus 8/400=0.020 (None 0)  control(permute_treated_across_tanks) 2/400=0.005 (None 0)  noise 10/400=0.025 (None 24)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.049 ms  g=0.017 ms  S=5  estimate=0.16 s  (calls 100)
+B6-09 C35  plus 373/400=0.932 (None 0)  minus 9/400=0.022 (None 0)  control(reassign_plots_to_treatment) 8/400=0.020 (None 0)  noise 8/400=0.020 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.037 ms  g=0.057 ms  S=5  estimate=0.22 s  (calls 100)
+B6-10 C23  plus 358/400=0.895 (None 0)  minus 5/400=0.013 (None 0)  control(permute_treated_across_rats) 8/400=0.020 (None 0)  noise 10/400=0.025 (None 9)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.048 ms  g=0.010 ms  S=5  estimate=0.14 s  (calls 100)
+B6-11 C03  plus 363/400=0.907 (None 0)  minus 14/400=0.035 (None 0)  control(permute_cortisol_subjects) 13/400=0.033 (None 0)  noise 6/400=0.015 (None 0)  zeros 0/20=0.000 (None 20)
+   shuffle(heart_rate,cortisol) 12/400=0.030 (None 0)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.035 ms  g=0.016 ms  S=6  estimate=0.14 s  (calls 100)
+B6-12 C15  plus 370/400=0.925 (None 0)  minus 8/400=0.020 (None 0)  control(permute_group_labels) 18/400=0.045 (None 0)  noise 7/400=0.018 (None 0)  zeros 0/20=0.000 (None 20)
+   scipy reference disagreements on 800 samples: 0
+   timing t=0.031 ms  g=0.012 ms  S=5  estimate=0.10 s  (calls 100)

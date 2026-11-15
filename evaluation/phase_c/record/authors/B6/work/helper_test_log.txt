@@ -1,0 +1,3 @@
+p2t(inf, 10) = 0.0
+points 2238 worst relative/absolute error 3.9476716148960055e-11
+two-sided 5% normal critical value 1.9599639845400545

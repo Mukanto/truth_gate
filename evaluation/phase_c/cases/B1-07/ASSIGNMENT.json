@@ -1,0 +1,29 @@
+{
+  "case_id": "B1-07",
+  "world_id": "C28",
+  "class": "B-1",
+  "subtype": null,
+  "source": "KRI09",
+  "brief": {
+    "id": "C28",
+    "claim": "Among the recorded visual neurons that fire more to vertical than to horizontal bars, the mean orientation index, (vertical minus horizontal) / (vertical plus horizontal) computed from trial-averaged firing rates, is at least 0.1.",
+    "data_keys": [
+      {
+        "key": "rate_vertical",
+        "shape": "(neurons, trials)",
+        "dtype": "float",
+        "meaning": "firing rate (spikes/s) of each neuron on each presentation of a vertical bar"
+      },
+      {
+        "key": "rate_horizontal",
+        "shape": "(neurons, trials)",
+        "dtype": "float",
+        "meaning": "firing rate (spikes/s) of each neuron on each presentation of a horizontal bar"
+      }
+    ],
+    "sizes": {
+      "neurons": 250,
+      "trials": 15
+    }
+  }
+}

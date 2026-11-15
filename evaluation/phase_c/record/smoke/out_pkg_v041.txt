@@ -1,0 +1,6 @@
+COMPONENT  VERDICT      FLAGS
+C          FALSIFIABLE  -
+study flags: -
+mode: full   verdict: FALSIFIABLE
+certificate: cert_pkg_v041.json
+body_sha256: de028208f181ada434a5c93aca7979837a49fafc8e97eea89393a60bceb26f35

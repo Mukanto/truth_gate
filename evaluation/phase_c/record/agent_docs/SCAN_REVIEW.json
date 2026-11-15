@@ -1,0 +1,469 @@
+{
+ "note": "Scan hits kept as tool vocabulary after the two-reader triage (PREREG_PHASE_C section 4 item 0(a)); removed sentences are listed in SCAN_REMOVALS.md.",
+ "listed": [
+  {
+   "file": "GATE.md",
+   "text": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, `.github/workflows/truth-gate.yml`; never overwrites a file |",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| **K1** definedness | A criterion must not fail on `plus`, `minus` or `null` samples (an exception, a failed world, a wrong return type, a missing component, a command error), and must not abstain (return `None`) on more than half of the `plus` samples. Abstentions on at most half of `plus`, and on `minus` and `null`, count as no claim: they are reported (`K1_ABSTAINED`), and a majority on `minus` or `null` caps the verdict at WEAK (`K1_ABSTAINED_MAJORITY`). |",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| **K6** leak guard and reproducibility | The study may not read files outside its allow-list, use the network or start a process. Two evaluations in one process must give the same result. |",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| `WEAK` | mandatory checks passed, but a target was missed, a check was inconclusive, or a control was waived | 1 |",
+   "tokens": [
+    "miss"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "Before the study module is executed, the gate installs a `sys.addaudithook` hook and arms it. While armed it blocks, with",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "**The guard does not cover external programs.** A command criterion (`command = [...]`) runs in another process, which",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "the guard cannot see: it may read any file the operating system lets it read. The program runs in a private working",
+   "tokens": [
+    "private"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "`K6_EXTERNAL_UNGUARDED` lists the commands, and the table, the Action summary and the badge show it. The certificate",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "records the argv, the SHA-256 of the executable and of every `[external] uses` file; the libraries a program loads",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| `non_claims`, `known_limitations` | six non-claims (the three of 0.3 with \"The gate\" for \"Kapı\", plus: generated and suggested declarations are generic; a file world is only as independent as its provenance; the leak guard does not cover external programs) and seven known limitations (the three of 0.3, plus: libraries of external programs are not hashed; on Windows killing an external program does not kill what it started; since 0.5 two sentences on abstentions and on K8) |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| `K6_NONREPRODUCIBLE` | study-level | two evaluations in one process differed (unseeded randomness, hidden state) |",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| `K6_EXTERNAL_UNGUARDED` | the study has command criteria, which run in other programs that the leak guard cannot see. The commands are listed. The badge reads \"(unguarded)\" |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run; every later request to it was UNDEFINED, and that reaches the verdict through K1 (command failures are hard UNDEFINED outcomes, never abstentions) |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "after the two evaluations of K1-K7, under the armed guard. It never feeds samples or outcomes back into K1-K7.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "* `allow_paths` are declared by the user and cannot be audited beyond hashing. Studies are single files; local helper",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "GATE.md",
+   "text": "* **External programs** (command criteria) are not covered by the leak guard. They are hashed by executable and",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "| `[external]` | `uses = []` (files copied into the programs' working folder and hashed), `env = []` (extra variable names passed through), `startup_timeout_s = 120`, `request_timeout_s = 60` |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "  nothing to claim on that sample). It counts as no claim, like `False` in every HOLDS-based statistic, and is reported",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "**`pattern_stats`.** After the two evaluations the gate regenerates the counted samples of the `plus`, `minus` and `null`",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "[external]",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "* One process per distinct argv, started before the leak guard is armed. It serves both evaluations and the K8 pass.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "* **Working folder:** a fresh temporary folder holding copies of the `[external] uses` files and the `allow_paths`, with",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "  through, plus `LANG = C.UTF-8`, `TG_PROTOCOL = tg-line/1` and the names in `[external] env`. Nothing else.",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "| `{\"rid\": k, \"error\": ...}` | that one outcome is UNDEFINED (`ExternalError`, a hard UNDEFINED); the process keeps serving. A reply with both `outcome` and `error` counts as an error (R-14) |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "| a timeout (`request_timeout_s`), a line that is not JSON, a wrong or missing `rid`, or a reply with neither `outcome` nor `error` | the process is **killed**. The outcome is `ExternalTimeout` or `ExternalProtocolError`; every later request to that argv is UNDEFINED (`ExternalDied`); the study note `EXTERNAL_DIED` is added |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "| the process dies (EOF, write error) while a reply is awaited | `ExternalDied`, like every later request (R-13) |",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "abstention (a soft UNDEFINED: no claim, reported as `K1_ABSTAINED:<stream>`, and K1 makes the verdict UNDEFINED only when",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "death (`EXTERNAL_DIED`), a missing component in a component dict, and an outcome string other than `HOLDS`, `FAILS` and",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "`K6_EXTERNAL_UNGUARDED` lists the commands (`{\"note\": \"K6_EXTERNAL_UNGUARDED\", \"commands\": [[argv...], ...]}`, R-15); the",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "not hashed. The gate isolates external programs against accidents, not against deliberate evasion.",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "(selection, fitting, evaluation) on the data it is given, a circular selection or a leak makes it hold on noise, and K4",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "K8 runs as a separate pass after the two evaluations, under the armed guard; it never feeds anything back into K1-K7.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "`DATA.csv` must be a realistic synthetic or pilot dataset, **not the real study data**. `suggest` prints this warning",
+   "tokens": [
+    "pilot"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "MANIFEST.md",
+   "text": "**Not in 0.4 (moved to 0.5):** worlds, controls and premises produced by external programs; the mutations `copy`,",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "| **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies. Standard library only. | [`protocol/templates/`](protocol/templates/), [`protocol/tools/`](protocol/tools/freeze.py) |",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "  learning evaluations, hardware experiments.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "  roles to the designer, the coder, a blind auditor and a verifier.",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "the certificate carries the study note `K6_EXTERNAL_UNGUARDED` (see [Limits](#limits)).",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "**Starting from a dataset.** `truth-gate suggest pilot.csv --outcome yield --group group --reference control` writes a",
+   "tokens": [
+    "pilot"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "`origin = \"suggested\"`, which caps the verdict at WEAK until you review it. Feed it a realistic synthetic or pilot",
+   "tokens": [
+    "pilot"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, the workflow |",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "* It does not modify or repair criteria. It only reports.",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "  declarations. The blind audit covers the rest.",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "* **External programs are not covered by the leak guard.** A command criterion runs in another process; the guard",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "README_TOOL.md",
+   "text": "  cannot see what it reads. The certificate says so (the note `K6_EXTERNAL_UNGUARDED` and a non-claim), and the badge",
+   "tokens": [
+    "external"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "3. Kapı does not modify or repair criteria. It only reports.",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- `WEAK`: every mandatory check passed, but a target was missed, a check was inconclusive, or a control was waived with a reason.",
+   "tokens": [
+    "miss"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "For `k` HOLDS out of `n` evaluations (UNDEFINED counts as not-HOLDS unless stated otherwise), one-sided Wilson score bounds at level `a` use `z = NormalDist().inv_cdf(1 - a)` from the Python standard library.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- Targets (not mandatory). These produce `WEAK`, not `NOT_FALSIFIABLE`. They use the same per-bound level `a` as SL (§4.2), so a target counts as missed only when the miss is significant:",
+   "tokens": [
+    "miss"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- for `role == \"assumed\"`, no requirement; the rate difference is reported in the premise map.",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- **Leak guard.** Before the study module is imported, Kapı installs (once per process) a `sys.addaudithook` hook and arms it. While armed, the hook intercepts these events:",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "  Known limitation (printed in the certificate): `allow_paths` are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them. Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- **Reproducibility.** The complete evaluation (all streams, all checks) is computed twice in the same process. If the canonical result bodies (§7) differ → study flag `K6_NONREPRODUCIBLE` (S). This catches unseeded global randomness and hidden state.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- Pure functions where possible. The only global state is the audit hook and its armed flag.",
+   "tokens": [
+    "audit"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- The comparison is made once per study evaluation. Under K6 reproducibility it is made in both passes, like every other check.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- These extra calls only record keys. Their outcomes are not used. All counted evaluations keep receiving plain `dict` samples, as in 0.3.",
+   "tokens": [
+    "evaluation"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- **Detects only exact identity.** A `minus` that changes data in an irrelevant way, or only below float resolution, is not UNTESTED. Kapı then reports NOT_FALSIFIABLE, possibly with `K2_MINUS_UNREAD`. Wrong-direction worlds and worlds that change the right key by too little are not detected at all. ",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  },
+  {
+   "file": "SPEC.md",
+   "text": "- **A same-generator minus is now UNTESTED.** A stochastic `minus` whose generator is the `plus` generator (same distribution, same use of the generator) is identical under pairing. v0.2 reported it as NOT_FALSIFIABLE with `K2_NO_SEPARATION`. v0.3 raises `K2_MINUS_IDENTICAL` and suppresses `K2_NO_SEPARATION`, so the verdict is UNTESTED unless another mandatory flag is raised. The toy `toy_no_separation` stays NOT_FALSIFIABLE through `K5_HOLDS_ON_NOISE`, `K4_CONTROL_ALSO_HOLDS` and `HIGH_RATE:*`. This is intended by the author's decision (identical data = world defect).",
+   "tokens": [
+    "REPORT"
+   ],
+   "reason": "tool vocabulary: kept by both readers (READER1.json, READER2.json)"
+  }
+ ]
+}

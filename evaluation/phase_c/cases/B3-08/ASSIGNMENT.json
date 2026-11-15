@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-08",
+  "world_id": "C30",
+  "class": "B-3",
+  "subtype": null,
+  "source": "ARC81",
+  "brief": {
+    "id": "C30",
+    "claim": "In adults with hypertension, the fall in systolic pressure over a 12-week programme is larger in patients with a higher starting pressure: the correlation, across patients, between the fall (first baseline reading minus week-12 reading) and the second baseline reading is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "sbp_baseline_first",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Systolic blood pressure, first reading at the baseline visit, in mmHg."
+      },
+      {
+        "key": "sbp_baseline_second",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Systolic blood pressure, second reading at the baseline visit, in mmHg."
+      },
+      {
+        "key": "sbp_week12",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Systolic blood pressure at the week-12 visit, in mmHg."
+      }
+    ],
+    "sizes": "patients = 120; sbp_baseline_first, sbp_baseline_second and sbp_week12 each have shape (120,)."
+  }
+}

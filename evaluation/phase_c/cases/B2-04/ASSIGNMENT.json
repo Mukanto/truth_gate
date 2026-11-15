@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-04",
+  "world_id": "C34",
+  "class": "B-2",
+  "subtype": "L3.1",
+  "source": "KAP23",
+  "brief": {
+    "id": "C34",
+    "claim": "A classifier built from the 10 daily indicators predicts whether the series rises over the following day with an accuracy of at least 0.58 on later days.",
+    "data_keys": [
+      {
+        "key": "indicators",
+        "shape": "(days, indicators)",
+        "dtype": "float",
+        "meaning": "10 indicators observed on each day, days in chronological order"
+      },
+      {
+        "key": "rises",
+        "shape": "(days,)",
+        "dtype": "bool",
+        "meaning": "True when the series rises over the day that follows"
+      }
+    ],
+    "sizes": "days = 500; indicators = 10"
+  }
+}

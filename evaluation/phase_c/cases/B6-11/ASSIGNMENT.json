@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-11",
+  "world_id": "C03",
+  "class": "B-6",
+  "subtype": null,
+  "source": "LAZ10",
+  "brief": {
+    "id": "C03",
+    "claim": "Across subjects, mean resting heart rate and mean salivary cortisol (each subject's mean over the recording days) are positively correlated: the Pearson correlation between the two subject means is positive, and a test of that correlation gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "heart_rate",
+        "shape": "(subjects, days)",
+        "dtype": "float",
+        "meaning": "resting heart rate in beats per minute of each subject on each recording day"
+      },
+      {
+        "key": "cortisol",
+        "shape": "(subjects, days)",
+        "dtype": "float",
+        "meaning": "morning salivary cortisol concentration of each subject on each recording day"
+      }
+    ],
+    "sizes": "subjects = 16; days = 10 (heart_rate and cortisol: 16 x 10 = 160 values each)"
+  }
+}

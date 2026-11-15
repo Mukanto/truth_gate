@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-03",
+  "world_id": "C17",
+  "class": "B-6",
+  "subtype": null,
+  "source": "LAZ18",
+  "brief": {
+    "id": "C17",
+    "claim": "Spine density on hippocampal CA1 pyramidal neurons rises with the dose of the drug the animal received: the regression slope of spine density on dose is positive, and a test of the slope gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "spine_density",
+        "shape": "(animals, sections, neurons)",
+        "dtype": "float",
+        "meaning": "spines per 10 micrometres of dendrite on each sampled neuron, in each histological section, of each animal"
+      },
+      {
+        "key": "dose",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "dose of the drug (mg/kg) that each animal received"
+      }
+    ],
+    "sizes": "animals = 12; sections = 4; neurons = 25 (spine_density: 12 x 4 x 25 = 1200 values; dose: 12 values)"
+  }
+}

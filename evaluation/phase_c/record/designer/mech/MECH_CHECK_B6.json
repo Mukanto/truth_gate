@@ -1,0 +1,496 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "B6-01": {
+    "world_id": "C27",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 91: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 91: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 70: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 91: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 91: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 70: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-01",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ18",
+    "brief": {
+      "id": "C27",
+      "claim": "Prenatal exposure raises adult open-field activity: the mean activity score of offspring of exposed dams is higher than that of offspring of control dams, and a two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "activity",
+          "shape": "(dams, pups)",
+          "dtype": "float",
+          "meaning": "open-field activity score (distance travelled, arbitrary units) measured in adulthood on each pup of each dam"
+        },
+        {
+          "key": "exposed",
+          "shape": "(dams,)",
+          "dtype": "bool",
+          "meaning": "whether the dam received the exposure during pregnancy"
+        }
+      ],
+      "sizes": "dams = 20; pups = 8 (activity: 20 x 8 = 160 values; exposed: 20 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-02": {
+    "world_id": "C38",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 99: if g.sum() < 2 or (~g).sum() < 2 or r.shape[1] < 1:",
+        "line 99: if g.sum() < 2 or (~g).sum() < 2 or r.shape[1] < 1:",
+        "line 78: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 99: if g.sum() < 2 or (~g).sum() < 2 or r.shape[1] < 1:",
+        "line 99: if g.sum() < 2 or (~g).sum() < 2 or r.shape[1] < 1:",
+        "line 78: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-02",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ18",
+    "brief": {
+      "id": "C38",
+      "claim": "The compound raises the share of cells that respond to stimulation: the proportion of responding cells is higher in treated wells than in untreated wells, and a test of the difference between the two groups gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "responded",
+          "shape": "(wells, cells)",
+          "dtype": "bool",
+          "meaning": "whether each imaged cell of each well showed a calcium response to the stimulus"
+        },
+        {
+          "key": "treated",
+          "shape": "(wells,)",
+          "dtype": "bool",
+          "meaning": "whether the well was given the compound before stimulation"
+        }
+      ],
+      "sizes": "wells = 12; cells = 150 (responded: 12 x 150 = 1800 values; treated: 12 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-03": {
+    "world_id": "C17",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-03",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ18",
+    "brief": {
+      "id": "C17",
+      "claim": "Spine density on hippocampal CA1 pyramidal neurons rises with the dose of the drug the animal received: the regression slope of spine density on dose is positive, and a test of the slope gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "spine_density",
+          "shape": "(animals, sections, neurons)",
+          "dtype": "float",
+          "meaning": "spines per 10 micrometres of dendrite on each sampled neuron, in each histological section, of each animal"
+        },
+        {
+          "key": "dose",
+          "shape": "(animals,)",
+          "dtype": "float",
+          "meaning": "dose of the drug (mg/kg) that each animal received"
+        }
+      ],
+      "sizes": "animals = 12; sections = 4; neurons = 25 (spine_density: 12 x 4 x 25 = 1200 values; dose: 12 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-04": {
+    "world_id": "C10",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 87: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 87: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 66: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 87: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 87: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 66: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-04",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ18",
+    "brief": {
+      "id": "C10",
+      "claim": "Giving the compound in the drinking water reduces body-weight gain: the mean weight gain of animals receiving the compound is lower than that of controls, and a Welch two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "weight_gain",
+          "shape": "(cages, animals)",
+          "dtype": "float",
+          "meaning": "body-weight gain in grams over the study of each animal housed in each cage"
+        },
+        {
+          "key": "treated",
+          "shape": "(cages,)",
+          "dtype": "bool",
+          "meaning": "whether the drinking water supplied to the cage contained the compound"
+        }
+      ],
+      "sizes": "cages = 40; animals = 2 (weight_gain: 40 x 2 = 80 values; treated: 40 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-05": {
+    "world_id": "C45",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 98: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 98: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 98: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 98: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 76: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-05",
+    "class": "B-6",
+    "subtype": null,
+    "source": "NIE11",
+    "brief": {
+      "id": "C45",
+      "claim": "The training programme improves task accuracy more than the control activity: the mean change in accuracy (post minus pre) is larger in the trained group than in the control group, and a two-sample t test of the difference between the two groups' mean changes gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "pre",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "task accuracy (proportion correct) of each subject before the programme"
+        },
+        {
+          "key": "post",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "task accuracy (proportion correct) of each subject after the programme"
+        },
+        {
+          "key": "trained",
+          "shape": "(subjects,)",
+          "dtype": "bool",
+          "meaning": "whether the subject took part in the training programme (true) or in the control activity (false)"
+        }
+      ],
+      "sizes": "subjects = 40 (pre, post and trained: 40 values each)"
+    },
+    "diff_lines": 18
+  },
+  "B6-06": {
+    "world_id": "C52",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 102: if g.sum() < 2 or (~g).sum() < 2 or rt.shape[1] < 2:",
+        "line 102: if g.sum() < 2 or (~g).sum() < 2 or rt.shape[1] < 2:",
+        "line 81: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 102: if g.sum() < 2 or (~g).sum() < 2 or rt.shape[1] < 2:",
+        "line 102: if g.sum() < 2 or (~g).sum() < 2 or rt.shape[1] < 2:",
+        "line 81: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-06",
+    "class": "B-6",
+    "subtype": null,
+    "source": "NIE11",
+    "brief": {
+      "id": "C52",
+      "claim": "Reaction times fall more steeply over practice sessions in healthy subjects than in patients: the mean per-subject linear slope of reaction time on session number is more negative in the healthy group, and a two-sample t test of the difference between the two groups' mean slopes gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "rt",
+          "shape": "(subjects, sessions)",
+          "dtype": "float",
+          "meaning": "median reaction time in milliseconds of each subject in each practice session, sessions in order"
+        },
+        {
+          "key": "patient",
+          "shape": "(subjects,)",
+          "dtype": "bool",
+          "meaning": "whether the subject belongs to the patient group (true) or the healthy group (false)"
+        }
+      ],
+      "sizes": "subjects = 30; sessions = 8 (rt: 30 x 8 = 240 values; patient: 30 values)"
+    },
+    "diff_lines": 18
+  },
+  "B6-07": {
+    "world_id": "C08",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 83: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 83: if abs(de - 1.0) < 1e-14:",
+        "line 115: return bool(diff.mean() > 0.0 and p2t(t, diff.size - 1.0) < 0.05)"
+      ]
+    },
+    "case_id": "B6-07",
+    "class": "B-6",
+    "subtype": null,
+    "source": "NIE11",
+    "brief": {
+      "id": "C08",
+      "claim": "The task engages region A more than region B: the task-evoked signal change (task minus rest) is larger in region A than in region B, with the mean across subjects of the within-subject difference of the two signal changes positive, and a paired t test of that difference gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "task_a",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "mean signal in region A of each subject during task blocks (percent signal change units)"
+        },
+        {
+          "key": "rest_a",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "mean signal in region A of each subject during rest blocks"
+        },
+        {
+          "key": "task_b",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "mean signal in region B of each subject during task blocks"
+        },
+        {
+          "key": "rest_b",
+          "shape": "(subjects,)",
+          "dtype": "float",
+          "meaning": "mean signal in region B of each subject during rest blocks"
+        }
+      ],
+      "sizes": "subjects = 24 (each of the four keys: 24 values)"
+    },
+    "diff_lines": 16
+  },
+  "B6-08": {
+    "world_id": "C22",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 90: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 90: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 69: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 90: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 90: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 69: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-08",
+    "class": "B-6",
+    "subtype": null,
+    "source": "HUR84",
+    "brief": {
+      "id": "C22",
+      "claim": "The insecticide lowers invertebrate density: the mean density in treated tanks is lower than in control tanks, and a Welch two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "density",
+          "shape": "(tanks, samples)",
+          "dtype": "float",
+          "meaning": "invertebrates per litre counted in each of the water samples taken from each tank"
+        },
+        {
+          "key": "treated",
+          "shape": "(tanks,)",
+          "dtype": "bool",
+          "meaning": "whether the tank received the insecticide"
+        }
+      ],
+      "sizes": "tanks = 8; samples = 10 (density: 8 x 10 = 80 values; treated: 8 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-09": {
+    "world_id": "C35",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 56: if g.sum() < 1 or (~g).sum() < 1:",
+        "line 56: if g.sum() < 1 or (~g).sum() < 1:",
+        "line 70: return bool(dev > 0.0 and abs(z) > 1.959963984540054)"
+      ],
+      "fixed": [
+        "line 56: if g.sum() < 1 or (~g).sum() < 1:",
+        "line 56: if g.sum() < 1 or (~g).sum() < 1:",
+        "line 70: return bool(dev > 0.0 and abs(z) > 1.959963984540054)"
+      ]
+    },
+    "case_id": "B6-09",
+    "class": "B-6",
+    "subtype": null,
+    "source": "HUR84",
+    "brief": {
+      "id": "C35",
+      "claim": "The treatment raises invertebrate abundance in the field plots: abundance is higher in treated plots than in control plots, and a two-sided Mann-Whitney U test comparing the abundances of the two groups gives p < 0.05.",
+      "data_keys": [
+        {
+          "key": "abundance",
+          "shape": "(plots, dates)",
+          "dtype": "float",
+          "meaning": "number of individuals counted in a sample from each plot on each weekly sampling date, dates in order"
+        },
+        {
+          "key": "treated",
+          "shape": "(plots,)",
+          "dtype": "bool",
+          "meaning": "whether the plot received the treatment"
+        }
+      ],
+      "sizes": "plots = 12; dates = 12 (abundance: 12 x 12 = 144 values; treated: 12 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-10": {
+    "world_id": "C23",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 92: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 92: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 92: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 92: if g.sum() < 2 or (~g).sum() < 2:",
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-10",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ10",
+    "brief": {
+      "id": "C23",
+      "claim": "The drug improves motor coordination: the mean time spent on the rotarod is longer in the treatment group than in the control group, and a two-tailed two-sample t test of the difference between the two group means gives p < 0.05.",
+      "data_keys": [
+        {
+          "key": "latency",
+          "shape": "(rats, days)",
+          "dtype": "float",
+          "meaning": "time in seconds that each rat stayed on the rotarod on each of the consecutive test days"
+        },
+        {
+          "key": "treated",
+          "shape": "(rats,)",
+          "dtype": "bool",
+          "meaning": "whether the rat was in the treatment group (true) or the control group (false)"
+        }
+      ],
+      "sizes": "rats = 10; days = 3 (latency: 10 x 3 = 30 values; treated: 10 values)"
+    },
+    "diff_lines": 4
+  },
+  "B6-11": {
+    "world_id": "C03",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 71: if abs(de - 1.0) < 1e-14:"
+      ]
+    },
+    "case_id": "B6-11",
+    "class": "B-6",
+    "subtype": null,
+    "source": "LAZ10",
+    "brief": {
+      "id": "C03",
+      "claim": "Across subjects, mean resting heart rate and mean salivary cortisol (each subject's mean over the recording days) are positively correlated: the Pearson correlation between the two subject means is positive, and a test of that correlation gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "heart_rate",
+          "shape": "(subjects, days)",
+          "dtype": "float",
+          "meaning": "resting heart rate in beats per minute of each subject on each recording day"
+        },
+        {
+          "key": "cortisol",
+          "shape": "(subjects, days)",
+          "dtype": "float",
+          "meaning": "morning salivary cortisol concentration of each subject on each recording day"
+        }
+      ],
+      "sizes": "subjects = 16; days = 10 (heart_rate and cortisol: 16 x 10 = 160 values each)"
+    },
+    "diff_lines": 4
+  },
+  "B6-12": {
+    "world_id": "C15",
+    "issues": [],
+    "listed": {
+      "faulty": [
+        "line 90: if g.sum() < 4 or (~g).sum() < 4:",
+        "line 90: if g.sum() < 4 or (~g).sum() < 4:",
+        "line 68: if abs(de - 1.0) < 1e-14:"
+      ],
+      "fixed": [
+        "line 42: if g.sum() < 4 or (~g).sum() < 4:",
+        "line 42: if g.sum() < 4 or (~g).sum() < 4:",
+        "line 61: return bool(r_a > r_b and abs(z) > 1.959963984540054)"
+      ]
+    },
+    "case_id": "B6-12",
+    "class": "B-6",
+    "subtype": null,
+    "source": "MAK19",
+    "brief": {
+      "id": "C15",
+      "claim": "Scores on the task and on the symptom scale are more strongly related in group A than in group B: the Pearson correlation between task score and symptom score is higher in group A than in group B, and a Fisher z test of the difference between the two correlations gives two-sided p < 0.05.",
+      "data_keys": [
+        {
+          "key": "task_score",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "score of each participant on the experimental task"
+        },
+        {
+          "key": "symptom_score",
+          "shape": "(participants,)",
+          "dtype": "float",
+          "meaning": "score of each participant on the symptom questionnaire"
+        },
+        {
+          "key": "group_a",
+          "shape": "(participants,)",
+          "dtype": "bool",
+          "meaning": "whether the participant belongs to group A (true) or group B (false)"
+        }
+      ],
+      "sizes": "participants = 40 (each of the three keys: 40 values)"
+    },
+    "diff_lines": 53
+  }
+}

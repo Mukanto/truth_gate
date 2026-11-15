@@ -1,0 +1,32 @@
+{
+ "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a-5ba1699cb0eb/subagents/agent-a9cf679166b180a9c.jsonl",
+ "sha256": "a3149da50bbaa8e9af597c483c4777ce3653c5f10dfee84577d370488dc4a734",
+ "meta_model": null,
+ "meta_pickedEffortModel": "claude-opus-5-5",
+ "meta_finished": true,
+ "assistant_entries_by_model": {
+  "claude-sonnet-5-5": 73
+ },
+ "assistant_messages_by_model": {
+  "claude-sonnet-5-5": 38
+ },
+ "tools": {
+  "Read": 1,
+  "Bash": 34,
+  "ToolSearch": 1,
+  "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index": 1,
+  "Write": 3
+ },
+ "forbidden_calls": [
+  "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index"
+ ],
+ "paths_outside_sandbox": [
+  "Bash.command contains '..': cd \"/e/Claude Projects/Kapi/phase_c_private/authors/B2/pkg\"; ls truth_gate; grep -n -i \"noise\\|zeros\\|shuffle\" truth_gate/*.py | head -60; ls /e/Claude\\ Projects/Kapi/phase_c_private/authors/B2/agent_",
+  "Bash.command contains '..': cd \"/e/Claude Projects/Kapi/phase_c_private/authors/B2/work\"; py write_case_md.py && head -c 2500 ../cases/B2-10/CASE.md && cd .. && cat >> LOG.md <<'E'\n\n## Part 2: work record\nFiles written (inside t",
+  "Bash.command: /e/Claude\\",
+  "Bash.command: C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a-5ba1699cb0eb/tool-results/b2jk62qxh.txt",
+  "Bash.command: s://pmc.ncbi.nlm.nih.gov/articles/PMC1397873/"
+ ],
+ "first": "2026-11-15T05:55:54.627Z",
+ "last": "2026-11-15T06:10:41.740Z"
+}

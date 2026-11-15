@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-03",
+  "world_id": "C21",
+  "class": "B-2",
+  "subtype": "L1.4",
+  "source": "KAP23",
+  "brief": {
+    "id": "C21",
+    "claim": "A classifier built from the 50 sensor features separates defective units from sound units with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65 on new units.",
+    "data_keys": [
+      {
+        "key": "sensor_features",
+        "shape": "(units, sensor_features)",
+        "dtype": "float",
+        "meaning": "50 features computed from the sensor recording of each unit"
+      },
+      {
+        "key": "defective",
+        "shape": "(units,)",
+        "dtype": "bool",
+        "meaning": "True when the unit is defective"
+      }
+    ],
+    "sizes": "units = 1000; sensor_features = 50"
+  }
+}

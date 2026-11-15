@@ -1,0 +1,29 @@
+{
+  "case_id": "O3-B",
+  "world_id": "C14",
+  "class": "O",
+  "subtype": "O-3",
+  "source": "HER14",
+  "brief": {
+    "id": "C14",
+    "claim": "Across the advanced economies in the post-war period, average real GDP growth in country-years with a public debt ratio above 90 percent of GDP is at least 2 percentage points lower than average real GDP growth in country-years with a debt ratio of 90 percent or below.",
+    "data_keys": [
+      {
+        "key": "growth",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "real GDP growth rate in percent of each country in each year"
+      },
+      {
+        "key": "debt_ratio",
+        "shape": "(countries, years)",
+        "dtype": "float",
+        "meaning": "public debt as a percentage of GDP of each country in each year"
+      }
+    ],
+    "sizes": {
+      "countries": 20,
+      "years": 64
+    }
+  }
+}

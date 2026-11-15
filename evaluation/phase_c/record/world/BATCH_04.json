@@ -1,0 +1,182 @@
+[
+  {
+    "id": "C46",
+    "claim": "In a symptom checklist of eight items, the score on item 1 identifies patients with a high total on items 2 to 8: the AUC of the item 1 score for patients whose total over items 2 to 8 is at least 12, against all other patients, is at least 0.65.",
+    "data_keys": [
+      {
+        "key": "item_scores",
+        "shape": "(patients, items)",
+        "dtype": "float",
+        "meaning": "Points (0 to 3) scored by each patient on each of the eight checklist items; columns are in checklist order, item 1 first."
+      }
+    ],
+    "sizes": "patients = 300, items = 8; item_scores has shape (300, 8)."
+  },
+  {
+    "id": "C47",
+    "claim": "A classifier built from the 20 image features of a tissue patch identifies malignant tissue in patches from new patients with an area under the ROC curve of at least 0.75.",
+    "data_keys": [
+      {
+        "key": "patch_features",
+        "shape": "(patients, patches, features)",
+        "dtype": "float",
+        "meaning": "20 image features of each tissue patch of each patient"
+      },
+      {
+        "key": "malignant",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True when the patient's tissue is malignant"
+      }
+    ],
+    "sizes": "patients = 80; patches = 10; features = 20"
+  },
+  {
+    "id": "C48",
+    "claim": "A kernel-based classifier built from the 1000 gene-expression measurements separates the two tumour classes with an accuracy of at least 0.60 on new samples.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each tumour sample"
+      },
+      {
+        "key": "class_b",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True when the sample belongs to the second tumour class"
+      }
+    ],
+    "sizes": "samples = 40; genes = 1000"
+  },
+  {
+    "id": "C49",
+    "claim": "Among children referred for a developmental assessment, a logistic regression on the speech measures identifies the children who received a diagnosis with a balanced accuracy of at least 0.70 for new children, estimated by 5-fold cross-validation.",
+    "data_keys": [
+      {
+        "key": "speech_measures",
+        "shape": "(children, measures)",
+        "dtype": "float",
+        "meaning": "acoustic and conversational measures computed from a recorded speech sample of each child"
+      },
+      {
+        "key": "diagnosis",
+        "shape": "(children,)",
+        "dtype": "bool",
+        "meaning": "True if the child received the diagnosis at the end of the assessment"
+      },
+      {
+        "key": "severity_rating",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "clinician's overall symptom severity rating of the child on a continuous 0 to 10 scale, higher means more severe"
+      }
+    ],
+    "sizes": {
+      "children": 400,
+      "measures": 30
+    }
+  },
+  {
+    "id": "C50",
+    "claim": "Among patients whose first systolic blood-pressure reading was at least 160 mmHg, antihypertensive treatment lowers systolic pressure: the mean fall from the second reading (taken before treatment began) to the third reading (taken after 8 weeks of treatment) is at least 8 mmHg, and a one-sided paired t test of the fall is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "sbp",
+        "shape": "(patients, readings)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure in mmHg; readings in time order: reading 1 at the screening visit, reading 2 at the pre-treatment visit, reading 3 after 8 weeks of treatment"
+      }
+    ],
+    "sizes": {
+      "patients": 250,
+      "readings": 3
+    }
+  },
+  {
+    "id": "C51",
+    "claim": "A regression on the 8 weekly drivers explains at least 30% of the variance of weekly demand in later weeks (R-squared of at least 0.30).",
+    "data_keys": [
+      {
+        "key": "drivers",
+        "shape": "(weeks, drivers)",
+        "dtype": "float",
+        "meaning": "8 weather and calendar drivers of each week, weeks in chronological order"
+      },
+      {
+        "key": "demand",
+        "shape": "(weeks,)",
+        "dtype": "float",
+        "meaning": "demand observed in that week"
+      }
+    ],
+    "sizes": "weeks = 400; drivers = 8"
+  },
+  {
+    "id": "C52",
+    "claim": "Reaction times fall more steeply over practice sessions in healthy subjects than in patients: the mean per-subject linear slope of reaction time on session number is more negative in the healthy group, and a two-sample t test of the difference between the two groups' mean slopes gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "rt",
+        "shape": "(subjects, sessions)",
+        "dtype": "float",
+        "meaning": "median reaction time in milliseconds of each subject in each practice session, sessions in order"
+      },
+      {
+        "key": "patient",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "whether the subject belongs to the patient group (true) or the healthy group (false)"
+      }
+    ],
+    "sizes": "subjects = 30; sessions = 8 (rt: 30 x 8 = 240 values; patient: 30 values)"
+  },
+  {
+    "id": "C53",
+    "claim": "Among adults, 24-hour urinary albumin excretion increases with age after accounting for 24-hour urinary creatinine excretion: the partial correlation between albumin excretion and age, given creatinine excretion, is at least 0.15.",
+    "data_keys": [
+      {
+        "key": "albumin_excretion",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Urinary albumin excreted over 24 hours, in mg per 24 h, for each participant."
+      },
+      {
+        "key": "creatinine_excretion",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Urinary creatinine excreted over 24 hours, in mg per 24 h, for each participant."
+      },
+      {
+        "key": "age",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "Age of each participant, in years."
+      }
+    ],
+    "sizes": "participants = 800; albumin_excretion, creatinine_excretion and age each have shape (800,)."
+  },
+  {
+    "id": "C54",
+    "claim": "Over the scalp electrodes that respond to the stimulus, the stimulus condition explains at least 10% of the variance of the electrode-averaged post-stimulus amplitude across trials (R-squared of at least 0.10 in a regression of that amplitude on the stimulus condition).",
+    "data_keys": [
+      {
+        "key": "amplitude",
+        "shape": "(trials, electrodes)",
+        "dtype": "float",
+        "meaning": "mean post-stimulus EEG amplitude (microvolts) at each electrode on each trial"
+      },
+      {
+        "key": "stimulus",
+        "shape": "(trials,)",
+        "dtype": "bool",
+        "meaning": "True on trials with the stimulus present, False on control trials"
+      }
+    ],
+    "sizes": {
+      "trials": 100,
+      "electrodes": 64
+    }
+  }
+]

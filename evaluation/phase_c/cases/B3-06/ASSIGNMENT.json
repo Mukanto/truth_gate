@@ -1,0 +1,26 @@
+{
+  "case_id": "B3-06",
+  "world_id": "C09",
+  "class": "B-3",
+  "subtype": null,
+  "source": "PEA97",
+  "brief": {
+    "id": "C09",
+    "claim": "Across trials of an estimation task, the estimates of the three observers are positively associated after accounting for the true value of the quantity: the mean, over the three pairs of observers, of the partial correlation between the two observers' estimates given the true value is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "true_value",
+        "shape": "(trials,)",
+        "dtype": "float",
+        "meaning": "Actual value of the quantity presented on each trial, in arbitrary units."
+      },
+      {
+        "key": "estimates",
+        "shape": "(trials, observers)",
+        "dtype": "float",
+        "meaning": "Estimate of the quantity made by each observer on each trial, in the same units as true_value."
+      }
+    ],
+    "sizes": "trials = 200, observers = 3; true_value has shape (200,); estimates has shape (200, 3)."
+  }
+}

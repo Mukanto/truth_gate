@@ -1,0 +1,37 @@
+{
+ "v0.5.0_commit": "5661709326f11451323820210b8a49f0e16a031d",
+ "v0.4.1_commit": "90e8dad70bd2b1ad3d12b7c470e8c648d5dd3652",
+ "v0.5.0_pushed": true,
+ "python": "3.14.2",
+ "numpy": "2.4.1",
+ "machine": {
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "cpu_count": 12
+ },
+ "pkg": "pkg/ = git archive v0.5.0 truth_gate kapi; pkg_v041/ = git archive v0.4.1 truth_gate kapi (for the smoke test and the v0.4.1 run)",
+ "smoke_test": {
+  "study": "smoke/smoke_study.py (not a case)",
+  "v0.5.0": "FALSIFIABLE, exit 0, truth_gate imported from pkg/",
+  "v0.4.1": "FALSIFIABLE, exit 0, truth_gate imported from pkg_v041/"
+ },
+ "fable_preflight": {
+  "agent_id": "a87707176497af437",
+  "prompt_contains_brief": false,
+  "meta_model": "fable",
+  "meta_pickedEffortModel": "claude-opus-5-5 (recorded as found; not an assistant-message model)",
+  "assistant_message_models": {
+   "claude-fable-5-2": 2
+  },
+  "tools_called": {
+   "Glob": 1
+  },
+  "linked_agent_transcripts": 0,
+  "first_last_utc": [
+   "2026-11-13T15:36:08.238Z",
+   "2026-11-13T15:36:10.745Z"
+  ],
+  "transcript_sha256": "49f3da0258db239a2d3209588fa782e923f2d2bef4d44104edd6bcafe35cf7c6",
+  "result": "pass (every assistant message claude-fable-*)"
+ }
+}

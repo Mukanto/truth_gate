@@ -1,0 +1,32 @@
+{
+  "case_id": "B3-01",
+  "world_id": "C16",
+  "class": "B-3",
+  "subtype": null,
+  "source": "CUR13",
+  "brief": {
+    "id": "C16",
+    "claim": "In adult rats, animals given the drug have a larger heart weight than untreated animals after accounting for body mass: in a linear regression of heart weight on treatment status and body mass, the coefficient of treatment status is positive and significant at the one-sided 5% level (t test).",
+    "data_keys": [
+      {
+        "key": "heart_weight",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "Wet heart weight of each animal, in mg."
+      },
+      {
+        "key": "body_mass",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "Body mass of each animal, in g."
+      },
+      {
+        "key": "treated",
+        "shape": "(animals,)",
+        "dtype": "bool",
+        "meaning": "True for animals given the drug, False for untreated animals."
+      }
+    ],
+    "sizes": "animals = 48; heart_weight, body_mass and treated each have shape (48,)."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-06",
+  "world_id": "C47",
+  "class": "B-2",
+  "subtype": "L3.2",
+  "source": "KAP23",
+  "brief": {
+    "id": "C47",
+    "claim": "A classifier built from the 20 image features of a tissue patch identifies malignant tissue in patches from new patients with an area under the ROC curve of at least 0.75.",
+    "data_keys": [
+      {
+        "key": "patch_features",
+        "shape": "(patients, patches, features)",
+        "dtype": "float",
+        "meaning": "20 image features of each tissue patch of each patient"
+      },
+      {
+        "key": "malignant",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True when the patient's tissue is malignant"
+      }
+    ],
+    "sizes": "patients = 80; patches = 10; features = 20"
+  }
+}

@@ -1,0 +1,506 @@
+{
+ "decisions": [
+  {
+   "n": 0,
+   "file": "GATE.md",
+   "line": 36,
+   "decision": "keep",
+   "sentence": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, `.github/workflows/truth-gate.yml`;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 1,
+   "file": "GATE.md",
+   "line": 142,
+   "decision": "keep",
+   "sentence": "they are reported (`K1_ABSTAINED`), and a majority on `minus` or `null` caps the verdict at WEAK (`K1_ABSTAINED_MAJORITY`).",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 2,
+   "file": "GATE.md",
+   "line": 147,
+   "decision": "keep",
+   "sentence": "Two evaluations in one process must give the same result.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 3,
+   "file": "GATE.md",
+   "line": 156,
+   "decision": "keep",
+   "sentence": "| `WEAK` | mandatory checks passed, but a target was missed, a check was inconclusive, or a control was waived | 1 |",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 4,
+   "file": "GATE.md",
+   "line": 185,
+   "decision": "keep",
+   "sentence": "Before the study module is executed, the gate installs a `sys.addaudithook` hook and arms it.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 5,
+   "file": "GATE.md",
+   "line": 192,
+   "decision": "keep",
+   "sentence": "**The guard does not cover external programs.** A command criterion (`command = [...]`) runs in another process, which",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 6,
+   "file": "GATE.md",
+   "line": 193,
+   "decision": "keep",
+   "sentence": "The program runs in a private working",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 7,
+   "file": "GATE.md",
+   "line": 195,
+   "decision": "keep",
+   "sentence": "`K6_EXTERNAL_UNGUARDED` lists the commands, and the table, the Action summary and the badge show it.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 8,
+   "file": "GATE.md",
+   "line": 196,
+   "decision": "keep",
+   "sentence": "records the argv, the SHA-256 of the executable and of every `[external] uses` file;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 9,
+   "file": "GATE.md",
+   "line": 224,
+   "decision": "keep",
+   "sentence": "the leak guard does not cover external programs) and seven known limitations (the three of 0.3, plus:",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 10,
+   "file": "GATE.md",
+   "line": 265,
+   "decision": "keep",
+   "sentence": "| `K6_NONREPRODUCIBLE` | study-level | two evaluations in one process differed (unseeded randomness, hidden state) |",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 11,
+   "file": "GATE.md",
+   "line": 297,
+   "decision": "keep",
+   "sentence": "| `K6_EXTERNAL_UNGUARDED` | the study has command criteria, which run in other programs that the leak guard cannot see.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 12,
+   "file": "GATE.md",
+   "line": 298,
+   "decision": "keep",
+   "sentence": "| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 13,
+   "file": "GATE.md",
+   "line": 309,
+   "decision": "keep",
+   "sentence": "after the two evaluations of K1-K7, under the armed guard.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 14,
+   "file": "GATE.md",
+   "line": 349,
+   "decision": "keep",
+   "sentence": "* `allow_paths` are declared by the user and cannot be audited beyond hashing.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 15,
+   "file": "GATE.md",
+   "line": 354,
+   "decision": "keep",
+   "sentence": "* **External programs** (command criteria) are not covered by the leak guard.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 16,
+   "file": "MANIFEST.md",
+   "line": 97,
+   "decision": "keep",
+   "sentence": "| `[external]` | `uses = []` (files copied into the programs' working folder and hashed), `env = []` (extra variable names passed through), `startup_timeout_s = 120`, `request_timeout_s = 60` |",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 17,
+   "file": "MANIFEST.md",
+   "line": 169,
+   "decision": "keep",
+   "sentence": "It counts as no claim, like `False` in every HOLDS-based statistic, and is reported",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 18,
+   "file": "MANIFEST.md",
+   "line": 201,
+   "decision": "keep",
+   "sentence": "**`pattern_stats`.** After the two evaluations the gate regenerates the counted samples of the `plus`, `minus` and `null`",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 19,
+   "file": "MANIFEST.md",
+   "line": 218,
+   "decision": "keep",
+   "sentence": "[external]",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 20,
+   "file": "MANIFEST.md",
+   "line": 228,
+   "decision": "keep",
+   "sentence": "It serves both evaluations and the K8 pass.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 21,
+   "file": "MANIFEST.md",
+   "line": 231,
+   "decision": "keep",
+   "sentence": "* **Working folder:** a fresh temporary folder holding copies of the `[external] uses` files and the `allow_paths`, with",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 22,
+   "file": "MANIFEST.md",
+   "line": 234,
+   "decision": "keep",
+   "sentence": "  through, plus `LANG = C.UTF-8`, `TG_PROTOCOL = tg-line/1` and the names in `[external] env`.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 23,
+   "file": "MANIFEST.md",
+   "line": 258,
+   "decision": "keep",
+   "sentence": "...}` | that one outcome is UNDEFINED (`ExternalError`, a hard UNDEFINED);",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 24,
+   "file": "MANIFEST.md",
+   "line": 259,
+   "decision": "keep",
+   "sentence": "The outcome is `ExternalTimeout` or `ExternalProtocolError`;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 25,
+   "file": "MANIFEST.md",
+   "line": 260,
+   "decision": "keep",
+   "sentence": "| the process dies (EOF, write error) while a reply is awaited | `ExternalDied`, like every later request (R-13) |",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 26,
+   "file": "MANIFEST.md",
+   "line": 267,
+   "decision": "keep",
+   "sentence": "no claim, reported as `K1_ABSTAINED:<stream>`, and K1 makes the verdict UNDEFINED only when",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 27,
+   "file": "MANIFEST.md",
+   "line": 270,
+   "decision": "keep",
+   "sentence": "death (`EXTERNAL_DIED`), a missing component in a component dict, and an outcome string other than `HOLDS`, `FAILS` and",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 28,
+   "file": "MANIFEST.md",
+   "line": 286,
+   "decision": "keep",
+   "sentence": "`K6_EXTERNAL_UNGUARDED` lists the commands (`{\"note\":",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 29,
+   "file": "MANIFEST.md",
+   "line": 289,
+   "decision": "keep",
+   "sentence": "The gate isolates external programs against accidents, not against deliberate evasion.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 30,
+   "file": "MANIFEST.md",
+   "line": 293,
+   "decision": "keep",
+   "sentence": "(selection, fitting, evaluation) on the data it is given, a circular selection or a leak makes it hold on noise, and K4",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 31,
+   "file": "MANIFEST.md",
+   "line": 361,
+   "decision": "keep",
+   "sentence": "K8 runs as a separate pass after the two evaluations, under the armed guard;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 32,
+   "file": "MANIFEST.md",
+   "line": 391,
+   "decision": "keep",
+   "sentence": "`DATA.csv` must be a realistic synthetic or pilot dataset, **not the real study data**.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 33,
+   "file": "MANIFEST.md",
+   "line": 424,
+   "decision": "keep",
+   "sentence": "**Not in 0.4 (moved to 0.5):** worlds, controls and premises produced by external programs;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 34,
+   "file": "README_TOOL.md",
+   "line": 13,
+   "decision": "keep",
+   "sentence": "| **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 35,
+   "file": "README_TOOL.md",
+   "line": 29,
+   "decision": "keep",
+   "sentence": "  learning evaluations, hardware experiments.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 36,
+   "file": "README_TOOL.md",
+   "line": 32,
+   "decision": "keep",
+   "sentence": "  roles to the designer, the coder, a blind auditor and a verifier.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 37,
+   "file": "README_TOOL.md",
+   "line": 108,
+   "decision": "keep",
+   "sentence": "the certificate carries the study note `K6_EXTERNAL_UNGUARDED` (see [Limits](#limits)).",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 38,
+   "file": "README_TOOL.md",
+   "line": 110,
+   "decision": "keep",
+   "sentence": "**Starting from a dataset.** `truth-gate suggest pilot.csv --outcome yield --group group --reference control` writes a",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 39,
+   "file": "README_TOOL.md",
+   "line": 112,
+   "decision": "keep",
+   "sentence": "Feed it a realistic synthetic or pilot",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 40,
+   "file": "README_TOOL.md",
+   "line": 122,
+   "decision": "keep",
+   "sentence": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, the workflow |",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 41,
+   "file": "README_TOOL.md",
+   "line": 189,
+   "decision": "keep",
+   "sentence": "It only reports.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 42,
+   "file": "README_TOOL.md",
+   "line": 199,
+   "decision": "keep",
+   "sentence": "The blind audit covers the rest.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 43,
+   "file": "README_TOOL.md",
+   "line": 208,
+   "decision": "keep",
+   "sentence": "* **External programs are not covered by the leak guard.** A command criterion runs in another process;",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 44,
+   "file": "README_TOOL.md",
+   "line": 209,
+   "decision": "keep",
+   "sentence": "The certificate says so (the note `K6_EXTERNAL_UNGUARDED` and a non-claim), and the badge",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 45,
+   "file": "SPEC.md",
+   "line": 23,
+   "decision": "keep",
+   "sentence": "It only reports.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 46,
+   "file": "SPEC.md",
+   "line": 36,
+   "decision": "keep",
+   "sentence": "every mandatory check passed, but a target was missed, a check was inconclusive, or a control was waived with a reason.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 47,
+   "file": "SPEC.md",
+   "line": 107,
+   "decision": "keep",
+   "sentence": "For `k` HOLDS out of `n` evaluations (UNDEFINED counts as not-HOLDS unless stated otherwise), one-sided Wilson score bounds at level `a` use `z = NormalDist().inv_cdf(1 - a)` from the Python standard library.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 48,
+   "file": "SPEC.md",
+   "line": 143,
+   "decision": "keep",
+   "sentence": "They use the same per-bound level `a` as SL (§4.2), so a target counts as missed only when the miss is significant:",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 49,
+   "file": "SPEC.md",
+   "line": 154,
+   "decision": "keep",
+   "sentence": "the rate difference is reported in the premise map.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 50,
+   "file": "SPEC.md",
+   "line": 179,
+   "decision": "keep",
+   "sentence": "- **Leak guard.** Before the study module is imported, Kapı installs (once per process) a `sys.addaudithook` hook and arms it.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 51,
+   "file": "SPEC.md",
+   "line": 194,
+   "decision": "keep",
+   "sentence": "`allow_paths` are declared by the user and cannot be audited for content beyond hashing.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 52,
+   "file": "SPEC.md",
+   "line": 196,
+   "decision": "keep",
+   "sentence": "- **Reproducibility.** The complete evaluation (all streams, all checks) is computed twice in the same process.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 53,
+   "file": "SPEC.md",
+   "line": 248,
+   "decision": "keep",
+   "sentence": "The only global state is the audit hook and its armed flag.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 54,
+   "file": "SPEC.md",
+   "line": 249,
+   "decision": "keep",
+   "sentence": "they must not use or imitate evaluation cases (§12).",
+   "reason": "Generic rule that tests must not imitate evaluation cases; names no case, so ordinary dev vocabulary."
+  },
+  {
+   "n": 55,
+   "file": "SPEC.md",
+   "line": 328,
+   "decision": "remove",
+   "sentence": "Reason: otherwise a criterion that ignores the changed quantity (case E1-10) would be reported as a world defect.",
+   "reason": "Names an evaluation case by number (E1-10)."
+  },
+  {
+   "n": 56,
+   "file": "SPEC.md",
+   "line": 329,
+   "decision": "keep",
+   "sentence": "exact equality (Δ1.2), the paired draw in stochastic mode (Δ1.1), the read-key recording rules (Δ1.3), the severity position of UNTESTED and exit code 6 (Δ2), the certificate field names (Δ3), the evaluation design (Δ4).",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 57,
+   "file": "SPEC.md",
+   "line": 336,
+   "decision": "keep",
+   "sentence": "- The comparison is made once per study evaluation.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 58,
+   "file": "SPEC.md",
+   "line": 351,
+   "decision": "keep",
+   "sentence": "All counted evaluations keep receiving plain `dict` samples, as in 0.3.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 59,
+   "file": "SPEC.md",
+   "line": 399,
+   "decision": "keep",
+   "sentence": "Kapı then reports NOT_FALSIFIABLE, possibly with `K2_MINUS_UNREAD`.",
+   "reason": "Ordinary tool vocabulary; no evaluation, result, count, case, source key or class."
+  },
+  {
+   "n": 60,
+   "file": "SPEC.md",
+   "line": 401,
+   "decision": "keep",
+   "sentence": "v0.2 reported it as NOT_FALSIFIABLE with `K2_NO_SEPARATION`.",
+   "reason": "\"reported\" is ordinary verb; the problem sentences on this line are listed in other_sentences."
+  }
+ ],
+ "other_sentences": [
+  {
+   "file": "SPEC.md",
+   "line": 401,
+   "sentence": "Any regression case built this way loses its R1 detection (Δ4.2).",
+   "reason": "Refers to a regression case and a named detection (R1)."
+  },
+  {
+   "file": "SPEC.md",
+   "line": 401,
+   "sentence": "It was found in the toy `toy_no_separation` during implementation.",
+   "reason": "States a result/finding about a named toy case; borderline."
+  }
+ ]
+}

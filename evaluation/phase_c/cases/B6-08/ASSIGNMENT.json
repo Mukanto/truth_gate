@@ -1,0 +1,26 @@
+{
+  "case_id": "B6-08",
+  "world_id": "C22",
+  "class": "B-6",
+  "subtype": null,
+  "source": "HUR84",
+  "brief": {
+    "id": "C22",
+    "claim": "The insecticide lowers invertebrate density: the mean density in treated tanks is lower than in control tanks, and a Welch two-sample t test of the difference between the two group means gives two-sided p < 0.05.",
+    "data_keys": [
+      {
+        "key": "density",
+        "shape": "(tanks, samples)",
+        "dtype": "float",
+        "meaning": "invertebrates per litre counted in each of the water samples taken from each tank"
+      },
+      {
+        "key": "treated",
+        "shape": "(tanks,)",
+        "dtype": "bool",
+        "meaning": "whether the tank received the insecticide"
+      }
+    ],
+    "sizes": "tanks = 8; samples = 10 (density: 8 x 10 = 80 values; treated: 8 values)"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "B2-05",
+  "world_id": "C51",
+  "class": "B-2",
+  "subtype": "L3.1",
+  "source": "KAP23",
+  "brief": {
+    "id": "C51",
+    "claim": "A regression on the 8 weekly drivers explains at least 30% of the variance of weekly demand in later weeks (R-squared of at least 0.30).",
+    "data_keys": [
+      {
+        "key": "drivers",
+        "shape": "(weeks, drivers)",
+        "dtype": "float",
+        "meaning": "8 weather and calendar drivers of each week, weeks in chronological order"
+      },
+      {
+        "key": "demand",
+        "shape": "(weeks,)",
+        "dtype": "float",
+        "meaning": "demand observed in that week"
+      }
+    ],
+    "sizes": "weeks = 400; drivers = 8"
+  }
+}

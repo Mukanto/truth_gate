@@ -1,0 +1,46 @@
+{
+ "B1-09": {
+  "plus": {
+   "holds": 193,
+   "fails": 7,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "minus": {
+   "holds": 6,
+   "fails": 179,
+   "none": 15,
+   "errors": 0,
+   "n": 200
+  },
+  "control:permute_trait_across_participants": {
+   "holds": 9,
+   "fails": 182,
+   "none": 9,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:noise": {
+   "holds": 3,
+   "fails": 197,
+   "none": 0,
+   "errors": 0,
+   "n": 200
+  },
+  "probe:zeros": {
+   "holds": 0,
+   "fails": 0,
+   "none": 5,
+   "errors": 0,
+   "n": 5
+  },
+  "timing": {
+   "t": 0.03510447333270956,
+   "g": 0.0005807266672491096,
+   "S": 5,
+   "estimate_s": 85.6444799999008,
+   "calls": 30
+  }
+ }
+}

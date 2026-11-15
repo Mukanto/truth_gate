@@ -1,0 +1,86 @@
+== B3-01 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 282 fails=  18 none=  0  holds-rate=0.940
+   minus                                                   holds=  24 fails= 276 none=  0  holds-rate=0.080
+   control:permute_treated                                 holds=  15 fails= 285 none=  0  holds-rate=0.050
+   noise                                                   holds=  14 fails= 286 none=  0  holds-rate=0.047
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.181 ms  g=0.017 ms  S=5  estimate=0.5 s (limit 900)
+== B3-02 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_age_across_participants                 holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.059 ms  g=0.065 ms  S=5  estimate=0.3 s (limit 900)
+== B3-03 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 298 fails=   2 none=  0  holds-rate=0.993
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_lv_mass                                 holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_lv_mass_residual                        holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.081 ms  g=0.035 ms  S=6  estimate=0.3 s (limit 900)
+== B3-04 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=  48 fails= 252 none=  0  holds-rate=0.160
+   control:permute_kidney_within_body_mass_blocks          holds=  58 fails= 242 none=  0  holds-rate=0.193
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.033 ms  g=0.019 ms  S=5  estimate=0.1 s (limit 900)
+== B3-05 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_tibia_within_humerus_blocks             holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.061 ms  g=0.055 ms  S=5  estimate=0.3 s (limit 900)
+== B3-06 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:decouple_observers_within_true_value_blocks     holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.123 ms  g=0.032 ms  S=5  estimate=0.4 s (limit 900)
+== B3-07 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_abdomen_within_species                  holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.359 ms  g=0.047 ms  S=5  estimate=1.0 s (limit 900)
+== B3-08 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 275 fails=  25 none=  0  holds-rate=0.917
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_second_baseline_across_patients         holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   1 fails= 299 none=  0  holds-rate=0.003
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.039 ms  g=0.028 ms  S=5  estimate=0.2 s (limit 900)
+== B3-09 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   5 fails= 295 none=  0  holds-rate=0.017
+   control:permute_uptake_across_patients                  holds=   1 fails= 299 none=  0  holds-rate=0.003
+   noise                                                   holds=   5 fails= 295 none=  0  holds-rate=0.017
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.040 ms  g=0.042 ms  S=5  estimate=0.2 s (limit 900)
+== B3-10 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 300 fails=   0 none=  0  holds-rate=1.000
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_item1_across_patients                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   0 fails=   0 none=300  holds-rate=0.000
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.020 ms  g=0.094 ms  S=5  estimate=0.3 s (limit 900)
+== B3-11 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 280 fails=  20 none=  0  holds-rate=0.933
+   minus                                                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   control:permute_gene_a_across_samples                   holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=   9 fails= 291 none=  0  holds-rate=0.030
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.061 ms  g=0.022 ms  S=5  estimate=0.2 s (limit 900)
+== B3-12 (n samples per stream 300; holds/fails/None)
+   plus                                                    holds= 286 fails=  14 none=  0  holds-rate=0.953
+   minus                                                   holds=  35 fails= 265 none=  0  holds-rate=0.117
+   control:permute_time_across_months                      holds=  14 fails= 286 none=  0  holds-rate=0.047
+   control:reverse_time                                    holds=   0 fails= 300 none=  0  holds-rate=0.000
+   noise                                                   holds=  14 fails= 286 none=  0  holds-rate=0.047
+   zeros                                                   holds=   0 fails=   0 none=  1  holds-rate=0.000
+   timing: t=0.237 ms  g=0.065 ms  S=6  estimate=0.8 s (limit 900)

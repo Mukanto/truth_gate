@@ -1,0 +1,38 @@
+{
+  "case_id": "B3-09",
+  "world_id": "C04",
+  "class": "B-3",
+  "subtype": null,
+  "source": "ARC81",
+  "brief": {
+    "id": "C04",
+    "claim": "Across critically ill patients, whole-body oxygen uptake measured by expired-gas analysis is positively correlated with systemic oxygen delivery (cardiac output times arterial oxygen content): the Pearson correlation is at least 0.3.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Cardiac output of each patient by thermodilution, in L/min."
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Arterial blood oxygen content of each patient, in mL O2 per dL."
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Mixed venous blood oxygen content of each patient, in mL O2 per dL."
+      },
+      {
+        "key": "o2_uptake_expired",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "Whole-body oxygen uptake of each patient from expired-gas analysis, in mL/min."
+      }
+    ],
+    "sizes": "patients = 60; cardiac_output, arterial_o2_content, venous_o2_content and o2_uptake_expired each have shape (60,)."
+  }
+}

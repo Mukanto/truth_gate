@@ -1,0 +1,34 @@
+{
+  "case_id": "B1-01",
+  "world_id": "C33",
+  "class": "B-1",
+  "subtype": null,
+  "source": "MOR03",
+  "brief": {
+    "id": "C33",
+    "claim": "Among women whose menopausal symptom index at the start of the trial was at least 20 points, active hormone therapy lowers the index more than placebo does: the mean fall in the index (start minus week 12) is at least 3 points greater on active therapy than on placebo, and a one-sided Welch t test of that difference between the two arms is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "index_start",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "menopausal symptom index of each woman at the start of the trial (higher is worse)"
+      },
+      {
+        "key": "index_week12",
+        "shape": "(women,)",
+        "dtype": "float",
+        "meaning": "symptom index of each woman at week 12"
+      },
+      {
+        "key": "active",
+        "shape": "(women,)",
+        "dtype": "bool",
+        "meaning": "True if the woman was randomised to active hormone therapy, False if to placebo"
+      }
+    ],
+    "sizes": {
+      "women": 300
+    }
+  }
+}

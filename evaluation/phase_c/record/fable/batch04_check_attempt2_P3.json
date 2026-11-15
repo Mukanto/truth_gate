@@ -1,0 +1,221 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_c_private\\pkg\\truth_gate\\__init__.py",
+  "C46": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_item1_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_item1_across_patients": 0.056
+    },
+    "shapes": {
+      "item_scores": [
+        300,
+        8
+      ]
+    },
+    "max_ms": 0.184
+  },
+  "C47": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_malignancy_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_malignancy_across_patients": 0.023
+    },
+    "shapes": {
+      "patch_features": [
+        80,
+        10,
+        20
+      ],
+      "malignant": [
+        80
+      ]
+    },
+    "max_ms": 0.425
+  },
+  "C48": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_class_across_samples"
+    ],
+    "control_max_ms": {
+      "permute_class_across_samples": 0.029
+    },
+    "shapes": {
+      "expression": [
+        40,
+        1000
+      ],
+      "class_b": [
+        40
+      ]
+    },
+    "max_ms": 1.037
+  },
+  "C49": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_speech_across_children",
+      "permute_diagnosis_across_children"
+    ],
+    "control_max_ms": {
+      "permute_diagnosis_across_children": 0.023,
+      "permute_speech_across_children": 0.038
+    },
+    "shapes": {
+      "speech_measures": [
+        400,
+        30
+      ],
+      "diagnosis": [
+        400
+      ],
+      "severity_rating": [
+        400
+      ]
+    },
+    "max_ms": 0.296
+  },
+  "C50": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "swap_readings_2_and_3_at_random_within_patient"
+    ],
+    "control_max_ms": {
+      "swap_readings_2_and_3_at_random_within_patient": 0.046
+    },
+    "shapes": {
+      "sbp": [
+        250,
+        3
+      ]
+    },
+    "max_ms": 0.041
+  },
+  "C51": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "circular_shift_of_drivers_by_52_or_more_weeks"
+    ],
+    "control_max_ms": {
+      "circular_shift_of_drivers_by_52_or_more_weeks": 0.055
+    },
+    "shapes": {
+      "drivers": [
+        400,
+        8
+      ],
+      "demand": [
+        400
+      ]
+    },
+    "max_ms": 1.126
+  },
+  "C52": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_group_membership_across_subjects"
+    ],
+    "control_max_ms": {
+      "permute_group_membership_across_subjects": 0.017
+    },
+    "shapes": {
+      "rt": [
+        30,
+        8
+      ],
+      "patient": [
+        30
+      ]
+    },
+    "max_ms": 0.044
+  },
+  "C53": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_age_across_participants"
+    ],
+    "control_max_ms": {
+      "permute_age_across_participants": 0.035
+    },
+    "shapes": {
+      "albumin_excretion": [
+        800
+      ],
+      "creatinine_excretion": [
+        800
+      ],
+      "age": [
+        800
+      ]
+    },
+    "max_ms": 0.098
+  },
+  "C54": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_stimulus_condition_across_trials"
+    ],
+    "control_max_ms": {
+      "permute_stimulus_condition_across_trials": 0.022
+    },
+    "shapes": {
+      "amplitude": [
+        100,
+        64
+      ],
+      "stimulus": [
+        100
+      ]
+    },
+    "max_ms": 0.181
+  }
+}
