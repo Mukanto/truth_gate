@@ -828,7 +828,7 @@ class TestArgvResolution(Base):
     def test_a_bare_name_is_resolved_with_the_inherited_path(self):
         bindir = os.path.join(self.root, "bin")
         os.makedirs(bindir)
-        path = os.path.join(bindir, "tgprog.exe")
+        path = os.path.join(bindir, "tgprog.exe" if os.name == "nt" else "tgprog")  # PATHEXT exists only on Windows
         with open(path, "w") as handle:
             handle.write("x")
         os.chmod(path, 0o755)
@@ -851,6 +851,25 @@ class TestArgvResolution(Base):
             self.assertEqual(os.path.normcase(launch), os.path.normcase(link_path))
             self.assertEqual(real, real_path)
             self.assertEqual(external.resolve_executable(link_path, "w", self.dir), real_path)
+
+    def test_the_session_starts_the_launch_path_and_hashes_the_real_path(self):
+        """R-28 on every platform: the session starts ``locate_executable``'s launch path and hashes its real path.
+        (Before 2026-11-17 it started the real path, so a symlinked ``python`` lost its virtual environment; the
+        POSIX test below caught it on the first GitHub Actions run.)"""
+        real = self.write("stand_in_target.bin", "target bytes")
+        launch = sys.executable
+        launched = []
+        real_popen = external.subprocess.Popen
+
+        def spy(args, *a, **k):
+            launched.append(args[0])
+            return real_popen(args, *a, **k)
+
+        with mock.patch.object(external, "locate_executable", lambda argv0, where, base: (launch, real)), \
+                mock.patch.object(external.subprocess, "Popen", spy):
+            session = self.session(self.fake("ok"))
+        self.assertEqual(launched, [launch])
+        self.assertEqual(session.commands_record()[0]["sha256"], hashlib.sha256(b"target bytes").hexdigest())
 
     @unittest.skipUnless(os.name == "posix", "a symlink needs no privilege only on POSIX")
     def test_a_symlinked_program_is_started_through_the_link_and_the_target_is_hashed(self):

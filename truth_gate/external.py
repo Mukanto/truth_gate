@@ -465,20 +465,20 @@ class ExternalSession:
                 first.setdefault(tuple(crit.argv), f"criteria[{i}].command")
         resolved = {}
         for argv, where in first.items():
-            exe = resolve_executable(argv[0], where, manifest.directory)
+            launch, real = locate_executable(argv[0], where, manifest.directory)  # R-28: hash real, start launch
             try:
-                digest = sha256_file(exe)
+                digest = sha256_file(real)
             except OSError as exc:
                 fail(where, f"cannot read the executable {argv[0]} ({type(exc).__name__})")
-            resolved[argv] = (exe, digest)
+            resolved[argv] = (launch, digest)
         self.workdir = tempfile.mkdtemp(prefix="truth_gate_external_")
         self._copy_files()
         env = build_env(manifest.external["env"])
         startup = manifest.external["startup_timeout_s"]
         request = manifest.external["request_timeout_s"]
         for argv, where in first.items():
-            exe, digest = resolved[argv]
-            proc = _Process(list(argv), exe, digest, request)
+            launch, digest = resolved[argv]
+            proc = _Process(list(argv), launch, digest, request)
             self.procs[argv] = proc
             try:
                 proc.launch(env, self.workdir)

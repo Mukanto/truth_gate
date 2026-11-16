@@ -6,9 +6,21 @@ package version is `tool_version` in the certificate (`kapi_version` up to 0.3);
 Two counts are kept apart below: the methods protocol has 19 numbered rules for before a run (`protocol/PROTOCOL.md`,
 rules for people who design a study); the gate runs eight automated checks, K1 to K8.
 
-## Repository: CI and two test fixes (2026-11-17)
+## Unreleased (on `main`, not yet in a release)
 
-No change to the package or the spec.
+- **Fix: a `command` criterion is started through the path that `PATH` resolves**, as decided in R-28
+  (`docs/design/spec-0.6-REVISIONS-post-freeze.md`).
+  - The session validated and hashed the real path (after `realpath`), as specified, but it also started the program
+    through that real path. On Linux and macOS a `python` symlinked into a virtual environment therefore ran without
+    its environment.
+  - Certificates do not change: they record the argv and the SHA-256 of the real file. Certificates written from `main`
+    still carry `tool_version` 0.5.0; the fix goes into the next release.
+  - Found by the first GitHub Actions run: the POSIX test of R-28 is skipped on Windows, where the package was
+    developed. A new test checks the rule on every platform.
+
+## Repository: CI and test fixes (2026-11-17)
+
+No change to the spec. The package change of this day is the fix under "Unreleased".
 
 - **CI** (`.github/workflows/`). `ci.yml` runs the test suite on Ubuntu (Python 3.11 and 3.14) and Windows (Python
   3.14), the tests of the three GHZ examples with the Qiskit versions the runs were made with, and the Action from the
@@ -21,6 +33,15 @@ No change to the package or the spec.
   K8. The link check now also covers `docs/EVALUATION.md`, `protocol/PROTOCOL.md` and `protocol/CHECKLIST.md`.
 - **GHZ run 3 report moved** from `examples/ghz_heron_run3/` to `examples/ghz_heron_run3_report/`. It was written into
   the frozen folder after the run and broke the frozen test "every file of the folder is listed". No frozen file changed.
+- **What the first runs on GitHub found.**
+  - The workflow file had a YAML error.
+  - The R-28 defect above.
+  - Three portability defects of the tests and the CI, all fixed:
+    - two test helpers used `shutil.rmtree(onexc=...)`, which needs Python 3.12, while the package supports 3.11;
+    - a `PATH` test used a Windows-only file name;
+    - the GHZ job did not install the package.
+  - The Action itself passed from the first run: from this commit on a study that passes, on one that must fail, and as
+    released (`@v0.5.0`, as `truth-gate init --ci` writes it).
 
 ## Methods protocol: rules 17 to 19 (2026-11-16)
 

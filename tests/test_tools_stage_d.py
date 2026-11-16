@@ -50,7 +50,10 @@ class TempCase(unittest.TestCase):
         def writable(func, path, *_):
             os.chmod(path, stat.S_IWRITE)
             func(path)
-        shutil.rmtree(self.dir, onexc=writable)
+        if sys.version_info >= (3, 12):
+            shutil.rmtree(self.dir, onexc=writable)
+        else:  # onexc is new in 3.12; the package supports 3.11
+            shutil.rmtree(self.dir, onerror=writable)
 
     def path(self, *parts):
         return os.path.join(self.dir, *parts)

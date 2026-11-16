@@ -48,7 +48,10 @@ class CiCase(unittest.TestCase):
         def writable(func, path, *_):
             os.chmod(path, stat.S_IWRITE)
             func(path)
-        shutil.rmtree(self.dir, onexc=writable)
+        if sys.version_info >= (3, 12):
+            shutil.rmtree(self.dir, onexc=writable)
+        else:  # onexc is new in 3.12; the package supports 3.11
+            shutil.rmtree(self.dir, onerror=writable)
 
     def env(self, **extra):
         env = {"GITHUB_STEP_SUMMARY": self.summary, "GITHUB_OUTPUT": self.output, "TG_TARGET": self.target,
