@@ -153,7 +153,7 @@ A corrected model was pre-registered and run once on new shots ([`examples/ghz_h
 ### Run 3 of the hardware study: the model test (Truth_Gate 0.5.0, 2026-11-16)
 
 Run 2's frozen design was run once more after the calibration had changed, as the first out-of-sample test of model M2
-([`examples/ghz_heron_run3/`](../examples/ghz_heron_run3/REPORT.md)). The pre-registration was frozen and pushed before
+([`examples/ghz_heron_run3_report/`](../examples/ghz_heron_run3_report/REPORT.md)). The pre-registration was frozen and pushed before
 the submission, after three reviews by fresh agents. Those reviews found 2 blocking and 12 major defects (power misread,
 a new-calibration condition that did not guarantee a model test, forking paths at submission, no verdict mapping, no
 check of the calibration at execution), all fixed before the freeze. Kapı raised no actionable flag.

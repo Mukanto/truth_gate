@@ -3,6 +3,54 @@
 Each release implements one frozen specification (`docs/SPEC.md` for 0.1 to 0.3, `docs/design/spec-0.6.md` for 0.4, `docs/design/spec-0.7.md` for 0.5). The
 package version is `tool_version` in the certificate (`kapi_version` up to 0.3); the spec version is `spec_version`.
 
+Two counts are kept apart below: the methods protocol has 19 numbered rules for before a run (`protocol/PROTOCOL.md`,
+rules for people who design a study); the gate runs eight automated checks, K1 to K8.
+
+## Repository: CI and two test fixes (2026-11-17)
+
+No change to the package or the spec.
+
+- **CI** (`.github/workflows/`). `ci.yml` runs the test suite on Ubuntu (Python 3.11 and 3.14) and Windows (Python
+  3.14), the tests of the three GHZ examples with the Qiskit versions the runs were made with, and the Action from the
+  same commit on a study that must pass. `action-fails.yml` runs it on a study that must fail
+  (`examples/01_tautology/faulty.py`). `action-release.yml` runs the released Action exactly as `truth-gate init --ci`
+  writes it (`actions/checkout@v4`, `Mukanto/truth_gate@v0.5.0`). Each file uses the Action once, because its
+  certificate artifact has a fixed name.
+- **Protocol count.** A test still expected 16 protocol rules after rules 17 to 19 were added, so the suite failed. It
+  now expects 19. A new test checks that the README states the protocol's rule count and lists the gate's checks K1 to
+  K8. The link check now also covers `docs/EVALUATION.md`, `protocol/PROTOCOL.md` and `protocol/CHECKLIST.md`.
+- **GHZ run 3 report moved** from `examples/ghz_heron_run3/` to `examples/ghz_heron_run3_report/`. It was written into
+  the frozen folder after the run and broke the frozen test "every file of the folder is listed". No frozen file changed.
+
+## Methods protocol: rules 17 to 19 (2026-11-16)
+
+No change to the package or the spec. Three rules learned from GHZ run 3, with matching checklist items:
+17, a step that must come before the data is enforced by the code; 18, record the age and the per-unit state of a
+model's inputs, and pre-register a check against the run's own data; 19, a "new inputs" condition must require a broad
+change. The protocol now has 19 numbered rules for before a run. The gate's checks are unchanged (K1 to K8).
+
+## Hardware example: GHZ run 3 (2026-11-16)
+
+No change to the package or the spec. Run 2's frozen design was run once more, on a changed calibration, as the first
+out-of-sample test of model M2 (`examples/ghz_heron_run3/`; ibm_kingston, job `dbtecsfasvbs73b9l4e0`). Pre-registered
+answer:
+- H1 (M2 accurate within 0.05 at 4 and 8 qubits) fails: |ΔF| = 0.066 at n = 8, labelled "within drift".
+- H4 (M2 overpredicts at every n) holds.
+
+Under the pre-registered sensitivity row "drift × 2" the power of H1 is 0.742, and its failure would read "not
+demonstrated". Report, independent recomputation and blind post-run audit: `examples/ghz_heron_run3_report/`,
+`examples/ghz_heron_run3_recompute/`, `examples/ghz_heron_run3_reviews/`.
+
+## Evaluation, Phase C (2026-11-16)
+
+No change to the package or the spec. The second pre-registered external evaluation tested 0.5.0 on 52 new pairs
+(`evaluation/phase_c/`):
+- B-1 (circular analysis) and B-6 (inflated-size decision rules) held.
+- B-2 (procedure-level leakage) failed: 7 of 12 detected, 8 of 12 clean.
+- B-3 (coupling by construction) failed: 8 of 10 detected, 8 of 10 clean.
+
+Report with a blind post-run audit: `evaluation/phase_c/REPORT.md`; summary in `docs/EVALUATION.md`.
+
 ## 0.5.0 (spec 0.7, 2026-11-13)
 
 Implements `docs/design/spec-0.7.md` (frozen, `FREEZE_SPEC_0.7.json`). Post-freeze decisions of the implementation are in

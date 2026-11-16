@@ -448,7 +448,7 @@ class TestExplain(unittest.TestCase):
         with open(os.path.join(PROTOCOL, "PROTOCOL.md"), encoding="utf-8") as handle:
             protocol = handle.read()
         items = len(re.findall(r"(?m)^(\d+)\. \*\*", protocol.split("## 2. The run")[0]))
-        self.assertEqual(items, 16)
+        self.assertEqual(items, 19)  # rules 17-19 were added after GHZ run 3 (2026-11-16)
         for key, (meaning, cause, rule) in explain_module.EXPLANATIONS.items():
             with self.subTest(key=key):
                 self.assertTrue(meaning.strip() and cause.strip() and rule.strip())

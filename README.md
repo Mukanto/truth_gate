@@ -11,7 +11,7 @@ Truth_Gate has three parts:
 |---|---|---|
 | **Methods protocol** | 19 rules for before a run, plus rules for the run, after it, and the repair loop. Each rule comes with the real failure that produced it. A one-page checklist for the freeze. | [`protocol/`](protocol/PROTOCOL.md) |
 | **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies. Standard library only. | [`protocol/templates/`](protocol/templates/), [`protocol/tools/`](protocol/tools/freeze.py) |
-| **The gate** | A Python tool that does *mutation testing for acceptance criteria*. Before the study is frozen, and without real data, it runs each criterion on synthetic worlds, deliberately broken controls, noise and all-zero data, and writes a hash-addressed certificate saying whether each criterion can actually fail. Since 0.4 a study can be a manifest with no Python code, and a criterion can be a program in any language. | [`truth_gate/`](truth_gate/), reference in [`docs/GATE.md`](docs/GATE.md) and [`docs/MANIFEST.md`](docs/MANIFEST.md) |
+| **The gate** | A Python tool that does *mutation testing for acceptance criteria*. Before the study is frozen, and without real data, it runs each criterion on synthetic worlds, deliberately broken controls, noise and all-zero data, and writes a hash-addressed certificate saying whether each criterion can actually fail. Its eight automated checks (K1 to K8) are separate from the protocol's rules. Since 0.4 a study can be a manifest with no Python code, and a criterion can be a program in any language. | [`truth_gate/`](truth_gate/), reference in [`docs/GATE.md`](docs/GATE.md) and [`docs/MANIFEST.md`](docs/MANIFEST.md) |
 
 The name refers to the gate a claim has to pass before a test of it can tell you anything about the truth. A
 certificate is not a verdict on truth (see [Limits](#limits)).
@@ -38,7 +38,7 @@ Three pre-registered runs on an IBM Heron r2 processor, testing whether an error
 calibration predicts the measured quality of n-qubit GHZ states. Everything is in the repository: the
 pre-registrations, the revision logs, the certificates, the freeze manifests, the raw counts, the calibration
 snapshots, the transpiled circuits, the blind audits and the reports ([`examples/ghz_heron/`](examples/ghz_heron/REPORT.md),
-[`examples/ghz_heron_run2/`](examples/ghz_heron_run2/REPORT.md), [`examples/ghz_heron_run3/`](examples/ghz_heron_run3/REPORT.md)).
+[`examples/ghz_heron_run2/`](examples/ghz_heron_run2/REPORT.md), [`examples/ghz_heron_run3_report/`](examples/ghz_heron_run3_report/REPORT.md)).
 
 * **Before any hardware time was used,** the gate found 10 real defects in the criteria, and all were fixed. Among
   them: missing negative controls, a criterion that held on random data, a vacuous `0 = 0` equality, and a control of
@@ -365,7 +365,8 @@ truth_gate/  the gate (study, sampling, stats, probes, checks, minus, guard, cer
               external, k8, suggest, cli, ci, ...) and its templates
 kapi/         a deprecated alias of truth_gate (same objects, same command line)
 action.yml    the GitHub Action (composite); .pre-commit-hooks.yaml holds the pre-commit hooks
-examples/     faulty/fixed study pairs, a convergence-criteria study, a Node criterion, and the two GHZ hardware runs
+.github/      CI: the test suite, the GHZ example tests, and three runs of the Action (workflows/)
+examples/     faulty/fixed study pairs, a convergence-criteria study, a Node criterion, and the three GHZ hardware runs
 docs/         GATE.md, MANIFEST.md, SPEC.md, EVALUATION.md, CASE_STUDY_PROSPECTIVE.md, design/ (specs 0.6 and 0.7 and their revisions)
 evaluation/   the evaluation case sets (hashed, unchanged) and their runners
 eval/         the evaluation harness (computes the pre-registered criteria from a results table)

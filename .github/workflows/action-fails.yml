@@ -1,0 +1,32 @@
+# The Action from this commit on a study that must fail: examples/01_tautology/faulty.py is NOT_FALSIFIABLE, so the
+# Action's step must fail and still set the certificate output (the upload runs on failure too).
+name: Action fails a NOT_FALSIFIABLE study
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  action-fails:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803  # v6.1.0
+      - id: tg
+        uses: ./
+        continue-on-error: true
+        with:
+          target: examples/01_tautology/faulty.py
+      - name: The Action failed and set the certificate output
+        env:
+          OUTCOME: ${{ steps.tg.outcome }}
+          CERT: ${{ steps.tg.outputs.certificate }}
+        run: |
+          echo "outcome: $OUTCOME, certificate: $CERT"
+          test "$OUTCOME" = "failure"
+          test -n "$CERT" && test -f "$CERT"

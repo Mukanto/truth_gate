@@ -1,5 +1,8 @@
 # GHZ run 3: report
 
+*This report lives outside the frozen folder `examples/ghz_heron_run3/` since 2026-11-17 (see "Records and checks").
+Paths that do not start with `../` are relative to `../ghz_heron_run3/`.*
+
 One pre-registered run on 2026-11-16, four days after run 2, on a changed calibration. Job `dbtecsfasvbs73b9l4e0`,
 ibm_kingston, 368 circuits × 2000 shots, no mitigation. The job used 196 s of QPU time against an estimate of 186.5 s
 and a stated quota of 234 s. It was created at 11:18:09 UTC, ran from 11:18:16 to 11:22:17, and was fetched at 11:23 UTC.
@@ -124,9 +127,11 @@ It is one model test on one calibration (I-5).
     Third parties cannot verify that the log was complete before the data (for example that no refused attempt or dry
     run is missing).
   - The run plan relied on a manual step at the moment of most interest; the code did not enforce it.
-- **A pre-run test now fails because of this report.** `tests_ghz3.py`, "every file of the folder is listed", allows
+- **A pre-run test failed because of this report.** `tests_ghz3.py`, "every file of the folder is listed", allows
   the results files but not `REPORT.md`, which was written after the run into the frozen folder. The binding freeze check
-  (`FREEZE_GHZ3.json`, 14 files) passes.
+  (`FREEZE_GHZ3.json`, 14 files) passes. *Fixed on 2026-11-17:* the report was moved to
+  `examples/ghz_heron_run3_report/`, outside the frozen folder. No frozen file changed, and `tests_ghz3.py` passes all
+  145 tests.
 - One calibration and one day give one model test, not a rate (I-5). Runs 1, 2 and 3 are not pooled (I-4).
 
 ## Kapı's part

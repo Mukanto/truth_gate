@@ -22,6 +22,6 @@ and `AUDIT.json`).
 - It worked without the certificates, the revision logs, the freeze manifests and the separate recomputation.
 - It read the draft report only after writing its own audit.
 
-Its findings and the corrections they led to are summarised in `../ghz_heron_run3/REPORT.md`.
+Its findings and the corrections they led to are summarised in `../ghz_heron_run3_report/REPORT.md`.
 
 The paths in these files are those of the reviewers' task folders, not of this repository.

@@ -9,7 +9,8 @@ from test_tools_stage_d import emitted_names
 from truth_gate import cli, mutations, patterns
 
 ROOT = _helpers.ROOT
-DOC_FILES = ("README.md", "CHANGELOG.md", "docs/GATE.md", "docs/MANIFEST.md", "examples/README.md")
+DOC_FILES = ("README.md", "CHANGELOG.md", "docs/GATE.md", "docs/MANIFEST.md", "docs/EVALUATION.md", "examples/README.md",
+             "protocol/PROTOCOL.md", "protocol/CHECKLIST.md")
 
 
 def read(path):
@@ -111,6 +112,24 @@ class TestReadme(unittest.TestCase):
 
     def test_examples_readme_lists_the_node_example(self):
         self.assertIn("node_criterion/", read("examples/README.md"))
+
+
+class TestCountsAgree(unittest.TestCase):
+    """The methods protocol and the gate are counted separately: numbered protocol rules (section 1 of PROTOCOL.md)
+    are not gate checks (K1 to K8)."""
+
+    def test_readme_rule_count_is_the_number_of_protocol_rules(self):
+        before_the_run = read("protocol/PROTOCOL.md").split("## 2. The run")[0]
+        numbers = [int(n) for n in re.findall(r"(?m)^(\d+)\. \*\*", before_the_run)]
+        self.assertEqual(numbers, list(range(1, len(numbers) + 1)))
+        stated = re.search(r"\| \*\*Methods protocol\*\* \| (\d+) rules for before a run", read("README.md"))
+        self.assertIsNotNone(stated)
+        self.assertEqual(int(stated.group(1)), len(numbers))
+
+    def test_readme_lists_the_eight_gate_checks(self):
+        text = read("README.md")
+        self.assertIn("The gate runs eight checks", text)
+        self.assertEqual(re.findall(r"(?m)^\| (K\d) \|", text), [f"K{i}" for i in range(1, 9)])
 
 
 class TestLinks(unittest.TestCase):
