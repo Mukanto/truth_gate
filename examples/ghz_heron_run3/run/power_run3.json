@@ -1,0 +1,353 @@
+{
+ "prereg": "run 3 section 4 (rule 16), PREREG v3",
+ "environment": {
+  "python": "3.14.2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "qiskit": "2.6.2",
+  "qiskit-aer": "0.18.2",
+  "qiskit-ibm-runtime": "0.52.0",
+  "platform": "Windows-11-10.0.26300-SP0"
+ },
+ "label": "at submission, new snapshot",
+ "snapshot_sha256": "b1ac08d58a3ba91e2b5ebdfeec746fdeb8bf961078b90090c409669c2e4651e5",
+ "device_change": false,
+ "grid": [
+  4,
+  8,
+  16,
+  24,
+  32,
+  48
+ ],
+ "n_datasets": 2000,
+ "seed": 20261116,
+ "method": "Drift: sigma_rel,X (X = P, C) = sqrt(max(0, mean over n in {4, 8, 16, 32, 48} of [ln(X_run1(n)/X_run2(n))^2 / 2 - v_X(n)])), v_X(n) = var(X_boot)/X_hat^2 from run 2's bootstrap. Per dataset the truth P and C are multiplied by exp(sigma_rel,X * z), z independent per n and component; shot noise = one randomly chosen centred row of run 2's bootstrap (P and C jointly) added to the point estimate; replicates = point estimate + all centred rows; F = (P + C)/2. Power of H1 = P(H1 HOLDS) with truth P_pred - 0.03 and C_pred - 0.03 at n = 4, 8 and run 2's ratios elsewhere. Power of H4 = P(H4 HOLDS) with truth = run 2's ratios (P_true = P_pred * P_run2 / P_pred,run2, C likewise). Expected outcome = P(HOLDS), P(FAILS), P(UNDEFINED) of H1-H4 under run 2's ratios. Sensitivity: drift fully correlated across n (one z per component) and drift x 2.",
+ "predictions": {
+  "F_pred": {
+   "4": 0.9424280262431736,
+   "8": 0.8287175713506394,
+   "16": 0.6546670423899097,
+   "24": 0.56539608655837,
+   "32": 0.4264428733550475,
+   "48": 0.3049050054292207
+  },
+  "P_pred": {
+   "4": 0.9583916647590398,
+   "8": 0.877275809061723,
+   "16": 0.7433988275846911,
+   "24": 0.668056438280948,
+   "32": 0.538482517378049,
+   "48": 0.41408698886689965
+  },
+  "C_pred": {
+   "4": 0.9264643877273073,
+   "8": 0.7801593336395559,
+   "16": 0.5659352571951282,
+   "24": 0.462735734835792,
+   "32": 0.31440322933204595,
+   "48": 0.1957230219915418
+  }
+ },
+ "run2_ratios": {
+  "P": {
+   "4": 0.9729972398904848,
+   "8": 0.9403013611185949,
+   "16": 0.878901624650683,
+   "24": 0.8534306489045124,
+   "32": 0.832060714689745,
+   "48": 0.8335270830185654
+  },
+  "C": {
+   "4": 0.9304576117380078,
+   "8": 0.9360749187905115,
+   "16": 0.8801456605196271,
+   "24": 0.8793241265130444,
+   "32": 0.8809324371705047,
+   "48": 0.8678322753800333
+  }
+ },
+ "sigma_rel": {
+  "P": 0.0,
+  "C": 0.02235126696611274
+ },
+ "sigma_detail": {
+  "P": {
+   "mean_term": -0.0003021108525091356,
+   "sigma_rel": 0.0,
+   "per_n": {
+    "4": {
+     "ln_ratio": 0.00964121019238599,
+     "v_shot": 3.872670568941966e-05,
+     "term": 7.749761297464085e-06
+    },
+    "8": {
+     "ln_ratio": 0.017202259054267643,
+     "v_shot": 8.08031574752413e-05,
+     "term": 6.715570080982527e-05
+    },
+    "16": {
+     "ln_ratio": 0.013803343025898984,
+     "v_shot": 0.00023294999411125765,
+     "term": -0.00013768385476594058
+    },
+    "32": {
+     "ln_ratio": 0.014878064026179076,
+     "v_shot": 0.0005587974704857655,
+     "term": -0.0004481190759022235
+    },
+    "48": {
+     "ln_ratio": -0.006069821367075834,
+     "v_shot": 0.0010180781596989083,
+     "term": -0.0009996567939848033
+    }
+   }
+  },
+  "C": {
+   "mean_term": 0.0004995791349904426,
+   "sigma_rel": 0.02235126696611274,
+   "per_n": {
+    "4": {
+     "ln_ratio": 0.04273175003396587,
+     "v_shot": 6.310689121533164e-05,
+     "term": 0.0008498943392673395
+    },
+    "8": {
+     "ln_ratio": 0.035125314654864105,
+     "v_shot": 4.369528724718121e-05,
+     "term": 0.0005731985775544243
+    },
+    "16": {
+     "ln_ratio": -0.03136880729719615,
+     "v_shot": 7.8244532264645e-05,
+     "term": 0.0004137565033596681
+    },
+    "32": {
+     "ln_ratio": -0.00030264891990257066,
+     "v_shot": 0.00016233955220252243,
+     "term": -0.00016229375401816332
+    },
+    "48": {
+     "ln_ratio": 0.049539492081354934,
+     "v_shot": 0.00040374062905036945,
+     "term": 0.0008233400087889447
+    }
+   }
+  }
+ },
+ "power": {
+  "H1": 0.959,
+  "H4": 1.0
+ },
+ "expected_outcome": {
+  "H1_small_n_accuracy": {
+   "counts": {
+    "HOLDS": 625,
+    "FAILS": 1375,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.3125,
+   "P_FAILS": 0.6875,
+   "P_UNDEFINED": 0.0
+  },
+  "H2_gme_reach_matches": {
+   "counts": {
+    "HOLDS": 101,
+    "FAILS": 1899,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.0505,
+   "P_FAILS": 0.9495,
+   "P_UNDEFINED": 0.0
+  },
+  "H3_population_specific": {
+   "counts": {
+    "HOLDS": 240,
+    "FAILS": 1760,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.12,
+   "P_FAILS": 0.88,
+   "P_UNDEFINED": 0.0
+  },
+  "H4_overprediction_every_n": {
+   "counts": {
+    "HOLDS": 2000,
+    "FAILS": 0,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 1.0,
+   "P_FAILS": 0.0,
+   "P_UNDEFINED": 0.0
+  }
+ },
+ "sensitivity": {
+  "correlated": {
+   "power_H1": 0.9585,
+   "power_H4": 0.999,
+   "expected_outcome": {
+    "H1_small_n_accuracy": {
+     "counts": {
+      "HOLDS": 865,
+      "FAILS": 1135,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.4325,
+     "P_FAILS": 0.5675,
+     "P_UNDEFINED": 0.0
+    },
+    "H2_gme_reach_matches": {
+     "counts": {
+      "HOLDS": 111,
+      "FAILS": 1889,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.0555,
+     "P_FAILS": 0.9445,
+     "P_UNDEFINED": 0.0
+    },
+    "H3_population_specific": {
+     "counts": {
+      "HOLDS": 367,
+      "FAILS": 1633,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.1835,
+     "P_FAILS": 0.8165,
+     "P_UNDEFINED": 0.0
+    },
+    "H4_overprediction_every_n": {
+     "counts": {
+      "HOLDS": 1998,
+      "FAILS": 2,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.999,
+     "P_FAILS": 0.001,
+     "P_UNDEFINED": 0.0
+    }
+   }
+  },
+  "drift_x2": {
+   "power_H1": 0.742,
+   "power_H4": 0.953,
+   "expected_outcome": {
+    "H1_small_n_accuracy": {
+     "counts": {
+      "HOLDS": 597,
+      "FAILS": 1403,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.2985,
+     "P_FAILS": 0.7015,
+     "P_UNDEFINED": 0.0
+    },
+    "H2_gme_reach_matches": {
+     "counts": {
+      "HOLDS": 272,
+      "FAILS": 1728,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.136,
+     "P_FAILS": 0.864,
+     "P_UNDEFINED": 0.0
+    },
+    "H3_population_specific": {
+     "counts": {
+      "HOLDS": 291,
+      "FAILS": 1709,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.1455,
+     "P_FAILS": 0.8545,
+     "P_UNDEFINED": 0.0
+    },
+    "H4_overprediction_every_n": {
+     "counts": {
+      "HOLDS": 1906,
+      "FAILS": 94,
+      "UNDEFINED": 0
+     },
+     "P_HOLDS": 0.953,
+     "P_FAILS": 0.047,
+     "P_UNDEFINED": 0.0
+    }
+   }
+  }
+ },
+ "scenario_h1_effect_base": {
+  "H1_small_n_accuracy": {
+   "counts": {
+    "HOLDS": 1918,
+    "FAILS": 82,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.959,
+   "P_FAILS": 0.041,
+   "P_UNDEFINED": 0.0
+  },
+  "H2_gme_reach_matches": {
+   "counts": {
+    "HOLDS": 101,
+    "FAILS": 1899,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.0505,
+   "P_FAILS": 0.9495,
+   "P_UNDEFINED": 0.0
+  },
+  "H3_population_specific": {
+   "counts": {
+    "HOLDS": 240,
+    "FAILS": 1760,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.12,
+   "P_FAILS": 0.88,
+   "P_UNDEFINED": 0.0
+  },
+  "H4_overprediction_every_n": {
+   "counts": {
+    "HOLDS": 1916,
+    "FAILS": 84,
+    "UNDEFINED": 0
+   },
+   "P_HOLDS": 0.958,
+   "P_FAILS": 0.042,
+   "P_UNDEFINED": 0.0
+  }
+ },
+ "power_min": 0.8,
+ "inputs": [
+  {
+   "file": "../ghz_heron/RESULTS_GHZ.json",
+   "sha256": "2519b028582fbb7191d4a8cb7ea94574676a558466c95ab31c5868516bf16c61",
+   "used": "run 1 per-n P and C: table[n].P and table[n].C for n = 4, 8, 16, 32, 48 (pooled drift)"
+  },
+  {
+   "file": "../ghz_heron_run2/RESULTS_GHZ2.json",
+   "sha256": "7a8923303bfc4b680148700ee2cd78ddacdf8eb75e93971018fcb9c5bde31764",
+   "used": "cross-check of run 2's P and C point estimates (table[n].P, table[n].C)"
+  },
+  {
+   "file": "../ghz_heron_run2/RESULTS_GHZ2_boot.npz",
+   "sha256": "47a46f1ec566a92f031f3dcac499bbfdc02c5e64f1aa0d275011c71353cf0d95",
+   "used": "keys n, P_hat, C_hat (truth ratios, drift), P_boot, C_boot (relative shot variance, centred shot-noise rows)"
+  },
+  {
+   "file": "../ghz_heron_run2/run/model.json",
+   "sha256": "6cd01966019af169c0fb85a094bc58c0e0e9fa9d8b64223f99a8ea08f074b7f8",
+   "used": "run 2's M2 predictions F_pred, P_pred, C_pred per n (components[n])"
+  },
+  {
+   "file": "ghz2_study.py",
+   "sha256": "4bf9f2ec14e6b5368cd0b68c6bccee167d73fe8a90a31e4d3e1b8581f7309400",
+   "used": "H1-H3"
+  },
+  {
+   "file": "ghz3_study_h4.py",
+   "sha256": "1f028ebc0fbdce67ebbd47731aea3237f52b5493fdc1f3c7d154c9645d99761a",
+   "used": "H4"
+  }
+ ]
+}

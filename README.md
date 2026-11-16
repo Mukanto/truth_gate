@@ -34,11 +34,11 @@ name.
 
 ## A worked example: GHZ states on a 156-qubit IBM processor
 
-Two pre-registered runs on an IBM Heron r2 processor, testing whether an error model built from the device's own
+Three pre-registered runs on an IBM Heron r2 processor, testing whether an error model built from the device's own
 calibration predicts the measured quality of n-qubit GHZ states. Everything is in the repository: the
 pre-registrations, the revision logs, the certificates, the freeze manifests, the raw counts, the calibration
 snapshots, the transpiled circuits, the blind audits and the reports ([`examples/ghz_heron/`](examples/ghz_heron/REPORT.md),
-[`examples/ghz_heron_run2/`](examples/ghz_heron_run2/REPORT.md)).
+[`examples/ghz_heron_run2/`](examples/ghz_heron_run2/REPORT.md), [`examples/ghz_heron_run3/`](examples/ghz_heron_run3/REPORT.md)).
 
 * **Before any hardware time was used,** the gate found 10 real defects in the criteria, and all were fixed. Among
   them: missing negative controls, a criterion that held on random data, a vacuous `0 = 0` equality, and a control of
@@ -50,10 +50,19 @@ snapshots, the transpiled circuits, the blind audits and the reports ([`examples
 * **Run 2 tested the corrected model.** Its audit found that the device had not been recalibrated, so the run was a
   data replicate and not a model test. It also found that run-to-run drift exceeded the shot-noise intervals and that
   one test was underpowered. Each finding became a protocol rule.
+* **Run 3 was the model test, four days later on a changed calibration.** Its design went through three reviews before
+  the freeze, which found 2 blocking and 12 major defects.
+  * The pre-registered answer: the model is not accurate within 0.05 at 8 qubits (within drift), and it overpredicts at
+    every n.
+  * The blind post-run audit found most of the shortfall in two qubits whose error at execution was far above their
+    3.6-day-old calibration (readout flips of 15–18% and 21–32%). No control of the run could detect them.
 * **What stands:**
-  * Genuine multipartite entanglement without error mitigation up to 16 qubits (24 at the threshold on point values).
-  * Large-state fidelities replicate across runs: F(16) ≈ 0.61, F(32) ≈ 0.385, F(48) ≈ 0.245.
-  * The calibration-based model overpredicts fidelity by 5–16%, even when it is made consistent with the estimator.
+  * Genuine multipartite entanglement without error mitigation: up to 16 qubits on 2026-11-12 (runs 1 and 2), but only
+    up to 8 on 2026-11-16 (run 3), on the same fixed patch. The reach is a property of the device on the day.
+  * Large-state fidelities replicated between runs 1 and 2, 25 minutes apart: F(16) ≈ 0.61, F(32) ≈ 0.385,
+    F(48) ≈ 0.245. Four days later they were 0.49, 0.28 and 0.16.
+  * The calibration-based model overpredicts fidelity on every run: by 5–16% on 2026-11-12, and by 4–47% on 2026-11-16,
+    when two qubits were far worse than their calibration.
 
 The lesson matches the other cases: **the gate catches defects in the logic of criteria, and the rest of the protocol
 (blind audit, independent recomputation) catches what the gate cannot see.** That is why they are published together.
@@ -239,9 +248,12 @@ The full account, with every number, is in [`docs/EVALUATION.md`](docs/EVALUATIO
 * **A retrospective pilot was bad news.** Twenty-five past studies were converted blind into gate studies and run with
   v0.2. Four pre-registered criteria failed. A case review traced 35 of the 37 flagged clean units to how the converter
   built the synthetic worlds, not to defects in the criteria. This motivated v0.3.
-* **Three prospective case studies:** one numerical study and the two hardware runs above. In each, the gate caught
-  real defects in the logic of the criteria before the freeze (6, 8 and 2 fixed flags). In each, the decisive defect
-  lay outside its scope and was found by the blind audit and independent recomputation. Three cases give no rates.
+* **Four prospective case studies:** one numerical study and the three hardware runs above.
+  * In the first three, the gate caught real defects in the logic of the criteria before the freeze (6, 8 and 2 fixed
+    flags). In run 3 it raised none.
+  * In each, the decisive defect lay outside its scope and was found by blind review, blind audit and independent
+    recomputation.
+  * Four cases give no rates.
 * **Phase A evaluation of 0.4: all four pre-registered criteria held.** 159 of 159 older studies give the same
   certificate as 0.3. Manifests reproduce the hand-written examples (7 of 7). Criteria written in Node give the same
   answers as in Python (6 of 6). The new invariance check caught a planted order dependence and changed its verdict.

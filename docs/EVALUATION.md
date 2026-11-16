@@ -150,6 +150,29 @@ A corrected model was pre-registered and run once on new shots ([`examples/ghz_h
   * one identification argument was incomplete.
   It also found that one of the designer's controls guarded against a failure that cannot affect the estimator.
 
+### Run 3 of the hardware study: the model test (Truth_Gate 0.5.0, 2026-11-16)
+
+Run 2's frozen design was run once more after the calibration had changed, as the first out-of-sample test of model M2
+([`examples/ghz_heron_run3/`](../examples/ghz_heron_run3/REPORT.md)). The pre-registration was frozen and pushed before
+the submission, after three reviews by fresh agents. Those reviews found 2 blocking and 12 major defects (power misread,
+a new-calibration condition that did not guarantee a model test, forking paths at submission, no verdict mapping, no
+check of the calibration at execution), all fixed before the freeze. Kapı raised no actionable flag.
+* **Pre-registered answer.** The controls passed and the result is interpretable.
+  * H1 (M2 accurate within 0.05 for 4 and 8 qubits) FAILS, labelled "within drift". Only n = 8 exceeds the band, by
+    0.016.
+  * H4 (M2 overpredicts at every n) HOLDS.
+  * Reported only: the GME reach fell to 8 qubits with confidence (16 in runs 1 and 2), and H3's direction reversed.
+* **After the run.** The blind audit localised most of the shortfall to two qubits whose readout or relaxation error at
+  execution was far above their calibration: qubit 89 (15–18% against 5%) and qubit 72 (21–32% against 4%).
+  * The calibration record was 3.6 days old.
+  * Q1's status as a model test rested on qubit 89's readout entry.
+  * The "fails" reading of H1 is not robust to the pre-registered "drift × 2" sensitivity row.
+  * H4 shows that the fidelity was below M2's prediction at every n on this calibration. It does not show that the
+    flat bias of runs 1 and 2 persisted.
+  * None of K1–K3 can detect such qubit faults; the audit found them in the run's own population counts.
+* **Process.** The run plan's step of publishing the submission record before fetching the data was skipped, and the
+  code did not enforce it. A separate recomputation and the audit reproduced every number.
+
 ## 0.4 (spec 0.6, package 0.4.0): Phase A
 
 Phase A checks that 0.4 keeps 0.3's behaviour and that its new parts give the same answers as hand-written studies.

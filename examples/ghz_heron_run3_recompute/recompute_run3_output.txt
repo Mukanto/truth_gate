@@ -1,0 +1,142 @@
+
+====================================================================================================
+0. CIRCUIT IDENTIFICATION
+====================================================================================================
+GHZ n= 4: 1 POP + 10 PAR (j=0..9), 'meas' bit-strings length n, totals == 2000
+GHZ n= 8: 1 POP + 18 PAR (j=0..17), 'meas' bit-strings length n, totals == 2000
+GHZ n=16: 1 POP + 34 PAR (j=0..33), 'meas' bit-strings length n, totals == 2000
+GHZ n=24: 1 POP + 50 PAR (j=0..49), 'meas' bit-strings length n, totals == 2000
+GHZ n=32: 1 POP + 66 PAR (j=0..65), 'meas' bit-strings length n, totals == 2000
+GHZ n=48: 1 POP + 98 PAR (j=0..97), 'meas' bit-strings length n, totals == 2000
+MIX n= 8: 1 POP + 18 PAR (j=0..17), 'meas' bit-strings length n, totals == 2000  [+ 'mid' register = mid-circuit root bit, ignored]
+MIX n=32: 1 POP + 66 PAR (j=0..65), 'meas' bit-strings length n, totals == 2000  [+ 'mid' register = mid-circuit root bit, ignored]
+total circuits: 368 (expected 368 = 6+276 GHZ + 2+84 MIX)
+identification rule: circuit names GHZ<n>_POP / GHZ<n>_PAR<j> / MIX<n>_POP / MIX<n>_PAR<j> in counts.json,
+  cross-checked against job.json['manifest'] (family, n, kind, j) and the order of circuits.qpy.
+phase check from circuits.qpy (root qubit, last rz before final sx, phi = pi/2 - angle): 360 PAR circuits, mismatches vs phi_j = j*pi/(n+1): 0
+ideal GHZ4: max|parity_ideal - cos(n*phi_j)| = 1.89e-15   (vs -cos: 2.00e+00)
+ideal GHZ8: max|parity_ideal - cos(n*phi_j)| = 4.22e-15   (vs -cos: 2.00e+00)
+
+====================================================================================================
+2. M2 PREDICTIONS (computed here from run/model.json components)
+====================================================================================================
+n= 4  P_pred=0.958392  C_pred=0.926464  F_pred=0.942428   (model.json: 0.958392 0.926464 0.942428)
+n= 8  P_pred=0.877276  C_pred=0.780159  F_pred=0.828718   (model.json: 0.877276 0.780159 0.828718)
+n=16  P_pred=0.743399  C_pred=0.565935  F_pred=0.654667   (model.json: 0.743399 0.565935 0.654667)
+n=24  P_pred=0.668056  C_pred=0.462736  F_pred=0.565396   (model.json: 0.668056 0.462736 0.565396)
+n=32  P_pred=0.538483  C_pred=0.314403  F_pred=0.426443   (model.json: 0.538483 0.314403 0.426443)
+n=48  P_pred=0.414087  C_pred=0.195723  F_pred=0.304905   (model.json: 0.414087 0.195723 0.304905)
+max |mine - model.json fields|: P 1.110e-16  C 1.110e-16  F 1.110e-16
+
+====================================================================================================
+3. BOOTSTRAP (own implementation)
+====================================================================================================
+B = 2000, numpy default_rng seed = 20261117, joint per n: POP + all PAR circuits resampled independently (2000-shot multinomial, categories lumped as explained in the code)
+  check n=4: sd(F_boot) lumped = 0.00440   full multinomial over observed bit-strings (1000 reps) = 0.00428
+  check n=8: sd(F_boot) lumped = 0.00517   full multinomial over observed bit-strings (1000 reps) = 0.00517
+
+====================================================================================================
+1. P, C, F per n (GHZ circuits)  [95% percentile CI from my bootstrap]
+====================================================================================================
+  n        P                P CI        C                C CI        F                F CI    C(Re)            C(Re) CI
+  4   0.9290 [0.9175,0.9400]   0.8826 [0.8696,0.8956]   0.9058 [0.8973,0.9145]   0.8794 [0.8665,0.8925]
+  8   0.8365 [0.8205,0.8525]   0.6884 [0.6773,0.7003]   0.7624 [0.7524,0.7729]   0.6844 [0.6728,0.6964]
+ 16   0.5700 [0.5490,0.5910]   0.4101 [0.4007,0.4197]   0.4900 [0.4785,0.5017]   0.4037 [0.3942,0.4134]
+ 24   0.4465 [0.4250,0.4675]   0.2795 [0.2710,0.2877]   0.3630 [0.3514,0.3744]   0.2729 [0.2646,0.2812]
+ 32   0.3705 [0.3495,0.3910]   0.1848 [0.1774,0.1927]   0.2777 [0.2665,0.2887]   0.1789 [0.1712,0.1866]
+ 48   0.2335 [0.2140,0.2510]   0.0922 [0.0862,0.0984]   0.1629 [0.1528,0.1729]   0.0891 [0.0830,0.0953]
+
+raw ingredients: N(0^n)+N(1^n), and parities j=0..2n+1 (first 6 shown)
+  n= 4: N01=1858/2000  parity[:6]=[0.885, -0.739, 0.343, 0.229, -0.651, 0.894]
+  n= 8: N01=1673/2000  parity[:6]=[0.708, -0.674, 0.581, -0.387, 0.16, 0.06]
+  n=16: N01=1140/2000  parity[:6]=[0.456, -0.489, 0.436, -0.435, 0.323, -0.23]
+  n=24: N01= 893/2000  parity[:6]=[0.349, -0.358, 0.307, -0.297, 0.269, -0.176]
+  n=32: N01= 741/2000  parity[:6]=[0.227, -0.294, 0.188, -0.163, 0.134, -0.169]
+  n=48: N01= 467/2000  parity[:6]=[0.145, -0.157, 0.131, -0.09, 0.117, -0.072]
+
+====================================================================================================
+PREDICTIONS IN USE vs MEASURED, R(n) = F/F_pred
+====================================================================================================
+  n   P_pred   C_pred   F_pred    F_hat       R  R 95% CI (boot, F_boot/F_pred)
+  4   0.9584   0.9265   0.9424   0.9058  0.9611  [0.9521,0.9703]
+  8   0.8773   0.7802   0.8287   0.7624  0.9200  [0.9079,0.9327]
+ 16   0.7434   0.5659   0.6547   0.4900  0.7485  [0.7309,0.7664]
+ 24   0.6681   0.4627   0.5654   0.3630  0.6420  [0.6215,0.6621]
+ 32   0.5385   0.3144   0.4264   0.2777  0.6511  [0.6249,0.6771]
+ 48   0.4141   0.1957   0.3049   0.1629  0.5342  [0.5013,0.5672]
+
+====================================================================================================
+4. CRITERIA (run 3 PREREG section 4)
+====================================================================================================
+H1  |F_hat - F_pred|: n=4: 0.0367   n=8: 0.0663   (band 0.05)  -> FAILS
+    rule-14 check: F_pred+0.05<1 at n=4: True, n=8: True
+H4  q97.5 of F_boot/F_pred per n: n=4: 0.9703  n=8: 0.9327  n=16: 0.7664  n=24: 0.6621  n=32: 0.6771  n=48: 0.5672
+    max over n = 0.9703  (must be < 1 at every n)  margins 1-q: +0.0297 +0.0673 +0.2336 +0.3379 +0.3229 +0.4328   -> HOLDS
+H2  n_meas (F_hat>0.5) = 8   n_pred (F_pred>0.5) = 24   -> FAILS
+    CI-based reach (largest n with F CI_low > 0.5): 8   (F_hat(24)=0.3630, F_pred(24)=0.5654)
+H3  n=32: point ln(P/P_pred) - ln(C/C_pred) = +0.1573   q97.5 of boot = +0.2274
+H3  n=48: point ln(P/P_pred) - ln(C/C_pred) = +0.1794   q97.5 of boot = +0.2768
+    -> FAILS   (<0 required at both n)
+
+VERDICTS:  H1 = FAILS  H4 = HOLDS  H2 = FAILS  H3 = FAILS
+(readings 'fails' vs 'not demonstrated' and 'within drift' depend on power/drift files; not recomputed here)
+
+====================================================================================================
+5. R(n) = F/F_pred, runs side by side (descriptive); C-1
+====================================================================================================
+  n   run1 R (stored; run-1 model M)  run2 R (stored)  run3 R (mine)
+  4                           0.9591           0.9521         0.9611
+  8                           0.9318           0.9383         0.9200
+ 16                           0.7936           0.8795         0.7485
+ 24                                -           0.8642         0.6420
+ 32                           0.7230           0.8506         0.6511
+ 48                           0.6818           0.8442         0.5342
+
+C-1: M2 inputs of the n=48 component, run 3 vs run 2 (relative tolerance 1e-6, elementwise):
+  S           differing elements:   0 / 48  -> same
+  cz_err      differing elements:  47 / 47  -> CHANGED
+  g1_pop_err  differing elements:   0 / 95  -> same
+  g1_par_err  differing elements:   0 / 113  -> same
+  ro_err      differing elements:  46 / 48  -> CHANGED
+  t1          differing elements:  47 / 48  -> CHANGED
+  t2          differing elements:  48 / 48  -> CHANGED
+  idle        differing elements:   0 / 48  -> same
+  device run 2: ibm_kingston, run 3: ibm_kingston; inputs changed: 4 of 8
+  n  F_pred run3  F_pred run2    dF_pred
+  4     0.942428     0.936559  +0.005869
+  8     0.828718     0.887868  -0.059151
+ 16     0.654667     0.696867  -0.042200
+ 24     0.565396     0.589394  -0.023998
+ 32     0.426443     0.451435  -0.024993
+ 48     0.304905     0.287606  +0.017299
+max_n |dF_pred| = 0.059151   max over n=4,8 = 0.059151   threshold 0.02
+C-1: (a) device/input differs = True; (b) max|dF| >= 0.02 = True  -> C-1 HOLDS;  Q1 is a model test (max over n=4,8 >= 0.02): True
+(compare run/calibration_check.json: max_abs_delta_F_pred = 0.059150542685, q1 = 0.059150542685, n_inputs_changed = 4; mine: 0.059150542685, 0.059150542685, 4)
+
+====================================================================================================
+6. K1 (MIX controls): C_mix point and 97.5th percentile of its bootstrap (<= 0.05 passes)
+====================================================================================================
+MIX_8: P_mix = 0.8205   C_mix = 0.01252   q97.5(C_mix_boot) = 0.02888   -> pass
+MIX_32: P_mix = 0.3550   C_mix = 0.00220   q97.5(C_mix_boot) = 0.01121   -> pass
+K1: PASS
+
+====================================================================================================
+7. Interpolated crossing of F = 0.5 (linear in n between grid points)
+====================================================================================================
+measured F: crossing at n = 15.707   (between n=8 F=0.7624 and n=16 F=0.4900)
+predicted F: crossing at n = 27.765
+bootstrap crossing: 2000/2000 finite replicates; 95% interval [15.39, 16.10]; median 15.71
+  (definition per replicate: largest grid n with F>0.5, linear interpolation to the next grid point)
+
+====================================================================================================
+8. Execution-time calibration (PREREG section 3), lightweight recheck of the S_48 inputs
+====================================================================================================
+submission snapshot utc 20261116T111730Z; job running from 20261116T111815Z; current-calibration fetch 20261116T112313Z
+  execution-time snapshot (top-level 'snapshot'): values differing from submission snapshot: 0/488; latest M2-input calibration date: 2026-11-13T14:57:10+00:00
+  current calibration at fetch ('current'): values differing from submission snapshot: 0/488; latest M2-input calibration date: 2026-11-13T14:57:10+00:00
+  => if 0 differ and all dates precede submission (2026-11-16T11:17:30Z), the snapshot's predictions are the ones in use.
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+Verdicts: H1 = FAILS | H4 = HOLDS | H2 = FAILS | H3 = FAILS | K1 = PASS | C-1 = HOLDS

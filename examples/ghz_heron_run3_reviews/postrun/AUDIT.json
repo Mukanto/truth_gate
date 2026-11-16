@@ -1,0 +1,219 @@
+{
+ "audit": "Blind post-run audit, GHZ run 3 (job dbtecsfasvbs73b9l4e0, ibm_kingston, 2026-11-16)",
+ "withheld_files_seen": "none",
+ "part1": [
+  {
+   "id": "A1",
+   "severity": "high",
+   "location": "PREREG §1 (C-1 per question), §4 (H1, joint sentence); run/model.json (qubit 89 = S_48[6], in S_8); run/calibration_check.json m2_input_dates; run/counts.json (GHZ8..GHZ48_POP, MIX8_POP, MIX32_POP)",
+   "claim": "Both the H1 FAILS and Q1's 'model test' status rest on one qubit, 89. Its calibrated readout error went from 0.0044 (run 2) to 0.0513 (dated 2026-11-12 21:10), while its T1 entry (184.06 us) is identical to run 2's and dated 2026-11-11 17:25: it was not re-measured in the Nov-12 calibration. This single readout entry produces the entire dF_pred(8) = -0.0592. With run 2's value for it, dF_pred(8) = +0.0033, so max(|dF_pred(4)|, |dF_pred(8)|) = 0.0059 < 0.02 and the Q1 replicate label would have been attached. At n = 4 the prediction moved by only +0.0059, so the n = 4 half of H1 is in substance a replicate of run 2's prediction. At execution, qubit 89 shows a 1->0 error p(0|1) = 0.149, 0.170, 0.178, 0.150, 0.166 in GHZ8/16/24/32/48_POP and 0.175 in both MIX POP circuits, with p(1|0) <= 0.013 (run 2: p(0|1) = 0.011-0.028). That is well above the calibrated symmetric 0.0513. I measured these rates conditional on >= 90% of the other qubits reading 1 or 0. If the observed error of qubit 89 replaces its calibrated readout error in M2, F_pred(8) = 0.786-0.790 and |F_hat(8) - F_pred(8)| = 0.023-0.027 < 0.05.",
+   "failure_scenario": "Qubit 89 had a relaxation/readout fault (TLS-like). It was already visible in the Nov-12 calibration: its T1 was not updated and its readout error rose twelvefold. At execution, 3.6 days later, the fault was worse. M2's formula is not what fails at n = 8. A stale per-qubit input is. The H1 deviation exceeds the band by only 0.0163, so the qubit-89 excess (about 0.03-0.04 in F at n = 8) is enough to turn HOLDS into FAILS. The joint sentence 'the bias persists and exceeds 0.05 at small n' then describes one qubit's calibration record. n = 4 is inside the band (0.0367).",
+   "verdict_impact": "No rule was misapplied: H1 FAILS with reading 'fails' as the PREREG prescribes. What changes is the reading. Q1 is in substance a test of one qubit's calibration entry at n = 8, not of M2 for small states. With that entry corrected from the run's own data, H1 would hold. Without the qubit-89 change, the Q1 answer would have carried the replicate label."
+  },
+  {
+   "id": "A2",
+   "severity": "high",
+   "location": "PREREG §4 (Drift, Power, Readings fixed now); run/power_run3.json (sensitivity); run/calibration_check.json m2_input_dates; run/execution_calibration_20261116T112310Z.json (dates.last_update_date); protocol rule 9",
+   "claim": "sigma_rel, and with it sigma_d,F, sigma_d,R and the power, comes from runs 1 and 2. Their snapshots were taken 25 minutes apart (20261111T233323Z, 20261111T235843Z) on one calibration. Run 3's M2 inputs were 86-88 h old at the execution start: cz, readout, T1 and T2 are dated 2026-11-12 19:33-21:10, the sx errors 2026-11-05 (275 h), qubit 89's T1 2026-11-11 (114 h), and the device's last update was 2026-11-13 14:57. Only 4 of the 8 M2 input fields changed since run 2; the one-qubit gate errors, the idle times and qubit 89's T1 did not. So the drift scale leaves out day-scale drift and the age of the calibration that feeds the prediction. Under the PREREG's own sensitivity row 'drift x 2', the power of H1 is 0.742 < 0.8 (my recomputation; x1.5: 0.849). The n = 4 H4 margin (0.0297) is then below 2 sigma_d,R (0.0439; the two are equal at x1.35).",
+   "failure_scenario": "Between the calibration (Nov 12) and the execution (Nov 16), device parameters drift more than they did in the 25 minutes between runs 1 and 2. Qubits 89 and 72 (A1, A3) show this. The base power 0.959 then overstates the chance that an accurate M2 passes H1, and a FAILS of H1 no longer warrants 'fails'.",
+   "verdict_impact": "The official readings follow the text: the base power is binding and the sensitivity rows are only reported. A reading that takes the pre-registered drift x 2 row seriously, which this calibration's age justifies, gives H1 'not demonstrated'. The Q1 sentence would then read 'not demonstrated', no joint sentence would be issued, and H4 would carry 'holds within drift'. The 'fails' reading of Q1 is not robust."
+  },
+  {
+   "id": "A3",
+   "severity": "medium",
+   "location": "run/counts.json (GHZ16..48_POP, MIX32_POP); run/model.json (qubit 72 = S_48[10], in S_16); PREREG §4 H2, H3 and the descriptive R and tracking tables",
+   "claim": "The n >= 16 results are dominated by qubit 72. At execution its 0->1 error p(1|0) is 0.246, 0.324, 0.258, 0.210 in GHZ16/24/32/48_POP and 0.280 in MIX32_POP. In run 2 it was 0.014-0.045, and the calibrated symmetric error is 0.041. The value varies between circuits run minutes apart. Excess error over calibration summed over S_16 is +0.22 in run 3 against +0.10 in run 2, and qubit 72 contributes +0.136 of it. Because of this, R(16..48) = 0.75, 0.64, 0.65, 0.53 (runs 1/2: about 0.85-0.88), and F(16) = 0.490 [0.478, 0.502] sits just below 0.5, which makes n_meas = 8. H3 failed in the opposite direction: the 2.5th percentile of ln(P/P_pred) - ln(C/C_pred) is +0.088 (n = 32) and +0.068 (n = 48). PREREG §4 itself names readout error beyond the model as a cause of that direction.",
+   "failure_scenario": "One qubit has a readout or excitation fault that the 3.6-day-old calibration does not show. It removes about 10-14% of the populations and more of the coherence at every n >= 16. The large-n collapse of R, the H2 reach and the reversed H3 are then properties of qubit 72, not of M2 or of the device at large.",
+   "verdict_impact": "H4 is not changed: it holds at n = 4 and 8, where qubit 72 is absent, and at large n it would hold with run-2-like ratios too. H2 and H3 are reported only. But any reading of the R side-by-side or tracking tables as 'the overprediction grew with n' or 'coherence is now the limiting factor' describes one faulty qubit."
+  },
+  {
+   "id": "A4",
+   "severity": "medium",
+   "location": "PREREG §4 (H4 attributes no cause; Q2 sentence), §6 I-7, §5 K1-K3",
+   "claim": "H4 HOLDS only shows that F is below prediction at every n. The Q2 sentence, 'M2 still overpredicts', and the question's wording, 'does the overprediction persist', suggest that run 1/2's systematic bias continued. The shape did not: R falls from 0.96 to 0.53 instead of the flat 0.84-0.95, and H3 reversed. I-7 names K1-K3 as the only safeguards against an experiment fault. None of them can detect a qubit with 15-30% readout or relaxation error: K1 tests MIX coherence, K2 is a noiseless simulation, and K3 checks integrity and hashes.",
+   "failure_scenario": "A stale calibration plus two faulty qubits (A1, A3) push F below M2's prediction at every n whether or not M2's run-1/2 bias still exists. H4 holds either way.",
+   "verdict_impact": "No change to the H4 verdict. Q2 can be read as 'F was below M2's prediction at every n on this calibration'. It cannot be read as evidence that M2's run-1/2 systematic overprediction persisted, nor as a property of the M2 formula."
+  },
+  {
+   "id": "A5",
+   "severity": "medium",
+   "location": "PREREG §4 Drift (sigma_rel,X); run/power_run3.json sigma_detail; RESULTS_GHZ3.md 'Within-drift labels'",
+   "claim": "sigma_rel,P = 0 is a negative pooled estimate clipped to zero (mean term -3.0e-4). Between runs 1 and 2, the ln-ratios of P are positive at n = 4, 8, 16, 32 (+0.010, +0.017, +0.014, +0.015), which is a coherent shift. The equal-weight pooling subtracts the shot variances of n = 32 and 48 (5.6e-4, 1.0e-3), and those cancel it. With sigma_rel,P = sigma_rel,C, 2 sigma_d,R(4) = 0.0316 exceeds the n = 4 margin 0.0297, so H4 would carry 'holds within drift'. Power of H1 would be 0.858, so the H1 reading would not change.",
+   "failure_scenario": "Shot noise at large n hides a real between-run shift in P. Then sigma_d understates drift at small n, where the H4 margin is smallest.",
+   "verdict_impact": "H4 lacks a 'within drift' label only because of the clip. The verdict is not affected, but the qualifier attached to Q2 is."
+  },
+  {
+   "id": "A6",
+   "severity": "medium",
+   "location": "PREREG §4 joint sentence for (H1 FAILS 'fails', H4 HOLDS); run/power_run3.json expected_outcome",
+   "claim": "'Together: the bias persists and exceeds 0.05 at small n.' Only n = 8 exceeds 0.05, by 0.0163, and that is less than 2 sigma_d,F = 0.0174, hence the 'within drift' label. At n = 4 the deviation is 0.0367, inside the band. Under run 2's ratios, the power file gives H1 an expected P(FAILS) of 0.69. So a FAILS is what the design expected if run 2's bias merely persisted. The H1 power (0.959) refers to a truth inside the band, F_pred - 0.03.",
+   "failure_scenario": "Readers take 'exceeds 0.05 at small n' as a degradation of M2 at both small n. The run shows a marginal exceedance at one n. It is within drift, it was a priori the likely outcome, and A1 attributes it to one qubit.",
+   "verdict_impact": "The verdict and sentence are mechanically correct. The sentence must not be read without its 'within drift' label and the n = 8-only qualification."
+  },
+  {
+   "id": "A7",
+   "severity": "low",
+   "location": "PREREG §3; RESULTS_GHZ3.md 'Predictions in use: snapshot (execution-time calibration: equal, verified; ...)'",
+   "claim": "The 'equal' status is correct. The history calibration at the execution start, the current calibration and the submission snapshot are identical apart from the utc field, and every M2-input date is at or before the execution start. But §3 only checks for a recalibration between submission and execution. 'equal, verified' (where 'verified' is a default string, not the §3 label) can be read as saying the device state at execution was verified. What it shows is that the same 3.6-day-old calibration record was still in force.",
+   "failure_scenario": "A reader infers that the predictions matched the device at execution. A1 and A3 show they did not, for two qubits.",
+   "verdict_impact": "None (clarity)."
+  },
+  {
+   "id": "A8",
+   "severity": "low",
+   "location": "ghz3_analyze.py tracking_table (paired run-2/run-3 bootstrap rows, both with seed 20261113)",
+   "claim": "The 'shot noise only' CI of F_run3 - F_run2 pairs the replicates of two bootstraps drawn with the same seed. The correlation of the F replicates is -0.02 to 0.09 (P at n = 4: 0.18), so the paired CIs are within about 4% of independent-variance CIs, and no 'predicted inside CI' entry changes.",
+   "failure_scenario": "With more strongly correlated replicates, the difference CIs would be too narrow.",
+   "verdict_impact": "None (descriptive table)."
+  },
+  {
+   "id": "A9",
+   "severity": "low",
+   "location": "RESULTS_GHZ3.md 'Log (run/dryrun_log.jsonl, the whole log)'; RESULTS_GHZ3.json dryrun_log.stopping_rule",
+   "claim": "The heading says 'the whole log', but the summary says '2 lines' and n_fetch = 0. The file has 3 lines, the third being the fetch line. The summary counts only the anchored and accepted lines, which the PREREG allows for deviations, but the wording is inconsistent.",
+   "failure_scenario": "A reader thinks a line is missing or a fetch was not logged.",
+   "verdict_impact": "None (clarity)."
+  },
+  {
+   "id": "A10",
+   "severity": "low",
+   "location": "PREREG §1 (D-1 least busy device, C-2 quota from the dashboard, public push of job.json and the log before the data), §5 K3 (freeze verified, code identity against FREEZE_GHZ2.json)",
+   "claim": "These cannot be verified from this folder: the freeze manifests are withheld, and I used no network and no git. I checked the code identity by byte comparison instead: ghz2_core.py and ghz2_study.py in run 3 equal run 2's copies in the folder. The quota of 234 s covers the actual 196 s. The log has one attempt and no gaps, but an unlogged earlier attempt could only be excluded by the public record.",
+   "failure_scenario": "An unlogged earlier attempt or a pre-freeze look would not be visible here.",
+   "verdict_impact": "None found. These are scope limits of this audit."
+  },
+  {
+   "id": "A11",
+   "severity": "low",
+   "location": "PREREG §5 K2; certs/k2_sim.json; ghz3_run.k2_noiseless",
+   "claim": "The binding K2 on run/circuits.qpy gives F_sim bit-identical to the design-time certs/k2_sim.json run on FakeKingston circuits (seed 20261113). The noiseless output distribution does not depend on the physical layout or the tree. So K2 re-checks the circuit logic and the estimator, not the submitted layout; layout integrity rests on K3. My own MPS simulation passes with seeds 20261113 and 7.",
+   "failure_scenario": "A layout or transpilation defect that keeps the logical circuit would pass K2. K3's tree-edge check covers it.",
+   "verdict_impact": "None (clarity of what K2 shows)."
+  }
+ ],
+ "recomputed": {
+  "sources": "run/counts.json, run/model.json, run snapshot, run/circuits.qpy, run 2 model/boot files, run 1 RESULTS_GHZ.json and counts; auditor scripts in scratch/ (s02-s08); ghz2_core imported for selection, transpiled-circuit model and the frozen bootstrap",
+  "interpretable": true,
+  "controls": {"K1": "pass (C_mix q97.5: n=8 0.0291, n=32 0.0110)", "K2": "pass (own noiseless MPS on run/circuits.qpy, F_sim 0.999-1.003, C_mix_sim 0.004-0.006, two seeds)", "K3": "pass on every item checkable here (snapshot hash file/job, 368 circuits = manifest = counts order, totals 2000, n-1 tree CZs, M2 = model.json exactly, C-1 holds, run-2 file hashes = known, power file hash = job.json and recomputation equal, log prefix hash = job.json, post-anchor lines after submission, fetch file hash = log, job created 11:18:09.7Z and started 11:18:15.9Z after submission 11:17:30Z)"},
+  "table": {
+   "4":  {"P": 0.9290, "C": 0.8826, "F": 0.9058, "F_ci": [0.8972, 0.9144], "P_pred": 0.9584, "C_pred": 0.9265, "F_pred": 0.9424, "R": 0.961, "q975_ratio": 0.9703, "sigma_d_F": 0.01035, "sigma_d_R": 0.01099},
+   "8":  {"P": 0.8365, "C": 0.6884, "F": 0.7624, "F_ci": [0.7517, 0.7724], "P_pred": 0.8773, "C_pred": 0.7802, "F_pred": 0.8287, "R": 0.920, "q975_ratio": 0.9320, "sigma_d_F": 0.00872, "sigma_d_R": 0.01052},
+   "16": {"P": 0.5700, "C": 0.4101, "F": 0.4900, "F_ci": [0.4780, 0.5016], "P_pred": 0.7434, "C_pred": 0.5659, "F_pred": 0.6547, "R": 0.749, "q975_ratio": 0.7662, "sigma_d_F": 0.00632, "sigma_d_R": 0.00966},
+   "24": {"P": 0.4465, "C": 0.2795, "F": 0.3630, "F_ci": [0.3521, 0.3739], "P_pred": 0.6681, "C_pred": 0.4627, "F_pred": 0.5654, "R": 0.642, "q975_ratio": 0.6614, "sigma_d_F": 0.00517, "sigma_d_R": 0.00915},
+   "32": {"P": 0.3705, "C": 0.1848, "F": 0.2777, "F_ci": [0.2663, 0.2889], "P_pred": 0.5385, "C_pred": 0.3144, "F_pred": 0.4264, "R": 0.651, "q975_ratio": 0.6775, "sigma_d_F": 0.00351, "sigma_d_R": 0.00824},
+   "48": {"P": 0.2335, "C": 0.0922, "F": 0.1629, "F_ci": [0.1530, 0.1722], "P_pred": 0.4141, "C_pred": 0.1957, "F_pred": 0.3049, "R": 0.534, "q975_ratio": 0.5646, "sigma_d_F": 0.00219, "sigma_d_R": 0.00717}
+  },
+  "criteria": {
+   "H1": {"verdict": "FAILS", "deviation": {"4": 0.0367, "8": 0.0663}, "reading": "fails (power at submission 0.959 >= 0.8)", "within_drift": "yes (n = 8: ||dev| - 0.05| = 0.0163 < 2 sigma_d,F = 0.0174)"},
+   "H4": {"verdict": "HOLDS", "q975": {"4": 0.9703, "8": 0.9320, "16": 0.7662, "24": 0.6614, "32": 0.6775, "48": 0.5646}, "smallest_margin": "n = 4: 0.0297 vs 2 sigma_d,R = 0.0220", "within_drift_label": "no"},
+   "H2": {"verdict": "FAILS", "n_meas": 8, "n_pred": 24, "ci_based_reach": 8, "crossing": "15.7 (95% CI 15.4-16.1) vs predicted 27.8", "role": "reported"},
+   "H3": {"verdict": "FAILS", "q975": {"32": 0.2253, "48": 0.2885}, "q025": {"32": 0.0876, "48": 0.0684}, "note": "opposite direction (C short more than P), exploratory"}
+  },
+  "drift": {"sigma_rel_P": 0.0, "sigma_rel_P_mean_term_before_clip": -0.000302, "sigma_rel_C": 0.022351},
+  "power_at_submission": {"H1": 0.959, "H4": 1.0, "correlated": [0.9585, 0.999], "drift_x2": [0.742, 0.953], "reproduced_by_own_implementation": "exactly (same seed and draw order); other seeds give H1 0.9485-0.956", "auditor_sensitivity_H1": {"drift_x1.35": 0.8825, "drift_x1.5": 0.8485, "drift_x3": 0.575, "sigma_P_equal_sigma_C": 0.8575}},
+  "c1": {"device_differs": false, "inputs_changed": "cz_err (47), ro_err (46), t1 (47), t2 (48); S, g1_pop_err, g1_par_err, idle unchanged", "condition_a": true, "max_abs_dF_pred": 0.0592, "at_n": 8, "condition_b": true, "satisfied": true, "q1_max_abs_dF_4_8": 0.0592, "q1_model_test": true, "dF_pred": {"4": 0.0059, "8": -0.0592, "16": -0.0422, "24": -0.0240, "32": -0.0250, "48": 0.0173}, "q1_without_qubit89_readout_change": 0.0059},
+  "rule14": "ok (F_pred + 0.05 < 1 at n = 4, 8)",
+  "execution_time_calibration": "history accepted (all M2-input dates <= execution start 11:18:15.9Z); history = current = submission snapshot except utc; status 'equal' -> snapshot predictions, no label. Calibration age of M2 inputs at execution 86-88 h (sx 275 h, qubit 89 T1 114 h).",
+  "stopping_rule": "followed: 1 attempt (checks-passed 11:18:04Z, accepted 11:18:09Z), no dry run, no refusal, no deviation; job.json anchors 1 log line (hash ok); 1 fetch logged (file hash ok); QPU 196 s = 1.05 x estimate 186.5 s, quota 234 s >= 1.15 x estimate = 214.5 s",
+  "answer": {
+   "q1": "Q1: on this run's calibration M2 is not accurate within 0.05 for 4 or 8 qubits.",
+   "q2": "Q2: on a new calibration M2 still overpredicts the fidelity at every n.",
+   "joint": "Together: the bias persists and exceeds 0.05 at small n.",
+   "labels": ["within drift (H1)"],
+   "follows_prereg": true
+  },
+  "official_results_follow_prereg": "yes: every number, verdict, reading, label and sentence in RESULTS_GHZ3.json/.md was reproduced"
+ },
+ "part2": [
+  {
+   "section": "Deviations and limits",
+   "statement": "The pre-freeze test of the freeze list (tests_ghz3.py, 'every file of the folder is listed') ... now fails because the analysis writes RESULTS_GHZ3.* into the folder.",
+   "finding": "[contradicted] test_required_list_is_every_file_of_the_folder (tests_ghz3.py lines 261-275) removes FREEZE_GHZ3.json, RESULTS_GHZ3.json, RESULTS_GHZ3.md and RESULTS_GHZ3_boot.npz from the set of files found, and it skips run/, scratch/ and __pycache__/. Writing RESULTS_GHZ3.* therefore cannot make it fail. If it fails now, some other file in the folder is outside the 14-file freeze list. That file should be identified, since it may be an unfrozen file next to the frozen code."
+  },
+  {
+   "section": "Deviations and limits",
+   "statement": "The submission record is still anchored: the log and the power file are hashed in job.json; the job's creation time (11:18:09 UTC) is recorded by the service; K3 checked that the job was created after the submission time.",
+   "finding": "[not supported as stated] The hashes sit in job.json, a local file that was not public before the data. job.json and the log could have been rewritten together, for example to drop a refused attempt or a dry run, and every K3 check would still pass. Only the job's identity and creation time are anchored by the service. The public push was meant to fix the completeness of the log, and with it compliance with the stopping rule, before the data; the internal hashes do not replace that. Third parties cannot verify the stopping-rule record for the period before publication."
+  },
+  {
+   "section": "How to read it",
+   "statement": "Candidates outside M2 include fluctuating defects, crosstalk and leakage; this run cannot tell them apart.",
+   "finding": "[contradicted in part] The run's own POP counts localize most of the excess to two qubits of the patch. Qubit 72 (S_48[10]) reads 1 when it should read 0 in 21-32% of shots at n = 16-48 and in MIX32 (run 2: 1.4-4.5%; calibrated 4.1%), and the rate varies between circuits run minutes apart. Qubit 89 (S_48[6]) reads 0 when it should read 1 in 15-18% of shots in every GHZ and MIX circuit (run 2: 1-3%; calibrated symmetric 5.1%). The run cannot fully separate TLS, leakage and readout drift for these two qubits, but it does show the effect is localized, not patch-wide. The list also omits a candidate the files show directly: the M2 inputs were 86-88 h old at execution (dated 2026-11-12; last device update 2026-11-13 14:57)."
+  },
+  {
+   "section": "How to read it",
+   "statement": "M2, fed with the new calibration, predicted changes of -0.04, -0.03 and +0.02.",
+   "finding": "[rounding] The predicted change at n = 32 is -0.02499 (calibration_check.json; RESULTS tracking table), which rounds to -0.02, not -0.03."
+  },
+  {
+   "section": "How to read it (GME)",
+   "statement": "The interpolated crossing of F = 0.5 is at n = 15.7 (95% CI 15.4-16.1), against 16 with confidence in runs 1 and 2.",
+   "finding": "[misleading comparison] The sentence compares run 3's interpolated crossing with the CI-based grid reach of runs 1 and 2. On the same measure, the interpolated crossing was 23.9 in run 1 and 24.6 in run 2 (my recomputation from RESULTS_GHZ.json and RESULTS_GHZ2.json), so the crossing moved by about 9 qubits, not by 0.3. On the CI-based measure, the reach went from 16 to 8."
+  },
+  {
+   "section": "How to read it",
+   "statement": "K1 (spurious coherence) stayed far below its limit (C_mix 0.013 and 0.002).",
+   "finding": "[imprecise] K1 tests the 97.5th percentile of the C_mix bootstrap: 0.029 (n = 8) and 0.011 (n = 32), against 0.05. The quoted numbers are point estimates. K1 passes either way."
+  },
+  {
+   "section": "Header",
+   "statement": "The pre-registration (PREREG.md v3, FREEZE_GHZ3.json core 26F508A2D4B5B4FF) was frozen and pushed (commit 73e856e) before the submission, after three blind reviews (../ghz_heron_run3_reviews/).",
+   "finding": "[not verifiable here] The freeze manifest, the reviews and git are outside this audit. PREREG §8 describes 'a blind pre-freeze review (of v1), a targeted second look (of v2) and a narrow third look (of v3)'. It does not say the second and third were blind."
+  },
+  {
+   "section": "Header",
+   "statement": "A separate script, written without reading the analysis code or the results (../ghz_heron_run3_recompute/), reproduces the point values, the four verdicts, C-1, K1 and the GME crossing.",
+   "finding": "[not verifiable here; consistent] That recomputation is withheld from this audit. This audit's own recomputation reproduces the same items exactly, and also the power file, K2, the drift labels and run 1's R under M2 (0.977, 0.963, 0.874, 0.858, 0.854), which the report says was not independently checked."
+  },
+  {
+   "section": "Header",
+   "statement": "Every number below comes from RESULTS_GHZ3.json, produced by the frozen ghz3_analyze.py.",
+   "finding": "[not accurate] Several numbers come from other files: the job's creation, run and fetch times (execution-calibration file, log), the log contrasts (computed from the table, as the report says), and the Truth_Gate flags and review counts (withheld files). Every number I could check is correct apart from the n = 32 rounding."
+  },
+  {
+   "section": "Kapı's part; Lessons for the protocol",
+   "statement": "Truth_Gate raised no actionable flag on H1-H4 before the freeze ... The decisive defects of the design were found by the three blind reviews ... The first review found 2 blocking and 8 major defects, the second 4 major, the third only minor ones.",
+   "finding": "[not verifiable here] The certificates and reviews are withheld. PREREG §7 confirms only that the probes make H4 abstain by its own rule."
+  },
+  {
+   "section": "Opening paragraph; Conditions and controls",
+   "statement": "One pre-registered run ... on a new calibration. / The calibration in force at execution equalled the snapshot's for all M2 inputs, verified from the calibration history at the execution start.",
+   "finding": "[incomplete] Correct per C-1 and §3, but the report never says how old the calibration was. Its cz, readout, T1 and T2 entries are dated 2026-11-12 19:33-21:10. The one-qubit gate errors are dated 2026-11-05 and are unchanged since run 2, as are the idle times. Qubit 89's T1 is dated 2026-11-11 and is identical to run 2's. The device's last update was 2026-11-13 14:57. At execution the M2 inputs were 86-88 h old. 'Equalled ... verified' confirms only that no recalibration happened after submission. It says nothing about whether the record was current."
+  },
+  {
+   "section": "Conditions and controls",
+   "statement": "Both questions are therefore model tests (Q1 also by its own small-n threshold).",
+   "finding": "[beyond the run] True by the rule, but Q1's model-test status rests on one entry: qubit 89's readout error, 0.0044 -> 0.0513. With run 2's value for it, dF_pred(8) = +0.003 and max(|dF(4)|, |dF(8)|) = 0.006 < 0.02, so the replicate label would apply. At n = 4 the prediction moved by only 0.006. Q1 tested one qubit's calibration entry at n = 8, not M2 on a broadly new small-n calibration."
+  },
+  {
+   "section": "How to read it",
+   "statement": "The overprediction persisted, and on this day it was much larger at large n.",
+   "finding": "[beyond the run] H4 shows that F was below M2's prediction at every n on this calibration. It cannot show that run 1/2's systematic overprediction persisted. The shape changed: R falls from 0.96 to 0.53 instead of staying flat near 0.85, and H3 reversed. The large-n shortfall is dominated by qubit 72, and the calibration was 3.6 days old. I-7 already says H4 names no cause, and K1-K3 cannot detect such qubit faults."
+  },
+  {
+   "section": "How to read it",
+   "statement": "So the device's day-to-day change at large n was not visible in the calibration data that M2 uses.",
+   "finding": "[beyond the run / incomplete] The calibration data predate the run by 86-88 h, so a change after 2026-11-12 cannot be in them by construction. The counts point to one qubit (72) rather than a device-wide change. Reading it as 'calibration data miss the device's day-to-day change at large n' generalizes from one stale record and one faulty qubit."
+  },
+  {
+   "section": "How to read it; Pre-registered answer (joint sentence)",
+   "statement": "H1 still fails at n = 8, because M2's level there is about 0.066 too high. / Together: the bias persists and exceeds 0.05 at small n.",
+   "finding": "[beyond the run] The exceedance is 0.016 beyond the band and within drift, and it is plausibly qubit 89's error beyond its calibration. Its 1->0 rate at execution is 0.15-0.18 against a calibrated symmetric 0.051, and its T1 entry has not been updated since 2026-11-11. Putting its observed error into M2 gives |F_hat(8) - F_pred(8)| = 0.023-0.027, inside the band. n = 4 is inside the band too (0.037). The run does not show a small-n bias of M2 above 0.05."
+  },
+  {
+   "section": "Pre-registered answer",
+   "statement": "H1 FAILS, reading 'fails' (power at submission 0.959); H4 HOLDS with no label.",
+   "finding": "[beyond the run: robustness omitted] The readings follow the PREREG. The report omits two things. First, the pre-registered sensitivity 'drift x 2' gives H1 power 0.742 < 0.8, under which the reading would be 'not demonstrated'. Second, sigma_rel comes from two runs 25 minutes apart, while this calibration was 3.6 days old. Without these, the 'fails' reading appears more robust than it is. Also, H4's lack of a 'within drift' label depends on sigma_rel,P being clipped to 0. With sigma_rel,P = sigma_rel,C, or at drift x 1.35 or more, n = 4 would carry 'holds within drift'."
+  },
+  {
+   "section": "How to read it (GME)",
+   "statement": "It holds for one patch on one day (I-3); the reach is a property of the device on the day, not a constant.",
+   "finding": "[beyond the run / incomplete] F(16) = 0.490 [0.478, 0.502] falls below 0.5 mainly because of qubit 72's excess error. The reach on this day is a property of one qubit of the fixed patch more than of the device."
+  },
+  {
+   "section": "Lessons for the protocol",
+   "statement": "A calibration-based model can be off by far more on another day than on the day it was checked. Runs 1 and 2, 25 minutes apart, agreed; four days later the large-n gap had more than doubled.",
+   "finding": "[beyond the run] The doubling is correct (1 - R at n >= 16: 0.12-0.16 -> 0.25-0.47). But one run cannot separate 'another day' from a 3.6-day-old calibration record and two faulty qubits (72, 89). The lesson the files support more directly: a model test should check, at execution, the calibration's age and the per-qubit error signatures, not only that no recalibration happened after submission."
+  }
+ ]
+}

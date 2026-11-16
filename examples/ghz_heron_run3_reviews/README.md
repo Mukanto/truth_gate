@@ -14,4 +14,14 @@ ran anything against the IBM service.
 The designer's response to every finding is in `../ghz_heron_run3/REVISIONS.md`. The 8 minor findings of the third look
 were fixed before the freeze.
 
+## After the run
+
+`postrun/` holds the blind post-run audit (instructions `POSTRUN_AUDIT_INSTRUCTIONS_RUN3.md`, output `AUDIT_blind.md`
+and `AUDIT.json`).
+- It was made by a fresh agent that had seen none of the reviews above.
+- It worked without the certificates, the revision logs, the freeze manifests and the separate recomputation.
+- It read the draft report only after writing its own audit.
+
+Its findings and the corrections they led to are summarised in `../ghz_heron_run3/REPORT.md`.
+
 The paths in these files are those of the reviewers' task folders, not of this repository.
