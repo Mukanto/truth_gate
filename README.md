@@ -9,7 +9,7 @@ Truth_Gate has three parts:
 
 | Part | What it is | Where |
 |---|---|---|
-| **Methods protocol** | 16 rules for before, during and after a run. Each rule comes with the real failure that produced it. A one-page checklist for the freeze. | [`protocol/`](protocol/PROTOCOL.md) |
+| **Methods protocol** | 19 rules for before a run, plus rules for the run, after it, and the repair loop. Each rule comes with the real failure that produced it. A one-page checklist for the freeze. | [`protocol/`](protocol/PROTOCOL.md) |
 | **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies. Standard library only. | [`protocol/templates/`](protocol/templates/), [`protocol/tools/`](protocol/tools/freeze.py) |
 | **The gate** | A Python tool that does *mutation testing for acceptance criteria*. Before the study is frozen, and without real data, it runs each criterion on synthetic worlds, deliberately broken controls, noise and all-zero data, and writes a hash-addressed certificate saying whether each criterion can actually fail. Since 0.4 a study can be a manifest with no Python code, and a criterion can be a program in any language. | [`truth_gate/`](truth_gate/), reference in [`docs/GATE.md`](docs/GATE.md) and [`docs/MANIFEST.md`](docs/MANIFEST.md) |
 

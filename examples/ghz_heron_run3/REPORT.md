@@ -170,6 +170,9 @@ checked each and corrected the report. The main corrections:
 
 ## Lessons for the protocol
 
+The first three lessons were added to the methods protocol as rules 17–19 (`../../protocol/PROTOCOL.md`), with matching
+checklist items.
+
 - **A step meant to precede the data must be enforced by the code.** For example, `--fetch` could refuse until the
   submission record is published.
 - **A model test must check the calibration record, not only that it did not change after submission.** Record its age

@@ -25,3 +25,9 @@ before the freeze manifest is written.
 - [ ] **Run-to-run drift** is measured (repeat run or repeated subset), and the tolerances sit above it.
 - [ ] The **power** of each confirmatory test is computed for the expected effect size.
 - [ ] Each run is labelled as a **model test** or a **data replicate** (same inputs).
+- [ ] Every **step that must come before the data** (for example publishing the submission record) is enforced by the
+      runner, not left to the operator.
+- [ ] The model's **inputs carry their measurement dates**, and a check of the inputs against the run's own data (for
+      example per-qubit flip rates from the population circuits) is pre-registered, at least as a reported diagnostic.
+- [ ] A **"new inputs" condition** states how many inputs must carry the change, or survives setting each input back to
+      its old value in turn.

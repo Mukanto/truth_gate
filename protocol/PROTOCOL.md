@@ -86,6 +86,26 @@ One person may fill several roles, except that the auditor must not be the desig
 16. **Compute the power of every confirmatory test** for the effect size you expect, from the planned sample. An
     underpowered FAILS reads "not demonstrated", not "refuted". *(A replication test had about 25–30% power for the
     effect seen in the first run.)*
+17. **A step that must come before the data is enforced by the code.** The plan may require something to happen before
+    anyone sees the data, such as publishing the submission record or the log. Then the runner refuses the data step until
+    it can check that this was done; for example, the fetch refuses until a named public commit holds the submission
+    record with the same hash. A rule left to the operator at the moment of most interest is not a safeguard. *(In a
+    hardware study the plan required the job record and the log to be pushed before the data were fetched. The data were
+    fetched first, and nothing in the code stopped it.)*
+18. **Record the age and the per-unit state of a model's inputs.**
+    * When a model predicts from device or calibration data, record when each input was last measured.
+    * Where the run allows it, pre-register a check of the inputs against the run's own data. For qubits, use the
+      flip rate of each qubit in the population circuits when the others read all 0 or all 1. Report it at least as a
+      diagnostic.
+    * A check that the inputs did not change after submission shows only that they were not updated, not that they were
+      current.
+
+    *(In a hardware study the calibration record was 3.6 days old at execution. Two qubits read wrongly in 15–32% of shots,
+    against 4–5% in the record. No control of the run could detect it; the blind audit found it in the run's own counts.)*
+19. **A "new inputs" condition must require a broad change.** A condition may be meant to make a run test new predictions
+    rather than replicate old ones (rule 2). It then states how many inputs must carry the change, or it is tested by
+    setting each input back to its old value in turn. *(In a hardware study the required change in the predictions rested
+    on one qubit's readout entry. With its old value, the small-n test would have been a replicate.)*
 
 ## 2. The run
 
@@ -152,3 +172,8 @@ The same list is in [`CHECKLIST.md`](CHECKLIST.md).
 - [ ] Run-to-run drift is measured and the tolerances sit above it.
 - [ ] The power of each confirmatory test is computed for the expected effect.
 - [ ] Each run is labelled as a model test or a data replicate.
+- [ ] Every step that must come before the data is enforced by the runner, not left to the operator.
+- [ ] The model's inputs carry their measurement dates, and a check of the inputs against the run's own data (for
+      example per-qubit flip rates) is pre-registered.
+- [ ] A "new inputs" condition states how many inputs must carry the change, or survives setting each input back to its
+      old value.
