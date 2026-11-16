@@ -196,8 +196,14 @@ dataset, never the real study data.
 The Action writes the result table and the study notes to the job summary and uploads the certificate. It always fails
 the job when a declaration still carries `origin = "suggested"` (`SUGGESTED_UNREVIEWED`), whatever `fail-on` says.
 `truth-gate init --ci` writes this workflow. The pre-commit hooks `truth-gate-freeze` and `truth-gate-check` are in
-[`.pre-commit-hooks.yaml`](.pre-commit-hooks.yaml). The Action is tested with a fake environment; it has not been run on
-GitHub yet.
+[`.pre-commit-hooks.yaml`](.pre-commit-hooks.yaml). The Action runs on GitHub in this repository's own workflows
+([`.github/workflows/`](.github/workflows/)): from the same commit on a study that passes and on one that must fail, and
+as released (`@v0.5.0`, exactly as `init --ci` writes it). All three passed from their first run on 2026-11-17
+([CI](https://github.com/Mukanto/truth_gate/actions/runs/43980474228),
+[must fail](https://github.com/Mukanto/truth_gate/actions/runs/43980475889),
+[released](https://github.com/Mukanto/truth_gate/actions/runs/43980474292)). The certificate is uploaded as an artifact
+with a fixed name (`truth-gate-certificate`), so use the Action once per workflow run: upload-artifact refuses a second
+artifact of the same name in one run.
 
 ### A study in Python
 
