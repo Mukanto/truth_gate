@@ -1,0 +1,199 @@
+{
+  "task": "ghz_run3_second_look",
+  "scope": "Targeted second look at PREREG v2 and code of examples/ghz_heron_run3 before the freeze. Offline only: tests_ghz3.py (89 tests, OK), ghz3_d4.py (certs/power.json and certs/k2_sim.json reproduced byte for byte), ghz3_run.py --selftest (OK), and own checks in scratch/ (check_stopping_rule.py, check_c1_profile.py, check_print_test.py, check_tracking_seed.py). Nothing was run against the IBM service.",
+  "first_review": [
+    {
+      "id": "F1",
+      "status": "fixed",
+      "evidence": "PREREG §4 'Power (rule 16), computed at submission' defines power per criterion at a stated effect: H1 = P(HOLDS) with truth P_pred-0.03, C_pred-0.03 at n = 4, 8 (inside the band); H4 = P(HOLDS) under run-2 ratios. The expected outcome is reported separately, not as power. ghz3_run.compute_power (l. 337-393) implements this. cmd_submit computes it from the new predictions before _submit_job, writes run/power_run3.json to the temporary folder, prints nothing of it, and records its SHA-256 in job.json (l. 717-760). ghz3_analyze.power_file_status reads run/power_run3.json, never certs/power.json. A device change is labelled. H2's knife edge is moot because H2 is now reported only. Design-time values (certs/power.json, reproduced byte for byte): power H1 0.953, H4 1.000; expected P(H1 HOLDS) 0.218. With drift estimated from n = 4, 8 only (sigma_P 0.006, sigma_C 0.027) H1's power is still 0.90. Small residuals are in N5."
+    },
+    {
+      "id": "F2",
+      "status": "partly fixed",
+      "evidence": "C-1 now compares the M2 inputs of S_48 (model.json n = 48 fields S, cz_err, g1_pop_err, g1_par_err, ro_err, t1, t2, idle) and requires max_n |dF_pred| >= 0.02 (PREREG §1 C-1; ghz3_run.c1_check l. 152-174). A chip-wide change outside S_48 is refused (test_chip_wide_change_outside_s48_is_refused). That closes the 'any of 1132 values' hole and makes H4/Q2 a model test. But H1 (Q1) reads only n = 4 and 8, and the maximum is almost always reached at n >= 16. In random per-element recalibrations of run 2's snapshot (scratch/check_c1_profile.py), 88-98% of the cases that pass C-1(b) moved |dF_pred| at both n = 4 and 8 by less than 0.02, the run-1/run-2 drift. For Q1 the run can therefore again be essentially a data replicate (rule 2). See N1."
+    },
+    {
+      "id": "F3",
+      "status": "fixed",
+      "evidence": "REQUIRED_FROZEN_3 (ghz3_run.py l. 54-56) lists all 14 files of the folder, including certs/power.json, certs/k2_sim.json, ghz3_d4.py, both certificates, README, REVISIONS and tests. core.verify_freeze refuses a manifest that omits any of them (TestFreezeRun3). A missing or unreadable k2_sim.json is a K2 failure (ghz3_analyze.k2_status). A missing or mismatched power_run3.json is a K3 failure (power_file_status; PREREG §5). Residual: the REVISIONS table row F3 still says a missing power file 'allows no fails reading'; clarification 3 supersedes it. Input hashes are compared with the current files, not with frozen values (N5)."
+    },
+    {
+      "id": "F4",
+      "status": "partly fixed",
+      "evidence": "PREREG §4 now has a mapping table for (H1, H4), a control-failure row, UNDEFINED rows and labels. ghz3_analyze.verdict_mapping implements it (l. 240-260). It is not complete for the readings, though. The H1 'not demonstrated' row is a meta-instruction ('As the row above with fails replaced by ...') that cannot be applied literally to either base sentence. H4's own reading is ignored: an H4 FAILS read 'not demonstrated' gets the 'fails' sentence, and tests_ghz3 l. 1684-1688 asserts this. See N3."
+    },
+    {
+      "id": "F5",
+      "status": "fixed",
+      "evidence": "The 'covers drift by design' sentence is gone. sigma_rel,X, sigma_d,F and sigma_d,R are defined in §4. The H1 'within drift' label (||dev|-0.05| < 2 sigma_d,F at the decisive n) is pre-registered and attaches without changing the verdict (ghz3_analyze.h1_drift_label). H1's power is at a stated effect. The design-time expected P(H1 HOLDS) = 0.218 is computed and reported at submission, though not quoted in the text. With sigma_d,F(4) ~ 0.010 the label window is |dev| in (0.030, 0.070), so under run-2 ratios the label will almost surely attach."
+    },
+    {
+      "id": "F6",
+      "status": "fixed",
+      "evidence": "H2 is 'reported' (PREREG §4 table and 'Why H2 and H3 are not confirmatory'; ROLES in ghz3_analyze). h2_report gives the CI-based reach and the interpolated crossing with a bootstrap percentile interval. H2 is not in the verdict mapping."
+    },
+    {
+      "id": "F7",
+      "status": "fixed",
+      "evidence": "H3 is 'reported (exploratory)'. §4 lists the error classes for the H3 direction and the opposite direction (rule 15). Minor gap: the opposite-direction list omits independent readout error beyond the model, which run 2's own PREREG named (N8)."
+    },
+    {
+      "id": "F8",
+      "status": "partly fixed",
+      "evidence": "--fetch now saves the job metrics timestamps and usage, job.usage(), and a snapshot built from backend.properties(datetime=start) and backend.target_history(datetime=start) (ghz3_run.save_execution_calibration l. 814-858). Both methods exist in qiskit-ibm-runtime 0.52.0 (checked by signature). If the history query is unavailable, the current calibration is saved with calibration_dates, and the analysis accepts 'verified: no recalibration since submission' only if the M2 inputs are equal and every M2-input date precedes submitted_utc. The rules (equal / changed / verified / not verified) are mechanical, with tolerance 1e-6 and labels. Gaps: (1) the history path saves no dates and is not checked, so a service that ignores or approximates the datetime, or a systematic difference between target_history and backend.target, makes the analysis switch the primary predictions to the wrong calibration ('calibration changed before execution'); (2) --fetch silently overwrites execution_calibration.json; (3) the PREREG does not say which power applies when the predictions in use are the execution-time ones (the code uses the snapshot's). See N4 and N5."
+    },
+    {
+      "id": "F9",
+      "status": "partly fixed",
+      "evidence": "--dry-run no longer prints predictions, and every dry-run, refused, failed and accepted submit appends a line with the predictions to run/dryrun_log.jsonl (ghz3_run.log_line, append_log). The analysis reports the whole log. But the rule still leaves the waiting path open, and the report does not implement the rule. A passing dry-run may go unused 'or not at all that day' on any number of days. The predictions sit in clear in the log file, and a deliberate C-2 refusal (too small N) also logs them and may be retried the next day. Neither is a deviation, so the analysis reports nothing (scratch/check_stopping_rule.py cases B, F). stopping_rule_report misses a deviation the text defines (case A) and flags non-deviations (C, D, E). The log is not anchored in job.json. The tests do not show that --dry-run prints no prediction (N6). See N2."
+    },
+    {
+      "id": "F10",
+      "status": "fixed",
+      "evidence": "§4 pre-registers the margins 1-q97.5(n) next to sigma_d,R(n). 'holds within drift' applies at some n with margin < 2 sigma_d,R(n); 'fails within drift' applies when every n with q97.5 >= 1 exceeds 1 by less than 2 sigma_d,R(n). ghz3_analyze.h4_margins implements this with each n against its own sigma (test_h4_margins_and_labels). The labels never change the verdict."
+    },
+    {
+      "id": "F11",
+      "status": "fixed",
+      "evidence": "Drift is now pooled over n = 4, 8, 16, 32, 48, relative, and corrected for shot noise (v_X from run 2's bootstrap, ddof 1), with negative values set to 0 (ghz3_run.drift_sigmas). Sensitivity rows: fully correlated drift and drift x 2. Result: sigma_rel,P = 0 (pooled term negative; run-1/run-2 P differences are within shot noise) and sigma_rel,C = 0.0224. Note: because sigma_P = 0, no sensitivity row contains any P drift; the drift x 2 row gives H1 power 0.732."
+    },
+    {
+      "id": "F12",
+      "status": "fixed",
+      "evidence": "REVISIONS (designer's decisions) and PREREG §7 record that the probes could not test H4 for vacuity. I-7 is added (§6), and §4 says 'H4 attributes no cause'. cert_h4_v1.json is unchanged (ghz3_study_h4.py hash 1f028ebc..., equal to the hash recorded in power.json)."
+    },
+    {
+      "id": "F13",
+      "status": "fixed",
+      "evidence": "ghz3_run.rule14_check runs in _checks for --dry-run and --submit and is saved in calibration_check.json ('rule14'). The analysis rechecks it on the snapshot's predictions and on the predictions in use, and attaches 'H1 one-sided' if either fails (run_analysis l. 670-674; build_labels; test_rule14_failure_attaches_h1_one_sided)."
+    },
+    {
+      "id": "F14",
+      "status": "fixed",
+      "evidence": "The PREREG §4 table now says 'F_pred at n = 4 or 8 outside (0, 1)', which matches ghz2_study.H1_small_n_accuracy (indexes [I4, I8] only, l. 53-58)."
+    },
+    {
+      "id": "F15",
+      "status": "fixed",
+      "evidence": "C-2 now reads '1.15 x the estimate computed at submission <= N' and gives the reason for not setting an execution-time limit (a cut job is a K3 failure, and the margin is the guard). The code matches (c2_check; _submit_job sets no limit)."
+    },
+    {
+      "id": "F16",
+      "status": "fixed",
+      "evidence": "PREREG §4 says the drift is pooled from runs 1 and 2, and the README says 'run-1/run-2 data only'. A trivial leftover: the first line of ghz3_d4.py's module docstring still says 'simulator and run-2 data only' (N9)."
+    },
+    {
+      "id": "F17",
+      "status": "fixed",
+      "evidence": "ghz3_d4.main: k2_ok = bool(k2_main). The bit-order control is stored in k2_sim.json with a note. ghz3_analyze.k2_status ignores it for the pass condition (TestK2). certs/k2_sim.json reproduces byte for byte."
+    },
+    {
+      "id": "F18",
+      "status": "fixed",
+      "evidence": "K3 now requires c1_recomputed_holds (c1_check recomputed with the v2 rule on the snapshot's model). It also requires that calibration_check.json's run2_snapshot_file_sha256 and run2_model_file_sha256 equal RUN2_KNOWN and that run3_snapshot_sha256 equals job.json's (run_analysis l. 635-659; test_k3_additions_fail_when_they_should)."
+    },
+    {
+      "id": "F19",
+      "status": "fixed",
+      "evidence": "_print_usage prints only the numeric fields of USAGE_WHITELIST (usage_summary). The test feeds api_key, a CRN and a name and checks that none is printed. execution_calibration.json stores only metrics.timestamps, metrics.usage, job.usage() and exception type names. Trivial leftover: in the job.json-exists refusal, the raw --quota-seconds string is logged unparsed (N6)."
+    },
+    {
+      "id": "F20",
+      "status": "fixed",
+      "evidence": "cmd_submit writes the snapshot, circuits.qpy, model.json, calibration_check.json and power_run3.json to a temporary folder. It moves them into run/ only after _submit_job returns, with job.json last. On an exception it deletes the folder, logs, and exits 8 (test_failed_submission_leaves_run_without_the_files_and_is_logged; test_power_is_written_to_the_temporary_folder_before_the_job_is_submitted). Residual: a 'failed' submission that the service actually accepted, and KeyboardInterrupt (not an Exception), are not handled (N7)."
+    }
+  ],
+  "new_findings": [
+    {
+      "id": "N1",
+      "severity": "major",
+      "file": "examples/ghz_heron_run3/PREREG.md; examples/ghz_heron_run3/ghz3_run.py; examples/ghz_heron_run3/ghz3_analyze.py",
+      "location": "PREREG §0 ('This run is the model test'), §1 C-1 (b), §4 verdict mapping and labels; ghz3_run.c1_check (max over all n); ghz3_analyze.build_labels / verdict_mapping",
+      "finding": "C-1(b) takes the maximum of |F_pred,run3 - F_pred,run2| over all n. Q1/H1 reads only n = 4 and 8. A typical recalibration moves F_pred mostly at n = 16-48, so C-1 can pass while the small-n predictions are practically run 2's. Q1 would then be answered as a 'model test on a new calibration' when it is again a data replicate (rule 2): the defect F2 was meant to remove, now confined to the first confirmatory question. The justification is also inconsistent. The threshold is tied to the small-n drift ('about the run-1/run-2 drift at small n, so that the new predictions differ by more than the drift'), but 0.02 < 0.022, and it is applied wherever the maximum falls, including n >= 16 where the drift was <= 0.004.",
+      "evidence": "scratch/check_c1_profile.py: run 2's snapshot with every qubit's readout, sx/x, T1 and T2 and every edge's cz error multiplied by independent lognormal factors (circuits unchanged, since selection is error-blind). The rebuilt model equals model.json. 150 draws per sigma. sigma 0.2: C-1(b) passes in 35%; of those, 98% have |dF_pred| < 0.02 at both n = 4 and 8; median |dF_pred| = 0.004, 0.004, 0.010, 0.010, 0.010, 0.008 (n = 4 ... 48). sigma 0.3: passes in 78%; of those, 88% have small-n |dF| < 0.02. The arg-max n is 16-48 in more than 90% of draws. The small-n changes are below the drift (0.022) and about 1-2 shot sd of F (0.0044-0.0047). A correlated shift, such as FakeKingston's earlier calibration (dF(4) = -0.053 per the first review), would move small n too, so the outcome depends on the kind of recalibration and is not guaranteed by C-1.",
+      "suggested_fix": "Pre-register per question. Q1/H1 counts as a model test only if max(|dF_pred(4)|, |dF_pred(8)|) >= 0.02 (or a threshold justified against the small-n drift). Otherwise the Q1 answer carries a fixed label and sentence such as 'small-n predictions unchanged from run 2: Q1 is a data replicate, not a model test'. Implement the label in build_labels and the mapping, using the dF_pred per n already in calibration_check.json, and add a test. Alternatively require (b) at n in {4, 8} for submission, at the cost of longer waiting. Fix the justification sentence of C-1(b)."
+    },
+    {
+      "id": "N2",
+      "severity": "major",
+      "file": "examples/ghz_heron_run3/PREREG.md; examples/ghz_heron_run3/README.md; examples/ghz_heron_run3/ghz3_analyze.py; examples/ghz_heron_run3/ghz3_run.py",
+      "location": "PREREG §1 'Stopping rule'; README step 3; ghz3_analyze.stopping_rule_report (l. 283-308); ghz3_run.cmd_submit / log_line (job.json not anchoring the log)",
+      "finding": "The stopping rule does not close the forking path of F9, and its report does not implement it. (a) Waiting is permitted. A passing --dry-run may be left unused 'or not at all that day' on any number of days, and dry-runs are unlimited. The predictions are written in clear to run/dryrun_log.jsonl, which anyone can open, so 'prints no prediction' is no protection. A deliberately low N gives a C-2 refusal that also logs the predictions and may be retried the next day. None of this counts as a deviation, so the analysis reports none. (b) stopping_rule_report misses a deviation the text defines: a passing dry-run that is skipped, then a later passing dry-run and submit on the same UTC day. It measures the 2 h gap only from the latest passing dry-run. (c) It over-reports. It counts every 'submit*' line as an attempt, so a --quota-seconds typo (exit 7), an accidental --submit after acceptance (job.json exists) or one same-day retry after a C-1 refusal are flagged as 'deviations'. The text ('may be retried, at most once per UTC day'; deviation = 'a second retry on the same UTC day') allows one same-day retry and covers only C-1/C-2 refusals. (d) The log is not anchored: job.json records neither its hash nor its line count at submission, so earlier lines can be removed without trace.",
+      "evidence": "scratch/check_stopping_rule.py on ghz3_analyze.stopping_rule_report. A: passing dry-runs at 02:00 and 12:00, submit 13:00, same day: 'none' (text: the 02:00 dry-run forbids a submit later that day). B: passing dry-runs on 3 days, never followed, submit on day 4: none. F: C-2 refusals on 3 days, accepted on day 4: none. C (C-1 refusal, one retry the same day), D (exit 7, then submit) and E (accepted, then a job.json-exists refusal) are each reported as '2 --submit attempts on one UTC day'. TestLogReport covers none of A, B, C, D, E or F.",
+      "suggested_fix": "Either drop --dry-run from the plan (--submit performs every check and refuses safely), or make the first passing dry-run binding: --submit within 2 h, and a passing dry-run that is not followed by a submit is a reported deviation. Limit how predictions can be seen before submission. For example, write a hash of the predictions to the log line and the predictions themselves only on acceptance, or accept that the log is readable and rely on the binding rule. Count as attempts only refusals for C-1/C-2 (and D-7), and state the retry limit unambiguously. Record the SHA-256 and line count of dryrun_log.jsonl in job.json at submission and check the prefix in the analysis. Implement the deviations exactly as written, with tests for A-F."
+    },
+    {
+      "id": "N3",
+      "severity": "major",
+      "file": "examples/ghz_heron_run3/PREREG.md; examples/ghz_heron_run3/ghz3_analyze.py; examples/ghz_heron_run3/tests_ghz3.py",
+      "location": "PREREG §4 'Answers to Q1 and Q2' (rows 'FAILS (reads not demonstrated) | either' and the H4 column); ghz3_analyze ANSWERS / ANSWER_NOT_DEMONSTRATED (l. 57-71), verdict_mapping (l. 240-260), run_analysis l. 711-717; tests_ghz3 l. 1676-1688",
+      "finding": "The verdict mapping is not mechanical for 'not demonstrated' readings, so the answer could still be worded after the data (rule 3). (a) The H1 'not demonstrated' row says 'As the row above with \"fails\" replaced by \"accuracy within 0.05 at small n is not demonstrated (low power)\"'. The H4 HOLDS base sentence contains no 'fails'. In the H4 FAILS base sentence the substitution yields an ungrammatical sentence, and 'misses the small-n band' remains. The code outputs the meta-instruction plus the base sentence, so the final sentence is left to the writer. (b) The readings rule applies to every confirmatory criterion, but the mapping uses only H1's reading. An H4 FAILS read 'not demonstrated' (power < 0.8) is mapped to the 'fails' sentences ('its overprediction did not persist at every n'; 'not by overpredicting at every n'), which contradicts the reading, and a test asserts this behaviour.",
+      "evidence": "tests_ghz3 test_power_file_k3_item_and_readings: with power H1 0.8 and H4 0.1, reading H4 = 'not demonstrated', yet verdict_mapping answer = ANSWERS[('FAILS','FAILS')] ('... M2 fails the model test without the run-1/2 pattern'). verdict_mapping takes h1_reading only. With the design-time power (H1 0.953, H4 1.000) these rows are unlikely, but rule 3 requires every combination to map to one verdict.",
+      "suggested_fix": "Write a full pre-written sentence for each (H1 outcome with its reading, H4 outcome with its reading) combination, including H4 FAILS 'not demonstrated' (for example '... persistence of the overprediction at every n is not demonstrated (low power)'). Pass both readings to verdict_mapping and test every row."
+    },
+    {
+      "id": "N4",
+      "severity": "major",
+      "file": "examples/ghz_heron_run3/ghz3_run.py; examples/ghz_heron_run3/ghz3_analyze.py; examples/ghz_heron_run3/PREREG.md",
+      "location": "ghz3_run.save_execution_calibration / snapshot_at (history path, l. 781-858); ghz3_analyze.execution_calibration history branch (l. 437-448); PREREG §3",
+      "finding": "On the history path nothing verifies that the calibration returned is the one in force at the execution start, yet the result decides which predictions are primary. The history path stores no calibration dates. The analysis declares 'calibration changed before execution' and makes M2 on that calibration primary whenever any M2 input differs by more than 1e-6. The fallback path, by contrast, is guarded by a date check. Two failure scenarios. If the service ignores or approximates the datetime argument and returns the latest calibration, and the author fetches after the next recalibration (the README notes the devices are recalibrated about daily), the primary predictions come from a calibration that never applied to the data. A systematic difference between target_history() and backend.target (fields, rounding, faulty flags) would also trigger 'changed' spuriously. In addition, --fetch overwrites execution_calibration.json on every call, so a repeated fetch after the data are known can change the recorded calibration path.",
+      "evidence": "save_execution_calibration saves the snapshot from properties(datetime=when) + target_history(datetime=when) with no dates. execution_calibration's history branch compares only the values (inputs_differ) and returns status 'changed'. In the tests, _FakeIBM.target_history returns the same FakeKingston target for any datetime (tests_ghz3 l. 1138-1142), so this case cannot be detected. Offline it cannot be confirmed how the service honours datetime; qiskit-ibm-runtime 0.52.0 has the methods.",
+      "suggested_fix": "In the history path also save calibration_dates(props at the execution start). Accept 'equal' or 'changed' only if every M2-input date of S_48 is <= the execution start. For 'changed', also require that every differing parameter carries a date later than its date in the snapshot. Otherwise label 'execution-time calibration not verified' and keep the snapshot's predictions. Make --fetch refuse to overwrite an existing execution_calibration.json, or keep every attempt and use the first. Add tests where target_history ignores the datetime."
+    },
+    {
+      "id": "N5",
+      "severity": "minor",
+      "file": "examples/ghz_heron_run3/ghz3_analyze.py; examples/ghz_heron_run3/PREREG.md",
+      "location": "ghz3_analyze.power_file_status (l. 312-339); PREREG §5 K3 last item; PREREG §3 / §4 (power when the predictions in use are the execution-time ones)",
+      "finding": "(a) The PREREG says the power file's input hashes must 'match the frozen files'. The code compares them with whatever files exist at analysis time. The run-1/run-2 data inputs (RESULTS_GHZ.json, RESULTS_GHZ2.json, RESULTS_GHZ2_boot.npz) are not in FREEZE_GHZ3.json, though their design-time hashes are in the frozen certs/power.json. A change before submission would therefore go unnoticed. (b) The numbers that decide 'fails' vs 'not demonstrated' are not recomputed in the analysis. They rest on run/power_run3.json, whose only anchor is a hash in job.json written by the same process, although compute_power is deterministic (seed 20261116). (c) When the predictions in use are the execution-time ones, the readings use the snapshot-based power. The PREREG does not say so.",
+      "evidence": "power_file_status: os.path.normpath(os.path.join(code_dir, item['file'])) compared with core.sha256_file of the current file. The design-time input hashes are in certs/power.json 'inputs'. The analysis requires the power predictions to equal the snapshot's (the code does this; the text does not say it).",
+      "suggested_fix": "Require power_run3.json's input hashes to equal certs/power.json's for the data files (and FREEZE_GHZ3's for the study files). Recompute compute_power from the snapshot predictions in the analysis, or in the independent recomputation step, and require equality. State in §4 that the readings use the power at submission, on the snapshot's predictions, in every §3 case."
+    },
+    {
+      "id": "N6",
+      "severity": "minor",
+      "file": "examples/ghz_heron_run3/tests_ghz3.py; examples/ghz_heron_run3/ghz3_run.py",
+      "location": "TestRunnerFlows.setUp (build_and_report replaced by a stub, l. 810-822); test_submit_passes_... l. 944; TestFreezeRun3.test_required_list_is_every_file_of_the_folder (l. 215-222); ghz3_run.cmd_submit l. 690-692",
+      "finding": "Some tests do not test what they claim. (a) The 'prints no prediction' tests for --dry-run and --submit run with build_and_report replaced by a stub that never prints, so a dry-run or submit that printed M2's predictions would pass. (b) assertEqual(pw['power']['H1'], pw['power']['H1']) compares a value with itself. (c) 'required list is every file of the folder' checks only that each listed file exists, not that the folder holds no unlisted file. (d) A related leftover: in the job.json-exists refusal, the raw --quota-seconds string is written to the log unparsed, so any text typed there by mistake lands in a file.",
+      "evidence": "scratch/check_print_test.py: with cmd_dry_run and cmd_submit changed in memory to call build_and_report(..., show_model=True), test_dry_run_prints_only_pass_fail_and_logs and test_submit_passes_records_everything_and_prints_no_prediction_or_power still pass (2 run, 0 failures). No test calls the real build_and_report with show_model=False.",
+      "suggested_fix": "Let the runner tests use the real build_and_report (patch only core.build_all, estimate_time and model_all), or assert that show_model is False. Replace the tautology with a real check, for example equality with a recomputation. Compare REQUIRED_FROZEN_3 with an os.walk of the folder (excluding __pycache__ and run/). Log parse_quota(quota) in the job.json-exists path."
+    },
+    {
+      "id": "N7",
+      "severity": "minor",
+      "file": "examples/ghz_heron_run3/ghz3_run.py; examples/ghz_heron_run3/PREREG.md; examples/ghz_heron_run3/README.md",
+      "location": "cmd_submit except-branch (l. 746-751); PREREG §1 'Atomic writes' and stopping rule; README step 5",
+      "finding": "The atomic-write path treats every exception from _submit_job as 'nothing submitted', deletes the temporary files and invites a retry. A network error after the service accepted the job would leave a running job whose snapshot, model and power file are deleted, and cmd_fetch cannot fetch it without run/job.json. A retry would then submit a second job, giving two datasets with no pre-registered rule for which one is the run. KeyboardInterrupt is not an Exception, so an interrupt leaves the temporary folder, no log line, and an unknown submission state.",
+      "evidence": "The except Exception branch calls shutil.rmtree(tmp) and logs 'submit-failed'. README step 5: 'you may retry'. cmd_fetch opens run/job.json first.",
+      "suggested_fix": "On failure keep the temporary folder (renamed with the attempt time) instead of deleting it, and catch BaseException for logging. Pre-register that before any retry after exit 8 the author checks the account's job list for a job created at that attempt; if one exists, it is the run, and job.json is written from the kept files."
+    },
+    {
+      "id": "N8",
+      "severity": "minor",
+      "file": "examples/ghz_heron_run3/PREREG.md",
+      "location": "§4 'Why H2 and H3 are not confirmatory', H3 error-class list",
+      "finding": "The rule-15 list reads as closed but omits independent symmetric readout error beyond the model, which lowers C about twice as much as P: the opposite direction to H3. Run 2's PREREG §4 listed it ('Underestimated readout ... lowers C more than P').",
+      "evidence": "M2: P_pred has the product of (1 - eps_ro), C_pred the product of (1 - 2 eps_ro); an unmodelled extra readout error therefore cuts ln C about twice as much as ln P.",
+      "suggested_fix": "Add independent readout error beyond the model to the opposite-direction classes."
+    },
+    {
+      "id": "N9",
+      "severity": "minor",
+      "file": "examples/ghz_heron_run3/PREREG.md; examples/ghz_heron_run3/ghz3_d4.py; examples/ghz_heron_run3/ghz3_analyze.py; examples/ghz_heron_run3/REVISIONS.md",
+      "location": "PREREG §4 mapping row (FAILS, FAILS); §5 K2; ghz3_d4.py docstring line 1; ghz3_analyze.tracking_table; REVISIONS F3 row",
+      "finding": "Wording and small accuracy points. (a) The (FAILS, FAILS) sentence 'M2 fails the model test without the run-1/2 pattern' overstates the case when H1 fails by overprediction and H4 fails at a single large n. (b) K2's 'exact transpiled circuits' are FakeKingston's (inherited from run 2); on a device change (I-6) they are not the submitted circuits. (c) ghz3_d4.py's first docstring line says 'simulator and run-2 data only'. (d) The tracking row's 'predicted inside CI' uses a shot-noise-only interval, while the small-n drift (sigma_d,F ~ 0.010) is comparable to the CI half-width (~0.012). (e) The REVISIONS F3 row says a missing power file 'allows no fails reading', which clarification 3 supersedes.",
+      "evidence": "PREREG §4 and §5 text; ghz3_d4.k2 uses FakeKingston entries; tracking_table CI from run-3 minus run-2 bootstrap replicates only. scratch/check_tracking_seed.py found no correlation between the run-2 and run-3 replicates, even though both use seed 20261113 (|r| <= 0.05), so the interval itself is sound.",
+      "suggested_fix": "Reword the (FAILS, FAILS) sentence, for example '... misses the small-n band and does not overpredict at every n'. Either run K2 in the analysis on the submitted circuits from circuits.qpy, or say that K2 is on FakeKingston's circuits. Fix the docstring. Report sigma_d,F next to the tracking row, or label the CI as shot noise only. Update the REVISIONS row."
+    }
+  ],
+  "freezability": {
+    "freezable_as_is": false,
+    "blocking": 0,
+    "must_change_before_freeze": [
+      "N1: tie Q1's 'model test' status to the small-n predictions (label or condition on dF_pred(4), dF_pred(8)) and fix the C-1(b) justification",
+      "N2: make the stopping rule binding (or drop --dry-run), anchor the log in job.json, and implement the deviations exactly as written, with tests",
+      "N3: complete the verdict mapping for 'not demonstrated' readings of H1 and H4",
+      "N4: date-verify the history path of the execution-time calibration and stop --fetch from overwriting it"
+    ]
+  }
+}

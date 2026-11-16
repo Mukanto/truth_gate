@@ -1,0 +1,22 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-16T09:17:38Z",
+  "algorithm": "sha256",
+  "files": {
+    "PREREG.md": "181355cad428695c55a6330330423fcfdbd2313214a7c6d4efc90222611509be",
+    "README.md": "7b8d1ae414560f67a79f535dac7c74fe8e889b60d22178b90f91f49342999bde",
+    "REVISIONS.md": "26d84436ac612920c8335aeb7e5805d00286bb3f200636a03241bfd85bcef14c",
+    "certs/cert_h123_v1.json": "7033675d7d0a149175293bf28242978556bbd9eca6b384c394ced13a146ee8bd",
+    "certs/cert_h4_v1.json": "40e94bb088b7c0f1212e3f3a297b08771b625f1d363c0b4c649247ae0dafbfaa",
+    "certs/k2_sim.json": "76c22868bfc01ce33a320f8d07020660fa1e45ce0de65e94cb93be38d2661b41",
+    "certs/power.json": "097d8bc8bcf738dfd26da46f6c0f0a52ba77ed926360cdf6d809b6848900237f",
+    "ghz2_core.py": "5318b0418c441521160216c9e72727750244f24334426479f343b7556649ae27",
+    "ghz2_study.py": "4bf9f2ec14e6b5368cd0b68c6bccee167d73fe8a90a31e4d3e1b8581f7309400",
+    "ghz3_analyze.py": "ba9274996223aa4a3be3eab8f246b1025194fbd3153d3d53aea5cd5831da8a7e",
+    "ghz3_d4.py": "510d31036dad80a9de4171ad9f7763df864a52d73c35fe1d0ed81fdc9c103740",
+    "ghz3_run.py": "f0b20d0e5e941e8f7b06c72c685c5ba053f57b165714b37b892482166fe6f008",
+    "ghz3_study_h4.py": "1f028ebc0fbdce67ebbd47731aea3237f52b5493fdc1f3c7d154c9645d99761a",
+    "tests_ghz3.py": "f475ea0c6f508bbd182d5115272bfe7c5fd4e7cb8468f41eeab8d80fc6c91da1"
+  },
+  "core_sha256": "26f508a2d4b5b4ff68a82295d465a16222925dd4af8519aef1bd92107f355fbc"
+}
