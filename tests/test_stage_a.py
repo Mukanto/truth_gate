@@ -48,7 +48,7 @@ class TestShim(unittest.TestCase):
 
     def test_version_is_truth_gates(self):
         self.assertEqual(kapi.__version__, truth_gate.__version__)
-        self.assertEqual(truth_gate.__version__, "0.5.0")
+        self.assertEqual(truth_gate.__version__, "0.5.1")
         self.assertEqual(kapi.SPEC_VERSION, "0.7")
 
     def test_every_submodule_is_aliased(self):
@@ -187,7 +187,7 @@ class TestVerifyExit7(unittest.TestCase):
         self.assertEqual(code, 7)
         self.assertIn("0.3.0", out)
         self.assertIn("v0.3.0", out)
-        self.assertIn("0.5.0", out)
+        self.assertIn("0.5.1", out)
 
     def test_certificate_of_another_tool_version(self):
         env = copy.deepcopy(run_toy("toy_good_det"))

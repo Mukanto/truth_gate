@@ -838,9 +838,9 @@ class TestCertificate(Spec07Case):
         cls.body = cls.envelope["body"]
 
     def test_versions(self):
-        self.assertEqual(self.body["tool_version"], "0.5.0")
+        self.assertEqual(self.body["tool_version"], "0.5.1")
         self.assertEqual(self.body["spec_version"], "0.7")
-        self.assertEqual(certificate.TOOL_VERSION, "0.5.0")
+        self.assertEqual(certificate.TOOL_VERSION, "0.5.1")
         self.assertEqual(certificate.SPEC_VERSION, "0.7")
 
     def test_the_known_limitations_carry_the_two_sentences_verbatim(self):
@@ -1085,11 +1085,11 @@ class TestDocumentation(unittest.TestCase):
                 self.assertNotIn(forbidden, text, f"{path}: {forbidden}")
 
     def test_the_version_pins_are_0_5_0(self):
-        self.assertIn("Version 0.5.0 (spec 0.7)", read("README.md"))
-        self.assertIn("uses: Mukanto/truth_gate@v0.5.0", read("README.md"))
-        self.assertIn("rev: v0.5.0", read(".pre-commit-hooks.yaml"))
-        self.assertIn("Mukanto/truth_gate@v0.5.0", read("truth_gate/templates/truth-gate.yml"))
-        self.assertIn('version = "0.5.0"', read("pyproject.toml"))
+        self.assertIn("Version 0.5.1 (spec 0.7)", read("README.md"))
+        self.assertIn("uses: Mukanto/truth_gate@v0.5.1", read("README.md"))
+        self.assertIn("rev: v0.5.1", read(".pre-commit-hooks.yaml"))
+        self.assertIn("Mukanto/truth_gate@v0.5.1", read("truth_gate/templates/truth-gate.yml"))
+        self.assertIn('version = "0.5.1"', read("pyproject.toml"))
         for path in ("README.md", ".pre-commit-hooks.yaml", "truth_gate/templates/truth-gate.yml", "docs/GATE.md"):
             self.assertNotIn("v0.4.1", read(path), path)
 

@@ -16,7 +16,7 @@ Truth_Gate has three parts:
 The name refers to the gate a claim has to pass before a test of it can tell you anything about the truth. A
 certificate is not a verdict on truth (see [Limits](#limits)).
 
-Version 0.5.0 (spec 0.7), MIT license. Until its first public release the project was called *Kapı* (Turkish for
+Version 0.5.1 (spec 0.7), MIT license. Until its first public release the project was called *Kapı* (Turkish for
 "gate"). Since 0.4 the package is `truth_gate` and the command is `truth-gate`. The package `kapi` and `python -m kapi`
 remain as a deprecated alias (they stay at least until 1.0), so existing studies and the frozen examples keep working.
 Certificates now record `tool` and `tool_version` instead of `kapi_version`; a 0.3 certificate is verified with the
@@ -185,7 +185,7 @@ dataset, never the real study data.
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: Mukanto/truth_gate@v0.5.0
+- uses: Mukanto/truth_gate@v0.5.1
   with:
     target: truthgate.toml
     freeze: FREEZE.json                                  # optional
@@ -198,7 +198,7 @@ the job when a declaration still carries `origin = "suggested"` (`SUGGESTED_UNRE
 `truth-gate init --ci` writes this workflow. The pre-commit hooks `truth-gate-freeze` and `truth-gate-check` are in
 [`.pre-commit-hooks.yaml`](.pre-commit-hooks.yaml). The Action runs on GitHub in this repository's own workflows
 ([`.github/workflows/`](.github/workflows/)): from the same commit on a study that passes and on one that must fail, and
-as released (`@v0.5.0`, exactly as `init --ci` writes it). All three passed from their first run on 2026-11-17
+as released (exactly as `init --ci` writes it; `@v0.5.0` on the first run). All three passed from their first run on 2026-11-17
 ([CI](https://github.com/Mukanto/truth_gate/actions/runs/43980474228),
 [must fail](https://github.com/Mukanto/truth_gate/actions/runs/43980475889),
 [released](https://github.com/Mukanto/truth_gate/actions/runs/43980474292)). The certificate is uploaded as an artifact
@@ -348,6 +348,10 @@ and cap the verdict at WEAK when they cover most of `minus` or `null` (`K1_ABSTA
 0.4 made UNDEFINED only because its criterion returned `None` is now judged by its other flags, so a CI job that failed on
 such an UNDEFINED may now pass. Details in [`docs/GATE.md`](docs/GATE.md#what-changed-in-05-abstention-is-no-claim-a-failure-is-still-undefined)
 and [`CHANGELOG.md`](CHANGELOG.md).
+
+**0.5.1** (patch, spec 0.7 unchanged): a `command` criterion is started through the path that `PATH` resolves, so a
+`python` symlinked into a virtual environment keeps its environment on Linux and macOS (R-28). The first GitHub Actions
+run found the defect.
 
 **Moved to 0.6:**
 

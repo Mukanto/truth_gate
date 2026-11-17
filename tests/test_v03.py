@@ -756,7 +756,7 @@ class TestVerdictOrder(unittest.TestCase):
 class TestCertificateFields(unittest.TestCase):
     def test_versions(self):
         b = body("toy_good")
-        self.assertEqual(b["tool_version"], "0.5.0")
+        self.assertEqual(b["tool_version"], "0.5.1")
         self.assertEqual(b["spec_version"], "0.7")
 
     def test_minus_check_is_always_present(self):

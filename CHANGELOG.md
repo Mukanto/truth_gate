@@ -6,15 +6,21 @@ package version is `tool_version` in the certificate (`kapi_version` up to 0.3);
 Two counts are kept apart below: the methods protocol has 19 numbered rules for before a run (`protocol/PROTOCOL.md`,
 rules for people who design a study); the gate runs eight automated checks, K1 to K8.
 
-## Unreleased (on `main`, not yet in a release)
+## 0.5.1 (spec 0.7, 2026-11-17)
+
+Implements `docs/design/spec-0.7.md` unchanged. One fix:
 
 - **Fix: a `command` criterion is started through the path that `PATH` resolves**, as decided in R-28
   (`docs/design/spec-0.6-REVISIONS-post-freeze.md`).
   - The session validated and hashed the real path (after `realpath`), as specified, but it also started the program
     through that real path. On Linux and macOS a `python` symlinked into a virtual environment therefore ran without
     its environment.
-  - Certificates do not change: they record the argv and the SHA-256 of the real file. Certificates written from `main`
-    still carry `tool_version` 0.5.0; the fix goes into the next release.
+  - What a certificate records does not change: the argv and the SHA-256 of the real file. Certificates now carry
+    `tool_version` 0.5.1, so `verify` on a 0.5.0 certificate exits 7 and names tag `v0.5.0`, as for any other
+    version.
+  - Verdicts, flags and counts are unchanged, except for a `command` criterion whose executable is a symlink on Linux
+    or macOS: it now runs in the environment the symlink belongs to.
+  - The Action, the CI template written by `truth-gate init --ci` and the pre-commit example now name `v0.5.1`.
   - Found by the first GitHub Actions run: the POSIX test of R-28 is skipped on Windows, where the package was
     developed. A new test checks the rule on every platform.
 
@@ -32,7 +38,7 @@ carry dated correction notes. They also correct a rounding: 8 of 12 gives a Wils
 
 ## Repository: CI and test fixes (2026-11-17)
 
-No change to the spec. The package change of this day is the fix under "Unreleased".
+No change to the spec. The package change of this day is the 0.5.1 fix above.
 
 - **CI** (`.github/workflows/`). `ci.yml` runs the test suite on Ubuntu (Python 3.11 and 3.14) and Windows (Python
   3.14), the tests of the three GHZ examples with the Qiskit versions the runs were made with, and the Action from the

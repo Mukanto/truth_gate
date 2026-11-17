@@ -1,5 +1,5 @@
 # The released Action exactly as `truth-gate init --ci` writes it (truth_gate/templates/truth-gate.yml): checkout@v4
-# and Mukanto/truth_gate@v0.5.0, on a study that must pass. Only the target differs (the template's truthgate.toml
+# and Mukanto/truth_gate@v0.5.1, on a study that must pass. Only the target differs (the template's truthgate.toml
 # is the user's own manifest).
 name: Released Action (template)
 
@@ -17,6 +17,6 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: Mukanto/truth_gate@v0.5.0
+      - uses: Mukanto/truth_gate@v0.5.1
         with:
           target: tests/manifests/trial_example.toml
