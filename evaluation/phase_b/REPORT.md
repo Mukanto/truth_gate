@@ -17,7 +17,7 @@ such. Section 6 lists the limits.
 |---|---|---|---|---|---|---|
 | B-1 circular analysis | 12 | 7 (3 / 4 / 0) | 7 | 0.356 | 0.356 | **FAILS** |
 | B-2 procedure-level leakage | 12 | 7 (5 / 2 / 0) | 11 | 0.356 | 0.699 | **FAILS** |
-| B-3 coupling by construction | 12 | 8 (5 / 3 / 0) | 8 | 0.432 | 0.432 | **FAILS** |
+| B-3 coupling by construction | 12 | 8 (5 / 3 / 0) | 8 | 0.431 | 0.431 | **FAILS** |
 | B-6 inflated-size decision rules | 12 | 11 (0 / 11 / 0) | 11 | 0.699 | 0.699 | **HOLDS** |
 | Out of scope (O-1 to O-3) | 6 | 2 (1 / 1 / 0) | 5 | – | – | no threshold |
 
@@ -161,3 +161,29 @@ answered three questions per pair (`run/POSTRUN_AUDIT.json`, `run/POSTRUN_AUDIT.
   table; their detections are the weakest evidence in the set.
 * The auditor's objections to the first version of section 5 were checked against the certificates by the designer
   and section 5 was corrected (see its last paragraph). The pre-registered table in section 1 is unchanged.
+
+## 8. Correction notes from the validity audit (2026-11-17)
+
+A post hoc validity audit of the B-2 and B-3 pairs ([`../validity_audit_b2b3/`](../validity_audit_b2b3/README.md)) was
+made by a fresh agent that had not seen this report. The designer rechecked the points below with the scripts in
+`../validity_audit_b2b3/designer/`. They change explanations, not the pre-registered result.
+
+- **Section 1.** The B-3 Wilson lower bounds are 0.431, not 0.432 (8 of 12 gives 0.431492). Corrected in the table.
+- **Section 5.2, B2-06.** The paragraph's closing sentence ("the declared world did not contain enough of what the
+  error exploits") does not fit B2-06.
+  - The leak operates: on the gate's `minus` samples the faulty balanced accuracy has mean 0.614 against 0.496 for
+    the fixed twin.
+  - It stays below the claim's threshold 0.75 at this size (95th percentile 0.675; 0 of 200 hold).
+  - The faulty criterion therefore makes no false claim, and a check of decisions cannot see the inflation.
+  - The auditor counts this miss against the gate's scope; the Phase C auditor labels the same mechanism a size
+    effect of the case.
+- **Section 7, B3-07.** The post-run audit says the 15% area error "enters both totals". In the world it enters only
+  the recorded area: the totals use the true area (`cases/B3-07/faulty.py` lines 16–17). The validity audit places the
+  failed clean pass in the fixed criterion's raw-scale regression, and reports that a log-scale fit is clean on these
+  worlds (not rechecked by the designer). Both place the cause in the case, not the gate.
+- **Further points.** The audit also disputes the post-run audit's notes on the worlds that B2-09, B2-10, B2-12, B3-09
+  and B3-10 would have needed. These are its readings and were not rechecked; see `AUDIT_PHASE_B.md`, Part 2.
+- **Its summary (post hoc).** Of the 9 misses, 7 come from worlds that lack the structure, 1 from the 60-feature cap
+  (B2-03) and 1 from the sub-threshold effect above (B2-06). The 4 failed B-3 clean passes come from fixed criteria
+  that are not clean tests on the declared worlds. The B-2 failed clean pass (B2-09) comes from the guard meeting
+  0.4.0's K1 rule. All 15 detections are attributable to the error.

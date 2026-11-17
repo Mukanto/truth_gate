@@ -1,0 +1,38 @@
+{
+ "B2-08": {
+  "fixed_q95_threshold": 0.6512,
+  "fixed_rate_at_thr": 10,
+  "faulty_rate_at_thr": 27,
+  "n": 200
+ },
+ "B2-09": {
+  "fixed_q95_threshold": 0.6902,
+  "fixed_rate_at_thr": 10,
+  "faulty_rate_at_thr": 10,
+  "n": 200
+ },
+ "B2-10": {
+  "fixed_q95_threshold": 0.7,
+  "fixed_rate_at_thr": 6,
+  "faulty_rate_at_thr": 28,
+  "n": 200
+ },
+ "B2-11": {
+  "fixed_q95_threshold": 0.675,
+  "fixed_rate_at_thr": 8,
+  "faulty_rate_at_thr": 48,
+  "n": 200
+ },
+ "B3-04": {
+  "fixed_q95_threshold": 0.4497,
+  "fixed_rate_at_thr": 10,
+  "faulty_rate_at_thr": 16,
+  "n": 200
+ },
+ "B3-12": {
+  "fixed_q95_threshold": 2.4883,
+  "fixed_rate_at_thr": 10,
+  "faulty_rate_at_thr": 10,
+  "n": 200
+ }
+}

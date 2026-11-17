@@ -18,6 +18,18 @@ rules for people who design a study); the gate runs eight automated checks, K1 t
   - Found by the first GitHub Actions run: the POSIX test of R-28 is skipped on Windows, where the package was
     developed. A new test checks the rule on every platform.
 
+## Evaluation: validity audit of the B-2 and B-3 cases (2026-11-17)
+
+No change to the package or the spec. A post hoc audit asked whether each B-2 and B-3 miss and failed clean pass of
+Phases B and C describes the gate or the case (`evaluation/validity_audit_b2b3/`). It covered 46 pairs and was made by
+two fresh agents that had not seen the reports.
+- Most failures come from the cases: worlds without the structure the error exploits, errors that stay below the claim's
+  threshold at the brief's size, and fixed criteria that are not clean tests.
+- At most one miss and one failed clean pass involve the gate, and both come from its design.
+
+The verdicts do not change. The designer rechecked the findings that change the reports' explanations; both reports
+carry dated correction notes. They also correct a rounding: 8 of 12 gives a Wilson lower bound of 0.431, not 0.432.
+
 ## Repository: CI and test fixes (2026-11-17)
 
 No change to the spec. The package change of this day is the fix under "Unreleased".

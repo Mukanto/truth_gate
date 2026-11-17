@@ -280,6 +280,11 @@ The full account, with every number, is in [`docs/EVALUATION.md`](docs/EVALUATIO
 
   P counts declared worlds that may contain what the error exploits. The B-1 result depends on 0.5.0: under 0.4.1 the
   same files fail (8 of 12 and 7 of 12). Details in [`evaluation/phase_c/REPORT.md`](evaluation/phase_c/REPORT.md).
+* **B-2 and B-3: a post hoc validity audit of the cases.** Two fresh agents asked, for each of the 46 pairs, whether
+  a failure describes the gate or the case. Most come from the cases: worlds without the structure the error exploits,
+  errors that stay below the claim's threshold at the brief's size, fixed criteria that are not clean tests. At most one
+  miss and one failed clean pass involve the gate, both from its design. The verdicts stand. Details in
+  [`evaluation/validity_audit_b2b3/`](evaluation/validity_audit_b2b3/README.md).
 * **The evaluation is not independent.** All test cases, including Phases B and C, were written by AI sessions from the
   model family (Claude) that wrote the code; Phase C's world author is a different Claude model line, not a different
   family. There is no human-authored external benchmark.

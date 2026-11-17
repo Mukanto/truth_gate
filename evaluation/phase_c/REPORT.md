@@ -23,7 +23,7 @@ reading, section 4): P counts the declared worlds that may contain what the erro
 | Class | Pairs | Detections (generic / declared / K2-only) | Clean passes | Wilson lower bound, detection | Wilson lower bound, clean pass | Awareness P / C / N | Verdict |
 |---|---|---|---|---|---|---|---|
 | B-1 circular analysis | 12 | 12 (7 / 5 / 0) | 11 | 0.816 | 0.699 | 10 / 2 / 0 of 12 | **HOLDS** |
-| B-2 procedure-level leakage | 12 | 7 (5 / 2 / 0) | 8 | 0.356 | 0.432 | 10 / 2 / 0 of 12 | **FAILS** |
+| B-2 procedure-level leakage | 12 | 7 (5 / 2 / 0) | 8 | 0.356 | 0.431 | 10 / 2 / 0 of 12 | **FAILS** |
 | B-3 coupling by construction | 10 | 8 (6 / 2 / 0) | 8 | 0.541 | 0.541 | 10 / 0 / 0 of 10 | **FAILS** |
 | B-6 inflated-size decision rules | 12 | 10 (0 / 10 / 0) | 12 | 0.601 | 0.816 | 12 / 0 / 0 of 12 | **HOLDS** |
 | Out of scope (O-1 to O-3) | 6 | 2 (1 / 1 / 0) | 6 | – | – | 5 / 1 / 0 of 6 | no threshold |
@@ -283,3 +283,42 @@ folder, and writes only its two outputs and scratch files; the copies were uncha
   the zero-variance guard as the only cause of the all-zeros abstentions; Phase B statements without a source; and the
   fixed twins that carry the same flags. The designer checked each against the files and corrected the text (see the
   end of section 7). The pre-registered table in section 1 is unchanged.
+
+## 10. Correction notes from the validity audit (2026-11-17)
+
+A post hoc validity audit of the B-2 and B-3 pairs ([`../validity_audit_b2b3/`](../validity_audit_b2b3/README.md)) was
+made by a fresh agent that had not seen this report. The designer rechecked the points below with the scripts in
+`../validity_audit_b2b3/designer/`. They change explanations, not the pre-registered result.
+
+- **Section 1.** The B-2 clean-pass Wilson lower bound is 0.431, not 0.432 (8 of 12 gives 0.431492). Corrected in the
+  table.
+- **Section 7.1, B2-03, B2-06 and B2-07.** The statement that what the error exploits "was not present in the declared
+  worlds strongly enough" does not fit these three pairs. The structure is present, and the error raises the faulty
+  statistic on the gate's `minus` samples, but the claim's threshold sits above the faulty twin's 95th percentile and
+  decides:
+  - B2-03: balanced accuracy mean 0.597 against 0.502 for the fixed twin; 95th percentile 0.629 against the threshold
+    0.65.
+  - B2-06: AUC mean 0.643 against 0.499; 95th percentile 0.703 against 0.75.
+  - B2-07: the audit reports a mean correlation of 0.115 against −0.042 (not rechecked).
+
+  The text fits B2-04, B3-02 and B3-03, where the audit finds the structure missing or weak. B2-06 uses the same ridge
+  logistic model as B2-03 and belongs in the list of model-dependent misses. The post-run audit's "the copies carry
+  almost no weight" (B2-03) and "gave no lift" (B2-06) are contradicted by these numbers.
+- **Sections 7.3 and 9, B3-12.** The fixed twin's excess size comes from the autocorrelated waves, not the season. On
+  2000 `minus` samples it holds:
+  - 0.107 as declared;
+  - 0.188 without the season term;
+  - 0.017 without the waves.
+
+  The season makes the ordinary t test more conservative. "Autocorrelated, seasonal residuals" should read
+  "autocorrelated residuals".
+- **Further points.** These are the audit's readings, not rechecked by the designer; see `AUDIT_PHASE_C.md`, Part 2:
+  - B3-04 and B2-08 to B2-11 share one mechanism (a threshold without a test, with a null spread comparable to the
+    threshold), yet section 9 files the first under the skeleton and the others under the claim's rule.
+  - "Their detections stand" (7.3) holds for B2-08, B2-10 and B2-11. If the fixed twin's 95th percentile were the
+    threshold, the faulty twin would hold in `minus` 27, 28 and 48 times of 200, where a flag needs 18. It does not
+    hold for B2-09 (10 of 200).
+- **Its summary (post hoc).** No miss and no failed clean pass of B-2 or B-3 is attributed to the gate's behaviour:
+  - Misses: 3 from size (above), 3 from worlds without the structure (B2-04, B3-02, B3-03), 1 mixed (B2-05).
+  - Failed clean passes: 6, all from fixed criteria that are not clean tests on the declared worlds. The same six pairs
+    are the detections that do not show the error.

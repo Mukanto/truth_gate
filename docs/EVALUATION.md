@@ -329,6 +329,28 @@ and no human domain reader took part. With 10 to 12 pairs per class the interval
 pairs overlap Phase B. Every fixed file is at best WEAK, because the allowed zero-variance guard abstains on the
 all-zeros probe.
 
+## B-2 and B-3: validity audit of the cases (post hoc, 2026-11-17)
+
+B-2 and B-3 failed in both phases. A post hoc audit asked, pair by pair, whether each failure describes the gate or the
+case ([`../evaluation/validity_audit_b2b3/`](../evaluation/validity_audit_b2b3/README.md)). It covered 46 pairs and was
+made by two fresh agents, one per phase, in a session without this project's notes. Each wrote its audit before reading
+the reports. The verdicts do not change.
+
+* **Worlds.** 10 of the 16 misses come from declared worlds that lack the structure the error exploits, or carry it
+  only weakly.
+* **Errors below the threshold.** In five misses the error raises the statistic, but not past the claim's threshold at
+  the brief's size, so the faulty criterion makes no false claim. An outcome-level gate cannot see this. One auditor
+  counts it against the gate, the other against the case.
+* **Fixed criteria.** 10 of the 11 failed clean passes come from fixed criteria that are not correct tests on the
+  declared worlds. The eleventh is a guard that met 0.4.0's K1 rule, which 0.5.0 changed.
+* **Detections.** In Phase C, six detections would also occur with the fixed criterion.
+* **The gate.** At most one miss and one failed clean pass involve its behaviour, and both come from its design. On the
+  22 pairs judged adequate it detected 21 errors and passed 22 corrections. That count is selected after the fact and is
+  not a class verdict.
+
+The designer rechecked every finding that changes a statement of the reports. Those reports now carry dated correction
+notes. A new evaluation that checks each pair's validity before any gate run is being designed.
+
 ## Limitations of the evaluation
 
 * **Not independent of the specification.** All case sets were written by AI sessions that had read the spec, and from
@@ -347,5 +369,5 @@ interpretation or in the real run's controls. In the prospective study, pre-regi
 audit and independent recomputation found the major defects. On errors documented in the literature it met the
 pre-registered bar for one class of four in Phase B (0.4.0: B-6, awareness P 11, C 0, N 1 of 12). In Phase C (0.5.0,
 worlds by a different Claude model line) it met the bar for two of four: B-1 (P 10, C 2, N 0 of 12) and B-6 (P 12 of
-12). In both phases its detections depended on declared worlds that may contain what the error exploits. The gate was one part of that process, which is why the
+12). In both phases its detections depended on declared worlds that may contain what the error exploits. A post hoc audit of B-2 and B-3 attributes most of their misses and failed clean passes to the cases (worlds without the structure, fixed criteria that are not clean tests), not to the gate; it changes no verdict. The gate was one part of that process, which is why the
 methods protocol in [`../protocol/`](../protocol/PROTOCOL.md) is published with it.

@@ -1,0 +1,7 @@
+B2-03 faulty: mean 0.597  q95 0.629  holds(>= 0.65) 2/200
+B2-03 fixed: mean 0.502  q95 0.542  holds(>= 0.65) 0/200
+B2-06 faulty: mean 0.643  q95 0.703  holds(>= 0.75) 0/200
+B2-06 fixed: mean 0.499  q95 0.590  holds(>= 0.75) 0/200
+B3-12 fixed, as declared: holds in minus 214/2000 = 0.107
+B3-12 fixed, no season: holds in minus 375/2000 = 0.188
+B3-12 fixed, no AR(1) waves: holds in minus 34/2000 = 0.017

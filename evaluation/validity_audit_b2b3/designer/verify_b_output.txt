@@ -1,0 +1,3 @@
+B2-06 faulty: balanced accuracy on minus mean 0.614  q95 0.675  >= 0.75: 0/200
+B2-06 fixed: balanced accuracy on minus mean 0.496  q95 0.591  >= 0.75: 0/200
+Wilson one-sided 95% lower bound, 8 of 12: 0.431492 (to three places 0.431)
