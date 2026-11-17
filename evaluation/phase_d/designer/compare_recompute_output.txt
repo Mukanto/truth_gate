@@ -1,0 +1,43 @@
+P01 faulty_load_error                    attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P02 a_false_shuffle                      attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P03 k4_two_controls_one_meets_bounds     attr/gen/decl=(True, False, True) streams=['control:permute_y'] hand=rec=tool: yes
+P04 fixed_hard_undefined                 attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P05 declared_only                        attr/gen/decl=(True, False, True) streams=['world:minus'] hand=rec=tool: yes
+P06 a_false_high_rate_noise              attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P07 shuffle_two_pairs                    attr/gen/decl=(True, False, True) streams=['probe:shuffle:x,y'] hand=rec=tool: yes
+P08 a_true_b_false                       attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P09 fixed_load_error                     attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P10 generic_only_k5_holds_on_noise       attr/gen/decl=(True, True, False) streams=['probe:noise'] hand=rec=tool: yes
+P11 a_false_k5_holds_on_null             attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P12 a_false_high_rate_control            attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P13 a_false_k2_high_size                 attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P14 generic_and_declared                 attr/gen/decl=(True, True, True) streams=['probe:noise', 'world:minus'] hand=rec=tool: yes
+P15 faulty_nf_unexpected_mandatory       attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P16 fixed_k4_blocks_high_rate_control    attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P17 k2_no_separation_only                attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P18 fixed_hard_undefined_other_stream    attr/gen/decl=(True, False, True) streams=['world:minus'] hand=rec=tool: yes
+P19 faulty_not_nf_with_rate_flag         attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+P20 fixed_missing_stream                 attr/gen/decl=(False, False, False) streams=[] hand=rec=tool: yes
+B2-01                                    attr/gen/decl=(True, False, True) streams=['control:permute_onset_across_country_years', 'control:permute_onset_histories_across_countries', 'world:minus'] rec=tool: yes
+B2-02                                    attr/gen/decl=(True, False, True) streams=['control:permute_outcome', 'world:minus'] rec=tool: yes
+B2-03                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-04                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-05                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-06                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-07                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-08                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-09                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-10                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-11                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B2-12                                    attr/gen/decl=(True, True, True) streams=['control:permute_tumour_labels', 'probe:noise', 'probe:shuffle:expression,tumour', 'world:minus'] rec=tool: yes
+B3-01                                    attr/gen/decl=(True, False, True) streams=['world:minus'] rec=tool: yes
+B3-02                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B3-03                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+B3-04                                    attr/gen/decl=(True, True, False) streams=['probe:noise'] rec=tool: yes
+B3-05                                    attr/gen/decl=(True, True, False) streams=['probe:noise'] rec=tool: yes
+B3-06                                    attr/gen/decl=(True, True, True) streams=['control:decouple_observers_within_true_value_blocks', 'probe:noise', 'world:minus'] rec=tool: yes
+B3-08                                    attr/gen/decl=(True, True, True) streams=['control:permute_second_baseline_across_patients', 'probe:noise', 'world:minus'] rec=tool: yes
+B3-09                                    attr/gen/decl=(True, True, True) streams=['control:permute_uptake_across_patients', 'probe:noise', 'world:minus'] rec=tool: yes
+B3-11                                    attr/gen/decl=(True, True, True) streams=['control:permute_gene_a_across_samples', 'probe:noise', 'world:minus'] rec=tool: yes
+B3-12                                    attr/gen/decl=(False, False, False) streams=[] rec=tool: yes
+DIFFERENCES: 0

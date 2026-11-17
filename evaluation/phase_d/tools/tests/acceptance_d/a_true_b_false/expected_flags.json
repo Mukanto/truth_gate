@@ -1,0 +1,18 @@
+{
+  "cases": {
+    "a_true_b_false": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_y"
+      ]
+    }
+  }
+}

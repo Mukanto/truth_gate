@@ -1,0 +1,136 @@
+{
+ "_note": "Written by the designer by hand from PREREG_PHASE_D section 5; the same outcomes as EXPECTED.md. Not produced by any tool.",
+ "a_true_b_false": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "a_false_k2_high_size": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "a_false_high_rate_control": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "a_false_high_rate_noise": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "a_false_k5_holds_on_null": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "a_false_shuffle": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "k4_two_controls_one_meets_bounds": {
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "qualifying_streams": [
+   "control:permute_y"
+  ]
+ },
+ "shuffle_two_pairs": {
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "qualifying_streams": [
+   "probe:shuffle:x,y"
+  ]
+ },
+ "fixed_load_error": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "faulty_load_error": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "fixed_hard_undefined": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "generic_only_k5_holds_on_noise": {
+  "attributable": true,
+  "generic": true,
+  "declared": false,
+  "qualifying_streams": [
+   "probe:noise"
+  ]
+ },
+ "declared_only": {
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "qualifying_streams": [
+   "world:minus"
+  ]
+ },
+ "k2_no_separation_only": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "faulty_not_nf_with_rate_flag": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "faulty_nf_unexpected_mandatory": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "generic_and_declared": {
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "qualifying_streams": [
+   "probe:noise",
+   "world:minus"
+  ]
+ },
+ "fixed_missing_stream": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ },
+ "fixed_hard_undefined_other_stream": {
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "qualifying_streams": [
+   "world:minus"
+  ]
+ },
+ "fixed_k4_blocks_high_rate_control": {
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "qualifying_streams": []
+ }
+}

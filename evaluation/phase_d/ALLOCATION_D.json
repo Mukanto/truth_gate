@@ -1,0 +1,304 @@
+{
+  "status": "draft 3 (after review 2); sources and slot caps in SOURCES_D.md",
+  "rules": {
+    "pairs_per_class": 20,
+    "reserve_per_class": 10,
+    "reserve_per_decoy_class": 2,
+    "max_pairs_per_source_per_class": 6,
+    "max_KAP23_B2": 10,
+    "min_independent_read_sources_per_class": 4,
+    "reserve_use": "a drop is replaced first from its own half list for that subtype or tag, then from the other half list; a reserve whose use would break a source cap is skipped; all reserves are written with the main set before any validity run",
+    "max_slots_abstract_only_source": 4,
+    "max_slots_full_text_source": "the per-class pair cap (6; KAP23 10) plus 5 reserves",
+    "minima": {
+      "B-2": {
+        "L1.1": 1,
+        "L1.3": 1,
+        "L1.4": 2,
+        "L3.1": 2,
+        "L3.2": 2
+      },
+      "B-3": "at least 3 per tag",
+      "consequence": "minimum not met is reported; the verdict stands"
+    }
+  },
+  "B-2": {
+    "subtype_allocation": {
+      "L1.1": 4,
+      "L1.2": 4,
+      "L1.3": 3,
+      "L1.4": 3,
+      "L3.1": 3,
+      "L3.2": 3
+    },
+    "half_A": {
+      "sources": [
+        "KAP23"
+      ],
+      "pairs": {
+        "KAP23": {
+          "L1.1": 2,
+          "L1.2": 2,
+          "L1.3": 1,
+          "L1.4": 2,
+          "L3.1": 2,
+          "L3.2": 1
+        }
+      },
+      "reserve_order": [
+        [
+          "KAP23",
+          "L1.1"
+        ],
+        [
+          "KAP23",
+          "L1.2"
+        ],
+        [
+          "KAP23",
+          "L1.3"
+        ],
+        [
+          "KAP23",
+          "L1.4"
+        ],
+        [
+          "KAP23",
+          "L3.1"
+        ]
+      ]
+    },
+    "half_B": {
+      "sources": [
+        "SIM03",
+        "SAN18",
+        "AMB02",
+        "VAR06",
+        "ROB17",
+        "SAE17"
+      ],
+      "pairs": {
+        "SIM03": {
+          "L1.1": 2
+        },
+        "SAN18": {
+          "L1.2": 2,
+          "L1.4": 1
+        },
+        "AMB02": {
+          "L1.3": 1
+        },
+        "VAR06": {
+          "L1.3": 1
+        },
+        "ROB17": {
+          "L3.1": 1,
+          "L3.2": 1
+        },
+        "SAE17": {
+          "L3.2": 1
+        }
+      },
+      "reserve_order": [
+        [
+          "SIM03",
+          "L1.1"
+        ],
+        [
+          "SAN18",
+          "L1.4"
+        ],
+        [
+          "AMB02",
+          "L1.3"
+        ],
+        [
+          "ROB17",
+          "L3.1"
+        ],
+        [
+          "SAE17",
+          "L3.2"
+        ]
+      ]
+    }
+  },
+  "B-3": {
+    "tag_allocation": {
+      "ratio-shared-denominator": 5,
+      "ratio-vs-denominator-proxy": 5,
+      "change-vs-baseline": 5,
+      "shared-measured-component": 5
+    },
+    "half_A": {
+      "sources": [
+        "PEA97",
+        "KRO93",
+        "CHI13",
+        "ARC81"
+      ],
+      "pairs": {
+        "PEA97": {
+          "ratio-shared-denominator": 3
+        },
+        "KRO93": {
+          "ratio-vs-denominator-proxy": 3
+        },
+        "CHI13": {
+          "change-vs-baseline": 2
+        },
+        "ARC81": {
+          "shared-measured-component": 2
+        }
+      },
+      "reserve_order": [
+        [
+          "PEA97",
+          "ratio-shared-denominator"
+        ],
+        [
+          "KRO93",
+          "ratio-vs-denominator-proxy"
+        ],
+        [
+          "CHI13",
+          "change-vs-baseline"
+        ],
+        [
+          "ARC81",
+          "shared-measured-component"
+        ],
+        [
+          "CHI13",
+          "change-vs-baseline"
+        ]
+      ]
+    },
+    "half_B": {
+      "sources": [
+        "ATC76",
+        "CUR13",
+        "TU07",
+        "BLO77",
+        "TU04",
+        "STR87",
+        "MOR86"
+      ],
+      "pairs": {
+        "ATC76": {
+          "ratio-shared-denominator": 2
+        },
+        "CUR13": {
+          "ratio-vs-denominator-proxy": 2
+        },
+        "TU07": {
+          "change-vs-baseline": 1
+        },
+        "BLO77": {
+          "change-vs-baseline": 1
+        },
+        "TU04": {
+          "change-vs-baseline": 1
+        },
+        "STR87": {
+          "shared-measured-component": 2
+        },
+        "MOR86": {
+          "shared-measured-component": 1
+        }
+      },
+      "reserve_order": [
+        [
+          "ATC76",
+          "ratio-shared-denominator"
+        ],
+        [
+          "CUR13",
+          "ratio-vs-denominator-proxy"
+        ],
+        [
+          "BLO77",
+          "change-vs-baseline"
+        ],
+        [
+          "STR87",
+          "shared-measured-component"
+        ],
+        [
+          "TU04",
+          "change-vs-baseline"
+        ]
+      ]
+    }
+  },
+  "decoys": {
+    "B-1": {
+      "pairs": {
+        "KRI09": 1,
+        "VUL09": 1,
+        "MOR03": 1,
+        "BAR05": 1
+      },
+      "reserve_order": [
+        [
+          "KRI10"
+        ],
+        [
+          "MAK19"
+        ]
+      ]
+    },
+    "B-6": {
+      "pairs": {
+        "NIE11": 1,
+        "HUR84": 1,
+        "LAZ10": 1,
+        "LAZ18": 1
+      },
+      "reserve_order": [
+        [
+          "MAK19"
+        ],
+        [
+          "HUR84"
+        ]
+      ]
+    },
+    "author": "one fresh brief author for all decoys"
+  },
+  "sources_status": {
+    "from_PB_or_PC_verified": [
+      "KAP23",
+      "AMB02",
+      "SIM03",
+      "VAR06",
+      "PEA97",
+      "ARC81",
+      "KRO93",
+      "CUR13",
+      "KRI09",
+      "VUL09",
+      "MOR03",
+      "BAR05",
+      "KRI10",
+      "MAK19",
+      "NIE11",
+      "HUR84",
+      "LAZ10",
+      "LAZ18"
+    ],
+    "new_verified_2026_11_17": [
+      "SAN18",
+      "SAE17",
+      "ROB17",
+      "TU07",
+      "ATC76",
+      "BLO77",
+      "CHI13",
+      "STR87",
+      "MOR86",
+      "TU04"
+    ]
+  },
+  "overlap_note": "Overlap with Phase B/C (source, mechanism tag, statistic family) is marked mechanically after the briefs (PC section 1). Above half of a class, the report uses the wording rule; every table is also given without overlapping pairs. Brief authors receive the (tag, family) combinations used before for their sources."
+}

@@ -1,0 +1,93 @@
+{
+  "body": {
+    "verdict": "NOT_FALSIFIABLE",
+    "load_error": null,
+    "m_comparisons": 6,
+    "alpha_per_bound": 0.004166666666666667,
+    "components": [
+      {
+        "id": "C",
+        "verdict": "NOT_FALSIFIABLE",
+        "flags": [
+          "K2_LOW_POWER",
+          "K5_HOLDS_ON_SHUFFLE"
+        ],
+        "counts": {
+          "world:plus": {
+            "holds": 30,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "world:minus": {
+            "holds": 4,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:noise": {
+            "holds": 2,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "control:permute_y": {
+            "holds": 3,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:shuffle:x,y": {
+            "holds": 17,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:shuffle:y,x": {
+            "holds": 2,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          }
+        },
+        "bounds": {
+          "world:plus": {
+            "lower": 0.095238485959,
+            "upper": 0.228303606996
+          },
+          "world:minus": {
+            "lower": 0.005815276515,
+            "upper": 0.066471022395
+          },
+          "probe:noise": {
+            "lower": 0.001892370355,
+            "upper": 0.051066559782
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.033631561364
+          },
+          "control:permute_y": {
+            "lower": 0.003689485024,
+            "upper": 0.0589331295
+          },
+          "probe:shuffle:x,y": {
+            "lower": 0.045942993534,
+            "upper": 0.151971202398
+          },
+          "probe:shuffle:y,x": {
+            "lower": 0.001892370355,
+            "upper": 0.051066559782
+          }
+        }
+      }
+    ],
+    "study_flags": []
+  }
+}

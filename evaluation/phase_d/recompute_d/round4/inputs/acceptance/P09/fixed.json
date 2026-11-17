@@ -1,0 +1,11 @@
+{
+  "body": {
+    "verdict": "UNDEFINED",
+    "load_error": {
+      "type": "SyntaxError",
+      "message": "synthetic load error"
+    },
+    "components": [],
+    "study_flags": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "body": {
+    "verdict": "NOT_FALSIFIABLE",
+    "load_error": null,
+    "m_comparisons": 4,
+    "alpha_per_bound": 0.00625,
+    "components": [
+      {
+        "id": "C",
+        "verdict": "NOT_FALSIFIABLE",
+        "flags": [
+          "K2_HIGH_SIZE"
+        ],
+        "counts": {
+          "world:plus": {
+            "holds": 190,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "world:minus": {
+            "holds": 30,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:noise": {
+            "holds": 2,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "control:permute_y": {
+            "holds": 3,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          }
+        },
+        "bounds": {
+          "world:plus": {
+            "lower": 0.896112321716,
+            "upper": 0.976663476766
+          },
+          "world:minus": {
+            "lower": 0.097588376294,
+            "upper": 0.223586002664
+          },
+          "probe:noise": {
+            "lower": 0.002036986039,
+            "upper": 0.047607144502
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.030249112797
+          },
+          "control:permute_y": {
+            "lower": 0.003938280142,
+            "upper": 0.055403359271
+          }
+        }
+      }
+    ],
+    "study_flags": []
+  }
+}

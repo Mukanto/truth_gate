@@ -1,0 +1,82 @@
+{
+  "body": {
+    "verdict": "NOT_FALSIFIABLE",
+    "load_error": null,
+    "m_comparisons": 5,
+    "alpha_per_bound": 0.005,
+    "components": [
+      {
+        "id": "C",
+        "verdict": "NOT_FALSIFIABLE",
+        "flags": [
+          "HIGH_RATE:probe:shuffle:x,y"
+        ],
+        "counts": {
+          "world:plus": {
+            "holds": 190,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "world:minus": {
+            "holds": 6,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:noise": {
+            "holds": 2,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:zeros": {
+            "holds": 0,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "control:permute_y": {
+            "holds": 3,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          },
+          "probe:shuffle:x,y": {
+            "holds": 90,
+            "undefined": 0,
+            "hard_undefined": 0,
+            "n": 200
+          }
+        },
+        "bounds": {
+          "world:plus": {
+            "lower": 0.89390987131,
+            "upper": 0.977191781707
+          },
+          "world:minus": {
+            "lower": 0.011001345755,
+            "upper": 0.079181372205
+          },
+          "probe:noise": {
+            "lower": 0.00195485152,
+            "upper": 0.049512237418
+          },
+          "probe:zeros": {
+            "lower": 0.0,
+            "upper": 0.032109274426
+          },
+          "control:permute_y": {
+            "lower": 0.003797397275,
+            "upper": 0.057348598919
+          },
+          "probe:shuffle:x,y": {
+            "lower": 0.362444805725,
+            "upper": 0.540766121717
+          }
+        }
+      }
+    ],
+    "study_flags": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "P01": "faulty_load_error",
+ "P02": "a_false_shuffle",
+ "P03": "k4_two_controls_one_meets_bounds",
+ "P04": "fixed_hard_undefined",
+ "P05": "declared_only",
+ "P06": "a_false_high_rate_noise",
+ "P07": "shuffle_two_pairs",
+ "P08": "a_true_b_false",
+ "P09": "fixed_load_error",
+ "P10": "generic_only_k5_holds_on_noise",
+ "P11": "a_false_k5_holds_on_null",
+ "P12": "a_false_high_rate_control",
+ "P13": "a_false_k2_high_size",
+ "P14": "generic_and_declared",
+ "P15": "faulty_nf_unexpected_mandatory",
+ "P16": "fixed_k4_blocks_high_rate_control",
+ "P17": "k2_no_separation_only",
+ "P18": "fixed_hard_undefined_other_stream",
+ "P19": "faulty_not_nf_with_rate_flag",
+ "P20": "fixed_missing_stream"
+}

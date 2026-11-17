@@ -1,0 +1,2832 @@
+{
+ "P01": {
+  "faulty_verdict": "UNDEFINED",
+  "fixed_verdict": "FALSIFIABLE",
+  "faulty_load_error": {
+   "type": "SyntaxError",
+   "message": "synthetic load error"
+  },
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [],
+  "fixed_flags": [],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [
+   {
+    "kind": "faulty_load_error",
+    "detail": {
+     "type": "SyntaxError",
+     "message": "synthetic load error"
+    },
+    "effect": "a faulty load error is not a detection"
+   }
+  ],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P02": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y",
+   "HIGH_RATE:probe:shuffle:x,y"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:probe:shuffle:x,y"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:probe:shuffle:x,y"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "probe:shuffle:x,y": [
+    "HIGH_RATE:probe:shuffle:x,y"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:probe:shuffle:x,y": [
+    "probe:shuffle:x,y"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:probe:shuffle:x,y",
+    "stream": "probe:shuffle:x,y",
+    "faulty": {
+     "holds": 90,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 45,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.4126603375881063e-06,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:shuffle:x,y"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P03": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y",
+   "HIGH_RATE:control:permute_x"
+  ],
+  "faulty_flags": [
+   "K2_LOW_POWER",
+   "K4_CONTROL_ALSO_HOLDS"
+  ],
+  "fixed_flags": [
+   "K2_LOW_POWER",
+   "K4_CONTROL_ALSO_HOLDS"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_x": [
+    "K4_CONTROL_ALSO_HOLDS"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "K4_CONTROL_ALSO_HOLDS": [
+    "control:permute_y"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "K4_CONTROL_ALSO_HOLDS",
+    "stream": "control:permute_y",
+    "faulty": {
+     "holds": 17,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 1,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.285270610258332e-05
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_y"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_y"
+   ]
+  }
+ },
+ "P04": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "UNDEFINED",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "fixed_flags": [
+   "K1_UNDEFINED"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 60,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.8298509493569028e-14,
+    "reasons": [
+     "fixed study has hard UNDEFINED on stream (hard_undefined=50)"
+    ]
+   }
+  ],
+  "exclusions": [
+   {
+    "kind": "fixed_hard_undefined",
+    "stream": "world:minus",
+    "flag": "K2_HIGH_SIZE",
+    "hard_undefined": 50
+   }
+  ],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P05": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "fixed_flags": [],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 60,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.8298509493569028e-14
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "world:minus"
+   ]
+  }
+ },
+ "P06": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:probe:noise"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:probe:noise"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "probe:noise": [
+    "HIGH_RATE:probe:noise"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 70,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 35,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.0348885239072936e-05,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:noise"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P07": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y",
+   "HIGH_RATE:probe:shuffle:x,y",
+   "HIGH_RATE:probe:shuffle:y,x"
+  ],
+  "faulty_flags": [
+   "K2_LOW_POWER",
+   "K5_HOLDS_ON_SHUFFLE"
+  ],
+  "fixed_flags": [
+   "K2_LOW_POWER",
+   "K5_HOLDS_ON_SHUFFLE"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "probe:shuffle:y,x": [
+    "K5_HOLDS_ON_SHUFFLE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "K5_HOLDS_ON_SHUFFLE": [
+    "probe:shuffle:x,y"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "K5_HOLDS_ON_SHUFFLE",
+    "stream": "probe:shuffle:x,y",
+    "faulty": {
+     "holds": 17,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 1,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.285270610258332e-05
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "probe:shuffle:x,y"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "probe:shuffle:x,y"
+   ]
+  }
+ },
+ "P08": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "fixed_flags": [],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 18,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 17,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.5,
+    "reasons": [
+     "one-sided Fisher p >= 0.05"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P09": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "UNDEFINED",
+  "faulty_load_error": null,
+  "fixed_load_error": {
+   "type": "SyntaxError",
+   "message": "synthetic load error"
+  },
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "fixed_flags": [],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 60,
+     "n": 200
+    },
+    "reasons": [
+     "fixed study has a load error"
+    ]
+   }
+  ],
+  "exclusions": [
+   {
+    "kind": "fixed_load_error",
+    "detail": {
+     "type": "SyntaxError",
+     "message": "synthetic load error"
+    },
+    "effect": "no stream qualifies"
+   }
+  ],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P10": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_LOW_POWER",
+   "K5_HOLDS_ON_NOISE"
+  ],
+  "fixed_flags": [
+   "K2_LOW_POWER"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K5_HOLDS_ON_NOISE": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "K5_HOLDS_ON_NOISE",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 17,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 1,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.285270610258332e-05
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "probe:noise"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": false,
+   "qualifying_streams": [
+    "probe:noise"
+   ]
+  }
+ },
+ "P11": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:world:null",
+   "K2_LOW_POWER",
+   "K5_HOLDS_ON_NULL"
+  ],
+  "fixed_flags": [
+   "K2_LOW_POWER",
+   "K5_HOLDS_ON_NULL"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "world:null": [
+    "K5_HOLDS_ON_NULL"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:world:null": [
+    "world:null"
+   ],
+   "K5_HOLDS_ON_NULL": [
+    "world:null"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:world:null",
+    "stream": "world:null",
+    "faulty": {
+     "holds": 30,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 14,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.007872602743782963,
+    "reasons": [
+     "fixed study carries rate flag on stream: K5_HOLDS_ON_NULL"
+    ]
+   },
+   {
+    "flag": "K5_HOLDS_ON_NULL",
+    "stream": "world:null",
+    "faulty": {
+     "holds": 30,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 14,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.007872602743782963,
+    "reasons": [
+     "fixed study carries rate flag on stream: K5_HOLDS_ON_NULL"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P12": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_y"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_y"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_y": [
+    "HIGH_RATE:control:permute_y"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_y": [
+    "control:permute_y"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_y",
+    "stream": "control:permute_y",
+    "faulty": {
+     "holds": 80,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 40,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.22030478666749e-06,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_y"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "P13": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_y"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "fixed_flags": [
+   "K2_HIGH_SIZE"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 60,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 30,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.00023696318572932886,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "acceptance",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-01": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_onset_across_country_years",
+   "HIGH_RATE:control:permute_onset_histories_across_countries"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_onset_across_country_years",
+   "HIGH_RATE:control:permute_onset_histories_across_countries",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_onset_across_country_years": [
+    "control:permute_onset_across_country_years"
+   ],
+   "HIGH_RATE:control:permute_onset_histories_across_countries": [
+    "control:permute_onset_histories_across_countries"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_onset_across_country_years",
+    "stream": "control:permute_onset_across_country_years",
+    "faulty": {
+     "holds": 47,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 3.308779199384591e-16
+   },
+   {
+    "flag": "HIGH_RATE:control:permute_onset_histories_across_countries",
+    "stream": "control:permute_onset_histories_across_countries",
+    "faulty": {
+     "holds": 186,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.3025857416893082e-87
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 178,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 5,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.1771526197073592e-80
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_onset_across_country_years",
+   "control:permute_onset_histories_across_countries",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_onset_across_country_years",
+    "control:permute_onset_histories_across_countries",
+    "world:minus"
+   ]
+  }
+ },
+ "B2-02": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_outcome"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_outcome",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_outcome": [
+    "control:permute_outcome"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_outcome",
+    "stream": "control:permute_outcome",
+    "faulty": {
+     "holds": 29,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 1,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.0375764700736615e-08
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 25,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.3397731567711487e-08
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_outcome",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_outcome",
+    "world:minus"
+   ]
+  }
+ },
+ "B2-03": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_defective_across_units"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-04": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:shift_rises_in_time"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-05": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:circular_shift_of_drivers_by_52_or_more_weeks"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-06": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_malignancy_across_patients"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-07": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_scores_across_participants"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": [
+    "world:minus"
+   ]
+  }
+ },
+ "B2-08": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_class_across_samples"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_class_across_samples",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_class_across_samples",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_class_across_samples": [
+    "HIGH_RATE:control:permute_class_across_samples"
+   ],
+   "probe:noise": [
+    "HIGH_RATE:probe:noise"
+   ],
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_class_across_samples": [
+    "control:permute_class_across_samples"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_class_across_samples",
+    "stream": "control:permute_class_across_samples",
+    "faulty": {
+     "holds": 94,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 48,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.1153963479536815e-06,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_class_across_samples"
+    ]
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 130,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 65,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.3208816451837255e-11,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:noise"
+    ]
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 86,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 47,
+     "n": 200
+    },
+    "fisher_p_one_sided": 2.529501780491634e-05,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-09": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_responder"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_responder",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_responder",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_responder": [
+    "HIGH_RATE:control:permute_responder"
+   ],
+   "probe:noise": [
+    "HIGH_RATE:probe:noise"
+   ],
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_responder": [
+    "control:permute_responder"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_responder",
+    "stream": "control:permute_responder",
+    "faulty": {
+     "holds": 23,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 20,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.3735837243320428,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_responder",
+     "one-sided Fisher p >= 0.05"
+    ]
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 67,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 25,
+     "n": 200
+    },
+    "fisher_p_one_sided": 3.96314730920593e-07,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:noise"
+    ]
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 26,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 18,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.13157628272171684,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE",
+     "one-sided Fisher p >= 0.05"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-10": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_class_across_samples"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_class_across_samples",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_class_across_samples",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_class_across_samples": [
+    "HIGH_RATE:control:permute_class_across_samples"
+   ],
+   "probe:noise": [
+    "HIGH_RATE:probe:noise"
+   ],
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_class_across_samples": [
+    "control:permute_class_across_samples"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_class_across_samples",
+    "stream": "control:permute_class_across_samples",
+    "faulty": {
+     "holds": 85,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 41,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.5657148201765177e-06,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_class_across_samples"
+    ]
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 122,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 50,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.9831644678200595e-13,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:noise"
+    ]
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 89,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 31,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.3700120590057457e-10,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-11": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_group_labels",
+   "HIGH_RATE:probe:shuffle:expression,group_b"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_group_labels",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:probe:shuffle:expression,group_b",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_group_labels",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:probe:shuffle:expression,group_b",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_group_labels": [
+    "HIGH_RATE:control:permute_group_labels"
+   ],
+   "probe:noise": [
+    "HIGH_RATE:probe:noise"
+   ],
+   "probe:shuffle:expression,group_b": [
+    "HIGH_RATE:probe:shuffle:expression,group_b"
+   ],
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_group_labels": [
+    "control:permute_group_labels"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "HIGH_RATE:probe:shuffle:expression,group_b": [
+    "probe:shuffle:expression,group_b"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_group_labels",
+    "stream": "control:permute_group_labels",
+    "faulty": {
+     "holds": 110,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 44,
+     "n": 200
+    },
+    "fisher_p_one_sided": 6.998000850515235e-12,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_group_labels"
+    ]
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 122,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 39,
+     "n": 200
+    },
+    "fisher_p_one_sided": 8.503966665839942e-18,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:noise"
+    ]
+   },
+   {
+    "flag": "HIGH_RATE:probe:shuffle:expression,group_b",
+    "stream": "probe:shuffle:expression,group_b",
+    "faulty": {
+     "holds": 102,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 46,
+     "n": 200
+    },
+    "fisher_p_one_sided": 4.560092803915743e-09,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:probe:shuffle:expression,group_b"
+    ]
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 132,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 46,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.6940686372627879e-18,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B2-12": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_tumour_labels",
+   "HIGH_RATE:probe:shuffle:expression,tumour"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_tumour_labels",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:probe:shuffle:expression,tumour",
+   "K2_HIGH_SIZE",
+   "K5_HOLDS_ON_NOISE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_tumour_labels": [
+    "control:permute_tumour_labels"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "HIGH_RATE:probe:shuffle:expression,tumour": [
+    "probe:shuffle:expression,tumour"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ],
+   "K5_HOLDS_ON_NOISE": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_tumour_labels",
+    "stream": "control:permute_tumour_labels",
+    "faulty": {
+     "holds": 173,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.4287258109944208e-74
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 188,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.862075796064705e-90
+   },
+   {
+    "flag": "HIGH_RATE:probe:shuffle:expression,tumour",
+    "stream": "probe:shuffle:expression,tumour",
+    "faulty": {
+     "holds": 166,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 5,
+     "n": 200
+    },
+    "fisher_p_one_sided": 4.943906033102833e-70
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 165,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 5,
+     "n": 200
+    },
+    "fisher_p_one_sided": 3.154441959973816e-69
+   },
+   {
+    "flag": "K5_HOLDS_ON_NOISE",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 188,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 6,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.862075796064705e-90
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_tumour_labels",
+   "probe:noise",
+   "probe:shuffle:expression,tumour",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_tumour_labels",
+    "probe:noise",
+    "probe:shuffle:expression,tumour",
+    "world:minus"
+   ]
+  }
+ },
+ "B3-01": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_treated"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 33,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 13,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.0012919928445950728
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": false,
+   "declared": true,
+   "qualifying_streams": [
+    "world:minus"
+   ]
+  }
+ },
+ "B3-02": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_age_across_participants"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B3-03": {
+  "faulty_verdict": "WEAK",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_lv_mass",
+   "HIGH_RATE:control:permute_lv_mass_residual"
+  ],
+  "faulty_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": false,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {},
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ },
+ "B3-04": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_kidney_within_body_mass_blocks"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_kidney_within_body_mass_blocks",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "HIGH_RATE:control:permute_kidney_within_body_mass_blocks",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "control:permute_kidney_within_body_mass_blocks": [
+    "HIGH_RATE:control:permute_kidney_within_body_mass_blocks"
+   ],
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_kidney_within_body_mass_blocks": [
+    "control:permute_kidney_within_body_mass_blocks"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 65,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.293283592654916e-23
+   }
+  ],
+  "non_qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_kidney_within_body_mass_blocks",
+    "stream": "control:permute_kidney_within_body_mass_blocks",
+    "faulty": {
+     "holds": 53,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 42,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.11996341196662044,
+    "reasons": [
+     "fixed study carries rate flag on stream: HIGH_RATE:control:permute_kidney_within_body_mass_blocks",
+     "one-sided Fisher p >= 0.05"
+    ]
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 46,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 32,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.050240627639335934,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE",
+     "one-sided Fisher p >= 0.05"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [
+   "probe:noise"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": false,
+   "qualifying_streams": [
+    "probe:noise"
+   ]
+  }
+ },
+ "B3-05": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_tibia_within_humerus_blocks"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:probe:noise",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 67,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 8.558003413274414e-24
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "probe:noise"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": false,
+   "qualifying_streams": [
+    "probe:noise"
+   ]
+  }
+ },
+ "B3-06": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:decouple_observers_within_true_value_blocks"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:decouple_observers_within_true_value_blocks",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:decouple_observers_within_true_value_blocks": [
+    "control:decouple_observers_within_true_value_blocks"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:decouple_observers_within_true_value_blocks",
+    "stream": "control:decouple_observers_within_true_value_blocks",
+    "faulty": {
+     "holds": 62,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 7.879025008558732e-22
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 38,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 5.213406753735104e-13
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 61,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.921575163957849e-21
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:decouple_observers_within_true_value_blocks",
+   "probe:noise",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": true,
+   "qualifying_streams": [
+    "control:decouple_observers_within_true_value_blocks",
+    "probe:noise",
+    "world:minus"
+   ]
+  }
+ },
+ "B3-08": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_second_baseline_across_patients"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_second_baseline_across_patients",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_second_baseline_across_patients": [
+    "control:permute_second_baseline_across_patients"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ],
+   "K4_CONTROL_ALSO_HOLDS": [
+    "control:permute_second_baseline_across_patients"
+   ],
+   "K5_HOLDS_ON_NOISE": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_second_baseline_across_patients",
+    "stream": "control:permute_second_baseline_across_patients",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 72,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 8.307727386887389e-26
+   },
+   {
+    "flag": "K4_CONTROL_ALSO_HOLDS",
+    "stream": "control:permute_second_baseline_across_patients",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "K5_HOLDS_ON_NOISE",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_second_baseline_across_patients",
+   "probe:noise",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_second_baseline_across_patients",
+    "probe:noise",
+    "world:minus"
+   ]
+  }
+ },
+ "B3-09": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_uptake_across_patients"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_uptake_across_patients",
+   "HIGH_RATE:probe:noise",
+   "K2_HIGH_SIZE",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_uptake_across_patients": [
+    "control:permute_uptake_across_patients"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ],
+   "K4_CONTROL_ALSO_HOLDS": [
+    "control:permute_uptake_across_patients"
+   ],
+   "K5_HOLDS_ON_NOISE": [
+    "probe:noise"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_uptake_across_patients",
+    "stream": "control:permute_uptake_across_patients",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 3,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.3343056246260728e-113
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 199,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 2,
+     "n": 200
+    },
+    "fisher_p_one_sided": 3.8853850025386736e-113
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 34,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 4,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.002193252513702e-08
+   },
+   {
+    "flag": "K4_CONTROL_ALSO_HOLDS",
+    "stream": "control:permute_uptake_across_patients",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 3,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.3343056246260728e-113
+   },
+   {
+    "flag": "K5_HOLDS_ON_NOISE",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 199,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 2,
+     "n": 200
+    },
+    "fisher_p_one_sided": 3.8853850025386736e-113
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_uptake_across_patients",
+   "probe:noise",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_uptake_across_patients",
+    "probe:noise",
+    "world:minus"
+   ]
+  }
+ },
+ "B3-11": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "WEAK",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_gene_a_across_samples"
+  ],
+  "faulty_flags": [
+   "HIGH_RATE:control:permute_gene_a_across_samples",
+   "HIGH_RATE:probe:noise",
+   "K2_FAILS_UNREACHABLE",
+   "K2_HIGH_SIZE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {},
+  "faulty_rate_flag_streams": {
+   "HIGH_RATE:control:permute_gene_a_across_samples": [
+    "control:permute_gene_a_across_samples"
+   ],
+   "HIGH_RATE:probe:noise": [
+    "probe:noise"
+   ],
+   "K2_FAILS_UNREACHABLE": [
+    "world:minus"
+   ],
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ],
+   "K4_CONTROL_ALSO_HOLDS": [
+    "control:permute_gene_a_across_samples"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [
+   {
+    "flag": "HIGH_RATE:control:permute_gene_a_across_samples",
+    "stream": "control:permute_gene_a_across_samples",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "HIGH_RATE:probe:noise",
+    "stream": "probe:noise",
+    "faulty": {
+     "holds": 155,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 9,
+     "n": 200
+    },
+    "fisher_p_one_sided": 1.0586954518627066e-56
+   },
+   {
+    "flag": "K2_FAILS_UNREACHABLE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   },
+   {
+    "flag": "K4_CONTROL_ALSO_HOLDS",
+    "stream": "control:permute_gene_a_across_samples",
+    "faulty": {
+     "holds": 200,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 0,
+     "n": 200
+    },
+    "fisher_p_one_sided": 9.713217247611181e-120
+   }
+  ],
+  "non_qualifying": [],
+  "exclusions": [],
+  "qualifying_streams": [
+   "control:permute_gene_a_across_samples",
+   "probe:noise",
+   "world:minus"
+  ],
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": true,
+   "generic": true,
+   "declared": true,
+   "qualifying_streams": [
+    "control:permute_gene_a_across_samples",
+    "probe:noise",
+    "world:minus"
+   ]
+  }
+ },
+ "B3-12": {
+  "faulty_verdict": "NOT_FALSIFIABLE",
+  "fixed_verdict": "NOT_FALSIFIABLE",
+  "faulty_load_error": null,
+  "fixed_load_error": null,
+  "expected_flags": [
+   "K2_HIGH_SIZE",
+   "K2_FAILS_UNREACHABLE",
+   "K2_NO_SEPARATION",
+   "K4_CONTROL_ALSO_HOLDS",
+   "K5_HOLDS_ON_NOISE",
+   "K5_HOLDS_ON_NULL",
+   "K5_HOLDS_ON_SHUFFLE",
+   "HIGH_RATE:probe:noise",
+   "HIGH_RATE:world:null",
+   "HIGH_RATE:control:permute_time_across_months",
+   "HIGH_RATE:control:reverse_time"
+  ],
+  "faulty_flags": [
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "fixed_flags": [
+   "K2_HIGH_SIZE",
+   "K5_INCONCLUSIVE:zeros"
+  ],
+  "pb_detected": true,
+  "fixed_rate_flag_streams": {
+   "world:minus": [
+    "K2_HIGH_SIZE"
+   ]
+  },
+  "faulty_rate_flag_streams": {
+   "K2_HIGH_SIZE": [
+    "world:minus"
+   ]
+  },
+  "faulty_rate_flags_not_expected": [],
+  "qualifying": [],
+  "non_qualifying": [
+   {
+    "flag": "K2_HIGH_SIZE",
+    "stream": "world:minus",
+    "faulty": {
+     "holds": 25,
+     "n": 200
+    },
+    "fixed": {
+     "holds": 23,
+     "n": 200
+    },
+    "fisher_p_one_sided": 0.4389410529685312,
+    "reasons": [
+     "fixed study carries rate flag on stream: K2_HIGH_SIZE",
+     "one-sided Fisher p >= 0.05"
+    ]
+   }
+  ],
+  "exclusions": [],
+  "qualifying_streams": [],
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "set": "pc",
+  "sensitivity_expected_flag_need_not_be_present": {
+   "attributable": false,
+   "generic": false,
+   "declared": false,
+   "qualifying_streams": []
+  }
+ }
+}

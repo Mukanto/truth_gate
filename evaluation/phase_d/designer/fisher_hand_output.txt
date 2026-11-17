@@ -1,0 +1,13 @@
+a_true_b_false minus          18 vs  17  p = 0.5
+a_false_k2 minus              60 vs  30  p = 0.000237
+a_false_control permute_y     80 vs  40  p = 9.22e-06
+a_false_noise                 70 vs  35  p = 5.03e-05
+a_false_null                  30 vs  14  p = 0.00787
+a_false_shuffle x,y           90 vs  45  p = 1.41e-06
+k4 permute_y                  17 vs   1  p = 5.29e-05
+shuffle x,y                   17 vs   1  p = 5.29e-05
+fixed_hard_undef minus        60 vs   6  p = 1.83e-14
+generic noise                 17 vs   1  p = 5.29e-05
+declared minus                60 vs   6  p = 1.83e-14
+generic_and_declared noise    70 vs   2  p = 5.13e-22
+fixed_k4_blocks permute_y     80 vs  17  p = 4.42e-14

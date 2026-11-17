@@ -6,6 +6,24 @@ package version is `tool_version` in the certificate (`kapi_version` up to 0.3);
 Two counts are kept apart below: the methods protocol has 19 numbered rules for before a run (`protocol/PROTOCOL.md`,
 rules for people who design a study); the gate runs eight automated checks, K1 to K8.
 
+## Evaluation: Phase D pre-registration frozen (2026-11-17)
+
+- `evaluation/phase_d/` holds the pre-registration of Phase D, frozen in `FREEZE_PREREG_D.json` before any Phase D
+  case exists.
+  - **Scope.** Phase D tests the B-2 (procedure-level leakage) and B-3 (coupling by construction) errors, with 20
+    pairs each.
+  - **Validity.** Every pair is checked for validity on a reference world before any gate run.
+  - **World authors.** Worlds are written in two arms, one with and one without a dependence checklist. The run uses
+    the gate at `v0.5.1`.
+- The folder also holds:
+  - the revision log and four reviews by fresh agents in a separate session (`REVIEW1.md`, `REVIEW2.md`, `REVIEW3.md`
+    and `REVIEW3B.md`), with the drafts they read;
+  - the scoring and validity tools, with 426 tests;
+  - a synthetic acceptance set of 20 pairs, with outcomes written by hand;
+  - an independent recomputation of the attribution rule. The hand outcomes, the recomputation and the tool agree on
+    every acceptance pair, and the recomputation and the tool agree on the 22 Phase C pairs.
+- No Phase D case, gate run or result exists yet.
+
 ## 0.5.1 (spec 0.7, 2026-11-17)
 
 Implements `docs/design/spec-0.7.md` unchanged. One fix:
