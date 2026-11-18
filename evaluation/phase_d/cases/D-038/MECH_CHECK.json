@@ -1,0 +1,50 @@
+{
+  "case": "D-038",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 44,
+          "text": "abs(b) >= 0.2",
+          "op": ">=",
+          "kind": "constant",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 43,
+          "text": "abs(b) >= 0.2",
+          "op": ">=",
+          "kind": "constant",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-010",
+ "source": "KAP23",
+ "passage": "L1.2: \"Using the entire dataset for any pre-processing steps, such as imputation or over/under sampling, results in leakage.\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856). Target encoding is the subtype's listed example in the task's closed list, not a phrase of the quoted sentence.",
+ "faulty": "Each of the 150 districts is encoded by the mean of y over all rows of that district, using all 1200 rows (a district with no row gets the grand mean); ordinary least squares of y on [encoded value, 3 covariates, intercept] with 5-fold cross-validation (fold = i mod 5), the encoding of a held-out row being the all-rows district mean; pooled Pearson correlation between predictions and y >= 0.25.",
+ "fixed": "In each fold the district means are computed from the 960 training rows only; training rows use their own training mean and held-out rows use the training mean of their district (grand training mean if the district is absent); OLS fitted on the training rows, predicts the held-out rows; pooled Pearson correlation >= 0.25.",
+ "estimand": "Faulty: the correlation of predictions whose encoded feature contains the held-out row's own outcome (about 8 rows per district). Fixed: the out-of-sample correlation for new patients, whose outcome is unknown when the district is encoded.",
+ "model_family": "Mean (target) encoding of the district followed by ordinary least squares with 3 covariates and an intercept. Source names no model; the encoding is the pre-processing step with labels.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 1200 x 150 bool = 180,000 values plus 1200 x 3; about 8 rows per district is the proposed note value (the leak size grows as districts get smaller); the check is 5 OLS fits on 5 regressors. Dependence of the error on sample size or category size: not stated.",
+ "exploited_structure": "Many small categories, so the mean outcome of a category is dominated by the outcomes of its few rows, including the row being scored.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    C = np.asarray(d[\"category\"], dtype=bool)\n    return float(np.sum(C.any(axis=0)) / C.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.125,
+  "note_value_source": "source states none: 150 occupied districts / 1200 patients (about 8 per district) is the brief's own size; proposed, not a source value",
+  "set_by_brief": false
+ },
+ "notes": "Guard: correlation None below 2 held-out rows or zero variance of predictions or y; non-finite returns None. Source-basis caveat: KAP23's quoted sentence names imputation and over/under sampling; target encoding is taken from the subtype definition in the task. Statistic family differs from the earlier L1.2 combination (classification). Reserve B2A-R2 carries the classification, imputation-with-labels civil-war setting.",
+ "subtype_or_tag": "L1.2",
+ "class": "B-2",
+ "approved_value": 0.125
+}

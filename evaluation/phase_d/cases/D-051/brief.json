@@ -1,0 +1,50 @@
+{
+ "id": "D-051",
+ "claim": "In 12 anaesthetised dogs, each studied at 8 steps, whole-body oxygen consumption rises with oxygen delivery within a dog, both computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definitions: the mean over dogs of the within-dog regression slope of oxygen consumption on oxygen delivery is at least 0.15 (mL O2 per min per mL O2 per min).",
+ "data_keys": [
+  {
+   "key": "cardiac_output",
+   "shape": "(animals, steps)",
+   "dtype": "float",
+   "meaning": "cardiac output of each dog at each step, in L per min",
+   "dims": [
+    12,
+    8
+   ]
+  },
+  {
+   "key": "cardiac_output_2",
+   "shape": "(animals, steps)",
+   "dtype": "float",
+   "meaning": "a second, independent determination of the cardiac output of each dog at each step, in L per min",
+   "dims": [
+    12,
+    8
+   ]
+  },
+  {
+   "key": "arterial_o2_content",
+   "shape": "(animals, steps)",
+   "dtype": "float",
+   "meaning": "arterial blood oxygen content of each dog at each step, in mL O2 per dL",
+   "dims": [
+    12,
+    8
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(animals, steps)",
+   "dtype": "float",
+   "meaning": "mixed-venous blood oxygen content of each dog at each step, in mL O2 per dL",
+   "dims": [
+    12,
+    8
+   ]
+  }
+ ],
+ "sizes": {
+  "animals": 12,
+  "steps": 8
+ }
+}

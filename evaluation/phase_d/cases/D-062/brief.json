@@ -1,0 +1,40 @@
+{
+ "id": "D-062",
+ "claim": "In at least 60% of the species, femur length and humerus length are positively associated after accounting for body length: within the species, the partial correlation between femur length and humerus length, given body length, is at least 0.2.",
+ "data_keys": [
+  {
+   "key": "femur",
+   "shape": "(species, individuals)",
+   "dtype": "float",
+   "meaning": "femur length of each individual sampled in each species, in mm",
+   "dims": [
+    12,
+    30
+   ]
+  },
+  {
+   "key": "humerus",
+   "shape": "(species, individuals)",
+   "dtype": "float",
+   "meaning": "humerus length of each individual sampled in each species, in mm",
+   "dims": [
+    12,
+    30
+   ]
+  },
+  {
+   "key": "body_length",
+   "shape": "(species, individuals)",
+   "dtype": "float",
+   "meaning": "head-and-body length of each individual sampled in each species, in mm",
+   "dims": [
+    12,
+    30
+   ]
+  }
+ ],
+ "sizes": {
+  "species": 12,
+  "individuals": 30
+ }
+}

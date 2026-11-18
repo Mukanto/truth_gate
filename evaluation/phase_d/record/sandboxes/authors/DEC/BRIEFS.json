@@ -1,0 +1,113 @@
+[
+ {
+  "local_id": "DEC-01",
+  "claim": "Each of 1500 voxels was measured in each of 10 runs of an experiment with four stimulus conditions, labelled A, B, C and D. Claim: among the voxels whose expected response to condition A is greater than their expected response to condition D, the proportion whose expected response to condition A is also greater than their expected response to condition B is at least 0.70.",
+  "data_keys": [
+   {"key": "response", "shape": "(voxels, runs, conditions)", "dtype": "float", "meaning": "estimated response amplitude of each voxel in each run to each stimulus condition; the conditions axis holds A, B, C, D in this order"}
+  ],
+  "sizes": {"voxels": 1500, "runs": 10, "conditions": 4}
+ },
+ {
+  "local_id": "DEC-02",
+  "claim": "Twenty subjects each completed a task during functional imaging, giving an activation value in each of 1000 voxels, and each completed a personality questionnaire. Claim: in the population from which the subjects come, the 20 voxels whose activation is most strongly correlated with the questionnaire score have a mean correlation with that score of at least 0.5.",
+  "data_keys": [
+   {"key": "activation", "shape": "(subjects, voxels)", "dtype": "float", "meaning": "task-related activation of each voxel in each subject"},
+   {"key": "trait", "shape": "(subjects,)", "dtype": "float", "meaning": "personality questionnaire score of each subject"}
+  ],
+  "sizes": {"subjects": 20, "voxels": 1000}
+ },
+ {
+  "local_id": "DEC-03",
+  "claim": "600 patients with menopausal hot flushes received a treatment. Symptom severity (scale 0 to 100, higher is worse) was scored at a screening visit, again at entry on the day treatment began, and again 12 weeks later. Claim: among patients whose screening score was at least 60, at least half have a week-12 score that is 10 or more points below their entry score (proportion of at least 0.5).",
+  "data_keys": [
+   {"key": "screening", "shape": "(patients,)", "dtype": "float", "meaning": "symptom severity score at the screening visit"},
+   {"key": "entry", "shape": "(patients,)", "dtype": "float", "meaning": "symptom severity score at entry, on the day treatment began"},
+   {"key": "week12", "shape": "(patients,)", "dtype": "float", "meaning": "symptom severity score 12 weeks after treatment began"}
+  ],
+  "sizes": {"patients": 600}
+ },
+ {
+  "local_id": "DEC-04",
+  "claim": "In a trial of a blood-pressure drug, 900 patients had systolic pressure measured at baseline and again after 6 months, and the array treated marks which patients received the drug. The reduction of a patient is the baseline pressure minus the 6-month pressure. Claim: the reduction attributable to the drug (mean reduction in treated patients minus mean reduction in untreated patients) is larger in patients in the top third of baseline pressures than in patients in the bottom third of baseline pressures, by at least 3 mmHg.",
+  "data_keys": [
+   {"key": "baseline_sbp", "shape": "(patients,)", "dtype": "float", "meaning": "systolic blood pressure in mmHg at baseline"},
+   {"key": "followup_sbp", "shape": "(patients,)", "dtype": "float", "meaning": "systolic blood pressure in mmHg after 6 months"},
+   {"key": "treated", "shape": "(patients,)", "dtype": "bool", "meaning": "True if the patient received the drug"}
+  ],
+  "sizes": {"patients": 900}
+ },
+ {
+  "local_id": "DEC-05",
+  "claim": "240 participants each received either a drug or a vehicle, and each was classified as a responder or not. Some participants carry a gene variant. Claim: the drug raises the proportion of responders more in carriers than in non-carriers, that is, the difference between the two drug-minus-vehicle differences in responder proportion (carriers minus non-carriers) is positive, judged by a one-sided test at the 0.05 level.",
+  "data_keys": [
+   {"key": "responder", "shape": "(participants,)", "dtype": "bool", "meaning": "True if the participant met the response criterion"},
+   {"key": "drug", "shape": "(participants,)", "dtype": "bool", "meaning": "True if the participant received the drug, False if the vehicle"},
+   {"key": "carrier", "shape": "(participants,)", "dtype": "bool", "meaning": "True if the participant carries the gene variant"}
+  ],
+  "sizes": {"participants": 240}
+ },
+ {
+  "local_id": "DEC-06",
+  "claim": "In a field experiment, 10 plots were each surveyed at 30 quadrats and each quadrat was scored as occupied or not by a seaweed species; the array exclosure marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.10, where the occupancy of a plot is the fraction of its quadrats that are occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+  "data_keys": [
+   {"key": "occupied", "shape": "(plots, quadrats)", "dtype": "bool", "meaning": "True if the species was present in that quadrat of that plot"},
+   {"key": "exclosure", "shape": "(plots,)", "dtype": "bool", "meaning": "True if the plot was fenced against grazers"}
+  ],
+  "sizes": {"plots": 10, "quadrats": 30}
+ },
+ {
+  "local_id": "DEC-07",
+  "claim": "Ten animals each received a different dose of a drug, and the response amplitude (in mV) of 100 CA3 cells was recorded in each animal. Claim: response increases with dose, that is, the slope of an animal's mean cell response on dose, across animals, is positive, judged by a one-sided test at the 0.05 level.",
+  "data_keys": [
+   {"key": "response", "shape": "(animals, cells)", "dtype": "float", "meaning": "response amplitude in mV of each recorded CA3 cell"},
+   {"key": "dose", "shape": "(animals,)", "dtype": "float", "meaning": "dose of the drug given to each animal"}
+  ],
+  "sizes": {"animals": 10, "cells": 100}
+ },
+ {
+  "local_id": "DEC-08",
+  "claim": "Fourteen pregnant dams each had a measured exposure level to a chemical, and 4 pups per dam were scored on a performance test at weaning. Claim: across dams, the correlation between a dam's exposure level and the mean score of her pups is positive, judged by a one-sided test of the correlation against zero at the 0.05 level.",
+  "data_keys": [
+   {"key": "exposure", "shape": "(dams,)", "dtype": "float", "meaning": "exposure level of each dam"},
+   {"key": "outcome", "shape": "(dams, pups)", "dtype": "float", "meaning": "performance score at weaning of each pup of each dam"}
+  ],
+  "sizes": {"dams": 14, "pups": 4}
+ },
+ {
+  "local_id": "DEC-R1",
+  "claim": "The response of each of 1000 voxels was estimated on each of 60 trials, in which a stimulus of varying intensity was presented. Claim: in the population, the 25 voxels whose trial-by-trial response is most strongly correlated with stimulus intensity have a mean correlation with intensity of at least 0.25.",
+  "data_keys": [
+   {"key": "betas", "shape": "(voxels, trials)", "dtype": "float", "meaning": "estimated response amplitude of each voxel on each trial"},
+   {"key": "intensity", "shape": "(trials,)", "dtype": "float", "meaning": "stimulus intensity presented on each trial"}
+  ],
+  "sizes": {"voxels": 1000, "trials": 60}
+ },
+ {
+  "local_id": "DEC-R2",
+  "claim": "Each of 400 neurons was recorded on 40 trials before and on 40 trials after a manipulation. Claim: the proportion of neurons whose expected firing rate rises after the manipulation is larger among neurons whose expected pre-manipulation rate is below 8 Hz than among neurons whose expected pre-manipulation rate is at least 8 Hz, by at least 0.20.",
+  "data_keys": [
+   {"key": "pre", "shape": "(neurons, trials)", "dtype": "float", "meaning": "firing rate in Hz of each neuron on each trial before the manipulation"},
+   {"key": "post", "shape": "(neurons, trials)", "dtype": "float", "meaning": "firing rate in Hz of each neuron on each trial after the manipulation"}
+  ],
+  "sizes": {"neurons": 400, "trials": 40}
+ },
+ {
+  "local_id": "DEC-R3",
+  "claim": "Forty participants, 20 young and 20 old, completed a training programme, and a performance score was recorded before and after it. Claim: the mean improvement (after minus before) is larger in young than in old participants, judged by a one-sided test of the difference between the two groups' mean improvements at the 0.05 level.",
+  "data_keys": [
+   {"key": "pre", "shape": "(participants,)", "dtype": "float", "meaning": "performance score before the programme"},
+   {"key": "post", "shape": "(participants,)", "dtype": "float", "meaning": "performance score after the programme"},
+   {"key": "young", "shape": "(participants,)", "dtype": "bool", "meaning": "True for young participants, False for old participants"}
+  ],
+  "sizes": {"participants": 40}
+ },
+ {
+  "local_id": "DEC-R4",
+  "claim": "In a field experiment, 8 plots were each surveyed on 12 successive dates and scored as occupied or not by a species on each date; the array fenced marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.15, where the occupancy of a plot is the fraction of dates on which it is occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+  "data_keys": [
+   {"key": "present", "shape": "(plots, dates)", "dtype": "bool", "meaning": "True if the species was present in that plot on that date; dates are in time order"},
+   {"key": "fenced", "shape": "(plots,)", "dtype": "bool", "meaning": "True if the plot was fenced against grazers"}
+  ],
+  "sizes": {"plots": 8, "dates": 12}
+ }
+]

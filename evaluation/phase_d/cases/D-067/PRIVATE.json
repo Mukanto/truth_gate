@@ -1,0 +1,25 @@
+{
+ "id": "D-067",
+ "source": "PEA97",
+ "passage": "'The particular case that is likely to occur is when u and v are indices with the same denominator for the correlation of the indices seems at first sight a very plausible measure of organic correlation.' (abstract, OpenAlex OCR text)",
+ "faulty": "Standardised slope of kidney_weight/body_mass on heart_weight/body_mass (a simple regression of one index on the other, whose standardised slope is their correlation), compared with 0.25.",
+ "fixed": "Standardised coefficient of heart_weight in the regression of kidney_weight on heart_weight and body_mass, compared with 0.25.",
+ "estimand": "Faulty: standardised slope between the two indices. Fixed: standardised partial slope of kidney weight on heart weight at fixed body mass.",
+ "model_family": "Source names none beyond random variables x, y, z. Choice: positive Gaussian variables (CV 0.1-0.2), kidney = a + b*body + g*heart + noise, g = 0 in the claim-false version. Reason: the multiple-regression form puts the denominator in as covariate, the correction the later literature, including KRO93, recommends.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": "3 rats (three parameters); guards: non-finite values, selection below 3, zero variance of any key.",
+ "sizes_note": "Source (abstract only) states no sizes. 60 rats is a small-sample regime typical of organ-weight studies; check is a 3-parameter fit. Dependence on n: not stated.",
+ "exploited_structure": "Both organ weights are divided by the same body mass, so the variation of body mass induces a correlation between the two indices.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['kidney_weight'], dtype=float)\n    y = np.asarray(d['heart_weight'], dtype=float)\n    z = np.asarray(d['body_mass'], dtype=float)\n    cx = np.std(x, ddof=1) / abs(np.mean(x))\n    cy = np.std(y, ddof=1) / abs(np.mean(y))\n    cz = np.std(z, ddof=1) / abs(np.mean(z))\n    value = cz ** 2 / np.sqrt((cx ** 2 + cz ** 2) * (cy ** 2 + cz ** 2))\n    return float(value)",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.5 is the value of this expression when the three coefficients of variation are equal (reference case); it uses marginal spreads only, unchanged by the claim-false version.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (PEA97 pair 3 of 3). Small-n regime (60). Earlier PEA97 combos included regression-slope; kept because no other family is natural for a slope claim, and the brief differs from B3A-01/05/11 in statistic and size. Standardised slope is used so the faulty and fixed statistics share a scale.",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.5
+}

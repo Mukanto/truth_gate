@@ -1,0 +1,36 @@
+{
+ "id": "D-053",
+ "claim": "Across children, BMI at baseline and the subsequent change in BMI are negatively correlated: the correlation between the BMI level at baseline and the change in BMI by follow-up is at most -0.25.",
+ "data_keys": [
+  {
+   "key": "bmi_baseline",
+   "shape": "(children,)",
+   "dtype": "float",
+   "meaning": "BMI of each child at the baseline visit, in kg/m2",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "bmi_baseline_retest",
+   "shape": "(children,)",
+   "dtype": "float",
+   "meaning": "a second BMI measurement of each child at the baseline visit, in kg/m2",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "bmi_followup",
+   "shape": "(children,)",
+   "dtype": "float",
+   "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2",
+   "dims": [
+    500
+   ]
+  }
+ ],
+ "sizes": {
+  "children": 500
+ }
+}

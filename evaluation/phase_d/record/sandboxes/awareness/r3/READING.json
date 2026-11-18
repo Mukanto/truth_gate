@@ -1,0 +1,82 @@
+{
+ "F01": {
+  "level": "N",
+  "reason": "Describes how minus nulls y (independent cohort copy, 'neither the observed districts nor the covariates carry information'); shrinkage/reliability are plus-side sizing; no pitfall or residual artefact in minus is named."
+ },
+ "F02": {
+  "level": "N",
+  "reason": "Only sizes the effect for OLS overfitting (p/n, collinearity); no mechanism by which minus could still look supportive and no naive statistic in minus."
+ },
+ "F03": {
+  "level": "N",
+  "reason": "Minus keeps an unrelated shifted subgroup and prevalence; the only caveat is that effect size was set by approximation; no artefact or pitfall in minus is stated."
+ },
+ "F04": {
+  "level": "P",
+  "reason": "Replicates 'still share their compound's value' in minus and have identical descriptors; 'records vs new compounds' judgement call names the replicate-leakage route to apparent 1-NN support."
+ },
+ "F05": {
+  "level": "P",
+  "reason": "Old start 8 points lower in both worlds and minus keeps mean improvement 10 for both groups, so post still differs by age ('raw' pre/post structure); improvement contains -(error of pre), negatively correlated with pre (regression to the mean)."
+ },
+ "F06": {
+  "level": "C",
+  "reason": "Residual size shared via imperfect length proxy is the pitfall; minus draws size from its conditional distribution given measured length, partial correlation 0."
+ },
+ "F07": {
+  "level": "P",
+  "reason": "Plot effect, shore shift and AR(1) patchiness kept in minus; '300 quadrats rest on only 10 independent units' names the pseudoreplication route to apparent effect."
+ },
+ "F08": {
+  "level": "P",
+  "reason": "'Any model can fit the 80 responses perfectly' (in-sample fit non-null in minus); covariates standardised with sample mean and SD."
+ },
+ "F09": {
+  "level": "P",
+  "reason": "'With no signal, the largest of 2000 gene-survival correlations at n = 50 is typically about 0.5' - a non-null naive statistic under the null."
+ },
+ "F10": {
+  "level": "P",
+  "reason": "Between-population head-wing correlation 0.4 kept identically in minus ('outside the within-population claim'), so a pooled analysis would still show association."
+ },
+ "F11": {
+  "level": "C",
+  "reason": "Shared seasonal cycle excluded because it would itself be predictive; autocorrelation inflates sampling error, but no artefact is left in minus."
+ },
+ "F12": {
+  "level": "P",
+  "reason": "Mathematical coupling of Fick VO2 and DO2 gives 'coupling bias about +0.05' in both worlds; between-patient body-size association also remains in minus."
+ },
+ "F13": {
+  "level": "C",
+  "reason": "Body length measured with 1% error so size not fully removed (the pitfall); minus draws size given measured length, partial correlation exactly 0."
+ },
+ "F14": {
+  "level": "C",
+  "reason": "Litter clustering (ICC 0.15) and allometry kept in minus, but minus sets residual correlation to 0 at both levels; clustering pitfall mentioned, no artefact reported."
+ },
+ "F15": {
+  "level": "P",
+  "reason": "'Pooled across species, all three are correlated at r > 0.95 regardless of the within-species claim' - pooled analysis would support in minus."
+ },
+ "F16": {
+  "level": "C",
+  "reason": "Overfitting penalty of 66 terms, collinearity and autocorrelation mentioned; minus uses independent process with same time structure and circular-shift control, no artefact left."
+ },
+ "F17": {
+  "level": "C",
+  "reason": "Batches 'independent of leukaemia type', modules unrelated to lineage, p/n large; confounding considered and reported absent."
+ },
+ "F18": {
+  "level": "P",
+  "reason": "Minus proportion 'then ~0.32, which includes the regression to the mean' - a non-null naive statistic in minus."
+ },
+ "F19": {
+  "level": "P",
+  "reason": "'Raw VO2 therefore still differs between groups through mass' in minus."
+ },
+ "F20": {
+  "level": "C",
+  "reason": "Site offsets with the same prevalence at every site ('no site-label confounding'): confounder considered, none left."
+ }
+}

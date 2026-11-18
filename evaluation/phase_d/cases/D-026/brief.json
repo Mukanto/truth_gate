@@ -1,0 +1,29 @@
+{
+ "id": "D-026",
+ "claim": "Among 400 adult beetles measured on six skeletal dimensions, the dimensions share a common shape pattern beyond body length: after removing the linear effect of body length from each of the six dimensions, the first principal component of their covariance matrix explains at least 40% of the total variance.",
+ "data_keys": [
+  {
+   "key": "skeletal",
+   "shape": "(specimens, dimensions)",
+   "dtype": "float",
+   "meaning": "six linear skeletal dimensions of each specimen, in mm",
+   "dims": [
+    400,
+    6
+   ]
+  },
+  {
+   "key": "body_length",
+   "shape": "(specimens,)",
+   "dtype": "float",
+   "meaning": "body length of each specimen, in mm",
+   "dims": [
+    400
+   ]
+  }
+ ],
+ "sizes": {
+  "specimens": 400,
+  "dimensions": 6
+ }
+}

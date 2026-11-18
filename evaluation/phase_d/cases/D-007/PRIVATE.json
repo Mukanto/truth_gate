@@ -1,0 +1,25 @@
+{
+ "id": "D-007",
+ "source": "SIM03",
+ "passage": "SOURCES_D row SIM03 (abstract): class-prediction performance assessed on the data used to build the rule; independent validation is required. Also read as a paraphrase of the OpenAlex text record: estimating accuracy on the same data used to build a predictor is badly biased.",
+ "faulty": "Ridge regression of survival_months on standardised expression (all 2000 genes, penalty fixed at lambda = number of genes, no tuning, no gene selection) is fitted on all 50 patients, and R-squared is computed on those same 50 patients (resubstitution). Claim holds when that R-squared >= 0.10.",
+ "fixed": "Same ridge model, but R-squared is out-of-sample: 5-fold cross-validation over patients, R-squared = 1 - SSE/SST from the pooled held-out predictions, with the test-fold patients never used in fitting or in standardising.",
+ "estimand": "Faulty: in-sample fit of the model to the patients that built it. Fixed: expected R-squared of the model on new patients from the same population.",
+ "model_family": "Ridge regression with a fixed penalty on standardised expression. Chosen by me: the source names no model; a fixed penalty avoids any tuning or selection step so the only error is the missing test set (L1.1, not L1.3).",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the text I could read (abstract and a paraphrase of the OpenAlex record, which reports that in the authors' no-difference simulation about 98% of runs gave zero resubstitution misclassifications; this figure comes from a tool paraphrase and is unverified). Sizes here (50 x 2000 = 100k values; 2000 genes is the per-axis limit and fewer than a full array) are a realistic microarray prognosis study with tens of patients and thousands of genes; a smaller n is realistic because such studies rarely exceed a few dozen patients. Check cost is low (dual-form ridge, 5 folds). Dependence of the error's size on n or p: not stated in what I read.",
+ "exploited_structure": "Many more features than patients, so a flexible fit can reproduce the training outcomes from noise.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 40.0,
+  "note_value_source": "source states none: SIM03 sizes were not available to me; 40 = 2000 genes / 50 patients, this brief's own typical microarray ratio (tens of patients, thousands of genes)",
+  "set_by_brief": true
+ },
+ "notes": "Statistic family changed from classification (the earlier family) to R-squared by using the prognostic variant (continuous survival time) that the paper's title covers (diagnostic and prognostic classification); the source's own simulation is two-class. Claim-false world would be an outcome unrelated to expression.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 40.0
+}

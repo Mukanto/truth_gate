@@ -1,0 +1,25 @@
+{
+ "id": "D-047",
+ "source": "MOR03",
+ "passage": "Any intervention aimed at a group or characteristic that is very different from the average will appear to be successful because of regression to the mean. (SOURCES_D; PMC full text: women with the worst symptom scores showed the largest placebo response in hormone replacement trials; the weaker the correlation between repeated measurements, the larger the regression.)",
+ "faulty": "Flag patients with screening >= 60. Change = screening - week12 (the flagging measurement is the reference). HOLDS if the proportion of flagged patients with change >= 10 is >= 0.5; None if no patient is flagged.",
+ "fixed": "Same flagged patients (screening >= 60); change = entry - week12, the entry score being a second pre-treatment measurement not used for flagging. HOLDS if the proportion with entry - week12 >= 10 is >= 0.5; None if no patient is flagged.",
+ "estimand": "Faulty: share of flagged patients whose score fell by 10 or more from the flagging measurement itself. Fixed: share of flagged patients whose score fell by 10 or more from an independent pre-treatment measurement (the change after treatment among those flagged).",
+ "model_family": "Latent-level plus measurement error: true level L ~ N(50, 12^2); screening and entry = L + independent N(0, s^2) errors; week12 = L - treatment effect + independent N(0, s^2). The source names no model; this is the standard one in which regression toward the mean arises and a second measurement is independent.",
+ "statistic_family": "proportion",
+ "guard_minimum": 1,
+ "sizes_note": "Source states no sample size (a short commentary with examples). 600 patients is a realistic trial size; the flagged subgroup is then roughly 100 to 200 patients. Dependence of the error on sample size: not stated; the source says the weaker the correlation between repeated measurements and the further the group lies from the average, the larger the effect.",
+ "exploited_structure": "A noisy pre-treatment measurement used both to pick out the patients with the worst scores and as the reference for their change, so that the measurement error enters the change.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['screening'], dtype=float)\n    b = np.asarray(d['entry'], dtype=float)\n    if a.size < 2 or a.std() == 0 or b.std() == 0:\n        return 0.0\n    r = np.corrcoef(a, b)[0, 1]\n    return float(r) if np.isfinite(r) else 0.0",
+  "direction": "less",
+  "null_value": 1.0,
+  "note_value": 0.6,
+  "note_value_source": "source states none: the source gives no correlation between repeated measurements; 0.6 is proposed as a typical test-retest correlation of a self-reported symptom score (hot-flush severity), reliable enough to be useful and noisy enough for the group effect the source describes",
+  "set_by_brief": false
+ },
+ "notes": "Earlier MOR03 combinations were extreme/mean and split/mean; this one is extreme/proportion. The brief gives a second pre-treatment measurement (entry) so that the fixed analysis exists in the data. The statistic uses two measurements that the claim-false data leave unchanged (both are pre-treatment).",
+ "subtype_or_tag": "extreme-group-change",
+ "class": "B-1",
+ "approved_value": 0.6
+}

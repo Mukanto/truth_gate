@@ -1,0 +1,25 @@
+{
+ "id": "D-017",
+ "source": "KRO93",
+ "passage": "'Spurious correlation refers to the correlation between indices that have a common component.' (abstract, RePEc/IDEAS page, read through WebFetch excerpt). The abstract further says that a single ratio used as dependent or independent variable in a multiple regression can give misleading inferences, and recommends avoiding ratios in regression analyses.",
+ "faulty": "Compare the group means of the ratio fvc/height between smokers and non-smokers (difference in mean ratio, rescaled to litres at the mean height, or tested at the claim's 0.2 L size), i.e. a ratio standard used as the dependent variable with the group as the independent variable. No numeric parameters in the abstract.",
+ "fixed": "Regression of fvc on smoker (0/1) and height (analysis of covariance); the coefficient of smoker is the adjusted mean difference, compared with 0.2 L in absolute value. This is the source's correction: the denominator enters as a covariate.",
+ "estimand": "Faulty: difference in mean fvc/height between the groups (mixes the group effect with the group difference in height whenever fvc is not proportional to height). Fixed: difference in mean fvc between groups at equal height.",
+ "model_family": "Source names none. Choice: fvc = a + b*height + c*smoker + noise with a != 0 (or a power of height below 1 or above 1 so fvc/height is not constant); height Gaussian (mean 170 cm, SD 10) with a group difference in mean height in both claim worlds; c nonzero in the claim-true version, zero in the claim-false version. Reason: a linear model with a free intercept is the minimal case in which a ratio standard is not size-free.",
+ "statistic_family": "mean",
+ "guard_minimum": "3 subjects with at least 1 in each group (three parameters: intercept, group, height); guards: non-finite values, empty group or selection below 3, zero variance of height.",
+ "sizes_note": "Source (abstract only) states no sizes. 600 subjects is a realistic spirometry survey; the corrected check is a 3-parameter least-squares fit. Dependence on sample size or number of features: not stated.",
+ "exploited_structure": "The group label is related to the size variable (height) that is the denominator of the ratio, and the outcome is not proportional to height, so the ratio differs between groups without any group effect.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    g = np.asarray(d['smoker'], dtype=float)\n    h = np.asarray(d['height'], dtype=float)\n    if np.std(g) == 0 or np.std(h) == 0:\n        return 0.0\n    return float(abs(np.corrcoef(g, h)[0, 1]))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.1,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.1 is a proposed small point-biserial correlation with a stated mechanism: in a mixed-sex sample the male-female height gap is about 13 cm (within-sex SD about 7 cm, total SD about 9.5 cm) and smoking is somewhat more frequent in men than in women (for example 30% against 15%), so smokers are on average about 2.8 cm taller, a standardised difference of about 0.3 and a point-biserial correlation of about 0.12 (about 0.08 at 25% against 15%). It uses only the group label and height, which the claim-false version (no group effect on fvc) leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (KRO93 pair 1 of 3). Earlier combos for the tag ratio-vs-denominator-proxy were R-squared, correlation and slope; this brief uses mean (adjusted group difference) to avoid them. Claim is stated in absolute value because the sign of the ratio's bias depends on the sign of the group-size relation, which the world author chooses; the claim-false version is then a world with no group effect at equal height.",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": null
+}

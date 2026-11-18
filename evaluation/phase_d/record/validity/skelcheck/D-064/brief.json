@@ -1,0 +1,36 @@
+{
+ "id": "D-064",
+ "claim": "Expression profiles together with clinical covariates predict tumour response in new patients: the Pearson correlation between predicted and observed response is at least 0.30.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(patients, genes)",
+   "dtype": "float",
+   "meaning": "log2 expression level of each gene in each patient's tumour sample",
+   "dims": [
+    80,
+    1500
+   ]
+  },
+  {
+   "key": "clinical",
+   "shape": "(patients, covariates)",
+   "dtype": "float",
+   "meaning": "standardised clinical covariates of each patient (age, tumour size, and similar)",
+   "dims": [
+    80,
+    8
+   ]
+  },
+  {
+   "key": "response",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "percentage tumour shrinkage measured after treatment",
+   "dims": [
+    80
+   ]
+  }
+ ],
+ "sizes": "{\"patients\": 80, \"genes\": 1500, \"covariates\": 8}"
+}

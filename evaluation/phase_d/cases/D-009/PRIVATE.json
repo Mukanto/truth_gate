@@ -1,0 +1,25 @@
+{
+ "id": "D-009",
+ "source": "CUR13",
+ "passage": "'only if the relationship between numerator and denominator is a straight line through the origin will the ratio be meaningful'; regression techniques, 'these include analysis of covariance', can accommodate the relationship when a ratio is useless (abstract, Europe PMC).",
+ "faulty": "Two-sample t test (Student or Welch) on the ratio peak_force/body_mass between treated and untreated mice; criterion: treated mean ratio higher with two-sided p < 0.05.",
+ "fixed": "Analysis of covariance: regress peak_force on a treated indicator and body_mass (with intercept); the criterion is that the treated coefficient is positive with two-sided p < 0.05.",
+ "estimand": "Faulty: difference in force per unit body mass between groups, which also carries any group difference in body mass when force is not proportional to mass. Fixed: difference in force between groups at equal body mass.",
+ "model_family": "Linear model peak_force = a + b*body_mass + delta*treated + e with a non-zero intercept a (the source's point: the ratio is meaningful only when the line goes through the origin) and Gaussian e. Chosen as the source's ANCOVA family; fixed for both twins.",
+ "statistic_family": "mean",
+ "guard_minimum": 4,
+ "sizes_note": "Source states no sample size (abstract only). 60 animals (about 30 per group) is a realistic small-animal experiment; larger is not needed for the check. Size dependence of the error: not stated.",
+ "exploited_structure": "The treatment indicator varies with body mass (the groups differ in mass), and force is not proportional to mass, so the per-mass ratio differs between groups without any treatment effect.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    m = np.asarray(d['body_mass'], dtype=float)\n    g = np.asarray(d['treated'], dtype=bool)\n    a = m[g]\n    b = m[~g]\n    sp = np.sqrt(((len(a) - 1) * np.var(a, ddof=1) + (len(b) - 1) * np.var(b, ddof=1)) / (len(a) + len(b) - 2))\n    return float(abs(np.mean(a) - np.mean(b)) / sp)",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: the abstract gives no group difference in the denominator; 0.5 pooled SD is a moderate imbalance of body mass between groups that is common in small animal experiments",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. Statistic family 'mean' chosen because earlier evaluations used R-squared, correlation and regression-slope for ratio-vs-denominator-proxy on CUR13. The structure statistic uses body_mass and treated only, which the claim-false version leaves unchanged (it changes the response).",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.5
+}

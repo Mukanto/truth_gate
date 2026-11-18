@@ -1,0 +1,25 @@
+{
+ "id": "D-039",
+ "source": "KAP23",
+ "passage": "L3.1: \"the test set should not contain any data from a date before the training set.\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856).",
+ "faulty": "Ridge (lambda 1.0, standardised, intercept) with 5-fold cross-validation, months assigned to folds by a fixed pseudo-random permutation (default_rng(0)); slope of the OLS regression of observed y on the pooled held-out forecasts over all 400 months >= 0.5.",
+ "fixed": "Forward chaining: the model is fitted on months 1 to 200, forecasts months 201 to 240; then on months 1 to 240 (less a 3-month gap), forecasts 241 to 280, and so on up to 400 (5 blocks of 40); slope of observed y on the pooled forecasts over months 201 to 400 >= 0.5.",
+ "estimand": "Faulty: calibration slope of forecasts for months lying between fitting months. Fixed: calibration slope of forecasts for months after all fitting months.",
+ "model_family": "Ridge regression (lambda 1.0, standardised) of y on the same month's 3 predictors. Source names none.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 400 x 3 monthly values (about 33 years); the check is a handful of ridge fits. Dependence on sample size or autocorrelation: not stated. Slope (calibration slope of observed on forecast) is the claim's statistic, a prediction score for forecasts.",
+ "exploited_structure": "Slowly varying predictors, so that months adjacent in time resemble each other and a month's outcome is predictable from the months before and after it.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    a = X[:-1] - X[:-1].mean(axis=0)\n    b = X[1:] - X[1:].mean(axis=0)\n    den = np.sqrt((a ** 2).sum(axis=0) * (b ** 2).sum(axis=0))\n    r = (a * b).sum(axis=0) / np.where(den > 0, den, 1.0)\n    return float(np.mean(r))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.9,
+  "note_value_source": "source states none: 0.9 proposed as a typical lag-1 autocorrelation of monthly series; the source gives no value",
+  "set_by_brief": false
+ },
+ "notes": "Reserve for L3.1. Guard: slope None for zero variance of the forecasts or fewer than 2 forecast months; non-finite returns None. Differs from B2A-08 and B2A-09 in family (regression-slope), series length and the forecast horizon.",
+ "subtype_or_tag": "L3.1",
+ "class": "B-2",
+ "approved_value": 0.9
+}

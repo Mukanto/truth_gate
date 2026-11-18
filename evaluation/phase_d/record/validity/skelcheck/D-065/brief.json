@@ -1,0 +1,28 @@
+{
+ "id": "D-065",
+ "claim": "Habitat measurements predict vegetation cover at new sites: the Pearson correlation between predicted and observed cover is at least 0.40.",
+ "data_keys": [
+  {
+   "key": "habitat",
+   "shape": "(sites, plots, variables)",
+   "dtype": "float",
+   "meaning": "habitat measurements of each plot at each site",
+   "dims": [
+    40,
+    20,
+    6
+   ]
+  },
+  {
+   "key": "cover",
+   "shape": "(sites, plots)",
+   "dtype": "float",
+   "meaning": "vegetation cover measured in each plot",
+   "dims": [
+    40,
+    20
+   ]
+  }
+ ],
+ "sizes": "{\"sites\": 40, \"plots\": 20, \"variables\": 6}"
+}

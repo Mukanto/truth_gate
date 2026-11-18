@@ -1,0 +1,25 @@
+{
+ "id": "D-025",
+ "source": "TU04",
+ "passage": "'Ten out of 12 studies for PPD and nine out of 14 for LCAL initially claimed a significant positive relationship; after using either of the more appropriate statistical methods of adjustment, only three correlations in each group of studies remained significant.' 'relating change to baseline values using correlation or regression is methodologically flawed due to mathematical coupling' (abstract, Europe PMC).",
+ "faulty": "For each of the 12 trials, least-squares slope of change (followup_attachment_loss - baseline_attachment_loss) on baseline_attachment_loss across its 20 defects; mean of the 12 slopes; criterion <= -0.20.",
+ "fixed": "For each trial, least-squares slope of the change on the mean of baseline_attachment_loss and followup_attachment_loss (Oldham's variable); mean of the 12 slopes; criterion <= -0.20.",
+ "estimand": "Faulty: mean within-trial slope of change on the baseline measurement. Fixed: mean within-trial slope of change on the average level of the two measurements.",
+ "model_family": "Latent attachment-loss model with Gaussian measurement error at both visits and an individual response, a trial-specific mean; Gaussian. Chosen because the source gives no model; same as B3B-07; fixed for both twins.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 2,
+ "sizes_note": "Source: 12 trials for pocket probing depth and 14 for lifetime cumulative attachment loss (abstract); 12 trials is used and 20 defects per trial is assumed (the abstract gives no defect count). Size dependence: not stated.",
+ "exploited_structure": "Within each trial the baseline appears both as the predictor and inside the change, so baseline measurement error produces a negative slope.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    b = np.asarray(d['baseline_attachment_loss'], dtype=float)\n    r = np.asarray(d['baseline_attachment_loss_retest'], dtype=float)\n    return float(np.mean(0.5 * np.var(b - r, axis=1, ddof=1) / np.var(b, axis=1, ddof=1)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.2,
+  "note_value_source": "source states none: the abstract gives no measurement error; 0.2 as in B3B-07",
+  "set_by_brief": false
+ },
+ "notes": "RESERVE (TU04 reserve). Mirrors the source's multi-trial structure (12 trials). Differs from B3B-07 by statistic (summary of per-trial slopes) and data structure (trials x defects).",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.2
+}

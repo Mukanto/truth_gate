@@ -1,0 +1,25 @@
+{
+ "id": "D-011",
+ "source": "AMB02",
+ "passage": "Europe PMC full text PMC124442 (tool summary): genes selected on the whole data, then the error estimated by cross-validation; the correction is cross-validation external to the selection. SOURCES_D gives the same passage.",
+ "faulty": "All 72 samples rank genes by absolute two-sample t-statistic; the top 20 are kept; 10-fold cross-validation of a nearest-centroid classifier on those 20 genes runs on all samples; AUC of the pooled held-out scores (difference of distances to the two centroids) is the statistic. Claim holds when AUC >= 0.90.",
+ "fixed": "In each fold, genes are ranked and the top 20 chosen using the training samples only; centroids from those; AUC on the pooled held-out scores.",
+ "estimand": "Faulty: AUC of a rule whose genes were chosen with the test samples' labels. Fixed: AUC of the whole procedure on new samples.",
+ "model_family": "t-ranking, top 20 genes, nearest-centroid classifier. Chosen by me: simple and cheap; the source's own are SVM-RFE and Fisher LDA, which are costlier at 7129 genes.",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes (leukaemia data): 72 samples (47 ALL, 25 AML) x 7129 genes (Europe PMC text as extracted by a tool). I use 72 x 2000 = 144k values because 7129 genes exceeds the 2000-unit axis limit; the sample count is the source's. Reported: for Fisher selection on leukaemia the uncorrected error was 0% at 3 genes against about 5% corrected; the full-sample SVM bias was 2-3% on leukaemia and 10-15% on colon, so the bias is larger for the data set with the harder classes.",
+ "exploited_structure": "Thousands of genes for tens of samples, so ranking genes on all labels picks genes that separate the classes by chance in the test samples too.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 27.78,
+  "note_value_source": "set by the brief: the statistic is genes/samples, so its value at the brief's sizes is 2000/72 = 27.78. (The source's own setting, 7129 genes and 72 samples per Europe PMC text of PMC124442, would give 99.0 but cannot occur at the brief's sizes.)",
+  "set_by_brief": true
+ },
+ "notes": "Reserve for AMB02 L1.3. Classification stays (the source reports error rates only; earlier evaluation used the same combination). Differs from B2B-06 in statistic (AUC vs error), sizes (72 x 7129 vs 62 x 2000), selected gene count and classifier.",
+ "subtype_or_tag": "L1.3",
+ "class": "B-2",
+ "approved_value": null
+}

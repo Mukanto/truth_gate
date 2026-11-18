@@ -1,0 +1,50 @@
+{
+  "case": "D-032",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 41,
+          "text": "min(n11, n10, n01, n00) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "min",
+          "calls": [
+            "min"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 33,
+          "text": "min(n11, n10, n01, n00) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "min",
+          "calls": [
+            "min"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

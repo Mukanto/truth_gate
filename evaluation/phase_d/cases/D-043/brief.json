@@ -1,0 +1,29 @@
+{
+ "id": "D-043",
+ "claim": "A classifier built from the measurements detects the condition in new records: its sensitivity for the positive class is at least 0.60.",
+ "data_keys": [
+  {
+   "key": "measurements",
+   "shape": "(records, variables)",
+   "dtype": "float",
+   "meaning": "measured variables of each record",
+   "dims": [
+    400,
+    8
+   ]
+  },
+  {
+   "key": "positive",
+   "shape": "(records,)",
+   "dtype": "bool",
+   "meaning": "True if the condition is present in the record",
+   "dims": [
+    400
+   ]
+  }
+ ],
+ "sizes": {
+  "records": 400,
+  "variables": 8
+ }
+}

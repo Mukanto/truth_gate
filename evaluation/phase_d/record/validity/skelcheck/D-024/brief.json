@@ -1,0 +1,26 @@
+{
+ "id": "D-024",
+ "claim": "Gene-expression profiles allow tumour tissue to be distinguished from normal tissue in new samples: the classification error rate is at most 0.20.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(tissues, genes)",
+   "dtype": "float",
+   "meaning": "log expression level of each gene in each tissue sample",
+   "dims": [
+    62,
+    2000
+   ]
+  },
+  {
+   "key": "tumour",
+   "shape": "(tissues,)",
+   "dtype": "bool",
+   "meaning": "True for a tumour tissue sample, False for a normal tissue sample",
+   "dims": [
+    62
+   ]
+  }
+ ],
+ "sizes": "{\"tissues\": 62, \"genes\": 2000}"
+}

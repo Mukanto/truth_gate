@@ -1,0 +1,153 @@
+[
+ {
+  "local_id": "B3A-01",
+  "claim": "Across skulls, cranial breadth and cranial height are positively associated after accounting for cranial length: the partial correlation coefficient between breadth and height, given length, is at least 0.2.",
+  "data_keys": [
+   {"key": "breadth", "shape": "(skulls,)", "dtype": "float", "meaning": "maximum cranial breadth of each skull, in mm"},
+   {"key": "height", "shape": "(skulls,)", "dtype": "float", "meaning": "cranial height of each skull, in mm"},
+   {"key": "length", "shape": "(skulls,)", "dtype": "float", "meaning": "maximum cranial length of each skull, in mm"}
+  ],
+  "sizes": {"skulls": 300}
+ },
+ {
+  "local_id": "B3A-02",
+  "claim": "At a given height, the mean forced vital capacity of smokers and of non-smokers differs by at least 0.2 L: the difference between the two group means, after accounting for height, is at least 0.2 L in absolute value.",
+  "data_keys": [
+   {"key": "fvc", "shape": "(subjects,)", "dtype": "float", "meaning": "forced vital capacity of each subject, in litres"},
+   {"key": "height", "shape": "(subjects,)", "dtype": "float", "meaning": "standing height of each subject, in cm"},
+   {"key": "smoker", "shape": "(subjects,)", "dtype": "bool", "meaning": "True if the subject is a current smoker"}
+  ],
+  "sizes": {"subjects": 600}
+ },
+ {
+  "local_id": "B3A-03",
+  "claim": "Across children, BMI at baseline and the subsequent change in BMI are negatively correlated: the correlation between the BMI level at baseline and the change in BMI by follow-up is at most -0.25.",
+  "data_keys": [
+   {"key": "bmi_baseline", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the baseline visit, in kg/m2"},
+   {"key": "bmi_baseline_retest", "shape": "(children,)", "dtype": "float", "meaning": "a second BMI measurement of each child at the baseline visit, in kg/m2"},
+   {"key": "bmi_followup", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2"}
+  ],
+  "sizes": {"children": 500}
+ },
+ {
+  "local_id": "B3A-04",
+  "claim": "Across patients, oxygen delivery and oxygen consumption are positively correlated: the Pearson correlation coefficient between them is at least 0.4.",
+  "data_keys": [
+   {"key": "cardiac_output", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output of each patient, in L/min"},
+   {"key": "arterial_o2_content", "shape": "(patients,)", "dtype": "float", "meaning": "oxygen content of arterial blood of each patient, in mL O2 per dL"},
+   {"key": "venous_o2_content", "shape": "(patients,)", "dtype": "float", "meaning": "oxygen content of mixed venous blood of each patient, in mL O2 per dL"},
+   {"key": "vo2_expired_gas", "shape": "(patients,)", "dtype": "float", "meaning": "oxygen consumption of each patient measured from expired-gas analysis, in mL/min"}
+  ],
+  "sizes": {"patients": 120}
+ },
+ {
+  "local_id": "B3A-05",
+  "claim": "In at least 60% of the species, femur length and humerus length are positively associated after accounting for body length: within the species, the partial correlation between femur length and humerus length, given body length, is at least 0.2.",
+  "data_keys": [
+   {"key": "femur", "shape": "(species, individuals)", "dtype": "float", "meaning": "femur length of each individual sampled in each species, in mm"},
+   {"key": "humerus", "shape": "(species, individuals)", "dtype": "float", "meaning": "humerus length of each individual sampled in each species, in mm"},
+   {"key": "body_length", "shape": "(species, individuals)", "dtype": "float", "meaning": "head-and-body length of each individual sampled in each species, in mm"}
+  ],
+  "sizes": {"species": 12, "individuals": 30}
+ },
+ {
+  "local_id": "B3A-06",
+  "claim": "Across countries, annual lung-cancer deaths and annual cigarette sales are associated after accounting for population: the standardised slope of deaths on cigarette sales, with population accounted for, is at least 0.2 in absolute value.",
+  "data_keys": [
+   {"key": "lung_cancer_deaths", "shape": "(countries,)", "dtype": "float", "meaning": "total lung-cancer deaths in each country in one year, in thousands"},
+   {"key": "cigarettes_sold", "shape": "(countries,)", "dtype": "float", "meaning": "total cigarettes sold in each country in the same year, in millions"},
+   {"key": "population", "shape": "(countries,)", "dtype": "float", "meaning": "population of each country, in millions"}
+  ],
+  "sizes": {"countries": 150}
+ },
+ {
+  "local_id": "B3A-07",
+  "claim": "Across children, BMI at age 5 and the yearly rate of change in BMI between ages 5 and 10 are negatively correlated: the correlation between the two is at most -0.25.",
+  "data_keys": [
+   {"key": "bmi", "shape": "(children, annual_visits)", "dtype": "float", "meaning": "BMI of each child at the annual visits at ages 5, 6, 7, 8, 9 and 10 (visits in age order), in kg/m2"}
+  ],
+  "sizes": {"children": 500, "annual_visits": 6}
+ },
+ {
+  "local_id": "B3A-08",
+  "claim": "Within patients, oxygen consumption rises with oxygen delivery: the mean over patients of the within-patient slope of oxygen consumption on oxygen delivery is at least 0.1 mL/min per mL/min.",
+  "data_keys": [
+   {"key": "cardiac_output", "shape": "(patients, occasions)", "dtype": "float", "meaning": "cardiac output of each patient at each measurement occasion, in L/min"},
+   {"key": "arterial_o2_content", "shape": "(patients, occasions)", "dtype": "float", "meaning": "oxygen content of arterial blood of each patient at each occasion, in mL O2 per dL"},
+   {"key": "venous_o2_content", "shape": "(patients, occasions)", "dtype": "float", "meaning": "oxygen content of mixed venous blood of each patient at each occasion, in mL O2 per dL"},
+   {"key": "vo2_expired_gas", "shape": "(patients, occasions)", "dtype": "float", "meaning": "oxygen consumption of each patient at each occasion measured from expired-gas analysis, in mL/min"}
+  ],
+  "sizes": {"patients": 40, "occasions": 6}
+ },
+ {
+  "local_id": "B3A-09",
+  "claim": "After accounting for body mass, kidney weight and heart weight are positively related: the standardised slope of kidney weight on heart weight is at least 0.25.",
+  "data_keys": [
+   {"key": "kidney_weight", "shape": "(rats,)", "dtype": "float", "meaning": "combined kidney weight of each rat, in g"},
+   {"key": "heart_weight", "shape": "(rats,)", "dtype": "float", "meaning": "heart weight of each rat, in g"},
+   {"key": "body_mass", "shape": "(rats,)", "dtype": "float", "meaning": "body mass of each rat, in g"}
+  ],
+  "sizes": {"rats": 60}
+ },
+ {
+  "local_id": "B3A-10",
+  "claim": "Age explains at least 10% of the variance in liver mass beyond what body mass explains: the increase in R-squared when age is added to a regression of liver mass on body mass is at least 0.10.",
+  "data_keys": [
+   {"key": "liver_mass", "shape": "(rats,)", "dtype": "float", "meaning": "liver mass of each rat, in g"},
+   {"key": "age_days", "shape": "(rats,)", "dtype": "float", "meaning": "age of each rat, in days"},
+   {"key": "body_mass", "shape": "(rats,)", "dtype": "float", "meaning": "body mass of each rat, in g"}
+  ],
+  "sizes": {"rats": 80}
+ },
+ {
+  "local_id": "B3A-11",
+  "claim": "Heart weight accounts for at least 10% of the variance in liver weight beyond what body mass accounts for: the increase in R-squared when heart weight is added to a regression of liver weight on body mass is at least 0.10.",
+  "data_keys": [
+   {"key": "liver_weight", "shape": "(mice,)", "dtype": "float", "meaning": "liver weight of each mouse, in g"},
+   {"key": "heart_weight", "shape": "(mice,)", "dtype": "float", "meaning": "heart weight of each mouse, in g"},
+   {"key": "body_mass", "shape": "(mice,)", "dtype": "float", "meaning": "body mass of each mouse, in g"}
+  ],
+  "sizes": {"mice": 1500}
+ },
+ {
+  "local_id": "B3A-12",
+  "claim": "Across cities, annual offences recorded and the median age of residents are associated after accounting for population: the partial correlation coefficient between offences and median age, given population, is at least 0.25 in absolute value.",
+  "data_keys": [
+   {"key": "offences", "shape": "(cities,)", "dtype": "float", "meaning": "total offences recorded in each city in one year"},
+   {"key": "median_age", "shape": "(cities,)", "dtype": "float", "meaning": "median age of the residents of each city, in years"},
+   {"key": "population", "shape": "(cities,)", "dtype": "float", "meaning": "population of each city, in thousands"}
+  ],
+  "sizes": {"cities": 500}
+ },
+ {
+  "local_id": "B3A-13",
+  "claim": "The expected change in BMI between baseline and follow-up is smaller for children with a higher baseline BMI: each additional 1 kg/m2 of baseline BMI goes with a change in BMI that is at least 0.2 kg/m2 smaller (slope of at most -0.2).",
+  "data_keys": [
+   {"key": "bmi_baseline", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the baseline visit, in kg/m2"},
+   {"key": "bmi_followup", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2"},
+   {"key": "bmi_retest", "shape": "(retest_children, retest_sessions)", "dtype": "float", "meaning": "BMI of each child of a test-retest sample at two sessions a few days apart, in kg/m2"}
+  ],
+  "sizes": {"children": 500, "retest_children": 100, "retest_sessions": 2}
+ },
+ {
+  "local_id": "B3A-14",
+  "claim": "Baseline BMI explains at least 10% of the variance in the change in BMI between baseline and follow-up (R-squared of at least 0.10).",
+  "data_keys": [
+   {"key": "bmi_baseline", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the baseline visit, in kg/m2"},
+   {"key": "bmi_baseline_retest", "shape": "(children,)", "dtype": "float", "meaning": "a second BMI measurement of each child at the baseline visit, in kg/m2"},
+   {"key": "bmi_followup", "shape": "(children,)", "dtype": "float", "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2"}
+  ],
+  "sizes": {"children": 500}
+ },
+ {
+  "local_id": "B3A-15",
+  "claim": "Across patients, cardiac output explains at least 25% of the variance in systemic vascular resistance (R-squared of at least 0.25).",
+  "data_keys": [
+   {"key": "mean_arterial_pressure", "shape": "(patients,)", "dtype": "float", "meaning": "mean arterial pressure of each patient, in mmHg"},
+   {"key": "central_venous_pressure", "shape": "(patients,)", "dtype": "float", "meaning": "central venous pressure of each patient, in mmHg"},
+   {"key": "co_thermodilution", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output of each patient measured by thermodilution, in L/min"},
+   {"key": "co_fick", "shape": "(patients,)", "dtype": "float", "meaning": "cardiac output of each patient measured by the Fick method from expired-gas oxygen uptake, in L/min"}
+  ],
+  "sizes": {"patients": 100}
+ }
+]

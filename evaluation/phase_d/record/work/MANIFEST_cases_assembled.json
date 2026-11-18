@@ -1,0 +1,1154 @@
+{
+ "D-001/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-001\\CASE.md",
+  "sha256": "a45645d393bc240a535fdfdacd78068483de9ceec643e83aa1ad5f789c0ff3fa"
+ },
+ "D-001/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-001\\faulty_body.py",
+  "sha256": "d21ecb277cf174d5508d7db3ac7f5986248f40f002ca3be0611f01ced69869bc"
+ },
+ "D-001/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-001\\fixed_body.py",
+  "sha256": "5ae1988094bce29ea5b9caf06d3a10c42d41c164d666190d20b6af2713b9779d"
+ },
+ "D-001/reference.py": {
+  "from": "structure\\B3B\\cases\\D-001\\reference.py",
+  "sha256": "702b3d6bf5d98db6ce9a4cec53bd9c2a0c487ccc4a200a91ff5d7b0d0e45ff61"
+ },
+ "D-002/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-002\\CASE.md",
+  "sha256": "b5d36a79d27893c50184bd9c937cd009efee004c14eebe585aa0b85e4882f869"
+ },
+ "D-002/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-002\\faulty_body.py",
+  "sha256": "2c73745c61e5e6a859e369150fa0be980abf5389e2a58ce836a1289bdd90ab32"
+ },
+ "D-002/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-002\\fixed_body.py",
+  "sha256": "f5d0626c1559774dd1437eeec469982a7d8d514b14438ca728af62374ddee9ce"
+ },
+ "D-002/reference.py": {
+  "from": "structure\\B3B\\cases\\D-002\\reference.py",
+  "sha256": "669f8f9776cfe97043684b11c8072d98695d904e5afeecb332bcde672721ebf6"
+ },
+ "D-003/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-003\\CASE.md",
+  "sha256": "1b8dd202319b5aac14c81bc786fe6568cde5bb1025b3f835fe294e5c2bcf814d"
+ },
+ "D-003/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-003\\faulty_body.py",
+  "sha256": "fee6baa0ef1d7a9d4c32675faea66a57c357cd1ea9702b7b90d3db8d7b0e88d2"
+ },
+ "D-003/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-003\\fixed_body.py",
+  "sha256": "f91d9af7fa694daf3198a8efd0f132b7e8866be4b8c29182929d5581dc2c715b"
+ },
+ "D-003/reference.py": {
+  "from": "structure\\B2B\\cases\\D-003\\reference.py",
+  "sha256": "3961f434f91dd926fb324fac7378693e282c4660038451e4e50927ade6068200"
+ },
+ "D-004/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-004\\CASE.md",
+  "sha256": "3cdcd69334b6237237cbb5a52dccfe489678fd9fd82ab104858fbf58565fd5fa"
+ },
+ "D-004/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-004\\faulty_body.py",
+  "sha256": "a8ccbf2c6f2c5c7ea1838a3091c93f22fafb981fa71a9ad6497a60a2436c2043"
+ },
+ "D-004/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-004\\fixed_body.py",
+  "sha256": "b46146a97584df16b3b5f31abdc78b897763ecac0829cb8dffe43b3c1c9c8e68"
+ },
+ "D-004/reference.py": {
+  "from": "structure\\B2A\\cases\\D-004\\reference.py",
+  "sha256": "f3293826b66ca54f7b882f27ba8df99d5630375c3c9873b0bd388835f2482b65"
+ },
+ "D-005/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-005\\CASE.md",
+  "sha256": "34d83ee31194791e8c92d4144a9eb5b4bc866920c04a57a9b74949f664c3b90a"
+ },
+ "D-005/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-005\\faulty_body.py",
+  "sha256": "abf3d4f53c1a12ee46cd5eaf8eb173559a0549dd555bbade03051509435f91c8"
+ },
+ "D-005/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-005\\fixed_body.py",
+  "sha256": "4403ffeb8bf9013e0fa37c60d182dbbc23305ccc27834a6188e61cc788e6128f"
+ },
+ "D-005/reference.py": {
+  "from": "structure\\B2A\\cases\\D-005\\reference.py",
+  "sha256": "4c6ab16124dbc09d9fb469567bfac24b44f96a4d8e05a61f8864eb51c6e09a19"
+ },
+ "D-006/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-006\\CASE.md",
+  "sha256": "075f99549f20a75aa91b9502d7df7932455ef0f7cc26eb55400e6c4ea18b8001"
+ },
+ "D-006/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-006\\faulty_body.py",
+  "sha256": "0f5e9e3d9d5e29f069293546b466eab485e806fcd3bf0e3ab16384c7d2bda342"
+ },
+ "D-006/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-006\\fixed_body.py",
+  "sha256": "39bf0c6794710afa2b544cd5b88fd291786b0e8d8298dee80e3b4b45c9921653"
+ },
+ "D-006/reference.py": {
+  "from": "structure\\B3A\\cases\\D-006\\reference.py",
+  "sha256": "f49c48393169390020d899fa4565be12ebbbf7423f1d6b3e11405034f8769171"
+ },
+ "D-007/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-007\\CASE.md",
+  "sha256": "8e8ea00a86307321c6232c859338afc2a0600fa41e1c4d4c7ca36dd88a92c2be"
+ },
+ "D-007/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-007\\faulty_body.py",
+  "sha256": "7b696ac4f81d58738000c01a0a234d889a94a9b8201a81d182f0c52a1d09c9b6"
+ },
+ "D-007/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-007\\fixed_body.py",
+  "sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944"
+ },
+ "D-007/reference.py": {
+  "from": "structure\\B2B\\cases\\D-007\\reference.py",
+  "sha256": "2a9f8749b3d140ec170dcb76486d1fe8dd465cb4553ab36b0bf73db71cba422d"
+ },
+ "D-008/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-008\\CASE.md",
+  "sha256": "ffd387b62d249452b697c31e8fb0ef805263f54f9c3e9f209b1de3748ad40519"
+ },
+ "D-008/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-008\\faulty_body.py",
+  "sha256": "337de2ae455618dc40e2b831010c791bb51c5b4f4d593a2b6f5362b88c8f8c5d"
+ },
+ "D-008/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-008\\fixed_body.py",
+  "sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981"
+ },
+ "D-008/reference.py": {
+  "from": "structure\\B3A\\cases\\D-008\\reference.py",
+  "sha256": "f885adc9df756ea07e04fce5ace837e3dc2e9ceb4f5b422987c4dcfb80512b27"
+ },
+ "D-009/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-009\\CASE.md",
+  "sha256": "99f7d900810ba0aecb072d86848a8789ceafac09c46ccf987ecf72664163c862"
+ },
+ "D-009/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-009\\faulty_body.py",
+  "sha256": "ce16a7fb15fac2e175c75d6851a5922a3aa2130cbaa3b9b0d13289488fbbd762"
+ },
+ "D-009/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-009\\fixed_body.py",
+  "sha256": "93551c72f234c45ec74846c386ae2e5dcc228ad51c29ca0c4cff1cb4a0d657f3"
+ },
+ "D-009/reference.py": {
+  "from": "structure\\B3B\\cases\\D-009\\reference.py",
+  "sha256": "f53fa3f2ff534770f8b3508fb133d9954e56ad37146b50fb3f4329da1ff63fdd"
+ },
+ "D-010/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-010\\CASE.md",
+  "sha256": "c08a650559948d5527fa0a72844da791f4cb5df2f910066a126ab35eed4b8447"
+ },
+ "D-010/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-010\\faulty_body.py",
+  "sha256": "5e5d2dfb9ec726dff6916f9d579ed351b9789d6766d3f8c2c63b0d128b4f493c"
+ },
+ "D-010/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-010\\fixed_body.py",
+  "sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10"
+ },
+ "D-010/reference.py": {
+  "from": "structure\\B2A\\cases\\D-010\\reference.py",
+  "sha256": "bc94549159855d15e644ba1e63c4faa82c9f3d709f67f55d1d963ee906c0c867"
+ },
+ "D-011/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-011\\CASE.md",
+  "sha256": "734cbe69cd784c411d77d04bbfdcd7f4d500d3aa0f69adee7942fd344393ba9d"
+ },
+ "D-011/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-011\\faulty_body.py",
+  "sha256": "0e0c6ca215cdb0df5e7aa6f209b44c51bcb7a40e4e06b713c5dc80542947149f"
+ },
+ "D-011/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-011\\fixed_body.py",
+  "sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa"
+ },
+ "D-011/reference.py": {
+  "from": "structure\\B2B\\cases\\D-011\\reference.py",
+  "sha256": "aec2a01649e5197d3bb94137f05a186ec90c0815c6305669f1be06c74192daca"
+ },
+ "D-012/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-012\\CASE.md",
+  "sha256": "386b5b47eefd79c0c7bad2cc3d3ccc39dba959febdf3ac2a508e11ffd9c97a55"
+ },
+ "D-012/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-012\\faulty_body.py",
+  "sha256": "c314e068c027f548d1d1a5242aef7f7a341fe629a8cab93916a42bb7be489322"
+ },
+ "D-012/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-012\\fixed_body.py",
+  "sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950"
+ },
+ "D-012/reference.py": {
+  "from": "structure\\DEC\\cases\\D-012\\reference.py",
+  "sha256": "ee22175a1186c4727ed617ad2a1c74a6504ab504222949698ad69a2d48dd58f5"
+ },
+ "D-013/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-013\\CASE.md",
+  "sha256": "4f9d4208139a8da31c82f892171ddd576ca18001b706b8c078cbbd5e98f50e3f"
+ },
+ "D-013/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-013\\faulty_body.py",
+  "sha256": "36c13df057c755f3d43fcae8b5d381e85dc3d6b61cc77df91726d811f274d8b7"
+ },
+ "D-013/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-013\\fixed_body.py",
+  "sha256": "718b27f9aa32a066f51e0efee102c340d6cb60992f9de183669eca9b0871268a"
+ },
+ "D-013/reference.py": {
+  "from": "structure\\B2B\\cases\\D-013\\reference.py",
+  "sha256": "fda9cbe361fe5a7523b4421917062d5a478d258f0837bc8b62b9737d6f148c47"
+ },
+ "D-014/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-014\\CASE.md",
+  "sha256": "68e52c3ff8597af393bb2c39a9b3579d4a9099a29533a4bd343d307fa9544ac3"
+ },
+ "D-014/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-014\\faulty_body.py",
+  "sha256": "4d050b615cea08279d6bb6f1fb5b909f79405d3bb4d34d0adec73fe998ead8a3"
+ },
+ "D-014/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-014\\fixed_body.py",
+  "sha256": "0cc01cd48a1714bb491d8aa1004cf2962f276b4f01b0922d0040f33d467a2c79"
+ },
+ "D-014/reference.py": {
+  "from": "structure\\B2A\\cases\\D-014\\reference.py",
+  "sha256": "dda101ff00dd14b31939a4c992379c4008f4b2c7b2cb7995b9143ff1854e3ec6"
+ },
+ "D-015/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-015\\CASE.md",
+  "sha256": "3f22e209011e08ae90a53cb18f81432690233680ce796435d2c87d60adeaf2dd"
+ },
+ "D-015/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-015\\faulty_body.py",
+  "sha256": "e0a709840726398b0aaa7ebb4754e4508b82f2df8e09481d23329c01c0ca960d"
+ },
+ "D-015/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-015\\fixed_body.py",
+  "sha256": "6005c7192187094e4369f4104b562d728ee827ebd4dfe6b77e7036e5adffc087"
+ },
+ "D-015/reference.py": {
+  "from": "structure\\B3A\\cases\\D-015\\reference.py",
+  "sha256": "f7955a5cc41f0493cbc5322e90b30edebd4a2e3cda6c7f6729644dcf0f07346e"
+ },
+ "D-016/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-016\\CASE.md",
+  "sha256": "352fb244ace3abcd9009556af99834c7ea0ea801f251e4c0d9fa4fad250b42e1"
+ },
+ "D-016/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-016\\faulty_body.py",
+  "sha256": "2eafa9da832e4dbdf6a8d7417ff3216fe28fda3d6692cabc27d09aec7073e20f"
+ },
+ "D-016/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-016\\fixed_body.py",
+  "sha256": "fa9b3dc0195498403be933df63b53b5f36fb6b4e35fe47c923c9465f583f1f30"
+ },
+ "D-016/reference.py": {
+  "from": "structure\\DEC\\cases\\D-016\\reference.py",
+  "sha256": "ac9cd44c1f6903df4d52b3ac662dad40f10d5eddc9ab71b24704307afe588ab9"
+ },
+ "D-017/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-017\\CASE.md",
+  "sha256": "b55ee9c351422438834d2be6c5373f239fdd5d755bd2028f4eb000197879cf87"
+ },
+ "D-017/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-017\\faulty_body.py",
+  "sha256": "f73996af7dcd0b4e61602bf53ba393d2be1b7e34fd07bd67d642c5717ea9dbe3"
+ },
+ "D-017/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-017\\fixed_body.py",
+  "sha256": "3871fbb2e49ecf893815c83174ac7c2f7804f83ac9c994bdc000ce240ac9dc78"
+ },
+ "D-017/reference.py": {
+  "from": "structure\\B3A\\cases\\D-017\\reference.py",
+  "sha256": "cb6a936f7297377e85dc60ad1a9f6780b213596ae3eb31aa702f6dda758c9332"
+ },
+ "D-018/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-018\\CASE.md",
+  "sha256": "0ec0007bf96b8e7966ef882649460693d7aec117b6cab92626557087260fc4e2"
+ },
+ "D-018/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-018\\faulty_body.py",
+  "sha256": "248774acf3869c3376b40936eaacb4259f1942353923d6c71738eb0334b8e7c9"
+ },
+ "D-018/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-018\\fixed_body.py",
+  "sha256": "f01e0678f0c5d2b7f23ee349f371eac894041d86ce27893b5078861d1170dd75"
+ },
+ "D-018/reference.py": {
+  "from": "structure\\B2B\\cases\\D-018\\reference.py",
+  "sha256": "fdb90bfba0a0f8c3138c4b468bf711005ef54f36baa82b6f7a0e29cd165c377f"
+ },
+ "D-019/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-019\\CASE.md",
+  "sha256": "389d04603d7241cb496128741979f2b38abd6b94e9176374de33598b8cf13198"
+ },
+ "D-019/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-019\\faulty_body.py",
+  "sha256": "0d24389213541317d2be7b6bb09ab8f2c762bc9e6dafdde7aca8d4ed3de7969b"
+ },
+ "D-019/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-019\\fixed_body.py",
+  "sha256": "907bd1e887203679526d4b462cb528996b1d65fec8357fe7ff94e9b39402532d"
+ },
+ "D-019/reference.py": {
+  "from": "structure\\B3B\\cases\\D-019\\reference.py",
+  "sha256": "89e13448802e970398f95e65219e6ca1f4ce532f600aa0af5f40d2e4be922599"
+ },
+ "D-020/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-020\\CASE.md",
+  "sha256": "5e6916f04e50a17d6c4055ca46f8265461104e19416ca04fb1b351a909cde15e"
+ },
+ "D-020/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-020\\faulty_body.py",
+  "sha256": "ddaabc31c1116a87cdc7cfd3cc40825b2960c33acf791f5369179d1270a96484"
+ },
+ "D-020/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-020\\fixed_body.py",
+  "sha256": "a1ed50dda8dfa818d749c86fdaa52723a4048e702e13af58260b3601b18f0016"
+ },
+ "D-020/reference.py": {
+  "from": "structure\\B3A\\cases\\D-020\\reference.py",
+  "sha256": "67ce7c619dfa736a4283e6f24e4449be5c7dc6ba010b2cb3f70efc93ec94eaae"
+ },
+ "D-021/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-021\\CASE.md",
+  "sha256": "8093d18c3bd914c6fcacfc159a6c3278aa9b60232cd120696776002887010848"
+ },
+ "D-021/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-021\\faulty_body.py",
+  "sha256": "f467c0a9d4fc38c1da6a6874026f65cf752f1e82aa7b2a73b2b10b0853368efe"
+ },
+ "D-021/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-021\\fixed_body.py",
+  "sha256": "97b6fa5a55ab8f6364ee8fd6d23d26eb64857064e4417a9040f11812d96635b1"
+ },
+ "D-021/reference.py": {
+  "from": "structure\\DEC\\cases\\D-021\\reference.py",
+  "sha256": "7e91c5b189aadd9548478e7e947bebe8b3743c8e3c66091949b21bbfb4289727"
+ },
+ "D-022/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-022\\CASE.md",
+  "sha256": "d8c682c013dcb4ade0ee1974bcb21eba9e2986b32e9d71686c059fdde7b8ba4d"
+ },
+ "D-022/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-022\\faulty_body.py",
+  "sha256": "7b4f74fa34d000e91f7d753cda60629f6cde584b0426cbca279f203fd38abb2a"
+ },
+ "D-022/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-022\\fixed_body.py",
+  "sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325"
+ },
+ "D-022/reference.py": {
+  "from": "structure\\B2A\\cases\\D-022\\reference.py",
+  "sha256": "2aa8e14361ecc175be9c3e2e09644875f9cb0c8bb99b8b591121ead27cb70582"
+ },
+ "D-023/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-023\\CASE.md",
+  "sha256": "7b0278f88766a1399e576ad668720b1637c4623f1bf3692bbfdc6e8571af5212"
+ },
+ "D-023/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-023\\faulty_body.py",
+  "sha256": "a8871e959d06e0b1ae88d094547541e93c1332fd12b9621430cba2be1e1ccf9c"
+ },
+ "D-023/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-023\\fixed_body.py",
+  "sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4"
+ },
+ "D-023/reference.py": {
+  "from": "structure\\B3B\\cases\\D-023\\reference.py",
+  "sha256": "dee2654c405de7890426681c64830a7c560e8e19d2545938d2070ec5b1b3ea37"
+ },
+ "D-024/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-024\\CASE.md",
+  "sha256": "df708ccf12ec0779450afed7c07538e71604bc5e84367c142f464c596b2f1ca5"
+ },
+ "D-024/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-024\\faulty_body.py",
+  "sha256": "bce9290a0471fd71238e761f65526700835a48eb8f6907ef3c337bbeb4985283"
+ },
+ "D-024/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-024\\fixed_body.py",
+  "sha256": "65af2827c4031ac10744aa896ca648dcfa2bae1b067b68b6bceaacb5fde17ae5"
+ },
+ "D-024/reference.py": {
+  "from": "structure\\B2B\\cases\\D-024\\reference.py",
+  "sha256": "4bb74b7556644bc9ba41c74c1dffcac8597732a74fda2bdc1980585b3c72a778"
+ },
+ "D-025/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-025\\CASE.md",
+  "sha256": "386069dff06f1614e7900ba66c3890867269532268a8ef3fad3e6711d98a07ef"
+ },
+ "D-025/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-025\\faulty_body.py",
+  "sha256": "30115c213583455cc9e73c39430410e3cb49d246d9dfd1bec349b4512f94da9a"
+ },
+ "D-025/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-025\\fixed_body.py",
+  "sha256": "750d1b2b396007c9f60635e764007a37937683b03bbc3c9768068493a93e722a"
+ },
+ "D-025/reference.py": {
+  "from": "structure\\B3B\\cases\\D-025\\reference.py",
+  "sha256": "885bfc27f7970f118abd890ff516ead5e2432afb48d4b6becfe8c2ae45acbf03"
+ },
+ "D-026/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-026\\CASE.md",
+  "sha256": "751a6f75f15bf02eace25b37b4d604a7f75939b8d742079f0cbcbe45b6246040"
+ },
+ "D-026/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-026\\faulty_body.py",
+  "sha256": "95616751f0824acb04eae286091f1ba0ea8c14fc76ccd85bda87ed0fa19b4b96"
+ },
+ "D-026/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-026\\fixed_body.py",
+  "sha256": "b512fb5d4fe6e4dd883166ce17374953cfb5e94ed4925d0c655a9fb3fffc928d"
+ },
+ "D-026/reference.py": {
+  "from": "structure\\B3B\\cases\\D-026\\reference.py",
+  "sha256": "44f3936fdda3c14e6428c74b46665a9a531f5d3c30a4d8a9edaf51819557f365"
+ },
+ "D-027/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-027\\CASE.md",
+  "sha256": "44bd73001c61e7c2a054a15304f8c4ebe689d5e50642abc0f51e960dae35fd4a"
+ },
+ "D-027/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-027\\faulty_body.py",
+  "sha256": "3d9c39f7529c9271259c93421fbccf79fd631669cac294d75e950b730a5a1abd"
+ },
+ "D-027/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-027\\fixed_body.py",
+  "sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991"
+ },
+ "D-027/reference.py": {
+  "from": "structure\\B2A\\cases\\D-027\\reference.py",
+  "sha256": "1e4f8297f859c4a63da18f78d1ce3844e35f58687e7a36addc789d64845dce9b"
+ },
+ "D-028/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-028\\CASE.md",
+  "sha256": "6e05377264e982737932ce54d0aa581959e672a535884e9a2f7c36d9fe9e1fa9"
+ },
+ "D-028/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-028\\faulty_body.py",
+  "sha256": "9c64a4e20c39ffd25fb998fe13fb632d02bf878de2caa7ed79685e4c44d3e741"
+ },
+ "D-028/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-028\\fixed_body.py",
+  "sha256": "cb433084c3b204cfed8385061018115d4f89ab4b3a42fa9d5983a9d34de24c65"
+ },
+ "D-028/reference.py": {
+  "from": "structure\\DEC\\cases\\D-028\\reference.py",
+  "sha256": "6e8444af451a536a2f9d9360c841e5143e17fe1d939169d09ffea575217cbe85"
+ },
+ "D-029/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-029\\CASE.md",
+  "sha256": "d77a447bebaee4fe43cf6db8c4e56ce873a53251b06691c05d169d78b23334a8"
+ },
+ "D-029/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-029\\faulty_body.py",
+  "sha256": "3e5079684e1958190b3bcf8db0542997cd6c6ceb21fa649a15b92428484e186d"
+ },
+ "D-029/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-029\\fixed_body.py",
+  "sha256": "1cedb8abb7d2cd945e4ec24d869cc8830ce3fe9327cce569037bb19c6b1e623a"
+ },
+ "D-029/reference.py": {
+  "from": "structure\\B2A\\cases\\D-029\\reference.py",
+  "sha256": "a5462ccdc300dee3272e27edcda5620a252805c44f812197101eb26b95b9da78"
+ },
+ "D-030/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-030\\CASE.md",
+  "sha256": "d0b17b5255b4559dbaba92e40b79684ca824c68bc4965f68ce35ff027f6ee922"
+ },
+ "D-030/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-030\\faulty_body.py",
+  "sha256": "7b30d69aca123549e464cf1848591f54a214162bb72ffc085b329792d2fef2b3"
+ },
+ "D-030/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-030\\fixed_body.py",
+  "sha256": "5c6ee01d7b3d91e2991020c5173f2040b4fbd4d66b2cc5b6aba14fc1f16e06b7"
+ },
+ "D-030/reference.py": {
+  "from": "structure\\DEC\\cases\\D-030\\reference.py",
+  "sha256": "de97eb0ead959ff35c0cef121d7e48ff84c74749896dc8122ebce4a770332062"
+ },
+ "D-031/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-031\\CASE.md",
+  "sha256": "602a00cb648698c8a28ead9b01963fa4209f66246f9f33863f3b2af8b3671108"
+ },
+ "D-031/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-031\\faulty_body.py",
+  "sha256": "b5ba143ffb90169a4c70ecf3209af44e1eeda4e02269ee78c0fb7d61e1a836f0"
+ },
+ "D-031/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-031\\fixed_body.py",
+  "sha256": "386da06fedad2a2ae1325a9e606f8764991587c0b24eda92ff7a9e771f308b8a"
+ },
+ "D-031/reference.py": {
+  "from": "structure\\B3A\\cases\\D-031\\reference.py",
+  "sha256": "181b64935eb47eb044bab71ded988764d09eb493c2acd03ad6e0326f7171667b"
+ },
+ "D-032/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-032\\CASE.md",
+  "sha256": "84b9d96280994f661f5a3fc64b42a5d7f101247379a520eaa5c3527d961be798"
+ },
+ "D-032/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-032\\faulty_body.py",
+  "sha256": "31974754e688eb0de625f4aa7767fd692e1240f8fd39f2194b96ae5f74b46117"
+ },
+ "D-032/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-032\\fixed_body.py",
+  "sha256": "22c371acfcd18dfb7b2ab79a65e6ea8640ef2a4d34ea4f3c789e257058a54111"
+ },
+ "D-032/reference.py": {
+  "from": "structure\\DEC\\cases\\D-032\\reference.py",
+  "sha256": "c66c5407e3b33135b59539cce0286671ea4e3acff68a2c2c1fbb0a21f471bdd2"
+ },
+ "D-033/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-033\\CASE.md",
+  "sha256": "cc5428f4b749449b3dfe2b2bb10b0085065bb95ee84e5b886bc147ad84183f23"
+ },
+ "D-033/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-033\\faulty_body.py",
+  "sha256": "0f995a9ff2121fe83d064496fb1d4e3252525f7221146e00ed611a2c2a1dcd36"
+ },
+ "D-033/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-033\\fixed_body.py",
+  "sha256": "1ee3a9a64ec74f89446b9501c2082e89bb1a7cac472996f64656c2f4b9edb02b"
+ },
+ "D-033/reference.py": {
+  "from": "structure\\DEC\\cases\\D-033\\reference.py",
+  "sha256": "be2a680411da8cacb2e9156a968b375cba99ab88503ec4ed7540e5d94dc6fed2"
+ },
+ "D-034/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-034\\CASE.md",
+  "sha256": "de70b4b2e024f8bb5eb527aaa5103fa9cff96fa204c86d5922af30bb138362d1"
+ },
+ "D-034/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-034\\faulty_body.py",
+  "sha256": "e8ca5658b6c0b60a2c490b08ee5a42174d27d3431ad0c4e1f0ab6f4a71c1c9a7"
+ },
+ "D-034/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-034\\fixed_body.py",
+  "sha256": "58d8dcc285a7221ecfc5ce6ea7c28bec41a368b52dbee6a09b68845ae5b652fd"
+ },
+ "D-034/reference.py": {
+  "from": "structure\\B2B\\cases\\D-034\\reference.py",
+  "sha256": "d7b5b7ea0019ae04e5c19dae6953cb29a6119a5138e5a280cff7737a36e74d55"
+ },
+ "D-035/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-035\\CASE.md",
+  "sha256": "ba636a5a7cd634cb5cd48ea6b76f0f835d39f9d7b5c3295c0452d8081cf8dbb0"
+ },
+ "D-035/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-035\\faulty_body.py",
+  "sha256": "93e8adbafdbe882955c0df36e6ac85a7b30da14c0a9b4211765d8798c1b4e915"
+ },
+ "D-035/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-035\\fixed_body.py",
+  "sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c"
+ },
+ "D-035/reference.py": {
+  "from": "structure\\B2B\\cases\\D-035\\reference.py",
+  "sha256": "66a74ad1fc3a4ce051cb40a33c26a9398c678c76c5fafcc983fdfa471c4d164e"
+ },
+ "D-036/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-036\\CASE.md",
+  "sha256": "1fb1eede8c5d70dead60eb22106129e4489089d6e8dc3f1c2372160f8282c23e"
+ },
+ "D-036/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-036\\faulty_body.py",
+  "sha256": "43580318745faf739ac6ae6ad24f560590f2b75c021412bd091ebb6ec3cd11a4"
+ },
+ "D-036/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-036\\fixed_body.py",
+  "sha256": "900de100a8a26247b21730923f4d0a687b3366795d033824850340f071885b1e"
+ },
+ "D-036/reference.py": {
+  "from": "structure\\B3A\\cases\\D-036\\reference.py",
+  "sha256": "24d8d88bfbc255972c71cd3bdfd76aad53a0ac5eee9b411b80b653ef1b6605df"
+ },
+ "D-037/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-037\\CASE.md",
+  "sha256": "a623a1b9fa00be3d85c06e86359cbe8d05b07229a5d997ec929893db75586803"
+ },
+ "D-037/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-037\\faulty_body.py",
+  "sha256": "1ed7ef37cbba74d4f91b63f7143121a86e83956b0e0d60f0cbc53540298d5939"
+ },
+ "D-037/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-037\\fixed_body.py",
+  "sha256": "0e9daf1edf84e7216824bb40bb36575a0add4a12e4fadc63f451596d91837cc7"
+ },
+ "D-037/reference.py": {
+  "from": "structure\\B3A\\cases\\D-037\\reference.py",
+  "sha256": "9182659ba592f7ee50dd4735a25dbe50a0e6c23878860aa4c84b60a0f24276eb"
+ },
+ "D-038/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-038\\CASE.md",
+  "sha256": "1950d2bd8e987045cefe71426a900dcc0e69e8ebba8381ef7bff6486bce5ae1b"
+ },
+ "D-038/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-038\\faulty_body.py",
+  "sha256": "88ab0bcdc09eec3f8220fcb9a459e4cc363921965c9ef52a29129278e71a5285"
+ },
+ "D-038/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-038\\fixed_body.py",
+  "sha256": "cfcb61cb1bb89bee9bff775796b91ef877dc153ebef16e30aa2c69859c2435e9"
+ },
+ "D-038/reference.py": {
+  "from": "structure\\B3A\\cases\\D-038\\reference.py",
+  "sha256": "b107f088152f01f8d526af73d35b22c185e6f0977d63f0061b023fea838dd9b6"
+ },
+ "D-039/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-039\\CASE.md",
+  "sha256": "4ba8372ed58c7c35d8e787ff7141b793533b6f73cb989508d1ede56fa9b1da8e"
+ },
+ "D-039/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-039\\faulty_body.py",
+  "sha256": "156e60280060010f7e3ea420fbe91843c6aa9ae95abed893b611a15323187991"
+ },
+ "D-039/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-039\\fixed_body.py",
+  "sha256": "eb7a7c0b00b5b75ddf8738e5bb4f677d5ea98f1620e9dce66d0a98d5b9df9f99"
+ },
+ "D-039/reference.py": {
+  "from": "structure\\B2A\\cases\\D-039\\reference.py",
+  "sha256": "8899e0f97bb8bb0674c135abe791124ccc199ba5b631657383984b08f2a34e2a"
+ },
+ "D-040/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-040\\CASE.md",
+  "sha256": "6b3f069f8fd64806647701e00ec6a89a1fe65b2e5ec01196deb430046f39a63c"
+ },
+ "D-040/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-040\\faulty_body.py",
+  "sha256": "b4c8f9739d43eedbb95f593fd8eb04248861c4fc2c1866d20e2a0845e44f13ac"
+ },
+ "D-040/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-040\\fixed_body.py",
+  "sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede"
+ },
+ "D-040/reference.py": {
+  "from": "structure\\B3A\\cases\\D-040\\reference.py",
+  "sha256": "3b8ec59062b2a3a39dbdfaad9c9bfa9dee983a1446de5f8d24e9a606a1ce3921"
+ },
+ "D-041/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-041\\CASE.md",
+  "sha256": "7121eff8e6cb75d27ae3fb02415c0e3ee811e468170023a6ed7ee9871350ff56"
+ },
+ "D-041/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-041\\faulty_body.py",
+  "sha256": "cbf64f939b5b048192327d3fd318c720e846cf3cd41ea1b64e08904c5c49dea2"
+ },
+ "D-041/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-041\\fixed_body.py",
+  "sha256": "e5988d29616b357c00d9f492414515f623b95151ec4b7d1ae172433aafda5cd6"
+ },
+ "D-041/reference.py": {
+  "from": "structure\\B2A\\cases\\D-041\\reference.py",
+  "sha256": "0377239ba16498b633790726fa1702c5767490ac1dfccb51f9652a18faa0236a"
+ },
+ "D-042/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-042\\CASE.md",
+  "sha256": "b6b59bacd8b2752746ba458e6445de4301cbe6d18fc5d0f63df3920d789e778f"
+ },
+ "D-042/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-042\\faulty_body.py",
+  "sha256": "8e65d6a981b5e77121f964de71a6f8cee5e274b80bbedf6c1a8577d10f471297"
+ },
+ "D-042/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-042\\fixed_body.py",
+  "sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c"
+ },
+ "D-042/reference.py": {
+  "from": "structure\\B2A\\cases\\D-042\\reference.py",
+  "sha256": "a3dd1f51cda10e304dc72b1b8d3dd191c5465fdc1d688ab048226e3bb5db7ea1"
+ },
+ "D-043/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-043\\CASE.md",
+  "sha256": "479fb39ddff5bba0bd270e7287336b1e43bfa13d7dff79351989920561d05f16"
+ },
+ "D-043/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-043\\faulty_body.py",
+  "sha256": "6e7c6bf864f14bb4598a337e24c16cfeffe8d42588fb5c47bec5d7a3f79ab766"
+ },
+ "D-043/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-043\\fixed_body.py",
+  "sha256": "fb83a20c05977fee37df231bfbb99750664700235c893cb30d12b8ebaa6dbfc0"
+ },
+ "D-043/reference.py": {
+  "from": "structure\\B2B\\cases\\D-043\\reference.py",
+  "sha256": "a5d0871541c1d628d2df69be3b189fb13c77116882bad234606a08de7351f6b3"
+ },
+ "D-044/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-044\\CASE.md",
+  "sha256": "5fd1c863322ff1338aafec9f3ecf191d4cdae6e85543c823eec7de7ff1a7cdba"
+ },
+ "D-044/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-044\\faulty_body.py",
+  "sha256": "8db93ec24734ce3642cdfd0a52db6153a464a6ff9d85502964854828c66e1fd5"
+ },
+ "D-044/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-044\\fixed_body.py",
+  "sha256": "73a83ce648543b6f4c124ed2cb15e152c3f8e80f6205c0912831c8c76a7dd95d"
+ },
+ "D-044/reference.py": {
+  "from": "structure\\B2A\\cases\\D-044\\reference.py",
+  "sha256": "5c1d6e0ccea8a1aad7370d290c5d31e0b3c01a4fe35983af6d2a32edfc1541fb"
+ },
+ "D-045/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-045\\CASE.md",
+  "sha256": "3faa0cc47a1e8abf075abf05eeceb642f1c739e4a7946ac9392122b316cf4c8c"
+ },
+ "D-045/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-045\\faulty_body.py",
+  "sha256": "b1fa40bf389ad303663d3f2c0a9b85f5c3ee4dddd8f685ef2e699b3c94dd6777"
+ },
+ "D-045/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-045\\fixed_body.py",
+  "sha256": "282debd47d23fcec4c6726c4a39b772ddddeb375ea363e7965cea07dbd0bd625"
+ },
+ "D-045/reference.py": {
+  "from": "structure\\B3B\\cases\\D-045\\reference.py",
+  "sha256": "f720e16765ce788ede2c447612e371bd2b9b1190ab2da97affad6f2dd02cd774"
+ },
+ "D-046/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-046\\CASE.md",
+  "sha256": "ebd459509e754f912f95492dfd5d66a847f6487bc749c85e8f0962ff644478a7"
+ },
+ "D-046/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-046\\faulty_body.py",
+  "sha256": "7813abf4edc4dc10f9f80ea8cd387e058f8e75c53e86df9d615661e0101c1025"
+ },
+ "D-046/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-046\\fixed_body.py",
+  "sha256": "d88db8a9747a576817e28562a9a44259f55fa831900c5811f4c30512297b81fc"
+ },
+ "D-046/reference.py": {
+  "from": "structure\\DEC\\cases\\D-046\\reference.py",
+  "sha256": "7d8d15824b97bca39319861313e2bea879dab5b54a6800d2d860f75eac7f1fc2"
+ },
+ "D-047/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-047\\CASE.md",
+  "sha256": "a83105ebd1151dc553d56dc6da4a67d15689ac37fc3727a04a0022dea6b1b7fd"
+ },
+ "D-047/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-047\\faulty_body.py",
+  "sha256": "83f40494c677718834325ed6d2208b13e1cac4cc369e72cceca9a7d2d64397d4"
+ },
+ "D-047/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-047\\fixed_body.py",
+  "sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d"
+ },
+ "D-047/reference.py": {
+  "from": "structure\\DEC\\cases\\D-047\\reference.py",
+  "sha256": "31a7f65c2fefc3737f9ee8a518466e47493fc5ada6f44f319721ad4d6fd25555"
+ },
+ "D-048/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-048\\CASE.md",
+  "sha256": "0ea04cf3e21d40520f2ae00d0331f4e7aeb0315f78213aced1413695bf43c505"
+ },
+ "D-048/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-048\\faulty_body.py",
+  "sha256": "5a5937e501d0ab41a28f05b6c26368aa792efbc72a3baaec6f5ed44d955a4c1e"
+ },
+ "D-048/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-048\\fixed_body.py",
+  "sha256": "379cfcebd15d09e256c8dc6e6976f05834de4edd220be4405dfd212e0e11863c"
+ },
+ "D-048/reference.py": {
+  "from": "structure\\B3B\\cases\\D-048\\reference.py",
+  "sha256": "71c30d145d09912353a6a3ece177c750e94df45ee48147c15eac738d536f3742"
+ },
+ "D-049/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-049\\CASE.md",
+  "sha256": "d8af29cbf78466f8c761befe5dab4e3ad4c7ff80b3a7d681b8c54a74636be559"
+ },
+ "D-049/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-049\\faulty_body.py",
+  "sha256": "81ca2d59da612126377ff4150d741af3a339176fc644c4567d83558bb137127b"
+ },
+ "D-049/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-049\\fixed_body.py",
+  "sha256": "675cbcab52afbd56d10c53774e9c3c09d879aff02bc218a0091412d831e48c39"
+ },
+ "D-049/reference.py": {
+  "from": "structure\\B2B\\cases\\D-049\\reference.py",
+  "sha256": "bef84fa7aee97ed96e559387541bec95b778072416759007388f677e2f6e3873"
+ },
+ "D-050/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-050\\CASE.md",
+  "sha256": "2052dfc7355f8c5b23c7cad708ff4745b17b1a1149b4eb3df612499d8afd21e6"
+ },
+ "D-050/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-050\\faulty_body.py",
+  "sha256": "2f5a11018a627f1f19baa58862e0f0ee026137f44ea0c7b130977733822f7528"
+ },
+ "D-050/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-050\\fixed_body.py",
+  "sha256": "bee74b298e6e0a72bced93f74546443fe2989c0162db92893fbfaefd8feae97e"
+ },
+ "D-050/reference.py": {
+  "from": "structure\\B3A\\cases\\D-050\\reference.py",
+  "sha256": "c86161f8d21547c3d6da5a6a2781c493bafddf1d1e82f47ed5d82e8b5e53312b"
+ },
+ "D-051/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-051\\CASE.md",
+  "sha256": "a8ca6bbb43310a941fbf04a67ec535a97b07671bb7d79864b0b94e6a9b72d60e"
+ },
+ "D-051/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-051\\faulty_body.py",
+  "sha256": "55f2207768601c9e8b0dcbde9fbc93d558246ee75faf25c9ed4dde375d0feaeb"
+ },
+ "D-051/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-051\\fixed_body.py",
+  "sha256": "e35898b8e61350c1c86c6ea5fe38c96ffd492e7cb66d82c54f864b025e9299e3"
+ },
+ "D-051/reference.py": {
+  "from": "structure\\B3B\\cases\\D-051\\reference.py",
+  "sha256": "d932219cafb439f0706204480df492e5c3248cf0ca1bf039df58310244433c2d"
+ },
+ "D-052/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-052\\CASE.md",
+  "sha256": "a7dfaa25ba092aee4f0c4b3ec481504079175535ae803e28b97430903bcd0326"
+ },
+ "D-052/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-052\\faulty_body.py",
+  "sha256": "0a6a80977f93c63faa4d1e8d6cdecea1c168918e0313ca832975bc4df55cb6b4"
+ },
+ "D-052/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-052\\fixed_body.py",
+  "sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0"
+ },
+ "D-052/reference.py": {
+  "from": "structure\\DEC\\cases\\D-052\\reference.py",
+  "sha256": "4a61e81f45513fbea6bf8265d33074e7df68381dc73a62882efca603b8aa5f35"
+ },
+ "D-053/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-053\\CASE.md",
+  "sha256": "42cf8410a20dcf9bf9237dd03d357cc59a3bc033f1326f6780472ed3c32363a2"
+ },
+ "D-053/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-053\\faulty_body.py",
+  "sha256": "b17efd8dc89722f4e59226a253b9320e9e06e12862f20b3806bd1f0788d72fda"
+ },
+ "D-053/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-053\\fixed_body.py",
+  "sha256": "3521ebb57b39419e97c63487c87f7250bfc7310a451d3966ef130815e88ae009"
+ },
+ "D-053/reference.py": {
+  "from": "structure\\B3A\\cases\\D-053\\reference.py",
+  "sha256": "49798a0d504a471b2584d5cfeb11604e8dca2c49fc97f4fcc89b24b524a7ea08"
+ },
+ "D-054/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-054\\CASE.md",
+  "sha256": "0aacea9b9f79df5350f75ebc34327a941688bfc0dd1a9b8bf74697130e1de2d8"
+ },
+ "D-054/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-054\\faulty_body.py",
+  "sha256": "b1f3e91834c7820280e57c0dc7025e3de8d0c7d6ec4f0d210a4cd099c221a519"
+ },
+ "D-054/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-054\\fixed_body.py",
+  "sha256": "16683d8b145d32461749ce309f2e25a757a75ace55b58a46126d90639497e9b6"
+ },
+ "D-054/reference.py": {
+  "from": "structure\\B2A\\cases\\D-054\\reference.py",
+  "sha256": "88eeb71142cfdd6fab482e1d61e4f506ccfb1a10544760d7543887888ff19fb1"
+ },
+ "D-055/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-055\\CASE.md",
+  "sha256": "f177f062c9fa343e32d936e443c085de5a82292096fd4b26a03897789c3a0fbb"
+ },
+ "D-055/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-055\\faulty_body.py",
+  "sha256": "956f1b749533832597602891bdfebafb674c0daaa015ccfbaf5c3ad75a7e0fe8"
+ },
+ "D-055/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-055\\fixed_body.py",
+  "sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a"
+ },
+ "D-055/reference.py": {
+  "from": "structure\\B2A\\cases\\D-055\\reference.py",
+  "sha256": "4fb1309a3850ee7f94420bb32769c389c614ee29e6804528773188fbef45d3da"
+ },
+ "D-056/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-056\\CASE.md",
+  "sha256": "133f6be460b847ca9918d787abf15c2b5c6d1838e1fd12d6646d871e9e04d8c2"
+ },
+ "D-056/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-056\\faulty_body.py",
+  "sha256": "165ea2559b213e7d35ec466b6346939294ae844ce200f0b0a02f019be9e7c93a"
+ },
+ "D-056/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-056\\fixed_body.py",
+  "sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a"
+ },
+ "D-056/reference.py": {
+  "from": "structure\\B3B\\cases\\D-056\\reference.py",
+  "sha256": "321e251e16f6ea7200e16cd2a3d51ad48ebffc8d0aa4d441e17bd3ef6ddbe2ad"
+ },
+ "D-057/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-057\\CASE.md",
+  "sha256": "0c7fef41a618532713d1c3aa79fc3ae3795187e927d9b03d1cbdf57d8b4d5d29"
+ },
+ "D-057/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-057\\faulty_body.py",
+  "sha256": "822bbe2f689f66ecdddc0687b4ff4900f9c55d6b67a004f5ab9631d770dc6682"
+ },
+ "D-057/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-057\\fixed_body.py",
+  "sha256": "ed1f36993499f756a3c0ad4e8d785b671119a2c63ac8ec559d0ae3ad4b811afc"
+ },
+ "D-057/reference.py": {
+  "from": "structure\\B3B\\cases\\D-057\\reference.py",
+  "sha256": "c8abeaf5d2efcaa29f47e000db4ca56b5b8ee2116b6fc44e9348c1e65409209c"
+ },
+ "D-058/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-058\\CASE.md",
+  "sha256": "ab1951baf777f2180482e482b47de5bc361ff3d90035667fc5dae183eafc5f5a"
+ },
+ "D-058/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-058\\faulty_body.py",
+  "sha256": "250ae5cc069e07b2b4412d60934a44335c8c0579f26ca9f193ab809ab228ced8"
+ },
+ "D-058/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-058\\fixed_body.py",
+  "sha256": "0a4284226b1a52dfaf3720e56b9352ea4a91ea76bc7bb0d2b5a11e619f5bd955"
+ },
+ "D-058/reference.py": {
+  "from": "structure\\B2B\\cases\\D-058\\reference.py",
+  "sha256": "84ed6ced538e1dd08ec7c753fd69c42848c43e423f83000ec20a0d274ee112d2"
+ },
+ "D-059/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-059\\CASE.md",
+  "sha256": "5adf08eb913850d101160e578085c2a02e471f154037be7a24ddf30f1e40ade5"
+ },
+ "D-059/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-059\\faulty_body.py",
+  "sha256": "391a6d15786ffa10018c0754a0eb6845d82ac4240818a473ef8c5a2843ed47fa"
+ },
+ "D-059/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-059\\fixed_body.py",
+  "sha256": "ec3ad33073977bf2da5361b7398bc8273e6e70ee073d26822f261579c7a0f89a"
+ },
+ "D-059/reference.py": {
+  "from": "structure\\B2B\\cases\\D-059\\reference.py",
+  "sha256": "bcc4c133e3798942ddd96335e21b495fb33fb90d0f8daeacb191c6fa5cc75ee4"
+ },
+ "D-060/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-060\\CASE.md",
+  "sha256": "71ab55b80acb243ee9d570eb819ab2f53682e6a272fbcfecc160f762fafc7694"
+ },
+ "D-060/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-060\\faulty_body.py",
+  "sha256": "b827b93e2e3706ec338070c19fb1da1be9a45ecf8e1ca3bc85f9ecd092c96910"
+ },
+ "D-060/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-060\\fixed_body.py",
+  "sha256": "732010b4e3c502e39fde9cfefb651765fcd78f1ed2c9b24cb19d7c951b20e24a"
+ },
+ "D-060/reference.py": {
+  "from": "structure\\B2A\\cases\\D-060\\reference.py",
+  "sha256": "50a01ba5013535fdf954a60c8b7b1b7ecd3da730597de886bfa11c980e3cd8f3"
+ },
+ "D-061/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-061\\CASE.md",
+  "sha256": "bb9d8a89fccab2a86d304acd31bebac4c6a1f4ffaa1e308388f7584cd06d6631"
+ },
+ "D-061/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-061\\faulty_body.py",
+  "sha256": "49bfb8e73428b4fc56af01ac10e9392f9714b706ddb62cac8ac5401d6784a3e9"
+ },
+ "D-061/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-061\\fixed_body.py",
+  "sha256": "c08a02181c589565f99da7e5f6748990b4cf2100e2ff3110072cb9db4e6869ed"
+ },
+ "D-061/reference.py": {
+  "from": "structure\\DEC\\cases\\D-061\\reference.py",
+  "sha256": "12f77d2786aa7c3aebbac8f1534f082fa81b1f1a4871752c20a76b23b9c97e01"
+ },
+ "D-062/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-062\\CASE.md",
+  "sha256": "3a4bb07dfe6a6599067fcd62eac2159dc164e1eabd1ca91c5df91792faeb5a72"
+ },
+ "D-062/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-062\\faulty_body.py",
+  "sha256": "09b50639c5401b531febd020fcce5d836d6d074784fd80461cf889345881a425"
+ },
+ "D-062/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-062\\fixed_body.py",
+  "sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db"
+ },
+ "D-062/reference.py": {
+  "from": "structure\\B3A\\cases\\D-062\\reference.py",
+  "sha256": "7a11f4c5cff0cbd025d7920e7825badee9a4217bc5fe50a2776059a4edc71dee"
+ },
+ "D-063/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-063\\CASE.md",
+  "sha256": "fbb52c967856c25153be2577d050b9aeb29edf2bdf5c854aeca0c08ad4060f9e"
+ },
+ "D-063/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-063\\faulty_body.py",
+  "sha256": "7267186d08605b068d4014ad096696878ae568a630306fdbc38f81875ec158a8"
+ },
+ "D-063/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-063\\fixed_body.py",
+  "sha256": "0a9a4015d9109c363d3ce5b3625b2717b23de3c168a4bec99d9df1c29db159c5"
+ },
+ "D-063/reference.py": {
+  "from": "structure\\B3B\\cases\\D-063\\reference.py",
+  "sha256": "639318930b26a473424a803f58e9feb47f43a217ca77e0bf137f8d583ac6a319"
+ },
+ "D-064/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-064\\CASE.md",
+  "sha256": "a3e8a6c391a206e7e2fc6d08730fa44d1932ac7b6f2b1c09659e501a2485667d"
+ },
+ "D-064/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-064\\faulty_body.py",
+  "sha256": "a447fe48bb81d8a6e6408ddcc8c470fe1ba2425f44535ab7a4cfcbb07a51f3eb"
+ },
+ "D-064/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-064\\fixed_body.py",
+  "sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d"
+ },
+ "D-064/reference.py": {
+  "from": "structure\\B2B\\cases\\D-064\\reference.py",
+  "sha256": "0a2b100210059485164c3e60148eda80eed166ac5b48754051c21ca92feefa7d"
+ },
+ "D-065/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-065\\CASE.md",
+  "sha256": "fe53e5fcf7726364cc2204773b6c926ddbe26bed6674f9b051d71985713a8741"
+ },
+ "D-065/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-065\\faulty_body.py",
+  "sha256": "35fc11bd634618f5800060cc6d6c4dee313130cdc885843fb053c8dd14f4c9bb"
+ },
+ "D-065/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-065\\fixed_body.py",
+  "sha256": "0b9da579c4b144fc33f82a502aa97534a3d233b6c1ecc347634b4563a898ea10"
+ },
+ "D-065/reference.py": {
+  "from": "structure\\B2B\\cases\\D-065\\reference.py",
+  "sha256": "e9d6b94750d7b67ec6c4726b534d87fc9f12cf8119e41634d53601afcc301da3"
+ },
+ "D-066/CASE.md": {
+  "from": "criterion\\B2A\\half\\cases\\D-066\\CASE.md",
+  "sha256": "b7ef06b5e30f19b775f3deb91350148f448648ebbbdfa0f81dce42d5dd8d8bcd"
+ },
+ "D-066/faulty_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-066\\faulty_body.py",
+  "sha256": "33d3e7c42a4a725a9033a67ca5c8460c49745dfcec3a1126ca639ffe88843af6"
+ },
+ "D-066/fixed_body.py": {
+  "from": "criterion\\B2A\\half\\cases\\D-066\\fixed_body.py",
+  "sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d"
+ },
+ "D-066/reference.py": {
+  "from": "structure\\B2A\\cases\\D-066\\reference.py",
+  "sha256": "9601be4ad3685b85f9c4feac15145acbdac61923fb2803cad05cd5e1f635b9c4"
+ },
+ "D-067/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-067\\CASE.md",
+  "sha256": "2dabd62567dadf58af89e1bde858b660c4a2b44a98206eb9c384bc8f6eec9c86"
+ },
+ "D-067/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-067\\faulty_body.py",
+  "sha256": "2ac27e1c647137cb1ff6240ef7e0b5b561f81b9d0566639e8471586ba099c484"
+ },
+ "D-067/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-067\\fixed_body.py",
+  "sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339"
+ },
+ "D-067/reference.py": {
+  "from": "structure\\B3A\\cases\\D-067\\reference.py",
+  "sha256": "6cbf423c775c6e77e63b9164cef09d9fdd21f88f8aae3fafb1edd945a0b31e43"
+ },
+ "D-068/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-068\\CASE.md",
+  "sha256": "b5679d350a048c5969f929447d793274b5e8da13e76184ba23313ba3bceb131d"
+ },
+ "D-068/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-068\\faulty_body.py",
+  "sha256": "173fbd9dffbf733e15710e0446332238750d422cc9beae1e415fe16d9d43083b"
+ },
+ "D-068/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-068\\fixed_body.py",
+  "sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104"
+ },
+ "D-068/reference.py": {
+  "from": "structure\\B3B\\cases\\D-068\\reference.py",
+  "sha256": "beb77a8d949ce65ad48a857e8d7640cf5ecb88854523872b60772fa4123ad08a"
+ },
+ "D-069/CASE.md": {
+  "from": "criterion\\DEC\\half\\cases\\D-069\\CASE.md",
+  "sha256": "aea17a7339f34ed25484db546bcba9f306aebf53e26860f88cb09873542ae1a1"
+ },
+ "D-069/faulty_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-069\\faulty_body.py",
+  "sha256": "e71d0c789612f5a79e3fe9a30ca695f86fbb78974c4074772749a12e6f67a0b2"
+ },
+ "D-069/fixed_body.py": {
+  "from": "criterion\\DEC\\half\\cases\\D-069\\fixed_body.py",
+  "sha256": "7163d180a7d47359e9f52ba7466655a4384d652ad9c42b350ad45ca73992f503"
+ },
+ "D-069/reference.py": {
+  "from": "structure\\DEC\\cases\\D-069\\reference.py",
+  "sha256": "255e8772f9c7c51060b9f6e1f0b8a850dcce50495f1e7712d7f7b1c4b34318c8"
+ },
+ "D-070/CASE.md": {
+  "from": "criterion\\B2B\\half\\cases\\D-070\\CASE.md",
+  "sha256": "0d663c4d685921689949f53ceb41b676a3ff110c51d71d3c19bd37ec07b3c26e"
+ },
+ "D-070/faulty_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-070\\faulty_body.py",
+  "sha256": "17e2aab7046cdba6c7c49051819fd0650b9e481d89b07b348113604bbe122556"
+ },
+ "D-070/fixed_body.py": {
+  "from": "criterion\\B2B\\half\\cases\\D-070\\fixed_body.py",
+  "sha256": "3855c5698a2a0c1dc63a6f906ee8e8a7fc3cfe6591e9fd2e7b8c9ef96ef95c37"
+ },
+ "D-070/reference.py": {
+  "from": "structure\\B2B\\cases\\D-070\\reference.py",
+  "sha256": "4f6f4375d00ee7baa5581f6319ce29d911e482e1d48163b195edeea1e2284fd0"
+ },
+ "D-071/CASE.md": {
+  "from": "criterion\\B3A\\half\\cases\\D-071\\CASE.md",
+  "sha256": "891244b2906a720ceb28c83a32a898fba3de280e0c0a96af4adf1efbcb44959b"
+ },
+ "D-071/faulty_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-071\\faulty_body.py",
+  "sha256": "494eef1975c4c1adf1cbd516ec2c2247223c5baabe81e14ca06dd72cc0e69773"
+ },
+ "D-071/fixed_body.py": {
+  "from": "criterion\\B3A\\half\\cases\\D-071\\fixed_body.py",
+  "sha256": "d2fe3f216a8c96d8993e9f9638e746a9e09f13481786a7bd609bd671804c7e1d"
+ },
+ "D-071/reference.py": {
+  "from": "structure\\B3A\\cases\\D-071\\reference.py",
+  "sha256": "07c6947ed782787be75be87a723b564efdec688f853d5d704d02d38e10d6ee33"
+ },
+ "D-072/CASE.md": {
+  "from": "criterion\\B3B\\half\\cases\\D-072\\CASE.md",
+  "sha256": "4aede1135b386ccea9c8081b57af3fe6168e36cda72687671df9c57f528ebfec"
+ },
+ "D-072/faulty_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-072\\faulty_body.py",
+  "sha256": "071543f21ee7057009753ef0fbb2d62debf1038a61a536840a86b4e0e371d650"
+ },
+ "D-072/fixed_body.py": {
+  "from": "criterion\\B3B\\half\\cases\\D-072\\fixed_body.py",
+  "sha256": "70b6bc798e5931f23fe65e44297de6d4d1d6ae9bc334173fdb1b4ec6f187e5e6"
+ },
+ "D-072/reference.py": {
+  "from": "structure\\B3B\\cases\\D-072\\reference.py",
+  "sha256": "d786e0c3805ceba5c9a5f7c920085de6d81785421408803125d7b90565c6907e"
+ }
+}

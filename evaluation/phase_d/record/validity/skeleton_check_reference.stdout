@@ -1,0 +1,79 @@
+truth_gate: E:\Claude Projects\Kapi\phase_d_work\record\pkg\truth_gate\__init__.py
+D-001/reference OK
+D-002/reference OK
+D-003/reference OK
+D-004/reference OK
+D-005/reference OK
+D-006/reference OK
+D-007/reference OK
+D-008/reference OK
+D-009/reference OK
+D-010/reference OK
+D-011/reference OK
+D-012/reference OK
+D-013/reference OK
+D-014/reference ISSUES
+    - world minus: X has non-finite values
+    - world plus: X has non-finite values
+D-015/reference OK
+D-016/reference OK
+D-017/reference OK
+D-018/reference OK
+D-019/reference OK
+D-020/reference OK
+D-021/reference OK
+D-022/reference OK
+D-023/reference OK
+D-024/reference OK
+D-025/reference OK
+D-026/reference OK
+D-027/reference OK
+D-028/reference OK
+D-029/reference OK
+D-030/reference OK
+D-031/reference OK
+D-032/reference OK
+D-033/reference OK
+D-034/reference OK
+D-035/reference OK
+D-036/reference OK
+D-037/reference OK
+D-038/reference OK
+D-039/reference OK
+D-040/reference OK
+D-041/reference ISSUES
+    - world minus: X has non-finite values
+    - world plus: X has non-finite values
+D-042/reference OK
+D-043/reference OK
+D-044/reference OK
+D-045/reference OK
+D-046/reference OK
+D-047/reference OK
+D-048/reference OK
+D-049/reference OK
+D-050/reference OK
+D-051/reference OK
+D-052/reference OK
+D-053/reference OK
+D-054/reference OK
+D-055/reference OK
+D-056/reference OK
+D-057/reference OK
+D-058/reference OK
+D-059/reference OK
+D-060/reference OK
+D-061/reference OK
+D-062/reference OK
+D-063/reference OK
+D-064/reference OK
+D-065/reference OK
+D-066/reference OK
+D-067/reference OK
+D-068/reference OK
+D-069/reference OK
+D-070/reference OK
+D-071/reference OK
+D-072/reference OK
+
+70/72 skeletons pass

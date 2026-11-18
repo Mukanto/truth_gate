@@ -1,0 +1,34 @@
+{
+ "id": "D-020",
+ "claim": "Heart weight accounts for at least 10% of the variance in liver weight beyond what body mass accounts for: the increase in R-squared when heart weight is added to a regression of liver weight on body mass is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "liver_weight",
+   "shape": "(mice,)",
+   "dtype": "float",
+   "meaning": "liver weight of each mouse, in g",
+   "dims": [
+    1500
+   ]
+  },
+  {
+   "key": "heart_weight",
+   "shape": "(mice,)",
+   "dtype": "float",
+   "meaning": "heart weight of each mouse, in g",
+   "dims": [
+    1500
+   ]
+  },
+  {
+   "key": "body_mass",
+   "shape": "(mice,)",
+   "dtype": "float",
+   "meaning": "body mass of each mouse, in g",
+   "dims": [
+    1500
+   ]
+  }
+ ],
+ "sizes": "{\"mice\": 1500}"
+}

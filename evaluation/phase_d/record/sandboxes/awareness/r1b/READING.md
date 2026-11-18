@@ -1,0 +1,44 @@
+# Reading of 40 entries
+
+Counts: P=15, C=9, N=16
+
+- E01: C - General notes mention 'in-sample values under minus' as analytic statements; the entry names no artefact.
+- E02: C - 'the null is defined on the recorded body length (no hidden latent size)' mentions a pitfall and says it is not present.
+- E03: N - Only independent-copy construction and effect sizes; no pitfall mentioned.
+- E04: N - Judgement call is about mean improvement only; no analysis pitfall.
+- E05: P - 'The proportion is then ~0.32, which includes the regression to the mean' - non-null naive statistic in minus with the mechanism named.
+- E06: N - Only construction and calibration risk of 1-NN; 'X carries no information on y'.
+- E07: N - Effect size and spread of signal; no pitfall.
+- E08: N - Construction, power reasoning, controls; no pitfall.
+- E09: N - Overfitting inflation is stated for plus only; nothing about minus artefacts.
+- E10: N - Power and effect reasoning; no minus artefact.
+- E11: C - Control 'keeps the heart-mass relation and breaks the residual link' points at the mass-driven association, but no artefact is reported in minus.
+- E12: P - 'Raw VO2 therefore still differs between groups through mass' - an unadjusted analysis of minus would still show group differences.
+- E13: N - Oracle R^2 and construction only.
+- E14: N - Oracle r and shrinkage; no minus artefact.
+- E15: N - Effect size and controls; no pitfall.
+- E16: P - 'Under minus, an in-sample fit of 153 parameters to 1200 rows gives r of about 0.36' - non-null naive statistic in minus.
+- E17: P - 'unadjusted group means still differ through mass alone' in minus.
+- E18: N - Null construction and control; no pitfall named.
+- E19: C - Seasonality left out because it 'would also create a spurious time link' - pitfall mentioned and avoided.
+- E20: N - Calibration approximation of 1-NN; no minus artefact.
+- E21: P - Coupling gives 'a spurious slope of about 0.07 in minus' and a pooled between-patient slope 'about 0.27 in minus'.
+- E22: P - 'quadrat-level (pseudoreplicated) tests are anticonservative in minus' - names the error.
+- E23: P - 'replicates still share their compound's value' in minus: duplicate records with identical descriptors remain, a leak for record-level analysis.
+- E24: P - 'the raw femur-humerus correlation stays high (about 0.75)' in minus; also a measurement-error pitfall mentioned.
+- E25: C - 'a shared deterministic cycle would itself be predictive information' - pitfall mentioned, left out.
+- E26: N - Calibration risk of p>>n only; no minus artefact.
+- E27: N - Effect size and controls; no pitfall.
+- E28: P - 'A record-level evaluation that finds the identical-descriptor duplicate therefore still shows a correlation of about 0.6 in minus.'
+- E29: N - Construction and oracle AUC only.
+- E30: C - General notes mention in-sample values under minus; entry says lineage programmes 'stay as covariation unrelated to the label' but reports no artefact.
+- E31: C - 'the null is defined on the stated quantity ..., not on true size' - related pitfall considered.
+- E32: P - 'Under minus, in-sample OLS still shows a large gain.'
+- E33: P - 'Under minus the in-sample r is about 0.47, so in-sample evaluation fails there.'
+- E34: P - 'coupling bias about +0.05' shared CO and Hb errors in both worlds, plus venous content tied by Fick.
+- E35: C - 'No latent size factor ... because it would itself create a positive partial correlation' - pitfall considered and avoided.
+- E36: P - 'Under minus, an in-sample fit of 2000 genes would still reach R^2 near 1.'
+- E37: N - Construction and circular-shift control; no pitfall named.
+- E38: C - 'Plain accuracy, or a 0.5-probability threshold, behaves very differently from balanced accuracy here' (plus notes on in-sample under minus); no artefact reported in minus.
+- E39: P - 'Regression to the mean ... is preserved: ... screening - entry averages 5.9 points in both worlds'.
+- E40: P - Control 'exposes a criterion that uses the simple correlation' (marginal correlations stay high in minus); also 'about 0.03 in minus' under body-length error is considered.

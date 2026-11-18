@@ -1,0 +1,26 @@
+{
+ "id": "D-033",
+ "claim": "The response of each of 1000 voxels was estimated on each of 60 trials, in which a stimulus of varying intensity was presented. Claim: in the population, the 25 voxels whose trial-by-trial response is most strongly correlated with stimulus intensity have a mean correlation with intensity of at least 0.25.",
+ "data_keys": [
+  {
+   "key": "betas",
+   "shape": "(voxels, trials)",
+   "dtype": "float",
+   "meaning": "estimated response amplitude of each voxel on each trial",
+   "dims": [
+    1000,
+    60
+   ]
+  },
+  {
+   "key": "intensity",
+   "shape": "(trials,)",
+   "dtype": "float",
+   "meaning": "stimulus intensity presented on each trial",
+   "dims": [
+    60
+   ]
+  }
+ ],
+ "sizes": "{\"voxels\": 1000, \"trials\": 60}"
+}

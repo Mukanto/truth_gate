@@ -1,0 +1,147 @@
+{
+  "case": "D-051",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "faulty rate 0 < 0.25; Fisher p 1 >= 0.01",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.09686862744050143,
+        "sd": 0.03879648844736687,
+        "values_head": [
+          0.13007790212593254,
+          0.0720828941773528,
+          0.09595801977199649,
+          0.07022717338237515,
+          0.05406624523216252
+        ],
+        "share_beyond_half": 0.975
+      },
+      "minus": {
+        "mean": 0.10026632222010144,
+        "sd": 0.035307878702204656,
+        "values_head": [
+          0.14152504679304764,
+          0.10409611775613052,
+          0.10748952245229526,
+          0.2736609086363255,
+          0.0955293889879847
+        ],
+        "share_beyond_half": 0.975
+      },
+      "note_value": 0.1,
+      "null_value": 0.0,
+      "tolerance": 0.020000000000000004,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.003397694779600016,
+      "three_se": 0.011127965745963279,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "arterial_o2_content",
+          "cardiac_output",
+          "cardiac_output_2",
+          "venous_o2_content"
+        ],
+        "changed_keys": [
+          "venous_o2_content"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "venous_o2_content"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 0,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 0.0,
+      "fixed_rate": 0.0,
+      "fisher_p": 1.0,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 954,
+        "n": 1000,
+        "rate": 0.954,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": false,
+  "v1_label": "V1a",
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 5.357499976526015e-05,
+    "g": 5.230499918980058e-05,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.25411199749214575,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "b3db7ba2405508a863b3297e0cee25b78397b8cb2cdfc3c2a121aa3f6cbf0696",
+    "PRIVATE.json": "888921e004cd2fa5878e4b4e1881041c2beea24d55eaa28d10356bafc037c2b8",
+    "faulty_body.py": "55f2207768601c9e8b0dcbde9fbc93d558246ee75faf25c9ed4dde375d0feaeb",
+    "fixed_body.py": "e35898b8e61350c1c86c6ea5fe38c96ffd492e7cb66d82c54f864b025e9299e3",
+    "reference.py": "d932219cafb439f0706204480df492e5c3248cf0ca1bf039df58310244433c2d"
+  },
+  "decisive": true
+}

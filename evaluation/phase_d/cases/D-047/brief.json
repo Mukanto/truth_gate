@@ -1,0 +1,36 @@
+{
+ "id": "D-047",
+ "claim": "600 patients with menopausal hot flushes received a treatment. Symptom severity (scale 0 to 100, higher is worse) was scored at a screening visit, again at entry on the day treatment began, and again 12 weeks later. Claim: among patients whose screening score was at least 60, at least half have a week-12 score that is 10 or more points below their entry score (proportion of at least 0.5).",
+ "data_keys": [
+  {
+   "key": "screening",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "symptom severity score at the screening visit",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "entry",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "symptom severity score at entry, on the day treatment began",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "week12",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "symptom severity score 12 weeks after treatment began",
+   "dims": [
+    600
+   ]
+  }
+ ],
+ "sizes": {
+  "patients": 600
+ }
+}

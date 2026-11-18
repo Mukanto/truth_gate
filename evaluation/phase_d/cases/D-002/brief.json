@@ -1,0 +1,45 @@
+{
+ "id": "D-002",
+ "claim": "Across 120 anaesthetised animals, tissues extract more oxygen when more is supplied: the Pearson correlation between the arterial-minus-mixed-venous oxygen content difference and the arterial oxygen content is at least 0.30.",
+ "data_keys": [
+  {
+   "key": "arterial_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "arterial blood oxygen content of each animal, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "arterial_o2_content_2",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "a second, independent determination of the arterial blood oxygen content of each animal, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "mixed-venous blood oxygen content of each animal, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "venous_o2_content_2",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "a second, independent determination of the mixed-venous blood oxygen content of each animal, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  }
+ ],
+ "sizes": {
+  "subjects": 120
+ }
+}

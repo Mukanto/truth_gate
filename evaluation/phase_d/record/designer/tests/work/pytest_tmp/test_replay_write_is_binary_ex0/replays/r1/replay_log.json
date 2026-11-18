@@ -1,0 +1,38 @@
+{
+ "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\world\\w1",
+ "label": "w1",
+ "manifest": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\MANIFEST.json",
+ "timeout_s": 60,
+ "replica_sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\replays\\r1\\root\\world\\w1",
+ "summary": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\replays\\r1",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\replays\\r1\\replay_log.json",
+  "n_replayed_calls": 1,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 0,
+  "n_manifest_files_copied": 0,
+  "not_run_reason": null
+ },
+ "replica_sha256": {
+  "w.txt": "99d67310d69a15d6594845f37bfc92dc1895d9dd2a7bb64b92aeaf8f9ff9e63e"
+ },
+ "calls": [
+  {
+   "call_index": 1,
+   "line": 2,
+   "tool": "Write",
+   "tool_use_id": "toolu_2",
+   "background": false,
+   "path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\world\\w1\\w.txt",
+   "mapped_path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_replay_write_is_binary_ex0\\replays\\r1\\root\\world\\w1\\w.txt",
+   "status": "ok"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+[
+ {"case":"D-012","X":"yes","Y":"yes","reasons":{
+  "X":"No variable named by its role in the error; keys are only occupied/exclosure. The hidden copy_assignment is a plot-level factor of the same size as the fencing effect, so plus and minus keep equal plot-level structure; it is a realistic plot-level dependence plus AR(1) quadrat correlation, not an extra key read by one body.",
+  "Y":"Plain logit model with plot SD and AR(1) micro-habitat variation; minus only zeroes the fence effect; no extra keys, no names by role in the error."}},
+ {"case":"D-047","X":"yes","Y":"yes","reasons":{
+  "X":"Site offsets, OU symptom fluctuation (screening/entry correlated more than entry/week12) and rating error are ordinary realistic dependence; keys are only the three brief keys; nothing aimed at one twin.",
+  "Y":"Stable severity plus iid visit error; minus only sets mean change to 0. Remark: the minus change string says 'hence regression to the mean after screening selection', which names the error phenomenon in a descriptive string, but no variable or key is named by its role; judged not a leak under the item's wording."}},
+ {"case":"D-052","X":"yes","Y":"yes","reasons":{
+  "X":"Shared ability across pre/post, equal gain SD in both groups, minus only equalises the mean gain; no extra keys and no variance asymmetry built for one twin.",
+  "Y":"Group-specific ability SD, small baseline-gain slope and measurement error are ordinary realistic features; improvement variances come out nearly equal across groups; the relational declaration is a study-level declaration, not a key or a dependence aimed at one twin."}}
+]

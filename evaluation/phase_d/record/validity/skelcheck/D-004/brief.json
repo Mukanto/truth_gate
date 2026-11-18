@@ -1,0 +1,28 @@
+{
+ "id": "D-004",
+ "claim": "On future days, a ridge regression forecast of the outcome y from the day's five predictors X (penalty 1.0 on standardised predictors, with an intercept, one model for all stations) has a squared error at least 5% below that of the persistence forecast (the previous day's outcome at the same station), with squared errors pooled over stations: 1 - MSE(model) / MSE(persistence) >= 0.05.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(stations, days_in_order, features)",
+   "dtype": "float",
+   "meaning": "5 continuous daily predictors recorded at each station on each day",
+   "dims": [
+    40,
+    250,
+    5
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(stations, days_in_order)",
+   "dtype": "float",
+   "meaning": "continuous daily outcome measured at each station",
+   "dims": [
+    40,
+    250
+   ]
+  }
+ ],
+ "sizes": "{\"stations\": 40, \"days_in_order\": 250, \"features\": 5}"
+}

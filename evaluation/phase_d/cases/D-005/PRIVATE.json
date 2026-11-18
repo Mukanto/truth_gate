@@ -1,0 +1,25 @@
+{
+ "id": "D-005",
+ "source": "KAP23",
+ "passage": "L1.1: \"Using the same dataset for training and testing the model is a textbook example of overfitting\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; as returned by the fetch tool, the rest of the sentence not verified verbatim).",
+ "faulty": "Ridge regression (lambda 1.0 on standardised X, centred y, intercept) is fitted on all 100 rows; R-squared = 1 - SSE/SST of its fitted values on the same 100 rows; holds iff >= 0.10. No held-out rows.",
+ "fixed": "5-fold cross-validation, fold of row i = i mod 5; ridge (lambda 1.0, standardisation fitted on the training folds) fitted on 80 rows, predicts the 20 held-out rows; pooled R-squared = 1 - SSE/SST over all 100 held-out predictions (SST around the pooled mean of y); holds iff >= 0.10.",
+ "estimand": "Faulty: the apparent (resubstitution) R-squared of a model fitted to all 100 samples. Fixed: the expected out-of-sample R-squared of the same model fitted on 80 samples and applied to new samples.",
+ "model_family": "Ridge regression with fixed penalty 1.0 on standardised features, closed form (minimum-norm solution, defined when features > samples). Source names no model; chosen because it is numpy-only, deterministic and defined for 150 features on 100 samples.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 100 x 150 = 15,000 values: small-n large-p regime, where the in-sample estimate is largest; the corrected check is 5 closed-form ridge fits per sample (seconds), far inside the 30-minute estimate. Dependence of the error's size on sample size or feature count: not stated.",
+ "exploited_structure": "Many features relative to samples, so a fitted linear model reproduces the outcome of the very rows it was fitted on.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(X.shape[1] / X.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 1.5,
+  "note_value_source": "source states none: 150 features / 100 samples is the brief's own size; set by the brief",
+  "set_by_brief": true
+ },
+ "notes": "Guard: R-squared is undefined below 2 evaluated rows or when the variance of y is zero (return None); non-finite values return None. Statistic family differs from the earlier L1.1 combination (classification). Rule for fold assignment assumes rows are in arbitrary order.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 1.5
+}

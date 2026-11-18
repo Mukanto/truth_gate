@@ -1,0 +1,44 @@
+# Reading
+
+Counts: P=13, C=9, N=18
+
+- E01: N - Reports only plus marginal correlations; no minus artefact or pitfall named.
+- E02: C - Judgement call: null defined on recorded body length, no hidden latent size; no artefact left.
+- E03: N - Plain construction; no pitfall or minus statistic.
+- E04: N - Effect size and null definition only; no pitfall.
+- E05: P - 'proportion is then ~0.32, which includes the regression to the mean' - non-null naive statistic in minus, error named.
+- E06: N - Calibration risk concerns plus power only; X carries no information on y.
+- E07: N - Effect size and controls only.
+- E08: N - Null reading (b_p=0) is about heterogeneity, not an analysis artefact.
+- E09: N - Overfitting inflation discussed for plus only; nothing about minus artefacts.
+- E10: N - Effect size reasoning only.
+- E11: N - Controls and reading of slope; no artefact stated for minus.
+- E12: P - 'Raw VO2 therefore still differs between groups through mass' in minus.
+- E13: N - Oracle R2 and design only.
+- E14: N - Effect size only.
+- E15: N - Effect size and controls only.
+- E16: P - 'Under minus, an in-sample fit of 153 parameters to 1200 rows gives r of about 0.36'.
+- E17: P - 'unadjusted group means still differ through mass alone' in minus.
+- E18: C - Minus built from exact conditional distribution given measured length, partial correlation 0; same judgement call as D-023; artefact avoided.
+- E19: C - Seasonality left out because a shared cycle 'would also create a spurious time link'.
+- E20: N - Calibration risk of plus effect size only.
+- E21: P - Mathematical coupling gives 'spurious slope of about 0.07 in minus'; pooled between-patient slope about 0.27 in minus.
+- E22: P - 'quadrat-level (pseudoreplicated) tests are anticonservative in minus'.
+- E23: C - Replicates share compound value; judgement call on records vs new compounds; no minus artefact stated (doubt resolved upward).
+- E24: P - Raw femur-humerus correlation 'stays high (about 0.75)' in minus while partial is zero; also measurement error caveat.
+- E25: C - No shared seasonality because a shared deterministic cycle 'would itself be predictive information'.
+- E26: N - Calibration risk about plus detectability; control rationale only.
+- E27: N - Power reasoning and controls only.
+- E28: P - 'A record-level evaluation ... still shows a correlation of about 0.6 in minus'.
+- E29: N - Plain construction.
+- E30: N - Plain construction; programmes unrelated to label by design.
+- E31: C - Null defined on measured body length, not true size; judgement call, artefact avoided.
+- E32: P - 'Under minus, in-sample OLS still shows a large gain.'
+- E33: P - 'Under minus the in-sample r is about 0.47, so in-sample evaluation fails there.'
+- E34: P - Fick-derived VO2 shares errors with DO2, 'coupling bias about +0.05' in both worlds.
+- E35: C - No latent size factor because it 'would itself create a positive partial correlation'.
+- E36: P - 'Under minus, an in-sample fit of 2000 genes would still reach R^2 near 1.'
+- E37: N - Effect size and control only.
+- E38: C - Notes plain accuracy or 0.5 threshold 'behaves very differently from balanced accuracy'; related pitfall, no minus artefact.
+- E39: P - Regression to the mean preserved: screening - entry averages 5.9 in both worlds, biasing a criterion measuring change from screening.
+- E40: C - Body-length measurement error would leave about 0.03 in minus; avoided by construction.

@@ -1,0 +1,885 @@
+{
+  "note": "PREREG_PHASE_D section 5 (PC section 6, PB section 6): the base list, HIGH_RATE:control:<id> for each control and HIGH_RATE:probe:shuffle:<a>,<b> for each relational pair that the arm's assembled faulty study declares. Information flags and capping flags never count.",
+  "base": [
+    "K2_HIGH_SIZE",
+    "K2_FAILS_UNREACHABLE",
+    "K2_NO_SEPARATION",
+    "K4_CONTROL_ALSO_HOLDS",
+    "K5_HOLDS_ON_NOISE",
+    "K5_HOLDS_ON_NULL",
+    "K5_HOLDS_ON_SHUFFLE",
+    "HIGH_RATE:probe:noise",
+    "HIGH_RATE:world:null"
+  ],
+  "base_checked_against": "E:\\Claude Projects\\kapi-oss\\evaluation\\phase_c\\EXPECTED_FLAGS.json",
+  "cases": {
+    "D-007/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-007"
+      ]
+    },
+    "D-007/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:survival_permuted_across_patients",
+        "HIGH_RATE:probe:shuffle:expression,survival_months"
+      ]
+    },
+    "D-007/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:survival_shuffled_across_patients"
+      ]
+    },
+    "D-008/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_vo2_across_patients"
+      ]
+    },
+    "D-008/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+        "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas"
+      ]
+    },
+    "D-008/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:consumption_shuffled_across_occasions_within_patient"
+      ]
+    },
+    "D-010/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-010"
+      ]
+    },
+    "D-010/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_permuted_across_patients",
+        "HIGH_RATE:probe:shuffle:covariates,y"
+      ]
+    },
+    "D-010/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_shuffled_across_patients"
+      ]
+    },
+    "D-011/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-011"
+      ]
+    },
+    "D-011/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:labels_permuted_across_samples",
+        "HIGH_RATE:probe:shuffle:expression,myeloid"
+      ]
+    },
+    "D-011/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:myeloid_labels_shuffled_across_samples"
+      ]
+    },
+    "D-012/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-012"
+      ]
+    },
+    "D-012/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:exclosure_labels_reversed"
+      ]
+    },
+    "D-012/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:exclosure_shuffled_across_plots"
+      ]
+    },
+    "D-022/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-022"
+      ]
+    },
+    "D-022/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_permuted_across_runs",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-022/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-023/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-023"
+      ]
+    },
+    "D-023/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:wing_permuted_within_body_length_blocks",
+        "HIGH_RATE:probe:shuffle:head_width,wing_length"
+      ]
+    },
+    "D-023/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:wing_shuffled_within_blocks_of_10_similar_body_lengths"
+      ]
+    },
+    "D-027/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-027"
+      ]
+    },
+    "D-027/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_permuted_across_samples",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-027/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_shuffled_across_samples"
+      ]
+    },
+    "D-035/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-035"
+      ]
+    },
+    "D-035/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:labels_permuted_across_records",
+        "HIGH_RATE:probe:shuffle:features,positive"
+      ]
+    },
+    "D-035/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:positive_labels_shuffled_across_records"
+      ]
+    },
+    "D-040/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_height_within_length"
+      ]
+    },
+    "D-040/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:height_permuted_within_length_blocks",
+        "HIGH_RATE:probe:shuffle:breadth,height"
+      ]
+    },
+    "D-040/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths"
+      ]
+    },
+    "D-042/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-042"
+      ]
+    },
+    "D-042/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:compound_activity_permuted_across_compounds",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-042/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-047/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-047"
+      ]
+    },
+    "D-047/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:entry_and_week12_swapped"
+      ]
+    },
+    "D-047/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient"
+      ]
+    },
+    "D-052/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-052"
+      ]
+    },
+    "D-052/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:age_labels_permuted",
+        "HIGH_RATE:control:pre_post_swapped"
+      ]
+    },
+    "D-052/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:age_labels_permuted",
+        "HIGH_RATE:probe:shuffle:post,young"
+      ]
+    },
+    "D-055/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-055"
+      ]
+    },
+    "D-055/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:outcome_circular_shift",
+        "HIGH_RATE:control:predictor_blocks_permuted",
+        "HIGH_RATE:probe:shuffle:y,X"
+      ]
+    },
+    "D-055/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:y_circularly_shifted_200_to_800_days",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-056/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-056"
+      ]
+    },
+    "D-056/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:rats_permuted_across_groups"
+      ]
+    },
+    "D-056/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:animals_permuted_across_groups_with_their_mass"
+      ]
+    },
+    "D-062/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_humerus_within_species"
+      ]
+    },
+    "D-062/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:humerus_permuted_within_species",
+        "HIGH_RATE:control:humerus_exchanged_among_length_matched_individuals"
+      ]
+    },
+    "D-062/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:humerus_swapped_between_body_length_neighbours",
+        "HIGH_RATE:control:humerus_permuted_within_species"
+      ]
+    },
+    "D-064/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-064"
+      ]
+    },
+    "D-064/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:response_permuted_across_patients"
+      ]
+    },
+    "D-064/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:response_permuted_across_patients",
+        "HIGH_RATE:probe:shuffle:expression,response"
+      ]
+    },
+    "D-066/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-066"
+      ]
+    },
+    "D-066/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:outcome_permuted_across_patients",
+        "HIGH_RATE:probe:shuffle:y,X"
+      ]
+    },
+    "D-066/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:outcome_permuted_across_patients",
+        "HIGH_RATE:probe:shuffle:X,y"
+      ]
+    },
+    "D-067/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:permute_heart_within_mass"
+      ]
+    },
+    "D-067/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:heart_permuted_across_rats",
+        "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+        "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight"
+      ]
+    },
+    "D-067/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:heart_swapped_between_body_mass_neighbours",
+        "HIGH_RATE:control:heart_permuted_across_rats",
+        "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight"
+      ]
+    },
+    "D-068/reference": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:D-068"
+      ]
+    },
+    "D-068/W0": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:head_width_permuted_within_population",
+        "HIGH_RATE:control:head_width_exchanged_among_length_matched_specimens"
+      ]
+    },
+    "D-068/W1": {
+      "expected": [
+        "K2_HIGH_SIZE",
+        "K2_FAILS_UNREACHABLE",
+        "K2_NO_SEPARATION",
+        "K4_CONTROL_ALSO_HOLDS",
+        "K5_HOLDS_ON_NOISE",
+        "K5_HOLDS_ON_NULL",
+        "K5_HOLDS_ON_SHUFFLE",
+        "HIGH_RATE:probe:noise",
+        "HIGH_RATE:world:null",
+        "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+        "HIGH_RATE:control:head_permuted_within_population"
+      ]
+    }
+  }
+}

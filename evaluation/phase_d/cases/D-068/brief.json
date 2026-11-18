@@ -1,0 +1,40 @@
+{
+ "id": "D-068",
+ "claim": "Across 25 populations of one beetle species, with 40 specimens measured in each, wing length rises with head width at a given body length: the mean over populations of the within-population multiple-regression coefficient of wing length on head width, with body length as the other predictor, is at least 0.30 (mm of wing length per mm of head width).",
+ "data_keys": [
+  {
+   "key": "head_width",
+   "shape": "(populations, specimens)",
+   "dtype": "float",
+   "meaning": "head width of each specimen in each population, in mm",
+   "dims": [
+    25,
+    40
+   ]
+  },
+  {
+   "key": "wing_length",
+   "shape": "(populations, specimens)",
+   "dtype": "float",
+   "meaning": "wing length of each specimen in each population, in mm",
+   "dims": [
+    25,
+    40
+   ]
+  },
+  {
+   "key": "body_length",
+   "shape": "(populations, specimens)",
+   "dtype": "float",
+   "meaning": "body length of each specimen in each population, in mm",
+   "dims": [
+    25,
+    40
+   ]
+  }
+ ],
+ "sizes": {
+  "populations": 25,
+  "specimens": 40
+ }
+}

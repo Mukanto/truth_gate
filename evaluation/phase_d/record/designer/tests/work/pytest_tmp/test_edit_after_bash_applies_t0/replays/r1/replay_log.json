@@ -1,0 +1,63 @@
+{
+ "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\world\\w1",
+ "label": "w1",
+ "manifest": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\MANIFEST.json",
+ "timeout_s": 60,
+ "replica_sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1\\root\\world\\w1",
+ "summary": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1\\replay_log.json",
+  "n_replayed_calls": 3,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 0,
+  "n_manifest_files_copied": 0,
+  "not_run_reason": null
+ },
+ "replica_sha256": {
+  "skeletons/a.py": "8f726c5a858ab593ddb7242917c37f223f818315c63aedb73265fcf1b3d71206"
+ },
+ "calls": [
+  {
+   "call_index": 1,
+   "line": 2,
+   "tool": "Write",
+   "tool_use_id": "toolu_2",
+   "background": false,
+   "path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\world\\w1\\skeletons\\a.py",
+   "mapped_path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1\\root\\world\\w1\\skeletons\\a.py",
+   "status": "ok"
+  },
+  {
+   "call_index": 3,
+   "line": 4,
+   "tool": "Bash",
+   "tool_use_id": "toolu_4",
+   "background": false,
+   "mapped_command": "py -I - <<'EOF'\np = r\"E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1\\root\\world\\w1\\skeletons\\a.py\"\ns = open(p, 'rb').read().decode('utf-8')\ns = s.replace('a = 1', 'a = 9')\nopen(p, 'wb').write(s.encode('utf-8'))\nEOF\n",
+   "exit_code": 0,
+   "timed_out": false,
+   "duration_s": 0.106,
+   "start_error": null,
+   "stdout": "",
+   "stderr": "",
+   "status": "ok"
+  },
+  {
+   "call_index": 5,
+   "line": 6,
+   "tool": "Edit",
+   "tool_use_id": "toolu_6",
+   "background": false,
+   "path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\world\\w1\\skeletons\\a.py",
+   "mapped_path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_edit_after_bash_applies_t0\\replays\\r1\\root\\world\\w1\\skeletons\\a.py",
+   "status": "ok"
+  }
+ ]
+}

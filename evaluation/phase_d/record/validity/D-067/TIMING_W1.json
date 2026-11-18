@@ -1,0 +1,26 @@
+{
+  "case": "D-067",
+  "mode": "timing_arm",
+  "arm": "W1",
+  "seed": 20261117,
+  "dev": false,
+  "timing": {
+    "n": 20,
+    "t": 8.427500069956295e-05,
+    "g": 0.0006446900006267242,
+    "S": 7,
+    "S_formula": 7,
+    "estimate_s": 2.332688004244119,
+    "limit_s": 1800.0
+  },
+  "estimate_s": 2.332688004244119,
+  "timing_ok": true,
+  "reasons": {
+    "timing": "ok"
+  },
+  "errors": [],
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "decisive": true
+}

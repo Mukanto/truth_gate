@@ -1,0 +1,74 @@
+[
+ {
+  "case": "D-012",
+  "l": "yes",
+  "reason": "0.3 within-plot ICC is a moderate, realistic value for quadrats within a plot; source states none; consistent with 10 plots x 30 quadrats.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-016",
+  "l": "yes",
+  "reason": "0.3 litter ICC is a realistic moderate litter effect for 14 litters x 4 pups; source states none.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-021",
+  "l": "yes",
+  "reason": "0.3 within-plot correlation across 12 dates of 8 plots is realistic and consistent with the setting; source states none.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-028",
+  "l": "yes",
+  "reason": "Revised value 1000 equals the brief's voxel count (set by the brief, within 2000 per axis); a reduced map keeps the many-candidates, few-subjects structure the source describes; source states no count.",
+  "approved_value": 1000.0
+ },
+ {
+  "case": "D-030",
+  "l": "yes",
+  "reason": "0.7 split-half correlation of neuron rates across the 400 neurons (20 trials per half) is plausible; source states none.",
+  "approved_value": 0.7
+ },
+ {
+  "case": "D-032",
+  "l": "n/a",
+  "reason": "structure statistic is null.",
+  "approved_value": null
+ },
+ {
+  "case": "D-033",
+  "l": "yes",
+  "reason": "Revised value 1000 equals the brief's voxel count (within 2000 per axis); a reduced map still has many candidates for 60 trials; source states no count.",
+  "approved_value": 1000.0
+ },
+ {
+  "case": "D-046",
+  "l": "yes",
+  "reason": "0.83 matches LAZ10 PMC full text (Europe PMC XML PMC2817684: 'giving IC = 0.83', Figure 1 simulation, 2 rats x 10 measurements); value and location match.",
+  "approved_value": 0.83
+ },
+ {
+  "case": "D-047",
+  "l": "yes",
+  "reason": "0.6 screening-to-entry test-retest correlation of a self-reported symptom score is realistic; source states none.",
+  "approved_value": 0.6
+ },
+ {
+  "case": "D-052",
+  "l": "yes",
+  "reason": "log(2)=0.693 (SD ratio 2) is a realistic variability difference consistent with the source's 'higher variance in one group'; source states none.",
+  "approved_value": 0.693
+ },
+ {
+  "case": "D-061",
+  "l": "yes",
+  "reason": "Revised value 1500 equals the brief's voxel count, now honestly labelled as set by the brief; it no longer claims the source's 18000, which the sizes do not reproduce (reduced for timing; flag for part A (f)).",
+  "approved_value": 1500.0
+ },
+ {
+  "case": "D-069",
+  "l": "yes",
+  "reason": "0.7 baseline-to-6-month correlation of clinic systolic pressure in untreated patients is a realistic test-retest value; source states none.",
+  "approved_value": 0.7
+ }
+]

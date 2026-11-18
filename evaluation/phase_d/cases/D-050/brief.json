@@ -1,0 +1,36 @@
+{
+ "id": "D-050",
+ "claim": "Age explains at least 10% of the variance in liver mass beyond what body mass explains: the increase in R-squared when age is added to a regression of liver mass on body mass is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "liver_mass",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "liver mass of each rat, in g",
+   "dims": [
+    80
+   ]
+  },
+  {
+   "key": "age_days",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "age of each rat, in days",
+   "dims": [
+    80
+   ]
+  },
+  {
+   "key": "body_mass",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "body mass of each rat, in g",
+   "dims": [
+    80
+   ]
+  }
+ ],
+ "sizes": {
+  "rats": 80
+ }
+}

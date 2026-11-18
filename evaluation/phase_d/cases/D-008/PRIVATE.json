@@ -1,0 +1,25 @@
+{
+ "id": "D-008",
+ "source": "ARC81",
+ "passage": "'Type 2 coupling is the functional relationship between two calculated variables which have one or more common component variables.' (abstract, PubMed 7212790). The abstract gives no correction; the correction used is the standard remedy of an independent measurement of the shared term.",
+ "faulty": "For each patient, least-squares slope of Fick VO2 = cardiac_output * (arterial_o2_content - venous_o2_content) * 10 on DO2 = cardiac_output * arterial_o2_content * 10 across the occasions; mean over patients, compared with 0.1.",
+ "fixed": "For each patient, least-squares slope of vo2_expired_gas on DO2 across the occasions; mean over patients, compared with 0.1.",
+ "estimand": "Faulty: mean within-patient slope between two calculated quantities that share cardiac output. Fixed: mean within-patient slope of measured consumption on calculated delivery.",
+ "model_family": "Source names none. Choice: as B3A-04 per occasion, with a patient-specific baseline and within-patient fluctuation of true cardiac output (within-patient CV about 0.25) and arterial content (about 0.08); true consumption = a_i + b*DO2 + noise (b about 0.1-0.3) in the claim-true version, b = 0 in the claim-false version; venous content from the Fick identity with the true values. Reason: repeated occasions let delivery vary within each patient while the shared term varies freely.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": "2 occasions per patient (a slope needs 2) and at least 2 patients with a defined slope; a patient with zero variance of delivery is not counted; guards: non-finite values, selection below the minimum, zero variance.",
+ "sizes_note": "Source (abstract only) states no sizes. 40 patients x 6 occasions is a realistic supply-dependency series; the corrected check is 40 small regressions. Dependence on n: not stated.",
+ "exploited_structure": "Delivery and Fick consumption both contain the same cardiac output measurement on every occasion, so their within-patient fluctuations covary through it.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    co = np.log(np.asarray(d['cardiac_output'], dtype=float))\n    ca = np.log(np.asarray(d['arterial_o2_content'], dtype=float))\n    vco = np.var(co, axis=1, ddof=1)\n    vdo = np.var(co + ca, axis=1, ddof=1)\n    return float(np.mean(vco) / np.mean(vdo))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.9,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.9 is the within-patient share of the variance of log delivery due to log cardiac output for within-patient coefficients of variation of 0.25 (output) and 0.08 (arterial content): 0.0625 / (0.0625 + 0.0064); it uses cardiac output and arterial content only, which the claim-false version leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (ARC81 pair 2 of 2). Earlier combos for ARC81 included shared-measured-component x regression-slope; it is repeated because a within-patient slope is the natural form of the supply-dependency question, but the data structure (patients x occasions, mean of per-unit slopes) differs from B3A-04. The correction is not documented in the abstract and is flagged as not verified in the source text.",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.9
+}

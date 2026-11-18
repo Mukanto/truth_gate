@@ -1,0 +1,25 @@
+{
+ "id": "D-052",
+ "source": "MAK19",
+ "passage": "one should not infer that one correlation is greater than the other. (Section on comparing two effects without a direct test: groups of 20 participants; an intervention effect significant in one group but not the other, with equal means but higher variance in one group.)",
+ "faulty": "improvement = post - pre. One-sample one-sided t test (mean > 0, 0.05) in young and in old participants. HOLDS if significant in young and not significant in old; None if a group has fewer than 2 participants or a zero variance.",
+ "fixed": "Welch two-sample one-sided t test (0.05) of the improvement of young minus old. HOLDS if p < 0.05; None if a group has fewer than 2 participants or a zero variance.",
+ "estimand": "Faulty: the pair (young improvement significant, old improvement not). Fixed: the difference in mean improvement between young and old.",
+ "model_family": "Independent Gaussian improvements per group with group means and group standard deviations; the claim-false world has equal means and unequal standard deviations, as in the source's example.",
+ "statistic_family": "mean",
+ "guard_minimum": 2,
+ "sizes_note": "Source: two groups of 20 participants; 40 participants here. Dependence on size: not stated.",
+ "exploited_structure": "Two groups whose improvements differ in variability, so the same mean improvement is significant in the less variable group and not in the other.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    imp = np.asarray(d['post'], dtype=float) - np.asarray(d['pre'], dtype=float)\n    g = np.asarray(d['young'], dtype=bool)\n    if g.sum() < 2 or (~g).sum() < 2:\n        return 0.0\n    s1 = imp[g].std(ddof=1)\n    s2 = imp[~g].std(ddof=1)\n    if s1 <= 0 or s2 <= 0:\n        return 0.0\n    return float(abs(np.log(s1 / s2)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.693,
+  "note_value_source": "source states none: the passage says only that one group has equal means but higher variance; log(2) (a standard-deviation ratio of 2) is proposed",
+  "set_by_brief": false
+ },
+ "notes": "Reserve. MAK19's earlier here-not-there combinations were correlation and slope; this one is mean. Differs from DEC-05 in statistic and structure (paired pre/post scores, group-specific variance).",
+ "subtype_or_tag": "significant-here-not-there",
+ "class": "B-6",
+ "approved_value": 0.693
+}

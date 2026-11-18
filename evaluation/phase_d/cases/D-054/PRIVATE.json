@@ -1,0 +1,25 @@
+{
+ "id": "D-054",
+ "source": "KAP23",
+ "passage": "L1.3: \"Feature selection on the entire dataset results in using information about which feature performs well\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; the sentence is cut by the fetch tool). The reference list also cites a paper on inflated accuracy from feature selection in neuropsychiatric biomarkers (ref. 34), not described in the text.",
+ "faulty": "The 20 features with the largest absolute two-sample t statistic between y True and y False are chosen on all 80 rows; then 5-fold cross-validation (stratified: fold = rank of the row within its class mod 5) of a ridge classifier (ridge regression on y coded +1/-1, lambda 10, standardised, on the 20 chosen features); pooled AUC over all 80 held-out scores >= 0.65.",
+ "fixed": "In each fold the 20 features are chosen from the 64 training rows only, the ridge classifier is fitted on them, scores the 16 held-out rows; pooled AUC >= 0.65.",
+ "estimand": "Faulty: AUC of a classifier whose features were chosen with the held-out labels. Fixed: the out-of-sample AUC of the whole pipeline (feature choice plus classifier) for new subjects.",
+ "model_family": "Top-20 filter by absolute t statistic, then ridge classifier (ridge regression on +/-1 labels, lambda 10, standardised). Source names none; numpy-only and defined with 1000 features on 80 rows.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 80 x 1000 = 80,000 values: small-n many-features regime typical of biomarker studies; the check is 5 t-test sweeps and 5 small ridge fits (seconds). Dependence of the error on number of features: not stated (the source only says selection on the entire dataset uses information about which feature performs well on the test set).",
+ "exploited_structure": "Many candidate features relative to the number of samples, so the features with the largest apparent association with the labels include chance associations that the held-out rows also carry.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(X.shape[1] / X.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 12.5,
+  "note_value_source": "source states none: 1000 features / 80 samples is the brief's own size; set by the brief",
+  "set_by_brief": true
+ },
+ "notes": "Guard: AUC None when the held-out pool lacks a row of either class (minimum one of each); constant scores or non-finite values return None. No earlier combination exists for L1.3, so classification is allowed here. The brief says only that the classifier uses 20 of 1000 features; it does not say how they are chosen.",
+ "subtype_or_tag": "L1.3",
+ "class": "B-2",
+ "approved_value": 12.5
+}

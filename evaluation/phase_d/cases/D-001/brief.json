@@ -1,0 +1,20 @@
+{
+ "id": "D-001",
+ "claim": "Among 150 adults with systolic blood pressure measured at three annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the Pearson correlation between an individual's underlying yearly rate of change in systolic blood pressure and the individual's underlying initial systolic blood pressure is at most -0.30.",
+ "data_keys": [
+  {
+   "key": "systolic_bp",
+   "shape": "(individuals, occasions)",
+   "dtype": "float",
+   "meaning": "systolic blood pressure of each individual at each of three annual visits, with the visits in time order, in mmHg",
+   "dims": [
+    150,
+    3
+   ]
+  }
+ ],
+ "sizes": {
+  "individuals": 150,
+  "occasions": 3
+ }
+}

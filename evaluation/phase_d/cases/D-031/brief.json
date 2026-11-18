@@ -1,0 +1,36 @@
+{
+ "id": "D-031",
+ "claim": "Across cities, annual offences recorded and the median age of residents are associated after accounting for population: the partial correlation coefficient between offences and median age, given population, is at least 0.25 in absolute value.",
+ "data_keys": [
+  {
+   "key": "offences",
+   "shape": "(cities,)",
+   "dtype": "float",
+   "meaning": "total offences recorded in each city in one year",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "median_age",
+   "shape": "(cities,)",
+   "dtype": "float",
+   "meaning": "median age of the residents of each city, in years",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "population",
+   "shape": "(cities,)",
+   "dtype": "float",
+   "meaning": "population of each city, in thousands",
+   "dims": [
+    500
+   ]
+  }
+ ],
+ "sizes": {
+  "cities": 500
+ }
+}

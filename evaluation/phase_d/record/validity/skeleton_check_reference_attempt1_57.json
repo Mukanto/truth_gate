@@ -1,0 +1,345 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_d_work\\record\\pkg\\truth_gate\\__init__.py",
+  "D-003/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-004/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-005/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-006/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-007/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-008/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-010/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-011/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-012/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-013/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-014/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-015/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-016/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-017/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-018/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-020/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-021/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-022/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-024/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-027/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-028/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-029/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-030/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-031/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-032/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-033/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-034/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-035/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-036/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-037/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-038/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-039/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-040/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-041/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-042/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-043/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-044/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-046/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-047/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-049/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-050/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-052/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-053/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-054/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-055/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-058/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-059/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-060/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-061/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-062/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-064/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-065/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-066/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-067/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-069/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-070/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  },
+  "D-071/reference": {
+    "issues": [
+      "load/construct error: TypeError: unsupported operand type(s) for +: 'dict' and 'str'"
+    ],
+    "loaded": true
+  }
+}

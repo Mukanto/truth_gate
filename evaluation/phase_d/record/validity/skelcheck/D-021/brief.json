@@ -1,0 +1,26 @@
+{
+ "id": "D-021",
+ "claim": "In a field experiment, 8 plots were each surveyed on 12 successive dates and scored as occupied or not by a species on each date; the array fenced marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.15, where the occupancy of a plot is the fraction of dates on which it is occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+ "data_keys": [
+  {
+   "key": "present",
+   "shape": "(plots, dates)",
+   "dtype": "bool",
+   "meaning": "True if the species was present in that plot on that date; dates are in time order",
+   "dims": [
+    8,
+    12
+   ]
+  },
+  {
+   "key": "fenced",
+   "shape": "(plots,)",
+   "dtype": "bool",
+   "meaning": "True if the plot was fenced against grazers",
+   "dims": [
+    8
+   ]
+  }
+ ],
+ "sizes": "{\"plots\": 8, \"dates\": 12}"
+}

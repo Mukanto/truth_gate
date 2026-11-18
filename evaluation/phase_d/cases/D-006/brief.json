@@ -1,0 +1,20 @@
+{
+ "id": "D-006",
+ "claim": "Across children, BMI at age 5 and the yearly rate of change in BMI between ages 5 and 10 are negatively correlated: the correlation between the two is at most -0.25.",
+ "data_keys": [
+  {
+   "key": "bmi",
+   "shape": "(children, annual_visits)",
+   "dtype": "float",
+   "meaning": "BMI of each child at the annual visits at ages 5, 6, 7, 8, 9 and 10 (visits in age order), in kg/m2",
+   "dims": [
+    500,
+    6
+   ]
+  }
+ ],
+ "sizes": {
+  "children": 500,
+  "annual_visits": 6
+ }
+}

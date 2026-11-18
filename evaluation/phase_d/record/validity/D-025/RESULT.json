@@ -1,0 +1,146 @@
+{
+  "case": "D-025",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "ok",
+    "v2": "fixed criterion outside its bound on noise",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.20490648265614747,
+        "sd": 0.02757208402128704,
+        "values_head": [
+          0.19272988821226367,
+          0.20241538284146196,
+          0.22274015020981508,
+          0.20356544035499294,
+          0.22563804761382752
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.20763709626443305,
+        "sd": 0.029779519850263232,
+        "values_head": [
+          0.2418822654051114,
+          0.24962282069286787,
+          0.2328352561465374,
+          0.27946225638779787,
+          0.17341627725497052
+        ],
+        "share_beyond_half": 1.0
+      },
+      "note_value": 0.2,
+      "null_value": 0.0,
+      "tolerance": 0.04000000000000001,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.0027306136082855814,
+      "three_se": 0.008609110458724003,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "baseline_attachment_loss",
+          "baseline_attachment_loss_retest",
+          "followup_attachment_loss"
+        ],
+        "changed_keys": [
+          "followup_attachment_loss"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "followup_attachment_loss"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 1000,
+      "fixed_holds": 3,
+      "n": 1000,
+      "faulty_rate": 1.0,
+      "fixed_rate": 0.003,
+      "fisher_p": 0.0,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 3,
+        "n": 1000,
+        "rate": 0.003,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 77,
+        "n": 1000,
+        "rate": 0.077,
+        "max": 0.065,
+        "ok": false,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 1000,
+        "n": 1000,
+        "rate": 1.0,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": true,
+  "v1_label": null,
+  "v2": false,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 3.538499986461829e-05,
+    "g": 4.196499958197819e-05,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.18563999867183156,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "e5ec34c7f869d35f2486fc659506903dc135d129d798cf75dd0ab9a94025b632",
+    "PRIVATE.json": "24d1e117d4563164f2ba49b10e1c9e330a7e346f309d62a78732ce42c61f3921",
+    "faulty_body.py": "30115c213583455cc9e73c39430410e3cb49d246d9dfd1bec349b4512f94da9a",
+    "fixed_body.py": "750d1b2b396007c9f60635e764007a37937683b03bbc3c9768068493a93e722a",
+    "reference.py": "885bfc27f7970f118abd890ff516ead5e2432afb48d4b6becfe8c2ae45acbf03"
+  },
+  "decisive": true
+}

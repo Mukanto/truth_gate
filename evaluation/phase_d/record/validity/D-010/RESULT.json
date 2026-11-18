@@ -1,0 +1,146 @@
+{
+  "case": "D-010",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": true,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "ok",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.125,
+        "sd": 0.0,
+        "values_head": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.125,
+        "sd": 0.0,
+        "values_head": [
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ],
+        "share_beyond_half": 1.0
+      },
+      "note_value": 0.125,
+      "null_value": 0.0,
+      "tolerance": 0.025,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.0,
+      "three_se": 0.0,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "category",
+          "covariates",
+          "y"
+        ],
+        "changed_keys": [
+          "y"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "y"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 1000,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 1.0,
+      "fixed_rate": 0.0,
+      "fisher_p": 0.0,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 931,
+        "n": 1000,
+        "rate": 0.931,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": true,
+  "v1_label": null,
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 0.002489060000880272,
+    "g": 0.00021345499953895342,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 6.486036001006141,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "4e15402252d6f11bdec58023991a11da85bc42af9350274285e3baac1d195d30",
+    "PRIVATE.json": "bad279ce8760add39848164b2ebd8d5a34785c2db109265426982a92174922c2",
+    "faulty_body.py": "5e5d2dfb9ec726dff6916f9d579ed351b9789d6766d3f8c2c63b0d128b4f493c",
+    "fixed_body.py": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+    "reference.py": "bc94549159855d15e644ba1e63c4faa82c9f3d709f67f55d1d963ee906c0c867"
+  },
+  "decisive": true
+}

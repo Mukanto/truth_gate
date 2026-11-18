@@ -1,0 +1,146 @@
+{
+  "case": "D-052",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": true,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "ok",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.6759972548228425,
+        "sd": 0.2149789341663419,
+        "values_head": [
+          1.0448629585654945,
+          0.49384944774715034,
+          0.6117746003463765,
+          0.393476720509602,
+          1.1285933489490425
+        ],
+        "share_beyond_half": 0.95
+      },
+      "minus": {
+        "mean": 0.7194460734009749,
+        "sd": 0.23435232748222024,
+        "values_head": [
+          0.8766848500836105,
+          0.7855900712926949,
+          0.8188799614160168,
+          0.6777757058738266,
+          1.3193932560164825
+        ],
+        "share_beyond_half": 0.955
+      },
+      "note_value": 0.693,
+      "null_value": 0.0,
+      "tolerance": 0.1386,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.04344881857813243,
+      "three_se": 0.06746230798692969,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "post",
+          "pre",
+          "young"
+        ],
+        "changed_keys": [
+          "post"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "post"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 490,
+      "fixed_holds": 36,
+      "n": 1000,
+      "faulty_rate": 0.49,
+      "fixed_rate": 0.036,
+      "fisher_p": 5.64865708598042e-134,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 36,
+        "n": 1000,
+        "rate": 0.036,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 52,
+        "n": 1000,
+        "rate": 0.052,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 718,
+        "n": 1000,
+        "rate": 0.718,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": true,
+  "v1_label": null,
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 3.875999827869236e-05,
+    "g": 2.9554999491665514e-05,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.1639559946488589,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "c13acb339c05eb8280599a74dfaae4cc99fbf388917f07709a1c1904cdfb28bd",
+    "PRIVATE.json": "174e7988ca56e6cf466880b192db2cfe7bf0f6d1154a2687046df5f60adf86e7",
+    "faulty_body.py": "0a6a80977f93c63faa4d1e8d6cdecea1c168918e0313ca832975bc4df55cb6b4",
+    "fixed_body.py": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+    "reference.py": "4a61e81f45513fbea6bf8265d33074e7df68381dc73a62882efca603b8aa5f35"
+  },
+  "decisive": true
+}

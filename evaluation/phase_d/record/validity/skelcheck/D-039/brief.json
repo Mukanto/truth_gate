@@ -1,0 +1,26 @@
+{
+ "id": "D-039",
+ "claim": "On future months, the monthly forecasts of a ridge regression of y on the three predictors X (penalty 1.0 on standardised predictors, with an intercept) are informative about the monthly outcome: the slope of the ordinary least squares regression of observed y on the forecast, computed over future months, is at least 0.5.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(months_in_order, features)",
+   "dtype": "float",
+   "meaning": "3 continuous monthly predictor series, one value per predictor per month",
+   "dims": [
+    400,
+    3
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(months_in_order,)",
+   "dtype": "float",
+   "meaning": "continuous monthly outcome",
+   "dims": [
+    400
+   ]
+  }
+ ],
+ "sizes": "{\"months_in_order\": 400, \"features\": 3}"
+}

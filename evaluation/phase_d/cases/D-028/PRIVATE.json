@@ -1,0 +1,25 @@
+{
+ "id": "D-028",
+ "source": "VUL09",
+ "passage": "SOURCES_D passage: voxels selected by their correlation with a trait; then the mean correlation of the selected voxels is reported. Abstract (Europe PMC, read): more than half of 55 surveyed articles computed correlations voxel by voxel, then averaged only the voxels above a threshold; the reported correlations exceed what the reliabilities of the measures allow.",
+ "faulty": "For each voxel, Pearson r between its activation and the trait over all 20 subjects. Keep the 20 voxels with the largest r. Report their mean r. HOLDS if mean r >= 0.5; None if fewer than 1 voxel is kept (never, with 1000 voxels) or a zero variance occurs.",
+ "fixed": "Keep the 20 voxels with the largest r computed on one half of the subjects (10 subjects), and compute their mean r on the other 10; swap the halves and average (Fisher z averaged, back-transformed). HOLDS if the average mean r >= 0.5; None on zero variance.",
+ "estimand": "Faulty: mean sample correlation, in the very subjects used to choose them, of the 20 voxels with the largest sample correlation. Fixed: mean population correlation with the trait of the 20 voxels chosen without using the subjects on which the correlation is estimated.",
+ "model_family": "Multivariate Gaussian: trait ~ N(0,1); activation[:, v] = rho_v * trait + sqrt(1 - rho_v^2) * N(0,1), independent noise across voxels (the source names no generative model; a latent-trait linear model is the simplest one with a controllable population correlation rho_v).",
+ "statistic_family": "correlation",
+ "guard_minimum": 1,
+ "sizes_note": "Source (abstract only): states no subject or voxel number; reported correlations above 0.8. 20 subjects is in the range of the individual-differences fMRI studies the source surveys (not read in full); 1000 voxels instead of the tens of thousands of a whole-brain map keeps the array at 20000 values. Dependence of the error on sample size or voxel count: not stated in the abstract.",
+ "exploited_structure": "Many candidate voxels, few subjects, so the largest of the sample correlations is dominated by noise, and the same subjects are then used to report the correlation.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    return float(np.asarray(d['activation']).shape[1])",
+  "direction": "greater",
+  "null_value": 1.0,
+  "note_value": 1000.0,
+  "note_value_source": "set by the brief: the statistic reports the number of voxels, so its value at the brief's sizes is 1000",
+  "set_by_brief": true
+ },
+ "notes": "VUL09's earlier combinations were select/correlation, select/mean and select/slope. I could not use another family where the source allows: an R-squared version (variance explained by the region's mean activation) was drafted and abandoned because select-then-score-by-fit sits next to B-2 (feature selection on all data with a performance-like statistic), and proportion is used by DEC-01. Correlation is the source's own statistic. The case differs from DEC-01 in data structure and statistic. With 20 subjects the largest 20 of 1000 sample correlations have a mean near 0.55 when every population correlation is zero, so the faulty criterion can hold in a world without the effect.",
+ "subtype_or_tag": "select-then-test-same-data",
+ "class": "B-1",
+ "approved_value": 1000.0
+}

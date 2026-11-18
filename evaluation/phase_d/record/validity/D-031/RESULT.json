@@ -1,0 +1,146 @@
+{
+  "case": "D-031",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "faulty rate 0 < 0.25; Fisher p 1 >= 0.01",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.30320832024919236,
+        "sd": 0.038153928523316206,
+        "values_head": [
+          0.3291074876924142,
+          0.28751541175709416,
+          0.3137275711285152,
+          0.26283561450594145,
+          0.27556450289885676
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.2995276692135647,
+        "sd": 0.045485741228007553,
+        "values_head": [
+          0.28651680568609683,
+          0.27621861234299494,
+          0.26755633123523526,
+          0.2667019363315931,
+          0.3214161204410941
+        ],
+        "share_beyond_half": 0.99
+      },
+      "note_value": 0.3,
+      "null_value": 0.0,
+      "tolerance": 0.06,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.0036806510356276467,
+      "three_se": 0.012594060951776495,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "median_age",
+          "offences",
+          "population"
+        ],
+        "changed_keys": [
+          "offences"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "offences"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 0,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 0.0,
+      "fixed_rate": 0.0,
+      "fisher_p": 1.0,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 800,
+        "n": 1000,
+        "rate": 0.8,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": false,
+  "v1_label": "V1a",
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 0.0001920399996379274,
+    "g": 0.00013591000006272225,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.7870799992815591,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "a5b2356155412306330f8df044c2e98e37ec22656687ca7d294a6238924f4b66",
+    "PRIVATE.json": "8a0b245f2fe8d2302f61c72303adab5fb8c68def7c57605ec04bd285e70b7ba4",
+    "faulty_body.py": "b5ba143ffb90169a4c70ecf3209af44e1eeda4e02269ee78c0fb7d61e1a836f0",
+    "fixed_body.py": "386da06fedad2a2ae1325a9e606f8764991587c0b24eda92ff7a9e771f308b8a",
+    "reference.py": "181b64935eb47eb044bab71ded988764d09eb493c2acd03ad6e0326f7171667b"
+  },
+  "decisive": true
+}

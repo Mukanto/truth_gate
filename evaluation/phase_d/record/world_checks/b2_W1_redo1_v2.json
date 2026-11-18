@@ -1,0 +1,320 @@
+{
+ "transcript": "transcripts\\world_b2_W1_redo1_agent-aa6b4334a3206fad1.jsonl",
+ "transcript_sha256": "e701d4a182626f52192387286952a3ff94ebf06731ec28ee1acef5d7503737bb",
+ "first_last_utc": [
+  "2026-11-18T15:25:11.819Z",
+  "2026-11-18T15:43:21.492Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "cc028f55f07b96447eb20b512b035443d15cbf61a5811f669facf6d361859ce2",
+ "prompt_is_frozen": true,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": true,
+ "prompt_diff": null,
+ "injected_remainder_len": 4613,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 18
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 4,
+  "Bash": 7,
+  "Write": 11
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "aa6b4334a3206fad1",
+  "other_agentIds": [],
+  "sessionIds": [
+   "e99bcaed-1f5d-4c84-948a-5ba1699cb0eb"
+  ],
+  "filename_agent_id": null,
+  "agentId_matches_filename": null,
+  "problems": []
+ },
+ "terms_scanned": 84,
+ "baseline_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+ "baseline_ok": true,
+ "baseline_leaves": 786,
+ "term_hits": [
+  {
+   "term": "checklist",
+   "location": "attachment entry 4 (line 5, type skill_listing)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "checklist",
+   "location": "attachment entry 18 (line 19, type prompt_snapshot)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": " task (deploy steps, a review checklist, a repo-specific workflow). A",
+   "context": "nd of task (deploy steps, a review checklist, a repo-specific workflow). Availa"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 13 (line 14, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "count_baseline": 1,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 33 (line 34, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "count_baseline": 0,
+   "count_new": 1,
+   "baseline": false,
+   "window": " that produced it. A one-page checklist for the freeze. | [`protocol/",
+   "context": "ilure that produced it. A one-page checklist for the freeze. | [`protocol/`](pr"
+  }
+ ],
+ "term_hits_baseline": 3,
+ "term_hits_new": 1,
+ "term_hits_new_invalidating": 0,
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.326"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "xhigh",
+  "effort_sources": {
+   "api-request.params.output_config.effort": [
+    "xhigh"
+   ],
+   "assistant.effort": [
+    "xhigh"
+   ],
+   "assistant.perTurnEffort": [
+    "xhigh"
+   ]
+  },
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [
+   "{\"display\": \"updates\", \"type\": \"adaptive\"}"
+  ],
+  "entrypoints": [
+   "claude-desktop"
+  ],
+  "cwds": [
+   "E:\\Claude Projects\\Kapi\\phase_d_work"
+  ]
+ },
+ "provenance": {
+  "skeletons/D-052.py": {
+   "sha256_disk": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+   "last_write_sha256": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-055.py": {
+   "sha256_disk": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+   "last_write_sha256": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-056.py": {
+   "sha256_disk": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+   "last_write_sha256": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-062.py": {
+   "sha256_disk": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+   "last_write_sha256": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-064.py": {
+   "sha256_disk": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+   "last_write_sha256": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-066.py": {
+   "sha256_disk": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+   "last_write_sha256": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-067.py": {
+   "sha256_disk": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+   "last_write_sha256": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-068.py": {
+   "sha256_disk": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+   "last_write_sha256": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "WORLD_LOG.md": {
+   "sha256_disk": "d3654633e4d543ca686247c561ae6791d9ded77fb7ce290d3c8a34e8f5bd878b",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "d3654633e4d543ca686247c561ae6791d9ded77fb7ce290d3c8a34e8f5bd878b",
+   "last_write_sha256": "d3654633e4d543ca686247c561ae6791d9ded77fb7ce290d3c8a34e8f5bd878b",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "CHECKLIST_LOG.md": {
+   "sha256_disk": "bfb0489c55947ba3ac7163d980d0150ed9679c357ee3285f34f447419972bea1",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "bfb0489c55947ba3ac7163d980d0150ed9679c357ee3285f34f447419972bea1",
+   "last_write_sha256": "bfb0489c55947ba3ac7163d980d0150ed9679c357ee3285f34f447419972bea1",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  }
+ },
+ "unmatched_patterns": [],
+ "unchecked_written_files": [
+  "e:/claude projects/kapi/phase_d_work/world/d5f53a/_check_worlds.py"
+ ],
+ "files_checked": 10,
+ "replay": {
+  "replay_ran": false,
+  "replay_dir": null,
+  "replay_log": null,
+  "n_replayed_calls": 0,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "not_run_reason": null
+ },
+ "provenance_ok": true,
+ "unparsable_lines": [],
+ "reasons": [],
+ "valid": true
+}

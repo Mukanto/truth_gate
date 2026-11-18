@@ -1,0 +1,30 @@
+{
+ "id": "D-056",
+ "claim": "Among 3 groups of 25 rats each, mean resting oxygen uptake differs between the groups once body mass is accounted for: the analysis-of-covariance F test of the group effect on oxygen uptake, with body mass as the covariate, has a p-value below 0.05.",
+ "data_keys": [
+  {
+   "key": "oxygen_uptake",
+   "shape": "(groups, animals)",
+   "dtype": "float",
+   "meaning": "resting oxygen uptake of each rat in each group, in mL O2 per min",
+   "dims": [
+    3,
+    25
+   ]
+  },
+  {
+   "key": "body_mass",
+   "shape": "(groups, animals)",
+   "dtype": "float",
+   "meaning": "body mass of each rat in each group, in g",
+   "dims": [
+    3,
+    25
+   ]
+  }
+ ],
+ "sizes": {
+  "groups": 3,
+  "animals": 25
+ }
+}

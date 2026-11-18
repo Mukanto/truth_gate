@@ -1,0 +1,25 @@
+{
+ "id": "D-027",
+ "source": "KAP23",
+ "passage": "L1.1: \"Using the same dataset for training and testing the model is a textbook example of overfitting\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; as returned by the fetch tool).",
+ "faulty": "Ordinary least squares (intercept, 25 features) fitted on all 60 rows; skill = 1 - MAE(fitted values)/MAE(mean predictor) on the same 60 rows; holds iff >= 0.10.",
+ "fixed": "5-fold cross-validation (fold = i mod 5), OLS fitted on 48 rows predicts 12; pooled MAE against the training-fold mean predictor; skill >= 0.10.",
+ "estimand": "Faulty: apparent MAE skill of a model fitted to all 60 samples. Fixed: expected out-of-sample MAE skill.",
+ "model_family": "Ordinary least squares on 25 raw features with intercept (numpy lstsq). Chosen to differ from the ridge model of B2A-01: unpenalised, a moderate p/n of 0.42.",
+ "statistic_family": "other",
+ "guard_minimum": 1,
+ "sizes_note": "Source states none. 60 x 25 = 1,500 values, a small-sample regime in which the in-sample skill under no effect is about 0.24 (reserve for L1.1). Dependence on sample size or feature count: not stated.",
+ "exploited_structure": "Many features relative to samples, so the fitted model reproduces the outcomes of the rows it was fitted on.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(X.shape[1] / X.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.4167,
+  "note_value_source": "source states none: 25 features / 60 samples is the brief's own size; set by the brief",
+  "set_by_brief": true
+ },
+ "notes": "Reserve for L1.1. Guard: None if MAE of the mean predictor is zero; non-finite returns None. Differs from B2A-01 and B2A-02 in family (other), model and sample-size regime.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 0.4167
+}

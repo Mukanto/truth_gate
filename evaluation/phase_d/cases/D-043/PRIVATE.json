@@ -1,0 +1,25 @@
+{
+ "id": "D-043",
+ "source": "SAN18",
+ "passage": "Abstract: \"A frequent experimental flaw is the application of oversampling algorithms to the entire dataset, resulting in biased models and overly-optimistic estimates.\" (copying rows = random oversampling, L1.4 by PB's tie rule, SOURCES_D)",
+ "faulty": "Random oversampling (minority rows copied with replacement until the classes have equal counts) is applied to all 400 records; stratified 5-fold cross-validation with an unpruned CART tree then runs on the enlarged data; sensitivity for the positive class, pooled over the test folds (which contain copies), is the statistic. Claim holds when sensitivity >= 0.60.",
+ "fixed": "Stratified 5-fold cross-validation on the original 400 records; random oversampling of the training folds only; sensitivity on the original test-fold records, pooled.",
+ "estimand": "Faulty: sensitivity on test rows that are copies of training rows. Fixed: sensitivity on new records.",
+ "model_family": "Unpruned CART decision tree with random oversampling. Chosen by me: an unpruned tree reproduces a copied row exactly, so the copy leak is visible; the abstract names no classifier.",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not open). 400 x 8 is the small-sample regime; cheap. Dependence on the oversampling ratio: not stated.",
+ "exploited_structure": "A small positive class whose rows are duplicated, so exact copies of test positives are in the training data.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    return float(np.mean(d[\"positive\"]))",
+  "direction": "less",
+  "null_value": 0.5,
+  "note_value": 0.1,
+  "note_value_source": "source states none: the abstract gives no imbalance ratio; 0.1 is a typical minority share proposed as the setting's value",
+  "set_by_brief": false
+ },
+ "notes": "L1.4 (copying rows) by PB tie rule. The statistic comes from labels only, which a claim-false world keeps. Differs from B2B-03/04 in the pipeline step (duplication vs synthesis), statistic (sensitivity) and size.",
+ "subtype_or_tag": "L1.4",
+ "class": "B-2",
+ "approved_value": 0.1
+}

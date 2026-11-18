@@ -1,0 +1,263 @@
+{
+ "transcript": "transcripts\\world_b1_stopped2_agent-a565a633763173ab2.jsonl",
+ "transcript_sha256": "028aba18c40c22a341e89d3003bb3a59df161d74d025365df3bcc2f167c0d415",
+ "first_last_utc": [
+  "2026-11-18T10:15:06.769Z",
+  "2026-11-18T10:36:52.940Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "cc028f55f07b96447eb20b512b035443d15cbf61a5811f669facf6d361859ce2",
+ "prompt_is_frozen": true,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": true,
+ "prompt_diff": null,
+ "injected_remainder_len": 4613,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 10,
+  "<synthetic>": 2
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 5,
+  "Bash": 4,
+  "Write": 7
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "a565a633763173ab2",
+  "other_agentIds": [],
+  "sessionIds": [
+   "e99bcaed-1f5d-4c84-948a-5ba1699cb0eb"
+  ],
+  "filename_agent_id": null,
+  "agentId_matches_filename": null,
+  "problems": []
+ },
+ "terms_scanned": 84,
+ "baseline_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+ "baseline_ok": true,
+ "baseline_leaves": 786,
+ "term_hits": [
+  {
+   "term": "checklist",
+   "location": "attachment entry 4 (line 5, type skill_listing)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "checklist",
+   "location": "attachment entry 18 (line 19, type prompt_snapshot)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": " task (deploy steps, a review checklist, a repo-specific workflow). A",
+   "context": "nd of task (deploy steps, a review checklist, a repo-specific workflow). Availa"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 13 (line 14, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "count_baseline": 1,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  }
+ ],
+ "term_hits_baseline": 3,
+ "term_hits_new": 0,
+ "term_hits_new_invalidating": 0,
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.326"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "xhigh",
+  "effort_sources": {
+   "api-request.params.output_config.effort": [
+    "xhigh"
+   ],
+   "assistant.effort": [
+    "xhigh"
+   ],
+   "assistant.perTurnEffort": [
+    "xhigh"
+   ]
+  },
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [
+   "{\"display\": \"updates\", \"type\": \"adaptive\"}"
+  ],
+  "entrypoints": [
+   "claude-desktop"
+  ],
+  "cwds": [
+   "E:\\Claude Projects\\Kapi\\phase_d_work"
+  ]
+ },
+ "provenance": {
+  "skeletons/D-007.py": {
+   "sha256_disk": "2e0ee1daff63f7181ee9219364f8bbd96bd2a2c1fb5aa1789a0d8b101262ef13",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "2e0ee1daff63f7181ee9219364f8bbd96bd2a2c1fb5aa1789a0d8b101262ef13",
+   "last_write_sha256": "2e0ee1daff63f7181ee9219364f8bbd96bd2a2c1fb5aa1789a0d8b101262ef13",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-008.py": {
+   "sha256_disk": "4ceff997ba2a2bcf930cd3cd326fc38b25548a2bb7189185eb5e8de9594030ff",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "4ceff997ba2a2bcf930cd3cd326fc38b25548a2bb7189185eb5e8de9594030ff",
+   "last_write_sha256": "4ceff997ba2a2bcf930cd3cd326fc38b25548a2bb7189185eb5e8de9594030ff",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-010.py": {
+   "sha256_disk": "5b0a3352938004704e4fd9e6ef7a115f2d07fe3233e7ec1936f5f3c97b876ca2",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "5b0a3352938004704e4fd9e6ef7a115f2d07fe3233e7ec1936f5f3c97b876ca2",
+   "last_write_sha256": "5b0a3352938004704e4fd9e6ef7a115f2d07fe3233e7ec1936f5f3c97b876ca2",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-011.py": {
+   "sha256_disk": "563849b49bbbc169c4157f460b6fb05eac071ae6a2c5bf010056d468e614cee1",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "563849b49bbbc169c4157f460b6fb05eac071ae6a2c5bf010056d468e614cee1",
+   "last_write_sha256": "563849b49bbbc169c4157f460b6fb05eac071ae6a2c5bf010056d468e614cee1",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-012.py": {
+   "sha256_disk": "0ac7a3a1f51229fe845a5d62c1809e95cd0bfd01f390248bbadee421f8d43ec7",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "0ac7a3a1f51229fe845a5d62c1809e95cd0bfd01f390248bbadee421f8d43ec7",
+   "last_write_sha256": "0ac7a3a1f51229fe845a5d62c1809e95cd0bfd01f390248bbadee421f8d43ec7",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-022.py": {
+   "sha256_disk": "3cc38f6a801efde68ee2216a4e36425850b12219d3905dacb34d3ed9d175ebc6",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "3cc38f6a801efde68ee2216a4e36425850b12219d3905dacb34d3ed9d175ebc6",
+   "last_write_sha256": "3cc38f6a801efde68ee2216a4e36425850b12219d3905dacb34d3ed9d175ebc6",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  },
+  "skeletons/D-023.py": {
+   "sha256_disk": "84e5bfe2e020164e994e13dc02292c858e360a44f29a188c4c6d8027e43631f1",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "84e5bfe2e020164e994e13dc02292c858e360a44f29a188c4c6d8027e43631f1",
+   "last_write_sha256": "84e5bfe2e020164e994e13dc02292c858e360a44f29a188c4c6d8027e43631f1",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": null
+  }
+ },
+ "unmatched_patterns": [
+  "WORLD_LOG.md",
+  "CHECKLIST_LOG.md"
+ ],
+ "unchecked_written_files": [],
+ "files_checked": 7,
+ "replay": {
+  "replay_ran": false,
+  "replay_dir": null,
+  "replay_log": null,
+  "n_replayed_calls": 0,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "not_run_reason": null
+ },
+ "provenance_ok": true,
+ "unparsable_lines": [],
+ "reasons": [],
+ "valid": true
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-064",
+ "source": "SIM03",
+ "passage": "SOURCES_D row SIM03 (abstract): class-prediction performance assessed on the data used to build the rule; independent validation is required.",
+ "faulty": "Ridge regression of response on [standardised expression, standardised clinical covariates] (penalty fixed at lambda = number of columns) is fitted on all 80 patients; the Pearson correlation between its fitted values and the observed response, on the same 80 patients, is the statistic (resubstitution). Claim holds when r >= 0.30.",
+ "fixed": "Same model; predictions for each patient come from 10-fold cross-validation (patients in the held-out fold are not used in fitting or standardising); r is the Pearson correlation between these held-out predictions and the observed response.",
+ "estimand": "Faulty: correlation between the fitted values and the outcomes of the patients that built the model. Fixed: correlation between predictions and outcomes in new patients.",
+ "model_family": "Ridge regression with a fixed penalty on the concatenated standardised blocks. Chosen by me: the source names no model; fixed penalty avoids tuning (stays L1.1).",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the text I read. 80 x (1500 + 8) is a realistic small clinical array study; low check cost. Dependence of the error on n or p: not stated.",
+ "exploited_structure": "Many more genes than patients, so fitted values can track the training outcomes from noise.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 18.75,
+  "note_value_source": "source states none: SIM03 sizes were not available to me; 18.75 = 1500 genes / 80 patients, this brief's own ratio",
+  "set_by_brief": true
+ },
+ "notes": "Differs from B2B-01 in statistic (correlation vs R-squared), data structure (two predictor blocks) and sample-size regime (80 patients, 1500 genes). Prognostic/continuous variant as in B2B-01.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 18.75
+}

@@ -1,0 +1,26 @@
+{
+ "id": "D-028",
+ "claim": "Twenty subjects each completed a task during functional imaging, giving an activation value in each of 1000 voxels, and each completed a personality questionnaire. Claim: in the population from which the subjects come, the 20 voxels whose activation is most strongly correlated with the questionnaire score have a mean correlation with that score of at least 0.5.",
+ "data_keys": [
+  {
+   "key": "activation",
+   "shape": "(subjects, voxels)",
+   "dtype": "float",
+   "meaning": "task-related activation of each voxel in each subject",
+   "dims": [
+    20,
+    1000
+   ]
+  },
+  {
+   "key": "trait",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "personality questionnaire score of each subject",
+   "dims": [
+    20
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 20, \"voxels\": 1000}"
+}

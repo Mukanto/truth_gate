@@ -1,0 +1,26 @@
+{
+ "id": "D-066",
+ "claim": "A nearest-neighbour classifier (one neighbour, Euclidean distance on standardised measurements) recovers the rare outcome y from the measurements X for new patients with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "15 continuous clinical measurements for each patient",
+   "dims": [
+    1000,
+    15
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "bool",
+   "meaning": "True where the patient has the rare outcome",
+   "dims": [
+    1000
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 1000, \"features\": 15}"
+}

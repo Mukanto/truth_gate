@@ -1,0 +1,36 @@
+{
+ "id": "D-067",
+ "claim": "After accounting for body mass, kidney weight and heart weight are positively related: the standardised slope of kidney weight on heart weight is at least 0.25.",
+ "data_keys": [
+  {
+   "key": "kidney_weight",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "combined kidney weight of each rat, in g",
+   "dims": [
+    60
+   ]
+  },
+  {
+   "key": "heart_weight",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "heart weight of each rat, in g",
+   "dims": [
+    60
+   ]
+  },
+  {
+   "key": "body_mass",
+   "shape": "(rats,)",
+   "dtype": "float",
+   "meaning": "body mass of each rat, in g",
+   "dims": [
+    60
+   ]
+  }
+ ],
+ "sizes": {
+  "rats": 60
+ }
+}

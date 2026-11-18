@@ -1,0 +1,1617 @@
+{
+  "pairs": [
+    {
+      "id": "D-001",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 2,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-002",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 1,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-003",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 10,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-004",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 3,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-005",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 4,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-006",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 5,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-007",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 6,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-008",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 7,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-009",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 8,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-010",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 9,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-011",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 18,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-012",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 11,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-013",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 66,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-015",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 12,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-016",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 13,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-017",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 14,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-018",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 69,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-019",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 15,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-020",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 16,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-021",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 17,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-022",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 20,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-023",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 19,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-024",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 25,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-025",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 21,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-026",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 22,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-027",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 23,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-028",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 24,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-029",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 30,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-030",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 26,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-031",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 27,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-032",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 28,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-033",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 29,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-034",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 31,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-035",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 38,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-036",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 32,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-037",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 33,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-038",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 34,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-039",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 35,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-040",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 36,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-042",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 37,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-043",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 44,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-044",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 39,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-045",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 40,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-046",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 41,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-047",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 42,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-048",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 43,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-049",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 57,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-050",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 45,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-051",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 46,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-052",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 47,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-053",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 48,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-054",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 49,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-055",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 50,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-056",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 51,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-057",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 52,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-058",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 70,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-059",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 67,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-060",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 53,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-061",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 54,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-062",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 55,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-063",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 56,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-064",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 58,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-065",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 68,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-066",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 62,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-067",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 59,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-068",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 60,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-069",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 61,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-070",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 65,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": true,
+          "final_drop": false
+        }
+      ]
+    },
+    {
+      "id": "D-071",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 63,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    },
+    {
+      "id": "D-072",
+      "pass": true,
+      "checks": {
+        "hashes": true,
+        "run_logged": true,
+        "first_is_decisive": true,
+        "cites_decisive": true,
+        "outcomes": true,
+        "no_earlier_final_drop": true,
+        "repairs_listed": true
+      },
+      "problems": [],
+      "runs": [
+        {
+          "log_line": 64,
+          "decisive": true,
+          "same_hashes": true,
+          "valid": false,
+          "final_drop": true
+        }
+      ]
+    }
+  ],
+  "n_pairs": 70,
+  "n_pass": 70,
+  "all_pass": true
+}

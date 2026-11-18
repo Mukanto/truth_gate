@@ -1,0 +1,25 @@
+{
+ "id": "D-070",
+ "source": "SIM03",
+ "passage": "SOURCES_D row SIM03 (abstract): class-prediction performance assessed on the data used to build the rule; independent validation is required.",
+ "faulty": "L2-penalised logistic regression (penalty fixed, all 2000 standardised genes, no selection) is fitted on all 120 patients; the AUC of its fitted scores for relapse_5y on those same 120 patients is the statistic. Claim holds when AUC >= 0.70.",
+ "fixed": "10-fold cross-validation (patients in the held-out fold not used in fitting or standardising); AUC of the pooled held-out scores.",
+ "estimand": "Faulty: ranking quality of the model on the patients that built it. Fixed: AUC on new patients.",
+ "model_family": "L2-penalised logistic regression with a fixed penalty. Chosen by me: the source names no model; fixed penalty and no selection keep the case L1.1.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in what I read. 120 x 2000 = 240k values, a larger-n prognostic array study; cheap. Dependence of the error on n or p: not stated.",
+ "exploited_structure": "Many more genes than patients, so training scores can separate relapse from non-relapse by chance.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 16.67,
+  "note_value_source": "source states none: SIM03 sizes were not available to me; 16.67 = 2000 genes / 120 patients, this brief's own ratio",
+  "set_by_brief": true
+ },
+ "notes": "Reserve for SIM03 L1.1. Statistic family classification (AUC): this is the source's own two-class setting (relapse as a binary prognostic class); the earlier evaluation used (L1.1, classification) too, so it is a reserve. Differs from B2B-01/02 in statistic, outcome type and sizes.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 16.67
+}

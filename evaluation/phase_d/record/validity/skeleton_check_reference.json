@@ -1,0 +1,1845 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_d_work\\record\\pkg\\truth_gate\\__init__.py",
+  "D-001/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-001"
+    ],
+    "control_max_ms": {
+      "D-001": 0.121
+    },
+    "shapes": {
+      "systolic_bp": [
+        150,
+        3
+      ]
+    },
+    "max_ms": 0.101
+  },
+  "D-002/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-002"
+    ],
+    "control_max_ms": {
+      "D-002": 0.022
+    },
+    "shapes": {
+      "arterial_o2_content": [
+        120
+      ],
+      "arterial_o2_content_2": [
+        120
+      ],
+      "venous_o2_content": [
+        120
+      ],
+      "venous_o2_content_2": [
+        120
+      ]
+    },
+    "max_ms": 0.032
+  },
+  "D-003/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-003"
+    ],
+    "control_max_ms": {
+      "D-003": 0.064
+    },
+    "shapes": {
+      "features": [
+        1000,
+        15
+      ],
+      "event": [
+        1000
+      ]
+    },
+    "max_ms": 0.492
+  },
+  "D-004/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-004"
+    ],
+    "control_max_ms": {
+      "D-004": 0.152
+    },
+    "shapes": {
+      "X": [
+        40,
+        250,
+        5
+      ],
+      "y": [
+        40,
+        250
+      ]
+    },
+    "max_ms": 2.938
+  },
+  "D-005/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-005"
+    ],
+    "control_max_ms": {
+      "D-005": 0.022
+    },
+    "shapes": {
+      "X": [
+        100,
+        150
+      ],
+      "y": [
+        100
+      ]
+    },
+    "max_ms": 0.147
+  },
+  "D-006/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_change_profiles"
+    ],
+    "control_max_ms": {
+      "permute_change_profiles": 0.043
+    },
+    "shapes": {
+      "bmi": [
+        500,
+        6
+      ]
+    },
+    "max_ms": 0.088
+  },
+  "D-007/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-007"
+    ],
+    "control_max_ms": {
+      "D-007": 0.159
+    },
+    "shapes": {
+      "expression": [
+        50,
+        2000
+      ],
+      "survival_months": [
+        50
+      ]
+    },
+    "max_ms": 2.336
+  },
+  "D-008/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_vo2_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_vo2_across_patients": 0.024
+    },
+    "shapes": {
+      "cardiac_output": [
+        40,
+        6
+      ],
+      "arterial_o2_content": [
+        40,
+        6
+      ],
+      "venous_o2_content": [
+        40,
+        6
+      ],
+      "vo2_expired_gas": [
+        40,
+        6
+      ]
+    },
+    "max_ms": 0.092
+  },
+  "D-009/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-009"
+    ],
+    "control_max_ms": {
+      "D-009": 0.015
+    },
+    "shapes": {
+      "peak_force": [
+        60
+      ],
+      "body_mass": [
+        60
+      ],
+      "treated": [
+        60
+      ]
+    },
+    "max_ms": 0.031
+  },
+  "D-010/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-010"
+    ],
+    "control_max_ms": {
+      "D-010": 0.045
+    },
+    "shapes": {
+      "category": [
+        1200,
+        150
+      ],
+      "covariates": [
+        1200,
+        3
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.265
+  },
+  "D-011/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-011"
+    ],
+    "control_max_ms": {
+      "D-011": 0.217
+    },
+    "shapes": {
+      "expression": [
+        72,
+        2000
+      ],
+      "myeloid": [
+        72
+      ]
+    },
+    "max_ms": 3.009
+  },
+  "D-012/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-012"
+    ],
+    "control_max_ms": {
+      "D-012": 0.03
+    },
+    "shapes": {
+      "occupied": [
+        10,
+        30
+      ],
+      "exclosure": [
+        10
+      ]
+    },
+    "max_ms": 0.103
+  },
+  "D-013/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-013"
+    ],
+    "control_max_ms": {
+      "D-013": 0.131
+    },
+    "shapes": {
+      "expression": [
+        40,
+        2000
+      ],
+      "class_b": [
+        40
+      ]
+    },
+    "max_ms": 1.686
+  },
+  "D-014/reference": {
+    "issues": [
+      "world minus: X has non-finite values",
+      "world plus: X has non-finite values"
+    ],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-014"
+    ],
+    "control_max_ms": {
+      "D-014": 0.023
+    },
+    "shapes": {
+      "X": [
+        250,
+        20
+      ],
+      "y": [
+        250
+      ]
+    },
+    "max_ms": 0.165
+  },
+  "D-015/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_change"
+    ],
+    "control_max_ms": {
+      "permute_change": 0.027
+    },
+    "shapes": {
+      "bmi_baseline": [
+        500
+      ],
+      "bmi_baseline_retest": [
+        500
+      ],
+      "bmi_followup": [
+        500
+      ]
+    },
+    "max_ms": 0.045
+  },
+  "D-016/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-016"
+    ],
+    "control_max_ms": {
+      "D-016": 0.031
+    },
+    "shapes": {
+      "exposure": [
+        14
+      ],
+      "outcome": [
+        14,
+        4
+      ]
+    },
+    "max_ms": 0.028
+  },
+  "D-017/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_smoker_within_height"
+    ],
+    "control_max_ms": {
+      "permute_smoker_within_height": 0.089
+    },
+    "shapes": {
+      "fvc": [
+        600
+      ],
+      "height": [
+        600
+      ],
+      "smoker": [
+        600
+      ]
+    },
+    "max_ms": 0.048
+  },
+  "D-018/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-018"
+    ],
+    "control_max_ms": {
+      "D-018": 0.03
+    },
+    "shapes": {
+      "measurements": [
+        16,
+        60,
+        10
+      ],
+      "diseased": [
+        16
+      ]
+    },
+    "max_ms": 0.57
+  },
+  "D-019/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-019"
+    ],
+    "control_max_ms": {
+      "D-019": 0.07
+    },
+    "shapes": {
+      "systolic_bp": [
+        400,
+        5
+      ]
+    },
+    "max_ms": 0.054
+  },
+  "D-020/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_heart_within_mass"
+    ],
+    "control_max_ms": {
+      "permute_heart_within_mass": 0.136
+    },
+    "shapes": {
+      "liver_weight": [
+        1500
+      ],
+      "heart_weight": [
+        1500
+      ],
+      "body_mass": [
+        1500
+      ]
+    },
+    "max_ms": 0.092
+  },
+  "D-021/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-021"
+    ],
+    "control_max_ms": {
+      "D-021": 0.021
+    },
+    "shapes": {
+      "present": [
+        8,
+        12
+      ],
+      "fenced": [
+        8
+      ]
+    },
+    "max_ms": 0.109
+  },
+  "D-022/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-022"
+    ],
+    "control_max_ms": {
+      "D-022": 0.022
+    },
+    "shapes": {
+      "X": [
+        300,
+        10
+      ],
+      "y": [
+        300
+      ]
+    },
+    "max_ms": 0.074
+  },
+  "D-023/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-023"
+    ],
+    "control_max_ms": {
+      "D-023": 0.047
+    },
+    "shapes": {
+      "head_width": [
+        2000
+      ],
+      "wing_length": [
+        2000
+      ],
+      "body_length": [
+        2000
+      ]
+    },
+    "max_ms": 0.152
+  },
+  "D-024/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-024"
+    ],
+    "control_max_ms": {
+      "D-024": 0.197
+    },
+    "shapes": {
+      "expression": [
+        62,
+        2000
+      ],
+      "tumour": [
+        62
+      ]
+    },
+    "max_ms": 2.695
+  },
+  "D-025/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-025"
+    ],
+    "control_max_ms": {
+      "D-025": 0.073
+    },
+    "shapes": {
+      "baseline_attachment_loss": [
+        12,
+        20
+      ],
+      "baseline_attachment_loss_retest": [
+        12,
+        20
+      ],
+      "followup_attachment_loss": [
+        12,
+        20
+      ]
+    },
+    "max_ms": 0.042
+  },
+  "D-026/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-026"
+    ],
+    "control_max_ms": {
+      "D-026": 0.071
+    },
+    "shapes": {
+      "skeletal": [
+        400,
+        6
+      ],
+      "body_length": [
+        400
+      ]
+    },
+    "max_ms": 0.113
+  },
+  "D-027/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-027"
+    ],
+    "control_max_ms": {
+      "D-027": 0.017
+    },
+    "shapes": {
+      "X": [
+        60,
+        25
+      ],
+      "y": [
+        60
+      ]
+    },
+    "max_ms": 0.037
+  },
+  "D-028/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-028"
+    ],
+    "control_max_ms": {
+      "D-028": 0.063
+    },
+    "shapes": {
+      "activation": [
+        20,
+        1000
+      ],
+      "trait": [
+        20
+      ]
+    },
+    "max_ms": 0.62
+  },
+  "D-029/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-029"
+    ],
+    "control_max_ms": {
+      "D-029": 0.032
+    },
+    "shapes": {
+      "X": [
+        600,
+        8
+      ],
+      "y": [
+        600
+      ]
+    },
+    "max_ms": 0.274
+  },
+  "D-030/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-030"
+    ],
+    "control_max_ms": {
+      "D-030": 0.108
+    },
+    "shapes": {
+      "pre": [
+        400,
+        40
+      ],
+      "post": [
+        400,
+        40
+      ]
+    },
+    "max_ms": 0.954
+  },
+  "D-031/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_age_within_population"
+    ],
+    "control_max_ms": {
+      "permute_age_within_population": 0.087
+    },
+    "shapes": {
+      "offences": [
+        500
+      ],
+      "median_age": [
+        500
+      ],
+      "population": [
+        500
+      ]
+    },
+    "max_ms": 0.108
+  },
+  "D-032/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-032"
+    ],
+    "control_max_ms": {
+      "D-032": 0.024
+    },
+    "shapes": {
+      "responder": [
+        240
+      ],
+      "drug": [
+        240
+      ],
+      "carrier": [
+        240
+      ]
+    },
+    "max_ms": 0.034
+  },
+  "D-033/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-033"
+    ],
+    "control_max_ms": {
+      "D-033": 0.116
+    },
+    "shapes": {
+      "betas": [
+        1000,
+        60
+      ],
+      "intensity": [
+        60
+      ]
+    },
+    "max_ms": 1.443
+  },
+  "D-034/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-034"
+    ],
+    "control_max_ms": {
+      "D-034": 0.051
+    },
+    "shapes": {
+      "level": [
+        1500
+      ],
+      "drivers": [
+        1500,
+        6
+      ]
+    },
+    "max_ms": 6.044
+  },
+  "D-035/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-035"
+    ],
+    "control_max_ms": {
+      "D-035": 0.081
+    },
+    "shapes": {
+      "features": [
+        1500,
+        20
+      ],
+      "positive": [
+        1500
+      ]
+    },
+    "max_ms": 0.679
+  },
+  "D-036/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_co_fick"
+    ],
+    "control_max_ms": {
+      "permute_co_fick": 0.02
+    },
+    "shapes": {
+      "mean_arterial_pressure": [
+        100
+      ],
+      "central_venous_pressure": [
+        100
+      ],
+      "co_thermodilution": [
+        100
+      ],
+      "co_fick": [
+        100
+      ]
+    },
+    "max_ms": 0.032
+  },
+  "D-037/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_change"
+    ],
+    "control_max_ms": {
+      "permute_change": 0.027
+    },
+    "shapes": {
+      "bmi_baseline": [
+        500
+      ],
+      "bmi_followup": [
+        500
+      ],
+      "bmi_retest": [
+        100,
+        2
+      ]
+    },
+    "max_ms": 0.064
+  },
+  "D-038/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_per_capita_sales"
+    ],
+    "control_max_ms": {
+      "permute_per_capita_sales": 0.051
+    },
+    "shapes": {
+      "lung_cancer_deaths": [
+        150
+      ],
+      "cigarettes_sold": [
+        150
+      ],
+      "population": [
+        150
+      ]
+    },
+    "max_ms": 0.061
+  },
+  "D-039/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-039"
+    ],
+    "control_max_ms": {
+      "D-039": 0.031
+    },
+    "shapes": {
+      "X": [
+        400,
+        3
+      ],
+      "y": [
+        400
+      ]
+    },
+    "max_ms": 1.246
+  },
+  "D-040/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_height_within_length"
+    ],
+    "control_max_ms": {
+      "permute_height_within_length": 0.057
+    },
+    "shapes": {
+      "breadth": [
+        300
+      ],
+      "height": [
+        300
+      ],
+      "length": [
+        300
+      ]
+    },
+    "max_ms": 0.049
+  },
+  "D-041/reference": {
+    "issues": [
+      "world minus: X has non-finite values",
+      "world plus: X has non-finite values"
+    ],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-041"
+    ],
+    "control_max_ms": {
+      "D-041": 0.108
+    },
+    "shapes": {
+      "X": [
+        1400,
+        25
+      ],
+      "y": [
+        1400
+      ]
+    },
+    "max_ms": 0.794
+  },
+  "D-042/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-042"
+    ],
+    "control_max_ms": {
+      "D-042": 0.044
+    },
+    "shapes": {
+      "X": [
+        1200,
+        20
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.651
+  },
+  "D-043/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-043"
+    ],
+    "control_max_ms": {
+      "D-043": 0.044
+    },
+    "shapes": {
+      "measurements": [
+        400,
+        8
+      ],
+      "positive": [
+        400
+      ]
+    },
+    "max_ms": 0.169
+  },
+  "D-044/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-044"
+    ],
+    "control_max_ms": {
+      "D-044": 0.104
+    },
+    "shapes": {
+      "X": [
+        60,
+        30,
+        25
+      ],
+      "y": [
+        60,
+        30
+      ]
+    },
+    "max_ms": 0.67
+  },
+  "D-045/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-045"
+    ],
+    "control_max_ms": {
+      "D-045": 0.059
+    },
+    "shapes": {
+      "baseline_score": [
+        300
+      ],
+      "baseline_score_retest": [
+        300
+      ],
+      "followup_score": [
+        300
+      ]
+    },
+    "max_ms": 0.04
+  },
+  "D-046/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-046"
+    ],
+    "control_max_ms": {
+      "D-046": 0.046
+    },
+    "shapes": {
+      "response": [
+        10,
+        100
+      ],
+      "dose": [
+        10
+      ]
+    },
+    "max_ms": 0.033
+  },
+  "D-047/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-047"
+    ],
+    "control_max_ms": {
+      "D-047": 0.05
+    },
+    "shapes": {
+      "screening": [
+        600
+      ],
+      "entry": [
+        600
+      ],
+      "week12": [
+        600
+      ]
+    },
+    "max_ms": 0.062
+  },
+  "D-048/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-048"
+    ],
+    "control_max_ms": {
+      "D-048": 0.022
+    },
+    "shapes": {
+      "cardiac_output": [
+        40
+      ],
+      "cardiac_output_2": [
+        40
+      ],
+      "arterial_o2_content": [
+        40
+      ],
+      "venous_o2_content": [
+        40
+      ]
+    },
+    "max_ms": 0.034
+  },
+  "D-049/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-049"
+    ],
+    "control_max_ms": {
+      "D-049": 0.05
+    },
+    "shapes": {
+      "features": [
+        600,
+        12
+      ],
+      "positive": [
+        600
+      ]
+    },
+    "max_ms": 0.249
+  },
+  "D-050/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_age_within_mass"
+    ],
+    "control_max_ms": {
+      "permute_age_within_mass": 0.042
+    },
+    "shapes": {
+      "liver_mass": [
+        80
+      ],
+      "age_days": [
+        80
+      ],
+      "body_mass": [
+        80
+      ]
+    },
+    "max_ms": 0.034
+  },
+  "D-051/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-051"
+    ],
+    "control_max_ms": {
+      "D-051": 0.029
+    },
+    "shapes": {
+      "cardiac_output": [
+        12,
+        8
+      ],
+      "cardiac_output_2": [
+        12,
+        8
+      ],
+      "arterial_o2_content": [
+        12,
+        8
+      ],
+      "venous_o2_content": [
+        12,
+        8
+      ]
+    },
+    "max_ms": 0.063
+  },
+  "D-052/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-052"
+    ],
+    "control_max_ms": {
+      "D-052": 0.02
+    },
+    "shapes": {
+      "pre": [
+        40
+      ],
+      "post": [
+        40
+      ],
+      "young": [
+        40
+      ]
+    },
+    "max_ms": 0.026
+  },
+  "D-053/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_change"
+    ],
+    "control_max_ms": {
+      "permute_change": 0.027
+    },
+    "shapes": {
+      "bmi_baseline": [
+        500
+      ],
+      "bmi_baseline_retest": [
+        500
+      ],
+      "bmi_followup": [
+        500
+      ]
+    },
+    "max_ms": 0.045
+  },
+  "D-054/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-054"
+    ],
+    "control_max_ms": {
+      "D-054": 0.121
+    },
+    "shapes": {
+      "X": [
+        80,
+        1000
+      ],
+      "y": [
+        80
+      ]
+    },
+    "max_ms": 1.428
+  },
+  "D-055/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-055"
+    ],
+    "control_max_ms": {
+      "D-055": 0.033
+    },
+    "shapes": {
+      "X": [
+        1000,
+        6
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 3.222
+  },
+  "D-056/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-056"
+    ],
+    "control_max_ms": {
+      "D-056": 0.023
+    },
+    "shapes": {
+      "oxygen_uptake": [
+        3,
+        25
+      ],
+      "body_mass": [
+        3,
+        25
+      ]
+    },
+    "max_ms": 0.031
+  },
+  "D-057/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-057"
+    ],
+    "control_max_ms": {
+      "D-057": 0.061
+    },
+    "shapes": {
+      "baseline_depth": [
+        24
+      ],
+      "baseline_depth_retest": [
+        24
+      ],
+      "followup_depth": [
+        24
+      ]
+    },
+    "max_ms": 0.022
+  },
+  "D-058/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-058"
+    ],
+    "control_max_ms": {
+      "D-058": 0.111
+    },
+    "shapes": {
+      "signal_features": [
+        30,
+        30,
+        40
+      ],
+      "walking": [
+        30,
+        30
+      ]
+    },
+    "max_ms": 1.73
+  },
+  "D-059/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-059"
+    ],
+    "control_max_ms": {
+      "D-059": 0.045
+    },
+    "shapes": {
+      "abundance": [
+        600
+      ],
+      "environment": [
+        600,
+        10
+      ]
+    },
+    "max_ms": 2.611
+  },
+  "D-060/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-060"
+    ],
+    "control_max_ms": {
+      "D-060": 0.104
+    },
+    "shapes": {
+      "X": [
+        100,
+        500
+      ],
+      "y": [
+        100
+      ]
+    },
+    "max_ms": 0.805
+  },
+  "D-061/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-061"
+    ],
+    "control_max_ms": {
+      "D-061": 0.226
+    },
+    "shapes": {
+      "response": [
+        1500,
+        10,
+        4
+      ]
+    },
+    "max_ms": 1.136
+  },
+  "D-062/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_humerus_within_species"
+    ],
+    "control_max_ms": {
+      "permute_humerus_within_species": 0.281
+    },
+    "shapes": {
+      "femur": [
+        12,
+        30
+      ],
+      "humerus": [
+        12,
+        30
+      ],
+      "body_length": [
+        12,
+        30
+      ]
+    },
+    "max_ms": 0.079
+  },
+  "D-063/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-063"
+    ],
+    "control_max_ms": {
+      "D-063": 0.035
+    },
+    "shapes": {
+      "cardiac_output": [
+        600
+      ],
+      "cardiac_output_2": [
+        600
+      ],
+      "arterial_o2_content": [
+        600
+      ],
+      "venous_o2_content": [
+        600
+      ]
+    },
+    "max_ms": 0.058
+  },
+  "D-064/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-064"
+    ],
+    "control_max_ms": {
+      "D-064": 0.254
+    },
+    "shapes": {
+      "expression": [
+        80,
+        1500
+      ],
+      "clinical": [
+        80,
+        8
+      ],
+      "response": [
+        80
+      ]
+    },
+    "max_ms": 2.914
+  },
+  "D-065/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-065"
+    ],
+    "control_max_ms": {
+      "D-065": 0.036
+    },
+    "shapes": {
+      "habitat": [
+        40,
+        20,
+        6
+      ],
+      "cover": [
+        40,
+        20
+      ]
+    },
+    "max_ms": 0.25
+  },
+  "D-066/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-066"
+    ],
+    "control_max_ms": {
+      "D-066": 0.036
+    },
+    "shapes": {
+      "X": [
+        1000,
+        15
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 0.24
+  },
+  "D-067/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_heart_within_mass"
+    ],
+    "control_max_ms": {
+      "permute_heart_within_mass": 0.037
+    },
+    "shapes": {
+      "kidney_weight": [
+        60
+      ],
+      "heart_weight": [
+        60
+      ],
+      "body_mass": [
+        60
+      ]
+    },
+    "max_ms": 0.031
+  },
+  "D-068/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-068"
+    ],
+    "control_max_ms": {
+      "D-068": 0.031
+    },
+    "shapes": {
+      "head_width": [
+        25,
+        40
+      ],
+      "wing_length": [
+        25,
+        40
+      ],
+      "body_length": [
+        25,
+        40
+      ]
+    },
+    "max_ms": 0.103
+  },
+  "D-069/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-069"
+    ],
+    "control_max_ms": {
+      "D-069": 0.034
+    },
+    "shapes": {
+      "baseline_sbp": [
+        900
+      ],
+      "followup_sbp": [
+        900
+      ],
+      "treated": [
+        900
+      ]
+    },
+    "max_ms": 0.083
+  },
+  "D-070/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-070"
+    ],
+    "control_max_ms": {
+      "D-070": 0.284
+    },
+    "shapes": {
+      "expression": [
+        120,
+        2000
+      ],
+      "relapse_5y": [
+        120
+      ]
+    },
+    "max_ms": 5.011
+  },
+  "D-071/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_vo2"
+    ],
+    "control_max_ms": {
+      "permute_vo2": 0.022
+    },
+    "shapes": {
+      "cardiac_output": [
+        120
+      ],
+      "arterial_o2_content": [
+        120
+      ],
+      "venous_o2_content": [
+        120
+      ],
+      "vo2_expired_gas": [
+        120
+      ]
+    },
+    "max_ms": 0.079
+  },
+  "D-072/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-072"
+    ],
+    "control_max_ms": {
+      "D-072": 0.02
+    },
+    "shapes": {
+      "force_vehicle": [
+        30
+      ],
+      "force_drug": [
+        30
+      ],
+      "area_vehicle": [
+        30
+      ],
+      "area_drug": [
+        30
+      ]
+    },
+    "max_ms": 0.024
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "case": "D-021",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": []
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 23,
+          "text": "abs(d) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 31,
+          "text": "abs(d) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 34,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 40,
+          "text": "abs(d) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 43,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 48,
+          "text": "abs(de - 1.0) < 1e-15",
+          "op": "<",
+          "kind": "constant",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

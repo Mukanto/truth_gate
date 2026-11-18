@@ -1,0 +1,25 @@
+{
+ "id": "D-041",
+ "source": "KAP23",
+ "passage": "L1.2: \"Using the entire dataset for any pre-processing steps, such as imputation or over/under sampling, results in leakage.\" Civil-war case study (Finding 1, Figure 3 caption): one study imputed training and test data together; the source also notes a test set with \"only 11\" onset instances (PMC10499856).",
+ "faulty": "Missing entries of X are replaced by the mean of that column within the same outcome class (y True or y False), computed over all 1400 rows; then 5-fold cross-validation (stratified, fold = rank within class mod 5) of ridge-penalised logistic regression (lambda 1.0, standardised, Newton iterations, 25 iterations); pooled AUC >= 0.75.",
+ "fixed": "In each fold the missing entries of training and held-out rows are replaced by the column mean of the training rows (no label used); the logistic model is fitted on the training rows; pooled AUC >= 0.75.",
+ "estimand": "Faulty: AUC of scores whose held-out inputs were filled with class-specific values, so that a missing entry reveals the class. Fixed: out-of-sample AUC for new country-years with the label unknown.",
+ "model_family": "Ridge-penalised logistic regression (lambda 1.0, standardised) after column-mean imputation. The source's case study is a rare-event classification of civil-war onset with imputed data; no model named for the toy.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source mentions only a test set with 11 onset instances (Blair and Sambanis, via PMC10499856); the world author chooses a rare-event share. 1400 x 25 = 35,000 values; the check is 5 logistic fits of up to 25 Newton steps (seconds). Dependence on sample size or missing rate: not stated.",
+ "exploited_structure": "A sizeable share of missing entries in the predictors, which a label-using imputation fills with class-specific values.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(np.mean(np.isnan(X)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: 30% proposed as a missing rate of country-year indicators; the source describes imputation of such data but states no rate",
+  "set_by_brief": false
+ },
+ "notes": "Reserve for L1.2. Classification could not be avoided here: the source's own L1.2 setting (civil-war onset) is categorical. The primaries B2A-03 and B2A-04 use R-squared and correlation, so this is the only classification case of the subtype. Guard: AUC None when the pool lacks a row of either class (minimum one of each) or on non-finite scores. Rows are country-years but the brief does not say so beyond the key meaning.",
+ "subtype_or_tag": "L1.2",
+ "class": "B-2",
+ "approved_value": 0.3
+}

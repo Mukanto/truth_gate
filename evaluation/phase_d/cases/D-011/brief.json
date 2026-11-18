@@ -1,0 +1,29 @@
+{
+ "id": "D-011",
+ "claim": "Gene-expression profiles distinguish the two leukaemia types in new samples: the area under the ROC curve is at least 0.90.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(samples, genes)",
+   "dtype": "float",
+   "meaning": "expression level of each gene in each bone-marrow sample",
+   "dims": [
+    72,
+    2000
+   ]
+  },
+  {
+   "key": "myeloid",
+   "shape": "(samples,)",
+   "dtype": "bool",
+   "meaning": "True for acute myeloid leukaemia, False for acute lymphoblastic leukaemia",
+   "dims": [
+    72
+   ]
+  }
+ ],
+ "sizes": {
+  "samples": 72,
+  "genes": 2000
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "case": "D-069",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 34,
+          "text": "red[hi].mean() - red[lo].mean() >= 3.0",
+          "op": ">=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean",
+            "mean"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": []
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

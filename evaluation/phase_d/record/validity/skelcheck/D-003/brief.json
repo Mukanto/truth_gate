@@ -1,0 +1,26 @@
+{
+ "id": "D-003",
+ "claim": "A classifier built from the measured variables ranks new records correctly: the area under the ROC curve for the event is at least 0.75.",
+ "data_keys": [
+  {
+   "key": "features",
+   "shape": "(records, variables)",
+   "dtype": "float",
+   "meaning": "measured variables of each record",
+   "dims": [
+    1000,
+    15
+   ]
+  },
+  {
+   "key": "event",
+   "shape": "(records,)",
+   "dtype": "bool",
+   "meaning": "True if the event occurred for the record",
+   "dims": [
+    1000
+   ]
+  }
+ ],
+ "sizes": "{\"records\": 1000, \"variables\": 15}"
+}

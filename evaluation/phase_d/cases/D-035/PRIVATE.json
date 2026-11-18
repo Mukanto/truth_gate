@@ -1,0 +1,25 @@
+{
+ "id": "D-035",
+ "source": "SAN18",
+ "passage": "Abstract: \"A frequent experimental flaw is the application of oversampling algorithms to the entire dataset, resulting in biased models and overly-optimistic estimates.\"",
+ "faulty": "SMOTE (k = 5) is applied to all 1500 records; stratified 10-fold cross-validation with a 5-nearest-neighbour classifier then runs on the enlarged data; balanced accuracy (mean of sensitivity and specificity, pooled test-fold predictions including synthetic rows) is the statistic. Claim holds when balanced accuracy >= 0.65.",
+ "fixed": "Stratified 10-fold cross-validation on the original 1500 records; SMOTE on the training folds only; balanced accuracy on the original test-fold records, pooled.",
+ "estimand": "Faulty: balanced accuracy on test rows that include interpolations of training minority rows. Fixed: balanced accuracy on new original records.",
+ "model_family": "5-nearest-neighbour classifier on standardised variables, with SMOTE (k = 5). Chosen by me: the abstract names no classifier; k-NN is where synthetic-neighbour overlap bites hardest, and it is cheap.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not open). 1500 x 20 = 30k values, the larger regime among my SAN18 briefs; check cost low (k-NN, 10 folds). Dependence on imbalance or n: not stated.",
+ "exploited_structure": "A strongly unbalanced label distribution requiring many synthetic rows, which then sit next to their real parents across the folds.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    pos = int(np.sum(d[\"positive\"]))\n    neg = int(d[\"positive\"].size) - pos\n    return float(max(pos, neg)) / float(max(min(pos, neg), 1))",
+  "direction": "greater",
+  "null_value": 1.0,
+  "note_value": 9.0,
+  "note_value_source": "source states none: the abstract gives no imbalance ratio; 9.0 (a 90/10 split) is proposed as typical",
+  "set_by_brief": false
+ },
+ "notes": "Differs from B2B-03 in statistic (balanced accuracy vs F1), sample-size regime (1500 x 20 vs 600 x 12) and model. Guard minimum 2: one record of each class in the evaluated data.",
+ "subtype_or_tag": "L1.2",
+ "class": "B-2",
+ "approved_value": 9.0
+}

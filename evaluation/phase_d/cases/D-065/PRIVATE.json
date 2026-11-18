@@ -1,0 +1,25 @@
+{
+ "id": "D-065",
+ "source": "ROB17",
+ "passage": "Abstract: \"when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error\"; the structures include hierarchical (random-effects) structure.",
+ "faulty": "10-fold cross-validation with the 800 plot rows assigned to folds uniformly at random (sites shared across folds); a random forest (40 trees) predicts cover from the 6 habitat variables; the Pearson correlation between pooled held-out predictions and observed cover is the statistic. Claim holds when r >= 0.40.",
+ "fixed": "Grouped 10-fold cross-validation in which all plots of a site are in the same fold (4 sites per fold); same forest and statistic.",
+ "estimand": "Faulty: correlation at plots whose sister plots at the same site were in the fitting data. Fixed: correlation at sites that were not used in fitting.",
+ "model_family": "Random forest regression (40 trees). Chosen by me: the abstract names no model; flexible models can memorise site identity from site-level habitat values.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not read). 40 sites x 20 plots x 6 variables = 4.8k values: a plausible survey; check cost about a second per evaluation (rough estimate). Dependence on the number of sites: not stated.",
+ "exploited_structure": "Several records from each site: plots of one site share their site's habitat values and cover level.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d[\"habitat\"], dtype=float)\n    s, m, v = x.shape\n    site_mean = x.mean(axis=1)\n    grand = x.mean(axis=(0, 1))\n    msb = m * ((site_mean - grand) ** 2).sum(axis=0) / (s - 1)\n    msw = ((x - site_mean[:, None, :]) ** 2).sum(axis=(0, 1)) / (s * (m - 1))\n    den = msb + (m - 1) * msw\n    ok = den > 0\n    if not np.any(ok):\n        return 0.0\n    icc = (msb - msw)[ok] / den[ok]\n    return float(np.mean(icc))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: the abstract gives no intraclass correlation; 0.3 is a proposed typical between-site share of variance",
+  "set_by_brief": false
+ },
+ "notes": "One-way ICC of the predictors across sites (not of the outcome). Differs from B2B-08 in the structure (hierarchy vs time), statistic (correlation) and data layout (3-d array).",
+ "subtype_or_tag": "L3.2",
+ "class": "B-2",
+ "approved_value": 0.3
+}

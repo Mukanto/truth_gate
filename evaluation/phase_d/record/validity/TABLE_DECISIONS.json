@@ -1,0 +1,760 @@
+{
+ "D-001": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1b"
+  ],
+  "counting_label": "V2"
+ },
+ "D-002": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-003": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-004": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-005": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-006": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-007": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-008": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-009": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-010": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-011": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-012": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-013": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-015": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-016": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-017": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-018": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "timing infeasible"
+  ],
+  "counting_label": "timing infeasible"
+ },
+ "D-019": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-020": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-021": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1b"
+  ],
+  "counting_label": "V2"
+ },
+ "D-022": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-023": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-024": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-025": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-026": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-027": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-028": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-029": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1b"
+  ],
+  "counting_label": "V2"
+ },
+ "D-030": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1b"
+  ],
+  "counting_label": "V2"
+ },
+ "D-031": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-032": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-033": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-034": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-035": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-036": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-037": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-038": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-039": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-040": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-042": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-043": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-044": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-045": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-046": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-047": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-048": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-049": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-050": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-051": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-052": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-053": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-054": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-055": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-056": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-057": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-058": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a",
+   "timing infeasible"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-059": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a",
+   "timing infeasible"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-060": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-061": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-062": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-063": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2",
+   "V1a"
+  ],
+  "counting_label": "V2"
+ },
+ "D-064": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-065": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a",
+   "timing infeasible"
+  ],
+  "counting_label": "V1a"
+ },
+ "D-066": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-067": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-068": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-069": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V2"
+  ],
+  "counting_label": "V2"
+ },
+ "D-070": {
+  "decisive": true,
+  "valid": true,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "pass"
+ },
+ "D-071": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1b"
+  ],
+  "counting_label": "V1b"
+ },
+ "D-072": {
+  "decisive": true,
+  "valid": false,
+  "error_stages": [],
+  "error_text": null,
+  "setup": null,
+  "decision": "drop",
+  "failed_drop_rows": [
+   "V1a"
+  ],
+  "counting_label": "V1a"
+ }
+}

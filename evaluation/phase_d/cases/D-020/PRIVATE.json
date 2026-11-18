@@ -1,0 +1,25 @@
+{
+ "id": "D-020",
+ "source": "PEA97",
+ "passage": "'The particular case that is likely to occur is when u and v are indices with the same denominator for the correlation of the indices seems at first sight a very plausible measure of organic correlation.' (abstract, OpenAlex OCR text)",
+ "faulty": "R-squared of the regression of liver_weight/body_mass on heart_weight/body_mass (the squared correlation of the two indices), compared with 0.10.",
+ "fixed": "Increase in R-squared when heart_weight is added to the regression of liver_weight on body_mass, compared with 0.10.",
+ "estimand": "Faulty: variance of one index explained by the other index. Fixed: variance of liver weight explained by heart weight beyond body mass.",
+ "model_family": "Source names none beyond random variables x, y, z. Choice: positive Gaussian variables (CV 0.12-0.2), liver = a + b*body + g*heart + noise, g = 0 in the claim-false version. Reason: as B3A-09.",
+ "statistic_family": "R-squared",
+ "guard_minimum": "3 mice (full model has three parameters); guards: non-finite values, selection below 3, zero variance of any key.",
+ "sizes_note": "Source (abstract only) states no sizes. 1500 mice is a large-sample regime, the largest size I judge realistic for a pooled phenotyping panel; the corrected check is two small regressions, far below 30 minutes. Dependence on n: not stated.",
+ "exploited_structure": "Both organ weights are divided by the same body mass, so the variation of body mass induces a correlation between the two indices.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['liver_weight'], dtype=float)\n    y = np.asarray(d['heart_weight'], dtype=float)\n    z = np.asarray(d['body_mass'], dtype=float)\n    cx = np.std(x, ddof=1) / abs(np.mean(x))\n    cy = np.std(y, ddof=1) / abs(np.mean(y))\n    cz = np.std(z, ddof=1) / abs(np.mean(z))\n    value = cz ** 2 / np.sqrt((cx ** 2 + cz ** 2) * (cy ** 2 + cz ** 2))\n    return float(value)",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.35,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.35 is the expression's value for assumed coefficients of variation of 0.12 (body mass), 0.15 (heart) and 0.18 (liver): 0.0144 / sqrt(0.0369 * 0.0468); it uses marginal spreads only, unchanged by the claim-false version.",
+  "set_by_brief": false
+ },
+ "notes": "Role: reserve (PEA97). Earlier combos for PEA97 included R-squared; could not avoid it for a fourth PEA97 brief because the natural statistics of the setting are correlation-type. Differs from the other PEA97 briefs in statistic and in size (1500).",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.35
+}

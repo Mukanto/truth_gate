@@ -1,0 +1,36 @@
+{
+ "id": "D-009",
+ "claim": "Among 60 mice, treated mice produce more peak twitch force than untreated mice of the same body mass: the difference between the group means of peak force, adjusted for body mass by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+ "data_keys": [
+  {
+   "key": "peak_force",
+   "shape": "(animals,)",
+   "dtype": "float",
+   "meaning": "peak twitch force of one hindlimb muscle of each mouse, in mN",
+   "dims": [
+    60
+   ]
+  },
+  {
+   "key": "body_mass",
+   "shape": "(animals,)",
+   "dtype": "float",
+   "meaning": "body mass of each mouse, in g",
+   "dims": [
+    60
+   ]
+  },
+  {
+   "key": "treated",
+   "shape": "(animals,)",
+   "dtype": "bool",
+   "meaning": "True if the mouse received the treatment, False if it did not",
+   "dims": [
+    60
+   ]
+  }
+ ],
+ "sizes": {
+  "animals": 60
+ }
+}

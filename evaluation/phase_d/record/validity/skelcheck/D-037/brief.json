@@ -1,0 +1,35 @@
+{
+ "id": "D-037",
+ "claim": "The expected change in BMI between baseline and follow-up is smaller for children with a higher baseline BMI: each additional 1 kg/m2 of baseline BMI goes with a change in BMI that is at least 0.2 kg/m2 smaller (slope of at most -0.2).",
+ "data_keys": [
+  {
+   "key": "bmi_baseline",
+   "shape": "(children,)",
+   "dtype": "float",
+   "meaning": "BMI of each child at the baseline visit, in kg/m2",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "bmi_followup",
+   "shape": "(children,)",
+   "dtype": "float",
+   "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2",
+   "dims": [
+    500
+   ]
+  },
+  {
+   "key": "bmi_retest",
+   "shape": "(retest_children, retest_sessions)",
+   "dtype": "float",
+   "meaning": "BMI of each child of a test-retest sample at two sessions a few days apart, in kg/m2",
+   "dims": [
+    100,
+    2
+   ]
+  }
+ ],
+ "sizes": "{\"children\": 500, \"retest_children\": 100, \"retest_sessions\": 2}"
+}

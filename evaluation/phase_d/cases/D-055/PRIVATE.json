@@ -1,0 +1,25 @@
+{
+ "id": "D-055",
+ "source": "KAP23",
+ "passage": "L3.1: \"the test set should not contain any data from a date before the training set.\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856).",
+ "faulty": "Ridge regression (lambda 1.0, standardised, intercept) with 5-fold cross-validation in which days are assigned to folds by a fixed pseudo-random permutation (numpy default_rng(0)); Pearson correlation between pooled held-out predictions and y over all 1000 days >= 0.20.",
+ "fixed": "Forward chaining: days are cut into 6 consecutive blocks; for blocks 2 to 6 the model is fitted on all days of the earlier blocks except the last 5 days before the block, and predicts the block; Pearson correlation between the pooled forecasts and y over blocks 2 to 6 (days 168 to 999) >= 0.20.",
+ "estimand": "Faulty: correlation between predictions and outcomes on days that lie between fitting days. Fixed: correlation between forecasts and outcomes on days after all fitting days.",
+ "model_family": "Ridge regression (lambda 1.0, standardised) of y_t on X_t of the same day. Source names no model; chosen for numpy-only closed form and because shared slow trends in X and y survive in a linear model.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 1000 x 6 daily values (about 3 years); the check is 5 ridge fits. Dependence of the error on sample size or on autocorrelation: not stated.",
+ "exploited_structure": "Predictors that vary slowly with time (strong autocorrelation) so that neighbouring days resemble each other and a day's outcome is predictable from days before and after it.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    a = X[:-1] - X[:-1].mean(axis=0)\n    b = X[1:] - X[1:].mean(axis=0)\n    den = np.sqrt((a ** 2).sum(axis=0) * (b ** 2).sum(axis=0))\n    r = (a * b).sum(axis=0) / np.where(den > 0, den, 1.0)\n    return float(np.mean(r))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.8,
+  "note_value_source": "source states none: 0.8 proposed as a typical lag-1 autocorrelation of slowly varying daily series; the source gives no autocorrelation",
+  "set_by_brief": false
+ },
+ "notes": "Guard: correlation None for zero variance of forecasts or y, or fewer than 2 forecast days; non-finite returns None. Statistic uses X only (the autocorrelation of the predictors), not y. Checked on random arrays: -0.006 for white noise, 0.994 for a random walk. Differs from earlier L3.1 combinations (R-squared, classification) in family.",
+ "subtype_or_tag": "L3.1",
+ "class": "B-2",
+ "approved_value": 0.8
+}

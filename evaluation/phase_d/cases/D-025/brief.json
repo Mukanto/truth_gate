@@ -1,0 +1,40 @@
+{
+ "id": "D-025",
+ "claim": "Across 12 trials of guided tissue regeneration with 20 defects each, deeper disease means larger gain: the mean over trials of the within-trial regression slope of the change in attachment loss (follow-up minus baseline) on the mean of the baseline and follow-up attachment loss is at most -0.20 (mm per mm).",
+ "data_keys": [
+  {
+   "key": "baseline_attachment_loss",
+   "shape": "(trials, defects)",
+   "dtype": "float",
+   "meaning": "clinical attachment loss of each defect in each trial at the baseline examination, in mm",
+   "dims": [
+    12,
+    20
+   ]
+  },
+  {
+   "key": "baseline_attachment_loss_retest",
+   "shape": "(trials, defects)",
+   "dtype": "float",
+   "meaning": "a second, independent measurement of the attachment loss of each defect at the baseline examination, in mm",
+   "dims": [
+    12,
+    20
+   ]
+  },
+  {
+   "key": "followup_attachment_loss",
+   "shape": "(trials, defects)",
+   "dtype": "float",
+   "meaning": "clinical attachment loss of each defect at the follow-up examination after treatment, in mm",
+   "dims": [
+    12,
+    20
+   ]
+  }
+ ],
+ "sizes": {
+  "trials": 12,
+  "defects": 20
+ }
+}

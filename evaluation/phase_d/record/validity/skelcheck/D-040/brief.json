@@ -1,0 +1,34 @@
+{
+ "id": "D-040",
+ "claim": "Across skulls, cranial breadth and cranial height are positively associated after accounting for cranial length: the partial correlation coefficient between breadth and height, given length, is at least 0.2.",
+ "data_keys": [
+  {
+   "key": "breadth",
+   "shape": "(skulls,)",
+   "dtype": "float",
+   "meaning": "maximum cranial breadth of each skull, in mm",
+   "dims": [
+    300
+   ]
+  },
+  {
+   "key": "height",
+   "shape": "(skulls,)",
+   "dtype": "float",
+   "meaning": "cranial height of each skull, in mm",
+   "dims": [
+    300
+   ]
+  },
+  {
+   "key": "length",
+   "shape": "(skulls,)",
+   "dtype": "float",
+   "meaning": "maximum cranial length of each skull, in mm",
+   "dims": [
+    300
+   ]
+  }
+ ],
+ "sizes": "{\"skulls\": 300}"
+}

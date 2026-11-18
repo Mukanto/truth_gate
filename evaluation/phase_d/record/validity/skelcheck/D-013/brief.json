@@ -1,0 +1,26 @@
+{
+ "id": "D-013",
+ "claim": "Gene-expression profiles allow the two classes to be told apart in new samples: the classification error rate is at most 0.40.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(samples, genes)",
+   "dtype": "float",
+   "meaning": "expression level of each gene in each sample",
+   "dims": [
+    40,
+    2000
+   ]
+  },
+  {
+   "key": "class_b",
+   "shape": "(samples,)",
+   "dtype": "bool",
+   "meaning": "True for a sample of class B, False for a sample of class A",
+   "dims": [
+    40
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 40, \"genes\": 2000}"
+}

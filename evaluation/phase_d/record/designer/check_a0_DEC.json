@@ -1,0 +1,30 @@
+{
+ "transcript_sha256": "1efd75e272b472a408d86d09b506bf70ac4f3f8d949d8c97c0449cb12484e893",
+ "first_last_utc": [
+  "2026-11-18T00:15:08.035Z",
+  "2026-11-18T00:19:59.764Z"
+ ],
+ "assistant_message_models": {
+  "claude-sonnet-5-5": 23
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 1,
+  "Glob": 1,
+  "Bash": 12
+ },
+ "forbidden_tool_calls": [],
+ "outside_paths": [],
+ "urls": [
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2841687/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2841687/\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2817684/fullTextXML",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2817684/fullTextXML\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2831048/fullTextXML\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2841687/fullTextXML\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nn.2303",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nn.2303&resultType=lite&format=json\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:20074371",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:20074371%20AND%20SRC:MED&resultType=lite&format=json\\"
+ ]
+}

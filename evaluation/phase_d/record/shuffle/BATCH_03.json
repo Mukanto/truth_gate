@@ -1,0 +1,392 @@
+[
+  {
+    "id": "D-025",
+    "claim": "Across 12 trials of guided tissue regeneration with 20 defects each, deeper disease means larger gain: the mean over trials of the within-trial regression slope of the change in attachment loss (follow-up minus baseline) on the mean of the baseline and follow-up attachment loss is at most -0.20 (mm per mm).",
+    "data_keys": [
+      {
+        "key": "baseline_attachment_loss",
+        "shape": "(trials, defects)",
+        "dtype": "float",
+        "meaning": "clinical attachment loss of each defect in each trial at the baseline examination, in mm",
+        "dims": [
+          12,
+          20
+        ]
+      },
+      {
+        "key": "baseline_attachment_loss_retest",
+        "shape": "(trials, defects)",
+        "dtype": "float",
+        "meaning": "a second, independent measurement of the attachment loss of each defect at the baseline examination, in mm",
+        "dims": [
+          12,
+          20
+        ]
+      },
+      {
+        "key": "followup_attachment_loss",
+        "shape": "(trials, defects)",
+        "dtype": "float",
+        "meaning": "clinical attachment loss of each defect at the follow-up examination after treatment, in mm",
+        "dims": [
+          12,
+          20
+        ]
+      }
+    ],
+    "sizes": {
+      "trials": 12,
+      "defects": 20
+    }
+  },
+  {
+    "id": "D-026",
+    "claim": "Among 400 adult beetles measured on six skeletal dimensions, the dimensions share a common shape pattern beyond body length: after removing the linear effect of body length from each of the six dimensions, the first principal component of their covariance matrix explains at least 40% of the total variance.",
+    "data_keys": [
+      {
+        "key": "skeletal",
+        "shape": "(specimens, dimensions)",
+        "dtype": "float",
+        "meaning": "six linear skeletal dimensions of each specimen, in mm",
+        "dims": [
+          400,
+          6
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "body length of each specimen, in mm",
+        "dims": [
+          400
+        ]
+      }
+    ],
+    "sizes": {
+      "specimens": 400,
+      "dimensions": 6
+    }
+  },
+  {
+    "id": "D-027",
+    "claim": "The 25 measurements in X predict the outcome y for new samples: the mean absolute error of an ordinary least squares regression of y on X (with an intercept) is at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "25 continuous measurements for each sample",
+        "dims": [
+          60,
+          25
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous outcome of each sample",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 60,
+      "features": 25
+    }
+  },
+  {
+    "id": "D-028",
+    "claim": "Twenty subjects each completed a task during functional imaging, giving an activation value in each of 1000 voxels, and each completed a personality questionnaire. Claim: in the population from which the subjects come, the 20 voxels whose activation is most strongly correlated with the questionnaire score have a mean correlation with that score of at least 0.5.",
+    "data_keys": [
+      {
+        "key": "activation",
+        "shape": "(subjects, voxels)",
+        "dtype": "float",
+        "meaning": "task-related activation of each voxel in each subject",
+        "dims": [
+          20,
+          1000
+        ]
+      },
+      {
+        "key": "trait",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "personality questionnaire score of each subject",
+        "dims": [
+          20
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 20,
+      "voxels": 1000
+    }
+  },
+  {
+    "id": "D-029",
+    "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised measurements) of the value y on the measurements X predicts y for new entries with a mean absolute error at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(rows, features)",
+        "dtype": "float",
+        "meaning": "8 continuous property measurements recorded for each registry entry",
+        "dims": [
+          600,
+          8
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(rows,)",
+        "dtype": "float",
+        "meaning": "continuous target value recorded for each registry entry",
+        "dims": [
+          600
+        ]
+      }
+    ],
+    "sizes": {
+      "rows": 600,
+      "features": 8
+    }
+  },
+  {
+    "id": "D-030",
+    "claim": "Each of 400 neurons was recorded on 40 trials before and on 40 trials after a manipulation. Claim: the proportion of neurons whose expected firing rate rises after the manipulation is larger among neurons whose expected pre-manipulation rate is below 8 Hz than among neurons whose expected pre-manipulation rate is at least 8 Hz, by at least 0.20.",
+    "data_keys": [
+      {
+        "key": "pre",
+        "shape": "(neurons, trials)",
+        "dtype": "float",
+        "meaning": "firing rate in Hz of each neuron on each trial before the manipulation",
+        "dims": [
+          400,
+          40
+        ]
+      },
+      {
+        "key": "post",
+        "shape": "(neurons, trials)",
+        "dtype": "float",
+        "meaning": "firing rate in Hz of each neuron on each trial after the manipulation",
+        "dims": [
+          400,
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "neurons": 400,
+      "trials": 40
+    }
+  },
+  {
+    "id": "D-031",
+    "claim": "Across cities, annual offences recorded and the median age of residents are associated after accounting for population: the partial correlation coefficient between offences and median age, given population, is at least 0.25 in absolute value.",
+    "data_keys": [
+      {
+        "key": "offences",
+        "shape": "(cities,)",
+        "dtype": "float",
+        "meaning": "total offences recorded in each city in one year",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "median_age",
+        "shape": "(cities,)",
+        "dtype": "float",
+        "meaning": "median age of the residents of each city, in years",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "population",
+        "shape": "(cities,)",
+        "dtype": "float",
+        "meaning": "population of each city, in thousands",
+        "dims": [
+          500
+        ]
+      }
+    ],
+    "sizes": {
+      "cities": 500
+    }
+  },
+  {
+    "id": "D-032",
+    "claim": "240 participants each received either a drug or a vehicle, and each was classified as a responder or not. Some participants carry a gene variant. Claim: the drug raises the proportion of responders more in carriers than in non-carriers, that is, the difference between the two drug-minus-vehicle differences in responder proportion (carriers minus non-carriers) is positive, judged by a one-sided test at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "responder",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "True if the participant met the response criterion",
+        "dims": [
+          240
+        ]
+      },
+      {
+        "key": "drug",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "True if the participant received the drug, False if the vehicle",
+        "dims": [
+          240
+        ]
+      },
+      {
+        "key": "carrier",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "True if the participant carries the gene variant",
+        "dims": [
+          240
+        ]
+      }
+    ],
+    "sizes": {
+      "participants": 240
+    }
+  },
+  {
+    "id": "D-033",
+    "claim": "The response of each of 1000 voxels was estimated on each of 60 trials, in which a stimulus of varying intensity was presented. Claim: in the population, the 25 voxels whose trial-by-trial response is most strongly correlated with stimulus intensity have a mean correlation with intensity of at least 0.25.",
+    "data_keys": [
+      {
+        "key": "betas",
+        "shape": "(voxels, trials)",
+        "dtype": "float",
+        "meaning": "estimated response amplitude of each voxel on each trial",
+        "dims": [
+          1000,
+          60
+        ]
+      },
+      {
+        "key": "intensity",
+        "shape": "(trials,)",
+        "dtype": "float",
+        "meaning": "stimulus intensity presented on each trial",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "voxels": 1000,
+      "trials": 60
+    }
+  },
+  {
+    "id": "D-034",
+    "claim": "The daily driver measurements predict the daily river level in later days of the record: the root-mean-square error of the prediction is at most 0.70 standard deviations of the level.",
+    "data_keys": [
+      {
+        "key": "level",
+        "shape": "(days,)",
+        "dtype": "float",
+        "meaning": "daily river level, in time order",
+        "dims": [
+          1500
+        ]
+      },
+      {
+        "key": "drivers",
+        "shape": "(days, variables)",
+        "dtype": "float",
+        "meaning": "daily measurements of the variables that may influence the river level, in time order",
+        "dims": [
+          1500,
+          6
+        ]
+      }
+    ],
+    "sizes": {
+      "days": 1500,
+      "variables": 6
+    }
+  },
+  {
+    "id": "D-035",
+    "claim": "A classifier built from the measured variables recognises both classes in new records: the balanced accuracy (the mean of sensitivity and specificity for the positive class) is at least 0.65.",
+    "data_keys": [
+      {
+        "key": "features",
+        "shape": "(records, variables)",
+        "dtype": "float",
+        "meaning": "measured variables of each record",
+        "dims": [
+          1500,
+          20
+        ]
+      },
+      {
+        "key": "positive",
+        "shape": "(records,)",
+        "dtype": "bool",
+        "meaning": "True if the condition is present in the record",
+        "dims": [
+          1500
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 1500,
+      "variables": 20
+    }
+  },
+  {
+    "id": "D-036",
+    "claim": "Across patients, cardiac output explains at least 25% of the variance in systemic vascular resistance (R-squared of at least 0.25).",
+    "data_keys": [
+      {
+        "key": "mean_arterial_pressure",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "mean arterial pressure of each patient, in mmHg",
+        "dims": [
+          100
+        ]
+      },
+      {
+        "key": "central_venous_pressure",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "central venous pressure of each patient, in mmHg",
+        "dims": [
+          100
+        ]
+      },
+      {
+        "key": "co_thermodilution",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output of each patient measured by thermodilution, in L/min",
+        "dims": [
+          100
+        ]
+      },
+      {
+        "key": "co_fick",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output of each patient measured by the Fick method from expired-gas oxygen uptake, in L/min",
+        "dims": [
+          100
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 100
+    }
+  }
+]

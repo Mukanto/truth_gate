@@ -1,0 +1,15 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-18T00:20:23Z",
+  "algorithm": "sha256",
+  "files": {
+    "a0/APPROVED_VALUES.json": "aaba4dbaed00d6131dd8ff6263871395f8132dd82a6a0964281a2f6f0d7dedde",
+    "a0/B2_AUDIT_A0.json": "206b2607eac8e1ed9d85fe65e685401116286b9951fd830ff0fe74daae72aa42",
+    "a0/B2_AUDIT_A0.md": "a3d3e633904907e0bf3a70f0d246458dc5b2fdc1344ffc406e53fe316d78f6ea",
+    "a0/B3_AUDIT_A0.json": "e6d55e6cf242937f8800d30fc16804d4ee8c640b6ba8c85dfbd08ebbd42179b4",
+    "a0/B3_AUDIT_A0.md": "7e85dda2a942670bdfbdaf8756c75e371712dffa5b1b500ff9d7967de9e38aae",
+    "a0/DEC_AUDIT_A0.json": "f37fc974bdfa34514389794b87500109ef962acac6b9584e5cf0869255f589e8",
+    "a0/DEC_AUDIT_A0.md": "71858fb1b8a2f4f3d8ab932c6c13d2c749e8cd9c99f6d358c9d1cfdbeef387f2"
+  },
+  "core_sha256": "f91c94e29fad2fcc47a9a269a20e804dbd9c85445c621ae210e2d0abe114d2fc"
+}

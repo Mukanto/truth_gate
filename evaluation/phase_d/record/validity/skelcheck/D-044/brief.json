@@ -1,0 +1,28 @@
+{
+ "id": "D-044",
+ "claim": "For new subjects, a ridge regression of the trial-level outcome y on the features X (penalty 1.0 on standardised features, with an intercept) has a mean absolute error at least 5% below that of predicting the mean outcome: 1 - MAE(model) / MAE(mean predictor) >= 0.05.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(subjects, trials, features)",
+   "dtype": "float",
+   "meaning": "25 continuous features computed for each trial of each subject",
+   "dims": [
+    60,
+    30,
+    25
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(subjects, trials)",
+   "dtype": "float",
+   "meaning": "continuous outcome of each trial of each subject",
+   "dims": [
+    60,
+    30
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 60, \"trials\": 30, \"features\": 25}"
+}

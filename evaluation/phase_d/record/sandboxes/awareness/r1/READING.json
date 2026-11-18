@@ -1,0 +1,162 @@
+{
+ "E01": {
+  "level": "C",
+  "reason": "'Generated given the recorded length, as in D-023' hints at the latent-size pitfall, no artefact reported"
+ },
+ "E02": {
+  "level": "C",
+  "reason": "judgement call: null defined on recorded body length, no hidden latent size"
+ },
+ "E03": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E04": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E05": {
+  "level": "P",
+  "reason": "minus proportion ~0.32 'includes the regression to the mean'"
+ },
+ "E06": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E07": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E08": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E09": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E10": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E11": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E12": {
+  "level": "P",
+  "reason": "'Raw VO2 therefore still differs between groups through mass'"
+ },
+ "E13": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E14": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E15": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E16": {
+  "level": "P",
+  "reason": "'Under minus, an in-sample fit of 153 parameters ... gives r of about 0.36'"
+ },
+ "E17": {
+  "level": "P",
+  "reason": "'unadjusted group means still differ through mass alone'"
+ },
+ "E18": {
+  "level": "C",
+  "reason": "independent size drawn from conditional distribution given measured length; same judgement call as D-023"
+ },
+ "E19": {
+  "level": "C",
+  "reason": "seasonality left out because a shared cycle would create a spurious time link"
+ },
+ "E20": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E21": {
+  "level": "P",
+  "reason": "mathematical coupling gives spurious slope ~0.07 in minus; pooled between-patient slope ~0.27 in minus"
+ },
+ "E22": {
+  "level": "P",
+  "reason": "quadrat-level (pseudoreplicated) tests are anticonservative in minus"
+ },
+ "E23": {
+  "level": "C",
+  "reason": "replicate records share compound value in minus; mentioned as structure, no artefact stated"
+ },
+ "E24": {
+  "level": "C",
+  "reason": "measurement error in body length would make partial correlation positive in minus; avoided by design"
+ },
+ "E25": {
+  "level": "C",
+  "reason": "no shared seasonality because a shared deterministic cycle would itself be predictive"
+ },
+ "E26": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E27": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E28": {
+  "level": "P",
+  "reason": "record-level evaluation 'still shows a correlation of about 0.6 in minus'"
+ },
+ "E29": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E30": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E31": {
+  "level": "C",
+  "reason": "null defined on measured body length, not true size"
+ },
+ "E32": {
+  "level": "P",
+  "reason": "'Under minus, in-sample OLS still shows a large gain'"
+ },
+ "E33": {
+  "level": "P",
+  "reason": "'Under minus the in-sample r is about 0.47, so in-sample evaluation fails'"
+ },
+ "E34": {
+  "level": "P",
+  "reason": "Fick-derived VO2 shares CO and Hb errors with DO2 (coupling bias about +0.05) in both worlds"
+ },
+ "E35": {
+  "level": "C",
+  "reason": "no latent size factor because it would itself create a positive partial correlation"
+ },
+ "E36": {
+  "level": "P",
+  "reason": "'Under minus, an in-sample fit of 2000 genes would still reach R^2 near 1'"
+ },
+ "E37": {
+  "level": "N",
+  "reason": "no mechanism, pitfall or non-null minus statistic mentioned in the entry"
+ },
+ "E38": {
+  "level": "C",
+  "reason": "plain accuracy or 0.5 threshold 'behaves very differently' from balanced accuracy; no artefact reported"
+ },
+ "E39": {
+  "level": "P",
+  "reason": "regression to the mean preserved: screening-entry averages 5.9 in both worlds, criterion from screening is biased upward"
+ },
+ "E40": {
+  "level": "C",
+  "reason": "measurement error in body length would leave ~0.03 in minus, but data generated given recorded length so exactly 0"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-045",
+ "source": "TU07",
+ "passage": "'statisticians have repeatedly warned against correlating/regressing change with baseline due to two methodological concerns known as mathematical coupling and regression to the mean'; 'Oldham's method and Blomqvist's formula are the two most often adopted methods to rectify these problems' (abstract, Europe PMC).",
+ "faulty": "Pearson correlation between change (followup_score - baseline_score) and baseline_score over the 300 patients; criterion r <= -0.30.",
+ "fixed": "Oldham's method: Pearson correlation between change (followup_score - baseline_score) and the mean of baseline_score and followup_score; criterion r <= -0.30.",
+ "estimand": "Faulty: association between change and the baseline reading, which includes the measurement error of that reading. Fixed (Oldham): association between change and the average level of the two readings.",
+ "model_family": "Latent-trait model: true severity at baseline, a true individual response, independent reading errors at baseline and follow-up; Gaussian. Chosen because the source discusses heterogeneity of individual responses as a source of the baseline-change association; fixed for both twins.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size (abstract only). 300 patients is a realistic mid-size clinical trial; the check is a single correlation. Size dependence of the error: not stated.",
+ "exploited_structure": "The baseline reading enters both itself and the change (follow-up minus baseline), so reading error in the baseline produces a negative association with change.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    b = np.asarray(d['baseline_score'], dtype=float)\n    r = np.asarray(d['baseline_score_retest'], dtype=float)\n    return float(0.5 * np.var(b - r, ddof=1) / np.var(b, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.2,
+  "note_value_source": "source states none: the abstract gives no reliability; 0.2 corresponds to a test-retest reliability of about 0.8, typical for clinical severity scores",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. The retest key exists so that the structure statistic can be computed from the baseline measurements that the claim-false version of the data leaves unchanged. Both twins ignore it.",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.2
+}

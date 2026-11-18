@@ -1,0 +1,24 @@
+# Reading
+
+Counts: P=11, C=8, N=1
+
+- F01: **C** - Entry notes deprivation shared by BMI, SBP and y and district clustering, but says in minus 'neither the observed districts nor the covariates carry information'.
+- F02: **N** - Only overfitting/collinearity of OLS on plus and p/n are noted; no minus artefact or mechanism is discussed.
+- F03: **C** - A shifted minority subgroup exists in minus but is 'an independent draw ... unrelated to y'; no artefact reported.
+- F04: **P** - Replicates have identical descriptors and 'replicates still share their compound's value' in minus, so a record-level 1-NN can still match a replicate.
+- F05: **P** - Improvement 'contains -(error of pre), so it is negatively correlated with pre' and young start higher at baseline, modelled in both worlds: regression-to-mean mechanism present in minus.
+- F06: **C** - Mentions residual size shared by breadth and height via imperfect length proxy, but minus built from exact conditional distribution: 'partial correlation 0'.
+- F07: **P** - '300 quadrats rest on only 10 independent units', plot effect and AR(1) patchiness kept in minus: pseudoreplication can make a quadrat-level test look significant.
+- F08: **P** - 'Any model can fit the 80 responses perfectly' (p>>n) holds in minus too, so in-sample fit remains non-null; shared aggressiveness factor kept in both.
+- F09: **P** - 'With no signal, the largest of 2000 gene-survival correlations at n = 50 is typically about 0.5': non-null naive statistic.
+- F10: **P** - Between-population head-wing correlation 0.4 'the same in both worlds' (outside the within-population claim): a pooled analysis still shows it in minus.
+- F11: **P** - Autocorrelated series with AR 0.9 and 0.99 drift in both worlds, effective sample about a third, 'autocorrelation-inflated sampling error' about 0.1.
+- F12: **P** - 'Fick-derived VO2 shares CO and Hb errors with DO2 (coupling bias about +0.05) in both worlds'; venous content SD also changes in minus.
+- F13: **C** - Body length 1% error means size is not fully removed, but minus has 'population partial correlation exactly 0'; null defined on measured length.
+- F14: **C** - Litter clustering (ICC 0.15) and allometry noted, but minus has residual correlation 0 at both litter and individual level.
+- F15: **P** - 'Pooled across species, all three are correlated at r > 0.95 regardless of the within-species claim': pooled analysis of minus still looks associated.
+- F16: **C** - Autocorrelation, lots, overfitting penalty and collinear polynomial terms are mentioned, but no artefact is reported as remaining in minus (independent process copy, shift control).
+- F17: **C** - Batch shifts are stated to be 'independent of leukaemia type', so no confounding is left; p>>n noted.
+- F18: **P** - In minus 'the proportion is then ~0.32, which includes the regression to the mean': non-null naive statistic.
+- F19: **P** - 'Raw VO2 therefore still differs between groups through mass' in minus: unadjusted analysis shows a group difference.
+- F20: **C** - Site calibration offsets noted with 'prevalence the same at every site (no site-label confounding)'; no artefact left.

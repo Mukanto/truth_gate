@@ -1,0 +1,29 @@
+{
+ "id": "D-055",
+ "claim": "The daily predictors X carry information about the daily outcome y on future days: the Pearson correlation between y and the prediction of a ridge regression of y on X (penalty 1.0 on standardised predictors, with an intercept), computed over future days, is at least 0.20.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(days_in_order, features)",
+   "dtype": "float",
+   "meaning": "6 continuous daily predictor series, one value per predictor per day",
+   "dims": [
+    1000,
+    6
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(days_in_order,)",
+   "dtype": "float",
+   "meaning": "continuous daily outcome",
+   "dims": [
+    1000
+   ]
+  }
+ ],
+ "sizes": {
+  "days_in_order": 1000,
+  "features": 6
+ }
+}

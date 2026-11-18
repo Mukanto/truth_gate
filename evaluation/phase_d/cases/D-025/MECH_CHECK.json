@@ -1,0 +1,72 @@
+{
+  "case": "D-025",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 26,
+          "text": "np.ptp(x, axis=1) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 31,
+          "text": "np.mean(slope) <= -0.20",
+          "op": "<=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 26,
+          "text": "np.ptp(x, axis=1) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 31,
+          "text": "np.mean(slope) <= -0.20",
+          "op": "<=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

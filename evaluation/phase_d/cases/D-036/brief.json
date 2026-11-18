@@ -1,0 +1,45 @@
+{
+ "id": "D-036",
+ "claim": "Across patients, cardiac output explains at least 25% of the variance in systemic vascular resistance (R-squared of at least 0.25).",
+ "data_keys": [
+  {
+   "key": "mean_arterial_pressure",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "mean arterial pressure of each patient, in mmHg",
+   "dims": [
+    100
+   ]
+  },
+  {
+   "key": "central_venous_pressure",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "central venous pressure of each patient, in mmHg",
+   "dims": [
+    100
+   ]
+  },
+  {
+   "key": "co_thermodilution",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "cardiac output of each patient measured by thermodilution, in L/min",
+   "dims": [
+    100
+   ]
+  },
+  {
+   "key": "co_fick",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "cardiac output of each patient measured by the Fick method from expired-gas oxygen uptake, in L/min",
+   "dims": [
+    100
+   ]
+  }
+ ],
+ "sizes": {
+  "patients": 100
+ }
+}

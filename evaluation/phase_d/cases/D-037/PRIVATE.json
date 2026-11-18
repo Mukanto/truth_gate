@@ -1,0 +1,25 @@
+{
+ "id": "D-037",
+ "source": "CHI13",
+ "passage": "'Blomqvist proposed another method which consists in adjusting the estimated regression coefficient of change on baseline value accounting directly for measurement error [...] adjusted regression coefficient = (crude regression coefficient + k)/(1 - k), with k = variance of measurement error/total variance.' (Europe PMC full text)",
+ "faulty": "Least-squares slope of (bmi_followup - bmi_baseline) on bmi_baseline (the crude regression of the source), at most -0.2.",
+ "fixed": "Blomqvist's adjusted slope (b_crude + k)/(1 - k), with k = error variance / total variance estimated from bmi_retest (error variance = half the mean squared difference of the two sessions; total variance = variance of bmi_baseline), at most -0.2.",
+ "estimand": "Faulty: slope of observed change on observed baseline. Fixed: slope of true change on true baseline level.",
+ "model_family": "The source's linear individual growth model (see B3A-03): baseline mean 15.0, SD 1.2, yearly change mean 0.4, SD 0.2 or 0.4, error SD 0.3 or 1.2; negative level-change relation for the claim-true version; the retest sample has the same error variance as the main sample.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": "2 children in the main sample and 2 in the retest sample; guards: non-finite values, selection below the minimum, zero variance of baseline, k equal to 1.",
+ "sizes_note": "Source: 500 children (main sample). The retest sample size of 100 is my choice, since the source states only that error variance comes 'from short-term repeated measurements or from external sources'; a smaller retest sample is realistic for a reliability study and keeps the check trivial. Size dependence: the source says the method needs 'accurate information on the variance of measurement error' and that underestimated variance gives a negatively biased result; no dependence on n is stated.",
+ "exploited_structure": "The change is computed from the baseline and regressed on that same baseline, whose measurement error enters both with opposite sign.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    r = np.asarray(d['bmi_retest'], dtype=float)\n    err_var = 0.5 * np.mean((r[:, 0] - r[:, 1]) ** 2)\n    return float(err_var / np.var(np.asarray(d['bmi_baseline'], dtype=float), ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.05,
+  "note_value_source": "'Assuming a relatively low measurement error variance (ICC of 95%)' (Results): k = 1 - ICC = 0.05; the larger-error scenario of the source has ICC 50% (0.5).",
+  "set_by_brief": false
+ },
+ "notes": "Role: reserve (CHI13, 1 of 2). Differs from B3A-03/07 in statistic (slope), the documented correction (Blomqvist, error variance from a separate retest sample) and data structure (a retest array with its own axis). The claim is stated in slope units (kg/m2 per kg/m2).",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.05
+}

@@ -1,0 +1,322 @@
+[
+ {
+  "id": "D-008",
+  "arm": "W0",
+  "skeleton_sha256": "2aaba0b7c7dd03f5afb5c5ef68c91435e82d9fac034ffde4bba444e512b89ddc",
+  "body_sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981",
+  "estimate_s": 2.4191859958227724,
+  "redo": false
+ },
+ {
+  "id": "D-008",
+  "arm": "W1",
+  "skeleton_sha256": "198688ff52bb14ef5a7f2fb96f88c523d7f3b6691c83b0e4433585313220f954",
+  "body_sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981",
+  "estimate_s": 2.377740003867075,
+  "redo": false
+ },
+ {
+  "id": "D-010",
+  "arm": "W0",
+  "skeleton_sha256": "54dc82588d00ce106c0215556746b1b4b293fd3324f95a1bc8454501e78410e5",
+  "body_sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+  "estimate_s": 12.5372380024055,
+  "redo": false
+ },
+ {
+  "id": "D-007",
+  "arm": "W0",
+  "skeleton_sha256": "a5fd2d66a863e3b0f9cca4d083c06b77111b947be6b68d0f337f7cdc0c1c0edb",
+  "body_sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944",
+  "estimate_s": 23.71227599796839,
+  "redo": false
+ },
+ {
+  "id": "D-007",
+  "arm": "W1",
+  "skeleton_sha256": "df3bd7c798499a79027b1b2d8ee75643dba441df20ff4f491811184991d03ce7",
+  "body_sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944",
+  "estimate_s": 21.373548001865856,
+  "redo": false
+ },
+ {
+  "id": "D-010",
+  "arm": "W1",
+  "skeleton_sha256": "d95529bec47e20ecd7b4e50d85a25a412799e8d04d3f2b68a0f826130df47fac",
+  "body_sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+  "estimate_s": 11.690303997311277,
+  "redo": false
+ },
+ {
+  "id": "D-012",
+  "arm": "W1",
+  "skeleton_sha256": "7c746f5542435c661a1b7fb372bb691e442cebd169816f64c503830603c53fe7",
+  "body_sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950",
+  "estimate_s": 2.190984000626486,
+  "redo": false
+ },
+ {
+  "id": "D-012",
+  "arm": "W0",
+  "skeleton_sha256": "6e1425648d73a6ac07140f4bd6463717233f4bad68601dc5f8e230919a06ac9f",
+  "body_sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950",
+  "estimate_s": 2.288435999653302,
+  "redo": false
+ },
+ {
+  "id": "D-011",
+  "arm": "W0",
+  "skeleton_sha256": "4d82ece661ac2db3858a8d51263f252ed9e1b61d941f420cedfc7622602b1cc8",
+  "body_sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa",
+  "estimate_s": 51.53861999948276,
+  "redo": false
+ },
+ {
+  "id": "D-011",
+  "arm": "W1",
+  "skeleton_sha256": "a2c32ca97c9dc281a1bdf0d48e7f9125fa0ffddc128ea375faffcac873194456",
+  "body_sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa",
+  "estimate_s": 48.15929999953369,
+  "redo": false
+ },
+ {
+  "id": "D-023",
+  "arm": "W0",
+  "skeleton_sha256": "e7643c8755723a00f383cbc6a5ff3b93fe7222a850aa8400dd5f3267d1eb8f0e",
+  "body_sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4",
+  "estimate_s": 2.875838004547404,
+  "redo": false
+ },
+ {
+  "id": "D-022",
+  "arm": "W0",
+  "skeleton_sha256": "23f1e1641861e81b597af29ccea6621e3020bac0f8194db470789c075ed9d9fa",
+  "body_sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325",
+  "estimate_s": 13.69940600488917,
+  "redo": false
+ },
+ {
+  "id": "D-022",
+  "arm": "W1",
+  "skeleton_sha256": "855c3756559082eed69f05fac0493e8c4eb5f784d94143be443b8c6c7a9fb826",
+  "body_sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325",
+  "estimate_s": 22.94611199875362,
+  "redo": false
+ },
+ {
+  "id": "D-023",
+  "arm": "W1",
+  "skeleton_sha256": "441ec470ae5784ea954448c9b164527d300857eb57b4c964910c7f3d039be4f1",
+  "body_sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4",
+  "estimate_s": 2.676900001242757,
+  "redo": false
+ },
+ {
+  "id": "D-027",
+  "arm": "W0",
+  "skeleton_sha256": "0a075038342cfbe6a301be54ebca41cf60e37f042648e0e664fddd46e116ba80",
+  "body_sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991",
+  "estimate_s": 3.2209099968895316,
+  "redo": false
+ },
+ {
+  "id": "D-027",
+  "arm": "W1",
+  "skeleton_sha256": "ad803ecbc22df9dc1b9ed7a76ed3f7eb7e9296e7d617dccf47a34637c977ae57",
+  "body_sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991",
+  "estimate_s": 2.95160400099121,
+  "redo": false
+ },
+ {
+  "id": "D-040",
+  "arm": "W0",
+  "skeleton_sha256": "8528011a2c7d1c89758666e43275163111739839c707c32f825b902efe09bcf3",
+  "body_sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede",
+  "estimate_s": 2.8646380048303395,
+  "redo": false
+ },
+ {
+  "id": "D-040",
+  "arm": "W1",
+  "skeleton_sha256": "c502850661d722bbe31ab073c9ca7c2d05c9e3eee320b0667e3479a865e60f4c",
+  "body_sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede",
+  "estimate_s": 2.461428002861794,
+  "redo": false
+ },
+ {
+  "id": "D-047",
+  "arm": "W0",
+  "skeleton_sha256": "533db4bd8dd666ff431aadca990354862650a72b4ff22ad034bdee172670e588",
+  "body_sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d",
+  "estimate_s": 2.035319996648468,
+  "redo": false
+ },
+ {
+  "id": "D-047",
+  "arm": "W1",
+  "skeleton_sha256": "ad488a096ece4ebe8d2f98817f8745632e04aadb55af2eb8ff2807cb43bd2c20",
+  "body_sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d",
+  "estimate_s": 2.5196640001377095,
+  "redo": false
+ },
+ {
+  "id": "D-035",
+  "arm": "W0",
+  "skeleton_sha256": "1df3671a6957183d08b84ab630a296ca796e172ec646c4fb08e4335626cd37f7",
+  "body_sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c",
+  "estimate_s": 206.4558019983815,
+  "redo": false
+ },
+ {
+  "id": "D-035",
+  "arm": "W1",
+  "skeleton_sha256": "8fe16fb9ae07ef5ac643fbdadeb68b1214a67bfe9d4835d0c6af1989696b3bfd",
+  "body_sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c",
+  "estimate_s": 173.95052399573615,
+  "redo": false
+ },
+ {
+  "id": "D-042",
+  "arm": "W0",
+  "skeleton_sha256": "b2a7484ba6c618bb0f733a0ed4d1004e9e0778fc5b97ed25d618fe964e854aac",
+  "body_sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c",
+  "estimate_s": 175.26790400064783,
+  "redo": false
+ },
+ {
+  "id": "D-042",
+  "arm": "W1",
+  "skeleton_sha256": "cc3e5aa351b5e9dd2dd93835c0c00294e632588f40310cf822cec54557d22e8d",
+  "body_sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c",
+  "estimate_s": 165.94537399883848,
+  "redo": false
+ },
+ {
+  "id": "D-052",
+  "arm": "W0",
+  "skeleton_sha256": "21e4c94bc511c83b7990b2d30e6bc71f2dd234b847318a052553fa13ee35d0cf",
+  "body_sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+  "estimate_s": 2.1725760024855845,
+  "redo": false
+ },
+ {
+  "id": "D-056",
+  "arm": "W0",
+  "skeleton_sha256": "8178ef1614612956b57cf68d5a155fa2d2f4b31da5e88d96695016904067a332",
+  "body_sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a",
+  "estimate_s": 1.9571639969944956,
+  "redo": false
+ },
+ {
+  "id": "D-055",
+  "arm": "W0",
+  "skeleton_sha256": "2396ef8451509115214a03036ea949774992d834c4ca169c3ffeeaa745f68cdf",
+  "body_sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a",
+  "estimate_s": 10.05711999721825,
+  "redo": false
+ },
+ {
+  "id": "D-055",
+  "arm": "W1",
+  "skeleton_sha256": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+  "body_sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a",
+  "estimate_s": 9.709840001014527,
+  "redo": false
+ },
+ {
+  "id": "D-056",
+  "arm": "W1",
+  "skeleton_sha256": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+  "body_sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a",
+  "estimate_s": 1.7970600019907579,
+  "redo": false
+ },
+ {
+  "id": "D-062",
+  "arm": "W1",
+  "skeleton_sha256": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+  "body_sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db",
+  "estimate_s": 4.843047988542821,
+  "redo": false
+ },
+ {
+  "id": "D-062",
+  "arm": "W0",
+  "skeleton_sha256": "181c3ee9eab0473ca387deab42ecfe276e2546b9452e82bbb9b32942ee5edbc6",
+  "body_sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db",
+  "estimate_s": 5.86349399673054,
+  "redo": false
+ },
+ {
+  "id": "D-064",
+  "arm": "W1",
+  "skeleton_sha256": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+  "body_sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d",
+  "estimate_s": 48.694716000754845,
+  "redo": false
+ },
+ {
+  "id": "D-064",
+  "arm": "W0",
+  "skeleton_sha256": "5ff4b10befc9886759d5d4891883ad9a3aeb6146724d9ec197e9c454e7708afa",
+  "body_sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d",
+  "estimate_s": 42.45488398941234,
+  "redo": false
+ },
+ {
+  "id": "D-067",
+  "arm": "W0",
+  "skeleton_sha256": "c57f4a44653e65e9be8b49d17f49ef4887a844dbe5b6fea9d822ba07d9408e5e",
+  "body_sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339",
+  "estimate_s": 2.7311359997838736,
+  "redo": false
+ },
+ {
+  "id": "D-066",
+  "arm": "W0",
+  "skeleton_sha256": "75d5bd17810cfc68429b8d669ed1168d816be5b829d588efc29066d02fb81685",
+  "body_sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d",
+  "estimate_s": 42.041383991600014,
+  "redo": false
+ },
+ {
+  "id": "D-066",
+  "arm": "W1",
+  "skeleton_sha256": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+  "body_sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d",
+  "estimate_s": 41.779556004621554,
+  "redo": false
+ },
+ {
+  "id": "D-067",
+  "arm": "W1",
+  "skeleton_sha256": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+  "body_sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339",
+  "estimate_s": 2.332688004244119,
+  "redo": false
+ },
+ {
+  "id": "D-068",
+  "arm": "W0",
+  "skeleton_sha256": "7b68bdb96c336941bc708addee2667b50948b7aae31abfc929a2dba92554d112",
+  "body_sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104",
+  "estimate_s": 3.699276000843383,
+  "redo": false
+ },
+ {
+  "id": "D-068",
+  "arm": "W1",
+  "skeleton_sha256": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+  "body_sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104",
+  "estimate_s": 3.8634259998798375,
+  "redo": false
+ },
+ {
+  "id": "D-052",
+  "arm": "W1",
+  "skeleton_sha256": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+  "body_sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+  "estimate_s": 2.1053760102950037,
+  "redo": false
+ }
+]

@@ -1,0 +1,403 @@
+[
+  {
+    "id": "D-007",
+    "claim": "Gene-expression profiles measured at diagnosis predict survival time in new patients: the out-of-sample R-squared for predicting survival_months from the expression profile is at least 0.10.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level of each gene in each patient's tumour sample",
+        "dims": [
+          50,
+          2000
+        ]
+      },
+      {
+        "key": "survival_months",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "months from diagnosis to death, observed for every patient",
+        "dims": [
+          50
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 50,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-008",
+    "claim": "Within patients, oxygen consumption rises with oxygen delivery: the mean over patients of the within-patient slope of oxygen consumption on oxygen delivery is at least 0.1 mL/min per mL/min.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "cardiac output of each patient at each measurement occasion, in L/min",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen content of arterial blood of each patient at each occasion, in mL O2 per dL",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen content of mixed venous blood of each patient at each occasion, in mL O2 per dL",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "vo2_expired_gas",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen consumption of each patient at each occasion measured from expired-gas analysis, in mL/min",
+        "dims": [
+          40,
+          6
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 40,
+      "occasions": 6
+    }
+  },
+  {
+    "id": "D-010",
+    "claim": "The postal district and the three covariates together predict the outcome y for new patients: the Pearson correlation between predicted and observed y is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "category",
+        "shape": "(samples, categories)",
+        "dtype": "bool",
+        "meaning": "True where the patient's home postal district is the district of that column",
+        "dims": [
+          1200,
+          150
+        ]
+      },
+      {
+        "key": "covariates",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "three continuous covariates per patient (age, body-mass index, systolic pressure)",
+        "dims": [
+          1200,
+          3
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous health outcome of each patient",
+        "dims": [
+          1200
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 1200,
+      "categories": 150,
+      "features": 3
+    }
+  },
+  {
+    "id": "D-011",
+    "claim": "Gene-expression profiles distinguish the two leukaemia types in new samples: the area under the ROC curve is at least 0.90.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each bone-marrow sample",
+        "dims": [
+          72,
+          2000
+        ]
+      },
+      {
+        "key": "myeloid",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for acute myeloid leukaemia, False for acute lymphoblastic leukaemia",
+        "dims": [
+          72
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 72,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-012",
+    "claim": "In a field experiment, 10 plots were each surveyed at 30 quadrats and each quadrat was scored as occupied or not by a seaweed species; the array exclosure marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.10, where the occupancy of a plot is the fraction of its quadrats that are occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "occupied",
+        "shape": "(plots, quadrats)",
+        "dtype": "bool",
+        "meaning": "True if the species was present in that quadrat of that plot",
+        "dims": [
+          10,
+          30
+        ]
+      },
+      {
+        "key": "exclosure",
+        "shape": "(plots,)",
+        "dtype": "bool",
+        "meaning": "True if the plot was fenced against grazers",
+        "dims": [
+          10
+        ]
+      }
+    ],
+    "sizes": {
+      "plots": 10,
+      "quadrats": 30
+    }
+  },
+  {
+    "id": "D-022",
+    "claim": "A second-order polynomial regression of the quality score y on the process readings X (an intercept, the 10 readings, their squares and all pairwise products, fitted by ordinary least squares) predicts y for new runs with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "10 continuous process readings recorded for each production run",
+        "dims": [
+          300,
+          10
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous quality score of each production run",
+        "dims": [
+          300
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 300,
+      "features": 10
+    }
+  },
+  {
+    "id": "D-023",
+    "claim": "Across 2000 adult specimens of one beetle species, head width and wing length are associated beyond what body length explains: the partial correlation between head width and wing length, controlling for body length, is at least 0.30.",
+    "data_keys": [
+      {
+        "key": "head_width",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "head width of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      },
+      {
+        "key": "wing_length",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "wing length of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "body length of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      }
+    ],
+    "sizes": {
+      "specimens": 2000
+    }
+  },
+  {
+    "id": "D-027",
+    "claim": "The 25 measurements in X predict the outcome y for new samples: the mean absolute error of an ordinary least squares regression of y on X (with an intercept) is at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "25 continuous measurements for each sample",
+        "dims": [
+          60,
+          25
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous outcome of each sample",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 60,
+      "features": 25
+    }
+  },
+  {
+    "id": "D-035",
+    "claim": "A classifier built from the measured variables recognises both classes in new records: the balanced accuracy (the mean of sensitivity and specificity for the positive class) is at least 0.65.",
+    "data_keys": [
+      {
+        "key": "features",
+        "shape": "(records, variables)",
+        "dtype": "float",
+        "meaning": "measured variables of each record",
+        "dims": [
+          1500,
+          20
+        ]
+      },
+      {
+        "key": "positive",
+        "shape": "(records,)",
+        "dtype": "bool",
+        "meaning": "True if the condition is present in the record",
+        "dims": [
+          1500
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 1500,
+      "variables": 20
+    }
+  },
+  {
+    "id": "D-040",
+    "claim": "Across skulls, cranial breadth and cranial height are positively associated after accounting for cranial length: the partial correlation coefficient between breadth and height, given length, is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "breadth",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "maximum cranial breadth of each skull, in mm",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "height",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "cranial height of each skull, in mm",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "length",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "maximum cranial length of each skull, in mm",
+        "dims": [
+          300
+        ]
+      }
+    ],
+    "sizes": {
+      "skulls": 300
+    }
+  },
+  {
+    "id": "D-042",
+    "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised descriptors) of the response y on the descriptors X predicts y for new compounds with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(records, features)",
+        "dtype": "float",
+        "meaning": "20 continuous molecular descriptors recorded for each compound record",
+        "dims": [
+          1200,
+          20
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(records,)",
+        "dtype": "float",
+        "meaning": "continuous activity response measured for each compound record",
+        "dims": [
+          1200
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 1200,
+      "features": 20
+    }
+  },
+  {
+    "id": "D-047",
+    "claim": "600 patients with menopausal hot flushes received a treatment. Symptom severity (scale 0 to 100, higher is worse) was scored at a screening visit, again at entry on the day treatment began, and again 12 weeks later. Claim: among patients whose screening score was at least 60, at least half have a week-12 score that is 10 or more points below their entry score (proportion of at least 0.5).",
+    "data_keys": [
+      {
+        "key": "screening",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score at the screening visit",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "entry",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score at entry, on the day treatment began",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "week12",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score 12 weeks after treatment began",
+        "dims": [
+          600
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 600
+    }
+  }
+]

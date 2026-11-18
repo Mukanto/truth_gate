@@ -1,0 +1,25 @@
+{
+ "id": "D-059",
+ "source": "ROB17",
+ "passage": "Abstract: \"when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error.\" and \"Block cross-validation, where data are split strategically rather than randomly, can address these issues.\"",
+ "faulty": "10-fold cross-validation with months assigned to folds uniformly at random; a random forest (50 trees, min leaf size 5) predicts abundance from the month's 10 environmental variables; R-squared = 1 - SSE/SST from the pooled held-out predictions. Claim holds when R-squared >= 0.30.",
+ "fixed": "Forward-in-time blocked evaluation: the 600 months are divided into 10 consecutive blocks; for blocks 3 to 10, the forest is fitted on the months of all earlier blocks only and predicts the block; R-squared is computed from the pooled block predictions (the held-out blocks' own mean as the baseline).",
+ "estimand": "Faulty: skill at predicting months whose neighbours in time were used for fitting. Fixed: skill at predicting later months from earlier ones.",
+ "model_family": "Random forest regression (50 trees, min leaf 5). Chosen by me: ROB17's abstract names no model; a flexible non-parametric model is the setting in which interpolation between neighbouring months is easy.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not read). 600 months (50 years) x 10 variables = 6k values is a realistic long monitoring series and keeps a check cheap (a few forest fits per evaluation). Dependence of the error on series length: not stated.",
+ "exploited_structure": "Time order: adjacent months are alike, so a randomly held-out month has neighbours in the fitting data.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d[\"environment\"], dtype=float)\n    a = x[:-1] - x[:-1].mean(axis=0)\n    b = x[1:] - x[1:].mean(axis=0)\n    den = np.sqrt((a ** 2).sum(axis=0) * (b ** 2).sum(axis=0))\n    ok = den > 0\n    if not np.any(ok):\n        return 0.0\n    r = (a * b).sum(axis=0)[ok] / den[ok]\n    return float(np.mean(r))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.7,
+  "note_value_source": "source states none: the abstract gives no autocorrelation; 0.7 is a proposed typical lag-1 autocorrelation of monthly environmental series",
+  "set_by_brief": false
+ },
+ "notes": "Mean lag-1 autocorrelation of the predictors, not of the outcome: unchanged when a claim-false world replaces the outcome. Block count (10 blocks, first two used only as fitting data) fixed by me; the source describes block CV in general.",
+ "subtype_or_tag": "L3.1",
+ "class": "B-2",
+ "approved_value": 0.7
+}

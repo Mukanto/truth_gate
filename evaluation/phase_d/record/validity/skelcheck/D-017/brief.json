@@ -1,0 +1,34 @@
+{
+ "id": "D-017",
+ "claim": "At a given height, the mean forced vital capacity of smokers and of non-smokers differs by at least 0.2 L: the difference between the two group means, after accounting for height, is at least 0.2 L in absolute value.",
+ "data_keys": [
+  {
+   "key": "fvc",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "forced vital capacity of each subject, in litres",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "height",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "standing height of each subject, in cm",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "smoker",
+   "shape": "(subjects,)",
+   "dtype": "bool",
+   "meaning": "True if the subject is a current smoker",
+   "dims": [
+    600
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 600}"
+}

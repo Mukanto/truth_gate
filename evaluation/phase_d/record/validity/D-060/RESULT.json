@@ -1,0 +1,119 @@
+{
+  "case": "D-060",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "set by the brief: the statistic is computable",
+    "mech_b": "ok",
+    "v1": "ok",
+    "v2": "fixed criterion outside its bound on plus",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "set_by_brief": true,
+        "mean": 5.0
+      },
+      "minus": {
+        "set_by_brief": true,
+        "mean": 5.0
+      }
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "X",
+          "y"
+        ],
+        "changed_keys": [
+          "y"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "y"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 704,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 0.704,
+      "fixed_rate": 0.0,
+      "fisher_p": 3.497917709010485e-300,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 2,
+        "n": 1000,
+        "rate": 0.002,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 582,
+        "n": 1000,
+        "rate": 0.582,
+        "min": 0.7,
+        "ok": false,
+        "errors": 0
+      }
+    }
+  },
+  "v1": true,
+  "v1_label": null,
+  "v2": false,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 0.000994419999915408,
+    "g": 0.0005816349992528557,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 3.782531998003833,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "dfa9a34fb793ef3ab3156430fa1148ece9fb0045b887336b85a23fb32c148c7c",
+    "PRIVATE.json": "90b2a4068c7595a1183ad8513351fa216b7f9178bcc535f56307dca038308382",
+    "faulty_body.py": "b827b93e2e3706ec338070c19fb1da1be9a45ecf8e1ca3bc85f9ecd092c96910",
+    "fixed_body.py": "732010b4e3c502e39fde9cfefb651765fcd78f1ed2c9b24cb19d7c951b20e24a",
+    "reference.py": "50a01ba5013535fdf954a60c8b7b1b7ecd3da730597de886bfa11c980e3cd8f3"
+  },
+  "decisive": true
+}

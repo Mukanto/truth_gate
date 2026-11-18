@@ -1,0 +1,25 @@
+{
+ "id": "D-056",
+ "source": "CUR13",
+ "passage": "'we want to control for differences in the denominator when the thing we really care about is the numerator'; regression techniques 'these include analysis of covariance' are versatile when a ratio is useless (abstract, Europe PMC).",
+ "faulty": "One-way ANOVA F test across the 3 groups on the ratio oxygen_uptake/body_mass; criterion p < 0.05.",
+ "fixed": "Analysis of covariance F test of the group effect on oxygen_uptake with body_mass as covariate (common slope, intercept per group); criterion p < 0.05.",
+ "estimand": "Faulty: difference between groups in oxygen uptake per unit body mass. Fixed: difference between groups in oxygen uptake at equal body mass.",
+ "model_family": "Linear model oxygen_uptake = a + b*body_mass + group effect + e with non-zero intercept and Gaussian e. Chosen as the source's ANCOVA family; fixed for both twins.",
+ "statistic_family": "mean",
+ "guard_minimum": 5,
+ "sizes_note": "Source states no sample size (abstract only). 3 groups x 25 animals = 75 values is a realistic physiology experiment. Size dependence: not stated.",
+ "exploited_structure": "The group variable varies with body mass (groups differ in mean mass), and oxygen uptake is not proportional to mass, so per-mass uptake differs between groups without a group effect.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    m = np.asarray(d['body_mass'], dtype=float)\n    gm = np.mean(m, axis=1)\n    return float(m.shape[1] * np.sum((gm - np.mean(m)) ** 2) / np.sum((m - np.mean(m)) ** 2))",
+  "direction": "greater",
+  "null_value": 0.027,
+  "note_value": 0.1,
+  "note_value_source": "source states none: no between-group difference in the denominator is given; null_value is (G-1)/(N-1) = 2/74 for the expected share of between-group variance when groups are random; 0.1 is a moderate imbalance of body mass between groups",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. 'mean' family (F test on means), three groups on an array axis, not an integer code. Differs from B3B-03 by statistic (F test) and data structure (groups x animals).",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.1
+}

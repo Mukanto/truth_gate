@@ -1,0 +1,45 @@
+{
+ "id": "D-071",
+ "claim": "Across patients, oxygen delivery and oxygen consumption are positively correlated: the Pearson correlation coefficient between them is at least 0.4.",
+ "data_keys": [
+  {
+   "key": "cardiac_output",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "cardiac output of each patient, in L/min",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "arterial_o2_content",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "oxygen content of arterial blood of each patient, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "oxygen content of mixed venous blood of each patient, in mL O2 per dL",
+   "dims": [
+    120
+   ]
+  },
+  {
+   "key": "vo2_expired_gas",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "oxygen consumption of each patient measured from expired-gas analysis, in mL/min",
+   "dims": [
+    120
+   ]
+  }
+ ],
+ "sizes": {
+  "patients": 120
+ }
+}

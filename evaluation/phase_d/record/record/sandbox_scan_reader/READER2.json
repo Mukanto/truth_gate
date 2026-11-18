@@ -1,0 +1,508 @@
+{
+ "decisions": [
+  {
+   "hit": 0,
+   "file": "GATE.md",
+   "line": 36,
+   "decision": "keep",
+   "sentence": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, `.github/workflows/truth-gate.yml`; never overwrites a file |",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 1,
+   "file": "GATE.md",
+   "line": 142,
+   "decision": "keep",
+   "sentence": "| **K1** definedness | A criterion must not fail on `plus`, `minus` or `null` samples (an exception, a failed world, a wrong return type, a missing component, a command error), and must not abstain (return `None`) on more than half of the `plus` samples. Abstentions on at most half of `plus`, and on `minus` and `null`, count as no claim: they are reported (`K1_ABSTAINED`), and a majority on `minus` or `null` caps the verdict at WEAK (`K1_ABSTAINED_MAJORITY`). |",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 2,
+   "file": "GATE.md",
+   "line": 147,
+   "decision": "keep",
+   "sentence": "| **K6** leak guard and reproducibility | The study may not read files outside its allow-list, use the network or start a process. Two evaluations in one process must give the same result. |",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 3,
+   "file": "GATE.md",
+   "line": 156,
+   "decision": "keep",
+   "sentence": "| `WEAK` | mandatory checks passed, but a target was missed, a check was inconclusive, or a control was waived | 1 |",
+   "reason": "Ordinary vocabulary: a declared target of the user's study was missed (WEAK rule)."
+  },
+  {
+   "hit": 4,
+   "file": "GATE.md",
+   "line": 185,
+   "decision": "keep",
+   "sentence": "Before the study module is executed, the gate installs a `sys.addaudithook` hook and arms it. While armed it blocks, with",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 5,
+   "file": "GATE.md",
+   "line": 192,
+   "decision": "keep",
+   "sentence": "**The guard does not cover external programs.** A command criterion (`command = [...]`) runs in another process, which",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 6,
+   "file": "GATE.md",
+   "line": 193,
+   "decision": "keep",
+   "sentence": "the guard cannot see: it may read any file the operating system lets it read. The program runs in a private working",
+   "reason": "Ordinary vocabulary: private working folder of an external program."
+  },
+  {
+   "hit": 7,
+   "file": "GATE.md",
+   "line": 195,
+   "decision": "keep",
+   "sentence": "`K6_EXTERNAL_UNGUARDED` lists the commands, and the table, the Action summary and the badge show it. The certificate",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 8,
+   "file": "GATE.md",
+   "line": 196,
+   "decision": "keep",
+   "sentence": "records the argv, the SHA-256 of the executable and of every `[external] uses` file; the libraries a program loads",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 9,
+   "file": "GATE.md",
+   "line": 224,
+   "decision": "keep",
+   "sentence": "| `non_claims`, `known_limitations` | six non-claims (the three of 0.3 with \"The gate\" for \"Kapı\", plus: generated and suggested declarations are generic; a file world is only as independent as its provenance; the leak guard does not cover external programs) and seven known limitations (the three of 0.3, plus: libraries of external programs are not hashed; on Windows killing an external program does not kill what it started; since 0.5 two sentences on abstentions and on K8) |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 10,
+   "file": "GATE.md",
+   "line": 265,
+   "decision": "keep",
+   "sentence": "| `K6_NONREPRODUCIBLE` | study-level | two evaluations in one process differed (unseeded randomness, hidden state) |",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 11,
+   "file": "GATE.md",
+   "line": 297,
+   "decision": "keep",
+   "sentence": "| `K6_EXTERNAL_UNGUARDED` | the study has command criteria, which run in other programs that the leak guard cannot see. The commands are listed. The badge reads \"(unguarded)\" |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 12,
+   "file": "GATE.md",
+   "line": 298,
+   "decision": "keep",
+   "sentence": "| `EXTERNAL_DIED` | an external program died, timed out or broke the protocol during the run; every later request to it was UNDEFINED, and that reaches the verdict through K1 (command failures are hard UNDEFINED outcomes, never abstentions) |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 13,
+   "file": "GATE.md",
+   "line": 309,
+   "decision": "keep",
+   "sentence": "after the two evaluations of K1-K7, under the armed guard. It never feeds samples or outcomes back into K1-K7.",
+   "reason": "Ordinary vocabulary: K1-K7 evaluation passes of a study, not an evaluation of the tool."
+  },
+  {
+   "hit": 14,
+   "file": "GATE.md",
+   "line": 349,
+   "decision": "keep",
+   "sentence": "* `allow_paths` are declared by the user and cannot be audited beyond hashing. Studies are single files; local helper",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 15,
+   "file": "GATE.md",
+   "line": 354,
+   "decision": "keep",
+   "sentence": "* **External programs** (command criteria) are not covered by the leak guard. They are hashed by executable and",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 16,
+   "file": "MANIFEST.md",
+   "line": 97,
+   "decision": "keep",
+   "sentence": "| `[external]` | `uses = []` (files copied into the programs' working folder and hashed), `env = []` (extra variable names passed through), `startup_timeout_s = 120`, `request_timeout_s = 60` |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 17,
+   "file": "MANIFEST.md",
+   "line": 169,
+   "decision": "keep",
+   "sentence": "nothing to claim on that sample). It counts as no claim, like `False` in every HOLDS-based statistic, and is reported",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 18,
+   "file": "MANIFEST.md",
+   "line": 201,
+   "decision": "keep",
+   "sentence": "**`pattern_stats`.** After the two evaluations the gate regenerates the counted samples of the `plus`, `minus` and `null`",
+   "reason": "Ordinary vocabulary: K1-K7 evaluation passes of a study, not an evaluation of the tool."
+  },
+  {
+   "hit": 19,
+   "file": "MANIFEST.md",
+   "line": 218,
+   "decision": "keep",
+   "sentence": "[external]",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 20,
+   "file": "MANIFEST.md",
+   "line": 228,
+   "decision": "keep",
+   "sentence": "* One process per distinct argv, started before the leak guard is armed. It serves both evaluations and the K8 pass.",
+   "reason": "Ordinary vocabulary: K1-K7 evaluation passes of a study, not an evaluation of the tool."
+  },
+  {
+   "hit": 21,
+   "file": "MANIFEST.md",
+   "line": 231,
+   "decision": "keep",
+   "sentence": "* **Working folder:** a fresh temporary folder holding copies of the `[external] uses` files and the `allow_paths`, with",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 22,
+   "file": "MANIFEST.md",
+   "line": 234,
+   "decision": "keep",
+   "sentence": "through, plus `LANG = C.UTF-8`, `TG_PROTOCOL = tg-line/1` and the names in `[external] env`. Nothing else.",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 23,
+   "file": "MANIFEST.md",
+   "line": 258,
+   "decision": "keep",
+   "sentence": "| `{\"rid\": k, \"error\": ...}` | that one outcome is UNDEFINED (`ExternalError`, a hard UNDEFINED); the process keeps serving. A reply with both `outcome` and `error` counts as an error (R-14) |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 24,
+   "file": "MANIFEST.md",
+   "line": 259,
+   "decision": "keep",
+   "sentence": "| a timeout (`request_timeout_s`), a line that is not JSON, a wrong or missing `rid`, or a reply with neither `outcome` nor `error` | the process is **killed**. The outcome is `ExternalTimeout` or `ExternalProtocolError`; every later request to that argv is UNDEFINED (`ExternalDied`); the study note `EXTERNAL_DIED` is added |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 25,
+   "file": "MANIFEST.md",
+   "line": 260,
+   "decision": "keep",
+   "sentence": "| the process dies (EOF, write error) while a reply is awaited | `ExternalDied`, like every later request (R-13) |",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 26,
+   "file": "MANIFEST.md",
+   "line": 267,
+   "decision": "keep",
+   "sentence": "abstention (a soft UNDEFINED: no claim, reported as `K1_ABSTAINED:<stream>`, and K1 makes the verdict UNDEFINED only when",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 27,
+   "file": "MANIFEST.md",
+   "line": 270,
+   "decision": "keep",
+   "sentence": "death (`EXTERNAL_DIED`), a missing component in a component dict, and an outcome string other than `HOLDS`, `FAILS` and",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 28,
+   "file": "MANIFEST.md",
+   "line": 286,
+   "decision": "keep",
+   "sentence": "`K6_EXTERNAL_UNGUARDED` lists the commands (`{\"note\": \"K6_EXTERNAL_UNGUARDED\", \"commands\": [[argv...], ...]}`, R-15); the",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 29,
+   "file": "MANIFEST.md",
+   "line": 289,
+   "decision": "keep",
+   "sentence": "not hashed. The gate isolates external programs against accidents, not against deliberate evasion.",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 30,
+   "file": "MANIFEST.md",
+   "line": 293,
+   "decision": "keep",
+   "sentence": "(selection, fitting, evaluation) on the data it is given, a circular selection or a leak makes it hold on noise, and K4",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 31,
+   "file": "MANIFEST.md",
+   "line": 361,
+   "decision": "keep",
+   "sentence": "K8 runs as a separate pass after the two evaluations, under the armed guard; it never feeds anything back into K1-K7.",
+   "reason": "Ordinary vocabulary: K1-K7 evaluation passes of a study, not an evaluation of the tool."
+  },
+  {
+   "hit": 32,
+   "file": "MANIFEST.md",
+   "line": 391,
+   "decision": "keep",
+   "sentence": "`DATA.csv` must be a realistic synthetic or pilot dataset, **not the real study data**. `suggest` prints this warning",
+   "reason": "Ordinary vocabulary: pilot dataset for suggest, not the real study data."
+  },
+  {
+   "hit": 33,
+   "file": "MANIFEST.md",
+   "line": 424,
+   "decision": "keep",
+   "sentence": "**Not in 0.4 (moved to 0.5):** worlds, controls and premises produced by external programs; the mutations `copy`,",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 34,
+   "file": "README_TOOL.md",
+   "line": 12,
+   "decision": "keep",
+   "sentence": "| **Methods protocol** | 19 rules for before a run, plus rules for the run, after it, and the repair loop. Each rule comes with the real failure that produced it. A one-page checklist for the freeze. | [`protocol/`](protocol/PROTOCOL.md) |",
+   "reason": "Ordinary vocabulary: the methods protocol's freeze checklist."
+  },
+  {
+   "hit": 35,
+   "file": "README_TOOL.md",
+   "line": 13,
+   "decision": "keep",
+   "sentence": "| **Templates and tools** | A pre-registration template, a prompt for a blind auditor, a SHA-256 freeze tool, and a runner that refuses to start unless the freeze verifies. Standard library only. | [`protocol/templates/`](protocol/templates/), [`protocol/tools/`](protocol/tools/freeze.py) |",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 36,
+   "file": "README_TOOL.md",
+   "line": 29,
+   "decision": "keep",
+   "sentence": "learning evaluations, hardware experiments.",
+   "reason": "Ordinary vocabulary: machine learning evaluations as a user group of the tool, not an evaluation of the tool."
+  },
+  {
+   "hit": 37,
+   "file": "README_TOOL.md",
+   "line": 32,
+   "decision": "keep",
+   "sentence": "roles to the designer, the coder, a blind auditor and a verifier.",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 38,
+   "file": "README_TOOL.md",
+   "line": 108,
+   "decision": "keep",
+   "sentence": "the certificate carries the study note `K6_EXTERNAL_UNGUARDED` (see [Limits](#limits)).",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 39,
+   "file": "README_TOOL.md",
+   "line": 110,
+   "decision": "keep",
+   "sentence": "**Starting from a dataset.** `truth-gate suggest pilot.csv --outcome yield --group group --reference control` writes a",
+   "reason": "Ordinary vocabulary: pilot dataset for suggest, not the real study data."
+  },
+  {
+   "hit": 40,
+   "file": "README_TOOL.md",
+   "line": 112,
+   "decision": "keep",
+   "sentence": "`origin = \"suggested\"`, which caps the verdict at WEAK until you review it. Feed it a realistic synthetic or pilot",
+   "reason": "Ordinary vocabulary: pilot dataset for suggest, not the real study data."
+  },
+  {
+   "hit": 41,
+   "file": "README_TOOL.md",
+   "line": 122,
+   "decision": "keep",
+   "sentence": "| `init [DIR] [--ci]` | writes `PREREG.md`, `truthgate.toml`, `BLIND_AUDIT_PROMPT.md`, `run_guarded.py` and, with `--ci`, the workflow |",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 42,
+   "file": "README_TOOL.md",
+   "line": 190,
+   "decision": "keep",
+   "sentence": "* It does not modify or repair criteria. It only reports.",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 43,
+   "file": "README_TOOL.md",
+   "line": 200,
+   "decision": "keep",
+   "sentence": "declarations. The blind audit covers the rest.",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 44,
+   "file": "README_TOOL.md",
+   "line": 209,
+   "decision": "keep",
+   "sentence": "* **External programs are not covered by the leak guard.** A command criterion runs in another process; the guard",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 45,
+   "file": "README_TOOL.md",
+   "line": 210,
+   "decision": "keep",
+   "sentence": "cannot see what it reads. The certificate says so (the note `K6_EXTERNAL_UNGUARDED` and a non-claim), and the badge",
+   "reason": "Ordinary vocabulary: command criterion / [external] section / external program."
+  },
+  {
+   "hit": 46,
+   "file": "SPEC.md",
+   "line": 23,
+   "decision": "keep",
+   "sentence": "3. Kapı does not modify or repair criteria. It only reports.",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 47,
+   "file": "SPEC.md",
+   "line": 36,
+   "decision": "keep",
+   "sentence": "- `WEAK`: every mandatory check passed, but a target was missed, a check was inconclusive, or a control was waived with a reason.",
+   "reason": "Ordinary vocabulary: a declared target of the user's study was missed (WEAK rule)."
+  },
+  {
+   "hit": 48,
+   "file": "SPEC.md",
+   "line": 107,
+   "decision": "keep",
+   "sentence": "For `k` HOLDS out of `n` evaluations (UNDEFINED counts as not-HOLDS unless stated otherwise), one-sided Wilson score bounds at level `a` use `z = NormalDist().inv_cdf(1 - a)` from the Python standard library.",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 49,
+   "file": "SPEC.md",
+   "line": 143,
+   "decision": "keep",
+   "sentence": "- Targets (not mandatory). These produce `WEAK`, not `NOT_FALSIFIABLE`. They use the same per-bound level `a` as SL (§4.2), so a target counts as missed only when the miss is significant:",
+   "reason": "Ordinary vocabulary: a declared target of the user's study was missed (WEAK rule)."
+  },
+  {
+   "hit": 50,
+   "file": "SPEC.md",
+   "line": 154,
+   "decision": "keep",
+   "sentence": "- for `role == \"assumed\"`, no requirement; the rate difference is reported in the premise map.",
+   "reason": "Ordinary vocabulary (tool reports/reported flags or outcomes); no evaluation result, case, class or phase."
+  },
+  {
+   "hit": 51,
+   "file": "SPEC.md",
+   "line": 179,
+   "decision": "keep",
+   "sentence": "- **Leak guard.** Before the study module is imported, Kapı installs (once per process) a `sys.addaudithook` hook and arms it. While armed, the hook intercepts these events:",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 52,
+   "file": "SPEC.md",
+   "line": 194,
+   "decision": "keep",
+   "sentence": "Known limitation (printed in the certificate): `allow_paths` are declared by the user and cannot be audited for content beyond hashing. A reviewer must inspect them. Studies are single files in v0. Importing local helper modules is not supported, because the study's directory is not on the allow-list.",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 53,
+   "file": "SPEC.md",
+   "line": 196,
+   "decision": "keep",
+   "sentence": "- **Reproducibility.** The complete evaluation (all streams, all checks) is computed twice in the same process. If the canonical result bodies (§7) differ → study flag `K6_NONREPRODUCIBLE` (S). This catches unseeded global randomness and hidden state.",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 54,
+   "file": "SPEC.md",
+   "line": 248,
+   "decision": "keep",
+   "sentence": "- Pure functions where possible. The only global state is the audit hook and its armed flag.",
+   "reason": "Ordinary tool vocabulary: audit hook, blind audit step or BLIND_AUDIT_PROMPT file of the user's own study."
+  },
+  {
+   "hit": 55,
+   "file": "SPEC.md",
+   "line": 249,
+   "decision": "keep",
+   "sentence": "Every check is individually unit-tested (§11). Tests use only toy studies written for the tests; they must not use or imitate evaluation cases (§12).",
+   "reason": "Generic build rule for unit tests; names no case, count, result, class or phase."
+  },
+  {
+   "hit": 56,
+   "file": "SPEC.md",
+   "line": 328,
+   "decision": "remove",
+   "sentence": "Reason: otherwise a criterion that ignores the changed quantity (case E1-10) would be reported as a world defect.",
+   "reason": "Names an evaluation case by number (E1-10)."
+  },
+  {
+   "hit": 57,
+   "file": "SPEC.md",
+   "line": 329,
+   "decision": "remove",
+   "sentence": "the evaluation design (Δ4)",
+   "reason": "Points to the evaluation design of the tool (Δ4), a section that is not in the docs; it states a piece of the tool's evaluation."
+  },
+  {
+   "hit": 58,
+   "file": "SPEC.md",
+   "line": 336,
+   "decision": "keep",
+   "sentence": "- The comparison is made once per study evaluation. Under K6 reproducibility it is made in both passes, like every other check.",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 59,
+   "file": "SPEC.md",
+   "line": 351,
+   "decision": "keep",
+   "sentence": "- These extra calls only record keys. Their outcomes are not used. All counted evaluations keep receiving plain `dict` samples, as in 0.3.",
+   "reason": "Ordinary vocabulary: one run of the criterion/study (reproducibility passes, K8 pass), not an evaluation of the tool."
+  },
+  {
+   "hit": 60,
+   "file": "SPEC.md",
+   "line": 399,
+   "decision": "keep",
+   "sentence": "Kapı then reports NOT_FALSIFIABLE, possibly with `K2_MINUS_UNREAD`.",
+   "reason": "\"reports\" is ordinary verdict vocabulary; the sentence describes a tool limitation, not an evaluation result."
+  },
+  {
+   "hit": 61,
+   "file": "SPEC.md",
+   "line": 401,
+   "decision": "keep",
+   "sentence": "v0.2 reported it as NOT_FALSIFIABLE with `K2_NO_SEPARATION`.",
+   "reason": "\"reported\" is ordinary verdict vocabulary; describes a version change of the tool, no evaluation content."
+  }
+ ],
+ "other_sentences": [
+  {
+   "file": "SPEC.md",
+   "line": 401,
+   "sentence": "Any regression case built this way loses its R1 detection (Δ4.2).",
+   "reason": "Refers to a regression case and an R1 detection tag (a mechanism/class tag) from the tool's evaluation (Δ4.2); neighbours hit 61 but holds no scanned word."
+  }
+ ]
+}

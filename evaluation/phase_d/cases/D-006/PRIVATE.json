@@ -1,0 +1,25 @@
+{
+ "id": "D-006",
+ "source": "CHI13",
+ "passage": "'Because the initial value (Y1) and the change from initial value (Y2 - Y1) share a common variable, there is a mathematical coupling between Y1 and Y2 - Y1.' (Glossary, Europe PMC full text). With more than two waves: 'the linear random effects model or individual growth curve modeling [...] is a standard method to assess the relationship between change in a continuous variable and its correlates, including the baseline level'.",
+ "faulty": "Pearson correlation between bmi[:,0] (age 5) and (bmi[:,5] - bmi[:,0]) (the crude two-wave analysis with the first and last visits), at most -0.25.",
+ "fixed": "Linear random-effects model of BMI on age using all six waves; the correlation between the random intercept and the random slope (in practice a per-child least-squares line, with the intercept at age 5, corrected for the error variance estimated from the residuals), at most -0.25. This is the source's r_random.",
+ "estimand": "Faulty: correlation between observed first-visit BMI and the observed change between first and last visits. Fixed: correlation between a child's true level at age 5 and his or her true yearly rate of change.",
+ "model_family": "The source's: linear individual growth, true BMI_i(t) = b0_i + b1_i*t, (b0, b1) bivariate normal (baseline mean 15.0, SD 1.2; yearly change mean 0.4, SD 0.2 or 0.4), measurement error normal SD 0.3 (ICC 95%) or 1.2 (ICC 50%), annual visits ages 5 to 10. Correlation of b0 and b1 set by the world (negative for the claim-true version).",
+ "statistic_family": "correlation",
+ "guard_minimum": "2 children; 3 visits per child are needed for the error-variance correction but the brief fixes 6 visits; guards: non-finite values, selection below 2 children, zero variance of the intercepts or slopes.",
+ "sizes_note": "Source: 500 children, annual BMI from age 5 to 10 (6 waves), used as is. Size dependence: the source says the crude correlation is negatively biased in all scenarios, more with larger measurement error; for sample size it says only that random variability 'would have been greater for all methods with a smaller cohort size'.",
+ "exploited_structure": "The change between visits is computed from the first visit and correlated with that same first visit, whose measurement error enters both sides with opposite sign.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d['bmi'], dtype=float)\n    t = np.arange(y.shape[1], dtype=float)\n    tc = t - t.mean()\n    slope = (y @ tc) / np.sum(tc ** 2)\n    fit = y.mean(axis=1, keepdims=True) + np.outer(slope, tc)\n    resid_var = np.sum((y - fit) ** 2) / (y.shape[0] * (y.shape[1] - 2))\n    return float(resid_var / np.var(y[:, 0], ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.06,
+  "note_value_source": "'Observed BMI values were computed by adding a relatively small random measurement error (SD of error: 0.3)' and 'the mean true BMI was 15.0 kg/m 2 (SD: 1.2)' (Simulations, Scenarios): 0.3^2 / (1.2^2 + 0.3^2) = 0.059. The source's larger-error scenario (SD 1.2) gives 0.5.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (CHI13 pair 2 of 2). Differs from B3A-03 in data structure (six waves, no retest key) and pipeline step (random-effects estimate instead of a retest reading). The statistic uses the within-child residual variance around a linear fit relative to the first-visit variance, which a claim-false version that changes only the link between level and rate leaves unchanged in expectation.",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.06
+}

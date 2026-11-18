@@ -1,0 +1,29 @@
+{
+ "id": "D-005",
+ "claim": "The measurements in X carry information about the outcome y: the R-squared (coefficient of determination) of a ridge regression of y on X (penalty 1.0 on standardised measurements, with an intercept), evaluated on new samples, is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "panel of 150 continuous biomarker measurements for each sample",
+   "dims": [
+    100,
+    150
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous clinical score of each sample",
+   "dims": [
+    100
+   ]
+  }
+ ],
+ "sizes": {
+  "samples": 100,
+  "features": 150
+ }
+}

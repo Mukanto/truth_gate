@@ -1,0 +1,47 @@
+{
+ "id": "D-008",
+ "claim": "Within patients, oxygen consumption rises with oxygen delivery: the mean over patients of the within-patient slope of oxygen consumption on oxygen delivery is at least 0.1 mL/min per mL/min.",
+ "data_keys": [
+  {
+   "key": "cardiac_output",
+   "shape": "(patients, occasions)",
+   "dtype": "float",
+   "meaning": "cardiac output of each patient at each measurement occasion, in L/min",
+   "dims": [
+    40,
+    6
+   ]
+  },
+  {
+   "key": "arterial_o2_content",
+   "shape": "(patients, occasions)",
+   "dtype": "float",
+   "meaning": "oxygen content of arterial blood of each patient at each occasion, in mL O2 per dL",
+   "dims": [
+    40,
+    6
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(patients, occasions)",
+   "dtype": "float",
+   "meaning": "oxygen content of mixed venous blood of each patient at each occasion, in mL O2 per dL",
+   "dims": [
+    40,
+    6
+   ]
+  },
+  {
+   "key": "vo2_expired_gas",
+   "shape": "(patients, occasions)",
+   "dtype": "float",
+   "meaning": "oxygen consumption of each patient at each occasion measured from expired-gas analysis, in mL/min",
+   "dims": [
+    40,
+    6
+   ]
+  }
+ ],
+ "sizes": "{\"patients\": 40, \"occasions\": 6}"
+}

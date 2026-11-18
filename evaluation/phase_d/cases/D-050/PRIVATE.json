@@ -1,0 +1,25 @@
+{
+ "id": "D-050",
+ "source": "KRO93",
+ "passage": "'Spurious correlation refers to the correlation between indices that have a common component.' (abstract, RePEc/IDEAS page, read through WebFetch excerpt); the abstract treats a single ratio as dependent variable in a multiple regression and recommends avoiding ratios.",
+ "faulty": "R-squared of the regression of liver_mass/body_mass on age_days, compared with 0.10.",
+ "fixed": "Increase in R-squared when age_days is added to the regression of liver_mass on body_mass (incremental R-squared), compared with 0.10. This is the source's correction: the denominator enters as a covariate.",
+ "estimand": "Faulty: variance of the liver-to-body-mass ratio explained by age. Fixed: variance of liver mass explained by age beyond body mass.",
+ "model_family": "Source names none. Choice: age Gaussian, body_mass = c0 + c1*age + noise, liver = a + b*body_mass^0.8 scale + g*age + noise with g = 0 in the claim-false version (liver not proportional to body mass, so liver/body falls with body mass). Reason: a sub-proportional liver-body relation is the minimal condition in which a ratio varies with its denominator.",
+ "statistic_family": "R-squared",
+ "guard_minimum": "3 rats (full model has three parameters); guards: non-finite values, selection below 3, zero variance of any key.",
+ "sizes_note": "Source (abstract only) states no sizes. 80 rats is a small-sample regime typical of organ studies; check is two small regressions. Dependence on n: not stated.",
+ "exploited_structure": "The variable being related to the ratio (age) varies with the ratio's denominator (body mass), and the numerator is not proportional to the denominator, so the ratio varies with age without any age effect.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['age_days'], dtype=float)\n    b = np.asarray(d['body_mass'], dtype=float)\n    if np.std(a) == 0 or np.std(b) == 0:\n        return 0.0\n    return float(abs(np.corrcoef(a, b)[0, 1]))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.8,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.8 is a proposed correlation between age and body mass in a growing laboratory rodent sample; it uses age and body mass only, which the claim-false version (no age effect on liver beyond body mass) leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (KRO93 pair 3 of 3). Earlier combos for the tag included R-squared; kept, with a small-n regime (80) and a continuous proxy, because an incremental R-squared is the natural form of 'beyond body mass'.",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.8
+}

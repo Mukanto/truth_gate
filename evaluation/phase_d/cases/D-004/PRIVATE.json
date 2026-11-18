@@ -1,0 +1,25 @@
+{
+ "id": "D-004",
+ "source": "KAP23",
+ "passage": "L3.1: \"the test set should not contain any data from a date before the training set.\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856).",
+ "faulty": "All 10,000 station-days pooled; ridge (lambda 1.0, standardised, intercept, one model for all stations) with 5-fold cross-validation, station-days assigned to folds by a fixed pseudo-random permutation (default_rng(0)); skill = 1 - MSE(model)/MSE(persistence) over the station-days from day 2 on, persistence being y of the previous day at the same station; holds iff >= 0.05.",
+ "fixed": "Ridge fitted on all stations for days 1 to 175 (first 70% of days); forecasts days 176 to 250; MSE of model and of persistence (y of day t-1, same station; for day 176 the day-175 value) over those 40 x 75 = 3000 station-days; skill >= 0.05.",
+ "estimand": "Faulty: skill versus persistence on station-days that lie between fitting days at the same and other stations. Fixed: skill on days after every fitting day.",
+ "model_family": "Ridge regression (lambda 1.0, standardised) of y on the same day's 5 predictors pooled over stations; baseline persistence forecast. Panel structure (stations x days) chosen to differ from the single series of B2A-08.",
+ "statistic_family": "other",
+ "guard_minimum": 1,
+ "sizes_note": "Source states none. 40 x 250 x 5 = 50,000 values (10,000 station-days); the check is 5 ridge fits on up to 8,000 rows (seconds). Dependence of the error on sample size or autocorrelation: not stated. Family other (skill versus persistence) because the persistence baseline is the standard comparator for forecasts and is not an explained-variance measure.",
+ "exploited_structure": "Predictors that change slowly from day to day, so that rows from adjacent days (same and other stations) resemble each other and carry the outcome of neighbouring days.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    F = X.shape[2]\n    a = X[:, :-1, :].reshape(-1, F)\n    b = X[:, 1:, :].reshape(-1, F)\n    a = a - a.mean(axis=0)\n    b = b - b.mean(axis=0)\n    den = np.sqrt((a ** 2).sum(axis=0) * (b ** 2).sum(axis=0))\n    r = (a * b).sum(axis=0) / np.where(den > 0, den, 1.0)\n    return float(np.mean(r))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.8,
+  "note_value_source": "source states none: 0.8 proposed as a typical lag-1 autocorrelation of slowly varying daily series; the source gives no autocorrelation",
+  "set_by_brief": false
+ },
+ "notes": "Guard: None if MSE(persistence) is zero or fewer than 1 forecast day; non-finite returns None. Statistic from X only. Checked on a random 40 x 250 x 5 array: 0.002. Differs from B2A-08 in family, data structure (panel) and baseline.",
+ "subtype_or_tag": "L3.1",
+ "class": "B-2",
+ "approved_value": 0.8
+}

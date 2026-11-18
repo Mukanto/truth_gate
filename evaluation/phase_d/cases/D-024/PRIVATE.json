@@ -1,0 +1,25 @@
+{
+ "id": "D-024",
+ "source": "AMB02",
+ "passage": "Europe PMC full text PMC124442 (read via a tool summary): genes were selected on the whole data and the error then estimated by cross-validation; the correction is to place cross-validation (CV10E) external to the gene selection. SOURCES_D: genes selected on the full data, then the error estimated by cross-validation on the same data; correction: cross-validation external to the selection.",
+ "faulty": "All 62 tissues are used to rank genes by absolute two-sample t-statistic; the top 3 genes are kept; 10-fold cross-validation of Fisher's linear discriminant on those 3 genes is run on all tissues and its error rate is the statistic. Claim holds when error <= 0.20.",
+ "fixed": "Within each of the 10 folds, genes are ranked and the top 3 chosen using the training tissues only; the discriminant is fitted on those genes and applied to the test fold; the error rate is pooled over folds.",
+ "estimand": "Faulty: error of a rule whose genes were chosen using the test tissues' labels. Fixed: expected error of the whole procedure (gene choice plus discriminant) on new tissues.",
+ "model_family": "t-statistic gene ranking, top 3 genes, Fisher's linear discriminant: the source's own method (Fisher LDA with a 3-gene subset on colon and leukaemia data), simplified to a t ranking so that it is cheap and unambiguous.",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes (colon data): 62 tissues (40 tumour, 22 normal) x 2000 genes, as extracted from the Europe PMC text; used as is (124k values; cheap). Bias reported: for 3-gene Fisher selection on colon the uncorrected error was 6.5% against about 15% corrected; on 20 label-permuted colon sets the uncorrected error was near zero at 128 genes and about 10% at 8 genes while the corrected error stayed 0.40-0.45. Bias grows as the retained gene count shrinks.",
+ "exploited_structure": "Thousands of genes for tens of tissues, so some genes separate the classes by chance on any data set, and ranking them on all labels makes that chance visible to the test tissues.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 32.26,
+  "note_value_source": "2000 genes / 62 tissues from the colon data set in the Europe PMC text of PMC124442 (Methods/Results as extracted: \"62 tissue samples (40 tumor, 22 normal), 2,000 genes\" is my tool summary, not a verbatim quote)",
+  "set_by_brief": true
+ },
+ "notes": "Statistic family stays classification: the source reports only error rates; I could not move to another family while staying in a setting it describes. Earlier evaluations used (L1.3, classification) for AMB02; this case differs in sizes and statistic from my reserve B2B-13.",
+ "subtype_or_tag": "L1.3",
+ "class": "B-2",
+ "approved_value": 32.26
+}

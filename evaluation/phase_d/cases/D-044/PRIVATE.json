@@ -1,0 +1,25 @@
+{
+ "id": "D-044",
+ "source": "KAP23",
+ "passage": "L3.2: \"Nonindependence between training and test samples constitutes leakage, unless the scientific claim\" [concerns a distribution with the same dependence structure]; example: \"uses different observations of the same patient in the training and test sets\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; sentences cut by the fetch tool).",
+ "faulty": "The 1800 subject-trial rows are pooled; ridge (lambda 1.0, standardised, intercept) with 5-fold cross-validation, rows assigned to folds by a fixed pseudo-random permutation (default_rng(0)); pooled MAE of held-out predictions; skill = 1 - MAE(model)/MAE(training-fold mean predictor); holds iff >= 0.05.",
+ "fixed": "5-fold cross-validation by subject (subject index mod 5, all 30 trials of a subject in the same fold; 48 subjects fitted, 12 held out per fold); same ridge and skill; holds iff >= 0.05.",
+ "estimand": "Faulty: skill on trials of subjects that also supplied fitting trials. Fixed: skill for trials of new subjects.",
+ "model_family": "Ridge regression (lambda 1.0, standardised) on trial-level features, pooled over trials. Source names none (histopathology and protein-family examples); numpy-only.",
+ "statistic_family": "other",
+ "guard_minimum": 1,
+ "sizes_note": "Source states none. 60 x 30 x 25 = 45,000 values (1800 trials); the check is 5 ridge fits. Dependence of the error on the number of subjects or trials per subject: not stated. Family other (MAE skill) because earlier L3.2 combinations used R-squared, classification and correlation.",
+ "exploited_structure": "Repeated records of the same subject, whose features and outcome share subject-specific components, so held-out trials resemble fitting trials of the same subject.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    S, T, F = X.shape\n    m = X.mean(axis=1)\n    w = ((X - m[:, None, :]) ** 2).sum(axis=(0, 1)) / (S * (T - 1))\n    b = m.var(axis=0, ddof=1) - w / T\n    tot = b + w\n    icc = b / np.where(tot > 0, tot, 1.0)\n    return float(np.mean(icc))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: 0.5 proposed as a moderate intraclass correlation of trial features within a subject; the source gives no value",
+  "set_by_brief": false
+ },
+ "notes": "Guard: None if MAE of the mean predictor is zero or fewer than 1 held-out trial; non-finite returns None. Statistic is the mean intraclass correlation of the features X (y not used). Checked on random arrays: 0.001 (independent) and 0.495 (shared subject component). Differs from earlier L3.2 combinations in family; the data are a 3-axis array with subject and trial axes.",
+ "subtype_or_tag": "L3.2",
+ "class": "B-2",
+ "approved_value": 0.5
+}

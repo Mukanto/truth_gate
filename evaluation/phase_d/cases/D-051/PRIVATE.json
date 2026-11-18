@@ -1,0 +1,25 @@
+{
+ "id": "D-051",
+ "source": "STR87",
+ "passage": "'For example, the relationship between O2 consumption and O2 delivery may be of interest, although these may be computed from measurements of cardiac output and blood O2 contents.' 'In two previous studies of O2 consumption and delivery, the effect of coupled error is shown to be small when the range of O2 deliveries studied is large, and measurement errors are of reasonable size.' (abstract, Europe PMC).",
+ "faulty": "For each of the 12 dogs, ordinary least-squares slope of VO2 on DO2 over the 8 steps (both computed from the first cardiac_output determination); average the 12 slopes; criterion >= 0.15.",
+ "fixed": "For each dog, the Stratton-Feustel-Newell corrected regression coefficient: error variances from the repeat determination (var(cardiac_output - cardiac_output_2)/2, pooled across steps within dog), first-order Taylor expansion subtracted from the sample (co)variances of VO2 and DO2, slope = corrected Cov/corrected Var(DO2); then average over dogs; criterion >= 0.15 (None when a corrected variance is not positive).",
+ "estimand": "Faulty: mean within-dog slope of computed consumption on computed delivery, including the effect of cardiac output error. Fixed: mean within-dog slope of error-free consumption on error-free delivery.",
+ "model_family": "Same as B3B-08 (products with additive independent errors, first-order Taylor), per animal over a series of steps; delivery varies within dog over a range. Fixed for both twins.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size. 12 dogs x 8 steps = 96 values: a realistic stepwise physiology design with few animals; the check is trivial. Size dependence: as in B3B-08, small when the range of deliveries is large.",
+ "exploited_structure": "Within one animal, the cardiac output determination multiplies into both consumption and delivery at every step, and the delivery range within an animal is narrow, so its error dominates the within-animal slope.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    c = np.asarray(d['cardiac_output'], dtype=float)\n    c2 = np.asarray(d['cardiac_output_2'], dtype=float)\n    return float(np.mean(0.5 * np.var(c - c2, axis=1, ddof=1) / np.var(c, axis=1, ddof=1)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.1,
+  "note_value_source": "source states none: no figure is given; within an animal the range of cardiac output is narrower than across animals, so the error share is larger than the 0.05 of B3B-08; 0.1 is an assumed value",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. Differs from B3B-08 by statistic (mean of per-animal slopes) and data structure (animals x steps).",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.1
+}

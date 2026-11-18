@@ -1,0 +1,25 @@
+{
+ "id": "D-057",
+ "source": "TU04",
+ "passage": "'relating change to baseline values using correlation or regression is methodologically flawed due to mathematical coupling'; the relation between clinical outcomes and baseline 'were reanalysed using Oldham's method and the variance ratio test' (abstract, Europe PMC).",
+ "faulty": "R-squared of the least-squares regression of the change (followup_depth - baseline_depth) on baseline_depth over the 24 defects; criterion R-squared >= 0.15.",
+ "fixed": "Oldham's method as R-squared: squared correlation between the change and the mean of baseline_depth and followup_depth; criterion >= 0.15.",
+ "estimand": "Faulty: variance of the change explained by the baseline reading. Fixed: variance of the change explained by the average level of the two readings.",
+ "model_family": "Latent-depth model with Gaussian reading error at baseline and follow-up and an individual treatment response; Gaussian. Chosen because the source gives no model; this is the standard model behind Oldham's method; fixed for both twins.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source: reanalysed 12 trials for pocket probing depth and 14 for lifetime cumulative attachment loss (abstract); the number of defects per trial is not stated. 24 defects is a realistic size for a single guided tissue regeneration trial. Size dependence: not stated.",
+ "exploited_structure": "The baseline depth appears both as the predictor and inside the change, so probing error in the baseline produces an association between them.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    b = np.asarray(d['baseline_depth'], dtype=float)\n    r = np.asarray(d['baseline_depth_retest'], dtype=float)\n    return float(0.5 * np.var(b - r, ddof=1) / np.var(b, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.2,
+  "note_value_source": "source states none: the abstract gives no probing error; 0.2 corresponds to a probing error SD of about 0.9 mm against a between-defect SD of about 2 mm, a realistic figure for periodontal probing",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. Threshold 0.15 is below 0.2 because at n=24 the faulty R-squared must be able to reach it under noise alone; the world author sets effect sizes. Differs from B3B-05 (correlation, large n) by statistic (R-squared) and sample-size regime.",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.2
+}

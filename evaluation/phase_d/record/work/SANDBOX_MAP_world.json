@@ -1,0 +1,150 @@
+[
+ {
+  "label": "cd14f4",
+  "batch": 1,
+  "arm": "W0",
+  "instructions": "WORLD_INSTRUCTIONS_D0.md",
+  "ids": [
+   "D-007",
+   "D-008",
+   "D-010",
+   "D-011",
+   "D-012",
+   "D-022",
+   "D-023",
+   "D-027",
+   "D-035",
+   "D-040",
+   "D-042",
+   "D-047"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\cd14f4"
+ },
+ {
+  "label": "c13bd2",
+  "batch": 1,
+  "arm": "W1",
+  "instructions": "WORLD_INSTRUCTIONS_D1.md",
+  "ids": [
+   "D-007",
+   "D-008",
+   "D-010",
+   "D-011",
+   "D-012",
+   "D-022",
+   "D-023",
+   "D-027",
+   "D-035",
+   "D-040",
+   "D-042",
+   "D-047"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\c13bd2"
+ },
+ {
+  "label": "5f14e6",
+  "batch": 2,
+  "arm": "W0",
+  "instructions": "WORLD_INSTRUCTIONS_D0.md",
+  "ids": [
+   "D-052",
+   "D-055",
+   "D-056",
+   "D-062",
+   "D-064",
+   "D-066",
+   "D-067",
+   "D-068"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\5f14e6"
+ },
+ {
+  "label": "3d2b82",
+  "batch": 2,
+  "arm": "W1",
+  "instructions": "WORLD_INSTRUCTIONS_D1.md",
+  "ids": [
+   "D-052",
+   "D-055",
+   "D-056",
+   "D-062",
+   "D-064",
+   "D-066",
+   "D-067",
+   "D-068"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\3d2b82"
+ },
+ {
+  "label": "e515ad",
+  "batch": 1,
+  "arm": "W0",
+  "instructions": "WORLD_INSTRUCTIONS_D0.md",
+  "ids": [
+   "D-007",
+   "D-008",
+   "D-010",
+   "D-011",
+   "D-012",
+   "D-022",
+   "D-023",
+   "D-027",
+   "D-035",
+   "D-040",
+   "D-042",
+   "D-047"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\e515ad",
+  "redo_of": [
+   "cd14f4"
+  ],
+  "reason": "redo of cd14f4: stopped by the API usage limit (HTTP 429)"
+ },
+ {
+  "label": "eb6876",
+  "batch": 1,
+  "arm": "W0",
+  "instructions": "WORLD_INSTRUCTIONS_D0.md",
+  "ids": [
+   "D-007",
+   "D-008",
+   "D-010",
+   "D-011",
+   "D-012",
+   "D-022",
+   "D-023",
+   "D-027",
+   "D-035",
+   "D-040",
+   "D-042",
+   "D-047"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\eb6876",
+  "redo_of": [
+   "cd14f4",
+   "e515ad"
+  ],
+  "reason": "redo of e515ad: stopped by an API connection error (SSL certificate verification)"
+ },
+ {
+  "label": "d5f53a",
+  "batch": 2,
+  "arm": "W1",
+  "instructions": "WORLD_INSTRUCTIONS_D1.md",
+  "ids": [
+   "D-052",
+   "D-055",
+   "D-056",
+   "D-062",
+   "D-064",
+   "D-066",
+   "D-067",
+   "D-068"
+  ],
+  "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\world\\d5f53a",
+  "redo_of": [
+   "3d2b82"
+  ],
+  "reason": "redo of 3d2b82: invalid (TaskStop/ToolSearch forbidden calls; Read of its own task output file outside the sandbox)"
+ }
+]

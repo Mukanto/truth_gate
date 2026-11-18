@@ -1,0 +1,26 @@
+{
+ "id": "D-049",
+ "claim": "A classifier built from the 12 measured variables recognises the positive class in new records with an F1 score for the positive class of at least 0.50.",
+ "data_keys": [
+  {
+   "key": "features",
+   "shape": "(records, variables)",
+   "dtype": "float",
+   "meaning": "measured variables of each record",
+   "dims": [
+    600,
+    12
+   ]
+  },
+  {
+   "key": "positive",
+   "shape": "(records,)",
+   "dtype": "bool",
+   "meaning": "True if the condition is present in the record",
+   "dims": [
+    600
+   ]
+  }
+ ],
+ "sizes": "{\"records\": 600, \"variables\": 12}"
+}

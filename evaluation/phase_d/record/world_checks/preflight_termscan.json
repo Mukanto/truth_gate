@@ -1,0 +1,174 @@
+{
+ "transcript": "transcripts\\preflight_opus_agent-a7db422431a547b92.jsonl",
+ "transcript_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+ "first_last_utc": [
+  "2026-11-17T19:47:20.106Z",
+  "2026-11-17T19:47:26.472Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "cc028f55f07b96447eb20b512b035443d15cbf61a5811f669facf6d361859ce2",
+ "prompt_is_frozen": true,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": false,
+ "prompt_diff": {
+  "first_diff_index": 0,
+  "expected_context": "You are the world author for a batch of ",
+  "actual_context": "This is a short connectivity check. Use "
+ },
+ "injected_remainder_len": 0,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 2
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Glob": 1
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "a7db422431a547b92",
+  "other_agentIds": [],
+  "sessionIds": [
+   "e99bcaed-1f5d-4c84-948a-5ba1699cb0eb"
+  ],
+  "filename_agent_id": null,
+  "agentId_matches_filename": null,
+  "problems": []
+ },
+ "terms_scanned": 84,
+ "term_hits": [
+  {
+   "term": "structure\\",
+   "location": "attachment entry 4 (line 5, type skill_listing)",
+   "group": "b_attachment",
+   "count": 2,
+   "context": "hot\\\", \\\"browser snapshot\\\", \\\"DOM structure\\\", \\\"inspect page\\\", \\\"accessibilit"
+  },
+  {
+   "term": "checklist",
+   "location": "attachment entry 4 (line 5, type skill_listing)",
+   "group": "b_attachment",
+   "count": 2,
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "structure\\",
+   "location": "attachment entry 5 (line 6, type instructions)",
+   "group": "b_attachment",
+   "count": 2,
+   "context": "hem are authoritative.\\n\\n## wiki/ structure\\n- `index.md` — content catalog. Ev"
+  },
+  {
+   "term": "B-1",
+   "location": "attachment entry 8 (line 9, type credential_org)",
+   "group": "b_attachment",
+   "count": 1,
+   "context": "\"type\": \"attachment\", \"uuid\": \"a0550cdb-1a00-4091-b913-9d4cad25c406\", \"timestam"
+  },
+  {
+   "term": "B-1",
+   "location": "attachment entry 9 (line 10, type remote_session_change)",
+   "group": "b_attachment",
+   "count": 1,
+   "context": "{\"parentUuid\": \"a0550cdb-1a00-4091-b913-9d4cad25c406\", \"isSidech"
+  },
+  {
+   "term": "checklist",
+   "location": "attachment entry 17 (line 18, type prompt_snapshot)",
+   "group": "b_attachment",
+   "count": 2,
+   "context": "nd of task (deploy steps, a review checklist, a repo-specific workflow). Availa"
+  },
+  {
+   "term": "SELECTION_",
+   "location": "api-request-blob entry 12 (line 13, informational)",
+   "group": "e_request_blob",
+   "count": 2,
+   "context": "eferred_tool_bootstrap>\\n\\n  <tool_selection_hierarchy>\\n    0. MEMORY: mcp__plu"
+  },
+  {
+   "term": "structure\\",
+   "location": "api-request-blob entry 12 (line 13, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "context": "hem are authoritative.\\n\\n## wiki/ structure\\n- `index.md` — content catalog. Ev"
+  },
+  {
+   "term": "structure\\",
+   "location": "api-request-blob entry 13 (line 14, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "context": "hot\\\", \\\"browser snapshot\\\", \\\"DOM structure\\\", \\\"inspect page\\\", \\\"accessibilit"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 13 (line 14, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  }
+ ],
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.325"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "xhigh",
+  "effort_sources": {
+   "api-request.params.output_config.effort": [
+    "xhigh"
+   ],
+   "assistant.effort": [
+    "xhigh"
+   ],
+   "assistant.perTurnEffort": [
+    "xhigh"
+   ]
+  },
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [
+   "{\"display\": \"updates\", \"type\": \"adaptive\"}"
+  ],
+  "entrypoints": [
+   "claude-desktop"
+  ],
+  "cwds": [
+   "E:\\Claude Projects\\kapi-oss\\evaluation\\phase_d"
+  ]
+ },
+ "provenance": {},
+ "unmatched_patterns": [
+  "nothing_*.none"
+ ],
+ "unchecked_written_files": [],
+ "files_checked": 0,
+ "unparsable_lines": [],
+ "reasons": [
+  "first user message does not start with the expected prompt (first difference at char 0)",
+  "6 term hit(s) in injected context: B-1, checklist, structure\\"
+ ],
+ "valid": false
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-042",
+ "source": "KAP23",
+ "passage": "L1.4: \"If a dataset with duplicates is used for the purposes of training and evaluating an ML model,\" [the rest: the same data could exist in the training set and the test set] (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; sentence cut by the fetch tool).",
+ "faulty": "1-nearest-neighbour regression (Euclidean distance on X standardised with the training mean and sd) under 5-fold cross-validation (fold = i mod 5) on all 1200 records as given; Pearson correlation between the pooled held-out predictions and y >= 0.30.",
+ "fixed": "Records whose standardised X rows lie closer than 0.1 times the median pairwise distance are linked (single linkage, connected components); every component is placed whole into one fold (component id mod 5 after ordering by first member); the same 5-fold evaluation; Pearson correlation >= 0.30.",
+ "estimand": "Faulty: correlation on held-out records many of which have a near-identical record among the fitting records. Fixed: correlation for new compounds that have no near-identical record among those used to fit.",
+ "model_family": "1-nearest-neighbour regression, Euclidean distance on standardised descriptors; numpy-only, and it returns the response of a near-identical record. Same model as B2A-06 but with near-copies (not exact), correlation, and a larger sample.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 1200 x 20 = 24,000 values; a 1200 x 1200 distance matrix is built once and per fold (seconds). Dependence on sample size or duplicate share: not stated. With one neighbour and a share f of records that have a near copy, the correlation under no effect is about f, so a threshold of 0.30 corresponds to about 30% such records.",
+ "exploited_structure": "Near-identical records (same entity measured or entered more than once with slight differences) in different parts of the data, so a held-out record has a near copy, with nearly the same response, among the fitting records.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    X = (X - X.mean(axis=0)) / (X.std(axis=0) + 1e-12)\n    sq = (X ** 2).sum(axis=1)\n    D = np.sqrt(np.maximum(sq[:, None] + sq[None, :] - 2.0 * (X @ X.T), 0.0))\n    n = D.shape[0]\n    med = np.median(D[~np.eye(n, dtype=bool)])\n    np.fill_diagonal(D, np.inf)\n    return float(np.mean(D.min(axis=1) < 0.1 * med))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: 30% of records with a near-identical partner is a proposed value; the source gives no duplicate share",
+  "set_by_brief": false
+ },
+ "notes": "Guard: correlation None for zero variance of predictions or y or fewer than 2 records; non-finite returns None. Statistic from X only. Same statistic code as B2A-06; the cases differ in statistic family, duplicate kind (near vs exact, which gives a different fixed rule) and sample size. Max-size run on a random 2000 x 20 array returned a finite float.",
+ "subtype_or_tag": "L1.4",
+ "class": "B-2",
+ "approved_value": 0.3
+}

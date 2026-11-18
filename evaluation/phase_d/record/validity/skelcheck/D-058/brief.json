@@ -1,0 +1,28 @@
+{
+ "id": "D-058",
+ "claim": "Features computed from wearable-sensor signals recognise walking in newly recruited subjects: the classification error rate for walking versus other activities is at most 0.10.",
+ "data_keys": [
+  {
+   "key": "signal_features",
+   "shape": "(subjects, windows, features)",
+   "dtype": "float",
+   "meaning": "features computed from the sensor signal in each time window of each subject",
+   "dims": [
+    30,
+    30,
+    40
+   ]
+  },
+  {
+   "key": "walking",
+   "shape": "(subjects, windows)",
+   "dtype": "bool",
+   "meaning": "True if the subject was walking during the window",
+   "dims": [
+    30,
+    30
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 30, \"windows\": 30, \"features\": 40}"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-034",
+ "source": "ROB17",
+ "passage": "Abstract: \"when performing cross-validation, these structures are regularly ignored, resulting in serious underestimation of predictive error.\"",
+ "faulty": "10-fold cross-validation with days assigned to folds uniformly at random; a 5-nearest-neighbour regression on the standardised driver variables predicts the level; RMSE of the pooled held-out predictions, divided by the standard deviation of the level, is the statistic. Claim holds when this ratio <= 0.70.",
+ "fixed": "Forward-in-time blocked evaluation: 1500 days divided into 10 consecutive blocks; for blocks 3 to 10, the regression is fitted on the days of all earlier blocks only and predicts the block; pooled RMSE divided by the standard deviation of the level in the predicted blocks.",
+ "estimand": "Faulty: error on days whose neighbouring days were used for fitting. Fixed: error on later days predicted from earlier ones, relative to the spread of the level.",
+ "model_family": "5-nearest-neighbour regression on standardised drivers. Chosen by me: the abstract names no model; k-NN is cheap and its error on interpolation is easy to see.",
+ "statistic_family": "other",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not read). 1500 days (about 4 years) x 6 = 9k values; cheap. Dependence on length: not stated.",
+ "exploited_structure": "Time order: consecutive days are nearly identical in drivers and level, so a held-out day has near twins in the fitting data.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d[\"drivers\"], dtype=float)\n    a = x[:-7] - x[:-7].mean(axis=0)\n    b = x[7:] - x[7:].mean(axis=0)\n    den = np.sqrt((a ** 2).sum(axis=0) * (b ** 2).sum(axis=0))\n    ok = den > 0\n    if not np.any(ok):\n        return 0.0\n    r = (a * b).sum(axis=0)[ok] / den[ok]\n    return float(np.mean(r))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.6,
+  "note_value_source": "source states none: the abstract gives no autocorrelation; 0.6 is a proposed typical lag-7 autocorrelation of daily hydro-meteorological drivers",
+  "set_by_brief": false
+ },
+ "notes": "Reserve for ROB17 L3.1. statistic_family other: root-mean-square error relative to the standard deviation (not R-squared, slope, correlation, proportion or mean). Differs from B2B-08 in statistic, sizes and model.",
+ "subtype_or_tag": "L3.1",
+ "class": "B-2",
+ "approved_value": 0.6
+}

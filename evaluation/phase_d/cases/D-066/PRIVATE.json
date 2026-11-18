@@ -1,0 +1,25 @@
+{
+ "id": "D-066",
+ "source": "KAP23",
+ "passage": "L1.2 text: \"...pre-processing steps, such as imputation or over/under sampling, results in leakage.\" Under the task's tie-break, oversampling by copying rows is L1.4; L1.4: \"If a dataset with duplicates is used for the purposes of training and evaluating an ML model,\" [...] (PMC10499856).",
+ "faulty": "Rows with y True are copied (sampling with replacement, default_rng(0)) until the two classes have equal size, on all 1000 rows, before the data are cut; 5-fold cross-validation (fold = i mod 5 over the enlarged table) of 1-nearest-neighbour classification (Euclidean, standardised); balanced accuracy over the held-out rows of the enlarged table >= 0.65.",
+ "fixed": "5-fold cross-validation on the original 1000 rows (stratified, fold = rank within class mod 5); copies of the True rows are made only among the training rows of each fold; balanced accuracy on the untouched held-out original rows >= 0.65.",
+ "estimand": "Faulty: balanced accuracy on held-out rows that include copies of rows in the fitting set. Fixed: balanced accuracy for new patients drawn with the original class balance.",
+ "model_family": "1-nearest-neighbour classifier, Euclidean distance on standardised measurements; oversampling by copying rows. Source names oversampling but no model.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 1000 x 15 = 15,000 values; a few dozen minority rows (about 8% proposed); check is 5 distance matrices of at most 1000 x 1000. Dependence on class balance: not stated.",
+ "exploited_structure": "A rare outcome class that is balanced by copying its rows, so copies of the same row end up on both sides of any later cut.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d[\"y\"], dtype=bool)\n    q = float(np.mean(y))\n    return float(min(q, 1.0 - q))",
+  "direction": "less",
+  "null_value": 0.5,
+  "note_value": 0.08,
+  "note_value_source": "source states none: 8% minority share is a proposed value for a rare outcome; the source gives no class share in this context",
+  "set_by_brief": false
+ },
+ "notes": "Reserve for L1.4. Classification could not be avoided: oversampling is a classification device and the primaries B2A-06 and B2A-07 use other and correlation. Guard: None when the minority class has fewer than 2 rows or either class is absent in a held-out pool; non-finite returns None. The statistic uses y only, whose marginal is unchanged when the claim is made false by changing X.",
+ "subtype_or_tag": "L1.4",
+ "class": "B-2",
+ "approved_value": 0.08
+}

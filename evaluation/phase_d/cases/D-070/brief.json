@@ -1,0 +1,29 @@
+{
+ "id": "D-070",
+ "claim": "Gene-expression profiles predict five-year relapse in new patients: the area under the ROC curve is at least 0.70.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(patients, genes)",
+   "dtype": "float",
+   "meaning": "log2 expression level of each gene in each patient's tumour sample",
+   "dims": [
+    120,
+    2000
+   ]
+  },
+  {
+   "key": "relapse_5y",
+   "shape": "(patients,)",
+   "dtype": "bool",
+   "meaning": "True if the patient relapsed within five years of diagnosis",
+   "dims": [
+    120
+   ]
+  }
+ ],
+ "sizes": {
+  "patients": 120,
+  "genes": 2000
+ }
+}

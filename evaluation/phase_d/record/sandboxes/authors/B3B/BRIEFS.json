@@ -1,0 +1,151 @@
+[
+  {
+    "local_id": "B3B-01",
+    "claim": "Across 2000 adult specimens of one beetle species, head width and wing length are associated beyond what body length explains: the partial correlation between head width and wing length, controlling for body length, is at least 0.30.",
+    "data_keys": [
+      {"key": "head_width", "shape": "(specimens,)", "dtype": "float", "meaning": "head width of each specimen, in mm"},
+      {"key": "wing_length", "shape": "(specimens,)", "dtype": "float", "meaning": "wing length of each specimen, in mm"},
+      {"key": "body_length", "shape": "(specimens,)", "dtype": "float", "meaning": "body length of each specimen, in mm"}
+    ],
+    "sizes": {"specimens": 2000}
+  },
+  {
+    "local_id": "B3B-02",
+    "claim": "Across 25 populations of one beetle species, with 40 specimens measured in each, wing length rises with head width at a given body length: the mean over populations of the within-population multiple-regression coefficient of wing length on head width, with body length as the other predictor, is at least 0.30 (mm of wing length per mm of head width).",
+    "data_keys": [
+      {"key": "head_width", "shape": "(populations, specimens)", "dtype": "float", "meaning": "head width of each specimen in each population, in mm"},
+      {"key": "wing_length", "shape": "(populations, specimens)", "dtype": "float", "meaning": "wing length of each specimen in each population, in mm"},
+      {"key": "body_length", "shape": "(populations, specimens)", "dtype": "float", "meaning": "body length of each specimen in each population, in mm"}
+    ],
+    "sizes": {"populations": 25, "specimens": 40}
+  },
+  {
+    "local_id": "B3B-03",
+    "claim": "Among 60 mice, treated mice produce more peak twitch force than untreated mice of the same body mass: the difference between the group means of peak force, adjusted for body mass by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+    "data_keys": [
+      {"key": "peak_force", "shape": "(animals,)", "dtype": "float", "meaning": "peak twitch force of one hindlimb muscle of each mouse, in mN"},
+      {"key": "body_mass", "shape": "(animals,)", "dtype": "float", "meaning": "body mass of each mouse, in g"},
+      {"key": "treated", "shape": "(animals,)", "dtype": "bool", "meaning": "True if the mouse received the treatment, False if it did not"}
+    ],
+    "sizes": {"animals": 60}
+  },
+  {
+    "local_id": "B3B-04",
+    "claim": "Among 3 groups of 25 rats each, mean resting oxygen uptake differs between the groups once body mass is accounted for: the analysis-of-covariance F test of the group effect on oxygen uptake, with body mass as the covariate, has a p-value below 0.05.",
+    "data_keys": [
+      {"key": "oxygen_uptake", "shape": "(groups, animals)", "dtype": "float", "meaning": "resting oxygen uptake of each rat in each group, in mL O2 per min"},
+      {"key": "body_mass", "shape": "(groups, animals)", "dtype": "float", "meaning": "body mass of each rat in each group, in g"}
+    ],
+    "sizes": {"groups": 3, "animals": 25}
+  },
+  {
+    "local_id": "B3B-05",
+    "claim": "In 300 patients with a continuous disease severity score measured before and after treatment, improvement is larger in patients with a higher severity level: the Pearson correlation between each patient's change in score (follow-up minus baseline) and the mean of that patient's baseline and follow-up scores is at most -0.30.",
+    "data_keys": [
+      {"key": "baseline_score", "shape": "(patients,)", "dtype": "float", "meaning": "severity score of each patient at the baseline visit, higher is more severe"},
+      {"key": "baseline_score_retest", "shape": "(patients,)", "dtype": "float", "meaning": "a second, independent reading of the severity score of each patient taken at the baseline visit"},
+      {"key": "followup_score", "shape": "(patients,)", "dtype": "float", "meaning": "severity score of each patient at the follow-up visit after treatment"}
+    ],
+    "sizes": {"patients": 300}
+  },
+  {
+    "local_id": "B3B-06",
+    "claim": "In 400 adults with systolic blood pressure measured at five annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the regression slope of an individual's underlying yearly rate of change in systolic blood pressure on the individual's underlying initial systolic blood pressure is at most -0.03 mmHg per year per mmHg.",
+    "data_keys": [
+      {"key": "systolic_bp", "shape": "(individuals, occasions)", "dtype": "float", "meaning": "systolic blood pressure of each individual at each of five annual visits, with the visits in time order, in mmHg"}
+    ],
+    "sizes": {"individuals": 400, "occasions": 5}
+  },
+  {
+    "local_id": "B3B-07",
+    "claim": "In 24 intrabony periodontal defects treated by guided tissue regeneration, the level of disease explains the amount of change: the mean of the baseline and follow-up pocket probing depth explains at least 15% of the variance in the change in pocket probing depth (follow-up minus baseline), that is, the R-squared of the linear regression of the change on that mean is at least 0.15.",
+    "data_keys": [
+      {"key": "baseline_depth", "shape": "(defects,)", "dtype": "float", "meaning": "pocket probing depth of each defect at the baseline examination, in mm"},
+      {"key": "baseline_depth_retest", "shape": "(defects,)", "dtype": "float", "meaning": "a second, independent probing of the depth of each defect at the baseline examination, in mm"},
+      {"key": "followup_depth", "shape": "(defects,)", "dtype": "float", "meaning": "pocket probing depth of each defect at the follow-up examination after treatment, in mm"}
+    ],
+    "sizes": {"defects": 24}
+  },
+  {
+    "local_id": "B3B-08",
+    "claim": "Among 40 anaesthetised dogs, whole-body oxygen consumption and oxygen delivery, each computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definitions, are positively related: their Pearson correlation is at least 0.40.",
+    "data_keys": [
+      {"key": "cardiac_output", "shape": "(subjects,)", "dtype": "float", "meaning": "cardiac output of each dog, in L per min"},
+      {"key": "cardiac_output_2", "shape": "(subjects,)", "dtype": "float", "meaning": "a second, independent determination of the cardiac output of each dog, in L per min"},
+      {"key": "arterial_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL"},
+      {"key": "venous_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL"}
+    ],
+    "sizes": {"subjects": 40}
+  },
+  {
+    "local_id": "B3B-09",
+    "claim": "In 12 anaesthetised dogs, each studied at 8 steps, whole-body oxygen consumption rises with oxygen delivery within a dog, both computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definitions: the mean over dogs of the within-dog regression slope of oxygen consumption on oxygen delivery is at least 0.15 (mL O2 per min per mL O2 per min).",
+    "data_keys": [
+      {"key": "cardiac_output", "shape": "(animals, steps)", "dtype": "float", "meaning": "cardiac output of each dog at each step, in L per min"},
+      {"key": "cardiac_output_2", "shape": "(animals, steps)", "dtype": "float", "meaning": "a second, independent determination of the cardiac output of each dog at each step, in L per min"},
+      {"key": "arterial_o2_content", "shape": "(animals, steps)", "dtype": "float", "meaning": "arterial blood oxygen content of each dog at each step, in mL O2 per dL"},
+      {"key": "venous_o2_content", "shape": "(animals, steps)", "dtype": "float", "meaning": "mixed-venous blood oxygen content of each dog at each step, in mL O2 per dL"}
+    ],
+    "sizes": {"animals": 12, "steps": 8}
+  },
+  {
+    "local_id": "B3B-10",
+    "claim": "Across 120 anaesthetised animals, tissues extract more oxygen when more is supplied: the Pearson correlation between the arterial-minus-mixed-venous oxygen content difference and the arterial oxygen content is at least 0.30.",
+    "data_keys": [
+      {"key": "arterial_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "arterial blood oxygen content of each animal, in mL O2 per dL"},
+      {"key": "arterial_o2_content_2", "shape": "(subjects,)", "dtype": "float", "meaning": "a second, independent determination of the arterial blood oxygen content of each animal, in mL O2 per dL"},
+      {"key": "venous_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "mixed-venous blood oxygen content of each animal, in mL O2 per dL"},
+      {"key": "venous_o2_content_2", "shape": "(subjects,)", "dtype": "float", "meaning": "a second, independent determination of the mixed-venous blood oxygen content of each animal, in mL O2 per dL"}
+    ],
+    "sizes": {"subjects": 120}
+  },
+  {
+    "local_id": "B3B-11",
+    "claim": "Among 400 adult beetles measured on six skeletal dimensions, the dimensions share a common shape pattern beyond body length: after removing the linear effect of body length from each of the six dimensions, the first principal component of their covariance matrix explains at least 40% of the total variance.",
+    "data_keys": [
+      {"key": "skeletal", "shape": "(specimens, dimensions)", "dtype": "float", "meaning": "six linear skeletal dimensions of each specimen, in mm"},
+      {"key": "body_length", "shape": "(specimens,)", "dtype": "float", "meaning": "body length of each specimen, in mm"}
+    ],
+    "sizes": {"specimens": 400, "dimensions": 6}
+  },
+  {
+    "local_id": "B3B-12",
+    "claim": "In 30 subjects each studied in a vehicle session and in a drug session, the drug raises muscle force: the mean paired difference in force between the drug and the vehicle session, adjusted for the muscle cross-sectional area measured in each session by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+    "data_keys": [
+      {"key": "force_vehicle", "shape": "(subjects,)", "dtype": "float", "meaning": "peak voluntary knee-extension force of each subject in the vehicle session, in N"},
+      {"key": "force_drug", "shape": "(subjects,)", "dtype": "float", "meaning": "peak voluntary knee-extension force of each subject in the drug session, in N"},
+      {"key": "area_vehicle", "shape": "(subjects,)", "dtype": "float", "meaning": "quadriceps cross-sectional area of each subject measured in the vehicle session, in cm2"},
+      {"key": "area_drug", "shape": "(subjects,)", "dtype": "float", "meaning": "quadriceps cross-sectional area of each subject measured in the drug session, in cm2"}
+    ],
+    "sizes": {"subjects": 30}
+  },
+  {
+    "local_id": "B3B-13",
+    "claim": "Among 150 adults with systolic blood pressure measured at three annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the Pearson correlation between an individual's underlying yearly rate of change in systolic blood pressure and the individual's underlying initial systolic blood pressure is at most -0.30.",
+    "data_keys": [
+      {"key": "systolic_bp", "shape": "(individuals, occasions)", "dtype": "float", "meaning": "systolic blood pressure of each individual at each of three annual visits, with the visits in time order, in mmHg"}
+    ],
+    "sizes": {"individuals": 150, "occasions": 3}
+  },
+  {
+    "local_id": "B3B-14",
+    "claim": "Among 600 anaesthetised dogs, whole-body oxygen consumption, computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definition, depends on cardiac output: the R-squared of the linear regression of oxygen consumption on cardiac output is at least 0.25.",
+    "data_keys": [
+      {"key": "cardiac_output", "shape": "(subjects,)", "dtype": "float", "meaning": "cardiac output of each dog, in L per min"},
+      {"key": "cardiac_output_2", "shape": "(subjects,)", "dtype": "float", "meaning": "a second, independent determination of the cardiac output of each dog, in L per min"},
+      {"key": "arterial_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL"},
+      {"key": "venous_o2_content", "shape": "(subjects,)", "dtype": "float", "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL"}
+    ],
+    "sizes": {"subjects": 600}
+  },
+  {
+    "local_id": "B3B-15",
+    "claim": "Across 12 trials of guided tissue regeneration with 20 defects each, deeper disease means larger gain: the mean over trials of the within-trial regression slope of the change in attachment loss (follow-up minus baseline) on the mean of the baseline and follow-up attachment loss is at most -0.20 (mm per mm).",
+    "data_keys": [
+      {"key": "baseline_attachment_loss", "shape": "(trials, defects)", "dtype": "float", "meaning": "clinical attachment loss of each defect in each trial at the baseline examination, in mm"},
+      {"key": "baseline_attachment_loss_retest", "shape": "(trials, defects)", "dtype": "float", "meaning": "a second, independent measurement of the attachment loss of each defect at the baseline examination, in mm"},
+      {"key": "followup_attachment_loss", "shape": "(trials, defects)", "dtype": "float", "meaning": "clinical attachment loss of each defect at the follow-up examination after treatment, in mm"}
+    ],
+    "sizes": {"trials": 12, "defects": 20}
+  }
+]

@@ -1,0 +1,32 @@
+== run 1: smoke ==
+D-006 types ['NoneType', 'bool'] max_time_s 0.00026
+D-008 types ['bool'] max_time_s 0.00011
+D-015 types ['NoneType', 'bool'] max_time_s 0.00013
+D-017 types ['bool'] max_time_s 0.00016
+D-020 types ['bool'] max_time_s 0.00032
+D-031 types ['bool'] max_time_s 0.00019
+D-036 types ['bool'] max_time_s 0.00011
+D-037 types ['bool'] max_time_s 0.00011
+D-038 types ['bool'] max_time_s 0.00011
+D-040 types ['bool'] max_time_s 0.00014
+D-050 types ['bool'] max_time_s 0.00016
+D-053 types ['bool'] max_time_s 0.00006
+D-062 types ['bool'] max_time_s 0.00111
+D-067 types ['bool'] max_time_s 0.00013
+D-071 types ['bool'] max_time_s 0.00006
+== run 2: direction ==
+D-006 claim-met array -> True | claim-not-met array -> False
+D-008 claim-met array -> True | claim-not-met array -> False
+D-015 claim-met array -> True | claim-not-met array -> False
+D-017 claim-met array -> True | claim-not-met array -> False
+D-020 claim-met array -> True | claim-not-met array -> False
+D-031 claim-met array -> True | claim-not-met array -> False
+D-036 claim-met array -> True | claim-not-met array -> False
+D-037 claim-met array -> True | claim-not-met array -> False
+D-038 claim-met array -> True | claim-not-met array -> False
+D-040 claim-met array -> True | claim-not-met array -> False
+D-050 claim-met array -> True | claim-not-met array -> False
+D-053 claim-met array -> True | claim-not-met array -> False
+D-062 claim-met array -> True | claim-not-met array -> False
+D-067 claim-met array -> True | claim-not-met array -> False
+D-071 claim-met array -> True | claim-not-met array -> False

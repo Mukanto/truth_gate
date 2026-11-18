@@ -1,0 +1,182 @@
+[
+ {
+  "case": "D-003",
+  "l": "yes",
+  "reason": "Source states no ratio; 9.0 (90/10) is a typical imbalance for the oversampling setting; ~100 events in 1000 records is workable.",
+  "approved_value": 9.0
+ },
+ {
+  "case": "D-004",
+  "l": "yes",
+  "reason": "Source states none; lag-1 autocorrelation 0.8 is typical of slowly varying daily predictors; consistent with the daily panel setting.",
+  "approved_value": 0.8
+ },
+ {
+  "case": "D-005",
+  "l": "yes",
+  "reason": "Brief's own size: 150 features / 100 samples = 1.5, matches brief dims (100,150); realistic for a biomarker panel.",
+  "approved_value": 1.5
+ },
+ {
+  "case": "D-007",
+  "l": "yes",
+  "reason": "Brief's own ratio 2000 genes / 50 patients = 40 matches dims (50,2000); typical microarray prognosis setting.",
+  "approved_value": 40.0
+ },
+ {
+  "case": "D-010",
+  "l": "yes",
+  "reason": "150 districts / 1200 patients = 0.125 matches dims (1200,150); realistic (about 8 patients per district).",
+  "approved_value": 0.125
+ },
+ {
+  "case": "D-011",
+  "l": "yes",
+  "reason": "2000 genes / 72 samples = 27.78 equals the statistic at the brief's dims (72,2000); the note states the source's 7129/72 = 99.0 cannot occur at these sizes; source sample count (PMC124442, n=72) verified.",
+  "approved_value": 27.78
+ },
+ {
+  "case": "D-013",
+  "l": "yes",
+  "reason": "2000 / 40 = 50 equals the statistic at the brief's dims (40,2000); the note states the source's 6000/40 = 150 cannot occur at these sizes; source sample count (PMC1397873, 40 per set) verified.",
+  "approved_value": 50.0
+ },
+ {
+  "case": "D-014",
+  "l": "yes",
+  "reason": "Source states no rate; 25% missing is a typical rate for a laboratory panel; claim and 20 lab values consistent.",
+  "approved_value": 0.25
+ },
+ {
+  "case": "D-018",
+  "l": "yes",
+  "reason": "Source states none; between-subject ICC 0.3 is a moderate, realistic share for repeated sensor recordings.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-022",
+  "l": "yes",
+  "reason": "Brief's own size: (10*13/2)/300 = 0.2167 matches dims (300,10).",
+  "approved_value": 0.2167
+ },
+ {
+  "case": "D-024",
+  "l": "yes",
+  "reason": "Verified in PMC124442: colon n=62, p=2,000; 2000/62=32.26 matches brief dims (62,2000).",
+  "approved_value": 32.26
+ },
+ {
+  "case": "D-027",
+  "l": "yes",
+  "reason": "Brief's own size: 25/60 = 0.4167 matches dims (60,25).",
+  "approved_value": 0.4167
+ },
+ {
+  "case": "D-029",
+  "l": "yes",
+  "reason": "Source gives no duplicate share; 30% near-identical partners is high but plausible for a registry with repeated entries; consistent with the setting.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-034",
+  "l": "yes",
+  "reason": "Source states none; lag-7 autocorrelation 0.6 is typical of daily hydro-meteorological drivers.",
+  "approved_value": 0.6
+ },
+ {
+  "case": "D-035",
+  "l": "yes",
+  "reason": "Source states no ratio; 9.0 (90/10) is typical for an imbalanced-data setting; 150 positives in 1500.",
+  "approved_value": 9.0
+ },
+ {
+  "case": "D-039",
+  "l": "yes",
+  "reason": "Source states none; lag-1 autocorrelation 0.9 is plausible for slowly varying monthly series.",
+  "approved_value": 0.9
+ },
+ {
+  "case": "D-041",
+  "l": "yes",
+  "reason": "Source gives no rate; 30% missing is realistic for country-year indicators.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-042",
+  "l": "yes",
+  "reason": "Source gives no duplicate share; 30% is high but plausible for compound records with repeated entries.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-043",
+  "l": "yes",
+  "reason": "Source states no ratio; minority share 0.1 is typical (40 positives in 400).",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-044",
+  "l": "yes",
+  "reason": "Source states none; ICC 0.5 is a moderate, realistic within-subject share for trial features.",
+  "approved_value": 0.5
+ },
+ {
+  "case": "D-049",
+  "l": "yes",
+  "reason": "Source states no ratio; minority share 0.1 is typical (60 positives in 600).",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-054",
+  "l": "yes",
+  "reason": "Brief's own size: 1000/80 = 12.5 matches dims (80,1000); realistic.",
+  "approved_value": 12.5
+ },
+ {
+  "case": "D-055",
+  "l": "yes",
+  "reason": "Source states none; lag-1 autocorrelation 0.8 typical of slowly varying daily predictors.",
+  "approved_value": 0.8
+ },
+ {
+  "case": "D-058",
+  "l": "yes",
+  "reason": "Source states none; ICC 0.3 plausible for windowed features across subjects.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-059",
+  "l": "yes",
+  "reason": "Source states none; lag-1 autocorrelation 0.7 plausible for monthly environmental series.",
+  "approved_value": 0.7
+ },
+ {
+  "case": "D-060",
+  "l": "yes",
+  "reason": "Brief's own size: 500/100 = 5.0 matches dims (100,500).",
+  "approved_value": 5.0
+ },
+ {
+  "case": "D-064",
+  "l": "yes",
+  "reason": "Brief's own ratio 1500/80 = 18.75 matches dims (80,1500).",
+  "approved_value": 18.75
+ },
+ {
+  "case": "D-065",
+  "l": "yes",
+  "reason": "Source states none; between-site ICC 0.3 is a typical share of variance.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-066",
+  "l": "yes",
+  "reason": "Source gives no share; 8% minority is a realistic rare-outcome rate (80 in 1000).",
+  "approved_value": 0.08
+ },
+ {
+  "case": "D-070",
+  "l": "yes",
+  "reason": "Brief's own ratio 2000/120 = 16.67 matches dims (120,2000).",
+  "approved_value": 16.67
+ }
+]

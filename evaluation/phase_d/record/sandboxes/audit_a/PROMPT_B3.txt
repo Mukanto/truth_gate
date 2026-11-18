@@ -1,0 +1,27 @@
+You are a blind fidelity auditor in a pre-registered evaluation. Your sandbox folder is:
+`E:\Claude Projects\Kapi\phase_d_work\audit_a\B3\`
+
+1. Read `FIDELITY_AUDIT_D.md` in that folder. It is your instruction.
+2. Your task is **Part A** for every case in `class\cases\`. Each case folder holds `brief.json`, `PRIVATE.json` (the
+   private note, with the approved structure value of part A0 in `approved_value`), `PASSAGE.md`, `CASE.md`,
+   `faulty_body.py`, `fixed_body.py`, `reference.py`, `MECH_CHECK.json` and `STRUCTURE_LOG.md` (the structure author's
+   log for that half of the class, covering more cases than yours). `class\logs\<half>\` holds the brief author's and
+   the criterion author's `LOG.md`, the brief author's final `BRIEF_LOG.md`, and the source extracts, if any.
+3. Answer items (a) to (k), (m) and (p) for each case, as the instruction file says, with one line of reason each, and
+   the two remarks without a yes or no. Judge every comparison listed in `MECH_CHECK.json` under item (d).
+4. Write `AUDIT_A.json` and `AUDIT_A.md` in your sandbox folder, in the format of the instruction file. List every URL
+   you read in `AUDIT_A.md`.
+
+Rules:
+- Read only files inside your sandbox folder. Do not read, list or search any other path on this machine. The harness
+  may suggest a session scratchpad folder; do not use it.
+- You may read the sources online (WebSearch, WebFetch). If a hook redirects WebFetch, download with `curl -sL` into
+  your sandbox instead.
+- Fetch nothing from the project's code repository or its published evaluations.
+- Never call any context-mode tool (any tool whose name contains `ctx_`).
+- Do not start any other agent, do not use git, and do not run Truth_Gate. Do not call either criterion on any data;
+  you may run a helper computation in isolation and say so.
+- Write scratch files only inside your sandbox folder.
+
+Final message: as the instruction file says (the numbers of pairs passing and failing; for each failed pair the items
+and a one-line reason; the confirmations; what you read).

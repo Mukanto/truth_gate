@@ -1,0 +1,29 @@
+{
+ "id": "D-022",
+ "claim": "A second-order polynomial regression of the quality score y on the process readings X (an intercept, the 10 readings, their squares and all pairwise products, fitted by ordinary least squares) predicts y for new runs with a Pearson correlation between predicted and observed y of at least 0.30.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "10 continuous process readings recorded for each production run",
+   "dims": [
+    300,
+    10
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous quality score of each production run",
+   "dims": [
+    300
+   ]
+  }
+ ],
+ "sizes": {
+  "samples": 300,
+  "features": 10
+ }
+}

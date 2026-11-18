@@ -1,0 +1,25 @@
+{
+ "id": "D-033",
+ "source": "KRI10",
+ "passage": "The effect-size statistics need to be independent of the selection criterion (PMC full text, read through a summarising fetch; the source describes a design in which half the data choose signal-carrying voxels and the other half estimate the signal).",
+ "faulty": "For each voxel, Pearson r between its 60 trial responses and intensity. Keep the 25 voxels with the largest r. Report their mean r. HOLDS if mean r >= 0.25; None on zero variance.",
+ "fixed": "Choose the 25 voxels with the largest r on the odd-numbered trials and compute their mean r on the even-numbered trials; swap and average (Fisher z). HOLDS if the average >= 0.25; None on zero variance.",
+ "estimand": "Faulty: mean sample correlation, on the trials used for choosing, of the 25 voxels with the largest sample correlation. Fixed: mean population correlation with intensity of the 25 voxels chosen without the trials used for estimating it.",
+ "model_family": "Gaussian: betas[v, t] = rho-scaled linear dependence on standardised intensity plus independent N(0, 1) trial noise (the source names no model).",
+ "statistic_family": "correlation",
+ "guard_minimum": 1,
+ "sizes_note": "Source states no sizes in the part read. 1000 voxels x 60 trials = 60000 values; a check takes seconds. Source: selection bias shrinks as the ratio of effect magnitude to standard deviation grows; the more voxels tested the larger the family-wise error rate; no formula in terms of N.",
+ "exploited_structure": "Many candidate voxels with noisy trial-level estimates, and the same trials used both to choose voxels and to report their correlation.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    return float(np.asarray(d['betas']).shape[0])",
+  "direction": "greater",
+  "null_value": 1.0,
+  "note_value": 1000.0,
+  "note_value_source": "set by the brief: the statistic reports the number of voxels, so its value at the brief's sizes is 1000",
+  "set_by_brief": true
+ },
+ "notes": "Reserve. KRI10's earlier combinations were select/mean and select/slope; this one is select/correlation, with trials instead of subjects. Differs from DEC-02 in data structure (voxels x trials with a per-trial predictor) and in the pipeline step (trial-level split).",
+ "subtype_or_tag": "select-then-test-same-data",
+ "class": "B-1",
+ "approved_value": null
+}

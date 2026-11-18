@@ -1,0 +1,162 @@
+{
+ "E01": {
+  "level": "N",
+  "reason": "Reports only plus marginal correlations; no minus artefact or pitfall named."
+ },
+ "E02": {
+  "level": "C",
+  "reason": "Judgement call: null defined on recorded body length, no hidden latent size; no artefact left."
+ },
+ "E03": {
+  "level": "N",
+  "reason": "Plain construction; no pitfall or minus statistic."
+ },
+ "E04": {
+  "level": "N",
+  "reason": "Effect size and null definition only; no pitfall."
+ },
+ "E05": {
+  "level": "P",
+  "reason": "'proportion is then ~0.32, which includes the regression to the mean' - non-null naive statistic in minus, error named."
+ },
+ "E06": {
+  "level": "N",
+  "reason": "Calibration risk concerns plus power only; X carries no information on y."
+ },
+ "E07": {
+  "level": "N",
+  "reason": "Effect size and controls only."
+ },
+ "E08": {
+  "level": "N",
+  "reason": "Null reading (b_p=0) is about heterogeneity, not an analysis artefact."
+ },
+ "E09": {
+  "level": "N",
+  "reason": "Overfitting inflation discussed for plus only; nothing about minus artefacts."
+ },
+ "E10": {
+  "level": "N",
+  "reason": "Effect size reasoning only."
+ },
+ "E11": {
+  "level": "N",
+  "reason": "Controls and reading of slope; no artefact stated for minus."
+ },
+ "E12": {
+  "level": "P",
+  "reason": "'Raw VO2 therefore still differs between groups through mass' in minus."
+ },
+ "E13": {
+  "level": "N",
+  "reason": "Oracle R2 and design only."
+ },
+ "E14": {
+  "level": "N",
+  "reason": "Effect size only."
+ },
+ "E15": {
+  "level": "N",
+  "reason": "Effect size and controls only."
+ },
+ "E16": {
+  "level": "P",
+  "reason": "'Under minus, an in-sample fit of 153 parameters to 1200 rows gives r of about 0.36'."
+ },
+ "E17": {
+  "level": "P",
+  "reason": "'unadjusted group means still differ through mass alone' in minus."
+ },
+ "E18": {
+  "level": "C",
+  "reason": "Minus built from exact conditional distribution given measured length, partial correlation 0; same judgement call as D-023; artefact avoided."
+ },
+ "E19": {
+  "level": "C",
+  "reason": "Seasonality left out because a shared cycle 'would also create a spurious time link'."
+ },
+ "E20": {
+  "level": "N",
+  "reason": "Calibration risk of plus effect size only."
+ },
+ "E21": {
+  "level": "P",
+  "reason": "Mathematical coupling gives 'spurious slope of about 0.07 in minus'; pooled between-patient slope about 0.27 in minus."
+ },
+ "E22": {
+  "level": "P",
+  "reason": "'quadrat-level (pseudoreplicated) tests are anticonservative in minus'."
+ },
+ "E23": {
+  "level": "C",
+  "reason": "Replicates share compound value; judgement call on records vs new compounds; no minus artefact stated (doubt resolved upward)."
+ },
+ "E24": {
+  "level": "P",
+  "reason": "Raw femur-humerus correlation 'stays high (about 0.75)' in minus while partial is zero; also measurement error caveat."
+ },
+ "E25": {
+  "level": "C",
+  "reason": "No shared seasonality because a shared deterministic cycle 'would itself be predictive information'."
+ },
+ "E26": {
+  "level": "N",
+  "reason": "Calibration risk about plus detectability; control rationale only."
+ },
+ "E27": {
+  "level": "N",
+  "reason": "Power reasoning and controls only."
+ },
+ "E28": {
+  "level": "P",
+  "reason": "'A record-level evaluation ... still shows a correlation of about 0.6 in minus'."
+ },
+ "E29": {
+  "level": "N",
+  "reason": "Plain construction."
+ },
+ "E30": {
+  "level": "N",
+  "reason": "Plain construction; programmes unrelated to label by design."
+ },
+ "E31": {
+  "level": "C",
+  "reason": "Null defined on measured body length, not true size; judgement call, artefact avoided."
+ },
+ "E32": {
+  "level": "P",
+  "reason": "'Under minus, in-sample OLS still shows a large gain.'"
+ },
+ "E33": {
+  "level": "P",
+  "reason": "'Under minus the in-sample r is about 0.47, so in-sample evaluation fails there.'"
+ },
+ "E34": {
+  "level": "P",
+  "reason": "Fick-derived VO2 shares errors with DO2, 'coupling bias about +0.05' in both worlds."
+ },
+ "E35": {
+  "level": "C",
+  "reason": "No latent size factor because it 'would itself create a positive partial correlation'."
+ },
+ "E36": {
+  "level": "P",
+  "reason": "'Under minus, an in-sample fit of 2000 genes would still reach R^2 near 1.'"
+ },
+ "E37": {
+  "level": "N",
+  "reason": "Effect size and control only."
+ },
+ "E38": {
+  "level": "C",
+  "reason": "Notes plain accuracy or 0.5 threshold 'behaves very differently from balanced accuracy'; related pitfall, no minus artefact."
+ },
+ "E39": {
+  "level": "P",
+  "reason": "Regression to the mean preserved: screening - entry averages 5.9 in both worlds, biasing a criterion measuring change from screening."
+ },
+ "E40": {
+  "level": "C",
+  "reason": "Body-length measurement error would leave about 0.03 in minus; avoided by construction."
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "transcript_sha256": "92ccec184c221e78fb75a7ca9cb86176ec7378135e5ba1e69f0639c5044a945b",
+ "first_last_utc": [
+  "2026-11-17T19:50:47.225Z",
+  "2026-11-18T00:10:24.202Z"
+ ],
+ "assistant_message_models": {
+  "claude-sonnet-5-5": 44,
+  "<synthetic>": 1
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 10,
+  "Glob": 1,
+  "Bash": 9,
+  "ToolSearch": 1,
+  "WebFetch": 2,
+  "WebSearch": 2,
+  "Write": 3
+ },
+ "forbidden_tool_calls": [],
+ "outside_paths": [],
+ "urls": [
+  "https://api.openalex.org/works/doi:10.1097/00000658-198103000-00008\\",
+  "https://api.openalex.org/works/doi:10.1098/rspl.1896.0076\\",
+  "https://api.openalex.org/works/doi:10.2307/2983064\\",
+  "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=7212790&retmode=text&rettype=abstract\\",
+  "https://ideas.repec.org/a/bla/jorssa/v156y1993i3p379-392.html",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC3854983/",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1345065/fullTextXML\\",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3854983/fullTextXML\\"
+ ]
+}

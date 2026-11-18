@@ -1,0 +1,25 @@
+{
+ "id": "D-038",
+ "source": "KRO93",
+ "passage": "'Spurious correlation refers to the correlation between indices that have a common component.' (abstract, RePEc/IDEAS page, read through WebFetch excerpt). The abstract treats a single ratio used as a dependent or an independent variable in a multiple regression.",
+ "faulty": "Standardised slope of lung_cancer_deaths regressed on cigarettes_sold/population (per-capita sales as the independent variable), compared with 0.2 in absolute value; the standardised slope of a single regressor is its correlation with deaths.",
+ "fixed": "Standardised coefficient of cigarettes_sold in the regression of lung_cancer_deaths on cigarettes_sold and population (coefficient times SD of sales over SD of deaths), compared with 0.2 in absolute value. This is the source's correction: the denominator enters as a covariate.",
+ "estimand": "Faulty: association of deaths with per-capita sales (which varies with population by construction). Fixed: association of deaths with total sales at a given population.",
+ "model_family": "Source names none. Choice: log-normal population (CV about 1), sales = c*population*exp(noise) with noise SD 0.4, deaths = a + b*population + g*sales + noise, g = 0 in the claim-false version. Reason: deaths scale with population in both worlds, sales vary with population but not proportionally, the minimal condition in which a ratio regressor carries information on population.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": "3 countries (three parameters); guards: non-finite values, selection below 3, zero variance of deaths, sales or population, zero population.",
+ "sizes_note": "Source (abstract only) states no sizes. 150 countries is a realistic cross-section; the corrected check is a 3-parameter least-squares fit. Dependence on n: not stated.",
+ "exploited_structure": "The regressor is a quantity divided by population, so it varies with population, and the outcome (total deaths) also varies with population, which links them without any effect of sales.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['cigarettes_sold'], dtype=float)\n    p = np.asarray(d['population'], dtype=float)\n    r = x / p\n    if np.std(r) == 0 or np.std(p) == 0:\n        return 0.0\n    return float(abs(np.corrcoef(r, p)[0, 1]))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.3 is a proposed moderate correlation between the per-capita quantity and its denominator; it uses sales and population only, which the claim-false version (no effect of sales on deaths) leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (KRO93 pair 2 of 3). Ratio as independent variable (the abstract's second use). Earlier combos for the tag included regression-slope; kept because the standardised slope is the natural statistic for this setting, and the brief differs in structure (ratio as regressor, 3 keys, n=150) from B3A-02. Claim in absolute value because the sign of the induced association depends on the world's population-sales relation.",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.3
+}

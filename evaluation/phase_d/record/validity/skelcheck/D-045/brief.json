@@ -1,0 +1,34 @@
+{
+ "id": "D-045",
+ "claim": "In 300 patients with a continuous disease severity score measured before and after treatment, improvement is larger in patients with a higher severity level: the Pearson correlation between each patient's change in score (follow-up minus baseline) and the mean of that patient's baseline and follow-up scores is at most -0.30.",
+ "data_keys": [
+  {
+   "key": "baseline_score",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "severity score of each patient at the baseline visit, higher is more severe",
+   "dims": [
+    300
+   ]
+  },
+  {
+   "key": "baseline_score_retest",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "a second, independent reading of the severity score of each patient taken at the baseline visit",
+   "dims": [
+    300
+   ]
+  },
+  {
+   "key": "followup_score",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "severity score of each patient at the follow-up visit after treatment",
+   "dims": [
+    300
+   ]
+  }
+ ],
+ "sizes": "{\"patients\": 300}"
+}

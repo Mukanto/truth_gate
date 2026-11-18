@@ -1,0 +1,25 @@
+{
+ "id": "D-060",
+ "source": "KAP23",
+ "passage": "L1.3: \"Feature selection on the entire dataset results in using information about which feature performs well\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; sentence cut by the fetch tool).",
+ "faulty": "The 20 features with the largest absolute Pearson correlation with y are chosen on all 100 rows; then 5-fold cross-validation (fold = i mod 5) of ridge (lambda 10, standardised, intercept) on the 20 chosen features; pooled R-squared = 1 - SSE/SST >= 0.10.",
+ "fixed": "In each fold the 20 features are chosen from the 80 training rows only; ridge fitted on them predicts the 20 held-out rows; pooled R-squared >= 0.10.",
+ "estimand": "Faulty: R-squared of a model whose features were chosen with the held-out outcomes. Fixed: out-of-sample R-squared of the whole pipeline (choice plus ridge) for new samples.",
+ "model_family": "Top-20 filter by absolute Pearson correlation, then ridge (lambda 10, standardised). Source names none.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 100 x 500 = 50,000 values: imaging-style small-n many-features regime; the check is 5 correlation sweeps and 5 small ridge fits. Dependence on feature count: not stated.",
+ "exploited_structure": "Many candidate features relative to samples, so features chosen for their association with the outcome include chance associations that the held-out rows share.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(X.shape[1] / X.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 5.0,
+  "note_value_source": "source states none: 500 features / 100 samples is the brief's own size; set by the brief",
+  "set_by_brief": true
+ },
+ "notes": "Reserve for L1.3. Guard: R-squared None below 2 held-out rows or zero variance of y; non-finite returns None. Differs from B2A-05 in family (R-squared), outcome type (continuous) and sample-size regime.",
+ "subtype_or_tag": "L1.3",
+ "class": "B-2",
+ "approved_value": 5.0
+}

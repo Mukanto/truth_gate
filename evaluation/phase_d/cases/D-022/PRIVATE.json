@@ -1,0 +1,25 @@
+{
+ "id": "D-022",
+ "source": "KAP23",
+ "passage": "L1.1: \"Using the same dataset for training and testing the model is a textbook example of overfitting\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856; as returned by the fetch tool).",
+ "faulty": "Second-order polynomial regression (intercept, 10 linear terms, 10 squares, 45 pairwise products = 66 coefficients, standardised X, ordinary least squares) fitted on all 300 rows; Pearson correlation between its fitted values and y on the same 300 rows; holds iff >= 0.30.",
+ "fixed": "5-fold cross-validation, fold of row i = i mod 5; the same regression fitted on 240 rows predicts the 60 held-out rows; Pearson correlation between the pooled held-out predictions and y over all 300 rows; holds iff >= 0.30.",
+ "estimand": "Faulty: the in-sample correlation between fitted and observed outcome (multiple correlation, positive even with no effect). Fixed: the correlation between out-of-sample predictions and observed outcomes for new runs.",
+ "model_family": "Second-order polynomial regression by ordinary least squares (numpy lstsq), standardised readings. Chosen so the model capacity (66 coefficients) is a known function of the brief's 10 readings, and so it differs from the ridge model of B2A-01.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 300 x 10 = 3,000 values: moderate-n regime where capacity (66 terms) is 22% of the samples; check is 5 lstsq fits (seconds). Dependence on sample size or feature count: not stated.",
+ "exploited_structure": "Model capacity (number of fitted terms) that is a sizeable fraction of the number of samples, so fitted values track the observed outcomes of the rows they were fitted on.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    n, p = X.shape\n    return float((p * (p + 3) / 2) / n)",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.2167,
+  "note_value_source": "source states none: 65 non-constant polynomial terms / 300 samples is the brief's own size; set by the brief",
+  "set_by_brief": true
+ },
+ "notes": "Guard: Pearson correlation undefined below 2 rows or with zero variance of predictions or y (None); non-finite returns None. Differs from B2A-01 in statistic (correlation vs R-squared), model and sample-size regime.",
+ "subtype_or_tag": "L1.1",
+ "class": "B-2",
+ "approved_value": 0.2167
+}

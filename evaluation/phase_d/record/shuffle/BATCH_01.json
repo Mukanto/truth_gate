@@ -1,0 +1,390 @@
+[
+  {
+    "id": "D-001",
+    "claim": "Among 150 adults with systolic blood pressure measured at three annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the Pearson correlation between an individual's underlying yearly rate of change in systolic blood pressure and the individual's underlying initial systolic blood pressure is at most -0.30.",
+    "data_keys": [
+      {
+        "key": "systolic_bp",
+        "shape": "(individuals, occasions)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure of each individual at each of three annual visits, with the visits in time order, in mmHg",
+        "dims": [
+          150,
+          3
+        ]
+      }
+    ],
+    "sizes": {
+      "individuals": 150,
+      "occasions": 3
+    }
+  },
+  {
+    "id": "D-002",
+    "claim": "Across 120 anaesthetised animals, tissues extract more oxygen when more is supplied: the Pearson correlation between the arterial-minus-mixed-venous oxygen content difference and the arterial oxygen content is at least 0.30.",
+    "data_keys": [
+      {
+        "key": "arterial_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "arterial blood oxygen content of each animal, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "arterial_o2_content_2",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "a second, independent determination of the arterial blood oxygen content of each animal, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mixed-venous blood oxygen content of each animal, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "venous_o2_content_2",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "a second, independent determination of the mixed-venous blood oxygen content of each animal, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 120
+    }
+  },
+  {
+    "id": "D-003",
+    "claim": "A classifier built from the measured variables ranks new records correctly: the area under the ROC curve for the event is at least 0.75.",
+    "data_keys": [
+      {
+        "key": "features",
+        "shape": "(records, variables)",
+        "dtype": "float",
+        "meaning": "measured variables of each record",
+        "dims": [
+          1000,
+          15
+        ]
+      },
+      {
+        "key": "event",
+        "shape": "(records,)",
+        "dtype": "bool",
+        "meaning": "True if the event occurred for the record",
+        "dims": [
+          1000
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 1000,
+      "variables": 15
+    }
+  },
+  {
+    "id": "D-004",
+    "claim": "On future days, a ridge regression forecast of the outcome y from the day's five predictors X (penalty 1.0 on standardised predictors, with an intercept, one model for all stations) has a squared error at least 5% below that of the persistence forecast (the previous day's outcome at the same station), with squared errors pooled over stations: 1 - MSE(model) / MSE(persistence) >= 0.05.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(stations, days_in_order, features)",
+        "dtype": "float",
+        "meaning": "5 continuous daily predictors recorded at each station on each day",
+        "dims": [
+          40,
+          250,
+          5
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(stations, days_in_order)",
+        "dtype": "float",
+        "meaning": "continuous daily outcome measured at each station",
+        "dims": [
+          40,
+          250
+        ]
+      }
+    ],
+    "sizes": {
+      "stations": 40,
+      "days_in_order": 250,
+      "features": 5
+    }
+  },
+  {
+    "id": "D-005",
+    "claim": "The measurements in X carry information about the outcome y: the R-squared (coefficient of determination) of a ridge regression of y on X (penalty 1.0 on standardised measurements, with an intercept), evaluated on new samples, is at least 0.10.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "panel of 150 continuous biomarker measurements for each sample",
+        "dims": [
+          100,
+          150
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous clinical score of each sample",
+        "dims": [
+          100
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 100,
+      "features": 150
+    }
+  },
+  {
+    "id": "D-006",
+    "claim": "Across children, BMI at age 5 and the yearly rate of change in BMI between ages 5 and 10 are negatively correlated: the correlation between the two is at most -0.25.",
+    "data_keys": [
+      {
+        "key": "bmi",
+        "shape": "(children, annual_visits)",
+        "dtype": "float",
+        "meaning": "BMI of each child at the annual visits at ages 5, 6, 7, 8, 9 and 10 (visits in age order), in kg/m2",
+        "dims": [
+          500,
+          6
+        ]
+      }
+    ],
+    "sizes": {
+      "children": 500,
+      "annual_visits": 6
+    }
+  },
+  {
+    "id": "D-007",
+    "claim": "Gene-expression profiles measured at diagnosis predict survival time in new patients: the out-of-sample R-squared for predicting survival_months from the expression profile is at least 0.10.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level of each gene in each patient's tumour sample",
+        "dims": [
+          50,
+          2000
+        ]
+      },
+      {
+        "key": "survival_months",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "months from diagnosis to death, observed for every patient",
+        "dims": [
+          50
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 50,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-008",
+    "claim": "Within patients, oxygen consumption rises with oxygen delivery: the mean over patients of the within-patient slope of oxygen consumption on oxygen delivery is at least 0.1 mL/min per mL/min.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "cardiac output of each patient at each measurement occasion, in L/min",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen content of arterial blood of each patient at each occasion, in mL O2 per dL",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen content of mixed venous blood of each patient at each occasion, in mL O2 per dL",
+        "dims": [
+          40,
+          6
+        ]
+      },
+      {
+        "key": "vo2_expired_gas",
+        "shape": "(patients, occasions)",
+        "dtype": "float",
+        "meaning": "oxygen consumption of each patient at each occasion measured from expired-gas analysis, in mL/min",
+        "dims": [
+          40,
+          6
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 40,
+      "occasions": 6
+    }
+  },
+  {
+    "id": "D-009",
+    "claim": "Among 60 mice, treated mice produce more peak twitch force than untreated mice of the same body mass: the difference between the group means of peak force, adjusted for body mass by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+    "data_keys": [
+      {
+        "key": "peak_force",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "peak twitch force of one hindlimb muscle of each mouse, in mN",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "body_mass",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "body mass of each mouse, in g",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "treated",
+        "shape": "(animals,)",
+        "dtype": "bool",
+        "meaning": "True if the mouse received the treatment, False if it did not",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "animals": 60
+    }
+  },
+  {
+    "id": "D-010",
+    "claim": "The postal district and the three covariates together predict the outcome y for new patients: the Pearson correlation between predicted and observed y is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "category",
+        "shape": "(samples, categories)",
+        "dtype": "bool",
+        "meaning": "True where the patient's home postal district is the district of that column",
+        "dims": [
+          1200,
+          150
+        ]
+      },
+      {
+        "key": "covariates",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "three continuous covariates per patient (age, body-mass index, systolic pressure)",
+        "dims": [
+          1200,
+          3
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous health outcome of each patient",
+        "dims": [
+          1200
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 1200,
+      "categories": 150,
+      "features": 3
+    }
+  },
+  {
+    "id": "D-011",
+    "claim": "Gene-expression profiles distinguish the two leukaemia types in new samples: the area under the ROC curve is at least 0.90.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each bone-marrow sample",
+        "dims": [
+          72,
+          2000
+        ]
+      },
+      {
+        "key": "myeloid",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for acute myeloid leukaemia, False for acute lymphoblastic leukaemia",
+        "dims": [
+          72
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 72,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-012",
+    "claim": "In a field experiment, 10 plots were each surveyed at 30 quadrats and each quadrat was scored as occupied or not by a seaweed species; the array exclosure marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.10, where the occupancy of a plot is the fraction of its quadrats that are occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "occupied",
+        "shape": "(plots, quadrats)",
+        "dtype": "bool",
+        "meaning": "True if the species was present in that quadrat of that plot",
+        "dims": [
+          10,
+          30
+        ]
+      },
+      {
+        "key": "exclosure",
+        "shape": "(plots,)",
+        "dtype": "bool",
+        "meaning": "True if the plot was fenced against grazers",
+        "dims": [
+          10
+        ]
+      }
+    ],
+    "sizes": {
+      "plots": 10,
+      "quadrats": 30
+    }
+  }
+]

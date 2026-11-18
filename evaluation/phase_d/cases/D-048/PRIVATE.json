@@ -1,0 +1,25 @@
+{
+ "id": "D-048",
+ "source": "STR87",
+ "passage": "'If a measured variable is used in the calculation of two derived parameters, error in the measurement will couple the calculated parameters and introduce a bias'; 'This paper presents a method of correcting for this bias in the linear regression coefficient and the Pearson correlation coefficient' (abstract, Europe PMC).",
+ "faulty": "Pearson correlation between VO2 = CO*(CaO2 - CvO2) and DO2 = CO*CaO2 (times 10 for the units), both computed from the first cardiac_output determination, over the 40 dogs; criterion r >= 0.40.",
+ "fixed": "Stratton-Feustel-Newell correction of the Pearson correlation: error variances of the measured terms estimated from the independent repeat (var(cardiac_output - cardiac_output_2)/2); the first-order Taylor expansion of the products gives the error contributions to Var(VO2), Var(DO2) and Cov(VO2, DO2), which are subtracted before forming the correlation; criterion corrected r >= 0.40. Parameters from the source: first two Taylor terms, valid for multiplication. Only the cardiac output has a repeat key, so the content errors are taken as negligible (documented simplification, as in B3B-09 and B3B-14).",
+ "estimand": "Faulty: correlation between the computed consumption and delivery, which includes the error of the cardiac output present in both. Fixed: correlation between error-free consumption and delivery.",
+ "model_family": "Source's: derived quantities as products of measured variables with additive independent measurement errors on cardiac output and contents, first-order Taylor expansion. Claim-true: true consumption depends on delivery; claim-false: true consumption independent of delivery.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size in the abstract. 40 dogs is a realistic acute physiology experiment; the check is a few moments. Source on size dependence: the effect of the coupled error 'is shown to be small when the range of O2 deliveries studied is large, and measurement errors are of reasonable size'.",
+ "exploited_structure": "One measured term (cardiac output) multiplies into both derived quantities, so its measurement error moves both together.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    c = np.asarray(d['cardiac_output'], dtype=float)\n    c2 = np.asarray(d['cardiac_output_2'], dtype=float)\n    return float(0.5 * np.var(c - c2, ddof=1) / np.var(c, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.05,
+  "note_value_source": "source states none: the abstract only says errors of 'reasonable size' and a 'large' range; 0.05 corresponds to a cardiac output error CV of about 7% against a between-animal CV of about 30%",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. Standard Fick definitions are named in the claim without formulas; the world author supplies them. Correlation family; differs from B3B-09 (per-animal slopes, series structure) and B3B-10 (linear calculation, different quantities).",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.05
+}

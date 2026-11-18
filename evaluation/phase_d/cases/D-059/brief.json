@@ -1,0 +1,29 @@
+{
+ "id": "D-059",
+ "claim": "The monthly environmental measurements predict the abundance in later months of the series: the out-of-sample R-squared is at least 0.30.",
+ "data_keys": [
+  {
+   "key": "abundance",
+   "shape": "(months,)",
+   "dtype": "float",
+   "meaning": "monthly abundance index of the species, on a log scale, in time order",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "environment",
+   "shape": "(months, variables)",
+   "dtype": "float",
+   "meaning": "monthly environmental measurements, in time order",
+   "dims": [
+    600,
+    10
+   ]
+  }
+ ],
+ "sizes": {
+  "months": 600,
+  "variables": 10
+ }
+}

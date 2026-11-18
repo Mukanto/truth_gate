@@ -1,0 +1,44 @@
+# READING
+
+Counts: P=12, C=11, N=17
+
+- E01: C - 'Generated given the recorded length, as in D-023' hints at the latent-size pitfall, no artefact reported
+- E02: C - judgement call: null defined on recorded body length, no hidden latent size
+- E03: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E04: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E05: P - minus proportion ~0.32 'includes the regression to the mean'
+- E06: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E07: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E08: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E09: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E10: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E11: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E12: P - 'Raw VO2 therefore still differs between groups through mass'
+- E13: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E14: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E15: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E16: P - 'Under minus, an in-sample fit of 153 parameters ... gives r of about 0.36'
+- E17: P - 'unadjusted group means still differ through mass alone'
+- E18: C - independent size drawn from conditional distribution given measured length; same judgement call as D-023
+- E19: C - seasonality left out because a shared cycle would create a spurious time link
+- E20: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E21: P - mathematical coupling gives spurious slope ~0.07 in minus; pooled between-patient slope ~0.27 in minus
+- E22: P - quadrat-level (pseudoreplicated) tests are anticonservative in minus
+- E23: C - replicate records share compound value in minus; mentioned as structure, no artefact stated
+- E24: C - measurement error in body length would make partial correlation positive in minus; avoided by design
+- E25: C - no shared seasonality because a shared deterministic cycle would itself be predictive
+- E26: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E27: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E28: P - record-level evaluation 'still shows a correlation of about 0.6 in minus'
+- E29: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E30: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E31: C - null defined on measured body length, not true size
+- E32: P - 'Under minus, in-sample OLS still shows a large gain'
+- E33: P - 'Under minus the in-sample r is about 0.47, so in-sample evaluation fails'
+- E34: P - Fick-derived VO2 shares CO and Hb errors with DO2 (coupling bias about +0.05) in both worlds
+- E35: C - no latent size factor because it would itself create a positive partial correlation
+- E36: P - 'Under minus, an in-sample fit of 2000 genes would still reach R^2 near 1'
+- E37: N - no mechanism, pitfall or non-null minus statistic mentioned in the entry
+- E38: C - plain accuracy or 0.5 threshold 'behaves very differently' from balanced accuracy; no artefact reported
+- E39: P - regression to the mean preserved: screening-entry averages 5.9 in both worlds, criterion from screening is biased upward
+- E40: C - measurement error in body length would leave ~0.03 in minus, but data generated given recorded length so exactly 0

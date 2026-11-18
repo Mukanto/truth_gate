@@ -1,0 +1,25 @@
+{
+ "id": "D-053",
+ "source": "CHI13",
+ "passage": "'Because the initial value (Y1) and the change from initial value (Y2 - Y1) share a common variable, there is a mathematical coupling between Y1 and Y2 - Y1.' (Glossary, Europe PMC full text). Correction: 'one may assess the association between U2 - U1 and another measure obtained relatively close in time to U1 (16), e.g., a repeated measure U1bis.'",
+ "faulty": "Pearson correlation between bmi_baseline (U1) and bmi_followup - bmi_baseline (U2 - U1), at most -0.25 (the crude method of the source; it is negatively biased in the source's simulations, with the expected value -1/sqrt(2) when Y1 and Y2 are uncorrelated and errors equal).",
+ "fixed": "Pearson correlation between bmi_baseline_retest (U1bis) and bmi_followup - bmi_baseline (the repeated measurement method of the source), at most -0.25.",
+ "estimand": "Faulty: correlation of the observed baseline with the observed change, which shares the baseline and its error. Fixed: correlation between the baseline level (measured by a second reading) and the change, whose errors are not shared; biased only toward the null by regression dilution.",
+ "model_family": "The source's: linear individual growth with time, true BMI_i(t) = b0_i + b1_i*t, (b0, b1) bivariate normal (baseline mean 15.0 kg/m2, SD 1.2; yearly change mean +0.4, SD 0.2 or 0.4), measurement error normal with SD 0.3 (ICC 95%) or 1.2 (ICC 50%), ages 5 to 10. The two-wave data are the ages 5 and 10 waves plus one extra reading at age 5. The sign of the correlation of b0 and b1 is set by the world (negative for the claim-true version).",
+ "statistic_family": "correlation",
+ "guard_minimum": "2 children (a Pearson correlation is defined from 2 observations); guards: non-finite values, selection below 2, zero variance of the baseline retest or of the change.",
+ "sizes_note": "Source: 'We simulated a cohort study of 500 children' with BMI each year between ages 5 and 10; 500 children used. Source on size dependence: the bias of the crude correlation depends on measurement error variance and between-child variability of change ('The lower the correlation between Y1 and Y2, the larger is the effect of mathematical coupling'); for sample size it says only that random variability 'would have been greater for all methods with a smaller cohort size'.",
+ "exploited_structure": "The change is computed from the baseline measurement and the correlation is then taken with that same baseline, so the baseline's measurement error enters both sides with opposite sign.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['bmi_baseline'], dtype=float)\n    b = np.asarray(d['bmi_baseline_retest'], dtype=float)\n    return float(1.0 - np.corrcoef(a, b)[0, 1])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.05,
+  "note_value_source": "'Assuming a relatively low measurement error variance (ICC of 95%)' (Results, Relatively small change variability); the statistic is 1 - ICC, estimated from the two baseline readings, so 0.05. The larger-error scenario of the source has ICC 50% (0.5).",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (CHI13 pair 1 of 2). No earlier combos for CHI13. Claim direction is negative because the source documents a negative bias of the crude estimate; the corrected estimate is attenuated toward 0 by the error in the retest reading, so the world author must keep the true correlation clearly beyond -0.25 in the claim-true version. The brief states 'five years after baseline' as the setting of the follow-up visit (source: ages 5 to 10).",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.05
+}

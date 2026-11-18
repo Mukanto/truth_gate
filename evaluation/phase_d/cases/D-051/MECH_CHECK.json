@@ -1,0 +1,50 @@
+{
+  "case": "D-051",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 36,
+          "text": "np.mean(num / den) >= 0.15",
+          "op": ">=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 39,
+          "text": "np.mean(num / den) >= 0.15",
+          "op": ">=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

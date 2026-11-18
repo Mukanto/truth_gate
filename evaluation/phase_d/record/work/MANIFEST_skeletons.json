@@ -1,0 +1,282 @@
+{
+ "cases\\D-007\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "a5fd2d66a863e3b0f9cca4d083c06b77111b947be6b68d0f337f7cdc0c1c0edb",
+  "source": "world\\eb6876\\skeletons\\D-007.py"
+ },
+ "cases\\D-007\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "df3bd7c798499a79027b1b2d8ee75643dba441df20ff4f491811184991d03ce7",
+  "source": "world\\c13bd2\\skeletons\\D-007.py"
+ },
+ "cases\\D-008\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "2aaba0b7c7dd03f5afb5c5ef68c91435e82d9fac034ffde4bba444e512b89ddc",
+  "source": "world\\eb6876\\skeletons\\D-008.py"
+ },
+ "cases\\D-008\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "198688ff52bb14ef5a7f2fb96f88c523d7f3b6691c83b0e4433585313220f954",
+  "source": "world\\c13bd2\\skeletons\\D-008.py"
+ },
+ "cases\\D-010\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "54dc82588d00ce106c0215556746b1b4b293fd3324f95a1bc8454501e78410e5",
+  "source": "world\\eb6876\\skeletons\\D-010.py"
+ },
+ "cases\\D-010\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "d95529bec47e20ecd7b4e50d85a25a412799e8d04d3f2b68a0f826130df47fac",
+  "source": "world\\c13bd2\\skeletons\\D-010.py"
+ },
+ "cases\\D-011\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "4d82ece661ac2db3858a8d51263f252ed9e1b61d941f420cedfc7622602b1cc8",
+  "source": "world\\eb6876\\skeletons\\D-011.py"
+ },
+ "cases\\D-011\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "a2c32ca97c9dc281a1bdf0d48e7f9125fa0ffddc128ea375faffcac873194456",
+  "source": "world\\c13bd2\\skeletons\\D-011.py"
+ },
+ "cases\\D-012\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "6e1425648d73a6ac07140f4bd6463717233f4bad68601dc5f8e230919a06ac9f",
+  "source": "world\\eb6876\\skeletons\\D-012.py"
+ },
+ "cases\\D-012\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "7c746f5542435c661a1b7fb372bb691e442cebd169816f64c503830603c53fe7",
+  "source": "world\\c13bd2\\skeletons\\D-012.py"
+ },
+ "cases\\D-022\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "23f1e1641861e81b597af29ccea6621e3020bac0f8194db470789c075ed9d9fa",
+  "source": "world\\eb6876\\skeletons\\D-022.py"
+ },
+ "cases\\D-022\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "855c3756559082eed69f05fac0493e8c4eb5f784d94143be443b8c6c7a9fb826",
+  "source": "world\\c13bd2\\skeletons\\D-022.py"
+ },
+ "cases\\D-023\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "e7643c8755723a00f383cbc6a5ff3b93fe7222a850aa8400dd5f3267d1eb8f0e",
+  "source": "world\\eb6876\\skeletons\\D-023.py"
+ },
+ "cases\\D-023\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "441ec470ae5784ea954448c9b164527d300857eb57b4c964910c7f3d039be4f1",
+  "source": "world\\c13bd2\\skeletons\\D-023.py"
+ },
+ "cases\\D-027\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "0a075038342cfbe6a301be54ebca41cf60e37f042648e0e664fddd46e116ba80",
+  "source": "world\\eb6876\\skeletons\\D-027.py"
+ },
+ "cases\\D-027\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "ad803ecbc22df9dc1b9ed7a76ed3f7eb7e9296e7d617dccf47a34637c977ae57",
+  "source": "world\\c13bd2\\skeletons\\D-027.py"
+ },
+ "cases\\D-035\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "1df3671a6957183d08b84ab630a296ca796e172ec646c4fb08e4335626cd37f7",
+  "source": "world\\eb6876\\skeletons\\D-035.py"
+ },
+ "cases\\D-035\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "8fe16fb9ae07ef5ac643fbdadeb68b1214a67bfe9d4835d0c6af1989696b3bfd",
+  "source": "world\\c13bd2\\skeletons\\D-035.py"
+ },
+ "cases\\D-040\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "8528011a2c7d1c89758666e43275163111739839c707c32f825b902efe09bcf3",
+  "source": "world\\eb6876\\skeletons\\D-040.py"
+ },
+ "cases\\D-040\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "c502850661d722bbe31ab073c9ca7c2d05c9e3eee320b0667e3479a865e60f4c",
+  "source": "world\\c13bd2\\skeletons\\D-040.py"
+ },
+ "cases\\D-042\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "b2a7484ba6c618bb0f733a0ed4d1004e9e0778fc5b97ed25d618fe964e854aac",
+  "source": "world\\eb6876\\skeletons\\D-042.py"
+ },
+ "cases\\D-042\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "cc3e5aa351b5e9dd2dd93835c0c00294e632588f40310cf822cec54557d22e8d",
+  "source": "world\\c13bd2\\skeletons\\D-042.py"
+ },
+ "cases\\D-047\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 1,
+  "label": "eb6876",
+  "sha256": "533db4bd8dd666ff431aadca990354862650a72b4ff22ad034bdee172670e588",
+  "source": "world\\eb6876\\skeletons\\D-047.py"
+ },
+ "cases\\D-047\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 1,
+  "label": "c13bd2",
+  "sha256": "ad488a096ece4ebe8d2f98817f8745632e04aadb55af2eb8ff2807cb43bd2c20",
+  "source": "world\\c13bd2\\skeletons\\D-047.py"
+ },
+ "cases\\D-052\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "21e4c94bc511c83b7990b2d30e6bc71f2dd234b847318a052553fa13ee35d0cf",
+  "source": "world\\5f14e6\\skeletons\\D-052.py"
+ },
+ "cases\\D-052\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+  "source": "world\\d5f53a\\skeletons\\D-052.py"
+ },
+ "cases\\D-055\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "2396ef8451509115214a03036ea949774992d834c4ca169c3ffeeaa745f68cdf",
+  "source": "world\\5f14e6\\skeletons\\D-055.py"
+ },
+ "cases\\D-055\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+  "source": "world\\d5f53a\\skeletons\\D-055.py"
+ },
+ "cases\\D-056\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "8178ef1614612956b57cf68d5a155fa2d2f4b31da5e88d96695016904067a332",
+  "source": "world\\5f14e6\\skeletons\\D-056.py"
+ },
+ "cases\\D-056\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+  "source": "world\\d5f53a\\skeletons\\D-056.py"
+ },
+ "cases\\D-062\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "181c3ee9eab0473ca387deab42ecfe276e2546b9452e82bbb9b32942ee5edbc6",
+  "source": "world\\5f14e6\\skeletons\\D-062.py"
+ },
+ "cases\\D-062\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+  "source": "world\\d5f53a\\skeletons\\D-062.py"
+ },
+ "cases\\D-064\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "5ff4b10befc9886759d5d4891883ad9a3aeb6146724d9ec197e9c454e7708afa",
+  "source": "world\\5f14e6\\skeletons\\D-064.py"
+ },
+ "cases\\D-064\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+  "source": "world\\d5f53a\\skeletons\\D-064.py"
+ },
+ "cases\\D-066\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "75d5bd17810cfc68429b8d669ed1168d816be5b829d588efc29066d02fb81685",
+  "source": "world\\5f14e6\\skeletons\\D-066.py"
+ },
+ "cases\\D-066\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+  "source": "world\\d5f53a\\skeletons\\D-066.py"
+ },
+ "cases\\D-067\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "c57f4a44653e65e9be8b49d17f49ef4887a844dbe5b6fea9d822ba07d9408e5e",
+  "source": "world\\5f14e6\\skeletons\\D-067.py"
+ },
+ "cases\\D-067\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+  "source": "world\\d5f53a\\skeletons\\D-067.py"
+ },
+ "cases\\D-068\\skeletons\\W0.py": {
+  "arm": "W0",
+  "batch": 2,
+  "label": "5f14e6",
+  "sha256": "7b68bdb96c336941bc708addee2667b50948b7aae31abfc929a2dba92554d112",
+  "source": "world\\5f14e6\\skeletons\\D-068.py"
+ },
+ "cases\\D-068\\skeletons\\W1.py": {
+  "arm": "W1",
+  "batch": 2,
+  "label": "d5f53a",
+  "sha256": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+  "source": "world\\d5f53a\\skeletons\\D-068.py"
+ }
+}

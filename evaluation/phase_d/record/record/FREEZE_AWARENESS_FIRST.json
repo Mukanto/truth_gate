@@ -1,0 +1,15 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-18T15:53:41Z",
+  "algorithm": "sha256",
+  "files": {
+    "../AWARENESS_MAP_first.json": "ff39f270cee3b4b9d275a78a2f11580d6a231c447d1ac4a4af3aabeaef495936",
+    "../awareness/r1/READING.json": "b848721be295fd1a748154475ad41a239ad23b61013a48dab7f18496b09fe7a2",
+    "../awareness/r1/READING.md": "f6b618d5932b5842dd107f8ddb5ef22e14d57549e89dab9f23428f7e65f80ffa",
+    "../awareness/r1b/READING.json": "5b8c372aa1589303682094345d63f1880945c365c72853f04a7c6da3d920fab6",
+    "../awareness/r1b/READING.md": "bec4e03cee28a9be091db33e609c49725c8c211333ee3b0c7b3ce355a6c9bf97",
+    "../awareness/r2/READING.json": "ccbc7f79f8996b396f9b3b4b891656037f1433f1f33a7831b44092ca1bd82a41",
+    "../awareness/r2/READING.md": "134555733cf8bc8592050eed13d9578fafaba8d7751dc7bae816230df6a8b6ef"
+  },
+  "core_sha256": "28972bb17b4ce21db847d64935c7a8b854a28e08a4d5a2b6c168ae17e78de87c"
+}

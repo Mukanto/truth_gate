@@ -1,0 +1,86 @@
+[
+ {
+  "case": "D-012",
+  "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes", "j": "yes", "k": "yes", "m": "yes", "p": "yes",
+  "reasons": {
+   "a": "Faulty pools all 300 quadrats as independent replicates in a pooled-variance two-proportion z test (z > 1.6449) with diff >= 0.10: the pseudoreplication error of HUR84; thresholds come from the claim.",
+   "b": "Fixed takes plot occupancy (row mean) and runs a Welch one-sided t test on the 10 plot values with the same diff >= 0.10 and p < 0.05: the standard plot-as-unit correction.",
+   "c": "Only the unit of replication and test differs (quadrat z test vs plot-mean Welch); the CASE.md mapping matches the files (its line numbers refer to the assembled file, harmless).",
+   "d": "Guards only: group size (<1 faulty, <2 fixed = note minimum 2), zero SE. MECH_CHECK lists no comparison in the faulty body; the fixed body lists six, all numerical internals of the incomplete-beta continued fraction (abs(d)<tiny, abs(c)<tiny, abs(de-1)<1e-15): none gate-aware.",
+   "e": "No banned term found in the brief; it states no negation of the claim.",
+   "f": "HUR84 states no sizes (abstract only): sizes not documented by the source. 10 plots x 30 quadrats (300 values) is far below the caps and of the order of small field experiments with few plots per treatment, as the private note argues.",
+   "g": "Same statistic (difference of occupancy), threshold 0.10, one-sided 0.05; negligible cost in both. Only the unit changes.",
+   "h": "The brief gives sizes, axis meanings and the claim (plot occupancy defined as the claim's estimand). Nothing on how quadrats within a plot are related.",
+   "i": "The claim is the difference of mean plot occupancy (fenced minus open), which is what the fixed body estimates.",
+   "j": "minus sets both groups to mu 0.475 (the claim's quantity); beta concentration, plot count, quadrats and the random fenced allocation are unchanged.",
+   "k": "The reference generates exactly the brief's keys; no key or dependence added for the faulty body. Plot-level beta heterogeneity is the documented structure.",
+   "m": "ANOVA intra-plot correlation after removing group means; a function of occupied and exclosure only; the mean removal makes its expectation equal in plus and minus (beta-binomial ICC = 1/(CONC+1) = 0.3 at any mean); measures the exploited structure.",
+   "p": "CONC = 2.333 gives ICC 1/3.333 = 0.300, equal to the approved value 0.3."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "D-046",
+  "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "no", "i": "yes", "j": "yes", "k": "yes", "m": "yes", "p": "yes",
+  "reasons": {
+   "a": "Faulty regresses all 1000 cells on the animal's repeated dose (df 998): the cells-as-units pseudoreplication of LAZ10 (2 rats x 100 CA3 cells), one-sided p < 0.05.",
+   "b": "Fixed regresses the animal mean response on dose over 10 animals (df 8), same one-sided test: the standard correction (animals as units).",
+   "c": "The only differing line is the _slope_p call (np.repeat(x), y.ravel() vs x, y.mean(axis=1)); the CASE.md mapping is right (line numbers refer to the assembled file).",
+   "d": "Guards: non-finite, n < 3 (note minimum 3), zero dose variance, zero residual variance. MECH_CHECK: six numerical-library comparisons, identical in both bodies; none gate-aware.",
+   "e": "No banned term found; the brief states no negation of the claim.",
+   "f": "LAZ10 describes 10 rats (rotarod) and 2 rats x 100 CA3 cells; 10 animals x 100 cells = 1000 values is inside the source's range and the caps. I confirmed the 2 rats x 100 CA3 cells example and ICC = 0.83 in the LAZ10 full text.",
+   "g": "Same OLS slope t test, one-sided 0.05; only the unit (cells vs animal means) and so the df differ; cost comparable.",
+   "h": "The sentence 'Ten animals each received a different dose of a drug' states that the dose values are all distinct across animals: a fact about how a variable is arranged across units, beyond the sizes, the axis names, the key meanings and the claim (the key shape (animals,) and the claim's 'across animals' give one dose per animal, not distinctness). Answered by the text, not by purpose. Borderline and harmless in effect, but outside the verbatim allowance.",
+   "i": "The claim is the slope of an animal's mean response on dose across animals; the fixed body estimates exactly that.",
+   "j": "minus sets only the slope to 0; animal offsets (sd 3.0), cell noise (sd 1.36), dose design and mean unchanged.",
+   "k": "The reference generates only the brief's keys; no added variable or dependence for the faulty body.",
+   "m": "ICC from animal means with the linear dose trend removed plus the within-animal variance; a function of response and dose only; trend removal makes it equal in plus and minus; measures the shared animal-level offset (9/(9+1.85) = 0.83).",
+   "p": "SD_ANIMAL 3.0 and SD_CELL 1.36 give 0.83, the approved value (LAZ10 ICC 0.83)."
+  },
+  "overall": "fail",
+  "repair_request": "Brief (cannot be repaired; drop per the decision table). Item (h), quoted: 'a statement about how the data on that axis are arranged beyond its name is not [setting]'. Failing text in the claim: 'Ten animals each received a different dose of a drug'."
+ },
+ {
+  "case": "D-047",
+  "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes", "j": "yes", "k": "yes", "m": "yes", "p": "yes",
+  "reasons": {
+   "a": "Faulty flags screening >= 60 and measures the change from that same screening score (s - week12): the selection-measurement-as-reference error (regression to the mean, MOR03: worst scores show the largest change); thresholds 60, 10, 0.5 come from the claim.",
+   "b": "Fixed keeps the flag on screening and measures the change from entry, a second pre-treatment measurement not used for selection: the standard correction.",
+   "c": "A one-line diff (s[flag] vs e[flag] in change); the CASE.md mapping and its line numbers are correct.",
+   "d": "Guards: non-finite, empty selection (note minimum 1). MECH_CHECK: one comparison per body, np.mean(change >= 10.0) >= 0.5, the claim's own proportion threshold, identical in both bodies.",
+   "e": "No banned term found; no negation of the claim.",
+   "f": "MOR03 states no sample size: sizes not documented by the source. 600 patients is within the caps and of the order of a menopausal-symptom trial, as the note argues (flagged subgroup about 100 to 200).",
+   "g": "Same flag, same proportion statistic and threshold; only the reference score differs; same cost.",
+   "h": "The brief gives the count, what each key measured (visit timing is the key's meaning) and the claim, including its selection by screening score, which the claim states. No statement about how the visits are related beyond that.",
+   "i": "The claim: week-12 score 10 or more below the entry score among those with screening >= 60; the fixed body computes exactly entry - week12 over flagged patients.",
+   "j": "minus sets the treatment fall (30 percent of true severity) to 0; true-severity spread, visit errors, screening and entry unchanged.",
+   "k": "entry is read only by the fixed body (the direction the item allows); the reference has only the brief's keys; nothing added for the faulty body.",
+   "m": "corr(screening, entry), direction less, null 1.0; a function of brief keys only; uses only the two pre-treatment keys that minus leaves unchanged; reliability measures the test-retest noise that drives regression to the mean.",
+   "p": "SD_TRUE 16.27 and SD_ERROR 13.28 give reliability 16.27^2/(16.27^2+13.28^2) = 0.60, the approved value (clipping to 0..100 shifts it slightly, well inside the 0.2 tolerance)."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ },
+ {
+  "case": "D-052",
+  "a": "yes", "b": "yes", "c": "yes", "d": "yes", "e": "yes", "f": "yes", "g": "yes", "h": "yes", "i": "yes", "j": "yes", "k": "yes", "m": "yes", "p": "yes",
+  "reasons": {
+   "a": "Faulty runs a one-sample one-sided t test of improvement in young and in old and holds if young is significant and old is not: 'significant in one group but not the other' without a direct test, MAK19 (groups of 20).",
+   "b": "Fixed is a Welch one-sided two-sample test of the improvement, young minus old, p < 0.05: the direct test of the difference, the standard correction.",
+   "c": "Only the decision rule (two separate tests vs one direct test; helpers _t1_p vs _welch) differs; the CASE.md mapping is right (line numbers refer to the assembled file).",
+   "d": "Guards: non-finite, group size < 2 (note minimum 2), zero variance. MECH_CHECK: six identical numerical-library comparisons in each body; none gate-aware.",
+   "e": "No banned term found; no negation of the claim.",
+   "f": "MAK19 describes groups of 20 participants; the brief uses 20 young and 20 old, equal to the source, within the caps.",
+   "g": "Same family of one-sided 0.05 t tests; the faulty rule necessarily uses two tests (inherent to the error); comparable cost.",
+   "h": "The brief gives group sizes (sizes), key meanings and the claim. Nothing else on how participants are arranged.",
+   "i": "The claim is the difference between the young and old mean improvements tested directly; the fixed body estimates it.",
+   "j": "minus sets both group mean improvements to 4.5; improvement sds (6, 12), baseline scores and group sizes unchanged.",
+   "k": "The reference uses only the brief's keys (pre, post, young); unequal group variability is the documented structure of the source example.",
+   "m": "abs(log(sd_young/sd_old)) of post - pre; a function of the brief keys only; the sd of the improvement is unchanged by minus; measures the unequal variability the error exploits.",
+   "p": "SD 6 vs 12 gives ln 2 = 0.693, the approved value."
+  },
+  "overall": "pass",
+  "repair_request": ""
+ }
+]

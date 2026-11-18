@@ -1,0 +1,25 @@
+{
+ "id": "D-046",
+ "source": "LAZ10",
+ "passage": "clearly the rat that the observation came from partly determines what that value is. (PMC full text; hierarchical example: 2 rats x 100 CA3 cells = 200 data points, only 2 rats are independent units.)",
+ "faulty": "Ordinary least squares of response on dose over all 1000 cells (each cell with its animal's dose), one-sided t test of the slope > 0 at 0.05 with 998 degrees of freedom. HOLDS if p < 0.05; None if dose has zero variance or fewer than 3 cells.",
+ "fixed": "Ordinary least squares of the animal mean response on dose over the 10 animals, one-sided t test of the slope > 0 at 0.05 with 8 degrees of freedom. HOLDS if p < 0.05; None if dose has zero variance or fewer than 3 animals.",
+ "estimand": "Faulty: slope of cell response on dose with cells as replicates. Fixed: slope of animal mean response on dose with animals as replicates (same expected slope in a balanced design).",
+ "model_family": "Random-intercept (two-level) Gaussian model: response[a, c] = b0 + b1 * dose[a] + u_a + e_ac, u_a ~ N(0, tau^2), e_ac ~ N(0, sigma^2). Source (LAZ10 simulation) uses animal-level random effects with an ICC of 0.83.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 3,
+ "sizes_note": "Source: 10 rats (rotarod example), 2 rats x 100 CA3 cells, 2 macaques with 42 and 62 neurons, 6 mice with 651 rods. 10 animals x 100 cells = 1000 values, a check takes seconds. The source states: n = 10 per group with ICC = 0.30 gives a false-positive rate of 0.37 (quoted from Scariano and Davenport); adding observations per rat 'does not lead to a more precise estimate' of the mean.",
+ "exploited_structure": "Many cells recorded in each animal, with a dose that varies only between animals, and a shared animal-level offset in every cell of that animal.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d['response'], dtype=float)\n    x = np.asarray(d['dose'], dtype=float)\n    n, m = y.shape\n    if n < 4 or m < 2:\n        return 0.0\n    pm = y.mean(axis=1)\n    X = np.column_stack([np.ones(n), x])\n    beta = np.linalg.lstsq(X, pm, rcond=None)[0]\n    res = pm - X @ beta\n    msb = m * float((res ** 2).sum()) / (n - 2)\n    msw = float(((y - pm[:, None]) ** 2).sum()) / (n * (m - 1))\n    den = msb + (m - 1) * msw\n    return float((msb - msw) / den) if den > 0 else 0.0",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.83,
+  "note_value_source": "LAZ10 Figure 1 simulation (2 rats, 10 measurements each): 'The ICC is 0.83' (PMC full text, via Europe PMC XML)",
+  "set_by_brief": false
+ },
+ "notes": "LAZ10's earlier combinations were units-not-independent with correlation and mean; this one uses regression-slope. The statistic removes the linear dose trend from the animal means, so a true slope (claim-true data) does not change it. A drafted variant using the rotarod day slope within animals was abandoned: pooling repeated measures with a within-animal predictor makes the test conservative, not too liberal.",
+ "subtype_or_tag": "units-not-independent",
+ "class": "B-6",
+ "approved_value": 0.83
+}

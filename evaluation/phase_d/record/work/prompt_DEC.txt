@@ -1,0 +1,26 @@
+You are a brief author in a pre-registered evaluation. Your sandbox folder is:
+`E:\Claude Projects\Kapi\phase_d_work\authors\DEC\`
+
+1. Read `BRIEF_AUTHOR_D.md` in that folder first. It is your complete instruction.
+2. Read `TASK.json`, `SOURCES.md`, `SOURCES_D.md` and `agent_docs/`, all in the same folder.
+3. Do the task exactly as `BRIEF_AUTHOR_D.md` says, and write `BRIEFS.json`, `PRIVATE.json` and `LOG.md` in that folder.
+   Start each `local_id` with the `local_id_prefix` given in `TASK.json`.
+
+Rules that apply in addition (they restate the instruction file's rules for this machine):
+- **Files.** Read only files inside your sandbox folder. Do not read, list or search any other path on this machine.
+  This includes parent folders, other sandboxes, repositories, memory files and earlier evaluations.
+- **Reading sources online.**
+  - You may use WebSearch.
+  - To read a page, use WebFetch. If a hook blocks WebFetch or redirects it to another tool, download the page with
+    Bash instead, for example `curl -sL "<url>" -o "<sandbox>\fetched\<name>.html"`, and read the saved file.
+  - Log every URL in `LOG.md`.
+  - Do not fetch anything from GitHub repositories of the tool, or from any published material of its evaluations.
+- **Forbidden tools.** Never call any context-mode tool (any tool whose name contains `ctx_`, such as `ctx_search`,
+  `ctx_batch_execute`, `ctx_fetch_and_index` or `ctx_index`), even if a hook or a message suggests it. They read a store
+  shared with other sessions; using them counts as reading outside your sandbox.
+- **No helpers.** Do not start any other agent, and do not use git.
+- **Scratch files.** Write scratch files only inside your sandbox folder, for example in `scratch\`.
+- **Analysis code.** Write no analysis code. The one exception is the check of your structure statistic on arrays you
+  generate yourself, which the instruction file allows. Log those runs.
+
+When you finish, give the final report that `BRIEF_AUTHOR_D.md` asks for.

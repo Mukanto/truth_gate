@@ -1,0 +1,25 @@
+{
+ "id": "D-013",
+ "source": "VAR06",
+ "passage": "\"The CV error estimate for the classifier with the optimal parameters was found to be a substantially biased estimate of the true error that the classifier would incur on independent data\" (abstract, SOURCES_D); correction: nested CV.",
+ "faulty": "Nearest shrunken centroids is fitted for each threshold in a fixed grid of 20 values in [0.01, 1]; the 10-fold CV error is computed for every threshold on all 40 samples; the minimum CV error over thresholds (ties: larger threshold) is the statistic. Claim holds when that error <= 0.40.",
+ "fixed": "Nested cross-validation: outer leave-one-out over the 40 samples; in each outer iteration the threshold is chosen by 10-fold CV on the remaining 39 samples, the classifier is refit with it on those 39, and the held-out sample is classified; the statistic is the outer error rate.",
+ "estimand": "Faulty: the smallest of many CV errors, an estimate biased downwards by the choice of its own minimum. Fixed: expected error on new samples of the whole procedure including threshold choice.",
+ "model_family": "Nearest shrunken centroids with a threshold grid (the source's first classifier; MATLAB implementation, Delta in 0.01-1, ties to the larger Delta).",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes: at least 1000 training sets of 40 samples (20 per class), 6000 features each (Europe PMC full text of PMC1397873, as extracted by a tool). I use 40 x 2000 = 80k values, a third of the source's features, because 6000 exceeds the 2000-unit axis limit (and nested LOO x inner 10-fold x 20 thresholds is cheap at 2000). Reported bias: mean CV error 37.8% vs true error 50.0% on null data (bias 12.2%), SVM 41.7% vs 50.0%; the paper does not vary n, so bias against n: not stated.",
+ "exploited_structure": "A tuning parameter chosen as the minimiser of the same small-sample CV error that is then reported, with many features and few samples making that minimum noisy.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = d[\"expression\"]\n    return float(x.shape[1]) / float(x.shape[0])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 50.0,
+  "note_value_source": "set by the brief: the statistic is genes/samples, so its value at the brief's sizes is 2000/40 = 50. (The source's own setting, 6000 features and 40 samples per Europe PMC full text of PMC1397873 Methods, would give 150 but cannot occur at the brief's sizes.)",
+  "set_by_brief": true
+ },
+ "notes": "Parameter selection counts as L1.3 per the PC tie rule. Classification is the only family the source reports; I could not use another (earlier evaluations used (L1.3, classification) for VAR06 too). Guard: at least one test sample.",
+ "subtype_or_tag": "L1.3",
+ "class": "B-2",
+ "approved_value": null
+}

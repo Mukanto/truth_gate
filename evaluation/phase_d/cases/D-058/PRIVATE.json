@@ -1,0 +1,25 @@
+{
+ "id": "D-058",
+ "source": "SAE17",
+ "passage": "Abstract: \"record-wise CV often massively overestimates the prediction accuracy of the algorithms\"; \"the subject-wise method mirrors the clinically relevant use-case scenario of diagnosis in newly recruited subjects\".",
+ "faulty": "Record-wise 10-fold cross-validation: the 900 windows (30 subjects x 30 windows) are assigned to folds uniformly at random; a random forest (50 trees) classifies walking from the 40 features; the error rate pooled over folds is the statistic. Claim holds when error <= 0.10.",
+ "fixed": "Subject-wise 10-fold cross-validation: all windows of a subject are in the same fold (3 subjects per fold); same forest and statistic.",
+ "estimand": "Faulty: error on windows whose subject also appears in the fitting data. Fixed: error on windows of subjects never used in fitting.",
+ "model_family": "Random forest, 50 trees: the source's classifier (activity recognition, tuned on out-of-bag error; I fix the settings).",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes: 30 subjects, 10,299 records (about 343 per subject), 561 features, 6 activities (full text via Europe PMC). I use 30 subjects x 30 windows x 40 features = 36k values and a binary label because 30 x 343 x 561 exceeds 2 000 000 values and a check on it would exceed about 30 minutes (rough estimate). Source on dependence: the gap between record-wise and subject-wise error is largest with few subjects (subject-wise 27% at 2 subjects falling to 9% at 30, record-wise about 2% throughout); records per subject and features were not varied.",
+ "exploited_structure": "Repeated records of one subject: windows from the same subject are far more alike than windows from different subjects.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d[\"signal_features\"], dtype=float)\n    s, m, v = x.shape\n    site_mean = x.mean(axis=1)\n    grand = x.mean(axis=(0, 1))\n    msb = m * ((site_mean - grand) ** 2).sum(axis=0) / (s - 1)\n    msw = ((x - site_mean[:, None, :]) ** 2).sum(axis=(0, 1)) / (s * (m - 1))\n    den = msb + (m - 1) * msw\n    ok = den > 0\n    if not np.any(ok):\n        return 0.0\n    icc = (msb - msw)[ok] / den[ok]\n    return float(np.mean(icc))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: the simulation's cross-subject variability b is a parameter whose values I did not read; 0.3 is a proposed between-subject share of feature variance",
+  "set_by_brief": false
+ },
+ "notes": "Six activities reduced to a bool (walking) because binary labels are bool and group codes may not be integers. The ICC is of the features, not of the labels, so a claim-false world that replaces the label keeps it.",
+ "subtype_or_tag": "L3.2",
+ "class": "B-2",
+ "approved_value": 0.3
+}

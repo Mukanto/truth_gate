@@ -1,0 +1,26 @@
+{
+ "id": "D-016",
+ "claim": "Fourteen pregnant dams each had a measured exposure level to a chemical, and 4 pups per dam were scored on a performance test at weaning. Claim: across dams, the correlation between a dam's exposure level and the mean score of her pups is positive, judged by a one-sided test of the correlation against zero at the 0.05 level.",
+ "data_keys": [
+  {
+   "key": "exposure",
+   "shape": "(dams,)",
+   "dtype": "float",
+   "meaning": "exposure level of each dam",
+   "dims": [
+    14
+   ]
+  },
+  {
+   "key": "outcome",
+   "shape": "(dams, pups)",
+   "dtype": "float",
+   "meaning": "performance score at weaning of each pup of each dam",
+   "dims": [
+    14,
+    4
+   ]
+  }
+ ],
+ "sizes": "{\"dams\": 14, \"pups\": 4}"
+}

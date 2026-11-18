@@ -1,0 +1,36 @@
+{
+ "id": "D-038",
+ "claim": "Across countries, annual lung-cancer deaths and annual cigarette sales are associated after accounting for population: the standardised slope of deaths on cigarette sales, with population accounted for, is at least 0.2 in absolute value.",
+ "data_keys": [
+  {
+   "key": "lung_cancer_deaths",
+   "shape": "(countries,)",
+   "dtype": "float",
+   "meaning": "total lung-cancer deaths in each country in one year, in thousands",
+   "dims": [
+    150
+   ]
+  },
+  {
+   "key": "cigarettes_sold",
+   "shape": "(countries,)",
+   "dtype": "float",
+   "meaning": "total cigarettes sold in each country in the same year, in millions",
+   "dims": [
+    150
+   ]
+  },
+  {
+   "key": "population",
+   "shape": "(countries,)",
+   "dtype": "float",
+   "meaning": "population of each country, in millions",
+   "dims": [
+    150
+   ]
+  }
+ ],
+ "sizes": {
+  "countries": 150
+ }
+}

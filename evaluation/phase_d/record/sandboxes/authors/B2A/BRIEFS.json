@@ -1,0 +1,138 @@
+[
+  {
+    "local_id": "B2A-01",
+    "claim": "The measurements in X carry information about the outcome y: the R-squared (coefficient of determination) of a ridge regression of y on X (penalty 1.0 on standardised measurements, with an intercept), evaluated on new samples, is at least 0.10.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "panel of 150 continuous biomarker measurements for each sample"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous clinical score of each sample"}
+    ],
+    "sizes": {"samples": 100, "features": 150}
+  },
+  {
+    "local_id": "B2A-02",
+    "claim": "A second-order polynomial regression of the quality score y on the process readings X (an intercept, the 10 readings, their squares and all pairwise products, fitted by ordinary least squares) predicts y for new runs with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "10 continuous process readings recorded for each production run"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous quality score of each production run"}
+    ],
+    "sizes": {"samples": 300, "features": 10}
+  },
+  {
+    "local_id": "B2A-03",
+    "claim": "The laboratory values in X predict the outcome y for new patients: the R-squared of a ridge regression of y on the 20 laboratory values (penalty 1.0 on standardised values, with an intercept) is at least 0.10.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "20 laboratory values per patient; a value that was not measured for a patient is NaN"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous clinical outcome of each patient"}
+    ],
+    "sizes": {"samples": 250, "features": 20}
+  },
+  {
+    "local_id": "B2A-04",
+    "claim": "The postal district and the three covariates together predict the outcome y for new patients: the Pearson correlation between predicted and observed y is at least 0.25.",
+    "data_keys": [
+      {"key": "category", "shape": "(samples, categories)", "dtype": "bool", "meaning": "True where the patient's home postal district is the district of that column"},
+      {"key": "covariates", "shape": "(samples, features)", "dtype": "float", "meaning": "three continuous covariates per patient (age, body-mass index, systolic pressure)"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous health outcome of each patient"}
+    ],
+    "sizes": {"samples": 1200, "categories": 150, "features": 3}
+  },
+  {
+    "local_id": "B2A-05",
+    "claim": "Gene-expression features discriminate cases from controls in new subjects: the area under the ROC curve of a linear classifier (ridge regression on the diagnosis coded as plus or minus one, penalty 10 on standardised features) that uses 20 of the 1000 expression features to recover the diagnosis y is at least 0.65.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "expression level of each of 1000 genes for each subject"},
+      {"key": "y", "shape": "(samples,)", "dtype": "bool", "meaning": "True where the subject has the diagnosis, False for a control"}
+    ],
+    "sizes": {"samples": 80, "features": 1000}
+  },
+  {
+    "local_id": "B2A-06",
+    "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised measurements) of the value y on the measurements X predicts y for new entries with a mean absolute error at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+    "data_keys": [
+      {"key": "X", "shape": "(rows, features)", "dtype": "float", "meaning": "8 continuous property measurements recorded for each registry entry"},
+      {"key": "y", "shape": "(rows,)", "dtype": "float", "meaning": "continuous target value recorded for each registry entry"}
+    ],
+    "sizes": {"rows": 600, "features": 8}
+  },
+  {
+    "local_id": "B2A-07",
+    "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised descriptors) of the response y on the descriptors X predicts y for new compounds with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {"key": "X", "shape": "(records, features)", "dtype": "float", "meaning": "20 continuous molecular descriptors recorded for each compound record"},
+      {"key": "y", "shape": "(records,)", "dtype": "float", "meaning": "continuous activity response measured for each compound record"}
+    ],
+    "sizes": {"records": 1200, "features": 20}
+  },
+  {
+    "local_id": "B2A-08",
+    "claim": "The daily predictors X carry information about the daily outcome y on future days: the Pearson correlation between y and the prediction of a ridge regression of y on X (penalty 1.0 on standardised predictors, with an intercept), computed over future days, is at least 0.20.",
+    "data_keys": [
+      {"key": "X", "shape": "(days_in_order, features)", "dtype": "float", "meaning": "6 continuous daily predictor series, one value per predictor per day"},
+      {"key": "y", "shape": "(days_in_order,)", "dtype": "float", "meaning": "continuous daily outcome"}
+    ],
+    "sizes": {"days_in_order": 1000, "features": 6}
+  },
+  {
+    "local_id": "B2A-09",
+    "claim": "On future days, a ridge regression forecast of the outcome y from the day's five predictors X (penalty 1.0 on standardised predictors, with an intercept, one model for all stations) has a squared error at least 5% below that of the persistence forecast (the previous day's outcome at the same station), with squared errors pooled over stations: 1 - MSE(model) / MSE(persistence) >= 0.05.",
+    "data_keys": [
+      {"key": "X", "shape": "(stations, days_in_order, features)", "dtype": "float", "meaning": "5 continuous daily predictors recorded at each station on each day"},
+      {"key": "y", "shape": "(stations, days_in_order)", "dtype": "float", "meaning": "continuous daily outcome measured at each station"}
+    ],
+    "sizes": {"stations": 40, "days_in_order": 250, "features": 5}
+  },
+  {
+    "local_id": "B2A-10",
+    "claim": "For new subjects, a ridge regression of the trial-level outcome y on the features X (penalty 1.0 on standardised features, with an intercept) has a mean absolute error at least 5% below that of predicting the mean outcome: 1 - MAE(model) / MAE(mean predictor) >= 0.05.",
+    "data_keys": [
+      {"key": "X", "shape": "(subjects, trials, features)", "dtype": "float", "meaning": "25 continuous features computed for each trial of each subject"},
+      {"key": "y", "shape": "(subjects, trials)", "dtype": "float", "meaning": "continuous outcome of each trial of each subject"}
+    ],
+    "sizes": {"subjects": 60, "trials": 30, "features": 25}
+  },
+  {
+    "local_id": "B2A-R1",
+    "claim": "The 25 measurements in X predict the outcome y for new samples: the mean absolute error of an ordinary least squares regression of y on X (with an intercept) is at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "25 continuous measurements for each sample"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous outcome of each sample"}
+    ],
+    "sizes": {"samples": 60, "features": 25}
+  },
+  {
+    "local_id": "B2A-R2",
+    "claim": "The country-year indicators in X identify the onset of civil war in new country-years: the area under the ROC curve of a ridge-penalised logistic regression (penalty 1.0 on standardised indicators) of the onset y on X is at least 0.75.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "25 continuous country-year indicators; an indicator that was not recorded for a country-year is NaN"},
+      {"key": "y", "shape": "(samples,)", "dtype": "bool", "meaning": "True where a civil war onset occurred in the country-year"}
+    ],
+    "sizes": {"samples": 1400, "features": 25}
+  },
+  {
+    "local_id": "B2A-R3",
+    "claim": "The 500 features in X predict the outcome y for new samples: the R-squared of a ridge-penalised linear regression of y that uses 20 of the 500 features (penalty 10 on standardised features, with an intercept) is at least 0.10.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "500 continuous imaging-derived features for each sample"},
+      {"key": "y", "shape": "(samples,)", "dtype": "float", "meaning": "continuous symptom score of each sample"}
+    ],
+    "sizes": {"samples": 100, "features": 500}
+  },
+  {
+    "local_id": "B2A-R4",
+    "claim": "A nearest-neighbour classifier (one neighbour, Euclidean distance on standardised measurements) recovers the rare outcome y from the measurements X for new patients with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65.",
+    "data_keys": [
+      {"key": "X", "shape": "(samples, features)", "dtype": "float", "meaning": "15 continuous clinical measurements for each patient"},
+      {"key": "y", "shape": "(samples,)", "dtype": "bool", "meaning": "True where the patient has the rare outcome"}
+    ],
+    "sizes": {"samples": 1000, "features": 15}
+  },
+  {
+    "local_id": "B2A-R5",
+    "claim": "On future months, the monthly forecasts of a ridge regression of y on the three predictors X (penalty 1.0 on standardised predictors, with an intercept) are informative about the monthly outcome: the slope of the ordinary least squares regression of observed y on the forecast, computed over future months, is at least 0.5.",
+    "data_keys": [
+      {"key": "X", "shape": "(months_in_order, features)", "dtype": "float", "meaning": "3 continuous monthly predictor series, one value per predictor per month"},
+      {"key": "y", "shape": "(months_in_order,)", "dtype": "float", "meaning": "continuous monthly outcome"}
+    ],
+    "sizes": {"months_in_order": 400, "features": 3}
+  }
+]

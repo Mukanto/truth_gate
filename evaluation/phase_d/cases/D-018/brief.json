@@ -1,0 +1,31 @@
+{
+ "id": "D-018",
+ "claim": "Sensor measurements classify the disease status of newly recruited subjects: the area under the ROC curve of the classification is at least 0.70.",
+ "data_keys": [
+  {
+   "key": "measurements",
+   "shape": "(subjects, records, variables)",
+   "dtype": "float",
+   "meaning": "sensor measurements of each recording of each subject",
+   "dims": [
+    16,
+    60,
+    10
+   ]
+  },
+  {
+   "key": "diseased",
+   "shape": "(subjects,)",
+   "dtype": "bool",
+   "meaning": "True if the subject has the disease",
+   "dims": [
+    16
+   ]
+  }
+ ],
+ "sizes": {
+  "subjects": 16,
+  "records": 60,
+  "variables": 10
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-040",
+ "source": "PEA97",
+ "passage": "'The particular case that is likely to occur is when u and v are indices with the same denominator for the correlation of the indices seems at first sight a very plausible measure of organic correlation.' (abstract, OpenAlex OCR text; the abstract also states that u = f1(x,y), v = f2(x,y) correlate although x, y, z are selected at random with no correlation.)",
+ "faulty": "Pearson correlation between the two indices breadth/length and height/length (common denominator = length), compared with 0.2. The source documents the correlation of indices with a common denominator when the numerators and the denominator are uncorrelated. No numeric parameters are stated in the abstract.",
+ "fixed": "Partial correlation of breadth and height given length (correlation of the residuals of each on length, or the equivalent formula from the three pairwise correlations), compared with 0.2.",
+ "estimand": "Faulty: correlation between breadth/length and height/length (mixes any breadth-height association with the shared variation of length). Fixed: partial correlation of breadth and height given length (association net of length).",
+ "model_family": "Source names none beyond random variables x, y, z. Choice: positive Gaussian variables (Gaussian with positive mean, coefficient of variation 0.03-0.15 so truncation is negligible), z = length independent of the others in the minus world, partial correlation of x and y given z equal to 0 in the claim-false version. Reason: the Pearson case is defined for uncorrelated x, y, z; Gaussian keeps the partial correlation exactly controllable.",
+ "statistic_family": "correlation",
+ "guard_minimum": "4 skulls (the partial correlation needs 4 observations: with 3 the residuals of the regressions on length are degenerate); guards: non-finite values, selection below 4, zero variance of any of the three keys.",
+ "sizes_note": "Source (abstract only) states no sizes. 300 skulls is a realistic craniometric series; the corrected check is a closed-form partial correlation, far below 30 minutes. Dependence of the error's size on sample size or number of features: not stated; the abstract gives the expected correlation as a property of the coefficients of variation, not of n.",
+ "exploited_structure": "Two quantities are each divided by the same measured length, so the shared variation of the length induces a correlation between the two indices even when breadth and height are unrelated.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['breadth'], dtype=float)\n    y = np.asarray(d['height'], dtype=float)\n    z = np.asarray(d['length'], dtype=float)\n    cx = np.std(x, ddof=1) / abs(np.mean(x))\n    cy = np.std(y, ddof=1) / abs(np.mean(y))\n    cz = np.std(z, ddof=1) / abs(np.mean(z))\n    value = cz ** 2 / np.sqrt((cx ** 2 + cz ** 2) * (cy ** 2 + cz ** 2))\n    return float(value)",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.5 is the value of this expression (first-order correlation of x/z and y/z for uncorrelated x, y, z) when the three coefficients of variation are equal, the natural reference case for linear dimensions of one organ system. It uses only the marginal spread of the three keys, which the claim-false version leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (PEA97 pair 1 of 3). Earlier combos for PEA97 were (shared-denominator, R-squared / correlation / regression-slope); correlation is repeated here because the headline case of the source is the correlation of two indices; the other PEA97 briefs use proportion (B3A-05), slope (B3A-09) and R-squared (B3A-11) with different data structures and sizes. Claim direction (positive) matches the sign of the induced association.",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.5
+}

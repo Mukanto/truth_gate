@@ -1,0 +1,26 @@
+{
+ "id": "D-060",
+ "claim": "The 500 features in X predict the outcome y for new samples: the R-squared of a ridge-penalised linear regression of y that uses 20 of the 500 features (penalty 10 on standardised features, with an intercept) is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "500 continuous imaging-derived features for each sample",
+   "dims": [
+    100,
+    500
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous symptom score of each sample",
+   "dims": [
+    100
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 100, \"features\": 500}"
+}

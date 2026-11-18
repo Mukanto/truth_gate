@@ -1,0 +1,110 @@
+{
+  "case": "D-032",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "skipped (--no-structure)",
+    "mech_b": "ok",
+    "v1": "faulty rate 0.187 < 0.25",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "carrier",
+          "drug",
+          "responder"
+        ],
+        "changed_keys": [
+          "responder"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "responder"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 187,
+      "fixed_holds": 48,
+      "n": 1000,
+      "faulty_rate": 0.187,
+      "fixed_rate": 0.048,
+      "fisher_p": 3.0816004813505904e-23,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 48,
+        "n": 1000,
+        "rate": 0.048,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 55,
+        "n": 1000,
+        "rate": 0.055,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 776,
+        "n": 1000,
+        "rate": 0.776,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": false,
+  "v1_label": "V1b",
+  "v2": true,
+  "mech_a": null,
+  "mech_b": true,
+  "structure_computable": null,
+  "structure": "not used (decoy)",
+  "timing": {
+    "n": 20,
+    "t": 2.4560000019846485e-05,
+    "g": 3.476999972917838e-05,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.14239199939765967,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "07c3d508fa541670b986ba123ba435a3ce58fc4ee59a14c9fdf2c9ce18e98333",
+    "PRIVATE.json": "03d3cfdfd78cc8ef2474d5eb7a57261b36bf8cf0e43ea73c7edccfdc944040fe",
+    "faulty_body.py": "31974754e688eb0de625f4aa7767fd692e1240f8fd39f2194b96ae5f74b46117",
+    "fixed_body.py": "22c371acfcd18dfb7b2ab79a65e6ea8640ef2a4d34ea4f3c789e257058a54111",
+    "reference.py": "c66c5407e3b33135b59539cce0286671ea4e3acff68a2c2c1fbb0a21f471bdd2"
+  },
+  "decisive": true
+}

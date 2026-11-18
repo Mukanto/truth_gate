@@ -1,0 +1,25 @@
+{
+ "id": "D-071",
+ "source": "ARC81",
+ "passage": "'Type 2 coupling is the functional relationship between two calculated variables which have one or more common component variables.' (abstract, PubMed 7212790). The abstract gives no correction; the correction used is the standard remedy of using an independent measurement of the shared term.",
+ "faulty": "Pearson correlation between oxygen delivery DO2 = cardiac_output * arterial_o2_content * 10 and oxygen consumption computed by the Fick equation VO2 = cardiac_output * (arterial_o2_content - venous_o2_content) * 10 (both computed from the same measured cardiac output), compared with 0.4.",
+ "fixed": "Pearson correlation between DO2 = cardiac_output * arterial_o2_content * 10 and the independently measured vo2_expired_gas, compared with 0.4.",
+ "estimand": "Faulty: correlation between two calculated quantities that share cardiac_output (includes the shared-term correlation). Fixed: correlation between calculated delivery and consumption measured by a method that does not use cardiac output.",
+ "model_family": "Source names none. Choice: log-normal latent physiology: true cardiac output (CV about 0.3), arterial oxygen content (CV about 0.12), true consumption VO2 = a + b*DO2 + noise in the claim-true version and independent of DO2 in the claim-false version, venous content derived as arterial content - VO2/(10*cardiac output) from the true values; all measurements with small independent errors. Reason: the Fick identity ties venous content to consumption, so this model keeps the three terms and the independent measurement coherent.",
+ "statistic_family": "correlation",
+ "guard_minimum": "2 patients (Pearson correlation); guards: non-finite values, selection below 2, zero variance of delivery or of consumption.",
+ "sizes_note": "Source (abstract only) states no sizes. 120 patients is a realistic haemodynamic series; corrected check is one correlation. Dependence of the error's size on sample size or number of features: not stated.",
+ "exploited_structure": "Two derived quantities (delivery and Fick consumption) both contain the same measured cardiac output as a factor, so they covary through its measurement and variation.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    co = np.log(np.asarray(d['cardiac_output'], dtype=float))\n    ca = np.log(np.asarray(d['arterial_o2_content'], dtype=float))\n    return float(np.var(co, ddof=1) / np.var(co + ca, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.85,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.85 is the share of the variance of log delivery due to log cardiac output for a coefficient of variation of 0.3 for cardiac output and 0.12 for arterial content (0.09 / (0.09 + 0.0144)); it uses only cardiac output and arterial content, which the claim-false version (consumption unrelated to delivery) leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (ARC81 pair 1 of 2). Earlier combos for ARC81 included shared-measured-component with R-squared, correlation and slope; correlation is repeated here because the oxygen delivery-consumption correlation is the textbook case, and the other ARC81 briefs differ in structure (B3A-08 repeated occasions, slope) and statistic (B3A-15 R-squared). The correction is not documented in the abstract (abstract only read); independent measurement of the shared term is the generic remedy and is flagged here as not verified in the source text. Venous content key is retained because the faulty Fick consumption needs it.",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.85
+}

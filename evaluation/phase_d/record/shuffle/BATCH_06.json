@@ -1,0 +1,441 @@
+[
+  {
+    "id": "D-061",
+    "claim": "Each of 1500 voxels was measured in each of 10 runs of an experiment with four stimulus conditions, labelled A, B, C and D. Claim: among the voxels whose expected response to condition A is greater than their expected response to condition D, the proportion whose expected response to condition A is also greater than their expected response to condition B is at least 0.70.",
+    "data_keys": [
+      {
+        "key": "response",
+        "shape": "(voxels, runs, conditions)",
+        "dtype": "float",
+        "meaning": "estimated response amplitude of each voxel in each run to each stimulus condition; the conditions axis holds A, B, C, D in this order",
+        "dims": [
+          1500,
+          10,
+          4
+        ]
+      }
+    ],
+    "sizes": {
+      "voxels": 1500,
+      "runs": 10,
+      "conditions": 4
+    }
+  },
+  {
+    "id": "D-062",
+    "claim": "In at least 60% of the species, femur length and humerus length are positively associated after accounting for body length: within the species, the partial correlation between femur length and humerus length, given body length, is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "femur",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "femur length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      },
+      {
+        "key": "humerus",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "humerus length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "head-and-body length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      }
+    ],
+    "sizes": {
+      "species": 12,
+      "individuals": 30
+    }
+  },
+  {
+    "id": "D-063",
+    "claim": "Among 600 anaesthetised dogs, whole-body oxygen consumption, computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definition, depends on cardiac output: the R-squared of the linear regression of oxygen consumption on cardiac output is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "cardiac output of each dog, in L per min",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "cardiac_output_2",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "a second, independent determination of the cardiac output of each dog, in L per min",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL",
+        "dims": [
+          600
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 600
+    }
+  },
+  {
+    "id": "D-064",
+    "claim": "Expression profiles together with clinical covariates predict tumour response in new patients: the Pearson correlation between predicted and observed response is at least 0.30.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level of each gene in each patient's tumour sample",
+        "dims": [
+          80,
+          1500
+        ]
+      },
+      {
+        "key": "clinical",
+        "shape": "(patients, covariates)",
+        "dtype": "float",
+        "meaning": "standardised clinical covariates of each patient (age, tumour size, and similar)",
+        "dims": [
+          80,
+          8
+        ]
+      },
+      {
+        "key": "response",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "percentage tumour shrinkage measured after treatment",
+        "dims": [
+          80
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 80,
+      "genes": 1500,
+      "covariates": 8
+    }
+  },
+  {
+    "id": "D-065",
+    "claim": "Habitat measurements predict vegetation cover at new sites: the Pearson correlation between predicted and observed cover is at least 0.40.",
+    "data_keys": [
+      {
+        "key": "habitat",
+        "shape": "(sites, plots, variables)",
+        "dtype": "float",
+        "meaning": "habitat measurements of each plot at each site",
+        "dims": [
+          40,
+          20,
+          6
+        ]
+      },
+      {
+        "key": "cover",
+        "shape": "(sites, plots)",
+        "dtype": "float",
+        "meaning": "vegetation cover measured in each plot",
+        "dims": [
+          40,
+          20
+        ]
+      }
+    ],
+    "sizes": {
+      "sites": 40,
+      "plots": 20,
+      "variables": 6
+    }
+  },
+  {
+    "id": "D-066",
+    "claim": "A nearest-neighbour classifier (one neighbour, Euclidean distance on standardised measurements) recovers the rare outcome y from the measurements X for new patients with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "15 continuous clinical measurements for each patient",
+        "dims": [
+          1000,
+          15
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True where the patient has the rare outcome",
+        "dims": [
+          1000
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 1000,
+      "features": 15
+    }
+  },
+  {
+    "id": "D-067",
+    "claim": "After accounting for body mass, kidney weight and heart weight are positively related: the standardised slope of kidney weight on heart weight is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "kidney_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "combined kidney weight of each rat, in g",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "heart_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "heart weight of each rat, in g",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "body_mass",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "body mass of each rat, in g",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "rats": 60
+    }
+  },
+  {
+    "id": "D-068",
+    "claim": "Across 25 populations of one beetle species, with 40 specimens measured in each, wing length rises with head width at a given body length: the mean over populations of the within-population multiple-regression coefficient of wing length on head width, with body length as the other predictor, is at least 0.30 (mm of wing length per mm of head width).",
+    "data_keys": [
+      {
+        "key": "head_width",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "head width of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      },
+      {
+        "key": "wing_length",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "wing length of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "body length of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "populations": 25,
+      "specimens": 40
+    }
+  },
+  {
+    "id": "D-069",
+    "claim": "In a trial of a blood-pressure drug, 900 patients had systolic pressure measured at baseline and again after 6 months, and the array treated marks which patients received the drug. The reduction of a patient is the baseline pressure minus the 6-month pressure. Claim: the reduction attributable to the drug (mean reduction in treated patients minus mean reduction in untreated patients) is larger in patients in the top third of baseline pressures than in patients in the bottom third of baseline pressures, by at least 3 mmHg.",
+    "data_keys": [
+      {
+        "key": "baseline_sbp",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure in mmHg at baseline",
+        "dims": [
+          900
+        ]
+      },
+      {
+        "key": "followup_sbp",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure in mmHg after 6 months",
+        "dims": [
+          900
+        ]
+      },
+      {
+        "key": "treated",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True if the patient received the drug",
+        "dims": [
+          900
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 900
+    }
+  },
+  {
+    "id": "D-070",
+    "claim": "Gene-expression profiles predict five-year relapse in new patients: the area under the ROC curve is at least 0.70.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level of each gene in each patient's tumour sample",
+        "dims": [
+          120,
+          2000
+        ]
+      },
+      {
+        "key": "relapse_5y",
+        "shape": "(patients,)",
+        "dtype": "bool",
+        "meaning": "True if the patient relapsed within five years of diagnosis",
+        "dims": [
+          120
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 120,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-071",
+    "claim": "Across patients, oxygen delivery and oxygen consumption are positively correlated: the Pearson correlation coefficient between them is at least 0.4.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "cardiac output of each patient, in L/min",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "oxygen content of arterial blood of each patient, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "oxygen content of mixed venous blood of each patient, in mL O2 per dL",
+        "dims": [
+          120
+        ]
+      },
+      {
+        "key": "vo2_expired_gas",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "oxygen consumption of each patient measured from expired-gas analysis, in mL/min",
+        "dims": [
+          120
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 120
+    }
+  },
+  {
+    "id": "D-072",
+    "claim": "In 30 subjects each studied in a vehicle session and in a drug session, the drug raises muscle force: the mean paired difference in force between the drug and the vehicle session, adjusted for the muscle cross-sectional area measured in each session by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+    "data_keys": [
+      {
+        "key": "force_vehicle",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "peak voluntary knee-extension force of each subject in the vehicle session, in N",
+        "dims": [
+          30
+        ]
+      },
+      {
+        "key": "force_drug",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "peak voluntary knee-extension force of each subject in the drug session, in N",
+        "dims": [
+          30
+        ]
+      },
+      {
+        "key": "area_vehicle",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "quadriceps cross-sectional area of each subject measured in the vehicle session, in cm2",
+        "dims": [
+          30
+        ]
+      },
+      {
+        "key": "area_drug",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "quadriceps cross-sectional area of each subject measured in the drug session, in cm2",
+        "dims": [
+          30
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 30
+    }
+  }
+]

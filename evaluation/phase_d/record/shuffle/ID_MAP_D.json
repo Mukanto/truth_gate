@@ -1,0 +1,650 @@
+[
+  {
+    "id": "D-001",
+    "designer_id": "B3B-13",
+    "class": "B-3",
+    "half": "B",
+    "source": "BLO77",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": true
+  },
+  {
+    "id": "D-002",
+    "designer_id": "B3B-10",
+    "class": "B-3",
+    "half": "B",
+    "source": "MOR86",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": false
+  },
+  {
+    "id": "D-003",
+    "designer_id": "B2B-12",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAN18",
+    "subtype_or_tag": "L1.4",
+    "reserve": true
+  },
+  {
+    "id": "D-004",
+    "designer_id": "B2A-09",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L3.1",
+    "reserve": false
+  },
+  {
+    "id": "D-005",
+    "designer_id": "B2A-01",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.1",
+    "reserve": false
+  },
+  {
+    "id": "D-006",
+    "designer_id": "B3A-07",
+    "class": "B-3",
+    "half": "A",
+    "source": "CHI13",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": false
+  },
+  {
+    "id": "D-007",
+    "designer_id": "B2B-01",
+    "class": "B-2",
+    "half": "B",
+    "source": "SIM03",
+    "subtype_or_tag": "L1.1",
+    "reserve": false
+  },
+  {
+    "id": "D-008",
+    "designer_id": "B3A-08",
+    "class": "B-3",
+    "half": "A",
+    "source": "ARC81",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": false
+  },
+  {
+    "id": "D-009",
+    "designer_id": "B3B-03",
+    "class": "B-3",
+    "half": "B",
+    "source": "CUR13",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": false
+  },
+  {
+    "id": "D-010",
+    "designer_id": "B2A-04",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.2",
+    "reserve": false
+  },
+  {
+    "id": "D-011",
+    "designer_id": "B2B-13",
+    "class": "B-2",
+    "half": "B",
+    "source": "AMB02",
+    "subtype_or_tag": "L1.3",
+    "reserve": true
+  },
+  {
+    "id": "D-012",
+    "designer_id": "DEC-06",
+    "class": "B-6",
+    "half": null,
+    "source": "HUR84",
+    "subtype_or_tag": "units-not-independent",
+    "reserve": false
+  },
+  {
+    "id": "D-013",
+    "designer_id": "B2B-07",
+    "class": "B-2",
+    "half": "B",
+    "source": "VAR06",
+    "subtype_or_tag": "L1.3",
+    "reserve": false
+  },
+  {
+    "id": "D-014",
+    "designer_id": "B2A-03",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.2",
+    "reserve": false
+  },
+  {
+    "id": "D-015",
+    "designer_id": "B3A-14",
+    "class": "B-3",
+    "half": "A",
+    "source": "CHI13",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": true
+  },
+  {
+    "id": "D-016",
+    "designer_id": "DEC-08",
+    "class": "B-6",
+    "half": null,
+    "source": "LAZ18",
+    "subtype_or_tag": "units-not-independent",
+    "reserve": false
+  },
+  {
+    "id": "D-017",
+    "designer_id": "B3A-02",
+    "class": "B-3",
+    "half": "A",
+    "source": "KRO93",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": false
+  },
+  {
+    "id": "D-018",
+    "designer_id": "B2B-15",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAE17",
+    "subtype_or_tag": "L3.2",
+    "reserve": true
+  },
+  {
+    "id": "D-019",
+    "designer_id": "B3B-06",
+    "class": "B-3",
+    "half": "B",
+    "source": "BLO77",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": false
+  },
+  {
+    "id": "D-020",
+    "designer_id": "B3A-11",
+    "class": "B-3",
+    "half": "A",
+    "source": "PEA97",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": true
+  },
+  {
+    "id": "D-021",
+    "designer_id": "DEC-R4",
+    "class": "B-6",
+    "half": null,
+    "source": "HUR84",
+    "subtype_or_tag": "units-not-independent",
+    "reserve": true
+  },
+  {
+    "id": "D-022",
+    "designer_id": "B2A-02",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.1",
+    "reserve": false
+  },
+  {
+    "id": "D-023",
+    "designer_id": "B3B-01",
+    "class": "B-3",
+    "half": "B",
+    "source": "ATC76",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": false
+  },
+  {
+    "id": "D-024",
+    "designer_id": "B2B-06",
+    "class": "B-2",
+    "half": "B",
+    "source": "AMB02",
+    "subtype_or_tag": "L1.3",
+    "reserve": false
+  },
+  {
+    "id": "D-025",
+    "designer_id": "B3B-15",
+    "class": "B-3",
+    "half": "B",
+    "source": "TU04",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": true
+  },
+  {
+    "id": "D-026",
+    "designer_id": "B3B-11",
+    "class": "B-3",
+    "half": "B",
+    "source": "ATC76",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": true
+  },
+  {
+    "id": "D-027",
+    "designer_id": "B2A-R1",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.1",
+    "reserve": true
+  },
+  {
+    "id": "D-028",
+    "designer_id": "DEC-02",
+    "class": "B-1",
+    "half": null,
+    "source": "VUL09",
+    "subtype_or_tag": "select-then-test-same-data",
+    "reserve": false
+  },
+  {
+    "id": "D-029",
+    "designer_id": "B2A-06",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.4",
+    "reserve": false
+  },
+  {
+    "id": "D-030",
+    "designer_id": "DEC-R2",
+    "class": "B-1",
+    "half": null,
+    "source": "MAK19",
+    "subtype_or_tag": "split-by-baseline-compare-change",
+    "reserve": true
+  },
+  {
+    "id": "D-031",
+    "designer_id": "B3A-12",
+    "class": "B-3",
+    "half": "A",
+    "source": "KRO93",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": true
+  },
+  {
+    "id": "D-032",
+    "designer_id": "DEC-05",
+    "class": "B-6",
+    "half": null,
+    "source": "NIE11",
+    "subtype_or_tag": "significant-here-not-there",
+    "reserve": false
+  },
+  {
+    "id": "D-033",
+    "designer_id": "DEC-R1",
+    "class": "B-1",
+    "half": null,
+    "source": "KRI10",
+    "subtype_or_tag": "select-then-test-same-data",
+    "reserve": true
+  },
+  {
+    "id": "D-034",
+    "designer_id": "B2B-14",
+    "class": "B-2",
+    "half": "B",
+    "source": "ROB17",
+    "subtype_or_tag": "L3.1",
+    "reserve": true
+  },
+  {
+    "id": "D-035",
+    "designer_id": "B2B-04",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAN18",
+    "subtype_or_tag": "L1.2",
+    "reserve": false
+  },
+  {
+    "id": "D-036",
+    "designer_id": "B3A-15",
+    "class": "B-3",
+    "half": "A",
+    "source": "ARC81",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": true
+  },
+  {
+    "id": "D-037",
+    "designer_id": "B3A-13",
+    "class": "B-3",
+    "half": "A",
+    "source": "CHI13",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": true
+  },
+  {
+    "id": "D-038",
+    "designer_id": "B3A-06",
+    "class": "B-3",
+    "half": "A",
+    "source": "KRO93",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": false
+  },
+  {
+    "id": "D-039",
+    "designer_id": "B2A-R5",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L3.1",
+    "reserve": true
+  },
+  {
+    "id": "D-040",
+    "designer_id": "B3A-01",
+    "class": "B-3",
+    "half": "A",
+    "source": "PEA97",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": false
+  },
+  {
+    "id": "D-041",
+    "designer_id": "B2A-R2",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.2",
+    "reserve": true
+  },
+  {
+    "id": "D-042",
+    "designer_id": "B2A-07",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.4",
+    "reserve": false
+  },
+  {
+    "id": "D-043",
+    "designer_id": "B2B-05",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAN18",
+    "subtype_or_tag": "L1.4",
+    "reserve": false
+  },
+  {
+    "id": "D-044",
+    "designer_id": "B2A-10",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L3.2",
+    "reserve": false
+  },
+  {
+    "id": "D-045",
+    "designer_id": "B3B-05",
+    "class": "B-3",
+    "half": "B",
+    "source": "TU07",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": false
+  },
+  {
+    "id": "D-046",
+    "designer_id": "DEC-07",
+    "class": "B-6",
+    "half": null,
+    "source": "LAZ10",
+    "subtype_or_tag": "units-not-independent",
+    "reserve": false
+  },
+  {
+    "id": "D-047",
+    "designer_id": "DEC-03",
+    "class": "B-1",
+    "half": null,
+    "source": "MOR03",
+    "subtype_or_tag": "extreme-group-change",
+    "reserve": false
+  },
+  {
+    "id": "D-048",
+    "designer_id": "B3B-08",
+    "class": "B-3",
+    "half": "B",
+    "source": "STR87",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": false
+  },
+  {
+    "id": "D-049",
+    "designer_id": "B2B-03",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAN18",
+    "subtype_or_tag": "L1.2",
+    "reserve": false
+  },
+  {
+    "id": "D-050",
+    "designer_id": "B3A-10",
+    "class": "B-3",
+    "half": "A",
+    "source": "KRO93",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": false
+  },
+  {
+    "id": "D-051",
+    "designer_id": "B3B-09",
+    "class": "B-3",
+    "half": "B",
+    "source": "STR87",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": false
+  },
+  {
+    "id": "D-052",
+    "designer_id": "DEC-R3",
+    "class": "B-6",
+    "half": null,
+    "source": "MAK19",
+    "subtype_or_tag": "significant-here-not-there",
+    "reserve": true
+  },
+  {
+    "id": "D-053",
+    "designer_id": "B3A-03",
+    "class": "B-3",
+    "half": "A",
+    "source": "CHI13",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": false
+  },
+  {
+    "id": "D-054",
+    "designer_id": "B2A-05",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.3",
+    "reserve": false
+  },
+  {
+    "id": "D-055",
+    "designer_id": "B2A-08",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L3.1",
+    "reserve": false
+  },
+  {
+    "id": "D-056",
+    "designer_id": "B3B-04",
+    "class": "B-3",
+    "half": "B",
+    "source": "CUR13",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": false
+  },
+  {
+    "id": "D-057",
+    "designer_id": "B3B-07",
+    "class": "B-3",
+    "half": "B",
+    "source": "TU04",
+    "subtype_or_tag": "change-vs-baseline",
+    "reserve": false
+  },
+  {
+    "id": "D-058",
+    "designer_id": "B2B-10",
+    "class": "B-2",
+    "half": "B",
+    "source": "SAE17",
+    "subtype_or_tag": "L3.2",
+    "reserve": false
+  },
+  {
+    "id": "D-059",
+    "designer_id": "B2B-08",
+    "class": "B-2",
+    "half": "B",
+    "source": "ROB17",
+    "subtype_or_tag": "L3.1",
+    "reserve": false
+  },
+  {
+    "id": "D-060",
+    "designer_id": "B2A-R3",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.3",
+    "reserve": true
+  },
+  {
+    "id": "D-061",
+    "designer_id": "DEC-01",
+    "class": "B-1",
+    "half": null,
+    "source": "KRI09",
+    "subtype_or_tag": "select-then-test-same-data",
+    "reserve": false
+  },
+  {
+    "id": "D-062",
+    "designer_id": "B3A-05",
+    "class": "B-3",
+    "half": "A",
+    "source": "PEA97",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": false
+  },
+  {
+    "id": "D-063",
+    "designer_id": "B3B-14",
+    "class": "B-3",
+    "half": "B",
+    "source": "STR87",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": true
+  },
+  {
+    "id": "D-064",
+    "designer_id": "B2B-02",
+    "class": "B-2",
+    "half": "B",
+    "source": "SIM03",
+    "subtype_or_tag": "L1.1",
+    "reserve": false
+  },
+  {
+    "id": "D-065",
+    "designer_id": "B2B-09",
+    "class": "B-2",
+    "half": "B",
+    "source": "ROB17",
+    "subtype_or_tag": "L3.2",
+    "reserve": false
+  },
+  {
+    "id": "D-066",
+    "designer_id": "B2A-R4",
+    "class": "B-2",
+    "half": "A",
+    "source": "KAP23",
+    "subtype_or_tag": "L1.4",
+    "reserve": true
+  },
+  {
+    "id": "D-067",
+    "designer_id": "B3A-09",
+    "class": "B-3",
+    "half": "A",
+    "source": "PEA97",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": false
+  },
+  {
+    "id": "D-068",
+    "designer_id": "B3B-02",
+    "class": "B-3",
+    "half": "B",
+    "source": "ATC76",
+    "subtype_or_tag": "ratio-shared-denominator",
+    "reserve": false
+  },
+  {
+    "id": "D-069",
+    "designer_id": "DEC-04",
+    "class": "B-1",
+    "half": null,
+    "source": "BAR05",
+    "subtype_or_tag": "split-by-baseline-compare-change",
+    "reserve": false
+  },
+  {
+    "id": "D-070",
+    "designer_id": "B2B-11",
+    "class": "B-2",
+    "half": "B",
+    "source": "SIM03",
+    "subtype_or_tag": "L1.1",
+    "reserve": true
+  },
+  {
+    "id": "D-071",
+    "designer_id": "B3A-04",
+    "class": "B-3",
+    "half": "A",
+    "source": "ARC81",
+    "subtype_or_tag": "shared-measured-component",
+    "reserve": false
+  },
+  {
+    "id": "D-072",
+    "designer_id": "B3B-12",
+    "class": "B-3",
+    "half": "B",
+    "source": "CUR13",
+    "subtype_or_tag": "ratio-vs-denominator-proxy",
+    "reserve": true
+  }
+]

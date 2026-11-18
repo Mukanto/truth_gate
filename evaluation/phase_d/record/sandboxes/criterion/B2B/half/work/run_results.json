@@ -1,0 +1,242 @@
+{
+ "B2B-01": {
+  "case": "D-007",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.01,
+   0.01,
+   0.0
+  ]
+ },
+ "B2B-02": {
+  "case": "D-064",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.01,
+   0.01,
+   0.01
+  ]
+ },
+ "B2B-11": {
+  "case": "D-070",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.03,
+   0.03,
+   0.03
+  ]
+ },
+ "B2B-13": {
+  "case": "D-011",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.01,
+   0.01,
+   0.01
+  ]
+ },
+ "B2B-06": {
+  "case": "D-024",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.01,
+   0.01,
+   0.01
+  ]
+ },
+ "B2B-07": {
+  "case": "D-013",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   true,
+   true,
+   true
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.81,
+   0.83,
+   0.73
+  ]
+ },
+ "B2B-03": {
+  "case": "D-049",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.02,
+   0.02,
+   0.02
+  ]
+ },
+ "B2B-04": {
+  "case": "D-035",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.04,
+   0.04,
+   0.05
+  ]
+ },
+ "B2B-05": {
+  "case": "D-043",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.02,
+   0.02,
+   0.02
+  ]
+ },
+ "B2B-12": {
+  "case": "D-003",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.02,
+   0.02,
+   0.02
+  ]
+ },
+ "B2B-14": {
+  "case": "D-034",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   0.01,
+   0.01,
+   0.01
+  ]
+ },
+ "B2B-08": {
+  "case": "D-059",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   1.05,
+   1.02,
+   1.07
+  ]
+ },
+ "B2B-09": {
+  "case": "D-065",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   2.07,
+   4.3,
+   4.35
+  ]
+ },
+ "B2B-10": {
+  "case": "D-058",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   6.18,
+   6.26,
+   6.29
+  ]
+ },
+ "B2B-15": {
+  "case": "D-018",
+  "runs": 3,
+  "plus_repeat_of_first": 1,
+  "values": [
+   false,
+   false,
+   false
+  ],
+  "deterministic": true,
+  "seconds": [
+   5.64,
+   3.25,
+   2.5
+  ]
+ }
+}

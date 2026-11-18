@@ -1,0 +1,59 @@
+{
+ "transcript_sha256": "979abafaeb49f31a838379d85bbf5d0a48a058974c311caa55a1fe3353de44fd",
+ "first_last_utc": [
+  "2026-11-17T19:50:58.732Z",
+  "2026-11-18T00:09:55.800Z"
+ ],
+ "assistant_message_models": {
+  "claude-sonnet-5-5": 73,
+  "<synthetic>": 1
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 8,
+  "Glob": 1,
+  "Bash": 3,
+  "ToolSearch": 1,
+  "WebFetch": 33,
+  "WebSearch": 4,
+  "Write": 3,
+  "Edit": 1
+ },
+ "forbidden_tool_calls": [],
+ "outside_paths": [],
+ "urls": [
+  "http://www.edvul.com/pdf/VulHarrisWinkielmanPashler-PPS-2009.pdf",
+  "https://academic.oup.com/ije/article/34/1/215/625737",
+  "https://biomedical-sciences.ed.ac.uk/sites/default/files/2024-08/Hurlbert%20article%201984.pdf",
+  "https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-11-5",
+  "https://groups.nceas.ucsb.edu/flow-experiments/documents/theory-and-concepts/hurlbert.1984.EcoMono.pdf/at_download/file",
+  "https://link.springer.com/article/10.1186/1471-2202-11-5",
+  "https://pages.ucsd.edu/~pwinkiel/vul-etal_correlations-main-2009.pdf",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC1125994/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC1126032/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2817684/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2841687/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2896926/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC2949251/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC5902037/",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC6785265/",
+  "https://pubmed.ncbi.nlm.nih.gov/15333621/",
+  "https://scispace.com/pdf/regression-to-the-mean-what-it-is-and-how-to-deal-with-it-2d43x2i6ei.pdf",
+  "https://typeset.io/pdf/regression-to-the-mean-what-it-is-and-how-to-deal-with-it-2d43x2i6ei.pdf",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2817684/fullTextXML",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1016/j.tree.2009.07.001%20OR%20%22Hurlbert%22%20AND%20%22pseudoreplication%22&format=json&resultType=lite&pageSize=3",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/jcbfm.2010.86&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/nn.2886&format=json&resultType=core",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1093/ije/dyh299&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1111/j.1745-6924.2009.01125.x&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1136/bmj.326.7398.1083&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1186/1471-2202-11-5&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1371/journal.pbio.2005282&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.2307/1942661&format=json&resultType=core",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.7554/eLife.48175&format=json&resultType=lite",
+  "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26158964%20AND%20SRC:MED&format=json&resultType=core",
+  "https://www.nature.com/articles/nn.2886",
+  "https://www.zoology.ubc.ca/~bio501/R/readings/hurlbert%201984%20ecol%20monogr%20-%20pseudoreplication.pdf",
+  "https://zendy.io/title/10.2307/1942661"
+ ]
+}

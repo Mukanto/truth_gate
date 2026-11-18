@@ -1,0 +1,26 @@
+{
+ "id": "D-054",
+ "claim": "Gene-expression features discriminate cases from controls in new subjects: the area under the ROC curve of a linear classifier (ridge regression on the diagnosis coded as plus or minus one, penalty 10 on standardised features) that uses 20 of the 1000 expression features to recover the diagnosis y is at least 0.65.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "expression level of each of 1000 genes for each subject",
+   "dims": [
+    80,
+    1000
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "bool",
+   "meaning": "True where the subject has the diagnosis, False for a control",
+   "dims": [
+    80
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 80, \"features\": 1000}"
+}

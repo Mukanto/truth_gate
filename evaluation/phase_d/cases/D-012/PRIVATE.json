@@ -1,0 +1,25 @@
+{
+ "id": "D-012",
+ "source": "HUR84",
+ "passage": "SOURCES_D passage: inferential tests with non-independent replicates. Abstract as reproduced in search summaries (full text is a scanned PDF and was not readable): pseudoreplication is the use of inferential statistics to test for treatment effects where treatments are not replicated or replicates are not statistically independent.",
+ "faulty": "Pool all 300 quadrats: difference of occupied proportions (fenced minus open), pooled-variance two-proportion z test one-sided at 0.05. HOLDS if the pooled difference >= 0.10 and p < 0.05; None if a group has no quadrat or the variance is zero.",
+ "fixed": "Occupancy per plot = mean over its quadrats. Welch t test, one-sided at 0.05, on the plot occupancies (fenced versus open). HOLDS if the difference of mean plot occupancies >= 0.10 and p < 0.05; None if a group has fewer than 2 plots or a zero variance.",
+ "estimand": "Faulty: difference of proportions with quadrats as replicates (df about 298). Fixed: difference of mean plot occupancy with plots as replicates (df at most 8).",
+ "model_family": "Beta-binomial: plot occupancy probability p_j ~ Beta with mean mu (mu + effect for fenced plots) and an intra-plot correlation rho of 0.3; quadrats Bernoulli(p_j) given the plot (the source names no model; beta-binomial gives plots a shared occupancy probability, which is the plot-level dependence).",
+ "statistic_family": "proportion",
+ "guard_minimum": 2,
+ "sizes_note": "Source: full text unreadable; abstract states no size. Hurlbert's ecological experiments have few plots per treatment; 10 plots (about 5 per treatment) and 30 quadrats each give 300 values. The false-positive rate of the pooled test grows with the number of quadrats per plot and with the within-plot correlation (design effect 1 + (m - 1) rho; about 9.7 here at rho 0.3): general statistical fact, not stated in the part of the source read.",
+ "exploited_structure": "Repeated records (quadrats) of one experimental unit (a plot), which share a plot-level occupancy probability.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d['occupied'], dtype=float)\n    g = np.asarray(d['exclosure'], dtype=bool)\n    n, m = y.shape\n    if n < 3 or m < 2:\n        return 0.0\n    pm = y.mean(axis=1)\n    adj = pm.copy()\n    for k in (True, False):\n        s = g == k\n        if s.any():\n            adj[s] = pm[s] - pm[s].mean()\n    k_groups = int(g.any()) + int((~g).any())\n    msb = m * float((adj ** 2).sum()) / max(n - k_groups, 1)\n    msw = float(((y - pm[:, None]) ** 2).sum()) / (n * (m - 1))\n    den = msb + (m - 1) * msw\n    return float((msb - msw) / den) if den > 0 else 0.0",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: no intra-unit correlation was readable in HUR84; 0.3 is proposed as a moderate within-plot correlation (the same value LAZ10 cites for its false-positive example)",
+  "set_by_brief": false
+ },
+ "notes": "HUR84's earlier combinations were units-not-independent with mean, other and slope; this one uses proportion. The intra-plot correlation is computed from plot occupancies after removing the fenced/open group means, so a shift in occupancy between groups does not change it (up to the binary variance). Hurlbert's other forms (temporal repeated samples of one plot) are covered by the reserve DEC-R4.",
+ "subtype_or_tag": "units-not-independent",
+ "class": "B-6",
+ "approved_value": 0.3
+}

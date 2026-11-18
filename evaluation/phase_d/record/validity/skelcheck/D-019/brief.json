@@ -1,0 +1,17 @@
+{
+ "id": "D-019",
+ "claim": "In 400 adults with systolic blood pressure measured at five annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the regression slope of an individual's underlying yearly rate of change in systolic blood pressure on the individual's underlying initial systolic blood pressure is at most -0.03 mmHg per year per mmHg.",
+ "data_keys": [
+  {
+   "key": "systolic_bp",
+   "shape": "(individuals, occasions)",
+   "dtype": "float",
+   "meaning": "systolic blood pressure of each individual at each of five annual visits, with the visits in time order, in mmHg",
+   "dims": [
+    400,
+    5
+   ]
+  }
+ ],
+ "sizes": "{\"individuals\": 400, \"occasions\": 5}"
+}

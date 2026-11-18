@@ -1,0 +1,28 @@
+{
+ "transcript_sha256": "543e51475606edf939b4f8cf0a97e04795f232d1786eec51a9772efb4e834c8f",
+ "first_last_utc": [
+  "2026-11-17T19:50:35.730Z",
+  "2026-11-17T19:59:55.043Z"
+ ],
+ "assistant_message_models": {
+  "claude-sonnet-5-5": 40
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 8,
+  "Glob": 1,
+  "ToolSearch": 1,
+  "WebFetch": 5,
+  "WebSearch": 1,
+  "Write": 4,
+  "Bash": 2,
+  "Edit": 3
+ },
+ "forbidden_tool_calls": [],
+ "outside_paths": [],
+ "urls": [
+  "https://arxiv.org/pdf/2207.07048",
+  "https://europepmc.org/api/fulltextRepo?pprId=PPR&type=FILE&fileName=x",
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC10499856"
+ ]
+}

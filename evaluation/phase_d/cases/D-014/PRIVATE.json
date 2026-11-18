@@ -1,0 +1,25 @@
+{
+ "id": "D-014",
+ "source": "KAP23",
+ "passage": "L1.2: \"Using the entire dataset for any pre-processing steps, such as imputation or over/under sampling, results in leakage.\" (Results, 'Toward a solution: A taxonomy of data leakage', PMC10499856).",
+ "faulty": "Missing entries of X are filled by iterative regression imputation (5 sweeps; each incomplete column regressed by ridge, lambda 1.0, on y and all other columns, fitted on rows where the column is observed, applied to rows where it is missing; start from column means) run once on all 250 rows, using y of every row including rows later held out. Then 5-fold cross-validation (fold = i mod 5) of ridge (lambda 1.0, standardised) on the completed X; pooled R-squared = 1 - SSE/SST; holds iff >= 0.10.",
+ "fixed": "Inside each fold the imputer (same 5-sweep ridge scheme, but on the columns of X only, y not used) is fitted on the 200 training rows and applied to the training and the 50 held-out rows; then ridge is fitted on the 200 completed training rows and predicts the held-out rows; pooled R-squared; holds iff >= 0.10.",
+ "estimand": "Faulty: R-squared of predictions whose held-out feature values were completed using the held-out outcome. Fixed: the out-of-sample R-squared for new patients whose outcome is unknown when their missing values are filled.",
+ "model_family": "Ridge regression (lambda 1.0, standardised) after iterative ridge imputation (5 sweeps). Source names imputation as an example of pre-processing but no model; both twins use the same imputation scheme, differing only in which rows and columns it sees.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source states none. 250 x 20 = 5,000 values; about 25% of entries missing is the world author's choice within what is realistic for laboratory panels (the proposed note value, not a source value). Check: 5 imputation runs of 5 sweeps x up to 20 ridge fits (seconds to a minute). Dependence of the error on sample size or missingness: not stated.",
+ "exploited_structure": "A sizeable share of missing entries in the predictors, which a label-using imputation fills in with information about the outcome of the very rows being scored.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    X = np.asarray(d[\"X\"], dtype=float)\n    return float(np.mean(np.isnan(X)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.25,
+  "note_value_source": "source states none: 25% proposed as a typical missing rate of a laboratory panel; the source describes imputation (civil-war data) but states no missing rate",
+  "set_by_brief": false
+ },
+ "notes": "Guard: R-squared undefined below 2 held-out rows or zero variance of y; a column that is entirely missing in a training fold returns None (non-finite). Statistic family differs from the earlier L1.2 combination (classification). The brief says only that unmeasured values are NaN; imputation is not named in the claim.",
+ "subtype_or_tag": "L1.2",
+ "class": "B-2",
+ "approved_value": 0.25
+}

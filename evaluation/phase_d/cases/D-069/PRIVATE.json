@@ -1,0 +1,25 @@
+{
+ "id": "D-069",
+ "source": "BAR05",
+ "passage": "Abstract: the effect of regression to the mean 'becomes more noticeable with increasing measurement error and when follow-up measurements are only examined on a sub-sample selected using a baseline value'. (Only the abstract was readable; SOURCES_D passage: subjects selected for extreme baseline values 'improve' without any intervention.)",
+ "faulty": "Among treated patients only, cut baseline_sbp into thirds (33rd and 67th percentiles of the treated patients' baseline values). Reduction = baseline_sbp - followup_sbp. HOLDS if (mean reduction in the top third) - (mean reduction in the bottom third) >= 3 mmHg; None if either third is empty.",
+ "fixed": "Cut baseline_sbp into thirds over all patients. In the top and in the bottom third compute (mean reduction of treated) - (mean reduction of untreated), then take top minus bottom. HOLDS if the difference of these two differences >= 3 mmHg; None if any of the four cells is empty.",
+ "estimand": "Faulty: difference in mean reduction between the top and bottom baseline thirds among treated patients (includes the movement of extreme baselines toward the mean). Fixed: difference between the top and bottom baseline thirds of the drug-attributable reduction (treated minus untreated), a treatment-by-baseline contrast.",
+ "model_family": "Latent-level plus measurement error: true level L ~ N(150, 15^2); baseline = L + N(0, s^2); follow-up = L - drug effect(L) + N(0, s^2) for treated and L + N(0, s^2) for untreated, with a treated indicator independent of L. The source names no model.",
+ "statistic_family": "mean",
+ "guard_minimum": 1,
+ "sizes_note": "Source (abstract only) states no sample size. 900 patients gives about 300 per baseline third and about 150 per cell. Dependence of the error on size: not stated beyond the abstract's wording that the effect grows with measurement error and with analysis of a sub-sample chosen on a baseline value.",
+ "exploited_structure": "A noisy baseline used both to divide patients into groups and as the reference for each group's change, so groups differ in change through measurement error alone.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    c = ~np.asarray(d['treated'], dtype=bool)\n    a = np.asarray(d['baseline_sbp'], dtype=float)[c]\n    b = np.asarray(d['followup_sbp'], dtype=float)[c]\n    if a.size < 2 or a.std() == 0 or b.std() == 0:\n        return 0.0\n    r = np.corrcoef(a, b)[0, 1]\n    return float(r) if np.isfinite(r) else 0.0",
+  "direction": "less",
+  "null_value": 1.0,
+  "note_value": 0.7,
+  "note_value_source": "source states none: the abstract gives no correlation; 0.7 is proposed as a typical test-retest correlation of clinic systolic pressure between visits",
+  "set_by_brief": false
+ },
+ "notes": "BAR05's earlier combinations were extreme/mean and extreme/proportion; this one is split/mean, which is not among them. The statistic is the baseline-to-follow-up correlation in untreated patients, which the claim-false data (no differential drug effect) leave unchanged. The claim does not say how patients were assigned to treatment; the world author must make a world where the fixed contrast is meaningful.",
+ "subtype_or_tag": "split-by-baseline-compare-change",
+ "class": "B-1",
+ "approved_value": 0.7
+}

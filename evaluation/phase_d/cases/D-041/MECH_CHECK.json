@@ -1,0 +1,94 @@
+{
+  "case": "D-041",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 87,
+          "text": "int((~y).sum()) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 87,
+          "text": "int(y.sum()) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 102,
+          "text": "np.std(score) > 0",
+          "op": ">",
+          "kind": "constant",
+          "call": "std",
+          "calls": [
+            "std"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 87,
+          "text": "int((~y).sum()) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 87,
+          "text": "int(y.sum()) < 1",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 99,
+          "text": "np.std(score) > 0",
+          "op": ">",
+          "kind": "constant",
+          "call": "std",
+          "calls": [
+            "std"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

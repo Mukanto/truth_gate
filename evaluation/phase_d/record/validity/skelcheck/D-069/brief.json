@@ -1,0 +1,34 @@
+{
+ "id": "D-069",
+ "claim": "In a trial of a blood-pressure drug, 900 patients had systolic pressure measured at baseline and again after 6 months, and the array treated marks which patients received the drug. The reduction of a patient is the baseline pressure minus the 6-month pressure. Claim: the reduction attributable to the drug (mean reduction in treated patients minus mean reduction in untreated patients) is larger in patients in the top third of baseline pressures than in patients in the bottom third of baseline pressures, by at least 3 mmHg.",
+ "data_keys": [
+  {
+   "key": "baseline_sbp",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "systolic blood pressure in mmHg at baseline",
+   "dims": [
+    900
+   ]
+  },
+  {
+   "key": "followup_sbp",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "systolic blood pressure in mmHg after 6 months",
+   "dims": [
+    900
+   ]
+  },
+  {
+   "key": "treated",
+   "shape": "(patients,)",
+   "dtype": "bool",
+   "meaning": "True if the patient received the drug",
+   "dims": [
+    900
+   ]
+  }
+ ],
+ "sizes": "{\"patients\": 900}"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "D-042",
+ "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised descriptors) of the response y on the descriptors X predicts y for new compounds with a Pearson correlation between predicted and observed y of at least 0.30.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(records, features)",
+   "dtype": "float",
+   "meaning": "20 continuous molecular descriptors recorded for each compound record",
+   "dims": [
+    1200,
+    20
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(records,)",
+   "dtype": "float",
+   "meaning": "continuous activity response measured for each compound record",
+   "dims": [
+    1200
+   ]
+  }
+ ],
+ "sizes": "{\"records\": 1200, \"features\": 20}"
+}

@@ -1,0 +1,50 @@
+{
+  "case": "D-001",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 26,
+          "text": "np.ptp(u) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 27,
+          "text": "np.ptp(u) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

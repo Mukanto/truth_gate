@@ -1,0 +1,26 @@
+{
+ "id": "D-034",
+ "claim": "The daily driver measurements predict the daily river level in later days of the record: the root-mean-square error of the prediction is at most 0.70 standard deviations of the level.",
+ "data_keys": [
+  {
+   "key": "level",
+   "shape": "(days,)",
+   "dtype": "float",
+   "meaning": "daily river level, in time order",
+   "dims": [
+    1500
+   ]
+  },
+  {
+   "key": "drivers",
+   "shape": "(days, variables)",
+   "dtype": "float",
+   "meaning": "daily measurements of the variables that may influence the river level, in time order",
+   "dims": [
+    1500,
+    6
+   ]
+  }
+ ],
+ "sizes": "{\"days\": 1500, \"variables\": 6}"
+}

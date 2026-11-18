@@ -1,0 +1,29 @@
+{
+ "id": "D-029",
+ "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised measurements) of the value y on the measurements X predicts y for new entries with a mean absolute error at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(rows, features)",
+   "dtype": "float",
+   "meaning": "8 continuous property measurements recorded for each registry entry",
+   "dims": [
+    600,
+    8
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(rows,)",
+   "dtype": "float",
+   "meaning": "continuous target value recorded for each registry entry",
+   "dims": [
+    600
+   ]
+  }
+ ],
+ "sizes": {
+  "rows": 600,
+  "features": 8
+ }
+}

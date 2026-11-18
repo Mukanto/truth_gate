@@ -1,0 +1,25 @@
+{
+ "id": "D-061",
+ "source": "KRI09",
+ "passage": "Nonindependent selective analysis is incorrect and should not be acceptable in neuroscientific publications. (PMC full text; regional-activation simulation: 30 x 30 x 20 voxels, 200 time points, four conditions A-D, ROI chosen by contrast A-D, then contrast A-B (true value zero) tested on the same data, 20 of 100 runs significant at p<0.05.)",
+ "faulty": "For each voxel, one-sided one-sample t test of (A - D) across the 10 runs; keep voxels with p < 0.001 (the uncorrected primary threshold of the source's Example 1). On the kept voxels, compute the proportion whose mean response to A over the same 10 runs exceeds their mean response to B. HOLDS if the proportion >= 0.70, FAILS otherwise; None if no voxel is kept.",
+ "fixed": "Same voxel rule, but the voxels are chosen on one half of the runs (e.g. runs 0-4) and the proportion with A > B is computed on the other half (runs 5-9); the two roles are swapped and the two proportions averaged (the source's independent-data correction: odd runs train, even runs test). HOLDS if the average >= 0.70; None if no voxel is kept in either direction.",
+ "estimand": "Faulty: the proportion of voxels with sample mean A > sample mean B among voxels that passed the A-D test on the same runs. Fixed: the population proportion of voxels with expected A > expected B among voxels with expected A > expected D, estimated on runs independent of the choice of voxels.",
+ "model_family": "Gaussian: response[v, r, c] = mu[v, c] + N(0, sigma^2) run noise, independent across voxels and runs. The source uses Gaussian noise; its 3-voxel spatial smoothing and 200-point time series are dropped because the array holds run-wise amplitudes (reason: keeps the array small and the check fast).",
+ "statistic_family": "proportion",
+ "guard_minimum": 1,
+ "sizes_note": "Source: 30 x 30 x 20 = 18000 voxels, 200 time points, 4 conditions, one simulated subject, 100 repetitions. Here 1500 voxels x 10 runs x 4 conditions = 60000 values; a check of the corrected analysis takes seconds. Dependence of the error on sample size or voxel count: not stated in the main text (the source points to its Supplementary Information).",
+ "exploited_structure": "Many candidate voxels with noisy run estimates, and a choosing contrast (A - D) that shares the A response with the tested contrast (A - B), both computed on the same runs.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    return float(np.asarray(d['response']).shape[0])",
+  "direction": "greater",
+  "null_value": 1.0,
+  "note_value": 1500.0,
+  "note_value_source": "set by the brief: the statistic reports the number of voxels, so its value at the brief's sizes is 1500 (the source's own simulation had 30 x 30 x 20 = 18000 voxels, which the brief's sizes do not reproduce)",
+  "set_by_brief": true
+ },
+ "notes": "Alternative statistic families: the source's pattern-information example (decoding accuracy) was not used because a classification score would belong to B-2. Family chosen as proportion because KRI09's earlier combinations were select/R-squared, select/mean and split/mean. The claim is stated on expected (population) responses so that the fixed analysis estimates the same quantity as the faulty one.",
+ "subtype_or_tag": "select-then-test-same-data",
+ "class": "B-1",
+ "approved_value": 1500.0
+}

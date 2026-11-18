@@ -1,0 +1,29 @@
+{
+ "id": "D-046",
+ "claim": "Ten animals each received a different dose of a drug, and the response amplitude (in mV) of 100 CA3 cells was recorded in each animal. Claim: response increases with dose, that is, the slope of an animal's mean cell response on dose, across animals, is positive, judged by a one-sided test at the 0.05 level.",
+ "data_keys": [
+  {
+   "key": "response",
+   "shape": "(animals, cells)",
+   "dtype": "float",
+   "meaning": "response amplitude in mV of each recorded CA3 cell",
+   "dims": [
+    10,
+    100
+   ]
+  },
+  {
+   "key": "dose",
+   "shape": "(animals,)",
+   "dtype": "float",
+   "meaning": "dose of the drug given to each animal",
+   "dims": [
+    10
+   ]
+  }
+ ],
+ "sizes": {
+  "animals": 10,
+  "cells": 100
+ }
+}

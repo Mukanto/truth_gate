@@ -1,0 +1,44 @@
+{
+ "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_git_bash_spelling_and_bac0\\world\\w1",
+ "label": "w1",
+ "manifest": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_git_bash_spelling_and_bac0\\MANIFEST.json",
+ "timeout_s": 60,
+ "replica_sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_git_bash_spelling_and_bac0\\replays\\r1\\root\\world\\w1",
+ "summary": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_git_bash_spelling_and_bac0\\replays\\r1",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_git_bash_spelling_and_bac0\\replays\\r1\\replay_log.json",
+  "n_replayed_calls": 1,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 1,
+  "n_manifest_files_copied": 0,
+  "not_run_reason": null
+ },
+ "replica_sha256": {
+  "skeletons/a.py": "98ea6e4f216f2fb4b69fff9b3a44842c38686ca685f3f55dc48c5d3fb1107be4"
+ },
+ "calls": [
+  {
+   "call_index": 1,
+   "line": 2,
+   "tool": "Bash",
+   "tool_use_id": "toolu_2",
+   "background": true,
+   "mapped_command": "echo hi > \"/e/Claude Projects/Kapi/phase_d_work/designer/tests/work/pytest_tmp/test_git_bash_spelling_and_bac0/replays/r1/root/world/w1/skeletons/a.py\"",
+   "note": "run_in_background in the transcript; replayed synchronously",
+   "exit_code": 0,
+   "timed_out": false,
+   "duration_s": 0.04,
+   "start_error": null,
+   "stdout": "",
+   "stderr": "",
+   "status": "ok"
+  }
+ ]
+}

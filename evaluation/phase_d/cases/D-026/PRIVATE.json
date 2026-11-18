@@ -1,0 +1,25 @@
+{
+ "id": "D-026",
+ "source": "ATC76",
+ "passage": "'Multivariate statistical procedures such as principal components analysis are greatly affected when the data upon which the analyses are based include ratios or proportions. In this case, there is often an inflation of the first eigenvalue together with large changes in the magnitude and direction of the coefficients on the various principal components.' (abstract, via OpenAlex).",
+ "faulty": "Principal components analysis of the covariance matrix of the six ratios skeletal[:, j]/body_length; share of total variance of the first component; criterion >= 0.40.",
+ "fixed": "Regress each of the six dimensions on body_length (with intercept), take the residuals, principal components of the residual covariance matrix; share of total variance of the first component; criterion >= 0.40.",
+ "estimand": "Faulty: first-component share of variance among six size-standardised ratios, which includes the variation of the common denominator. Fixed: first-component share of variance among the dimensions after the linear effect of body length is removed.",
+ "model_family": "Independent continuous dimensions with a chosen denominator CV (source's simulation family); claim-true adds a common latent shape factor to the six dimensions net of body length. Fixed for both twins.",
+ "statistic_family": "other",
+ "guard_minimum": 3,
+ "sizes_note": "Source: minimum simulated sample 25,000, beyond the cap. 400 specimens x 6 dimensions = 2400 values is a realistic morphometric sample; an eigen-decomposition of a 6x6 matrix is instant. The statistic is the first-eigenvalue share of the total variance (family 'other'). Size dependence: not stated; source states dependence on the denominator CV.",
+ "exploited_structure": "The six ratios share one denominator whose variation is large, so their covariance matrix is dominated by one component.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    s = np.asarray(d['body_length'], dtype=float)\n    return float(np.std(s, ddof=1) / np.mean(s))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.15,
+  "note_value_source": "source states none: the abstract gives no CV; 0.15 is a realistic coefficient of variation of adult body length",
+  "set_by_brief": false
+ },
+ "notes": "RESERVE (ATC76 reserve). Differs from B3B-01 and B3B-02 by statistic (first-eigenvalue share) and data structure (specimens x dimensions matrix).",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.15
+}

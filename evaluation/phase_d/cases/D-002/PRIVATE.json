@@ -1,0 +1,25 @@
+{
+ "id": "D-002",
+ "source": "MOR86",
+ "passage": "'the presence of error in the common set of measured variables distorts the relationship among the calculated quantities'; 'This article presents a method of correcting for such distortions in the Pearson correlation coefficient and in the linear regression coefficient for linear calculations involving two measured variables.' (abstract, Europe PMC).",
+ "faulty": "Pearson correlation between D = arterial_o2_content - venous_o2_content and arterial_o2_content (first determinations) over the 120 animals; criterion r >= 0.30.",
+ "fixed": "Moreno-Stratton-Newell-Feustel correction for additive independent errors: error variances s_a2 = var(arterial_o2_content - arterial_o2_content_2)/2 and s_v2 likewise; corrected Cov(D, Ca) = Cov - s_a2; corrected Var(Ca) = Var(Ca) - s_a2; corrected Var(D) = Var(D) - s_a2 - s_v2; corrected r = corrected Cov / sqrt(corrected Var(D) * corrected Var(Ca)); criterion >= 0.30 (None when a corrected variance is not positive).",
+ "estimand": "Faulty: correlation between the observed content difference and the observed arterial content, which includes the arterial error in both. Fixed: correlation between the true content difference and the true arterial content.",
+ "model_family": "Source's: linear calculations of two measured variables with additive independent measurement errors (the source also treats errors proportional to the value; the additive case is chosen here, fixed for both twins). Claim-true: the true difference rises with the true arterial content (true venous content rises less than one-for-one with it); claim-false: true arterial and venous contents independent.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size in the abstract (a physiology example). 120 animals is an assumed size larger than a single acute experiment, so that the corrected variances are estimable; the check is a few moments. Size dependence: not stated.",
+ "exploited_structure": "The arterial content appears both inside the difference and as the comparison variable, so its measurement error produces a positive correlation.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['arterial_o2_content'], dtype=float)\n    a2 = np.asarray(d['arterial_o2_content_2'], dtype=float)\n    return float(0.5 * np.var(a - a2, ddof=1) / np.var(a, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.1,
+  "note_value_source": "source states none: the abstract gives no error size; 0.1 is an assumed share of the between-animal variance of arterial content that is determination error",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. The two derived quantities are the difference and the arterial content (a quantity related to one of its own components), a linear calculation as in the source's two-measured-variable setting. The source's specific physiology example is not readable in the abstract; this one is an assumption and is reported in LOG.md.",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.1
+}

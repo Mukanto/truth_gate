@@ -1,0 +1,193 @@
+{
+  "case": "D-072",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 23,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 31,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 34,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 40,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 43,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 48,
+          "text": "abs(de - 1.0) < 3e-16",
+          "op": "<",
+          "kind": "constant",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 109,
+          "text": "np.ptp(y) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 23,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 31,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 34,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 40,
+          "text": "abs(dd) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 43,
+          "text": "abs(c) < tiny",
+          "op": "<",
+          "kind": "name",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 48,
+          "text": "abs(de - 1.0) < 3e-16",
+          "op": "<",
+          "kind": "constant",
+          "call": "abs",
+          "calls": [
+            "abs"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 105,
+          "text": "np.ptp(ad - av) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 111,
+          "text": "np.ptp(y) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

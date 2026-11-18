@@ -1,0 +1,25 @@
+{
+ "id": "D-062",
+ "source": "PEA97",
+ "passage": "'The particular case that is likely to occur is when u and v are indices with the same denominator for the correlation of the indices seems at first sight a very plausible measure of organic correlation.' (abstract, OpenAlex OCR text)",
+ "faulty": "Within each species the Pearson correlation between femur/body_length and humerus/body_length; the proportion of species with that correlation at least 0.2, compared with 0.6.",
+ "fixed": "Within each species the partial correlation of femur and humerus given body_length; the proportion of species with partial correlation at least 0.2, compared with 0.6.",
+ "estimand": "Faulty: share of species in which the correlation of the two indices reaches 0.2. Fixed: share of species in which the association between the two bones, net of body length, reaches 0.2.",
+ "model_family": "Source names none beyond random variables x, y, z. Choice: per-species positive Gaussian variables (CV 0.03-0.15) with a species-specific partial correlation of femur and humerus given body length; claim-false version: partial correlation 0 in every species. Reason: Gaussian gives exact control of the partial correlation per species.",
+ "statistic_family": "proportion",
+ "guard_minimum": "4 individuals per species (a partial correlation needs 4); a species below 4 or with non-finite values or zero variance is not counted; the statistic is undefined (None) when no species qualifies.",
+ "sizes_note": "Source (abstract only) states no sizes. 12 species x 30 individuals = 360 values per array is a realistic museum-series size; the corrected check is 12 small partial correlations. Dependence on n: not stated.",
+ "exploited_structure": "Within each species both bone lengths are divided by the same body length, so its within-species variation induces a correlation between the two indices.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['femur'], dtype=float)\n    y = np.asarray(d['humerus'], dtype=float)\n    z = np.asarray(d['body_length'], dtype=float)\n    cx = np.std(x, axis=1, ddof=1) / np.abs(np.mean(x, axis=1))\n    cy = np.std(y, axis=1, ddof=1) / np.abs(np.mean(y, axis=1))\n    cz = np.std(z, axis=1, ddof=1) / np.abs(np.mean(z, axis=1))\n    v = cz ** 2 / np.sqrt((cx ** 2 + cz ** 2) * (cy ** 2 + cz ** 2))\n    return float(np.mean(v))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.5 is the value of the expression (first-order correlation of x/z and y/z for uncorrelated x, y, z) when the three within-species coefficients of variation are equal; it uses marginal spreads only, unchanged by the claim-false version.",
+  "set_by_brief": false
+ },
+ "notes": "Role: pair (PEA97 pair 2 of 3). New family for PEA97 (proportion) and new data structure (species x individuals). The threshold 0.2 inside the per-species condition and 0.6 on the share are both stated in the claim.",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.5
+}

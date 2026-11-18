@@ -1,0 +1,34 @@
+{
+ "id": "D-052",
+ "claim": "Forty participants, 20 young and 20 old, completed a training programme, and a performance score was recorded before and after it. Claim: the mean improvement (after minus before) is larger in young than in old participants, judged by a one-sided test of the difference between the two groups' mean improvements at the 0.05 level.",
+ "data_keys": [
+  {
+   "key": "pre",
+   "shape": "(participants,)",
+   "dtype": "float",
+   "meaning": "performance score before the programme",
+   "dims": [
+    40
+   ]
+  },
+  {
+   "key": "post",
+   "shape": "(participants,)",
+   "dtype": "float",
+   "meaning": "performance score after the programme",
+   "dims": [
+    40
+   ]
+  },
+  {
+   "key": "young",
+   "shape": "(participants,)",
+   "dtype": "bool",
+   "meaning": "True for young participants, False for old participants",
+   "dims": [
+    40
+   ]
+  }
+ ],
+ "sizes": "{\"participants\": 40}"
+}

@@ -1,0 +1,43 @@
+{
+ "id": "D-072",
+ "claim": "In 30 subjects each studied in a vehicle session and in a drug session, the drug raises muscle force: the mean paired difference in force between the drug and the vehicle session, adjusted for the muscle cross-sectional area measured in each session by analysis of covariance, is positive with a two-sided p-value below 0.05.",
+ "data_keys": [
+  {
+   "key": "force_vehicle",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "peak voluntary knee-extension force of each subject in the vehicle session, in N",
+   "dims": [
+    30
+   ]
+  },
+  {
+   "key": "force_drug",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "peak voluntary knee-extension force of each subject in the drug session, in N",
+   "dims": [
+    30
+   ]
+  },
+  {
+   "key": "area_vehicle",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "quadriceps cross-sectional area of each subject measured in the vehicle session, in cm2",
+   "dims": [
+    30
+   ]
+  },
+  {
+   "key": "area_drug",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "quadriceps cross-sectional area of each subject measured in the drug session, in cm2",
+   "dims": [
+    30
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 30}"
+}

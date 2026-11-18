@@ -1,0 +1,83 @@
+{
+  "case": "D-023",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 33,
+          "text": "np.ptp(u) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 33,
+          "text": "np.ptp(v) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 29,
+          "text": "np.ptp(bl) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 36,
+          "text": "np.ptp(u) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 36,
+          "text": "np.ptp(v) == 0",
+          "op": "==",
+          "kind": "constant",
+          "call": "ptp",
+          "calls": [
+            "ptp"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

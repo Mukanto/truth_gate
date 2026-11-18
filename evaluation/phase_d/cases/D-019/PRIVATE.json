@@ -1,0 +1,25 @@
+{
+ "id": "D-019",
+ "source": "BLO77",
+ "passage": "'Assuming that the observations deviate in a random manner from the true values, straightforward regression computations will yield biased results.' 'It is shown that, in the case of the normal distribution, the maximum likelihood (ML) estimates of the second-order moments of the true slope and the true initial value are obtained by simple adjustments of the corresponding moments of the estimated quantities.' (abstract, OpenAlex).",
+ "faulty": "For each of the 400 individuals fit a least-squares line to the 5 readings and take its slope b_i; regress b_i on the first reading systolic_bp[:, 0] across individuals; criterion slope <= -0.03.",
+ "fixed": "Blomqvist's adjustment: pooled error variance s2 from the residuals about each individual's own line (m-2 degrees of freedom, m = 5); estimate the moments of the true initial value alpha_i (level at the first visit) and true slope beta_i by subtracting s2*(1/m + tc_bar^2/Sxx), s2/Sxx and the covariance term -s2*tc_bar/Sxx from the sample moments of the fitted intercepts and slopes (Sxx = sum of squared centred times); fixed slope = adjusted Cov(alpha, beta)/adjusted Var(alpha); criterion <= -0.03.",
+ "estimand": "Faulty: slope of the estimated rate of change on the observed first reading. Fixed: slope of the true rate of change on the true initial value (second-order moments adjusted for measurement error).",
+ "model_family": "Source's: linear individual trends x_it = alpha_i + beta_i*t + e_it with normal (alpha_i, beta_i) and independent normal reading errors e_it of constant variance.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size and no number of visits in the abstract (longitudinal blood pressure). 400 individuals x 5 visits = 2000 values: five visits give 3 residual degrees of freedom per individual for the error variance, and the check is a few array operations. Size dependence: not stated.",
+ "exploited_structure": "The first reading carries a reading error that also enters the fitted slope with opposite sign, so the estimated slope and the observed initial value are negatively related even when the true ones are not.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['systolic_bp'], dtype=float)\n    m = x.shape[1]\n    t = np.arange(m, dtype=float)\n    tc = t - t.mean()\n    b = (x - x.mean(axis=1, keepdims=True)) @ tc / np.sum(tc ** 2)\n    fit = x.mean(axis=1, keepdims=True) + b[:, None] * tc[None, :]\n    s2 = np.mean(np.sum((x - fit) ** 2, axis=1) / (m - 2))\n    return float(s2 / np.var(x[:, 0], ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.15,
+  "note_value_source": "source states none: no error variance is given in the abstract; 0.15 = reading-error variance (SD about 6 mmHg) over between-person variance of a single reading (SD about 15 mmHg), a realistic figure for office blood pressure",
+  "set_by_brief": false
+ },
+ "notes": "Pair case. Error variance is estimated from within-individual residuals, which the claim-false version (a change of the true slope-initial relation) leaves unchanged in expectation, as does the variance of the first reading.",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.15
+}

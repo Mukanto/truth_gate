@@ -1,0 +1,282 @@
+[
+  {
+    "id": "D-052",
+    "claim": "Forty participants, 20 young and 20 old, completed a training programme, and a performance score was recorded before and after it. Claim: the mean improvement (after minus before) is larger in young than in old participants, judged by a one-sided test of the difference between the two groups' mean improvements at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "pre",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "performance score before the programme",
+        "dims": [
+          40
+        ]
+      },
+      {
+        "key": "post",
+        "shape": "(participants,)",
+        "dtype": "float",
+        "meaning": "performance score after the programme",
+        "dims": [
+          40
+        ]
+      },
+      {
+        "key": "young",
+        "shape": "(participants,)",
+        "dtype": "bool",
+        "meaning": "True for young participants, False for old participants",
+        "dims": [
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "participants": 40
+    }
+  },
+  {
+    "id": "D-055",
+    "claim": "The daily predictors X carry information about the daily outcome y on future days: the Pearson correlation between y and the prediction of a ridge regression of y on X (penalty 1.0 on standardised predictors, with an intercept), computed over future days, is at least 0.20.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(days_in_order, features)",
+        "dtype": "float",
+        "meaning": "6 continuous daily predictor series, one value per predictor per day",
+        "dims": [
+          1000,
+          6
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(days_in_order,)",
+        "dtype": "float",
+        "meaning": "continuous daily outcome",
+        "dims": [
+          1000
+        ]
+      }
+    ],
+    "sizes": {
+      "days_in_order": 1000,
+      "features": 6
+    }
+  },
+  {
+    "id": "D-056",
+    "claim": "Among 3 groups of 25 rats each, mean resting oxygen uptake differs between the groups once body mass is accounted for: the analysis-of-covariance F test of the group effect on oxygen uptake, with body mass as the covariate, has a p-value below 0.05.",
+    "data_keys": [
+      {
+        "key": "oxygen_uptake",
+        "shape": "(groups, animals)",
+        "dtype": "float",
+        "meaning": "resting oxygen uptake of each rat in each group, in mL O2 per min",
+        "dims": [
+          3,
+          25
+        ]
+      },
+      {
+        "key": "body_mass",
+        "shape": "(groups, animals)",
+        "dtype": "float",
+        "meaning": "body mass of each rat in each group, in g",
+        "dims": [
+          3,
+          25
+        ]
+      }
+    ],
+    "sizes": {
+      "groups": 3,
+      "animals": 25
+    }
+  },
+  {
+    "id": "D-062",
+    "claim": "In at least 60% of the species, femur length and humerus length are positively associated after accounting for body length: within the species, the partial correlation between femur length and humerus length, given body length, is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "femur",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "femur length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      },
+      {
+        "key": "humerus",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "humerus length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(species, individuals)",
+        "dtype": "float",
+        "meaning": "head-and-body length of each individual sampled in each species, in mm",
+        "dims": [
+          12,
+          30
+        ]
+      }
+    ],
+    "sizes": {
+      "species": 12,
+      "individuals": 30
+    }
+  },
+  {
+    "id": "D-064",
+    "claim": "Expression profiles together with clinical covariates predict tumour response in new patients: the Pearson correlation between predicted and observed response is at least 0.30.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(patients, genes)",
+        "dtype": "float",
+        "meaning": "log2 expression level of each gene in each patient's tumour sample",
+        "dims": [
+          80,
+          1500
+        ]
+      },
+      {
+        "key": "clinical",
+        "shape": "(patients, covariates)",
+        "dtype": "float",
+        "meaning": "standardised clinical covariates of each patient (age, tumour size, and similar)",
+        "dims": [
+          80,
+          8
+        ]
+      },
+      {
+        "key": "response",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "percentage tumour shrinkage measured after treatment",
+        "dims": [
+          80
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 80,
+      "genes": 1500,
+      "covariates": 8
+    }
+  },
+  {
+    "id": "D-066",
+    "claim": "A nearest-neighbour classifier (one neighbour, Euclidean distance on standardised measurements) recovers the rare outcome y from the measurements X for new patients with a balanced accuracy (mean of sensitivity and specificity) of at least 0.65.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "15 continuous clinical measurements for each patient",
+        "dims": [
+          1000,
+          15
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True where the patient has the rare outcome",
+        "dims": [
+          1000
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 1000,
+      "features": 15
+    }
+  },
+  {
+    "id": "D-067",
+    "claim": "After accounting for body mass, kidney weight and heart weight are positively related: the standardised slope of kidney weight on heart weight is at least 0.25.",
+    "data_keys": [
+      {
+        "key": "kidney_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "combined kidney weight of each rat, in g",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "heart_weight",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "heart weight of each rat, in g",
+        "dims": [
+          60
+        ]
+      },
+      {
+        "key": "body_mass",
+        "shape": "(rats,)",
+        "dtype": "float",
+        "meaning": "body mass of each rat, in g",
+        "dims": [
+          60
+        ]
+      }
+    ],
+    "sizes": {
+      "rats": 60
+    }
+  },
+  {
+    "id": "D-068",
+    "claim": "Across 25 populations of one beetle species, with 40 specimens measured in each, wing length rises with head width at a given body length: the mean over populations of the within-population multiple-regression coefficient of wing length on head width, with body length as the other predictor, is at least 0.30 (mm of wing length per mm of head width).",
+    "data_keys": [
+      {
+        "key": "head_width",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "head width of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      },
+      {
+        "key": "wing_length",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "wing length of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(populations, specimens)",
+        "dtype": "float",
+        "meaning": "body length of each specimen in each population, in mm",
+        "dims": [
+          25,
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "populations": 25,
+      "specimens": 40
+    }
+  }
+]

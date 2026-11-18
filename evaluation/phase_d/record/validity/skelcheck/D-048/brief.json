@@ -1,0 +1,43 @@
+{
+ "id": "D-048",
+ "claim": "Among 40 anaesthetised dogs, whole-body oxygen consumption and oxygen delivery, each computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definitions, are positively related: their Pearson correlation is at least 0.40.",
+ "data_keys": [
+  {
+   "key": "cardiac_output",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "cardiac output of each dog, in L per min",
+   "dims": [
+    40
+   ]
+  },
+  {
+   "key": "cardiac_output_2",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "a second, independent determination of the cardiac output of each dog, in L per min",
+   "dims": [
+    40
+   ]
+  },
+  {
+   "key": "arterial_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL",
+   "dims": [
+    40
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL",
+   "dims": [
+    40
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 40}"
+}

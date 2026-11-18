@@ -1,0 +1,25 @@
+{
+ "id": "D-016",
+ "source": "LAZ18",
+ "passage": "If treatments are randomly and independently applied to an entity other than the individual animal, then the sample size is not the number of animals. (Animal experiments section; also: using 2 animals per litter in a correct analysis halves the effective sample size.)",
+ "faulty": "Pearson r between each pup's score and its dam's exposure over all 56 pups; one-sided test of r > 0 at 0.05 with 54 degrees of freedom (t = r sqrt(54 / (1 - r^2))). HOLDS if p < 0.05; None if a variance is zero.",
+ "fixed": "Pearson r between the dam's exposure and the mean score of her pups, over the 14 dams; one-sided test of r > 0 at 0.05 with 12 degrees of freedom. HOLDS if p < 0.05; None if a variance is zero or fewer than 3 dams.",
+ "estimand": "Faulty: correlation of exposure with pup score, pups as replicates. Fixed: correlation of exposure with litter mean score, dams as replicates.",
+ "model_family": "Random-intercept Gaussian model: outcome[j, k] = b * exposure[j] + u_j + e_jk with litter effect u_j ~ N(0, tau^2) and pup error e_jk ~ N(0, sigma^2), tau^2/(tau^2 + sigma^2) about 0.3 (the source names no model; the litter-level effect is the one its prenatal examples describe).",
+ "statistic_family": "correlation",
+ "guard_minimum": 3,
+ "sizes_note": "Source: litter examples with 2 animals per litter; no numbers of litters. 14 dams x 4 pups = 56 values. False-positive rate of the pup-level test depends on pups per litter and litter variation: not quantified in the source ('does not provide a formula, simulation, or ICC value').",
+ "exploited_structure": "Several pups of one litter, which share a litter-level offset, while the exposure varies only between litters.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d['outcome'], dtype=float)\n    x = np.asarray(d['exposure'], dtype=float)\n    n, m = y.shape\n    if n < 4 or m < 2:\n        return 0.0\n    pm = y.mean(axis=1)\n    X = np.column_stack([np.ones(n), x])\n    beta = np.linalg.lstsq(X, pm, rcond=None)[0]\n    res = pm - X @ beta\n    msb = m * float((res ** 2).sum()) / (n - 2)\n    msw = float(((y - pm[:, None]) ** 2).sum()) / (n * (m - 1))\n    den = msb + (m - 1) * msw\n    return float((msb - msw) / den) if den > 0 else 0.0",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: LAZ18 gives no intra-litter correlation; 0.3 is proposed as a moderate litter effect (the ICC value LAZ10 cites for its example)",
+  "set_by_brief": false
+ },
+ "notes": "LAZ18's earlier combinations were units-not-independent with mean, proportion and slope; this one uses correlation. It resembles DEC-07 in design (a unit-level covariate and sub-units) but differs in statistic, in the number of sub-units per unit (4 versus 100) and in the sample-size regime.",
+ "subtype_or_tag": "units-not-independent",
+ "class": "B-6",
+ "approved_value": 0.3
+}

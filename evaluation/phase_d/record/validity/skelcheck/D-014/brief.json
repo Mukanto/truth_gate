@@ -1,0 +1,26 @@
+{
+ "id": "D-014",
+ "claim": "The laboratory values in X predict the outcome y for new patients: the R-squared of a ridge regression of y on the 20 laboratory values (penalty 1.0 on standardised values, with an intercept) is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "20 laboratory values per patient; a value that was not measured for a patient is NaN",
+   "dims": [
+    250,
+    20
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous clinical outcome of each patient",
+   "dims": [
+    250
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 250, \"features\": 20}"
+}

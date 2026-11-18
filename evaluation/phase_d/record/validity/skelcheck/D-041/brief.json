@@ -1,0 +1,26 @@
+{
+ "id": "D-041",
+ "claim": "The country-year indicators in X identify the onset of civil war in new country-years: the area under the ROC curve of a ridge-penalised logistic regression (penalty 1.0 on standardised indicators) of the onset y on X is at least 0.75.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "25 continuous country-year indicators; an indicator that was not recorded for a country-year is NaN",
+   "dims": [
+    1400,
+    25
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "bool",
+   "meaning": "True where a civil war onset occurred in the country-year",
+   "dims": [
+    1400
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 1400, \"features\": 25}"
+}

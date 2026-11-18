@@ -1,0 +1,57 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_d_work\\record\\pkg\\truth_gate\\__init__.py",
+  "D-014/reference": {
+    "issues": [
+      "world minus: X has non-finite values",
+      "world plus: X has non-finite values"
+    ],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-014"
+    ],
+    "control_max_ms": {
+      "D-014": 0.03
+    },
+    "shapes": {
+      "X": [
+        250,
+        20
+      ],
+      "y": [
+        250
+      ]
+    },
+    "max_ms": 0.212
+  },
+  "D-041/reference": {
+    "issues": [
+      "world minus: X has non-finite values",
+      "world plus: X has non-finite values"
+    ],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-041"
+    ],
+    "control_max_ms": {
+      "D-041": 0.116
+    },
+    "shapes": {
+      "X": [
+        1400,
+        25
+      ],
+      "y": [
+        1400
+      ]
+    },
+    "max_ms": 0.813
+  }
+}

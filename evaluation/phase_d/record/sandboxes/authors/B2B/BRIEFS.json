@@ -1,0 +1,138 @@
+[
+ {
+  "local_id": "B2B-01",
+  "claim": "Gene-expression profiles measured at diagnosis predict survival time in new patients: the out-of-sample R-squared for predicting survival_months from the expression profile is at least 0.10.",
+  "data_keys": [
+   {"key": "expression", "shape": "(patients, genes)", "dtype": "float", "meaning": "log2 expression level of each gene in each patient's tumour sample"},
+   {"key": "survival_months", "shape": "(patients,)", "dtype": "float", "meaning": "months from diagnosis to death, observed for every patient"}
+  ],
+  "sizes": {"patients": 50, "genes": 2000}
+ },
+ {
+  "local_id": "B2B-02",
+  "claim": "Expression profiles together with clinical covariates predict tumour response in new patients: the Pearson correlation between predicted and observed response is at least 0.30.",
+  "data_keys": [
+   {"key": "expression", "shape": "(patients, genes)", "dtype": "float", "meaning": "log2 expression level of each gene in each patient's tumour sample"},
+   {"key": "clinical", "shape": "(patients, covariates)", "dtype": "float", "meaning": "standardised clinical covariates of each patient (age, tumour size, and similar)"},
+   {"key": "response", "shape": "(patients,)", "dtype": "float", "meaning": "percentage tumour shrinkage measured after treatment"}
+  ],
+  "sizes": {"patients": 80, "genes": 1500, "covariates": 8}
+ },
+ {
+  "local_id": "B2B-03",
+  "claim": "A classifier built from the 12 measured variables recognises the positive class in new records with an F1 score for the positive class of at least 0.50.",
+  "data_keys": [
+   {"key": "features", "shape": "(records, variables)", "dtype": "float", "meaning": "measured variables of each record"},
+   {"key": "positive", "shape": "(records,)", "dtype": "bool", "meaning": "True if the condition is present in the record"}
+  ],
+  "sizes": {"records": 600, "variables": 12}
+ },
+ {
+  "local_id": "B2B-04",
+  "claim": "A classifier built from the measured variables recognises both classes in new records: the balanced accuracy (the mean of sensitivity and specificity for the positive class) is at least 0.65.",
+  "data_keys": [
+   {"key": "features", "shape": "(records, variables)", "dtype": "float", "meaning": "measured variables of each record"},
+   {"key": "positive", "shape": "(records,)", "dtype": "bool", "meaning": "True if the condition is present in the record"}
+  ],
+  "sizes": {"records": 1500, "variables": 20}
+ },
+ {
+  "local_id": "B2B-05",
+  "claim": "A classifier built from the measurements detects the condition in new records: its sensitivity for the positive class is at least 0.60.",
+  "data_keys": [
+   {"key": "measurements", "shape": "(records, variables)", "dtype": "float", "meaning": "measured variables of each record"},
+   {"key": "positive", "shape": "(records,)", "dtype": "bool", "meaning": "True if the condition is present in the record"}
+  ],
+  "sizes": {"records": 400, "variables": 8}
+ },
+ {
+  "local_id": "B2B-06",
+  "claim": "Gene-expression profiles allow tumour tissue to be distinguished from normal tissue in new samples: the classification error rate is at most 0.20.",
+  "data_keys": [
+   {"key": "expression", "shape": "(tissues, genes)", "dtype": "float", "meaning": "log expression level of each gene in each tissue sample"},
+   {"key": "tumour", "shape": "(tissues,)", "dtype": "bool", "meaning": "True for a tumour tissue sample, False for a normal tissue sample"}
+  ],
+  "sizes": {"tissues": 62, "genes": 2000}
+ },
+ {
+  "local_id": "B2B-07",
+  "claim": "Gene-expression profiles allow the two classes to be told apart in new samples: the classification error rate is at most 0.40.",
+  "data_keys": [
+   {"key": "expression", "shape": "(samples, genes)", "dtype": "float", "meaning": "expression level of each gene in each sample"},
+   {"key": "class_b", "shape": "(samples,)", "dtype": "bool", "meaning": "True for a sample of class B, False for a sample of class A"}
+  ],
+  "sizes": {"samples": 40, "genes": 2000}
+ },
+ {
+  "local_id": "B2B-08",
+  "claim": "The monthly environmental measurements predict the abundance in later months of the series: the out-of-sample R-squared is at least 0.30.",
+  "data_keys": [
+   {"key": "abundance", "shape": "(months,)", "dtype": "float", "meaning": "monthly abundance index of the species, on a log scale, in time order"},
+   {"key": "environment", "shape": "(months, variables)", "dtype": "float", "meaning": "monthly environmental measurements, in time order"}
+  ],
+  "sizes": {"months": 600, "variables": 10}
+ },
+ {
+  "local_id": "B2B-09",
+  "claim": "Habitat measurements predict vegetation cover at new sites: the Pearson correlation between predicted and observed cover is at least 0.40.",
+  "data_keys": [
+   {"key": "habitat", "shape": "(sites, plots, variables)", "dtype": "float", "meaning": "habitat measurements of each plot at each site"},
+   {"key": "cover", "shape": "(sites, plots)", "dtype": "float", "meaning": "vegetation cover measured in each plot"}
+  ],
+  "sizes": {"sites": 40, "plots": 20, "variables": 6}
+ },
+ {
+  "local_id": "B2B-10",
+  "claim": "Features computed from wearable-sensor signals recognise walking in newly recruited subjects: the classification error rate for walking versus other activities is at most 0.10.",
+  "data_keys": [
+   {"key": "signal_features", "shape": "(subjects, windows, features)", "dtype": "float", "meaning": "features computed from the sensor signal in each time window of each subject"},
+   {"key": "walking", "shape": "(subjects, windows)", "dtype": "bool", "meaning": "True if the subject was walking during the window"}
+  ],
+  "sizes": {"subjects": 30, "windows": 30, "features": 40}
+ },
+ {
+  "local_id": "B2B-11",
+  "claim": "Gene-expression profiles predict five-year relapse in new patients: the area under the ROC curve is at least 0.70.",
+  "data_keys": [
+   {"key": "expression", "shape": "(patients, genes)", "dtype": "float", "meaning": "log2 expression level of each gene in each patient's tumour sample"},
+   {"key": "relapse_5y", "shape": "(patients,)", "dtype": "bool", "meaning": "True if the patient relapsed within five years of diagnosis"}
+  ],
+  "sizes": {"patients": 120, "genes": 2000}
+ },
+ {
+  "local_id": "B2B-12",
+  "claim": "A classifier built from the measured variables ranks new records correctly: the area under the ROC curve for the event is at least 0.75.",
+  "data_keys": [
+   {"key": "features", "shape": "(records, variables)", "dtype": "float", "meaning": "measured variables of each record"},
+   {"key": "event", "shape": "(records,)", "dtype": "bool", "meaning": "True if the event occurred for the record"}
+  ],
+  "sizes": {"records": 1000, "variables": 15}
+ },
+ {
+  "local_id": "B2B-13",
+  "claim": "Gene-expression profiles distinguish the two leukaemia types in new samples: the area under the ROC curve is at least 0.90.",
+  "data_keys": [
+   {"key": "expression", "shape": "(samples, genes)", "dtype": "float", "meaning": "expression level of each gene in each bone-marrow sample"},
+   {"key": "myeloid", "shape": "(samples,)", "dtype": "bool", "meaning": "True for acute myeloid leukaemia, False for acute lymphoblastic leukaemia"}
+  ],
+  "sizes": {"samples": 72, "genes": 2000}
+ },
+ {
+  "local_id": "B2B-14",
+  "claim": "The daily driver measurements predict the daily river level in later days of the record: the root-mean-square error of the prediction is at most 0.70 standard deviations of the level.",
+  "data_keys": [
+   {"key": "level", "shape": "(days,)", "dtype": "float", "meaning": "daily river level, in time order"},
+   {"key": "drivers", "shape": "(days, variables)", "dtype": "float", "meaning": "daily measurements of the variables that may influence the river level, in time order"}
+  ],
+  "sizes": {"days": 1500, "variables": 6}
+ },
+ {
+  "local_id": "B2B-15",
+  "claim": "Sensor measurements classify the disease status of newly recruited subjects: the area under the ROC curve of the classification is at least 0.70.",
+  "data_keys": [
+   {"key": "measurements", "shape": "(subjects, records, variables)", "dtype": "float", "meaning": "sensor measurements of each recording of each subject"},
+   {"key": "diseased", "shape": "(subjects,)", "dtype": "bool", "meaning": "True if the subject has the disease"}
+  ],
+  "sizes": {"subjects": 16, "records": 60, "variables": 10}
+ }
+]

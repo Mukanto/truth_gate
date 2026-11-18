@@ -1,0 +1,236 @@
+{
+ "B-2": {
+  "selected": [
+   [
+    "D-027",
+    "B2A-R1",
+    "L1.1",
+    "KAP23",
+    "replaces D-005 (V2)"
+   ],
+   [
+    "D-022",
+    "B2A-02",
+    "L1.1",
+    "KAP23",
+    "main"
+   ],
+   [
+    "D-010",
+    "B2A-04",
+    "L1.2",
+    "KAP23",
+    "main"
+   ],
+   [
+    "D-011",
+    "B2B-13",
+    "L1.3",
+    "AMB02",
+    "replaces D-054 (V2)"
+   ],
+   [
+    "D-066",
+    "B2A-R4",
+    "L1.4",
+    "KAP23",
+    "replaces D-029 (V2)"
+   ],
+   [
+    "D-042",
+    "B2A-07",
+    "L1.4",
+    "KAP23",
+    "main"
+   ],
+   [
+    "D-055",
+    "B2A-08",
+    "L3.1",
+    "KAP23",
+    "main"
+   ],
+   [
+    "D-007",
+    "B2B-01",
+    "L1.1",
+    "SIM03",
+    "main"
+   ],
+   [
+    "D-064",
+    "B2B-02",
+    "L1.1",
+    "SIM03",
+    "main"
+   ],
+   [
+    "D-035",
+    "B2B-04",
+    "L1.2",
+    "SAN18",
+    "main"
+   ]
+  ],
+  "n_selected": 10,
+  "per_subtype_or_tag": {
+   "L1.1": 4,
+   "L1.2": 2,
+   "L1.3": 1,
+   "L1.4": 2,
+   "L3.1": 1
+  },
+  "notes": [
+   "D-014 (B2A-03, L1.2, reference rejected by check_skeletons_d) not replaced",
+   "D-004 (B2A-09, L3.1, V2) not replaced",
+   "D-044 (B2A-10, L3.2, V1b) not replaced",
+   "D-049 (B2B-03, L1.2, V2) not replaced",
+   "D-043 (B2B-05, L1.4, V2) not replaced",
+   "D-024 (B2B-06, L1.3, V1b) not replaced",
+   "D-013 (B2B-07, L1.3, V2) not replaced",
+   "D-059 (B2B-08, L3.1, V1a) not replaced",
+   "D-065 (B2B-09, L3.2, V1a) not replaced",
+   "D-058 (B2B-10, L3.2, V1a) not replaced"
+  ],
+  "sources_selected": {
+   "KAP23": 6,
+   "AMB02": 1,
+   "SIM03": 2,
+   "SAN18": 1
+  }
+ },
+ "B-3": {
+  "selected": [
+   [
+    "D-040",
+    "B3A-01",
+    "ratio-shared-denominator",
+    "PEA97",
+    "main"
+   ],
+   [
+    "D-062",
+    "B3A-05",
+    "ratio-shared-denominator",
+    "PEA97",
+    "main"
+   ],
+   [
+    "D-008",
+    "B3A-08",
+    "shared-measured-component",
+    "ARC81",
+    "main"
+   ],
+   [
+    "D-067",
+    "B3A-09",
+    "ratio-shared-denominator",
+    "PEA97",
+    "main"
+   ],
+   [
+    "D-023",
+    "B3B-01",
+    "ratio-shared-denominator",
+    "ATC76",
+    "main"
+   ],
+   [
+    "D-068",
+    "B3B-02",
+    "ratio-shared-denominator",
+    "ATC76",
+    "main"
+   ],
+   [
+    "D-056",
+    "B3B-04",
+    "ratio-vs-denominator-proxy",
+    "CUR13",
+    "main"
+   ]
+  ],
+  "n_selected": 7,
+  "per_subtype_or_tag": {
+   "ratio-shared-denominator": 5,
+   "shared-measured-component": 1,
+   "ratio-vs-denominator-proxy": 1
+  },
+  "notes": [
+   "D-017 (B3A-02, ratio-vs-denominator-proxy, V1a) not replaced",
+   "D-053 (B3A-03, change-vs-baseline, V1a) not replaced",
+   "D-071 (B3A-04, shared-measured-component, V1b) not replaced",
+   "D-038 (B3A-06, ratio-vs-denominator-proxy, V2) not replaced",
+   "D-006 (B3A-07, change-vs-baseline, V2) not replaced",
+   "D-050 (B3A-10, ratio-vs-denominator-proxy, V1b) not replaced",
+   "D-009 (B3B-03, ratio-vs-denominator-proxy, V1b) not replaced",
+   "D-045 (B3B-05, change-vs-baseline, fidelity A (h)) not replaced",
+   "D-019 (B3B-06, change-vs-baseline, V2) not replaced",
+   "D-057 (B3B-07, change-vs-baseline, V2) not replaced",
+   "D-048 (B3B-08, shared-measured-component, V2) not replaced",
+   "D-051 (B3B-09, shared-measured-component, V1a) not replaced",
+   "D-002 (B3B-10, shared-measured-component, V2) not replaced"
+  ],
+  "sources_selected": {
+   "PEA97": 3,
+   "ARC81": 1,
+   "ATC76": 2,
+   "CUR13": 1
+  }
+ },
+ "B-1": {
+  "selected": [
+   [
+    "D-047",
+    "DEC-03",
+    "extreme-group-change",
+    "MOR03",
+    "main"
+   ]
+  ],
+  "n_selected": 1,
+  "per_subtype_or_tag": {
+   "extreme-group-change": 1
+  },
+  "notes": [
+   "D-061 (DEC-01, select-then-test-same-data, V2) not replaced",
+   "D-028 (DEC-02, select-then-test-same-data, V2) not replaced",
+   "D-069 (DEC-04, split-by-baseline-compare-change, V2) not replaced"
+  ],
+  "sources_selected": {
+   "MOR03": 1
+  }
+ },
+ "B-6": {
+  "selected": [
+   [
+    "D-052",
+    "DEC-R3",
+    "significant-here-not-there",
+    "MAK19",
+    "replaces D-032 (V1b)"
+   ],
+   [
+    "D-012",
+    "DEC-06",
+    "units-not-independent",
+    "HUR84",
+    "main"
+   ]
+  ],
+  "n_selected": 2,
+  "per_subtype_or_tag": {
+   "significant-here-not-there": 1,
+   "units-not-independent": 1
+  },
+  "notes": [
+   "D-046 (DEC-07, units-not-independent, fidelity A (h)) not replaced",
+   "D-016 (DEC-08, units-not-independent, V1b) not replaced"
+  ],
+  "sources_selected": {
+   "MAK19": 1,
+   "HUR84": 1
+  }
+ }
+}

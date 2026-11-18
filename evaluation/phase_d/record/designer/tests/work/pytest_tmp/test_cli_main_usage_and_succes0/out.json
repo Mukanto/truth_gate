@@ -1,0 +1,122 @@
+{
+ "transcript": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_cli_main_usage_and_succes0\\agent-agentA.jsonl",
+ "transcript_sha256": "7463902cd2d248ab983ba2c32f0e20359bb73360edcb38f153367c977a3e0233",
+ "first_last_utc": [
+  "2026-11-18T10:00:01.000Z",
+  "2026-11-18T10:00:03.000Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "e5467922e0151c6af3a4810a4d5e01d3c2f431d410872f1c4b747ab10f0f4528",
+ "prompt_is_frozen": false,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": true,
+ "prompt_diff": null,
+ "injected_remainder_len": 69,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 1
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Write": 1
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "agentA",
+  "other_agentIds": [],
+  "sessionIds": [
+   "sessionS"
+  ],
+  "filename_agent_id": "agentA",
+  "agentId_matches_filename": true,
+  "problems": []
+ },
+ "terms_scanned": 0,
+ "baseline_sha256": null,
+ "baseline_ok": null,
+ "baseline_leaves": null,
+ "term_hits": [],
+ "term_hits_baseline": 0,
+ "term_hits_new": 0,
+ "term_hits_new_invalidating": 0,
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.325"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "not recorded in transcript",
+  "effort_sources": {},
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [],
+  "entrypoints": [],
+  "cwds": [
+   "X:/cwd"
+  ]
+ },
+ "provenance": {
+  "skeletons/a.py": {
+   "sha256_disk": "73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac",
+   "last_write_sha256": "73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac"
+  }
+ },
+ "unmatched_patterns": [],
+ "unchecked_written_files": [],
+ "files_checked": 1,
+ "replay": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_cli_main_usage_and_succes0\\cli_replay",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_cli_main_usage_and_succes0\\cli_replay\\replay_log.json",
+  "n_replayed_calls": 1,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "not_run_reason": null,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 0,
+  "n_manifest_files_copied": 1
+ },
+ "provenance_ok": true,
+ "unparsable_lines": [],
+ "reasons": [
+  "prompt file is not the frozen prompt (sha256 e5467922e0151c6af3a4810a4d5e01d3c2f431d410872f1c4b747ab10f0f4528)"
+ ],
+ "valid": false
+}

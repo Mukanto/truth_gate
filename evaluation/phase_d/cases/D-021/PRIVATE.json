@@ -1,0 +1,25 @@
+{
+ "id": "D-021",
+ "source": "HUR84",
+ "passage": "SOURCES_D passage: inferential tests with non-independent replicates. (Abstract as reproduced in search summaries; temporal pseudoreplication, repeated samples through time from the same unit, as described in secondary summaries of the paper; the full text was not readable.)",
+ "faulty": "Pool all 96 plot-date records: difference of occupied proportions (fenced minus open), pooled two-proportion z test one-sided at 0.05. HOLDS if the pooled difference >= 0.15 and p < 0.05; None if a group has no record or the variance is zero.",
+ "fixed": "Occupancy per plot = mean over its 12 dates. Welch t test, one-sided at 0.05, on the plot occupancies. HOLDS if the difference of mean plot occupancies >= 0.15 and p < 0.05; None if a group has fewer than 2 plots or a zero variance.",
+ "estimand": "Faulty: difference of proportions with plot-dates as replicates. Fixed: difference of mean plot occupancy with plots as replicates.",
+ "model_family": "Beta-binomial (no time trend within a plot): plot occupancy probability p_j drawn per plot (intra-plot correlation about 0.3), dates Bernoulli(p_j) given the plot (the source names no model).",
+ "statistic_family": "proportion",
+ "guard_minimum": 2,
+ "sizes_note": "Source: not readable beyond the abstract. 8 plots x 12 dates = 96 values; few plots and repeated dates are typical of the field experiments the source reviews. Dependence on size: not stated.",
+ "exploited_structure": "Repeated records of one plot on successive dates, which share a plot-level occupancy probability.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    y = np.asarray(d['present'], dtype=float)\n    g = np.asarray(d['fenced'], dtype=bool)\n    n, m = y.shape\n    if n < 3 or m < 2:\n        return 0.0\n    pm = y.mean(axis=1)\n    adj = pm.copy()\n    for k in (True, False):\n        s = g == k\n        if s.any():\n            adj[s] = pm[s] - pm[s].mean()\n    k_groups = int(g.any()) + int((~g).any())\n    msb = m * float((adj ** 2).sum()) / max(n - k_groups, 1)\n    msw = float(((y - pm[:, None]) ** 2).sum()) / (n * (m - 1))\n    den = msb + (m - 1) * msw\n    return float((msb - msw) / den) if den > 0 else 0.0",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: no intra-unit correlation was readable in HUR84; 0.3 is proposed as a moderate within-plot correlation",
+  "set_by_brief": false
+ },
+ "notes": "Reserve. Same mechanism and family as DEC-06 (HUR84's earlier combinations did not include proportion) but with a time axis in the data and a smaller regime (8 plots, 12 dates).",
+ "subtype_or_tag": "units-not-independent",
+ "class": "B-6",
+ "approved_value": 0.3
+}

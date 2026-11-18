@@ -1,0 +1,924 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_d_work\\record\\pkg\\truth_gate\\__init__.py",
+  "D-007/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-007"
+    ],
+    "control_max_ms": {
+      "D-007": 0.211
+    },
+    "shapes": {
+      "expression": [
+        50,
+        2000
+      ],
+      "survival_months": [
+        50
+      ]
+    },
+    "max_ms": 2.573
+  },
+  "D-007/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "survival_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "survival_permuted_across_patients": 0.067
+    },
+    "shapes": {
+      "expression": [
+        50,
+        2000
+      ],
+      "survival_months": [
+        50
+      ]
+    },
+    "max_ms": 1.965
+  },
+  "D-007/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "survival_shuffled_across_patients"
+    ],
+    "control_max_ms": {
+      "survival_shuffled_across_patients": 0.091
+    },
+    "shapes": {
+      "expression": [
+        50,
+        2000
+      ],
+      "survival_months": [
+        50
+      ]
+    },
+    "max_ms": 3.071
+  },
+  "D-008/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_vo2_across_patients"
+    ],
+    "control_max_ms": {
+      "permute_vo2_across_patients": 0.026
+    },
+    "shapes": {
+      "cardiac_output": [
+        40,
+        6
+      ],
+      "arterial_o2_content": [
+        40,
+        6
+      ],
+      "venous_o2_content": [
+        40,
+        6
+      ],
+      "vo2_expired_gas": [
+        40,
+        6
+      ]
+    },
+    "max_ms": 0.103
+  },
+  "D-008/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "vo2_permuted_across_occasions_within_patient"
+    ],
+    "control_max_ms": {
+      "vo2_permuted_across_occasions_within_patient": 0.029
+    },
+    "shapes": {
+      "cardiac_output": [
+        40,
+        6
+      ],
+      "arterial_o2_content": [
+        40,
+        6
+      ],
+      "venous_o2_content": [
+        40,
+        6
+      ],
+      "vo2_expired_gas": [
+        40,
+        6
+      ]
+    },
+    "max_ms": 0.093
+  },
+  "D-008/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "consumption_shuffled_across_occasions_within_patient"
+    ],
+    "control_max_ms": {
+      "consumption_shuffled_across_occasions_within_patient": 0.083
+    },
+    "shapes": {
+      "cardiac_output": [
+        40,
+        6
+      ],
+      "arterial_o2_content": [
+        40,
+        6
+      ],
+      "venous_o2_content": [
+        40,
+        6
+      ],
+      "vo2_expired_gas": [
+        40,
+        6
+      ]
+    },
+    "max_ms": 0.217
+  },
+  "D-010/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-010"
+    ],
+    "control_max_ms": {
+      "D-010": 0.045
+    },
+    "shapes": {
+      "category": [
+        1200,
+        150
+      ],
+      "covariates": [
+        1200,
+        3
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.268
+  },
+  "D-010/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "y_permuted_across_patients": 0.045
+    },
+    "shapes": {
+      "category": [
+        1200,
+        150
+      ],
+      "covariates": [
+        1200,
+        3
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.364
+  },
+  "D-010/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_shuffled_across_patients"
+    ],
+    "control_max_ms": {
+      "y_shuffled_across_patients": 0.046
+    },
+    "shapes": {
+      "category": [
+        1200,
+        150
+      ],
+      "covariates": [
+        1200,
+        3
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.332
+  },
+  "D-011/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-011"
+    ],
+    "control_max_ms": {
+      "D-011": 0.383
+    },
+    "shapes": {
+      "expression": [
+        72,
+        2000
+      ],
+      "myeloid": [
+        72
+      ]
+    },
+    "max_ms": 4.201
+  },
+  "D-011/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "labels_permuted_across_samples"
+    ],
+    "control_max_ms": {
+      "labels_permuted_across_samples": 0.071
+    },
+    "shapes": {
+      "expression": [
+        72,
+        2000
+      ],
+      "myeloid": [
+        72
+      ]
+    },
+    "max_ms": 2.269
+  },
+  "D-011/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "myeloid_labels_shuffled_across_samples"
+    ],
+    "control_max_ms": {
+      "myeloid_labels_shuffled_across_samples": 0.078
+    },
+    "shapes": {
+      "expression": [
+        72,
+        2000
+      ],
+      "myeloid": [
+        72
+      ]
+    },
+    "max_ms": 4.987
+  },
+  "D-012/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-012"
+    ],
+    "control_max_ms": {
+      "D-012": 0.038
+    },
+    "shapes": {
+      "occupied": [
+        10,
+        30
+      ],
+      "exclosure": [
+        10
+      ]
+    },
+    "max_ms": 1.062
+  },
+  "D-012/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "exclosure_labels_reversed"
+    ],
+    "control_max_ms": {
+      "exclosure_labels_reversed": 0.016
+    },
+    "shapes": {
+      "occupied": [
+        10,
+        30
+      ],
+      "exclosure": [
+        10
+      ]
+    },
+    "max_ms": 0.153
+  },
+  "D-012/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "exclosure_shuffled_across_plots"
+    ],
+    "control_max_ms": {
+      "exclosure_shuffled_across_plots": 0.029
+    },
+    "shapes": {
+      "occupied": [
+        10,
+        30
+      ],
+      "exclosure": [
+        10
+      ]
+    },
+    "max_ms": 0.138
+  },
+  "D-022/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-022"
+    ],
+    "control_max_ms": {
+      "D-022": 0.032
+    },
+    "shapes": {
+      "X": [
+        300,
+        10
+      ],
+      "y": [
+        300
+      ]
+    },
+    "max_ms": 0.096
+  },
+  "D-022/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_permuted_across_runs"
+    ],
+    "control_max_ms": {
+      "y_permuted_across_runs": 0.026
+    },
+    "shapes": {
+      "X": [
+        300,
+        10
+      ],
+      "y": [
+        300
+      ]
+    },
+    "max_ms": 0.077
+  },
+  "D-022/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_circularly_shifted_against_X_by_30_to_270_runs"
+    ],
+    "control_max_ms": {
+      "y_circularly_shifted_against_X_by_30_to_270_runs": 0.047
+    },
+    "shapes": {
+      "X": [
+        300,
+        10
+      ],
+      "y": [
+        300
+      ]
+    },
+    "max_ms": 2.728
+  },
+  "D-023/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-023"
+    ],
+    "control_max_ms": {
+      "D-023": 0.052
+    },
+    "shapes": {
+      "head_width": [
+        2000
+      ],
+      "wing_length": [
+        2000
+      ],
+      "body_length": [
+        2000
+      ]
+    },
+    "max_ms": 0.147
+  },
+  "D-023/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "wing_permuted_within_body_length_blocks"
+    ],
+    "control_max_ms": {
+      "wing_permuted_within_body_length_blocks": 0.161
+    },
+    "shapes": {
+      "head_width": [
+        2000
+      ],
+      "wing_length": [
+        2000
+      ],
+      "body_length": [
+        2000
+      ]
+    },
+    "max_ms": 0.1
+  },
+  "D-023/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "wing_shuffled_within_blocks_of_10_similar_body_lengths"
+    ],
+    "control_max_ms": {
+      "wing_shuffled_within_blocks_of_10_similar_body_lengths": 0.178
+    },
+    "shapes": {
+      "head_width": [
+        2000
+      ],
+      "wing_length": [
+        2000
+      ],
+      "body_length": [
+        2000
+      ]
+    },
+    "max_ms": 0.295
+  },
+  "D-027/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-027"
+    ],
+    "control_max_ms": {
+      "D-027": 0.033
+    },
+    "shapes": {
+      "X": [
+        60,
+        25
+      ],
+      "y": [
+        60
+      ]
+    },
+    "max_ms": 0.05
+  },
+  "D-027/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_permuted_across_samples"
+    ],
+    "control_max_ms": {
+      "y_permuted_across_samples": 0.023
+    },
+    "shapes": {
+      "X": [
+        60,
+        25
+      ],
+      "y": [
+        60
+      ]
+    },
+    "max_ms": 0.043
+  },
+  "D-027/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_shuffled_across_samples"
+    ],
+    "control_max_ms": {
+      "y_shuffled_across_samples": 0.029
+    },
+    "shapes": {
+      "X": [
+        60,
+        25
+      ],
+      "y": [
+        60
+      ]
+    },
+    "max_ms": 0.093
+  },
+  "D-035/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-035"
+    ],
+    "control_max_ms": {
+      "D-035": 0.147
+    },
+    "shapes": {
+      "features": [
+        1500,
+        20
+      ],
+      "positive": [
+        1500
+      ]
+    },
+    "max_ms": 0.889
+  },
+  "D-035/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "labels_permuted_across_records"
+    ],
+    "control_max_ms": {
+      "labels_permuted_across_records": 0.057
+    },
+    "shapes": {
+      "features": [
+        1500,
+        20
+      ],
+      "positive": [
+        1500
+      ]
+    },
+    "max_ms": 0.695
+  },
+  "D-035/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "positive_labels_shuffled_across_records"
+    ],
+    "control_max_ms": {
+      "positive_labels_shuffled_across_records": 0.102
+    },
+    "shapes": {
+      "features": [
+        1500,
+        20
+      ],
+      "positive": [
+        1500
+      ]
+    },
+    "max_ms": 0.859
+  },
+  "D-040/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_height_within_length"
+    ],
+    "control_max_ms": {
+      "permute_height_within_length": 0.068
+    },
+    "shapes": {
+      "breadth": [
+        300
+      ],
+      "height": [
+        300
+      ],
+      "length": [
+        300
+      ]
+    },
+    "max_ms": 0.068
+  },
+  "D-040/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "height_permuted_within_length_blocks"
+    ],
+    "control_max_ms": {
+      "height_permuted_within_length_blocks": 0.072
+    },
+    "shapes": {
+      "breadth": [
+        300
+      ],
+      "height": [
+        300
+      ],
+      "length": [
+        300
+      ]
+    },
+    "max_ms": 0.073
+  },
+  "D-040/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "height_shuffled_within_blocks_of_10_similar_lengths"
+    ],
+    "control_max_ms": {
+      "height_shuffled_within_blocks_of_10_similar_lengths": 0.066
+    },
+    "shapes": {
+      "breadth": [
+        300
+      ],
+      "height": [
+        300
+      ],
+      "length": [
+        300
+      ]
+    },
+    "max_ms": 0.143
+  },
+  "D-042/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-042"
+    ],
+    "control_max_ms": {
+      "D-042": 0.043
+    },
+    "shapes": {
+      "X": [
+        1200,
+        20
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.709
+  },
+  "D-042/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "compound_activity_permuted_across_compounds"
+    ],
+    "control_max_ms": {
+      "compound_activity_permuted_across_compounds": 0.916
+    },
+    "shapes": {
+      "X": [
+        1200,
+        20
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.566
+  },
+  "D-042/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "compound_mean_activity_shuffled_across_compounds"
+    ],
+    "control_max_ms": {
+      "compound_mean_activity_shuffled_across_compounds": 0.967
+    },
+    "shapes": {
+      "X": [
+        1200,
+        20
+      ],
+      "y": [
+        1200
+      ]
+    },
+    "max_ms": 0.967
+  },
+  "D-047/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-047"
+    ],
+    "control_max_ms": {
+      "D-047": 0.077
+    },
+    "shapes": {
+      "screening": [
+        600
+      ],
+      "entry": [
+        600
+      ],
+      "week12": [
+        600
+      ]
+    },
+    "max_ms": 0.068
+  },
+  "D-047/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "entry_and_week12_swapped"
+    ],
+    "control_max_ms": {
+      "entry_and_week12_swapped": 0.023
+    },
+    "shapes": {
+      "screening": [
+        600
+      ],
+      "entry": [
+        600
+      ],
+      "week12": [
+        600
+      ]
+    },
+    "max_ms": 0.083
+  },
+  "D-047/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "entry_and_week12_swapped_at_random_within_patient"
+    ],
+    "control_max_ms": {
+      "entry_and_week12_swapped_at_random_within_patient": 0.032
+    },
+    "shapes": {
+      "screening": [
+        600
+      ],
+      "entry": [
+        600
+      ],
+      "week12": [
+        600
+      ]
+    },
+    "max_ms": 0.096
+  }
+}

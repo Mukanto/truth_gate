@@ -1,0 +1,9 @@
+truth_gate: E:\Claude Projects\Kapi\phase_d_work\record\pkg\truth_gate\__init__.py
+D-014/reference ISSUES
+    - world minus: X has non-finite values
+    - world plus: X has non-finite values
+D-041/reference ISSUES
+    - world minus: X has non-finite values
+    - world plus: X has non-finite values
+
+0/2 skeletons pass

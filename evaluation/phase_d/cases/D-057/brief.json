@@ -1,0 +1,36 @@
+{
+ "id": "D-057",
+ "claim": "In 24 intrabony periodontal defects treated by guided tissue regeneration, the level of disease explains the amount of change: the mean of the baseline and follow-up pocket probing depth explains at least 15% of the variance in the change in pocket probing depth (follow-up minus baseline), that is, the R-squared of the linear regression of the change on that mean is at least 0.15.",
+ "data_keys": [
+  {
+   "key": "baseline_depth",
+   "shape": "(defects,)",
+   "dtype": "float",
+   "meaning": "pocket probing depth of each defect at the baseline examination, in mm",
+   "dims": [
+    24
+   ]
+  },
+  {
+   "key": "baseline_depth_retest",
+   "shape": "(defects,)",
+   "dtype": "float",
+   "meaning": "a second, independent probing of the depth of each defect at the baseline examination, in mm",
+   "dims": [
+    24
+   ]
+  },
+  {
+   "key": "followup_depth",
+   "shape": "(defects,)",
+   "dtype": "float",
+   "meaning": "pocket probing depth of each defect at the follow-up examination after treatment, in mm",
+   "dims": [
+    24
+   ]
+  }
+ ],
+ "sizes": {
+  "defects": 24
+ }
+}

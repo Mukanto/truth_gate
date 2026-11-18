@@ -1,0 +1,251 @@
+{
+ "B2A": {
+  "n": 15,
+  "by_source_tag": {
+   "KAP23|L1.1": 3,
+   "KAP23|L1.2": 3,
+   "KAP23|L1.3": 2,
+   "KAP23|L1.4": 3,
+   "KAP23|L3.1": 3,
+   "KAP23|L3.2": 1
+  },
+  "task_pairs": {
+   "KAP23": {
+    "L1.1": 2,
+    "L1.2": 2,
+    "L1.3": 1,
+    "L1.4": 2,
+    "L3.1": 2,
+    "L3.2": 1
+   }
+  },
+  "task_reserves": [
+   {
+    "source": "KAP23",
+    "subtype": "L1.1"
+   },
+   {
+    "source": "KAP23",
+    "subtype": "L1.2"
+   },
+   {
+    "source": "KAP23",
+    "subtype": "L1.3"
+   },
+   {
+    "source": "KAP23",
+    "subtype": "L1.4"
+   },
+   {
+    "source": "KAP23",
+    "subtype": "L3.1"
+   }
+  ]
+ },
+ "B2B": {
+  "n": 15,
+  "by_source_tag": {
+   "AMB02|L1.3": 2,
+   "ROB17|L3.1": 2,
+   "ROB17|L3.2": 1,
+   "SAE17|L3.2": 2,
+   "SAN18|L1.2": 2,
+   "SAN18|L1.4": 2,
+   "SIM03|L1.1": 3,
+   "VAR06|L1.3": 1
+  },
+  "task_pairs": {
+   "SIM03": {
+    "L1.1": 2
+   },
+   "SAN18": {
+    "L1.2": 2,
+    "L1.4": 1
+   },
+   "AMB02": {
+    "L1.3": 1
+   },
+   "VAR06": {
+    "L1.3": 1
+   },
+   "ROB17": {
+    "L3.1": 1,
+    "L3.2": 1
+   },
+   "SAE17": {
+    "L3.2": 1
+   }
+  },
+  "task_reserves": [
+   {
+    "source": "SIM03",
+    "subtype": "L1.1"
+   },
+   {
+    "source": "SAN18",
+    "subtype": "L1.4"
+   },
+   {
+    "source": "AMB02",
+    "subtype": "L1.3"
+   },
+   {
+    "source": "ROB17",
+    "subtype": "L3.1"
+   },
+   {
+    "source": "SAE17",
+    "subtype": "L3.2"
+   }
+  ]
+ },
+ "B3A": {
+  "n": 15,
+  "by_source_tag": {
+   "ARC81|shared-measured-component": 3,
+   "CHI13|change-vs-baseline": 4,
+   "KRO93|ratio-vs-denominator-proxy": 4,
+   "PEA97|ratio-shared-denominator": 4
+  },
+  "task_pairs": {
+   "PEA97": {
+    "ratio-shared-denominator": 3
+   },
+   "KRO93": {
+    "ratio-vs-denominator-proxy": 3
+   },
+   "CHI13": {
+    "change-vs-baseline": 2
+   },
+   "ARC81": {
+    "shared-measured-component": 2
+   }
+  },
+  "task_reserves": [
+   {
+    "source": "PEA97",
+    "mechanism_tag": "ratio-shared-denominator"
+   },
+   {
+    "source": "KRO93",
+    "mechanism_tag": "ratio-vs-denominator-proxy"
+   },
+   {
+    "source": "CHI13",
+    "mechanism_tag": "change-vs-baseline"
+   },
+   {
+    "source": "ARC81",
+    "mechanism_tag": "shared-measured-component"
+   },
+   {
+    "source": "CHI13",
+    "mechanism_tag": "change-vs-baseline"
+   }
+  ]
+ },
+ "B3B": {
+  "n": 15,
+  "by_source_tag": {
+   "ATC76|ratio-shared-denominator": 3,
+   "BLO77|change-vs-baseline": 2,
+   "CUR13|ratio-vs-denominator-proxy": 3,
+   "MOR86|shared-measured-component": 1,
+   "STR87|shared-measured-component": 3,
+   "TU04|change-vs-baseline": 2,
+   "TU07|change-vs-baseline": 1
+  },
+  "task_pairs": {
+   "ATC76": {
+    "ratio-shared-denominator": 2
+   },
+   "CUR13": {
+    "ratio-vs-denominator-proxy": 2
+   },
+   "TU07": {
+    "change-vs-baseline": 1
+   },
+   "BLO77": {
+    "change-vs-baseline": 1
+   },
+   "TU04": {
+    "change-vs-baseline": 1
+   },
+   "STR87": {
+    "shared-measured-component": 2
+   },
+   "MOR86": {
+    "shared-measured-component": 1
+   }
+  },
+  "task_reserves": [
+   {
+    "source": "ATC76",
+    "mechanism_tag": "ratio-shared-denominator"
+   },
+   {
+    "source": "CUR13",
+    "mechanism_tag": "ratio-vs-denominator-proxy"
+   },
+   {
+    "source": "BLO77",
+    "mechanism_tag": "change-vs-baseline"
+   },
+   {
+    "source": "STR87",
+    "mechanism_tag": "shared-measured-component"
+   },
+   {
+    "source": "TU04",
+    "mechanism_tag": "change-vs-baseline"
+   }
+  ]
+ },
+ "DEC": {
+  "n": 12,
+  "by_source_tag": {
+   "BAR05|None": 1,
+   "HUR84|None": 2,
+   "KRI09|None": 1,
+   "KRI10|None": 1,
+   "LAZ10|None": 1,
+   "LAZ18|None": 1,
+   "MAK19|None": 2,
+   "MOR03|None": 1,
+   "NIE11|None": 1,
+   "VUL09|None": 1
+  },
+  "task_pairs": {
+   "B-1": {
+    "KRI09": 1,
+    "VUL09": 1,
+    "MOR03": 1,
+    "BAR05": 1
+   },
+   "B-6": {
+    "NIE11": 1,
+    "HUR84": 1,
+    "LAZ10": 1,
+    "LAZ18": 1
+   }
+  },
+  "task_reserves": [
+   {
+    "class": "B-1",
+    "source": "KRI10"
+   },
+   {
+    "class": "B-1",
+    "source": "MAK19"
+   },
+   {
+    "class": "B-6",
+    "source": "MAK19"
+   },
+   {
+    "class": "B-6",
+    "source": "HUR84"
+   }
+  ]
+ }
+}

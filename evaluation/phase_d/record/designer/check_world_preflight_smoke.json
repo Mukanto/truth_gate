@@ -1,0 +1,101 @@
+{
+ "transcript": "C:/Users/user/.claude/projects/E--Claude-Projects/e99bcaed-1f5d-4c84-948a-5ba1699cb0eb/subagents/agent-a7db422431a547b92.jsonl",
+ "transcript_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+ "first_last_utc": [
+  "2026-11-17T19:47:20.106Z",
+  "2026-11-17T19:47:26.472Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "f9b46be489687770ac07ed043bab193127d83bed23d7b7cf6b411c6bb78bd178",
+ "prompt_is_frozen": false,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": true,
+ "prompt_diff": null,
+ "injected_remainder_len": 4613,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 2
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Glob": 1
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "a7db422431a547b92",
+  "other_agentIds": [],
+  "sessionIds": [
+   "e99bcaed-1f5d-4c84-948a-5ba1699cb0eb"
+  ],
+  "filename_agent_id": "a7db422431a547b92",
+  "agentId_matches_filename": true,
+  "problems": []
+ },
+ "terms_scanned": 0,
+ "term_hits": [],
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.325"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "xhigh",
+  "effort_sources": {
+   "api-request.params.output_config.effort": [
+    "xhigh"
+   ],
+   "assistant.effort": [
+    "xhigh"
+   ],
+   "assistant.perTurnEffort": [
+    "xhigh"
+   ],
+   "prefix.state.effortValue": [
+    "xhigh"
+   ]
+  },
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [
+   "{\"display\": \"updates\", \"type\": \"adaptive\"}"
+  ],
+  "entrypoints": [
+   "claude-desktop"
+  ],
+  "cwds": [
+   "E:\\Claude Projects\\kapi-oss\\evaluation\\phase_d"
+  ]
+ },
+ "provenance": {},
+ "unmatched_patterns": [
+  "nothing_*"
+ ],
+ "unchecked_written_files": [],
+ "files_checked": 0,
+ "unparsable_lines": [],
+ "reasons": [
+  "prompt file is not the frozen prompt (sha256 f9b46be489687770ac07ed043bab193127d83bed23d7b7cf6b411c6bb78bd178)"
+ ],
+ "valid": false
+}

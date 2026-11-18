@@ -1,0 +1,25 @@
+{
+ "id": "D-001",
+ "source": "BLO77",
+ "passage": "'it is often of interest to investigate whether there exists a relationship between the rate of change and the initial value.' 'the maximum likelihood (ML) estimates of the second-order moments of the true slope and the true initial value are obtained by simple adjustments of the corresponding moments of the estimated quantities.' (abstract, OpenAlex).",
+ "faulty": "Pearson correlation across the 150 individuals between the least-squares slope of each individual's three readings and the first reading; criterion r <= -0.30.",
+ "fixed": "Blomqvist adjustment with m = 3 (pooled error variance from residuals about each individual's line, 1 degree of freedom each): corrected Cov(alpha, beta), Var(alpha), Var(beta) as in B3B-06; fixed correlation = corrected Cov/sqrt(corrected Var(alpha)*corrected Var(beta)); criterion <= -0.30 (None when a corrected variance is not positive).",
+ "estimand": "Faulty: correlation between the estimated rate of change and the observed first reading. Fixed: correlation between the true rate of change and the true initial value.",
+ "model_family": "Source's: linear individual trends with normal (alpha_i, beta_i) and independent normal reading errors; fixed for both twins.",
+ "statistic_family": "correlation",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size or number of visits in the abstract. 150 individuals x 3 visits is the smallest design that has an estimable error variance (1 residual degree of freedom per individual) and a realistic cohort size; the check is trivial. Size dependence: not stated.",
+ "exploited_structure": "The first reading carries a reading error that also enters the fitted slope with opposite sign; with only three visits the slope is poorly estimated, which makes the effect larger.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    x = np.asarray(d['systolic_bp'], dtype=float)\n    m = x.shape[1]\n    t = np.arange(m, dtype=float)\n    tc = t - t.mean()\n    b = (x - x.mean(axis=1, keepdims=True)) @ tc / np.sum(tc ** 2)\n    fit = x.mean(axis=1, keepdims=True) + b[:, None] * tc[None, :]\n    s2 = np.mean(np.sum((x - fit) ** 2, axis=1) / (m - 2))\n    return float(s2 / np.var(x[:, 0], ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.15,
+  "note_value_source": "source states none: no error variance is given; 0.15 as in B3B-06 (error SD about 6 mmHg against between-person SD about 15 mmHg)",
+  "set_by_brief": false
+ },
+ "notes": "RESERVE (BLO77 reserve). Differs from B3B-06 by statistic (correlation), the number of occasions (3) and the sample-size regime (150); differs from B3B-05 by data structure (individuals x occasions, latent rate).",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.15
+}

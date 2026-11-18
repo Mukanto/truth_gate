@@ -1,0 +1,98 @@
+# Phase D world-author injected-context scan (P-1 amendment 1): source keys, class/subtype labels, mechanism tags,
+# error names, designer file names, arm names. Case-insensitive substring match.
+# source keys
+AMB02
+ARC81
+ATC76
+BAR05
+BLO77
+CHI13
+CUR13
+HUR84
+KAP23
+KRI09
+KRI10
+KRO93
+LAZ10
+LAZ18
+MAK19
+MOR03
+MOR86
+NIE11
+PEA97
+ROB17
+SAE17
+SAN18
+SIM03
+STR87
+TU04
+TU07
+VAR06
+VUL09
+# class and subtype labels
+B-1
+B-2
+B-3
+B-6
+L1.1
+L1.2
+L1.3
+L1.4
+L3.1
+L3.2
+# mechanism tags
+L1.1
+L1.2
+L1.3
+L1.4
+L3.1
+L3.2
+change-vs-baseline
+extreme-group-change
+ratio-shared-denominator
+ratio-vs-denominator-proxy
+select-then-test-same-data
+shared-measured-component
+significant-here-not-there
+split-by-baseline-compare-change
+units-not-independent
+# error names
+leakage
+resubstitution
+oversampling
+SMOTE
+target encoding
+regression to the mean
+pseudoreplication
+double dipping
+circular analysis
+shared denominator
+spurious correlation
+mathematical coupling
+record-wise
+subject-wise
+nested cross-validation
+feature selection on the whole
+# designer files and folders
+PRIVATE.json
+ID_MAP
+CASE.md
+faulty_body
+fixed_body
+CASE_IDS
+STRUCTURE_LOG
+validity_log
+FREEZE_VALIDITY
+TABLE_DECISIONS
+SELECTION_
+AUDIT_A
+SANDBOX_MAP
+criterion\
+structure\
+# arms
+W-0
+W-1
+WORLD_INSTRUCTIONS_D0
+WORLD_INSTRUCTIONS_D1
+CHECKLIST_LOG
+checklist

@@ -1,0 +1,36 @@
+{
+ "id": "D-023",
+ "claim": "Across 2000 adult specimens of one beetle species, head width and wing length are associated beyond what body length explains: the partial correlation between head width and wing length, controlling for body length, is at least 0.30.",
+ "data_keys": [
+  {
+   "key": "head_width",
+   "shape": "(specimens,)",
+   "dtype": "float",
+   "meaning": "head width of each specimen, in mm",
+   "dims": [
+    2000
+   ]
+  },
+  {
+   "key": "wing_length",
+   "shape": "(specimens,)",
+   "dtype": "float",
+   "meaning": "wing length of each specimen, in mm",
+   "dims": [
+    2000
+   ]
+  },
+  {
+   "key": "body_length",
+   "shape": "(specimens,)",
+   "dtype": "float",
+   "meaning": "body length of each specimen, in mm",
+   "dims": [
+    2000
+   ]
+  }
+ ],
+ "sizes": {
+  "specimens": 2000
+ }
+}

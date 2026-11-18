@@ -1,0 +1,146 @@
+{
+  "case": "D-020",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "faulty rate 0 < 0.25; Fisher p 1 >= 0.01",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.34516256796888384,
+        "sd": 0.00904649995894456,
+        "values_head": [
+          0.3212248621244216,
+          0.3453846031044961,
+          0.3529490978161815,
+          0.3583546224228077,
+          0.3386876493825147
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.34423883908430986,
+        "sd": 0.008718424552458104,
+        "values_head": [
+          0.3413005896108973,
+          0.350494710469128,
+          0.3268637130904965,
+          0.34006236754398395,
+          0.3230330266749507
+        ],
+        "share_beyond_half": 1.0
+      },
+      "note_value": 0.35,
+      "null_value": 0.0,
+      "tolerance": 0.06999999999999999,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.0009237288845739822,
+      "three_se": 0.0026651930452190453,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "body_mass",
+          "heart_weight",
+          "liver_weight"
+        ],
+        "changed_keys": [
+          "liver_weight"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "liver_weight"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 0,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 0.0,
+      "fixed_rate": 0.0,
+      "fisher_p": 1.0,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 1000,
+        "n": 1000,
+        "rate": 1.0,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": false,
+  "v1_label": "V1a",
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 0.00022612499997194392,
+    "g": 0.00016261999971902696,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.9329879992583301,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "e5c6c772cada680959213239fd7ce0836c69cfe8b9138eaf9f64f1e67cc13d82",
+    "PRIVATE.json": "81222640b1a49a353d3e8fd1b7b1023d10720e35c217e731a3681a6cf051b7f4",
+    "faulty_body.py": "ddaabc31c1116a87cdc7cfd3cc40825b2960c33acf791f5369179d1270a96484",
+    "fixed_body.py": "a1ed50dda8dfa818d749c86fdaa52723a4048e702e13af58260b3601b18f0016",
+    "reference.py": "67ce7c619dfa736a4283e6f24e4449be5c7dc6ba010b2cb3f70efc93ec94eaae"
+  },
+  "decisive": true
+}

@@ -1,0 +1,371 @@
+[
+  {
+    "id": "D-013",
+    "claim": "Gene-expression profiles allow the two classes to be told apart in new samples: the classification error rate is at most 0.40.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(samples, genes)",
+        "dtype": "float",
+        "meaning": "expression level of each gene in each sample",
+        "dims": [
+          40,
+          2000
+        ]
+      },
+      {
+        "key": "class_b",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True for a sample of class B, False for a sample of class A",
+        "dims": [
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 40,
+      "genes": 2000
+    }
+  },
+  {
+    "id": "D-014",
+    "claim": "The laboratory values in X predict the outcome y for new patients: the R-squared of a ridge regression of y on the 20 laboratory values (penalty 1.0 on standardised values, with an intercept) is at least 0.10.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "20 laboratory values per patient; a value that was not measured for a patient is NaN",
+        "dims": [
+          250,
+          20
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous clinical outcome of each patient",
+        "dims": [
+          250
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 250,
+      "features": 20
+    }
+  },
+  {
+    "id": "D-015",
+    "claim": "Baseline BMI explains at least 10% of the variance in the change in BMI between baseline and follow-up (R-squared of at least 0.10).",
+    "data_keys": [
+      {
+        "key": "bmi_baseline",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "BMI of each child at the baseline visit, in kg/m2",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "bmi_baseline_retest",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "a second BMI measurement of each child at the baseline visit, in kg/m2",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "bmi_followup",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2",
+        "dims": [
+          500
+        ]
+      }
+    ],
+    "sizes": {
+      "children": 500
+    }
+  },
+  {
+    "id": "D-016",
+    "claim": "Fourteen pregnant dams each had a measured exposure level to a chemical, and 4 pups per dam were scored on a performance test at weaning. Claim: across dams, the correlation between a dam's exposure level and the mean score of her pups is positive, judged by a one-sided test of the correlation against zero at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "exposure",
+        "shape": "(dams,)",
+        "dtype": "float",
+        "meaning": "exposure level of each dam",
+        "dims": [
+          14
+        ]
+      },
+      {
+        "key": "outcome",
+        "shape": "(dams, pups)",
+        "dtype": "float",
+        "meaning": "performance score at weaning of each pup of each dam",
+        "dims": [
+          14,
+          4
+        ]
+      }
+    ],
+    "sizes": {
+      "dams": 14,
+      "pups": 4
+    }
+  },
+  {
+    "id": "D-017",
+    "claim": "At a given height, the mean forced vital capacity of smokers and of non-smokers differs by at least 0.2 L: the difference between the two group means, after accounting for height, is at least 0.2 L in absolute value.",
+    "data_keys": [
+      {
+        "key": "fvc",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "forced vital capacity of each subject, in litres",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "height",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "standing height of each subject, in cm",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "smoker",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True if the subject is a current smoker",
+        "dims": [
+          600
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 600
+    }
+  },
+  {
+    "id": "D-018",
+    "claim": "Sensor measurements classify the disease status of newly recruited subjects: the area under the ROC curve of the classification is at least 0.70.",
+    "data_keys": [
+      {
+        "key": "measurements",
+        "shape": "(subjects, records, variables)",
+        "dtype": "float",
+        "meaning": "sensor measurements of each recording of each subject",
+        "dims": [
+          16,
+          60,
+          10
+        ]
+      },
+      {
+        "key": "diseased",
+        "shape": "(subjects,)",
+        "dtype": "bool",
+        "meaning": "True if the subject has the disease",
+        "dims": [
+          16
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 16,
+      "records": 60,
+      "variables": 10
+    }
+  },
+  {
+    "id": "D-019",
+    "claim": "In 400 adults with systolic blood pressure measured at five annual visits, those with a higher initial blood pressure have a lower yearly rate of change: the regression slope of an individual's underlying yearly rate of change in systolic blood pressure on the individual's underlying initial systolic blood pressure is at most -0.03 mmHg per year per mmHg.",
+    "data_keys": [
+      {
+        "key": "systolic_bp",
+        "shape": "(individuals, occasions)",
+        "dtype": "float",
+        "meaning": "systolic blood pressure of each individual at each of five annual visits, with the visits in time order, in mmHg",
+        "dims": [
+          400,
+          5
+        ]
+      }
+    ],
+    "sizes": {
+      "individuals": 400,
+      "occasions": 5
+    }
+  },
+  {
+    "id": "D-020",
+    "claim": "Heart weight accounts for at least 10% of the variance in liver weight beyond what body mass accounts for: the increase in R-squared when heart weight is added to a regression of liver weight on body mass is at least 0.10.",
+    "data_keys": [
+      {
+        "key": "liver_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "liver weight of each mouse, in g",
+        "dims": [
+          1500
+        ]
+      },
+      {
+        "key": "heart_weight",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "heart weight of each mouse, in g",
+        "dims": [
+          1500
+        ]
+      },
+      {
+        "key": "body_mass",
+        "shape": "(mice,)",
+        "dtype": "float",
+        "meaning": "body mass of each mouse, in g",
+        "dims": [
+          1500
+        ]
+      }
+    ],
+    "sizes": {
+      "mice": 1500
+    }
+  },
+  {
+    "id": "D-021",
+    "claim": "In a field experiment, 8 plots were each surveyed on 12 successive dates and scored as occupied or not by a species on each date; the array fenced marks plots fenced against grazers. Claim: mean occupancy is higher in fenced plots than in open plots by at least 0.15, where the occupancy of a plot is the fraction of dates on which it is occupied, and a one-sided test of the difference between the mean occupancy of fenced plots and that of open plots is significant at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "present",
+        "shape": "(plots, dates)",
+        "dtype": "bool",
+        "meaning": "True if the species was present in that plot on that date; dates are in time order",
+        "dims": [
+          8,
+          12
+        ]
+      },
+      {
+        "key": "fenced",
+        "shape": "(plots,)",
+        "dtype": "bool",
+        "meaning": "True if the plot was fenced against grazers",
+        "dims": [
+          8
+        ]
+      }
+    ],
+    "sizes": {
+      "plots": 8,
+      "dates": 12
+    }
+  },
+  {
+    "id": "D-022",
+    "claim": "A second-order polynomial regression of the quality score y on the process readings X (an intercept, the 10 readings, their squares and all pairwise products, fitted by ordinary least squares) predicts y for new runs with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "10 continuous process readings recorded for each production run",
+        "dims": [
+          300,
+          10
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "float",
+        "meaning": "continuous quality score of each production run",
+        "dims": [
+          300
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 300,
+      "features": 10
+    }
+  },
+  {
+    "id": "D-023",
+    "claim": "Across 2000 adult specimens of one beetle species, head width and wing length are associated beyond what body length explains: the partial correlation between head width and wing length, controlling for body length, is at least 0.30.",
+    "data_keys": [
+      {
+        "key": "head_width",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "head width of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      },
+      {
+        "key": "wing_length",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "wing length of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      },
+      {
+        "key": "body_length",
+        "shape": "(specimens,)",
+        "dtype": "float",
+        "meaning": "body length of each specimen, in mm",
+        "dims": [
+          2000
+        ]
+      }
+    ],
+    "sizes": {
+      "specimens": 2000
+    }
+  },
+  {
+    "id": "D-024",
+    "claim": "Gene-expression profiles allow tumour tissue to be distinguished from normal tissue in new samples: the classification error rate is at most 0.20.",
+    "data_keys": [
+      {
+        "key": "expression",
+        "shape": "(tissues, genes)",
+        "dtype": "float",
+        "meaning": "log expression level of each gene in each tissue sample",
+        "dims": [
+          62,
+          2000
+        ]
+      },
+      {
+        "key": "tumour",
+        "shape": "(tissues,)",
+        "dtype": "bool",
+        "meaning": "True for a tumour tissue sample, False for a normal tissue sample",
+        "dims": [
+          62
+        ]
+      }
+    ],
+    "sizes": {
+      "tissues": 62,
+      "genes": 2000
+    }
+  }
+]

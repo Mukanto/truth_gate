@@ -1,0 +1,25 @@
+{
+ "id": "D-049",
+ "source": "SAN18",
+ "passage": "Abstract: \"A frequent experimental flaw is the application of oversampling algorithms to the entire dataset, resulting in biased models and overly-optimistic estimates.\"",
+ "faulty": "SMOTE (k = 5 nearest minority neighbours, minority synthesised up to the majority count) is applied to all 600 records; stratified 5-fold cross-validation with a CART decision tree (max depth 6) then runs on the enlarged data, and the F1 score of the positive class, pooled over the test folds (which contain synthetic rows), is the statistic. Claim holds when F1 >= 0.50.",
+ "fixed": "Stratified 5-fold cross-validation on the original 600 records; SMOTE is applied to the training folds only; F1 of the positive class is computed on the original (non-synthetic) test-fold records, pooled.",
+ "estimand": "Faulty: F1 on a test set that contains synthetic interpolations of training minority rows. Fixed: F1 on original records of new data from the natural class distribution.",
+ "model_family": "CART decision tree (max depth 6) with SMOTE (k = 5). Chosen by me: the abstract names no classifier; a tree makes the synthetic-neighbour overlap visible and is cheap.",
+ "statistic_family": "classification",
+ "guard_minimum": 1,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not open). 600 x 12 is a small tabular dataset, cheap to check. Dependence of the error on imbalance or n: not stated in the abstract. The exploited structure needs a minority class; the brief does not state that (a brief may not), so the world author may or may not make it rare.",
+ "exploited_structure": "A small positive class: synthesised positives lie between real positives, so a synthetic row in a test fold has a near neighbour in the training folds.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    return float(np.mean(d[\"positive\"]))",
+  "direction": "less",
+  "null_value": 0.5,
+  "note_value": 0.1,
+  "note_value_source": "source states none: the abstract gives no imbalance ratio; 0.1 is a typical minority share proposed as the setting's value",
+  "set_by_brief": false
+ },
+ "notes": "Subtype L1.2 per PB tie rule (SMOTE synthesises rows). The statistic uses only the labels, which a claim-false world keeps. Guard: no positive record in the evaluated test data.",
+ "subtype_or_tag": "L1.2",
+ "class": "B-2",
+ "approved_value": 0.1
+}

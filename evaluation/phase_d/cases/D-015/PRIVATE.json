@@ -1,0 +1,25 @@
+{
+ "id": "D-015",
+ "source": "CHI13",
+ "passage": "'The corresponding correlation r Blomqvist was estimated.' with b_Blomqvist = (b_crude + k)/(1 - k), k = variance of measurement error / total variance = 1 - ICC between (short-term) repeated measurements (Analyses, Europe PMC full text)",
+ "faulty": "R-squared of the regression of (bmi_followup - bmi_baseline) on bmi_baseline (squared crude correlation), compared with 0.10.",
+ "fixed": "Squared Blomqvist-adjusted correlation, with the crude slope adjusted as (b_crude + k)/(1 - k) and k = 1 - corr(bmi_baseline, bmi_baseline_retest) (the ICC estimated from the two baseline readings), converted to a correlation with the SDs of the true baseline and change; compared with 0.10.",
+ "estimand": "Faulty: share of variance of observed change explained by observed baseline. Fixed: share of variance of true change explained by true baseline level (the source's r_Blomqvist squared).",
+ "model_family": "The source's linear individual growth model (see B3A-03), with a second baseline reading with independent error.",
+ "statistic_family": "R-squared",
+ "guard_minimum": "2 children; guards: non-finite values, selection below 2, zero variance of baseline or change, k equal to 1.",
+ "sizes_note": "Source: 500 children, used as is. Size dependence: bias of the crude estimate depends on error variance and on the between-child variability of change; for n the source says only that variability of the estimates would be greater with a smaller cohort.",
+ "exploited_structure": "The change is computed from the baseline and related to that same baseline, whose measurement error enters both with opposite sign.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['bmi_baseline'], dtype=float)\n    b = np.asarray(d['bmi_baseline_retest'], dtype=float)\n    return float(1.0 - np.corrcoef(a, b)[0, 1])",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.05,
+  "note_value_source": "'Assuming a relatively low measurement error variance (ICC of 95%)' (Results): 1 - ICC = 0.05.",
+  "set_by_brief": false
+ },
+ "notes": "Role: reserve (CHI13, 2 of 2). Same keys as B3A-03 but a different statistic (R-squared) and a different documented correction (Blomqvist's adjustment instead of the repeated measurement method), so it differs in statistic and pipeline step.",
+ "subtype_or_tag": "change-vs-baseline",
+ "class": "B-3",
+ "approved_value": 0.05
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-036",
+ "source": "ARC81",
+ "passage": "'Type 2 coupling is the functional relationship between two calculated variables which have one or more common component variables.' and 'one variable either directly or indirectly contains the whole or components of the second variable.' (abstract, PubMed 7212790). The abstract gives no correction; the correction used is the standard remedy of an independent measurement of the shared term.",
+ "faulty": "R-squared of the regression of SVR = 80 * (mean_arterial_pressure - central_venous_pressure) / co_thermodilution on co_thermodilution, compared with 0.25.",
+ "fixed": "R-squared of the regression of SVR (computed with co_thermodilution) on co_fick, compared with 0.25.",
+ "estimand": "Faulty: share of variance of calculated resistance explained by the cardiac output it was calculated from. Fixed: share of variance of calculated resistance explained by an independently measured cardiac output.",
+ "model_family": "Source names none. Choice: log-normal true cardiac output (CV about 0.3), true resistance SVR = s0 * CO^(-g) * exp(noise) with g = 0 in the claim-false version, pressure drop MAP - CVP = CO * SVR / 80 from the true values, each cardiac output measurement equal to the true value times independent log-normal error (CV about 0.1). Reason: the pressure drop then follows from the physiology and the two measurements of the same output can be compared.",
+ "statistic_family": "R-squared",
+ "guard_minimum": "2 patients (R-squared of a simple regression); guards: non-finite values, selection below 2, zero variance of resistance or of cardiac output, zero cardiac output.",
+ "sizes_note": "Source (abstract only) states no sizes. 100 patients is a realistic haemodynamic series; check is one simple regression. Dependence on n: not stated.",
+ "exploited_structure": "The resistance is calculated with cardiac output as divisor and is then related to that same output measurement, whose error enters both sides.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    c = np.asarray(d['co_thermodilution'], dtype=float)\n    return float(np.std(c, ddof=1) / abs(np.mean(c)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.3 is a proposed coefficient of variation of cardiac output in a mixed patient series; it uses the cardiac output key only, which the claim-false version leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: reserve (ARC81). A quantity related to one of its own divisors (the second branch of the tag). Earlier combos for ARC81 included shared-measured-component x R-squared; could not avoid it for a third ARC81 brief. The correction is not documented in the abstract and is flagged as not verified in the source text.",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.3
+}

@@ -1,0 +1,36 @@
+{
+ "id": "D-032",
+ "claim": "240 participants each received either a drug or a vehicle, and each was classified as a responder or not. Some participants carry a gene variant. Claim: the drug raises the proportion of responders more in carriers than in non-carriers, that is, the difference between the two drug-minus-vehicle differences in responder proportion (carriers minus non-carriers) is positive, judged by a one-sided test at the 0.05 level.",
+ "data_keys": [
+  {
+   "key": "responder",
+   "shape": "(participants,)",
+   "dtype": "bool",
+   "meaning": "True if the participant met the response criterion",
+   "dims": [
+    240
+   ]
+  },
+  {
+   "key": "drug",
+   "shape": "(participants,)",
+   "dtype": "bool",
+   "meaning": "True if the participant received the drug, False if the vehicle",
+   "dims": [
+    240
+   ]
+  },
+  {
+   "key": "carrier",
+   "shape": "(participants,)",
+   "dtype": "bool",
+   "meaning": "True if the participant carries the gene variant",
+   "dims": [
+    240
+   ]
+  }
+ ],
+ "sizes": {
+  "participants": 240
+ }
+}

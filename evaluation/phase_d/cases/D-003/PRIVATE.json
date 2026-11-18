@@ -1,0 +1,25 @@
+{
+ "id": "D-003",
+ "source": "SAN18",
+ "passage": "Abstract: \"A frequent experimental flaw is the application of oversampling algorithms to the entire dataset, resulting in biased models and overly-optimistic estimates.\" (copying rows = random oversampling, L1.4 by PB's tie rule, SOURCES_D)",
+ "faulty": "Random oversampling (minority rows copied with replacement until classes have equal counts) is applied to all 1000 records; stratified 10-fold cross-validation with a 5-nearest-neighbour classifier (probability = share of positive neighbours) then runs on the enlarged data; the AUC of the pooled test-fold scores is the statistic. Claim holds when AUC >= 0.75.",
+ "fixed": "Stratified 10-fold cross-validation on the original records; oversampling of the training folds only; AUC on the original test-fold records, pooled.",
+ "estimand": "Faulty: AUC on test rows that are copies of training rows. Fixed: AUC on new records.",
+ "model_family": "5-nearest-neighbour classifier with random oversampling. Chosen by me: the abstract names no classifier; duplicates are their own nearest neighbours.",
+ "statistic_family": "classification",
+ "guard_minimum": 2,
+ "sizes_note": "Source sizes: not stated in the abstract (full text not open). 1000 x 15 = 15k values, a mid-size regime; cheap. Dependence on imbalance: not stated.",
+ "exploited_structure": "A small event class whose rows are repeated, so a test copy has its twin in the fitting data.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    pos = int(np.sum(d[\"event\"]))\n    neg = int(d[\"event\"].size) - pos\n    return float(max(pos, neg)) / float(max(min(pos, neg), 1))",
+  "direction": "greater",
+  "null_value": 1.0,
+  "note_value": 9.0,
+  "note_value_source": "source states none: the abstract gives no imbalance ratio; 9.0 (a 90/10 split) is proposed as typical",
+  "set_by_brief": false
+ },
+ "notes": "Reserve for SAN18 L1.4. Differs from B2B-05 in statistic (AUC vs sensitivity), size (1000 x 15 vs 400 x 8) and model.",
+ "subtype_or_tag": "L1.4",
+ "class": "B-2",
+ "approved_value": 9.0
+}

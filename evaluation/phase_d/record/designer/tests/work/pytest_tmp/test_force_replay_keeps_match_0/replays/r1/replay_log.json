@@ -1,0 +1,38 @@
+{
+ "sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\world\\w1",
+ "label": "w1",
+ "manifest": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\MANIFEST.json",
+ "timeout_s": 60,
+ "replica_sandbox": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\replays\\r1\\root\\world\\w1",
+ "summary": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\replays\\r1",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\replays\\r1\\replay_log.json",
+  "n_replayed_calls": 1,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 0,
+  "n_manifest_files_copied": 0,
+  "not_run_reason": null
+ },
+ "replica_sha256": {
+  "skeletons/a.py": "9e26bf369911c45c243c684147b23fc9e1dcfcf257d299a1c632016a6fcd33f4"
+ },
+ "calls": [
+  {
+   "call_index": 1,
+   "line": 2,
+   "tool": "Write",
+   "tool_use_id": "toolu_2",
+   "background": false,
+   "path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\world\\w1\\skeletons\\a.py",
+   "mapped_path": "E:\\Claude Projects\\Kapi\\phase_d_work\\designer\\tests\\work\\pytest_tmp\\test_force_replay_keeps_match_0\\replays\\r1\\root\\world\\w1\\skeletons\\a.py",
+   "status": "ok"
+  }
+ ]
+}

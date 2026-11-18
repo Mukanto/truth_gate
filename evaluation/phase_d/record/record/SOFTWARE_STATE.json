@@ -1,0 +1,48 @@
+{
+ "v0.5.1_commit": "0aed4249f9023a449ee7efc86d17c090777f5eac",
+ "v0.5.0_commit": "5661709326f11451323820210b8a49f0e16a031d",
+ "freeze_commit": "77e5c1d7a6630d06a9139e9116717a8d2ce8a036",
+ "v0.5.1_pushed": true,
+ "python": "3.14.2",
+ "numpy": "2.4.1",
+ "machine": {
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "cpu_count": 12
+ },
+ "pkg": "pkg/ = git archive v0.5.1 truth_gate kapi; pkg_v050/ = git archive v0.5.0 truth_gate kapi (smoke test only)",
+ "package_difference_v050_v051": "truth_gate/external.py (R-28: launch the PATH-resolved path, hash the real path), truth_gate/certificate.py (TOOL_VERSION), truth_gate/templates/truth-gate.yml (@v0.5.1); kapi/ unchanged",
+ "smoke_test": {
+  "study": "smoke/smoke_study.py (Phase C's, not a case)",
+  "v0.5.1": "FALSIFIABLE, exit 0, truth_gate imported from pkg/",
+  "v0.5.0": "FALSIFIABLE, exit 0, truth_gate imported from pkg_v050/"
+ },
+ "fable_preflight_attempt1": {
+  "agent_id": "aa92c2228cc59608d",
+  "model_parameter": "fable",
+  "result": "not started: API error 'Fable 5.2 requires usage credits' (HTTP 429); one <synthetic> message, no assistant message",
+  "transcript": "kept private (agent transcripts are not published); SHA-256 below",
+  "transcript_sha256": "f34fa16364af89dccd9d5e5548bec65c93657bd8444272f8d9d3b691b1df42c1"
+ },
+ "world_author_model": "Claude Opus 5.5 (REVISIONS-post-freeze.md P-1, author's decision 2026-11-17)",
+ "opus_preflight": {
+  "agent_id": "a7db422431a547b92",
+  "prompt_contains_brief": false,
+  "meta_model": "opus",
+  "meta_pickedEffortModel": "claude-opus-5-5",
+  "assistant_message_models": {
+   "claude-opus-5-5": 3
+  },
+  "tools_called": {
+   "Glob": 1
+  },
+  "linked_agent_transcripts": 0,
+  "first_last_utc": [
+   "2026-11-17T19:47:20.106Z",
+   "2026-11-17T19:47:26.472Z"
+  ],
+  "transcript_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+  "transcript": "kept private (agent transcripts are not published); SHA-256 above",
+  "result": "pass (every assistant message claude-opus-5-5)"
+ }
+}

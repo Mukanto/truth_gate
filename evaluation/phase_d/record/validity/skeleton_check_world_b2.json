@@ -1,0 +1,652 @@
+{
+  "truth_gate_file": "E:\\Claude Projects\\Kapi\\phase_d_work\\record\\pkg\\truth_gate\\__init__.py",
+  "D-052/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-052"
+    ],
+    "control_max_ms": {
+      "D-052": 0.04
+    },
+    "shapes": {
+      "pre": [
+        40
+      ],
+      "post": [
+        40
+      ],
+      "young": [
+        40
+      ]
+    },
+    "max_ms": 0.087
+  },
+  "D-052/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "age_labels_permuted",
+      "pre_post_swapped"
+    ],
+    "control_max_ms": {
+      "age_labels_permuted": 0.024,
+      "pre_post_swapped": 0.016
+    },
+    "shapes": {
+      "pre": [
+        40
+      ],
+      "post": [
+        40
+      ],
+      "young": [
+        40
+      ]
+    },
+    "max_ms": 0.036
+  },
+  "D-052/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "age_labels_permuted"
+    ],
+    "control_max_ms": {
+      "age_labels_permuted": 0.02
+    },
+    "shapes": {
+      "pre": [
+        40
+      ],
+      "post": [
+        40
+      ],
+      "young": [
+        40
+      ]
+    },
+    "max_ms": 0.042
+  },
+  "D-055/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-055"
+    ],
+    "control_max_ms": {
+      "D-055": 0.047
+    },
+    "shapes": {
+      "X": [
+        1000,
+        6
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 3.931
+  },
+  "D-055/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "outcome_circular_shift",
+      "predictor_blocks_permuted"
+    ],
+    "control_max_ms": {
+      "outcome_circular_shift": 0.038,
+      "predictor_blocks_permuted": 0.073
+    },
+    "shapes": {
+      "X": [
+        1000,
+        6
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 1.445
+  },
+  "D-055/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "y_circularly_shifted_200_to_800_days"
+    ],
+    "control_max_ms": {
+      "y_circularly_shifted_200_to_800_days": 0.037
+    },
+    "shapes": {
+      "X": [
+        1000,
+        6
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 1.557
+  },
+  "D-056/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-056"
+    ],
+    "control_max_ms": {
+      "D-056": 0.021
+    },
+    "shapes": {
+      "oxygen_uptake": [
+        3,
+        25
+      ],
+      "body_mass": [
+        3,
+        25
+      ]
+    },
+    "max_ms": 0.043
+  },
+  "D-056/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "rats_permuted_across_groups"
+    ],
+    "control_max_ms": {
+      "rats_permuted_across_groups": 0.026
+    },
+    "shapes": {
+      "oxygen_uptake": [
+        3,
+        25
+      ],
+      "body_mass": [
+        3,
+        25
+      ]
+    },
+    "max_ms": 0.037
+  },
+  "D-056/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "animals_permuted_across_groups_with_their_mass"
+    ],
+    "control_max_ms": {
+      "animals_permuted_across_groups_with_their_mass": 0.035
+    },
+    "shapes": {
+      "oxygen_uptake": [
+        3,
+        25
+      ],
+      "body_mass": [
+        3,
+        25
+      ]
+    },
+    "max_ms": 0.062
+  },
+  "D-062/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_humerus_within_species"
+    ],
+    "control_max_ms": {
+      "permute_humerus_within_species": 0.25
+    },
+    "shapes": {
+      "femur": [
+        12,
+        30
+      ],
+      "humerus": [
+        12,
+        30
+      ],
+      "body_length": [
+        12,
+        30
+      ]
+    },
+    "max_ms": 0.093
+  },
+  "D-062/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "humerus_permuted_within_species",
+      "humerus_exchanged_among_length_matched_individuals"
+    ],
+    "control_max_ms": {
+      "humerus_exchanged_among_length_matched_individuals": 0.1,
+      "humerus_permuted_within_species": 0.078
+    },
+    "shapes": {
+      "femur": [
+        12,
+        30
+      ],
+      "humerus": [
+        12,
+        30
+      ],
+      "body_length": [
+        12,
+        30
+      ]
+    },
+    "max_ms": 0.078
+  },
+  "D-062/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "humerus_swapped_between_body_length_neighbours",
+      "humerus_permuted_within_species"
+    ],
+    "control_max_ms": {
+      "humerus_permuted_within_species": 0.035,
+      "humerus_swapped_between_body_length_neighbours": 0.034
+    },
+    "shapes": {
+      "femur": [
+        12,
+        30
+      ],
+      "humerus": [
+        12,
+        30
+      ],
+      "body_length": [
+        12,
+        30
+      ]
+    },
+    "max_ms": 0.078
+  },
+  "D-064/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-064"
+    ],
+    "control_max_ms": {
+      "D-064": 0.243
+    },
+    "shapes": {
+      "expression": [
+        80,
+        1500
+      ],
+      "clinical": [
+        80,
+        8
+      ],
+      "response": [
+        80
+      ]
+    },
+    "max_ms": 3.328
+  },
+  "D-064/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "response_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "response_permuted_across_patients": 0.076
+    },
+    "shapes": {
+      "expression": [
+        80,
+        1500
+      ],
+      "clinical": [
+        80,
+        8
+      ],
+      "response": [
+        80
+      ]
+    },
+    "max_ms": 2.616
+  },
+  "D-064/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "response_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "response_permuted_across_patients": 0.072
+    },
+    "shapes": {
+      "expression": [
+        80,
+        1500
+      ],
+      "clinical": [
+        80,
+        8
+      ],
+      "response": [
+        80
+      ]
+    },
+    "max_ms": 3.358
+  },
+  "D-066/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-066"
+    ],
+    "control_max_ms": {
+      "D-066": 0.035
+    },
+    "shapes": {
+      "X": [
+        1000,
+        15
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 0.315
+  },
+  "D-066/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "outcome_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "outcome_permuted_across_patients": 0.035
+    },
+    "shapes": {
+      "X": [
+        1000,
+        15
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 0.21
+  },
+  "D-066/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "outcome_permuted_across_patients"
+    ],
+    "control_max_ms": {
+      "outcome_permuted_across_patients": 0.041
+    },
+    "shapes": {
+      "X": [
+        1000,
+        15
+      ],
+      "y": [
+        1000
+      ]
+    },
+    "max_ms": 0.446
+  },
+  "D-067/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "permute_heart_within_mass"
+    ],
+    "control_max_ms": {
+      "permute_heart_within_mass": 0.047
+    },
+    "shapes": {
+      "kidney_weight": [
+        60
+      ],
+      "heart_weight": [
+        60
+      ],
+      "body_mass": [
+        60
+      ]
+    },
+    "max_ms": 0.037
+  },
+  "D-067/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "heart_permuted_across_rats",
+      "heart_exchanged_among_mass_matched_rats"
+    ],
+    "control_max_ms": {
+      "heart_exchanged_among_mass_matched_rats": 0.039,
+      "heart_permuted_across_rats": 0.018
+    },
+    "shapes": {
+      "kidney_weight": [
+        60
+      ],
+      "heart_weight": [
+        60
+      ],
+      "body_mass": [
+        60
+      ]
+    },
+    "max_ms": 0.021
+  },
+  "D-067/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "heart_swapped_between_body_mass_neighbours",
+      "heart_permuted_across_rats"
+    ],
+    "control_max_ms": {
+      "heart_permuted_across_rats": 0.024,
+      "heart_swapped_between_body_mass_neighbours": 0.027
+    },
+    "shapes": {
+      "kidney_weight": [
+        60
+      ],
+      "heart_weight": [
+        60
+      ],
+      "body_mass": [
+        60
+      ]
+    },
+    "max_ms": 0.055
+  },
+  "D-068/reference": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "D-068"
+    ],
+    "control_max_ms": {
+      "D-068": 0.593
+    },
+    "shapes": {
+      "head_width": [
+        25,
+        40
+      ],
+      "wing_length": [
+        25,
+        40
+      ],
+      "body_length": [
+        25,
+        40
+      ]
+    },
+    "max_ms": 0.127
+  },
+  "D-068/W0": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "head_width_permuted_within_population",
+      "head_width_exchanged_among_length_matched_specimens"
+    ],
+    "control_max_ms": {
+      "head_width_exchanged_among_length_matched_specimens": 0.098,
+      "head_width_permuted_within_population": 0.055
+    },
+    "shapes": {
+      "head_width": [
+        25,
+        40
+      ],
+      "wing_length": [
+        25,
+        40
+      ],
+      "body_length": [
+        25,
+        40
+      ]
+    },
+    "max_ms": 0.082
+  },
+  "D-068/W1": {
+    "issues": [],
+    "loaded": true,
+    "worlds": [
+      "minus",
+      "plus"
+    ],
+    "controls": [
+      "head_swapped_between_body_length_neighbours",
+      "head_permuted_within_population"
+    ],
+    "control_max_ms": {
+      "head_permuted_within_population": 0.042,
+      "head_swapped_between_body_length_neighbours": 0.042
+    },
+    "shapes": {
+      "head_width": [
+        25,
+        40
+      ],
+      "wing_length": [
+        25,
+        40
+      ],
+      "body_length": [
+        25,
+        40
+      ]
+    },
+    "max_ms": 0.082
+  }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-023",
+ "source": "ATC76",
+ "passage": "'there is a pronounced increase in spurious correlation between variables when ratios are compounded and the magnitude of this spurious correlation is a function of the size of the denominator coefficient of variation'; the cases include Y = X1/X2 against Z = X3/X2 (abstract, via OpenAlex).",
+ "faulty": "Pearson correlation of the two ratios Y = head_width/body_length and Z = wing_length/body_length over the 2000 specimens; criterion r >= 0.30. Source parameters: X1, X2, X3 continuous; the correlation between the ratios grows with the coefficient of variation of the denominator X2 (from r = 0.0 between raw variables up to r = 0.99 between ratios).",
+ "fixed": "Partial correlation of head_width and wing_length given body_length (correlate the residuals of each on body_length, with intercept); criterion >= 0.30.",
+ "estimand": "Faulty: correlation between two size-standardised ratios, which contains the variation of the common denominator. Fixed: correlation between head width and wing length after the linear effect of body length is removed from both.",
+ "model_family": "Source's simulation family: independent continuous variables X1, X2, X3 (normal for the numerators, positive-skew e.g. lognormal for the denominator X2) with the denominator coefficient of variation as the controlled parameter. Claim-true world adds a latent factor shared by X1 and X3 net of X2. Chosen because the source names only continuous variables with a varied denominator CV; fixed for both twins.",
+ "statistic_family": "correlation",
+ "guard_minimum": 3,
+ "sizes_note": "Source: minimum simulation sample size 25,000, which exceeds the 2000 cap; 2000 (the cap) is used and the check of the fixed analysis (two regressions on 2000 values) takes seconds. Source on size dependence: the spurious correlation is 'a function of the size of the denominator coefficient of variation'; dependence on sample size not stated.",
+ "exploited_structure": "A denominator that varies across specimens (large coefficient of variation) is divided into both numerators, so the two ratios move together whatever the numerators do.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    s = np.asarray(d['body_length'], dtype=float)\n    return float(np.std(s, ddof=1) / np.mean(s))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.15,
+  "note_value_source": "source states none: the abstract says the effect grows with the denominator CV but gives no value; 0.15 is a realistic coefficient of variation of adult body length in a single species, and is enough for the ratio correlation to be large when numerator CVs are about 0.1",
+  "set_by_brief": false
+ },
+ "notes": "Pair case (ATC76 slot 1 of 2 pairs). Statistic family correlation; ATC76 has no earlier combinations. Differs from B3B-02 (slope, per-population structure) and B3B-11 (other, matrix of traits).",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.15
+}

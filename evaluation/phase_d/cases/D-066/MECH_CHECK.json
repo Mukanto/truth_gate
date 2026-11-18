@@ -1,0 +1,72 @@
+{
+  "case": "D-066",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 45,
+          "text": "int((~y).sum()) < 2",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "faulty_body.py",
+          "line": 45,
+          "text": "int(y.sum()) < 2",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 45,
+          "text": "int((~y).sum()) < 2",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        },
+        {
+          "file": "fixed_body.py",
+          "line": 45,
+          "text": "int(y.sum()) < 2",
+          "op": "<",
+          "kind": "constant",
+          "call": "sum",
+          "calls": [
+            "sum"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

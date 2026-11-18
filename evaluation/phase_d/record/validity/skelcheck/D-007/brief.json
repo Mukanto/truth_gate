@@ -1,0 +1,26 @@
+{
+ "id": "D-007",
+ "claim": "Gene-expression profiles measured at diagnosis predict survival time in new patients: the out-of-sample R-squared for predicting survival_months from the expression profile is at least 0.10.",
+ "data_keys": [
+  {
+   "key": "expression",
+   "shape": "(patients, genes)",
+   "dtype": "float",
+   "meaning": "log2 expression level of each gene in each patient's tumour sample",
+   "dims": [
+    50,
+    2000
+   ]
+  },
+  {
+   "key": "survival_months",
+   "shape": "(patients,)",
+   "dtype": "float",
+   "meaning": "months from diagnosis to death, observed for every patient",
+   "dims": [
+    50
+   ]
+  }
+ ],
+ "sizes": "{\"patients\": 50, \"genes\": 2000}"
+}

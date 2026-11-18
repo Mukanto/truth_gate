@@ -1,0 +1,25 @@
+{
+ "id": "D-063",
+ "source": "STR87",
+ "passage": "'This paper presents a method of correcting for this bias in the linear regression coefficient and the Pearson correlation coefficient when calculations involve the nonlinear and linear combination of the measured variables. The general solution is obtained when the first two terms of a Taylor series expansion of the function can be used to represent the function, as in the case of multiplication.' (abstract, Europe PMC).",
+ "faulty": "R-squared of the least-squares regression of VO2 = CO*(CaO2 - CvO2) on CO (first cardiac_output determination) over the 600 dogs; criterion R-squared >= 0.25.",
+ "fixed": "Corrected R-squared: the square of the Stratton-Feustel-Newell corrected correlation between VO2 and cardiac output, with the error variance of cardiac output from the repeat determination (var(cardiac_output - cardiac_output_2)/2) and the first-order Taylor terms subtracted from Var(VO2), Cov(VO2, CO) and Var(CO); criterion >= 0.25 (None when a corrected variance is not positive). Only the cardiac output has a repeat key, so the content errors are taken as negligible in the correction (documented simplification, as in B3B-08 and B3B-09).",
+ "estimand": "Faulty: variance of the computed consumption explained by the measured cardiac output, which contains the cardiac output error on both sides. Fixed: variance of the error-free consumption explained by the error-free cardiac output.",
+ "model_family": "Same as B3B-08 (products with additive independent errors, first-order Taylor); claim-true: true consumption depends on true cardiac output; claim-false: true consumption independent of true cardiac output. Fixed for both twins.",
+ "statistic_family": "R-squared",
+ "guard_minimum": 2,
+ "sizes_note": "Source states no sample size. 600 dogs is far larger than a physiology study, but the source's own simulations check the correction and a larger sample makes the corrected variances stable; a few moments per sample. Size dependence: as in B3B-08, small when the range is large.",
+ "exploited_structure": "Consumption contains the cardiac output as a factor and is then related to cardiac output itself, so the error of the cardiac output appears on both sides.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    c = np.asarray(d['cardiac_output'], dtype=float)\n    c2 = np.asarray(d['cardiac_output_2'], dtype=float)\n    return float(0.5 * np.var(c - c2, ddof=1) / np.var(c, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.05,
+  "note_value_source": "source states none: see B3B-08; 0.05 corresponds to a cardiac output error CV of about 7% against a between-animal CV of about 30%",
+  "set_by_brief": false
+ },
+ "notes": "RESERVE (STR87 reserve). The quantity is related to one of its own factors; differs from B3B-08 and B3B-09 by statistic (R-squared), quantity pair (consumption versus cardiac output) and sample-size regime (600).",
+ "subtype_or_tag": "shared-measured-component",
+ "class": "B-3",
+ "approved_value": 0.05
+}

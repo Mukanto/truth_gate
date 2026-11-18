@@ -1,0 +1,25 @@
+{
+ "id": "D-031",
+ "source": "KRO93",
+ "passage": "'Spurious correlation refers to the correlation between indices that have a common component.' (abstract, RePEc/IDEAS page, read through WebFetch excerpt); the abstract treats a single ratio as dependent variable in a multiple regression and recommends avoiding ratios.",
+ "faulty": "Pearson correlation between offences/population and median_age, compared with 0.25 in absolute value.",
+ "fixed": "Partial correlation between offences and median_age given population, compared with 0.25 in absolute value. This is the source's correction: the denominator enters as a covariate.",
+ "estimand": "Faulty: correlation between per-capita offences and median age. Fixed: partial correlation between total offences and median age at given population.",
+ "model_family": "Source names none. Choice: log-normal population (CV about 1), median_age = m0 + m1*log(population) + noise, offences = a*population^0.9 * exp(g*median_age + noise), g = 0 in the claim-false version. Reason: offences are sub-proportional to population so the per-capita rate falls with population, and median age varies with population.",
+ "statistic_family": "correlation",
+ "guard_minimum": "4 cities (a partial correlation needs 4); guards: non-finite values, selection below 4, zero variance of any key, zero population.",
+ "sizes_note": "Source (abstract only) states no sizes. 500 cities is a realistic national cross-section; check is closed-form. Dependence on n: not stated.",
+ "exploited_structure": "The variable related to the per-capita outcome (median age) varies with its denominator (population), and the outcome is not proportional to population.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    a = np.asarray(d['median_age'], dtype=float)\n    p = np.asarray(d['population'], dtype=float)\n    if np.std(a) == 0 or np.std(p) == 0:\n        return 0.0\n    return float(abs(np.corrcoef(a, p)[0, 1]))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.3,
+  "note_value_source": "source states none: the abstract gives no numbers. 0.3 is a proposed moderate correlation between the variable and the denominator; it uses median age and population only, which the claim-false version (no effect of median age on offences) leaves unchanged.",
+  "set_by_brief": false
+ },
+ "notes": "Role: reserve (KRO93). Earlier combos for the tag included correlation; kept with n=500 and the cross-city structure. Claim in absolute value because the sign of the induced association depends on the world.",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.3
+}

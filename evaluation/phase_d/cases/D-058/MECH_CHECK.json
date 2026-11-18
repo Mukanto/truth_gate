@@ -1,0 +1,50 @@
+{
+  "case": "D-058",
+  "ok": true,
+  "issues": [],
+  "bodies": {
+    "faulty_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "faulty_body.py",
+          "line": 121,
+          "text": "np.mean(pred != y) <= 0.10",
+          "op": "<=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    },
+    "fixed_body.py": {
+      "issues": [],
+      "listed_comparisons": [
+        {
+          "file": "fixed_body.py",
+          "line": 121,
+          "text": "np.mean(pred != y) <= 0.10",
+          "op": "<=",
+          "kind": "constant",
+          "call": "mean",
+          "calls": [
+            "mean"
+          ]
+        }
+      ]
+    }
+  },
+  "assembled": {
+    "reference/faulty": {
+      "issues": []
+    },
+    "reference/fixed": {
+      "issues": []
+    },
+    "reference": {
+      "single_difference": true
+    }
+  }
+}

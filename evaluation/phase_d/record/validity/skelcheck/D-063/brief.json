@@ -1,0 +1,43 @@
+{
+ "id": "D-063",
+ "claim": "Among 600 anaesthetised dogs, whole-body oxygen consumption, computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definition, depends on cardiac output: the R-squared of the linear regression of oxygen consumption on cardiac output is at least 0.25.",
+ "data_keys": [
+  {
+   "key": "cardiac_output",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "cardiac output of each dog, in L per min",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "cardiac_output_2",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "a second, independent determination of the cardiac output of each dog, in L per min",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "arterial_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL",
+   "dims": [
+    600
+   ]
+  },
+  {
+   "key": "venous_o2_content",
+   "shape": "(subjects,)",
+   "dtype": "float",
+   "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL",
+   "dims": [
+    600
+   ]
+  }
+ ],
+ "sizes": "{\"subjects\": 600}"
+}

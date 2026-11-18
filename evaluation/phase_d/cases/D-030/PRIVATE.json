@@ -1,0 +1,25 @@
+{
+ "id": "D-030",
+ "source": "MAK19",
+ "passage": "circular analysis recruits the noise (inherent to any empirical data) to inflate the statistical outcome (PMC full text, section on circular analysis: neurons binned by baseline activity, a significant interaction found although there is no overall change).",
+ "faulty": "Mean pre rate and mean post rate over all trials per neuron. Bin neurons by mean pre rate: below 8 Hz versus at least 8 Hz. In each bin compute the proportion of neurons with mean post > mean pre. HOLDS if (proportion in the low bin) - (proportion in the high bin) >= 0.20; None if a bin is empty.",
+ "fixed": "Bin neurons by the mean of the even-numbered pre trials; compute the change as mean post minus the mean of the odd-numbered pre trials; same proportions and rule. Swap the roles of odd and even pre trials and average the two differences. HOLDS if the average >= 0.20; None if a bin is empty.",
+ "estimand": "Faulty: difference in proportion of increasing neurons between baseline bins, bins and change both using the same baseline estimate. Fixed: the same difference with the bin assigned by one baseline estimate and the change measured from an independent one.",
+ "model_family": "Poisson-Gamma: each neuron has an expected pre rate and an expected post rate; trial rates are Gaussian or Poisson around them (the source names no model; a per-neuron rate with trial noise is the minimal one that has a baseline measured with error).",
+ "statistic_family": "proportion",
+ "guard_minimum": 1,
+ "sizes_note": "Source states no neuron or trial number. 400 neurons x 40 trials x 2 = 32000 values. Dependence on sample size: not stated.",
+ "exploited_structure": "Neurons grouped by a noisy estimate of their baseline rate, and the same estimate is the reference for the change.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    p = np.asarray(d['pre'], dtype=float)\n    if p.shape[1] < 2:\n        return 0.0\n    a = p[:, 0::2].mean(axis=1)\n    b = p[:, 1::2].mean(axis=1)\n    if a.std() == 0 or b.std() == 0:\n        return 0.0\n    r = np.corrcoef(a, b)[0, 1]\n    return float(r) if np.isfinite(r) else 0.0",
+  "direction": "less",
+  "null_value": 1.0,
+  "note_value": 0.7,
+  "note_value_source": "source states none: MAK19 gives no reliability of the baseline; 0.7 is proposed as a plausible split-half correlation of neuron firing rates across trials",
+  "set_by_brief": false
+ },
+ "notes": "Reserve. MAK19's earlier B-1 combinations were extreme/mean, select/mean, select/proportion and split/mean; this one is split/proportion, with trial-level data.",
+ "subtype_or_tag": "split-by-baseline-compare-change",
+ "class": "B-1",
+ "approved_value": 0.7
+}

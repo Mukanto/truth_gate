@@ -1,0 +1,182 @@
+[
+ {
+  "case": "D-001",
+  "l": "yes",
+  "reason": "0.15 = error share of one reading (6 mmHg vs 15 mmHg SD gives 0.14); realistic for office systolic BP, fits 3 annual visits.",
+  "approved_value": 0.15
+ },
+ {
+  "case": "D-002",
+  "l": "yes",
+  "reason": "0.1 error share of arterial O2 content variance; plausible for repeat oximetry/Van Slyke across animals with varying oxygenation (slightly high end).",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-006",
+  "l": "yes",
+  "reason": "Quote verified in Chiolero 2013 (SD of error 0.3; true BMI mean 15.0, SD 1.2); 0.09/(1.44+0.09)=0.059, matches 0.06.",
+  "approved_value": 0.06
+ },
+ {
+  "case": "D-008",
+  "l": "yes",
+  "reason": "CV 0.25 (cardiac output) and 0.08 (arterial content) within patient give 0.0625/0.0689=0.91; realistic ICU within-patient variability; matches 0.9.",
+  "approved_value": 0.9
+ },
+ {
+  "case": "D-009",
+  "l": "yes",
+  "reason": "0.5 pooled-SD body-mass imbalance between two groups of 30 mice; moderate and common when treatment affects mass; realistic.",
+  "approved_value": 0.5
+ },
+ {
+  "case": "D-015",
+  "l": "yes",
+  "reason": "Quote 'relatively low measurement error variance (ICC of 95%)' verified in Chiolero 2013 Results; 1-ICC=0.05.",
+  "approved_value": 0.05
+ },
+ {
+  "case": "D-017",
+  "l": "yes",
+  "reason": "Revised value 0.1 is approved: it comes with a stated mechanism (mixed-sex sample, 13 cm sex height gap, smoking 30% men vs 15% women). I rechecked the arithmetic: smokers about 2.8 cm taller, d about 0.29, point-biserial r about 0.12; 0.1 is a realistic small value.",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-019",
+  "l": "yes",
+  "reason": "Same justification as D-001: 6 vs 15 mmHg SD gives 0.14 ~ 0.15; realistic for office BP.",
+  "approved_value": 0.15
+ },
+ {
+  "case": "D-020",
+  "l": "yes",
+  "reason": "CVs 0.12 (body mass), 0.15 (heart), 0.18 (liver) in lab mice plausible; arithmetic gives 0.347 ~ 0.35.",
+  "approved_value": 0.35
+ },
+ {
+  "case": "D-023",
+  "l": "yes",
+  "reason": "CV 0.15 of adult beetle body length is at the upper end for a single species but plausible for resource-limited insect size variation; the note's reasoning is sound.",
+  "approved_value": 0.15
+ },
+ {
+  "case": "D-025",
+  "l": "yes",
+  "reason": "0.2 error share (probing error ~0.9 mm vs SD ~2 mm); realistic for periodontal attachment-loss probing and same as accepted B3B-07 reasoning.",
+  "approved_value": 0.2
+ },
+ {
+  "case": "D-026",
+  "l": "yes",
+  "reason": "Same 0.15 body-length CV as D-023; upper-end but plausible for one beetle species.",
+  "approved_value": 0.15
+ },
+ {
+  "case": "D-031",
+  "l": "yes",
+  "reason": "0.3 correlation between city median age and population is a plausible cross-city magnitude.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-036",
+  "l": "yes",
+  "reason": "CV 0.3 of cardiac output in a mixed patient series is realistic.",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-037",
+  "l": "yes",
+  "reason": "Quote 'ICC of 95%' verified in Chiolero 2013 (ICC 50% scenario also present); k=1-ICC=0.05 matches.",
+  "approved_value": 0.05
+ },
+ {
+  "case": "D-038",
+  "l": "yes",
+  "reason": "0.3 correlation of per-capita sales with country population is a realistic magnitude; note the stated model (sales proportional to population times noise) would give about 0, so the world must use a sub-proportional relation to reach it (part A matter).",
+  "approved_value": 0.3
+ },
+ {
+  "case": "D-040",
+  "l": "yes",
+  "reason": "Equal CVs for cranial length, breadth and height (all about 3-5%) is realistic; value 0.5 follows from the formula.",
+  "approved_value": 0.5
+ },
+ {
+  "case": "D-045",
+  "l": "yes",
+  "reason": "Error share 0.2 = reliability 0.8, typical for clinical severity scores; realistic.",
+  "approved_value": 0.2
+ },
+ {
+  "case": "D-048",
+  "l": "yes",
+  "reason": "CO error CV ~7% vs between-dog CV ~30% gives 0.054 ~ 0.05; realistic thermodilution error and wide range, consistent with the source's 'reasonable error, large range'.",
+  "approved_value": 0.05
+ },
+ {
+  "case": "D-050",
+  "l": "yes",
+  "reason": "Age-body mass r=0.8 is realistic for growing laboratory rodents.",
+  "approved_value": 0.8
+ },
+ {
+  "case": "D-051",
+  "l": "yes",
+  "reason": "Within-dog error share 0.1 (narrower range than across dogs than 0.05 case) is plausible (CV 7% vs ~20%).",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-053",
+  "l": "yes",
+  "reason": "Quote 'ICC of 95%' verified in Chiolero 2013 Results (relatively small change variability); 1-ICC=0.05.",
+  "approved_value": 0.05
+ },
+ {
+  "case": "D-056",
+  "l": "yes",
+  "reason": "Between-group share 0.1 of body mass variance (null 2/74=0.027) is a moderate imbalance for 3 rat groups; realistic.",
+  "approved_value": 0.1
+ },
+ {
+  "case": "D-057",
+  "l": "yes",
+  "reason": "0.9 mm probing error vs ~2 mm SD gives about 0.2; realistic for pocket probing depth.",
+  "approved_value": 0.2
+ },
+ {
+  "case": "D-062",
+  "l": "yes",
+  "reason": "Equal within-species CVs (about 0.03-0.15) of femur, humerus and body length are realistic; 0.5 follows from the formula.",
+  "approved_value": 0.5
+ },
+ {
+  "case": "D-063",
+  "l": "yes",
+  "reason": "Same 7% vs 30% CV reasoning as D-048 (0.054); realistic.",
+  "approved_value": 0.05
+ },
+ {
+  "case": "D-067",
+  "l": "yes",
+  "reason": "Roughly equal CVs of kidney, heart and body mass in rats (0.1-0.2) is realistic; value 0.5 follows from the formula.",
+  "approved_value": 0.5
+ },
+ {
+  "case": "D-068",
+  "l": "yes",
+  "reason": "Same 0.15 within-population body-length CV as D-023; upper-end but plausible.",
+  "approved_value": 0.15
+ },
+ {
+  "case": "D-071",
+  "l": "yes",
+  "reason": "CV 0.3 (cardiac output) and 0.12 (arterial content) across patients give 0.86 ~ 0.85; realistic across a mixed ICU series.",
+  "approved_value": 0.85
+ },
+ {
+  "case": "D-072",
+  "l": "yes",
+  "reason": "Standardised mean area shift of 0.5 between sessions is an assumed but plausible moderate shift (hydration/swelling) for a crossover of 30 subjects.",
+  "approved_value": 0.5
+ }
+]

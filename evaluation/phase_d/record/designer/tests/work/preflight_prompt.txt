@@ -1,0 +1,1 @@
+This is a short connectivity check. Use the Glob tool exactly once, with the pattern `*.md` in the folder `E:\Claude Projects\Kapi\phase_d_work\record\agent_docs`. Then reply with only the number of files it found. Do nothing else.

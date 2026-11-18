@@ -1,0 +1,8 @@
+imported from pkg\truth_gate version 0.5.1
+COMPONENT  VERDICT      FLAGS
+C          FALSIFIABLE  -
+study flags: -
+mode: full   verdict: FALSIFIABLE
+certificate: cert_pkg.json
+body_sha256: 73bb013de57216fe67337eeaa72e42fd50eb0832edd124b6dd80e940607758a6
+exit 0

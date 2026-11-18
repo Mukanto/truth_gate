@@ -1,0 +1,149 @@
+{
+  "case": "D-071",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": false,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "faulty rate 0.157 < 0.25",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.8594375790725144,
+        "sd": 0.08012374977433934,
+        "values_head": [
+          0.9391955725234241,
+          1.0894184706452772,
+          1.0355588383016565,
+          0.6796312959569375,
+          0.8114137027541763
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.8633112311637088,
+        "sd": 0.07700828379564266,
+        "values_head": [
+          0.9303851039837935,
+          1.0494701419443995,
+          0.7956300008279319,
+          0.8664664078663107,
+          0.7919967821398319
+        ],
+        "share_beyond_half": 1.0
+      },
+      "note_value": 0.85,
+      "null_value": 0.0,
+      "tolerance": 0.17,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.0038736520911943906,
+      "three_se": 0.023574437369687177,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "arterial_o2_content",
+          "cardiac_output",
+          "venous_o2_content",
+          "vo2_expired_gas"
+        ],
+        "changed_keys": [
+          "venous_o2_content",
+          "vo2_expired_gas"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "venous_o2_content",
+        "vo2_expired_gas"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 157,
+      "fixed_holds": 0,
+      "n": 1000,
+      "faulty_rate": 0.157,
+      "fixed_rate": 0.0,
+      "fisher_p": 7.077579492369717e-51,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 0,
+        "n": 1000,
+        "rate": 0.0,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 998,
+        "n": 1000,
+        "rate": 0.998,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": false,
+  "v1_label": "V1b",
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 5.9935000172117726e-05,
+    "g": 0.00011029999914171639,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.4085639983532019,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "bb2c418cd7fcded29532c44c4c51b4e2a7e950807fdec8fedcd31f2ede0e29f4",
+    "PRIVATE.json": "31f1ccb61cbadd9928947fc9741be80b444cdd69dd900ab591b7a8cc6c655596",
+    "faulty_body.py": "494eef1975c4c1adf1cbd516ec2c2247223c5baabe81e14ca06dd72cc0e69773",
+    "fixed_body.py": "d2fe3f216a8c96d8993e9f9638e746a9e09f13481786a7bd609bd671804c7e1d",
+    "reference.py": "07c6947ed782787be75be87a723b564efdec688f853d5d704d02d38e10d6ee33"
+  },
+  "decisive": true
+}

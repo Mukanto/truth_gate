@@ -1,0 +1,22 @@
+{
+ "id": "D-061",
+ "claim": "Each of 1500 voxels was measured in each of 10 runs of an experiment with four stimulus conditions, labelled A, B, C and D. Claim: among the voxels whose expected response to condition A is greater than their expected response to condition D, the proportion whose expected response to condition A is also greater than their expected response to condition B is at least 0.70.",
+ "data_keys": [
+  {
+   "key": "response",
+   "shape": "(voxels, runs, conditions)",
+   "dtype": "float",
+   "meaning": "estimated response amplitude of each voxel in each run to each stimulus condition; the conditions axis holds A, B, C, D in this order",
+   "dims": [
+    1500,
+    10,
+    4
+   ]
+  }
+ ],
+ "sizes": {
+  "voxels": 1500,
+  "runs": 10,
+  "conditions": 4
+ }
+}

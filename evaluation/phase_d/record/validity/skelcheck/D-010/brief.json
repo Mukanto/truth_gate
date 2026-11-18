@@ -1,0 +1,36 @@
+{
+ "id": "D-010",
+ "claim": "The postal district and the three covariates together predict the outcome y for new patients: the Pearson correlation between predicted and observed y is at least 0.25.",
+ "data_keys": [
+  {
+   "key": "category",
+   "shape": "(samples, categories)",
+   "dtype": "bool",
+   "meaning": "True where the patient's home postal district is the district of that column",
+   "dims": [
+    1200,
+    150
+   ]
+  },
+  {
+   "key": "covariates",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "three continuous covariates per patient (age, body-mass index, systolic pressure)",
+   "dims": [
+    1200,
+    3
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous health outcome of each patient",
+   "dims": [
+    1200
+   ]
+  }
+ ],
+ "sizes": "{\"samples\": 1200, \"categories\": 150, \"features\": 3}"
+}

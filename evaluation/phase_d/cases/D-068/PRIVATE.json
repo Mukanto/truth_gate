@@ -1,0 +1,25 @@
+{
+ "id": "D-068",
+ "source": "ATC76",
+ "passage": "'Simulation studies with minimum sample sizes of 25,000 indicated large and systematic changes in both the structure and the underlying distributions of data when ratios and proportions were compounded between continuous variables.' The cases examined include Y = X1/X2, Z = X3/X2 (abstract, via OpenAlex).",
+ "faulty": "For each of the 25 populations, ordinary least-squares slope of Z = wing_length/body_length on Y = head_width/body_length; average the 25 slopes; criterion mean slope >= 0.30. Parameters from the source: ratios with a common denominator X2 of large CV.",
+ "fixed": "For each population, multiple regression of wing_length on head_width and body_length (with intercept); take the coefficient of head_width; average over the 25 populations; criterion >= 0.30.",
+ "estimand": "Faulty: the slope of one size-standardised ratio on another, which includes the common-denominator variation. Fixed: the mean within-population partial slope of wing length on head width at fixed body length.",
+ "model_family": "Same as B3B-01 within each population: independent continuous X1, X2, X3 with a chosen denominator CV; claim-true adds a linear dependence of X3 on X1 net of X2. Chosen as the source's simulation family; fixed for both twins.",
+ "statistic_family": "regression-slope",
+ "guard_minimum": 3,
+ "sizes_note": "Source: minimum 25,000 simulated individuals, beyond the cap. 25 populations x 40 specimens = 1000 values: a per-population summary is a realistic morphometric design, and one multiple regression per population costs milliseconds. Dependence on sample size: not stated; source states dependence on the denominator CV.",
+ "exploited_structure": "A denominator with substantial variation inside each population is shared by both ratios, which creates a slope between them that is absent between the raw measurements.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    s = np.asarray(d['body_length'], dtype=float)\n    return float(np.mean(np.std(s, axis=1, ddof=1) / np.mean(s, axis=1)))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.15,
+  "note_value_source": "source states none: the abstract gives no CV; 0.15 is a realistic within-population coefficient of variation of adult body length",
+  "set_by_brief": false
+ },
+ "notes": "Pair case (ATC76 slot 2 of 2 pairs). Differs from B3B-01 by statistic (slope) and data structure (populations x specimens, mean of per-population slopes).",
+ "subtype_or_tag": "ratio-shared-denominator",
+ "class": "B-3",
+ "approved_value": 0.15
+}

@@ -1,0 +1,25 @@
+{
+ "id": "D-072",
+ "source": "CUR13",
+ "passage": "'As researchers, we compute a ratio-a numerator divided by a denominator-to compute a proportion for some biological response or to derive some standardized variable.' 'only if the relationship between numerator and denominator is a straight line through the origin will the ratio be meaningful' (abstract, Europe PMC).",
+ "faulty": "Paired t test on the within-subject difference of the ratios force_drug/area_drug - force_vehicle/area_vehicle; criterion: positive mean difference with two-sided p < 0.05.",
+ "fixed": "Paired analysis of covariance: regress force_drug - force_vehicle on area_drug - area_vehicle with an intercept; the criterion is that the intercept (the adjusted mean paired difference) is positive with two-sided p < 0.05.",
+ "estimand": "Faulty: mean paired difference in force per unit area, which includes the session difference in area. Fixed: mean paired difference in force at equal area.",
+ "model_family": "Within-subject linear model force_c = alpha_i + b*area_c + delta*[drug] + e with Gaussian e and non-zero subject intercepts (the source's point: lines not through the origin); fixed for both twins.",
+ "statistic_family": "mean",
+ "guard_minimum": 3,
+ "sizes_note": "Source states no sample size (abstract only). 30 subjects is a realistic crossover study; the check is a single regression. Size dependence: not stated.",
+ "exploited_structure": "The session (drug or vehicle) varies with the measured area in that session, and force is not proportional to area, so per-area force differs between sessions without a drug effect.",
+ "structure_statistic": {
+  "code": "def stat(d):\n    diff = np.asarray(d['area_drug'], dtype=float) - np.asarray(d['area_vehicle'], dtype=float)\n    return float(abs(np.mean(diff)) / np.std(diff, ddof=1))",
+  "direction": "greater",
+  "null_value": 0.0,
+  "note_value": 0.5,
+  "note_value_source": "source states none: the abstract gives no figure; 0.5 is a moderate standardised mean difference in area between sessions (an assumed value)",
+  "set_by_brief": false
+ },
+ "notes": "RESERVE (CUR13 reserve). 'mean' family (paired), paired structure with the session on separate keys. Differs from B3B-03 and B3B-04 by data structure (paired design) and statistic (paired difference).",
+ "subtype_or_tag": "ratio-vs-denominator-proxy",
+ "class": "B-3",
+ "approved_value": 0.5
+}

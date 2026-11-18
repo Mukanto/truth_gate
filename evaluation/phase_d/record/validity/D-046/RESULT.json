@@ -1,0 +1,145 @@
+{
+  "case": "D-046",
+  "samples": 1000,
+  "seed": 20261117,
+  "dev": false,
+  "valid": true,
+  "errors": [],
+  "reasons": {
+    "mech_a": "ok",
+    "mech_b": "ok",
+    "v1": "ok",
+    "v2": "ok",
+    "timing": "ok"
+  },
+  "details": {
+    "mech_a": {
+      "plus": {
+        "mean": 0.7993926823852895,
+        "sd": 0.09015429672241743,
+        "values_head": [
+          0.8563394658676923,
+          0.8470656799040278,
+          0.8933099492400006,
+          0.6540010761627271,
+          0.7594128288683494
+        ],
+        "share_beyond_half": 1.0
+      },
+      "minus": {
+        "mean": 0.7994945858641777,
+        "sd": 0.08479262609776256,
+        "values_head": [
+          0.681096828732608,
+          0.8308983987680757,
+          0.6791140674275087,
+          0.7717609609000812,
+          0.7516445453580072
+        ],
+        "share_beyond_half": 1.0
+      },
+      "note_value": 0.83,
+      "null_value": 0.0,
+      "tolerance": 0.166,
+      "within_tolerance": {
+        "plus": true,
+        "minus": true
+      },
+      "abs_mean_difference": 0.00010190347888816564,
+      "three_se": 0.026254359630604004,
+      "means_equal": true
+    },
+    "mech_b": {
+      "minus_check": {
+        "identical": false,
+        "read_keys": [
+          "dose",
+          "response"
+        ],
+        "changed_keys": [
+          "response"
+        ],
+        "paired": true
+      },
+      "changed_read_keys": [
+        "response"
+      ],
+      "flags": []
+    }
+  },
+  "counts": {
+    "v1": {
+      "faulty_holds": 433,
+      "fixed_holds": 60,
+      "n": 1000,
+      "faulty_rate": 0.433,
+      "fixed_rate": 0.06,
+      "fisher_p": 2.9672845782870654e-91,
+      "errors_faulty": 0,
+      "errors_fixed": 0
+    },
+    "v2": {
+      "minus": {
+        "holds": 60,
+        "n": 1000,
+        "rate": 0.06,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "noise": {
+        "holds": 44,
+        "n": 1000,
+        "rate": 0.044,
+        "max": 0.065,
+        "ok": true,
+        "errors": 0
+      },
+      "plus": {
+        "holds": 800,
+        "n": 1000,
+        "rate": 0.8,
+        "min": 0.7,
+        "ok": true,
+        "errors": 0
+      }
+    }
+  },
+  "v1": true,
+  "v1_label": null,
+  "v2": true,
+  "mech_a": true,
+  "mech_b": true,
+  "structure_computable": true,
+  "structure": "used",
+  "timing": {
+    "n": 20,
+    "t": 3.250500049034599e-05,
+    "g": 3.539499921316747e-05,
+    "S": 5,
+    "S_formula": 5,
+    "estimate_s": 0.1629599992884323,
+    "limit_s": 1800.0
+  },
+  "timing_ok": true,
+  "m": 4,
+  "kstar": 18,
+  "mode": "validity",
+  "v1_rate_on_error_free": null,
+  "v1_rate_label": null,
+  "v1_error_share": null,
+  "v1_final_drop_label": null,
+  "error_in": null,
+  "error_text": null,
+  "error_stages": {},
+  "alpha_family": 0.05,
+  "size": 0.05,
+  "input_sha256": {
+    "brief.json": "2ecc94a557f8233cb62df305092b9c74d9038fd03f24df5e2e48c3d393cc734e",
+    "PRIVATE.json": "69c0f1809e928b8f75a1f962d00799fa43eb8469049558812d91e4524854ab31",
+    "faulty_body.py": "7813abf4edc4dc10f9f80ea8cd387e058f8e75c53e86df9d615661e0101c1025",
+    "fixed_body.py": "d88db8a9747a576817e28562a9a44259f55fa831900c5811f4c30512297b81fc",
+    "reference.py": "7d8d15824b97bca39319861313e2bea879dab5b54a6800d2d860f75eac7f1fc2"
+  },
+  "decisive": true
+}

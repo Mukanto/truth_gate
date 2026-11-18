@@ -1,0 +1,372 @@
+{
+ "transcript": "transcripts\\world_b1_stopped1_agent-a15737ab198e93dbf.jsonl",
+ "transcript_sha256": "16414bf3c2e7f793bfb45468158b26ac91de4aae41a6e6e09f580534f492b466",
+ "first_last_utc": [
+  "2026-11-18T08:31:41.293Z",
+  "2026-11-18T08:48:55.970Z"
+ ],
+ "meta": {
+  "agentType": "general-purpose",
+  "spawnDepth": 1,
+  "model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "isBuiltIn": true,
+  "requestShape": "background",
+  "finished": true,
+  "fork_like_keys": [],
+  "problems": [],
+  "ok": true
+ },
+ "prompt_sha256": "cc028f55f07b96447eb20b512b035443d15cbf61a5811f669facf6d361859ce2",
+ "prompt_is_frozen": true,
+ "first_message": {
+  "first_user_index": 0,
+  "parentUuid_null": true,
+  "assistant_before_first_user": false
+ },
+ "prompt_match": true,
+ "prompt_diff": null,
+ "injected_remainder_len": 4613,
+ "later_user_messages": [],
+ "models": {
+  "claude-opus-5-5": 25,
+  "<synthetic>": 1
+ },
+ "model_rule_ok": true,
+ "tools": {
+  "Read": 5,
+  "Bash": 7,
+  "Write": 15,
+  "Edit": 3
+ },
+ "forbidden_calls": [],
+ "linked": {
+  "ok": true,
+  "agentId": "a15737ab198e93dbf",
+  "other_agentIds": [],
+  "sessionIds": [
+   "e99bcaed-1f5d-4c84-948a-5ba1699cb0eb"
+  ],
+  "filename_agent_id": null,
+  "agentId_matches_filename": null,
+  "problems": []
+ },
+ "terms_scanned": 84,
+ "baseline_sha256": "e434e85272f35bcd5dd5db1938137b901e22c358923fceba23b0b91e1da89319",
+ "baseline_ok": true,
+ "baseline_leaves": 786,
+ "term_hits": [
+  {
+   "term": "checklist",
+   "location": "attachment entry 4 (line 5, type skill_listing)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "checklist",
+   "location": "attachment entry 18 (line 19, type prompt_snapshot)",
+   "group": "b_attachment",
+   "count": 2,
+   "count_baseline": 2,
+   "count_new": 0,
+   "baseline": true,
+   "window": " task (deploy steps, a review checklist, a repo-specific workflow). A",
+   "context": "nd of task (deploy steps, a review checklist, a repo-specific workflow). Availa"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 13 (line 14, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "count_baseline": 1,
+   "count_new": 0,
+   "baseline": true,
+   "window": "t (a poll, a sign-up sheet, a checklist, a document edited in place —",
+   "context": " on it (a poll, a sign-up sheet, a checklist, a document edited in place — it s"
+  },
+  {
+   "term": "checklist",
+   "location": "api-request-blob entry 37 (line 38, informational)",
+   "group": "e_request_blob",
+   "count": 1,
+   "count_baseline": 0,
+   "count_new": 1,
+   "baseline": false,
+   "window": " that produced it. A one-page checklist for the freeze. | [`protocol/",
+   "context": "ilure that produced it. A one-page checklist for the freeze. | [`protocol/`](pr"
+  }
+ ],
+ "term_hits_baseline": 3,
+ "term_hits_new": 1,
+ "term_hits_new_invalidating": 0,
+ "outside_paths": [],
+ "settings": {
+  "harness_versions": [
+   "2.1.326"
+  ],
+  "request_model": "opus",
+  "pickedEffortModel": "claude-opus-5-5",
+  "effort": "xhigh",
+  "effort_sources": {
+   "api-request.params.output_config.effort": [
+    "xhigh"
+   ],
+   "assistant.effort": [
+    "xhigh"
+   ],
+   "assistant.perTurnEffort": [
+    "xhigh"
+   ]
+  },
+  "effort_searched": [
+   "api-request entries: params.output_config.effort",
+   "assistant entries: effort, perTurnEffort",
+   "api-request-shape entries: any 'effort' key in shape",
+   "prefix.json: state.effortValue"
+  ],
+  "thinking": [
+   "{\"display\": \"updates\", \"type\": \"adaptive\"}"
+  ],
+  "entrypoints": [
+   "claude-desktop"
+  ],
+  "cwds": [
+   "E:\\Claude Projects\\Kapi\\phase_d_work"
+  ]
+ },
+ "provenance": {
+  "skeletons/D-007.py": {
+   "sha256_disk": "b53f48ebfe7d15e7e293ecd0272239673e67d6084f419879174e030cd264b054",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "b53f48ebfe7d15e7e293ecd0272239673e67d6084f419879174e030cd264b054",
+   "last_write_sha256": "b53f48ebfe7d15e7e293ecd0272239673e67d6084f419879174e030cd264b054",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "b53f48ebfe7d15e7e293ecd0272239673e67d6084f419879174e030cd264b054"
+  },
+  "skeletons/D-008.py": {
+   "sha256_disk": "fb3995c8d0bac47d5f59d48ffe60d78412450b60c48c01776487a52c7c8ea6a9",
+   "n_writes": 1,
+   "n_edits": 1,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "fb3995c8d0bac47d5f59d48ffe60d78412450b60c48c01776487a52c7c8ea6a9",
+   "last_write_sha256": "17fbe36801584c0519bff0ef4338c202e9f8293472be883dee7f2b36eb967234",
+   "disk_equals_last_write": false,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "fb3995c8d0bac47d5f59d48ffe60d78412450b60c48c01776487a52c7c8ea6a9"
+  },
+  "skeletons/D-010.py": {
+   "sha256_disk": "cc4488d82e5d90752d9e71185e3ef063bd92bdf44c27bc92b172b36d8b1fa445",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "cc4488d82e5d90752d9e71185e3ef063bd92bdf44c27bc92b172b36d8b1fa445",
+   "last_write_sha256": "cc4488d82e5d90752d9e71185e3ef063bd92bdf44c27bc92b172b36d8b1fa445",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "cc4488d82e5d90752d9e71185e3ef063bd92bdf44c27bc92b172b36d8b1fa445"
+  },
+  "skeletons/D-011.py": {
+   "sha256_disk": "7533f8a0283b814167830cfc4deabce08ecd6ed378fc018e3b84fa66e0fc32f4",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "7533f8a0283b814167830cfc4deabce08ecd6ed378fc018e3b84fa66e0fc32f4",
+   "last_write_sha256": "7533f8a0283b814167830cfc4deabce08ecd6ed378fc018e3b84fa66e0fc32f4",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "7533f8a0283b814167830cfc4deabce08ecd6ed378fc018e3b84fa66e0fc32f4"
+  },
+  "skeletons/D-012.py": {
+   "sha256_disk": "1033aab5d028c089d5627f9b2c08bcb32d0352f567c3baec002812f3038f7ff8",
+   "n_writes": 1,
+   "n_edits": 1,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "1033aab5d028c089d5627f9b2c08bcb32d0352f567c3baec002812f3038f7ff8",
+   "last_write_sha256": "0209fbf349f7ac2f535367005b761d391dd10a216f4be5e2029b2c3ae45ed7b0",
+   "disk_equals_last_write": false,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "1033aab5d028c089d5627f9b2c08bcb32d0352f567c3baec002812f3038f7ff8"
+  },
+  "skeletons/D-022.py": {
+   "sha256_disk": "de959d0c107d4f556dba7386a0b8600032d35f717aff5f171a85198c13146d82",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "de959d0c107d4f556dba7386a0b8600032d35f717aff5f171a85198c13146d82",
+   "last_write_sha256": "de959d0c107d4f556dba7386a0b8600032d35f717aff5f171a85198c13146d82",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "de959d0c107d4f556dba7386a0b8600032d35f717aff5f171a85198c13146d82"
+  },
+  "skeletons/D-023.py": {
+   "sha256_disk": "70ec6ac5ce4b5b0eec9d74d4fa0af3c3e85d2c8d72b435fb588790d8f7c380b6",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "70ec6ac5ce4b5b0eec9d74d4fa0af3c3e85d2c8d72b435fb588790d8f7c380b6",
+   "last_write_sha256": "70ec6ac5ce4b5b0eec9d74d4fa0af3c3e85d2c8d72b435fb588790d8f7c380b6",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "70ec6ac5ce4b5b0eec9d74d4fa0af3c3e85d2c8d72b435fb588790d8f7c380b6"
+  },
+  "skeletons/D-027.py": {
+   "sha256_disk": "45c1760fa4b25a4440e7e8d0260e764ca016173bbd04fc27d32f6ff5c75d3b7c",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "45c1760fa4b25a4440e7e8d0260e764ca016173bbd04fc27d32f6ff5c75d3b7c",
+   "last_write_sha256": "45c1760fa4b25a4440e7e8d0260e764ca016173bbd04fc27d32f6ff5c75d3b7c",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "45c1760fa4b25a4440e7e8d0260e764ca016173bbd04fc27d32f6ff5c75d3b7c"
+  },
+  "skeletons/D-035.py": {
+   "sha256_disk": "914ecb0153cd1bd67fca38c4139d5237444c7f38f65271e704924db84a999bdb",
+   "n_writes": 1,
+   "n_edits": 1,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "914ecb0153cd1bd67fca38c4139d5237444c7f38f65271e704924db84a999bdb",
+   "last_write_sha256": "9c2317faa49204c60f1bf8da74ea5cc0a82c5227cddd13483535f751efe7d68d",
+   "disk_equals_last_write": false,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "914ecb0153cd1bd67fca38c4139d5237444c7f38f65271e704924db84a999bdb"
+  },
+  "skeletons/D-040.py": {
+   "sha256_disk": "2fd94fceb793449babe1fcccf7de42d1c65ee1a95413a3864efebadb90ee8c74",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "2fd94fceb793449babe1fcccf7de42d1c65ee1a95413a3864efebadb90ee8c74",
+   "last_write_sha256": "2fd94fceb793449babe1fcccf7de42d1c65ee1a95413a3864efebadb90ee8c74",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "2fd94fceb793449babe1fcccf7de42d1c65ee1a95413a3864efebadb90ee8c74"
+  },
+  "skeletons/D-042.py": {
+   "sha256_disk": "0f2be28918687d2ebb54e58403b08752295197add11454a27c34ec32869dd765",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "04cbe2437b6da0108ee162a07476ac0ec668a0f115d9a732105080d5cb922045",
+   "last_write_sha256": "04cbe2437b6da0108ee162a07476ac0ec668a0f115d9a732105080d5cb922045",
+   "disk_equals_last_write": false,
+   "detail": null,
+   "status": "replayed_match",
+   "touched_by_other_tool": true,
+   "other_tool_commands": [
+    {
+     "index": 113,
+     "tool": "Bash",
+     "command": "cd \"/e/Claude Projects/Kapi/phase_d_work/world/cd14f4/skeletons\" && py -I - <<'EOF'\nimport re\np = \"D-042.py\"\ns = open(p, encoding=\"utf-8\").read()\nold_block = '''# Descriptors: MW, logP, TPSA, H-bond donors, H-bond acceptors, rotatable bonds, aromatic rings, Fsp3,\n# heavy atoms, molar refractivity, p"
+    }
+   ],
+   "status_v1": "mismatch",
+   "sha256_replayed": "0f2be28918687d2ebb54e58403b08752295197add11454a27c34ec32869dd765"
+  },
+  "skeletons/D-047.py": {
+   "sha256_disk": "7845913780b858be3d6140c626e3bcb0de6bb02d03fd046621a729c8bf25c1f3",
+   "n_writes": 1,
+   "n_edits": 0,
+   "n_failed_ops": 0,
+   "n_ops_without_result": 0,
+   "sha256_rebuilt": "7845913780b858be3d6140c626e3bcb0de6bb02d03fd046621a729c8bf25c1f3",
+   "last_write_sha256": "7845913780b858be3d6140c626e3bcb0de6bb02d03fd046621a729c8bf25c1f3",
+   "disk_equals_last_write": true,
+   "detail": null,
+   "status": "match",
+   "touched_by_other_tool": false,
+   "other_tool_commands": [],
+   "status_v1": "match",
+   "sha256_replayed": "7845913780b858be3d6140c626e3bcb0de6bb02d03fd046621a729c8bf25c1f3"
+  }
+ },
+ "unmatched_patterns": [
+  "WORLD_LOG.md",
+  "CHECKLIST_LOG.md"
+ ],
+ "unchecked_written_files": [
+  "e:/claude projects/kapi/phase_d_work/world/cd14f4/scratch/calib.py",
+  "e:/claude projects/kapi/phase_d_work/world/cd14f4/scratch/check_skeletons.py",
+  "e:/claude projects/kapi/phase_d_work/world/cd14f4/scratch/diagnose.py"
+ ],
+ "files_checked": 12,
+ "replay": {
+  "replay_ran": true,
+  "replay_dir": "E:\\Claude Projects\\Kapi\\phase_d_work\\world_replay\\cd14f4_20261118T101313",
+  "replay_log": "E:\\Claude Projects\\Kapi\\phase_d_work\\world_replay\\cd14f4_20261118T101313\\replay_log.json",
+  "n_replayed_calls": 25,
+  "n_timeouts": 0,
+  "n_refused": 0,
+  "not_run_reason": null,
+  "n_failed_calls": 0,
+  "n_nonzero_exit": 0,
+  "n_outside_skipped": 0,
+  "n_skipped_error": 0,
+  "n_skipped_no_result": 0,
+  "n_background_sync": 0,
+  "n_manifest_files_copied": 56
+ },
+ "provenance_ok": true,
+ "unparsable_lines": [],
+ "reasons": [],
+ "valid": true
+}

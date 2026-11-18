@@ -1,0 +1,407 @@
+[
+  {
+    "id": "D-037",
+    "claim": "The expected change in BMI between baseline and follow-up is smaller for children with a higher baseline BMI: each additional 1 kg/m2 of baseline BMI goes with a change in BMI that is at least 0.2 kg/m2 smaller (slope of at most -0.2).",
+    "data_keys": [
+      {
+        "key": "bmi_baseline",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "BMI of each child at the baseline visit, in kg/m2",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "bmi_followup",
+        "shape": "(children,)",
+        "dtype": "float",
+        "meaning": "BMI of each child at the follow-up visit five years after baseline, in kg/m2",
+        "dims": [
+          500
+        ]
+      },
+      {
+        "key": "bmi_retest",
+        "shape": "(retest_children, retest_sessions)",
+        "dtype": "float",
+        "meaning": "BMI of each child of a test-retest sample at two sessions a few days apart, in kg/m2",
+        "dims": [
+          100,
+          2
+        ]
+      }
+    ],
+    "sizes": {
+      "children": 500,
+      "retest_children": 100,
+      "retest_sessions": 2
+    }
+  },
+  {
+    "id": "D-038",
+    "claim": "Across countries, annual lung-cancer deaths and annual cigarette sales are associated after accounting for population: the standardised slope of deaths on cigarette sales, with population accounted for, is at least 0.2 in absolute value.",
+    "data_keys": [
+      {
+        "key": "lung_cancer_deaths",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "total lung-cancer deaths in each country in one year, in thousands",
+        "dims": [
+          150
+        ]
+      },
+      {
+        "key": "cigarettes_sold",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "total cigarettes sold in each country in the same year, in millions",
+        "dims": [
+          150
+        ]
+      },
+      {
+        "key": "population",
+        "shape": "(countries,)",
+        "dtype": "float",
+        "meaning": "population of each country, in millions",
+        "dims": [
+          150
+        ]
+      }
+    ],
+    "sizes": {
+      "countries": 150
+    }
+  },
+  {
+    "id": "D-039",
+    "claim": "On future months, the monthly forecasts of a ridge regression of y on the three predictors X (penalty 1.0 on standardised predictors, with an intercept) are informative about the monthly outcome: the slope of the ordinary least squares regression of observed y on the forecast, computed over future months, is at least 0.5.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(months_in_order, features)",
+        "dtype": "float",
+        "meaning": "3 continuous monthly predictor series, one value per predictor per month",
+        "dims": [
+          400,
+          3
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(months_in_order,)",
+        "dtype": "float",
+        "meaning": "continuous monthly outcome",
+        "dims": [
+          400
+        ]
+      }
+    ],
+    "sizes": {
+      "months_in_order": 400,
+      "features": 3
+    }
+  },
+  {
+    "id": "D-040",
+    "claim": "Across skulls, cranial breadth and cranial height are positively associated after accounting for cranial length: the partial correlation coefficient between breadth and height, given length, is at least 0.2.",
+    "data_keys": [
+      {
+        "key": "breadth",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "maximum cranial breadth of each skull, in mm",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "height",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "cranial height of each skull, in mm",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "length",
+        "shape": "(skulls,)",
+        "dtype": "float",
+        "meaning": "maximum cranial length of each skull, in mm",
+        "dims": [
+          300
+        ]
+      }
+    ],
+    "sizes": {
+      "skulls": 300
+    }
+  },
+  {
+    "id": "D-041",
+    "claim": "The country-year indicators in X identify the onset of civil war in new country-years: the area under the ROC curve of a ridge-penalised logistic regression (penalty 1.0 on standardised indicators) of the onset y on X is at least 0.75.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(samples, features)",
+        "dtype": "float",
+        "meaning": "25 continuous country-year indicators; an indicator that was not recorded for a country-year is NaN",
+        "dims": [
+          1400,
+          25
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(samples,)",
+        "dtype": "bool",
+        "meaning": "True where a civil war onset occurred in the country-year",
+        "dims": [
+          1400
+        ]
+      }
+    ],
+    "sizes": {
+      "samples": 1400,
+      "features": 25
+    }
+  },
+  {
+    "id": "D-042",
+    "claim": "A nearest-neighbour regression (one neighbour, Euclidean distance on standardised descriptors) of the response y on the descriptors X predicts y for new compounds with a Pearson correlation between predicted and observed y of at least 0.30.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(records, features)",
+        "dtype": "float",
+        "meaning": "20 continuous molecular descriptors recorded for each compound record",
+        "dims": [
+          1200,
+          20
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(records,)",
+        "dtype": "float",
+        "meaning": "continuous activity response measured for each compound record",
+        "dims": [
+          1200
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 1200,
+      "features": 20
+    }
+  },
+  {
+    "id": "D-043",
+    "claim": "A classifier built from the measurements detects the condition in new records: its sensitivity for the positive class is at least 0.60.",
+    "data_keys": [
+      {
+        "key": "measurements",
+        "shape": "(records, variables)",
+        "dtype": "float",
+        "meaning": "measured variables of each record",
+        "dims": [
+          400,
+          8
+        ]
+      },
+      {
+        "key": "positive",
+        "shape": "(records,)",
+        "dtype": "bool",
+        "meaning": "True if the condition is present in the record",
+        "dims": [
+          400
+        ]
+      }
+    ],
+    "sizes": {
+      "records": 400,
+      "variables": 8
+    }
+  },
+  {
+    "id": "D-044",
+    "claim": "For new subjects, a ridge regression of the trial-level outcome y on the features X (penalty 1.0 on standardised features, with an intercept) has a mean absolute error at least 5% below that of predicting the mean outcome: 1 - MAE(model) / MAE(mean predictor) >= 0.05.",
+    "data_keys": [
+      {
+        "key": "X",
+        "shape": "(subjects, trials, features)",
+        "dtype": "float",
+        "meaning": "25 continuous features computed for each trial of each subject",
+        "dims": [
+          60,
+          30,
+          25
+        ]
+      },
+      {
+        "key": "y",
+        "shape": "(subjects, trials)",
+        "dtype": "float",
+        "meaning": "continuous outcome of each trial of each subject",
+        "dims": [
+          60,
+          30
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 60,
+      "trials": 30,
+      "features": 25
+    }
+  },
+  {
+    "id": "D-045",
+    "claim": "In 300 patients with a continuous disease severity score measured before and after treatment, improvement is larger in patients with a higher severity level: the Pearson correlation between each patient's change in score (follow-up minus baseline) and the mean of that patient's baseline and follow-up scores is at most -0.30.",
+    "data_keys": [
+      {
+        "key": "baseline_score",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "severity score of each patient at the baseline visit, higher is more severe",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "baseline_score_retest",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "a second, independent reading of the severity score of each patient taken at the baseline visit",
+        "dims": [
+          300
+        ]
+      },
+      {
+        "key": "followup_score",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "severity score of each patient at the follow-up visit after treatment",
+        "dims": [
+          300
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 300
+    }
+  },
+  {
+    "id": "D-046",
+    "claim": "Ten animals each received a different dose of a drug, and the response amplitude (in mV) of 100 CA3 cells was recorded in each animal. Claim: response increases with dose, that is, the slope of an animal's mean cell response on dose, across animals, is positive, judged by a one-sided test at the 0.05 level.",
+    "data_keys": [
+      {
+        "key": "response",
+        "shape": "(animals, cells)",
+        "dtype": "float",
+        "meaning": "response amplitude in mV of each recorded CA3 cell",
+        "dims": [
+          10,
+          100
+        ]
+      },
+      {
+        "key": "dose",
+        "shape": "(animals,)",
+        "dtype": "float",
+        "meaning": "dose of the drug given to each animal",
+        "dims": [
+          10
+        ]
+      }
+    ],
+    "sizes": {
+      "animals": 10,
+      "cells": 100
+    }
+  },
+  {
+    "id": "D-047",
+    "claim": "600 patients with menopausal hot flushes received a treatment. Symptom severity (scale 0 to 100, higher is worse) was scored at a screening visit, again at entry on the day treatment began, and again 12 weeks later. Claim: among patients whose screening score was at least 60, at least half have a week-12 score that is 10 or more points below their entry score (proportion of at least 0.5).",
+    "data_keys": [
+      {
+        "key": "screening",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score at the screening visit",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "entry",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score at entry, on the day treatment began",
+        "dims": [
+          600
+        ]
+      },
+      {
+        "key": "week12",
+        "shape": "(patients,)",
+        "dtype": "float",
+        "meaning": "symptom severity score 12 weeks after treatment began",
+        "dims": [
+          600
+        ]
+      }
+    ],
+    "sizes": {
+      "patients": 600
+    }
+  },
+  {
+    "id": "D-048",
+    "claim": "Among 40 anaesthetised dogs, whole-body oxygen consumption and oxygen delivery, each computed from the measured cardiac output and the arterial and mixed-venous blood oxygen contents by the standard Fick definitions, are positively related: their Pearson correlation is at least 0.40.",
+    "data_keys": [
+      {
+        "key": "cardiac_output",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "cardiac output of each dog, in L per min",
+        "dims": [
+          40
+        ]
+      },
+      {
+        "key": "cardiac_output_2",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "a second, independent determination of the cardiac output of each dog, in L per min",
+        "dims": [
+          40
+        ]
+      },
+      {
+        "key": "arterial_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "arterial blood oxygen content of each dog, in mL O2 per dL",
+        "dims": [
+          40
+        ]
+      },
+      {
+        "key": "venous_o2_content",
+        "shape": "(subjects,)",
+        "dtype": "float",
+        "meaning": "mixed-venous blood oxygen content of each dog, in mL O2 per dL",
+        "dims": [
+          40
+        ]
+      }
+    ],
+    "sizes": {
+      "subjects": 40
+    }
+  }
+]

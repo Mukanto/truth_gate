@@ -1,0 +1,13 @@
+{
+  "freeze_format": 1,
+  "created_utc": "2026-11-18T15:55:15Z",
+  "algorithm": "sha256",
+  "files": {
+    "../AWARENESS_MAP_second.json": "8098bd19020e730ea4ce1f8533bb142d489c0c329112612f42d67364a2e058b6",
+    "../awareness/r3/READING.json": "1bd3864be123c648e59c08d0024404bde4ce6c8b526fa4ec73ac2912e11c35a9",
+    "../awareness/r3/READING.md": "be13274007786c573d8810ed2ab34e88e2bd0a2f76513edd9780055c869c1e1e",
+    "../awareness/r4/READING.json": "ffd645b896fd5cc493f01e506717c5f7e6b4a39ad7cb3c45263c7206827c1a3d",
+    "../awareness/r4/READING.md": "f605874a49eb41abc6fb42a60329317739063a77954f18462ba5b5d4391b4dd5"
+  },
+  "core_sha256": "5ba1438b64464905e186301b1e814f2949c55fce915f9e3ccce701b705cc29b3"
+}

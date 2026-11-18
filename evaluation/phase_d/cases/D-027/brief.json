@@ -1,0 +1,29 @@
+{
+ "id": "D-027",
+ "claim": "The 25 measurements in X predict the outcome y for new samples: the mean absolute error of an ordinary least squares regression of y on X (with an intercept) is at least 10% below that of predicting the mean of y: 1 - MAE(model) / MAE(mean predictor) >= 0.10.",
+ "data_keys": [
+  {
+   "key": "X",
+   "shape": "(samples, features)",
+   "dtype": "float",
+   "meaning": "25 continuous measurements for each sample",
+   "dims": [
+    60,
+    25
+   ]
+  },
+  {
+   "key": "y",
+   "shape": "(samples,)",
+   "dtype": "float",
+   "meaning": "continuous outcome of each sample",
+   "dims": [
+    60
+   ]
+  }
+ ],
+ "sizes": {
+  "samples": 60,
+  "features": 25
+ }
+}

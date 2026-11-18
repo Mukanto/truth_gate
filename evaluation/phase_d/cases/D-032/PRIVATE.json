@@ -1,0 +1,18 @@
+{
+ "id": "D-032",
+ "source": "NIE11",
+ "passage": "SOURCES_D passage: a difference between two effects claimed because one is significant and the other is not. Abstract (Europe PMC): in a review of 513 articles from five journals, 78 used the correct method and 79 the incorrect one.",
+ "faulty": "Within carriers, two-sample z test (pooled variance) of the drug-minus-vehicle difference in responder proportion, one-sided at 0.05; the same within non-carriers. HOLDS if the effect is significant in carriers and not significant in non-carriers; None if a cell is empty or a variance is zero.",
+ "fixed": "One-sided z test at 0.05 of the difference between the two drug-minus-vehicle differences (carriers minus non-carriers), standard error from the four cell proportions. HOLDS if p < 0.05; None if a cell is empty or the standard error is zero.",
+ "estimand": "Faulty: the pair (is the carrier effect significant, is the non-carrier effect not significant). Fixed: the difference between the carrier effect and the non-carrier effect on the proportion scale.",
+ "model_family": "Independent Bernoulli responses with a cell-specific response probability for each of the four (carrier, drug) cells; no effect of the difference means equal drug-minus-vehicle differences in the two strata (the source names no model).",
+ "statistic_family": "proportion",
+ "guard_minimum": 1,
+ "sizes_note": "Source (abstract) states no group size. 240 participants, about 60 per cell, is typical of a behavioural pharmacology study; in a world with equal effects of 0.15 in both strata the power of each stratum test is about one half, which is where the rule fails most often. Dependence on sample size: not stated.",
+ "exploited_structure": "Two stratum tests with moderate power each: whether an effect is significant is a noisy function of its size, so one test can cross the line and the other not while the true effects are equal.",
+ "structure_statistic": null,
+ "notes": "NIE11's earlier combinations were here-not-there with correlation, mean and slope; this one uses proportion. Structure statistic is null: the exploited structure is the power of each stratum test, which depends on the size of the common effect, and the effect differs between the claim-true and claim-false data, so no statistic of the data has the same expected value in both. Group sizes alone do not carry the error (it occurs with equal group sizes).",
+ "subtype_or_tag": "significant-here-not-there",
+ "class": "B-6",
+ "approved_value": null
+}
