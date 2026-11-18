@@ -285,9 +285,24 @@ The full account, with every number, is in [`docs/EVALUATION.md`](docs/EVALUATIO
   errors that stay below the claim's threshold at the brief's size, fixed criteria that are not clean tests. At most one
   miss and one failed clean pass involve the gate, both from its design. The verdicts stand. Details in
   [`evaluation/validity_audit_b2b3/`](evaluation/validity_audit_b2b3/README.md).
-* **The evaluation is not independent.** All test cases, including Phases B and C, were written by AI sessions from the
-  model family (Claude) that wrote the code; Phase C's world author is a different Claude model line, not a different
-  family. There is no human-authored external benchmark.
+* **Phase D, B-2 and B-3 with a validity check first and a dependence checklist: no verdict.** 72 pairs were built.
+  * **Validity.** Each pair was checked on a reference world before any gate run. 10 B-2 pairs, 7 B-3 pairs and 3
+    decoys passed. That is below the pre-registered 16 pairs per class and below the subtype minima, so both hypotheses
+    have no verdict ("insufficient cases; minimum not met").
+  * **With the checklist (arm W-1, gate 0.5.1, descriptive):**
+    * Procedure-level leakage (B-2): 9 of 10 attributable detections, 10 of 10 fixed passed.
+    * Coupling by construction (B-3): 6 of 7 and 7 of 7.
+  * **Checklist effect: not demonstrated.** All 17 pairs gave the same declared detection with and without the
+    checklist. Without it the arm was already at 14 of 17, so the test could not reach significance.
+  * **World author.** The worlds were declared by Claude Opus 5.5, the designer's own model, which was not told the
+    error.
+  * A blind post-run audit and an independent recomputation are included. Details in
+    [`evaluation/phase_d/REPORT.md`](evaluation/phase_d/REPORT.md).
+* **The evaluation is not independent.** All test cases, including Phases B to D, were written by AI sessions from the
+  model family (Claude) that wrote the code.
+  * Phase C's world author is a different Claude model line, not a different family.
+  * Phase D's world author is Claude Opus 5.5, the designer's own model.
+  * There is no human-authored external benchmark.
 
 ## Limits
 
@@ -369,6 +384,11 @@ criterion's own UNDEFINED outcomes (spec 0.7, see "Delivered in 0.5.0" above); t
 **Phase C: done (2026-11-15).** New documented-error cases, with worlds declared by a different Claude model line, ran
 on 0.5.0 and on 0.4.1; results, the comparison of the two versions and limits in
 [`evaluation/phase_c/REPORT.md`](evaluation/phase_c/REPORT.md).
+
+**Phase D: done (2026-11-18).** B-2 and B-3 cases ran on 0.5.1, each pair checked for validity on a reference world
+first, with worlds declared with and without a dependence checklist. Neither class kept enough pairs for a verdict, and
+no checklist effect was demonstrated. Results and limits are in
+[`evaluation/phase_d/REPORT.md`](evaluation/phase_d/REPORT.md).
 
 Feedback is welcome as issues, especially real cases in which the gate caught, or missed, a defect.
 

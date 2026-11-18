@@ -6,6 +6,25 @@ package version is `tool_version` in the certificate (`kapi_version` up to 0.3);
 Two counts are kept apart below: the methods protocol has 19 numbered rules for before a run (`protocol/PROTOCOL.md`,
 rules for people who design a study); the gate runs eight automated checks, K1 to K8.
 
+## Evaluation: Phase D run and report (2026-11-18)
+
+- **Case freeze.** `evaluation/phase_d/` holds the frozen cases, `EXPECTED_FLAGS_D.json` and the pre-run record. They
+  were frozen in `FREEZE_CASES_D.json` and `FREEZE_RECORD_D.json` and pushed before any gate run (`25bdbb2`).
+- **The run and its checks.**
+  - The run: `run/`, 120 checks on gate `v0.5.1`, no attrition.
+  - The scoring: `score/`, from the frozen tools.
+  - The designer's independent recomputation: `recompute/`, 1158 items, 0 disagreements.
+  - A blind post-run audit by a fresh agent in a separate session: `postrun/`.
+- **Results (`REPORT.md`).**
+  - Validity checks kept 10 B-2 and 7 B-3 pairs, so neither hypothesis has a verdict ("insufficient cases; minimum not
+    met").
+  - Descriptive, with the checklist (W-1): B-2 9/10 attributable and 10/10 clean; B-3 6/7 and 7/7.
+  - The checklist effect on declared detection is not demonstrated. All 17 pairs gave the same result in both arms, and
+    W-0 was at a ceiling. The checklist is not proposed.
+- **Revisions after the freeze.** `REVISIONS-post-freeze.md` P-1 to P-7. P-1 records that the world author is Claude
+  Opus 5.5 by the author's decision.
+- No change to the gate.
+
 ## Evaluation: Phase D pre-registration frozen (2026-11-17)
 
 - `evaluation/phase_d/` holds the pre-registration of Phase D, frozen in `FREEZE_PREREG_D.json` before any Phase D
