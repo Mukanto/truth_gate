@@ -1,0 +1,41 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:permute_heart_within_mass",
+      "stream": "control:permute_heart_within_mass",
+      "faulty_holds": 123,
+      "faulty_n": 200,
+      "fixed_holds": 5,
+      "fixed_n": 200,
+      "p": 3.4074071458280816e-42
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 64,
+      "faulty_n": 200,
+      "fixed_holds": 8,
+      "fixed_n": 200,
+      "p": 2.5458534218472253e-14
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 121,
+      "faulty_n": 200,
+      "fixed_holds": 6,
+      "fixed_n": 200,
+      "p": 5.775640371741943e-40
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:permute_heart_within_mass@control:permute_heart_within_mass 123 vs 5 p=3.41e-42 OK",
+    "HIGH_RATE:probe:noise@probe:noise 64 vs 8 p=2.55e-14 OK",
+    "K2_HIGH_SIZE@world:minus 121 vs 6 p=5.78e-40 OK"
+  ]
+}

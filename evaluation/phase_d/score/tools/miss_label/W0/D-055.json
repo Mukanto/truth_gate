@@ -1,0 +1,39 @@
+{
+  "label": "b",
+  "text": "the error's minus rate stayed below the gate's flag threshold",
+  "cause": null,
+  "cause_twin": null,
+  "detected": false,
+  "attributable": {
+    "pb_detected": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "draft1_rule": false,
+    "qualifying": [],
+    "reasons": [
+      "faulty verdict is WEAK, not NOT_FALSIFIABLE"
+    ]
+  },
+  "structure": {
+    "mean": 0.6560255163963566,
+    "sd": 0.010699090725765968,
+    "values_head": [
+      0.6251735128522821,
+      0.6650336255773505,
+      0.6589647178464879,
+      0.6687879004752023,
+      0.6516149293321231
+    ],
+    "share_beyond_half": 1.0
+  },
+  "kstar_arm": 19,
+  "m": 6,
+  "faulty_minus_holds": 0,
+  "n": 200,
+  "reasons": [
+    "faulty minus count 0 < k* 19"
+  ],
+  "pb_detected": false,
+  "fixed_attrition": null
+}

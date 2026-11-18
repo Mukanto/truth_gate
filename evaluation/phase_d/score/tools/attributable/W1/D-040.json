@@ -1,0 +1,41 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths",
+      "stream": "control:height_shuffled_within_blocks_of_10_similar_lengths",
+      "faulty_holds": 124,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.6546402039645197e-48
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 87,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 3.6317832273207896e-32
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 74,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.2591409002875494e-26
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths@control:height_shuffled_within_blocks_of_10_similar_lengths 124 vs 1 p=1.65e-48 OK",
+    "HIGH_RATE:probe:noise@probe:noise 87 vs 0 p=3.63e-32 OK",
+    "K2_HIGH_SIZE@world:minus 74 vs 0 p=1.26e-26 OK"
+  ]
+}

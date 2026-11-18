@@ -1,0 +1,51 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:myeloid_labels_shuffled_across_samples",
+      "stream": "control:myeloid_labels_shuffled_across_samples",
+      "faulty_holds": 123,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.5515406086792485e-50
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 120,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 2.886282172048571e-48
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:myeloid_labels_shuffled_across_samples@control:myeloid_labels_shuffled_across_samples 123 vs 0 p=6.55e-50 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 120 vs 0 p=2.89e-48 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 0 p=9.71e-120 OK"
+  ]
+}

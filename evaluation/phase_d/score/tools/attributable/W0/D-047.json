@@ -1,0 +1,11 @@
+{
+  "pb_detected": false,
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "draft1_rule": false,
+  "qualifying": [],
+  "reasons": [
+    "faulty verdict is WEAK, not NOT_FALSIFIABLE"
+  ]
+}

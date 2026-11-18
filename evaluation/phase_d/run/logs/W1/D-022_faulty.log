@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:X,y, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-022_faulty.json
+body_sha256: 4a0da9df11f68d23816e34c8a324c26b7355aa6194fa9114f254aba1a72ebe9a

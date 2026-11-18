@@ -1,0 +1,31 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:permute_humerus_within_species",
+      "stream": "control:permute_humerus_within_species",
+      "faulty_holds": 176,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.757057785548393e-85
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 149,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.443020760036508e-66
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:permute_humerus_within_species@control:permute_humerus_within_species 176 vs 1 p=1.76e-85 OK",
+    "K2_HIGH_SIZE@world:minus 149 vs 0 p=6.44e-66 OK"
+  ]
+}

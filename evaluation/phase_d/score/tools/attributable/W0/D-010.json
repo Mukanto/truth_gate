@@ -1,0 +1,81 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:y_permuted_across_patients",
+      "stream": "control:y_permuted_across_patients",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 112,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 4.778688444779273e-44
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:covariates,y",
+      "stream": "probe:shuffle:covariates,y",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_permuted_across_patients",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:covariates,y",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:y_permuted_across_patients@control:y_permuted_across_patients 200 vs 0 p=9.71e-120 OK",
+    "HIGH_RATE:probe:noise@probe:noise 112 vs 0 p=4.78e-44 OK",
+    "HIGH_RATE:probe:shuffle:covariates,y@probe:shuffle:covariates,y 200 vs 0 p=9.71e-120 OK",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:y_permuted_across_patients 200 vs 0 p=9.71e-120 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:covariates,y 200 vs 0 p=9.71e-120 OK"
+  ]
+}

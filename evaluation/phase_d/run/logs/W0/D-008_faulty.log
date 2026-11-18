@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:vo2_permuted_across_occasions_within_patient, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas, K2_HIGH_SIZE, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W0\D-008_faulty.json
+body_sha256: 573f58ad096fee708b2825f30b158d4eae859b49a74039cd5a74ee1ec5c82e25

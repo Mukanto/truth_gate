@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:height_permuted_within_length_blocks, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:breadth,height, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_SHUFFLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W0\D-040_faulty.json
+body_sha256: b61a4d5cb926e592b3e1cd31f08848a267cb9c3adafdbda8c187f81bbbb44df1

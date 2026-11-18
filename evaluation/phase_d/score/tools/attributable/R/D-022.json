@@ -1,0 +1,71 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:D-022",
+      "stream": "control:D-022",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-022",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:D-022@control:D-022 200 vs 0 p=9.71e-120 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:D-022 200 vs 0 p=9.71e-120 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 0 p=9.71e-120 OK"
+  ]
+}

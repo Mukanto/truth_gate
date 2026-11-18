@@ -1,0 +1,61 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:labels_permuted_across_samples",
+      "stream": "control:labels_permuted_across_samples",
+      "faulty_holds": 144,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.4859382612766694e-62
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:expression,myeloid",
+      "stream": "probe:shuffle:expression,myeloid",
+      "faulty_holds": 149,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.443020760036508e-66
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 157,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.1752633125356658e-71
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:labels_permuted_across_samples@control:labels_permuted_across_samples 144 vs 0 p=1.49e-62 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "HIGH_RATE:probe:shuffle:expression,myeloid@probe:shuffle:expression,myeloid 149 vs 0 p=6.44e-66 OK",
+    "K2_HIGH_SIZE@world:minus 157 vs 0 p=1.18e-71 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 0 p=9.71e-120 OK"
+  ]
+}

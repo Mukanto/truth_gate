@@ -1,0 +1,91 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:response_permuted_across_patients",
+      "stream": "control:response_permuted_across_patients",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.9523566667698477e-117
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:expression,response",
+      "stream": "probe:shuffle:expression,response",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 4,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 4,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:response_permuted_across_patients",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.9523566667698477e-117
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:expression,response",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:response_permuted_across_patients@control:response_permuted_across_patients 200 vs 2 p=1.97e-115 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 1 p=1.95e-117 OK",
+    "HIGH_RATE:probe:shuffle:expression,response@probe:shuffle:expression,response 200 vs 2 p=1.97e-115 OK",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 4 p=6.8e-112 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 4 p=6.8e-112 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:response_permuted_across_patients 200 vs 2 p=1.97e-115 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 1 p=1.95e-117 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:expression,response 200 vs 2 p=1.97e-115 OK"
+  ]
+}

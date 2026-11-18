@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:exclosure_shuffled_across_plots, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-012_faulty.json
+body_sha256: 5b3a055be8361672c890fc2554e6b452611bb1c7ab03151cbcd943609c5f37ad

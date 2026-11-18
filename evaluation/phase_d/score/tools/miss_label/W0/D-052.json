@@ -1,0 +1,42 @@
+{
+  "label": "c",
+  "text": "flagged, not attributable",
+  "cause": null,
+  "cause_twin": null,
+  "detected": false,
+  "attributable": {
+    "pb_detected": true,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "draft1_rule": false,
+    "qualifying": [],
+    "reasons": [
+      "K4_CONTROL_ALSO_HOLDS@control:age_labels_permuted 0 vs 14 p=1",
+      "K4_CONTROL_ALSO_HOLDS@control:pre_post_swapped 0 vs 0 p=1",
+      "K5_HOLDS_ON_NOISE@probe:noise 6 vs 6 p=0.615"
+    ]
+  },
+  "structure": {
+    "mean": 0.2025048827094004,
+    "sd": 0.13448769481087047,
+    "values_head": [
+      0.09705258735932365,
+      0.32035804525485684,
+      0.1452128846065329,
+      0.23787961327228999,
+      0.032743518527496365
+    ],
+    "share_beyond_half": 0.155
+  },
+  "kstar_arm": 18,
+  "m": 5,
+  "faulty_minus_holds": 9,
+  "n": 200,
+  "reasons": [
+    "PB-detected, no attributable stream: K4_CONTROL_ALSO_HOLDS@control:age_labels_permuted 0 vs 14 p=1; K4_CONTROL_ALSO_HOLDS@control:pre_post_swapped 0 vs 0 p=1; K5_HOLDS_ON_NOISE@probe:noise 6 vs 6 p=0.615",
+    "flagged, not attributable"
+  ],
+  "pb_detected": true,
+  "fixed_attrition": null
+}

@@ -1,0 +1,81 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+      "stream": "control:vo2_permuted_across_occasions_within_patient",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas",
+      "stream": "probe:shuffle:cardiac_output,vo2_expired_gas",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 25,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.3397731567711487e-08
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:vo2_permuted_across_occasions_within_patient",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:cardiac_output,vo2_expired_gas",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient@control:vo2_permuted_across_occasions_within_patient 200 vs 0 p=9.71e-120 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas@probe:shuffle:cardiac_output,vo2_expired_gas 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 25 vs 0 p=1.34e-08 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:vo2_permuted_across_occasions_within_patient 200 vs 0 p=9.71e-120 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:cardiac_output,vo2_expired_gas 200 vs 0 p=9.71e-120 OK"
+  ]
+}

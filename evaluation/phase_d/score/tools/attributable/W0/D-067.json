@@ -1,0 +1,101 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+      "stream": "control:heart_exchanged_among_mass_matched_rats",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 6,
+      "fixed_n": 200,
+      "p": 9.57911350975304e-109
+    },
+    {
+      "flag": "HIGH_RATE:control:heart_permuted_across_rats",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 64,
+      "faulty_n": 200,
+      "fixed_holds": 8,
+      "fixed_n": 200,
+      "p": 2.5458534218472253e-14
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.9523566667698477e-117
+    },
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 15,
+      "fixed_n": 200,
+      "p": 4.3692572853679003e-97
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 15,
+      "fixed_n": 200,
+      "p": 4.3692572853679003e-97
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:heart_exchanged_among_mass_matched_rats",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 6,
+      "fixed_n": 200,
+      "p": 9.57911350975304e-109
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 1.9523566667698477e-117
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats@control:heart_exchanged_among_mass_matched_rats 200 vs 6 p=9.58e-109 OK",
+    "HIGH_RATE:control:heart_permuted_across_rats@control:heart_permuted_across_rats 200 vs 2 p=1.97e-115 OK",
+    "HIGH_RATE:probe:noise@probe:noise 64 vs 8 p=2.55e-14 OK",
+    "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight@probe:shuffle:kidney_weight,heart_weight 200 vs 1 p=1.95e-117 OK",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 15 p=4.37e-97 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 15 p=4.37e-97 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:heart_exchanged_among_mass_matched_rats 200 vs 6 p=9.58e-109 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:heart_permuted_across_rats 200 vs 2 p=1.97e-115 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:kidney_weight,heart_weight 200 vs 1 p=1.95e-117 OK"
+  ]
+}

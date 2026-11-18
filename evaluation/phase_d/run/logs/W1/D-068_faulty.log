@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:head_permuted_within_population, HIGH_RATE:control:head_swapped_between_body_length_neighbours, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-068_faulty.json
+body_sha256: 04485fb4c054da479abe50961606982a75c49f2615ca5af4d1f7ba398435e293

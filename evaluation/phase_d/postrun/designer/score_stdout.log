@@ -1,0 +1,67 @@
+﻿py : scored R D-007
+At line:6 char:65
++ ... n\phase_d"; py -I score_phase_d.py *> "E:\Claude Projects\Kapi\phase_ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (scored R D-007:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+scored W0 D-007
+scored W1 D-007
+scored R D-008
+scored W0 D-008
+scored W1 D-008
+scored R D-010
+scored W0 D-010
+scored W1 D-010
+scored R D-011
+scored W0 D-011
+scored W1 D-011
+scored R D-012
+scored W0 D-012
+scored W1 D-012
+scored R D-022
+scored W0 D-022
+scored W1 D-022
+scored R D-023
+scored W0 D-023
+scored W1 D-023
+scored R D-027
+scored W0 D-027
+scored W1 D-027
+scored R D-035
+scored W0 D-035
+scored W1 D-035
+scored R D-040
+scored W0 D-040
+scored W1 D-040
+scored R D-042
+scored W0 D-042
+scored W1 D-042
+scored R D-047
+scored W0 D-047
+scored W1 D-047
+scored R D-052
+scored W0 D-052
+scored W1 D-052
+scored R D-055
+scored W0 D-055
+scored W1 D-055
+scored R D-056
+scored W0 D-056
+scored W1 D-056
+scored R D-062
+scored W0 D-062
+scored W1 D-062
+scored R D-064
+scored W0 D-064
+scored W1 D-064
+scored R D-066
+scored W0 D-066
+scored W1 D-066
+scored R D-067
+scored W0 D-067
+scored W1 D-067
+scored R D-068
+scored W0 D-068
+scored W1 D-068
+wrote E:\Claude Projects\Kapi\phase_d_work\score\RESULTS_D.json and RESULTS_D.md

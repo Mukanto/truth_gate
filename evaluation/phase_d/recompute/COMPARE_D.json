@@ -1,0 +1,10291 @@
+{
+ "compared_items": 1158,
+ "disagreements": 0,
+ "by_group": {
+  "pair": [
+   720,
+   0
+  ],
+  "pair-stream": [
+   143,
+   0
+  ],
+  "table": [
+   255,
+   0
+  ],
+  "H-D1": [
+   6,
+   0
+  ],
+  "H-D2": [
+   6,
+   0
+  ],
+  "H-D3": [
+   19,
+   0
+  ],
+  "guard": [
+   6,
+   0
+  ],
+  "adoption": [
+   3,
+   0
+  ]
+ },
+ "disagreement_list": [],
+ "items": [
+  {
+   "group": "pair",
+   "item": "D-007/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/R qualifying_streams",
+   "mine": [
+    "control:D-007",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-007",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/R stream control:D-007 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/R qualifying_streams",
+   "mine": [
+    "control:permute_vo2_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:permute_vo2_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/R stream control:permute_vo2_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    96,
+    200,
+    0,
+    200,
+    3.064583030851385e-36
+   ],
+   "official": [
+    96,
+    200,
+    0,
+    200,
+    3.064583030851385e-36
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/R qualifying_streams",
+   "mine": [
+    "control:D-010",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-010",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/R stream control:D-010 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "official": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/R qualifying_streams",
+   "mine": [
+    "control:D-011",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-011",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/R stream control:D-011 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    85,
+    200,
+    0,
+    200,
+    2.740043318186875e-31
+   ],
+   "official": [
+    85,
+    200,
+    0,
+    200,
+    2.740043318186875e-31
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    88,
+    200,
+    0,
+    200,
+    1.3111549670519143e-32
+   ],
+   "official": [
+    88,
+    200,
+    0,
+    200,
+    1.3111549670519143e-32
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/R qualifying_streams",
+   "mine": [
+    "control:D-012",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-012",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-012/R stream control:D-012 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    60,
+    200,
+    2,
+    200,
+    3.1182986517506168e-18
+   ],
+   "official": [
+    60,
+    200,
+    2,
+    200,
+    3.1182986517506168e-18
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-012/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    57,
+    200,
+    14,
+    200,
+    8.263702315727282e-09
+   ],
+   "official": [
+    57,
+    200,
+    14,
+    200,
+    8.263702315727282e-09
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/R qualifying_streams",
+   "mine": [
+    "control:D-022",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-022",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/R stream control:D-022 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/R qualifying_streams",
+   "mine": [
+    "control:D-023",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-023",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-023/R stream control:D-023 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-023/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "official": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-023/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/R qualifying_streams",
+   "mine": [
+    "control:D-027",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-027",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/R stream control:D-027 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "official": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/R qualifying_streams",
+   "mine": [
+    "control:D-035",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-035",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-035/R stream control:D-035 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-035/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/R qualifying_streams",
+   "mine": [
+    "control:permute_height_within_length",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:permute_height_within_length",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/R stream control:permute_height_within_length (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "official": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/R qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-042/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    128,
+    200,
+    0,
+    200,
+    9.877086180787504e-53
+   ],
+   "official": [
+    128,
+    200,
+    0,
+    200,
+    9.877086180787504e-53
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/R qualifying_streams",
+   "mine": [
+    "control:D-047",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-047",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-047/R stream control:D-047 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    136,
+    200,
+    0,
+    200,
+    1.7651435155455987e-57
+   ],
+   "official": [
+    136,
+    200,
+    0,
+    200,
+    1.7651435155455987e-57
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-047/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    148,
+    200,
+    0,
+    200,
+    3.12238698371e-65
+   ],
+   "official": [
+    148,
+    200,
+    0,
+    200,
+    3.12238698371e-65
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/R qualifying_streams",
+   "mine": [
+    "control:D-052",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-052",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-052/R stream control:D-052 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    49,
+    200,
+    6,
+    200,
+    6.542849229266702e-11
+   ],
+   "official": [
+    49,
+    200,
+    6,
+    200,
+    6.542849229266702e-11
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-052/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    95,
+    200,
+    13,
+    200,
+    7.147592226516704e-22
+   ],
+   "official": [
+    95,
+    200,
+    13,
+    200,
+    7.147592226516704e-22
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/R qualifying_streams",
+   "mine": [
+    "control:D-055",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-055",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-055/R stream control:D-055 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    65,
+    200,
+    2,
+    200,
+    4.249429050398003e-20
+   ],
+   "official": [
+    65,
+    200,
+    2,
+    200,
+    4.249429050398003e-20
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-055/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    45,
+    200,
+    3,
+    200,
+    5.634622483317031e-12
+   ],
+   "official": [
+    45,
+    200,
+    3,
+    200,
+    5.634622483317031e-12
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/R qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-056/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    53,
+    200,
+    10,
+    200,
+    1.1299369725096774e-09
+   ],
+   "official": [
+    53,
+    200,
+    10,
+    200,
+    1.1299369725096774e-09
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/R qualifying_streams",
+   "mine": [
+    "control:permute_humerus_within_species",
+    "world:minus"
+   ],
+   "official": [
+    "control:permute_humerus_within_species",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-062/R stream control:permute_humerus_within_species (faulty h/n, fixed h/n, p)",
+   "mine": [
+    176,
+    200,
+    1,
+    200,
+    1.757057785548393e-85
+   ],
+   "official": [
+    176,
+    200,
+    1,
+    200,
+    1.757057785548393e-85
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-062/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    149,
+    200,
+    0,
+    200,
+    6.443020760036508e-66
+   ],
+   "official": [
+    149,
+    200,
+    0,
+    200,
+    6.443020760036508e-66
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/R qualifying_streams",
+   "mine": [
+    "control:D-064",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-064",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/R stream control:D-064 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/R qualifying_streams",
+   "mine": [
+    "control:D-066",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-066",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/R stream control:D-066 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/R qualifying_streams",
+   "mine": [
+    "control:permute_heart_within_mass",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:permute_heart_within_mass",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/R stream control:permute_heart_within_mass (faulty h/n, fixed h/n, p)",
+   "mine": [
+    123,
+    200,
+    5,
+    200,
+    3.4074071458280816e-42
+   ],
+   "official": [
+    123,
+    200,
+    5,
+    200,
+    3.4074071458280816e-42
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "official": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    121,
+    200,
+    6,
+    200,
+    5.775640371741943e-40
+   ],
+   "official": [
+    121,
+    200,
+    6,
+    200,
+    5.775640371741943e-40
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/R qualifying_streams",
+   "mine": [
+    "control:D-068",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:D-068",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/R stream control:D-068 (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/R stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "official": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/R stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W0 qualifying_streams",
+   "mine": [
+    "control:survival_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:expression,survival_months",
+    "world:minus"
+   ],
+   "official": [
+    "control:survival_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:expression,survival_months",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W0 stream control:survival_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W0 stream probe:shuffle:expression,survival_months (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W0 qualifying_streams",
+   "mine": [
+    "control:vo2_permuted_across_occasions_within_patient",
+    "probe:noise",
+    "probe:shuffle:cardiac_output,vo2_expired_gas",
+    "world:minus"
+   ],
+   "official": [
+    "control:vo2_permuted_across_occasions_within_patient",
+    "probe:noise",
+    "probe:shuffle:cardiac_output,vo2_expired_gas",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W0 stream control:vo2_permuted_across_occasions_within_patient (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W0 stream probe:shuffle:cardiac_output,vo2_expired_gas (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    25,
+    200,
+    0,
+    200,
+    1.3397731567711487e-08
+   ],
+   "official": [
+    25,
+    200,
+    0,
+    200,
+    1.3397731567711487e-08
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W0 qualifying_streams",
+   "mine": [
+    "control:y_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:covariates,y",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:covariates,y",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W0 stream control:y_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "official": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W0 stream probe:shuffle:covariates,y (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W0 qualifying_streams",
+   "mine": [
+    "control:labels_permuted_across_samples",
+    "probe:noise",
+    "probe:shuffle:expression,myeloid",
+    "world:minus"
+   ],
+   "official": [
+    "control:labels_permuted_across_samples",
+    "probe:noise",
+    "probe:shuffle:expression,myeloid",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W0 stream control:labels_permuted_across_samples (faulty h/n, fixed h/n, p)",
+   "mine": [
+    144,
+    200,
+    0,
+    200,
+    1.4859382612766694e-62
+   ],
+   "official": [
+    144,
+    200,
+    0,
+    200,
+    1.4859382612766694e-62
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W0 stream probe:shuffle:expression,myeloid (faulty h/n, fixed h/n, p)",
+   "mine": [
+    149,
+    200,
+    0,
+    200,
+    6.443020760036508e-66
+   ],
+   "official": [
+    149,
+    200,
+    0,
+    200,
+    6.443020760036508e-66
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    157,
+    200,
+    0,
+    200,
+    1.1752633125356658e-71
+   ],
+   "official": [
+    157,
+    200,
+    0,
+    200,
+    1.1752633125356658e-71
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W0 qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-012/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    19,
+    200,
+    4,
+    200,
+    0.0009765902966533259
+   ],
+   "official": [
+    19,
+    200,
+    4,
+    200,
+    0.0009765902966533259
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W0 qualifying_streams",
+   "mine": [
+    "control:y_permuted_across_runs",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_permuted_across_runs",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W0 stream control:y_permuted_across_runs (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W0 stream probe:shuffle:X,y (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W0 qualifying_streams",
+   "mine": [
+    "probe:noise"
+   ],
+   "official": [
+    "probe:noise"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-023/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "official": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W0 qualifying_streams",
+   "mine": [
+    "control:y_permuted_across_samples",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_permuted_across_samples",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W0 stream control:y_permuted_across_samples (faulty h/n, fixed h/n, p)",
+   "mine": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "official": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W0 stream probe:shuffle:X,y (faulty h/n, fixed h/n, p)",
+   "mine": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "official": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    199,
+    200,
+    0,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    199,
+    200,
+    0,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 fixed_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 clean_pass",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 clean_pass_no_noise",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W0 qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-035/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W0 qualifying_streams",
+   "mine": [
+    "control:height_permuted_within_length_blocks",
+    "probe:noise",
+    "probe:shuffle:breadth,height",
+    "world:minus"
+   ],
+   "official": [
+    "control:height_permuted_within_length_blocks",
+    "probe:noise",
+    "probe:shuffle:breadth,height",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W0 stream control:height_permuted_within_length_blocks (faulty h/n, fixed h/n, p)",
+   "mine": [
+    195,
+    200,
+    0,
+    200,
+    2.790033061093118e-110
+   ],
+   "official": [
+    195,
+    200,
+    0,
+    200,
+    2.790033061093118e-110
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "official": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W0 stream probe:shuffle:breadth,height (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    192,
+    200,
+    0,
+    200,
+    7.36496984421298e-106
+   ],
+   "official": [
+    192,
+    200,
+    0,
+    200,
+    7.36496984421298e-106
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W0 qualifying_streams",
+   "mine": [
+    "control:compound_activity_permuted_across_compounds",
+    "world:minus"
+   ],
+   "official": [
+    "control:compound_activity_permuted_across_compounds",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-042/W0 stream control:compound_activity_permuted_across_compounds (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-042/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 faulty_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 pb_detected",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W0 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W0 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 faulty_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 pb_detected",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W0 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W0 qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-056/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    22,
+    200,
+    6,
+    200,
+    0.0013318638663720025
+   ],
+   "official": [
+    22,
+    200,
+    6,
+    200,
+    0.0013318638663720025
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 faulty_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 pb_detected",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W0 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W0 qualifying_streams",
+   "mine": [
+    "control:response_permuted_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:response_permuted_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W0 stream control:response_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W0 qualifying_streams",
+   "mine": [
+    "control:outcome_permuted_across_patients",
+    "probe:shuffle:y,X",
+    "world:minus"
+   ],
+   "official": [
+    "control:outcome_permuted_across_patients",
+    "probe:shuffle:y,X",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W0 stream control:outcome_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W0 stream probe:shuffle:y,X (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W0 qualifying_streams",
+   "mine": [
+    "control:heart_exchanged_among_mass_matched_rats",
+    "control:heart_permuted_across_rats",
+    "probe:noise",
+    "probe:shuffle:kidney_weight,heart_weight",
+    "world:minus"
+   ],
+   "official": [
+    "control:heart_exchanged_among_mass_matched_rats",
+    "control:heart_permuted_across_rats",
+    "probe:noise",
+    "probe:shuffle:kidney_weight,heart_weight",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W0 stream control:heart_exchanged_among_mass_matched_rats (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    6,
+    200,
+    9.57911350975304e-109
+   ],
+   "official": [
+    200,
+    200,
+    6,
+    200,
+    9.57911350975304e-109
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W0 stream control:heart_permuted_across_rats (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "official": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W0 stream probe:shuffle:kidney_weight,heart_weight (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    15,
+    200,
+    4.3692572853679003e-97
+   ],
+   "official": [
+    200,
+    200,
+    15,
+    200,
+    4.3692572853679003e-97
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W0 qualifying_streams",
+   "mine": [
+    "control:head_width_exchanged_among_length_matched_specimens",
+    "control:head_width_permuted_within_population",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:head_width_exchanged_among_length_matched_specimens",
+    "control:head_width_permuted_within_population",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W0 stream control:head_width_exchanged_among_length_matched_specimens (faulty h/n, fixed h/n, p)",
+   "mine": [
+    175,
+    200,
+    0,
+    200,
+    9.99951585271443e-87
+   ],
+   "official": [
+    175,
+    200,
+    0,
+    200,
+    9.99951585271443e-87
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W0 stream control:head_width_permuted_within_population (faulty h/n, fixed h/n, p)",
+   "mine": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    197,
+    200,
+    0,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W0 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "official": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W0 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-007/W1 qualifying_streams",
+   "mine": [
+    "control:survival_shuffled_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:survival_shuffled_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W1 stream control:survival_shuffled_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-007/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-008/W1 qualifying_streams",
+   "mine": [
+    "control:consumption_shuffled_across_occasions_within_patient",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:consumption_shuffled_across_occasions_within_patient",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W1 stream control:consumption_shuffled_across_occasions_within_patient (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-008/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    18,
+    200,
+    0,
+    200,
+    2.556712983550819e-06
+   ],
+   "official": [
+    18,
+    200,
+    0,
+    200,
+    2.556712983550819e-06
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-010/W1 qualifying_streams",
+   "mine": [
+    "control:y_shuffled_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_shuffled_across_patients",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W1 stream control:y_shuffled_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "official": [
+    112,
+    200,
+    0,
+    200,
+    4.778688444779273e-44
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-010/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-011/W1 qualifying_streams",
+   "mine": [
+    "control:myeloid_labels_shuffled_across_samples",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:myeloid_labels_shuffled_across_samples",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W1 stream control:myeloid_labels_shuffled_across_samples (faulty h/n, fixed h/n, p)",
+   "mine": [
+    123,
+    200,
+    0,
+    200,
+    6.5515406086792485e-50
+   ],
+   "official": [
+    123,
+    200,
+    0,
+    200,
+    6.5515406086792485e-50
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-011/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    120,
+    200,
+    0,
+    200,
+    2.886282172048571e-48
+   ],
+   "official": [
+    120,
+    200,
+    0,
+    200,
+    2.886282172048571e-48
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-012/W1 qualifying_streams",
+   "mine": [
+    "control:exclosure_shuffled_across_plots",
+    "world:minus"
+   ],
+   "official": [
+    "control:exclosure_shuffled_across_plots",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-012/W1 stream control:exclosure_shuffled_across_plots (faulty h/n, fixed h/n, p)",
+   "mine": [
+    50,
+    200,
+    10,
+    200,
+    7.951617095287973e-09
+   ],
+   "official": [
+    50,
+    200,
+    10,
+    200,
+    7.951617095287973e-09
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-012/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    53,
+    200,
+    11,
+    200,
+    3.770667479688697e-09
+   ],
+   "official": [
+    53,
+    200,
+    11,
+    200,
+    3.770667479688697e-09
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-022/W1 qualifying_streams",
+   "mine": [
+    "control:y_circularly_shifted_against_X_by_30_to_270_runs",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_circularly_shifted_against_X_by_30_to_270_runs",
+    "probe:noise",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W1 stream control:y_circularly_shifted_against_X_by_30_to_270_runs (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W1 stream probe:shuffle:X,y (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-022/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "official": [
+    200,
+    200,
+    3,
+    200,
+    1.3343056246260728e-113
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-023/W1 qualifying_streams",
+   "mine": [
+    "probe:noise"
+   ],
+   "official": [
+    "probe:noise"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-023/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "official": [
+    66,
+    200,
+    0,
+    200,
+    2.1331142836072046e-23
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-027/W1 qualifying_streams",
+   "mine": [
+    "control:y_shuffled_across_samples",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:y_shuffled_across_samples",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W1 stream control:y_shuffled_across_samples (faulty h/n, fixed h/n, p)",
+   "mine": [
+    199,
+    200,
+    0,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    199,
+    200,
+    0,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "official": [
+    196,
+    200,
+    0,
+    200,
+    6.804958685592971e-112
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-027/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    198,
+    200,
+    0,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-035/W1 qualifying_streams",
+   "mine": [
+    "control:positive_labels_shuffled_across_records",
+    "world:minus"
+   ],
+   "official": [
+    "control:positive_labels_shuffled_across_records",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-035/W1 stream control:positive_labels_shuffled_across_records (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-035/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-040/W1 qualifying_streams",
+   "mine": [
+    "control:height_shuffled_within_blocks_of_10_similar_lengths",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:height_shuffled_within_blocks_of_10_similar_lengths",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W1 stream control:height_shuffled_within_blocks_of_10_similar_lengths (faulty h/n, fixed h/n, p)",
+   "mine": [
+    124,
+    200,
+    1,
+    200,
+    1.6546402039645197e-48
+   ],
+   "official": [
+    124,
+    200,
+    1,
+    200,
+    1.6546402039645197e-48
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "official": [
+    87,
+    200,
+    0,
+    200,
+    3.6317832273207896e-32
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-040/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    74,
+    200,
+    0,
+    200,
+    1.2591409002875494e-26
+   ],
+   "official": [
+    74,
+    200,
+    0,
+    200,
+    1.2591409002875494e-26
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-042/W1 qualifying_streams",
+   "mine": [
+    "control:compound_mean_activity_shuffled_across_compounds",
+    "world:minus"
+   ],
+   "official": [
+    "control:compound_mean_activity_shuffled_across_compounds",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-042/W1 stream control:compound_mean_activity_shuffled_across_compounds (faulty h/n, fixed h/n, p)",
+   "mine": [
+    141,
+    200,
+    0,
+    200,
+    1.308273359645155e-60
+   ],
+   "official": [
+    141,
+    200,
+    0,
+    200,
+    1.308273359645155e-60
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-042/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    95,
+    200,
+    0,
+    200,
+    8.90188404199688e-36
+   ],
+   "official": [
+    95,
+    200,
+    0,
+    200,
+    8.90188404199688e-36
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-047/W1 qualifying_streams",
+   "mine": [
+    "control:entry_and_week12_swapped_at_random_within_patient"
+   ],
+   "official": [
+    "control:entry_and_week12_swapped_at_random_within_patient"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-047/W1 stream control:entry_and_week12_swapped_at_random_within_patient (faulty h/n, fixed h/n, p)",
+   "mine": [
+    135,
+    200,
+    0,
+    200,
+    7.196354332608979e-57
+   ],
+   "official": [
+    135,
+    200,
+    0,
+    200,
+    7.196354332608979e-57
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-052/W1 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 faulty_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 pb_detected",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-055/W1 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-056/W1 qualifying_streams",
+   "mine": [
+    "world:minus"
+   ],
+   "official": [
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-056/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    47,
+    200,
+    10,
+    200,
+    5.2638156327624596e-08
+   ],
+   "official": [
+    47,
+    200,
+    10,
+    200,
+    5.2638156327624596e-08
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 faulty_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 pb_detected",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 declared_only_baseline",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 attributable",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 declared",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-062/W1 qualifying_streams",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-064/W1 qualifying_streams",
+   "mine": [
+    "control:response_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:expression,response",
+    "world:minus"
+   ],
+   "official": [
+    "control:response_permuted_across_patients",
+    "probe:noise",
+    "probe:shuffle:expression,response",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W1 stream control:response_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "official": [
+    200,
+    200,
+    1,
+    200,
+    1.9523566667698477e-117
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W1 stream probe:shuffle:expression,response (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "official": [
+    200,
+    200,
+    2,
+    200,
+    1.971880233437546e-115
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-064/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    4,
+    200,
+    6.804958685592971e-112
+   ],
+   "official": [
+    200,
+    200,
+    4,
+    200,
+    6.804958685592971e-112
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 noise_only",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 generic",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-066/W1 qualifying_streams",
+   "mine": [
+    "control:outcome_permuted_across_patients",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "official": [
+    "control:outcome_permuted_across_patients",
+    "probe:shuffle:X,y",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W1 stream control:outcome_permuted_across_patients (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W1 stream probe:shuffle:X,y (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-066/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "official": [
+    200,
+    200,
+    0,
+    200,
+    9.713217247611181e-120
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-067/W1 qualifying_streams",
+   "mine": [
+    "control:heart_permuted_across_rats",
+    "probe:noise",
+    "probe:shuffle:kidney_weight,heart_weight"
+   ],
+   "official": [
+    "control:heart_permuted_across_rats",
+    "probe:noise",
+    "probe:shuffle:kidney_weight,heart_weight"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W1 stream control:heart_permuted_across_rats (faulty h/n, fixed h/n, p)",
+   "mine": [
+    33,
+    200,
+    3,
+    200,
+    3.417234556435365e-08
+   ],
+   "official": [
+    33,
+    200,
+    3,
+    200,
+    3.417234556435365e-08
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "official": [
+    64,
+    200,
+    8,
+    200,
+    2.5458534218472253e-14
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-067/W1 stream probe:shuffle:kidney_weight,heart_weight (faulty h/n, fixed h/n, p)",
+   "mine": [
+    20,
+    200,
+    2,
+    200,
+    4.025341112734932e-05
+   ],
+   "official": [
+    20,
+    200,
+    2,
+    200,
+    4.025341112734932e-05
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 faulty_verdict",
+   "mine": "NOT_FALSIFIABLE",
+   "official": "NOT_FALSIFIABLE",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 fixed_verdict",
+   "mine": "WEAK",
+   "official": "WEAK",
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 attrition",
+   "mine": false,
+   "official": false,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 pb_detected",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 noise_only",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 declared_only_baseline",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 clean_pass",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 clean_pass_no_noise",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 attributable",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 generic",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 declared",
+   "mine": true,
+   "official": true,
+   "agree": true
+  },
+  {
+   "group": "pair",
+   "item": "D-068/W1 qualifying_streams",
+   "mine": [
+    "control:head_permuted_within_population",
+    "control:head_swapped_between_body_length_neighbours",
+    "probe:noise",
+    "world:minus"
+   ],
+   "official": [
+    "control:head_permuted_within_population",
+    "control:head_swapped_between_body_length_neighbours",
+    "probe:noise",
+    "world:minus"
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W1 stream control:head_permuted_within_population (faulty h/n, fixed h/n, p)",
+   "mine": [
+    124,
+    200,
+    0,
+    200,
+    1.8211863785859284e-50
+   ],
+   "official": [
+    124,
+    200,
+    0,
+    200,
+    1.8211863785859284e-50
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W1 stream control:head_swapped_between_body_length_neighbours (faulty h/n, fixed h/n, p)",
+   "mine": [
+    121,
+    200,
+    0,
+    200,
+    8.246520491567346e-49
+   ],
+   "official": [
+    121,
+    200,
+    0,
+    200,
+    8.246520491567346e-49
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W1 stream probe:noise (faulty h/n, fixed h/n, p)",
+   "mine": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "official": [
+    20,
+    200,
+    0,
+    200,
+    5.7868683338233e-07
+   ],
+   "agree": true
+  },
+  {
+   "group": "pair-stream",
+   "item": "D-068/W1 stream world:minus (faulty h/n, fixed h/n, p)",
+   "mine": [
+    125,
+    200,
+    1,
+    200,
+    4.6091131945002766e-49
+   ],
+   "official": [
+    125,
+    200,
+    1,
+    200,
+    4.6091131945002766e-49
+   ],
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "pairs",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "pb_style",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "attributable",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "generic",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "declared",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "clean",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "clean_wo_noise",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "baseline_noise_only",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "baseline_declared_only",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "baseline_flag_everything",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "both",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "declared_only",
+   "mine": 4,
+   "official": 4,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "attributable_lower",
+   "mine": 0.7870580299165931,
+   "official": 0.787058,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "clean_lower",
+   "mine": 0.7870580299165931,
+   "official": 0.787058,
+   "agree": true
+  },
+  {
+   "group": "table R B-2",
+   "item": "pb_style_lower",
+   "mine": 0.7870580299165931,
+   "official": 0.787058,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "pairs",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "pb_style",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "attributable",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "generic",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "declared",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "clean",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "clean_wo_noise",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "baseline_noise_only",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "baseline_declared_only",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "baseline_flag_everything",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "both",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "attributable_lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "clean_lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "table R B-3",
+   "item": "pb_style_lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "pairs",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "pb_style",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "attributable",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "declared",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "clean",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "clean_wo_noise",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "baseline_noise_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "baseline_declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "baseline_flag_everything",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "attributable_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "clean_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table R B-1",
+   "item": "pb_style_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "pairs",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "pb_style",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "attributable",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "declared",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "clean",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "clean_wo_noise",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "baseline_noise_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "baseline_declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "baseline_flag_everything",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "attributable_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "clean_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table R B-6",
+   "item": "pb_style_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "pairs",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "pb_style",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "attributable",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "declared",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "clean",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "clean_wo_noise",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "baseline_noise_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "baseline_declared_only",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "baseline_flag_everything",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "declared_only",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "attributable_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "clean_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "table R decoys",
+   "item": "pb_style_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "pairs",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "pb_style",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "attributable",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "generic",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "declared",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "clean",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "clean_wo_noise",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "baseline_noise_only",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "baseline_declared_only",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "baseline_flag_everything",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "both",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "declared_only",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "attributable_lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "clean_lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-2",
+   "item": "pb_style_lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "pairs",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "pb_style",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "attributable",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "generic",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "declared",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "clean",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "clean_wo_noise",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "baseline_noise_only",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "baseline_declared_only",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "baseline_flag_everything",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "both",
+   "mine": 4,
+   "official": 4,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "generic_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "attributable_lower",
+   "mine": 0.547713305302971,
+   "official": 0.547713,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "clean_lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-3",
+   "item": "pb_style_lower",
+   "mine": 0.547713305302971,
+   "official": 0.547713,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "pairs",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "pb_style",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "attributable",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "declared",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "clean",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "clean_wo_noise",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "baseline_noise_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "baseline_declared_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "baseline_flag_everything",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "declared_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "attributable_lower",
+   "mine": 0.0,
+   "official": 0.0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "clean_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-1",
+   "item": "pb_style_lower",
+   "mine": 0.0,
+   "official": 0.0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "pairs",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "pb_style",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "attributable",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "declared",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "clean",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "clean_wo_noise",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "baseline_noise_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "baseline_declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "baseline_flag_everything",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "attributable_lower",
+   "mine": 0.12086631942227365,
+   "official": 0.120866,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "clean_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table W0 B-6",
+   "item": "pb_style_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "pairs",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "pb_style",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "attributable",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "declared",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "clean",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "clean_wo_noise",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "baseline_noise_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "baseline_declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "baseline_flag_everything",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "attributable_lower",
+   "mine": 0.0782657263337284,
+   "official": 0.078266,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "clean_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "table W0 decoys",
+   "item": "pb_style_lower",
+   "mine": 0.2535338682812242,
+   "official": 0.253534,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "pairs",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "pb_style",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "attributable",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "generic",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "declared",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "clean",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "clean_wo_noise",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "baseline_noise_only",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "baseline_declared_only",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "baseline_flag_everything",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "both",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "declared_only",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "attributable_lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "clean_lower",
+   "mine": 0.7870580299165931,
+   "official": 0.787058,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-2",
+   "item": "pb_style_lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "pairs",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "pb_style",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "attributable",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "generic",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "declared",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "clean",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "clean_wo_noise",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "baseline_noise_only",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "baseline_declared_only",
+   "mine": 5,
+   "official": 5,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "baseline_flag_everything",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "both",
+   "mine": 4,
+   "official": 4,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "generic_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "attributable_lower",
+   "mine": 0.547713305302971,
+   "official": 0.547713,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "clean_lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-3",
+   "item": "pb_style_lower",
+   "mine": 0.547713305302971,
+   "official": 0.547713,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "pairs",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "pb_style",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "attributable",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "declared",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "clean",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "clean_wo_noise",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "baseline_noise_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "baseline_declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "baseline_flag_everything",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "attributable_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "clean_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-1",
+   "item": "pb_style_lower",
+   "mine": 0.2698659487840541,
+   "official": 0.269866,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "pairs",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "pb_style",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "attributable",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "declared",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "clean",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "clean_wo_noise",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "baseline_noise_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "baseline_declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "baseline_flag_everything",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "declared_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "attributable_lower",
+   "mine": 0.12086631942227365,
+   "official": 0.120866,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "clean_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table W1 B-6",
+   "item": "pb_style_lower",
+   "mine": 0.42503060900634637,
+   "official": 0.425031,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "pairs",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "pb_style",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "attributable",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "generic",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "declared",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "clean",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "clean_wo_noise",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "baseline_noise_only",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "baseline_declared_only",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "baseline_flag_everything",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "both",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "generic_only",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "declared_only",
+   "mine": 2,
+   "official": 2,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "attrition pairs",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "attributable_lower",
+   "mine": 0.2535338682812242,
+   "official": 0.253534,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "clean_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "table W1 decoys",
+   "item": "pb_style_lower",
+   "mine": 0.5258044258424873,
+   "official": 0.525804,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "n",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "attributable count",
+   "mine": 9,
+   "official": 9,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "clean count",
+   "mine": 10,
+   "official": 10,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "attributable lower",
+   "mine": 0.6522813326641418,
+   "official": 0.652281,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "clean lower",
+   "mine": 0.7870580299165931,
+   "official": 0.787058,
+   "agree": true
+  },
+  {
+   "group": "H-D1",
+   "item": "verdict",
+   "mine": "insufficient cases",
+   "official": "insufficient cases",
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "n",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "attributable count",
+   "mine": 6,
+   "official": 6,
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "clean count",
+   "mine": 7,
+   "official": 7,
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "attributable lower",
+   "mine": 0.547713305302971,
+   "official": 0.547713,
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "clean lower",
+   "mine": 0.7212373045474579,
+   "official": 0.721237,
+   "agree": true
+  },
+  {
+   "group": "H-D2",
+   "item": "verdict",
+   "mine": "insufficient cases",
+   "official": "insufficient cases",
+   "agree": true
+  },
+  {
+   "group": "H-D3",
+   "item": "pooled pairs",
+   "mine": 17,
+   "official": 17,
+   "agree": true
+  },
+  {
+   "group": "H-D3",
+   "item": "comparable pairs",
+   "mine": [
+    "D-007",
+    "D-008",
+    "D-010",
+    "D-011",
+    "D-022",
+    "D-023",
+    "D-027",
+    "D-035",
+    "D-040",
+    "D-042",
+    "D-055",
+    "D-056",
+    "D-062",
+    "D-064",
+    "D-066",
+    "D-067",
+    "D-068"
+   ],
+   "official": [
+    "D-007",
+    "D-008",
+    "D-010",
+    "D-011",
+    "D-022",
+    "D-023",
+    "D-027",
+    "D-035",
+    "D-040",
+    "D-042",
+    "D-055",
+    "D-056",
+    "D-062",
+    "D-064",
+    "D-066",
+    "D-067",
+    "D-068"
+   ],
+   "agree": true
+  },
+  {
+   "group": "H-D3",
+   "item": "not comparable",
+   "mine": [],
+   "official": [],
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "b (W1 only)",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "c (W0 only)",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "both",
+   "mine": 14,
+   "official": 14,
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "neither",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "p",
+   "mine": 1.0,
+   "official": 1.0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 main",
+   "item": "label",
+   "mine": "not demonstrated",
+   "official": "not demonstrated",
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "b (W1 only)",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "c (W0 only)",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "both",
+   "mine": 14,
+   "official": 14,
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "neither",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "p",
+   "mine": 1.0,
+   "official": 1.0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 sensitivity",
+   "item": "label",
+   "mine": "not demonstrated",
+   "official": "not demonstrated",
+   "agree": true
+  },
+  {
+   "group": "H-D3 per class",
+   "item": "B-2 b",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 per class",
+   "item": "B-2 c",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 per class",
+   "item": "B-3 b",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "H-D3 per class",
+   "item": "B-3 c",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "pairs",
+   "mine": 17,
+   "official": 17,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "W0 clean",
+   "mine": 16,
+   "official": 16,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "W1 clean",
+   "mine": 17,
+   "official": 17,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "W0 clean only (b)",
+   "mine": 0,
+   "official": 0,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "W1 clean only (c)",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "guard",
+   "item": "p",
+   "mine": 1.0,
+   "official": 1.0,
+   "agree": true
+  },
+  {
+   "group": "adoption",
+   "item": "pooled clean difference W1-W0",
+   "mine": 1,
+   "official": 1,
+   "agree": true
+  },
+  {
+   "group": "adoption",
+   "item": "decoys clean W0",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  },
+  {
+   "group": "adoption",
+   "item": "decoys clean W1",
+   "mine": 3,
+   "official": 3,
+   "agree": true
+  }
+ ]
+}

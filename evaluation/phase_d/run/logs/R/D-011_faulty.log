@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:D-011, HIGH_RATE:probe:noise, K2_HIGH_SIZE, K5_HOLDS_ON_NOISE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\R\D-011_faulty.json
+body_sha256: 22d7420745ed5815d592f18b472da5bc7d918fda9d5ff9262d8ecc47c2f85f05

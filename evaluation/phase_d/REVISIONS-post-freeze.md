@@ -323,3 +323,35 @@ amendments below are Claude's, under the author's delegation. Only the model cho
 - The label map is private (`AWARENESS_MAP_first.json`) until the run.
 - **Combining the readings.** As in Phase C, a disagreement resolves to the higher level.
 - **Reporting.** The report states that no designer reading exists in Phase D.
+
+### P-6, addendum (2026-11-18, recorded after the post-run audit pointed out the gap): the replacement of reader r1
+
+- First reader r1 stated in its final message that it did not count an entry's general notes as awareness by themselves.
+  Its prompt said "applied to the text of that entry only (its general notes included)".
+- **Decision (Claude under the author's delegation).** It was made before any per-arm or per-case tally of the readings.
+  - r1 is replaced once by a fresh reader, r1b, with the identical prompt and identical files (same SHA-256).
+  - r1b's reading is used, whatever it says.
+  - r1's reading stays in the record, marked excluded (`record/sandboxes/awareness/r1/READING.json`).
+- r1, r1b and r2 were frozen together (`record/record/FREEZE_AWARENESS_FIRST.json`) before the second reading.
+- This replacement was logged in the designer's run log at the time, but not in this file until now.
+
+## P-7 (2026-11-18, after the run): the overlap marking, made late
+
+**Event.**
+- PREREG section 1 says that the designer marks overlap mechanically after the briefs. A pair overlaps when source,
+  mechanism tag and statistic family agree with a Phase B or C pair.
+- The marking was not made at that time. The post-run audit found that the report gives neither the marking nor the
+  tables without the overlapping pairs.
+
+**Decision (Claude under the author's delegation).**
+- The marking is made now, with the rule as written, by `designer/overlap_d.py`.
+- It uses only frozen inputs: each pair's private note (source, tag, statistic family) and the list of the
+  (tag, family) combinations that Phases B and C used for each source, from the brief author's `TASK.json`. No result
+  enters it.
+- **Result.**
+  - 16 of the 72 built pairs overlap.
+  - Of the 20 selected, 5 overlap: D-008, D-011, D-040, D-066 and D-067. That is 2 of 10 in B-2, 3 of 7 in B-3 and none
+    in the decoys.
+  - No class has more than half of its pairs overlapping, so no class result "largely repeats Phase B and C settings".
+- The tables without the overlapping pairs are in `RESULTS_D_WITHOUT_OVERLAP.md`, computed from the scoring's per-pair
+  rows. They are reported next to the main tables.

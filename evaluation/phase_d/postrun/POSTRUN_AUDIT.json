@@ -1,0 +1,722 @@
+[
+ {
+  "case": "D-007",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200/200 vs 3/200, control 200 vs 0, probe:noise 200 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag (K2_LOW_POWER, capping, plus 134/200).",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-008",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 96 vs 0, control 200 vs 0, probe:noise 200 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-010",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 0, probe:noise 112 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-011",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 88 vs 0, control 85 vs 0, probe:noise 200 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-012",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 57 vs 14, control 60 vs 2 (no noise) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-022",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 0, probe:noise 200 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-023",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 197 vs 0, control 200 vs 0, probe:noise 66 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-027",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 197 vs 0, control 198 vs 0, probe:noise 196 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-035",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 0 (no noise) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-040",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 1, probe:noise 87 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-042",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 128 vs 0 only (control 0 vs 0) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-047",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 148 vs 0, control 136 vs 0 (noise undefined) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag (K5_INCONCLUSIVE:noise, capping).",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-052",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 95 vs 13, control 49 vs 6 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-055",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 45 vs 3, control 65 vs 2 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-056",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 53 vs 10 only (control 16 vs 11 not flagged) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-062",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 149 vs 0, control 176 vs 1 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-064",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 2, probe:noise 200 vs 1 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-066",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 0 (no noise) (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-067",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 121 vs 6, control 123 vs 5, probe:noise 64 vs 8 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-068",
+  "arm": "R",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "n/a",
+  "reasons": {
+   "i": "Attributable: world:minus 200 vs 0, control 200 vs 3, probe:noise 20 vs 0 (faulty vs fixed); fixed has no rate flag there.",
+   "ii": "Clean pass: fixed WEAK, no expected flag.",
+   "iii": "n/a (arm R)."
+  }
+ },
+ {
+  "case": "D-007",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Resubstitution R^2 holds on any data. Faulty expected rate flags vs fixed counts: K2_HIGH_SIZE/K2_FAILS_UNREACHABLE on world:minus 200/200 vs 2/200; HIGH_RATE + K4 on control survival_permuted_across_patients 200 vs 3; HIGH_RATE + K5 on shuffle expression,survival_months 200 vs 3; HIGH_RATE + K5 on probe:noise 200 vs 0. The fixed twin carries no rate flag. Streams: world:minus, control, shuffle, probe:noise; noise is not the only one.",
+   "ii": "Clean pass (fixed WEAK, only K5_INCONCLUSIVE:zeros; plus 180/200).",
+   "iii": "Claim names out-of-sample R^2; sizes 50 x 2000 (p/n = 40, statistic set by the brief, a realistic microarray scale); no world structure is needed: the faulty twin holds on the noise probe. The log remark on in-sample R^2 under minus (awareness P) is inference from the claim."
+  }
+ },
+ {
+  "case": "D-008",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Fick VO2 shares the measured cardiac output with DO2. world:minus K2_HIGH_SIZE 25/200 vs 0/200 (p 1e-8). control vo2_permuted_across_occasions_within_patient 200 vs 0 and shuffle cardiac_output,vo2_expired_gas 200 vs 0: the faulty twin never reads vo2_expired_gas, because it substitutes Fick VO2, which is the error. probe:noise 200 vs 0 (coupling). The fixed twin has no rate flag. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "The claim is the classic supply-dependency setting. The key venous_o2_content is read only by the faulty body (the documented error computes VO2 from it), but it is a routine measurement and decides no world structure. The coupling in minus comes from the author's own 7% CO error, and the noise probe detects without any world. The author named the coupling (P), inferring it from the claim and keys."
+  }
+ },
+ {
+  "case": "D-010",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Target encoding from all rows includes the scored row. world:minus 200 vs 0 (K2_HIGH_SIZE, K2_FAILS_UNREACHABLE), control y_permuted_across_patients 200 vs 0, shuffle covariates,y 200 vs 0, probe:noise 112 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 194/200).",
+   "iii": "The claim names the district; 150 districts for 1200 rows are the sizes (statistic at most 150/1200 = 0.125, mostly set by the sizes). The log P remark concerns in-sample fitting, not the encoding."
+  }
+ },
+ {
+  "case": "D-011",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Gene ranking on all labels. world:minus 157 vs 0, control labels_permuted_across_samples 144 vs 0, shuffle expression,myeloid 149 vs 0, probe:noise 200 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "72 x 2000 is the classic leukaemia scale (statistic set by the brief); no world structure is needed: the faulty twin holds on the noise probe."
+  }
+ },
+ {
+  "case": "D-012",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus only: K2_HIGH_SIZE 19/200 vs 4/200 (p 0.001); fixed has no rate flag. The pooled quadrat z test ignores the plot effects (SD 0.5 logit, AR(1) 0.6) that W0 keeps in minus. Noise 9 vs 4 is not flagged. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 182/200).",
+   "iii": "The claim defines plot occupancy and the plot-level test (its estimand); plots and quadrats are axes. The plot effects are the author's own; the log names pseudoreplication (P), inferred from the claim's form."
+  }
+ },
+ {
+  "case": "D-022",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Resubstitution of the 66-term fit. world:minus 200 vs 0, control y_permuted_across_runs 200 vs 0, shuffle X,y 200 vs 0, probe:noise 200 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 198/200).",
+   "iii": "The claim names the 66-term OLS model (its estimand); capacity/n is set by the brief; no world structure is needed: the faulty twin holds on the noise probe."
+  }
+ },
+ {
+  "case": "D-023",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "probe:noise only: HIGH_RATE:probe:noise 66/200 vs fixed 0/200. On N(0,1) data the shared denominator crosses zero, so the two ratios move together: the shared-denominator mechanism at unbounded CV. world:minus 0 vs 0, control and shuffle 0 vs 0. The declared worlds (body-length CV about 0.08, head and wing near-isometric in recorded body length) carry too little index correlation. Generic only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "The claim names the partial correlation; nothing in the brief points to ratios."
+  }
+ },
+ {
+  "case": "D-027",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "In-sample MAE skill. world:minus 199 vs 0, control y_permuted_across_samples 198 vs 0, shuffle X,y 196 vs 0, probe:noise 196 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 158/200).",
+   "iii": "The claim names OLS on 25 measurements; n = 60 is the size (statistic set by the brief); no world structure is needed: the faulty twin holds on the noise probe."
+  }
+ },
+ {
+  "case": "D-035",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "yes",
+  "iii": "no",
+  "reasons": {
+   "i": "SMOTE before the folds. K2_HIGH_SIZE/K2_FAILS_UNREACHABLE on world:minus 200/200 vs fixed 0/200, and the fixed twin has no rate flag on world:minus. The faulty HIGH_RATE flags on control labels_permuted_across_records (200 vs 0) and shuffle features,positive (200 vs 0) do not qualify under section 5, because the fixed twin carries K4_CONTROL_ALSO_HOLDS and K5_HOLDS_ON_SHUFFLE on those streams. Same flag names, different reason: the fixed twin holds in only 2/200 plus samples. probe:noise 0 vs 0. Stream: world:minus only; not noise.",
+   "ii": "From the skeleton: low power in plus. The fixed twin is NOT_FALSIFIABLE with plus 2/200 and 0/200 on minus, noise, control and shuffle. Its flags (K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE, K5_HOLDS_ON_DEGENERATE) are all relative to that near-zero plus rate. The W0 effect is Mahalanobis 1.2 on 7 of 20 variables (the log gives an optimal balanced accuracy of about 0.73), sized for an optimal classifier. It is too weak for the 5-NN + SMOTE pipeline that both twins use and the brief does not name. The same fixed body passes in R (plus 158/200) and in W1 (29/200, WEAK). The correction itself never holds where the claim is false.",
+   "iii": "The claim's statistic (balanced accuracy) cues class imbalance, and the author chose 12% (\"realistic and intended\"). That is the claim, not extra brief wording."
+  }
+ },
+ {
+  "case": "D-040",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 192 vs 0, control height_permuted_within_length_blocks 195 vs 0, shuffle breadth,height 200 vs 0, probe:noise 87 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "The claim names the partial correlation; no ratio wording."
+  }
+ },
+ {
+  "case": "D-042",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "yes",
+  "reasons": {
+   "i": "Record-level folds put duplicate records (identical descriptors) on both sides. world:minus 200 vs 0 (K2_HIGH_SIZE, K2_FAILS_UNREACHABLE), control compound_activity_permuted_across_compounds 200 vs 0; fixed none. probe:noise and shuffle 0 vs 0. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 198/200).",
+   "iii": "The key meanings (\"recorded for each compound record\", \"measured for each compound record\") and the axis \"records\", set against the claim's \"new compounds\", decided the duplicate structure that the detection rests on. Log: \"Judgement call (main one in this batch): the brief distinguishes compound records from new compounds\", and the author built 1200 records of 600 compounds with identical descriptor rows (\"A record-level evaluation ... still shows a correlation of about 0.6 in minus\"). The claim alone does not say that records repeat compounds."
+  }
+ },
+ {
+  "case": "D-047",
+  "arm": "W0",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty WEAK (only K5_INCONCLUSIVE flags). Needed: world:minus (K2_HIGH_SIZE); the faulty minus count was 0/200. Regression to the mean in W0 (screening - entry about 5.9 points among the selected) is too small to lift the share of drops >= 10 from screening above 0.5 without an effect (R: 148/200). A control that keeps the screening reference and removes the effect would also have served, as W1's random swap did; W0's full time reversal gave 1/200.",
+   "ii": "Clean pass (fixed WEAK, plus 199/200).",
+   "iii": "The author read the claim's form (selection on screening, change from entry). Its minus change string names regression to the mean (audit B remark, awareness P), which is inference from the claim."
+  }
+ },
+ {
+  "case": "D-052",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Weakness route, not attributable. The faulty verdict comes from K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE and K5_HOLDS_ON_DEGENERATE: the faulty twin holds in only 8/200 plus samples, because the old group's real gain (4.5 points, t about 3.5) is also significant and the faulty rule needs \"not significant in old\". No faulty count is raised: minus 9 vs 11, noise 6 vs 6, controls 0 vs 14 and 0 vs 0. The fixed twin carries none of these flags (plus 178/200), so they follow from the faulty rule, but through its failure in plus, not through the documented false support in minus. Section 5 counts no attributable stream. W0 has equal improvement SDs, so the documented structure is absent.",
+   "ii": "Clean pass (fixed WEAK, plus 178/200).",
+   "iii": "The claim names the correct test; no wording on variability."
+  }
+ },
+ {
+  "case": "D-055",
+  "arm": "W0",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty WEAK (minus, controls, shuffle and noise all 0/200). Needed: world:minus (K2_HIGH_SIZE) with an outcome as persistent as the predictors, so that random folds leak across neighbouring days. In W0 the outcome noise is AR(1) 0.3; R used 0.92 and reached minus 45/200. The structure statistic measures only the predictors' autocorrelation, which W0 has.",
+   "ii": "Clean pass (fixed WEAK, plus 196/200).",
+   "iii": "\"days_in_order\" is an axis name (setting) and \"future days\" is the claim; no detection."
+  }
+ },
+ {
+  "case": "D-056",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus only: K2_HIGH_SIZE 22/200 vs 6/200 (p 0.001); fixed has no rate flag. Group mass means differ (285/300/315 g) and uptake scales as mass^0.75, so uptake per gram differs by group. Control 12 vs 14 and noise 2 vs 10 are not flagged. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 164/200).",
+   "iii": "The group mass differences follow from the claim (\"once body mass is accounted for\"); awareness P is inference from the claim."
+  }
+ },
+ {
+  "case": "D-062",
+  "arm": "W0",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty WEAK (minus 0/200, controls 0/200, noise 13/200 not flagged). Needed: world:minus. Within each species W0 makes both bones proportional to body length (ratio x body + residual), so the indices carry no spurious correlation. R draws the bones independent of body length (minus 149/200). The structure statistic, Pearson's approximation from the three CVs, assumes numerators uncorrelated with the denominator, so it does not see this.",
+   "ii": "Clean pass (fixed WEAK, plus 185/200).",
+   "iii": "No ratio wording; the claim names the partial correlation."
+  }
+ },
+ {
+  "case": "D-064",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Resubstitution on p >> n. world:minus 200 vs 1, control response_permuted_across_patients 200 vs 3, probe:noise 200 vs 1; fixed has no rate flag. Not noise only.",
+   "ii": "Clean pass (fixed WEAK; K2_LOW_POWER is capping, plus 119/200).",
+   "iii": "80 x 1500 is the size (statistic set by the brief); no world structure is needed: the faulty twin holds on the noise probe."
+  }
+ },
+ {
+  "case": "D-066",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Copies of positive rows on both sides of the folds. world:minus 200 vs 0, control outcome_permuted_across_patients 200 vs 0, shuffle y,X 200 vs 0; fixed none. probe:noise 0 vs 0. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 190/200).",
+   "iii": "Borderline, answered no. The claim sentence calls y \"the rare outcome\" (repeated in the key meaning), and the author set prevalence 8% (= the note value), which the copying exploits. The word is in the claim, and the claim's balanced accuracy cues imbalance anyway (as in D-035), so it does not count under the rule."
+  }
+ },
+ {
+  "case": "D-067",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Organ weights scale with mass far below isometry (elasticity about 0.4), so both indices share a 1/mass term. world:minus 200 vs 15, controls heart_exchanged_among_mass_matched_rats 200 vs 6 and heart_permuted_across_rats 200 vs 2, shuffle kidney_weight,heart_weight 200 vs 1, probe:noise 64 vs 8; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 183/200).",
+   "iii": "No ratio wording."
+  }
+ },
+ {
+  "case": "D-068",
+  "arm": "W0",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 0, controls head_width_exchanged_among_length_matched 175 vs 0 and head_width_permuted_within_population 197 vs 0, probe:noise 20 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 184/200).",
+   "iii": "The claim names the within-population multiple regression; no ratio wording."
+  }
+ },
+ {
+  "case": "D-007",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 2, control survival_shuffled_across_patients 200 vs 1, probe:noise 200 vs 0; fixed has no rate flag. Not noise only.",
+   "ii": "Clean pass (fixed WEAK; K2_LOW_POWER is capping, plus 96/200; no expected flag).",
+   "iii": "As W0. The p/n remark is in CHECKLIST_LOG (checklist effect); WORLD_LOG reading N."
+  }
+ },
+ {
+  "case": "D-008",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 18 vs 0 (p 3e-6), control consumption_shuffled_across_occasions_within_patient 200 vs 0, probe:noise 200 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "As W0; the shared CO and Hb errors are also checklist answers."
+  }
+ },
+ {
+  "case": "D-010",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 0, control y_shuffled_across_patients 200 vs 0, probe:noise 112 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 174/200).",
+   "iii": "As W0; district clustering and deprivation are checklist answers."
+  }
+ },
+ {
+  "case": "D-011",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 120 vs 0, control myeloid_labels_shuffled_across_samples 123 vs 0, probe:noise 200 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 189/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-012",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 53 vs 11, control exclosure_shuffled_across_plots 50 vs 10 (the fixed twin stays near 5%, no flag). Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 182/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-022",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 3, control y_circularly_shifted 200 vs 0, shuffle X,y 200 vs 0, probe:noise 200 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 176/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-023",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "probe:noise only: 66/200 vs 0/200, identical to W0 since the noise probe does not depend on the arm. world:minus 0 vs 0, control 0 vs 0 (log allometry, slopes 0.9 and 1.1). Generic only.",
+   "ii": "Clean pass (fixed WEAK, plus 199/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-027",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 198 vs 0, control y_shuffled_across_samples 199 vs 0, probe:noise 196 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 175/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-035",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 0, control positive_labels_shuffled_across_records 200 vs 0; fixed has no rate flag. probe:noise 0 vs 0. Not noise.",
+   "ii": "Clean pass under PB (fixed WEAK, no expected flag), but weak: K2_LOW_POWER, plus 29/200.",
+   "iii": "Log: \"prevalence 15% (not given in the brief; chosen to make class imbalance realistic)\". This follows from the claim's balanced accuracy and the checklist, not from extra wording."
+  }
+ },
+ {
+  "case": "D-040",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 74 vs 0, control height_shuffled_within_blocks 124 vs 1, probe:noise 87 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-042",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "yes",
+  "reasons": {
+   "i": "world:minus 95 vs 0, control compound_mean_activity_shuffled_across_compounds 141 vs 0; fixed none. probe:noise and shuffle 0 vs 0. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 198/200).",
+   "iii": "Same wording. Log: \"Judgement call: 'records' vs 'new compounds' read as replicate measurements of some compounds\" (300 replicate records with identical descriptors). The checklist's repeated-measurement row also points this way, but WORLD_LOG attributes the choice to the brief's wording."
+  }
+ },
+ {
+  "case": "D-047",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Control only: HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient 135/200 vs fixed 0/200. The faulty twin measures change from screening, which the swap leaves in place. On swapped patients it scores the screening-to-entry drop (regression to the mean); on the rest, the effect plus that drop. Its proportion therefore stays near 0.5. The fixed twin, measuring from entry, sees negative changes on swapped patients. world:minus 3 vs 0 (no flag); noise undefined. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "As W0; regression to the mean is named in WORLD_LOG (P) and its size in CHECKLIST_LOG."
+  }
+ },
+ {
+  "case": "D-052",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Weakness route, not attributable. Flags K2_LOW_POWER, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE, K5_HOLDS_ON_DEGENERATE. Faulty plus 2/200; minus 0 vs 6, control 1 vs 11, shuffle post,young 1 vs 10, noise 6 vs 6. The old group's real gain (6.5 points) is significant, and the improvement variances are nearly equal (audit B). The fixed twin carries none of these flags.",
+   "ii": "Clean pass (fixed WEAK, plus 172/200).",
+   "iii": "As W0. Awareness P in the second reading comes from CHECKLIST_LOG."
+  }
+ },
+ {
+  "case": "D-055",
+  "arm": "W1",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty WEAK (world:minus 1/200, control 2/200, noise 0). Needed: world:minus. Outcome noise AR 0.6 with a 10% slow drift was not persistent enough.",
+   "ii": "Clean pass (fixed WEAK, plus 198/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-056",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus only: 47/200 vs 10/200 (p 5e-8); fixed none. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 173/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-062",
+  "arm": "W1",
+  "i": "n/a",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Faulty WEAK (minus 1/200, controls 0/200). Needed: world:minus. W1 bones follow log body length with slopes 0.95 and 0.90 (near isometry), so the index correlation is small.",
+   "ii": "Clean pass (fixed WEAK, plus 197/200).",
+   "iii": "As W0."
+  }
+ },
+ {
+  "case": "D-064",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 4, control 200 vs 2, shuffle expression,response 200 vs 2, probe:noise 200 vs 1; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 150/200).",
+   "iii": "As W0; the reading P in the second reading comes from CHECKLIST_LOG."
+  }
+ },
+ {
+  "case": "D-066",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 200 vs 0, control outcome_permuted_across_patients 200 vs 0, shuffle X,y 200 vs 0; fixed none. probe:noise 0 vs 0. Not noise.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "Borderline as W0. Log: '\"rare\" was taken as 8%'."
+  }
+ },
+ {
+  "case": "D-067",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "Detection without world:minus. HIGH_RATE on control heart_permuted_across_rats 33 vs 3 (p 3e-8), shuffle kidney_weight,heart_weight 20 vs 2, probe:noise 64 vs 8. Permuting heart breaks its scaling with each rat's mass, so heart/mass and kidney/mass share the 1/mass term (the documented mechanism). world:minus 6 vs 8: near-isometric allometry (exponents 0.90 and 0.85) leaves almost no index correlation. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 186/200).",
+   "iii": "No ratio wording."
+  }
+ },
+ {
+  "case": "D-068",
+  "arm": "W1",
+  "i": "yes",
+  "ii": "n/a",
+  "iii": "no",
+  "reasons": {
+   "i": "world:minus 125 vs 1, controls head_permuted_within_population 124 vs 0 and head_swapped_between_neighbours 121 vs 0, probe:noise 20 vs 0; fixed none. Not noise only.",
+   "ii": "Clean pass (fixed WEAK, plus 200/200).",
+   "iii": "As W0."
+  }
+ }
+]

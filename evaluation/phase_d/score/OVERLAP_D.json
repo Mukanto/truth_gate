@@ -1,0 +1,1701 @@
+{
+ "D-001": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "BLO77",
+  "tag": "change-vs-baseline",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-002": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "MOR86",
+  "tag": "shared-measured-component",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-003": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAN18",
+  "tag": "L1.4",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-004": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L3.1",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-005": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.1",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-006": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "CHI13",
+  "tag": "change-vs-baseline",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-007": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SIM03",
+  "tag": "L1.1",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ]
+  ]
+ },
+ "D-008": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "ARC81",
+  "tag": "shared-measured-component",
+  "statistic_family": "regression-slope",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "change-vs-baseline",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "R-squared"
+   ],
+   [
+    "shared-measured-component",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "regression-slope"
+   ],
+   [
+    "target-from-labels",
+    "classification"
+   ]
+  ]
+ },
+ "D-009": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "CUR13",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-010": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.2",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-011": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "AMB02",
+  "tag": "L1.3",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.3",
+    "classification"
+   ]
+  ]
+ },
+ "D-012": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "HUR84",
+  "tag": "units-not-independent",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "units-not-independent",
+    "mean"
+   ],
+   [
+    "units-not-independent",
+    "other"
+   ],
+   [
+    "units-not-independent",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-013": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "VAR06",
+  "tag": "L1.3",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.3",
+    "classification"
+   ]
+  ]
+ },
+ "D-014": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.2",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-015": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "CHI13",
+  "tag": "change-vs-baseline",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-016": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "LAZ18",
+  "tag": "units-not-independent",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "units-not-independent",
+    "mean"
+   ],
+   [
+    "units-not-independent",
+    "proportion"
+   ],
+   [
+    "units-not-independent",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-017": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "KRO93",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-018": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAE17",
+  "tag": "L3.2",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-019": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "BLO77",
+  "tag": "change-vs-baseline",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-020": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "PEA97",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "R-squared",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-shared-denominator",
+    "correlation"
+   ],
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-021": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "HUR84",
+  "tag": "units-not-independent",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "units-not-independent",
+    "mean"
+   ],
+   [
+    "units-not-independent",
+    "other"
+   ],
+   [
+    "units-not-independent",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-022": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.1",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-023": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "ATC76",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-024": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "AMB02",
+  "tag": "L1.3",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.3",
+    "classification"
+   ]
+  ]
+ },
+ "D-025": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "TU04",
+  "tag": "change-vs-baseline",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-026": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "ATC76",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-027": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.1",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-028": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "VUL09",
+  "tag": "select-then-test-same-data",
+  "statistic_family": "correlation",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "select-then-test-same-data",
+    "correlation"
+   ],
+   [
+    "select-then-test-same-data",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-029": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.4",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-030": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "MAK19",
+  "tag": "split-by-baseline-compare-change",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "extreme-group-change",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "proportion"
+   ],
+   [
+    "significant-here-not-there",
+    "correlation"
+   ],
+   [
+    "significant-here-not-there",
+    "regression-slope"
+   ],
+   [
+    "split-by-baseline-compare-change",
+    "mean"
+   ],
+   [
+    "units-not-independent",
+    "correlation"
+   ]
+  ]
+ },
+ "D-031": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "KRO93",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "correlation",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-032": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "NIE11",
+  "tag": "significant-here-not-there",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "significant-here-not-there",
+    "correlation"
+   ],
+   [
+    "significant-here-not-there",
+    "mean"
+   ],
+   [
+    "significant-here-not-there",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-033": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "KRI10",
+  "tag": "select-then-test-same-data",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "select-then-test-same-data",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-034": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "ROB17",
+  "tag": "L3.1",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-035": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAN18",
+  "tag": "L1.2",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-036": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "ARC81",
+  "tag": "shared-measured-component",
+  "statistic_family": "R-squared",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "change-vs-baseline",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "R-squared"
+   ],
+   [
+    "shared-measured-component",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "regression-slope"
+   ],
+   [
+    "target-from-labels",
+    "classification"
+   ]
+  ]
+ },
+ "D-037": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "CHI13",
+  "tag": "change-vs-baseline",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-038": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "KRO93",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "regression-slope",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-039": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L3.1",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-040": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "PEA97",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "correlation",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-shared-denominator",
+    "correlation"
+   ],
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-041": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.2",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-042": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.4",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-043": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAN18",
+  "tag": "L1.4",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-044": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L3.2",
+  "statistic_family": "other",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-045": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "TU07",
+  "tag": "change-vs-baseline",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-046": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "LAZ10",
+  "tag": "units-not-independent",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "units-not-independent",
+    "correlation"
+   ],
+   [
+    "units-not-independent",
+    "mean"
+   ]
+  ]
+ },
+ "D-047": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "MOR03",
+  "tag": "extreme-group-change",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "extreme-group-change",
+    "mean"
+   ],
+   [
+    "split-by-baseline-compare-change",
+    "mean"
+   ]
+  ]
+ },
+ "D-048": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "STR87",
+  "tag": "shared-measured-component",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-049": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAN18",
+  "tag": "L1.2",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-050": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "KRO93",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "R-squared",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-051": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "STR87",
+  "tag": "shared-measured-component",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-052": {
+  "class": "B-6",
+  "half": "DEC",
+  "source": "MAK19",
+  "tag": "significant-here-not-there",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "extreme-group-change",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "mean"
+   ],
+   [
+    "select-then-test-same-data",
+    "proportion"
+   ],
+   [
+    "significant-here-not-there",
+    "correlation"
+   ],
+   [
+    "significant-here-not-there",
+    "regression-slope"
+   ],
+   [
+    "split-by-baseline-compare-change",
+    "mean"
+   ],
+   [
+    "units-not-independent",
+    "correlation"
+   ]
+  ]
+ },
+ "D-053": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "CHI13",
+  "tag": "change-vs-baseline",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-054": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.3",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-055": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L3.1",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-056": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "CUR13",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-057": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "TU04",
+  "tag": "change-vs-baseline",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-058": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SAE17",
+  "tag": "L3.2",
+  "statistic_family": "classification",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-059": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "ROB17",
+  "tag": "L3.1",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-060": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.3",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-061": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "KRI09",
+  "tag": "select-then-test-same-data",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "select-then-test-same-data",
+    "R-squared"
+   ],
+   [
+    "select-then-test-same-data",
+    "mean"
+   ],
+   [
+    "split-by-baseline-compare-change",
+    "mean"
+   ]
+  ]
+ },
+ "D-062": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "PEA97",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "proportion",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-shared-denominator",
+    "correlation"
+   ],
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-063": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "STR87",
+  "tag": "shared-measured-component",
+  "statistic_family": "R-squared",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-064": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SIM03",
+  "tag": "L1.1",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ]
+  ]
+ },
+ "D-065": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "ROB17",
+  "tag": "L3.2",
+  "statistic_family": "correlation",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-066": {
+  "class": "B-2",
+  "half": "B2A",
+  "source": "KAP23",
+  "tag": "L1.4",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ],
+   [
+    "L1.2",
+    "classification"
+   ],
+   [
+    "L1.4",
+    "classification"
+   ],
+   [
+    "L3.1",
+    "R-squared"
+   ],
+   [
+    "L3.1",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "R-squared"
+   ],
+   [
+    "L3.2",
+    "classification"
+   ],
+   [
+    "L3.2",
+    "correlation"
+   ],
+   [
+    "O-1",
+    "R-squared"
+   ],
+   [
+    "O-1",
+    "classification"
+   ]
+  ]
+ },
+ "D-067": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "PEA97",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "regression-slope",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "R-squared"
+   ],
+   [
+    "ratio-shared-denominator",
+    "correlation"
+   ],
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ]
+  ]
+ },
+ "D-068": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "ATC76",
+  "tag": "ratio-shared-denominator",
+  "statistic_family": "regression-slope",
+  "overlap": false,
+  "earlier_combinations_for_source": []
+ },
+ "D-069": {
+  "class": "B-1",
+  "half": "DEC",
+  "source": "BAR05",
+  "tag": "split-by-baseline-compare-change",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "extreme-group-change",
+    "mean"
+   ],
+   [
+    "extreme-group-change",
+    "proportion"
+   ]
+  ]
+ },
+ "D-070": {
+  "class": "B-2",
+  "half": "B2B",
+  "source": "SIM03",
+  "tag": "L1.1",
+  "statistic_family": "classification",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "L1.1",
+    "classification"
+   ]
+  ]
+ },
+ "D-071": {
+  "class": "B-3",
+  "half": "B3A",
+  "source": "ARC81",
+  "tag": "shared-measured-component",
+  "statistic_family": "correlation",
+  "overlap": true,
+  "earlier_combinations_for_source": [
+   [
+    "change-vs-baseline",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "R-squared"
+   ],
+   [
+    "shared-measured-component",
+    "correlation"
+   ],
+   [
+    "shared-measured-component",
+    "regression-slope"
+   ],
+   [
+    "target-from-labels",
+    "classification"
+   ]
+  ]
+ },
+ "D-072": {
+  "class": "B-3",
+  "half": "B3B",
+  "source": "CUR13",
+  "tag": "ratio-vs-denominator-proxy",
+  "statistic_family": "mean",
+  "overlap": false,
+  "earlier_combinations_for_source": [
+   [
+    "ratio-shared-denominator",
+    "regression-slope"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "R-squared"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "correlation"
+   ],
+   [
+    "ratio-vs-denominator-proxy",
+    "regression-slope"
+   ]
+  ]
+ }
+}

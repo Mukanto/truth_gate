@@ -1,0 +1,13 @@
+{
+  "pb_detected": true,
+  "attributable": false,
+  "generic": false,
+  "declared": false,
+  "draft1_rule": false,
+  "qualifying": [],
+  "reasons": [
+    "K4_CONTROL_ALSO_HOLDS@control:age_labels_permuted 0 vs 14 p=1",
+    "K4_CONTROL_ALSO_HOLDS@control:pre_post_swapped 0 vs 0 p=1",
+    "K5_HOLDS_ON_NOISE@probe:noise 6 vs 6 p=0.615"
+  ]
+}

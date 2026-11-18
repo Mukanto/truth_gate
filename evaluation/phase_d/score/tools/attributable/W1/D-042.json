@@ -1,0 +1,31 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+      "stream": "control:compound_mean_activity_shuffled_across_compounds",
+      "faulty_holds": 141,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.308273359645155e-60
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 95,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 8.90188404199688e-36
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds@control:compound_mean_activity_shuffled_across_compounds 141 vs 0 p=1.31e-60 OK",
+    "K2_HIGH_SIZE@world:minus 95 vs 0 p=8.9e-36 OK"
+  ]
+}

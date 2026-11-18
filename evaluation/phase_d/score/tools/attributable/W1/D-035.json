@@ -1,0 +1,51 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:positive_labels_shuffled_across_records",
+      "stream": "control:positive_labels_shuffled_across_records",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:positive_labels_shuffled_across_records",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:positive_labels_shuffled_across_records@control:positive_labels_shuffled_across_records 200 vs 0 p=9.71e-120 OK",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:positive_labels_shuffled_across_records 200 vs 0 p=9.71e-120 OK"
+  ]
+}

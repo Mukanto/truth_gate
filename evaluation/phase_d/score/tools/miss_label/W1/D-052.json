@@ -1,0 +1,42 @@
+{
+  "label": "c",
+  "text": "flagged, not attributable",
+  "cause": null,
+  "cause_twin": null,
+  "detected": false,
+  "attributable": {
+    "pb_detected": true,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "draft1_rule": false,
+    "qualifying": [],
+    "reasons": [
+      "K4_CONTROL_ALSO_HOLDS@control:age_labels_permuted 1 vs 11 p=1",
+      "K5_HOLDS_ON_NOISE@probe:noise 6 vs 6 p=0.615",
+      "K5_HOLDS_ON_SHUFFLE@probe:shuffle:post,young 1 vs 10 p=1"
+    ]
+  },
+  "structure": {
+    "mean": 0.19516806663619574,
+    "sd": 0.13789244494216799,
+    "values_head": [
+      0.3365838248537243,
+      0.22736636398468382,
+      0.11284184261015873,
+      0.3746339507829653,
+      0.020584389403764614
+    ],
+    "share_beyond_half": 0.155
+  },
+  "kstar_arm": 18,
+  "m": 5,
+  "faulty_minus_holds": 0,
+  "n": 200,
+  "reasons": [
+    "PB-detected, no attributable stream: K4_CONTROL_ALSO_HOLDS@control:age_labels_permuted 1 vs 11 p=1; K5_HOLDS_ON_NOISE@probe:noise 6 vs 6 p=0.615; K5_HOLDS_ON_SHUFFLE@probe:shuffle:post,young 1 vs 10 p=1",
+    "flagged, not attributable"
+  ],
+  "pb_detected": true,
+  "fixed_attrition": null
+}

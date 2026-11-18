@@ -1,0 +1,6 @@
+COMPONENT  VERDICT  FLAGS
+C          WEAK     K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: WEAK
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W0\D-010_fixed.json
+body_sha256: 61b36f9aef8250d6c41b5a4035b9fab3c8cbd4c47deb93063622d83c07a7a6c0

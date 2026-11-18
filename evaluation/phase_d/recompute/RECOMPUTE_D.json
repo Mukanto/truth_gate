@@ -1,0 +1,8632 @@
+{
+ "script": "E:\\Claude Projects\\Kapi\\phase_d_work\\recompute\\recompute_designer_d.py",
+ "script_sha256": "b6069d9af9bad0a64f791ac7770aca37ddeaf1e7ae169fd43ac96d0d1d91b27b",
+ "inputs": {
+  "RUNLOG.jsonl": "ac48eb08e23392e3932523b58d6c7b758f6d3bdda4cc86364e0db4e365983d90",
+  "EXPECTED_FLAGS_D.json": "3ba05b2c7bdf93c090237e527ddc3db6f75f6488dd4f773f1852c1e0f196e40d",
+  "ID_MAP_D.json": "a298937758cf0dafabdf69075722ea57b3c5e8cfb9fb550ffc26bc33ebc356ff"
+ },
+ "assumptions": [
+  "pair set = the 20 cases in RUNLOG (reserve flag not used); classes from ID_MAP_D.json",
+  "clean pass without the noise stream: clean verdict, or NOT_FALSIFIABLE whose every flag is informational (K5_INCONCLUSIVE:*, K1_ABSTAINED*, K2_MINUS_UNREAD, K8_SOME_CHANGES, BAD_RETURN) or a noise flag (K5_HOLDS_ON_NOISE, HIGH_RATE:probe:noise)",
+  "noise-only / declared-only baselines: faulty NOT_FALSIFIABLE and an expected flag that is (is not) a noise flag; their clean pass equals the PB-style clean pass; flag-everything: all faulty detected, no fixed passes",
+  "attrition: twin without certificate / timeout / load error; part B all yes; no invalid skeletons"
+ ],
+ "cases": [
+  "D-007",
+  "D-008",
+  "D-010",
+  "D-011",
+  "D-012",
+  "D-022",
+  "D-023",
+  "D-027",
+  "D-035",
+  "D-040",
+  "D-042",
+  "D-047",
+  "D-052",
+  "D-055",
+  "D-056",
+  "D-062",
+  "D-064",
+  "D-066",
+  "D-067",
+  "D-068"
+ ],
+ "classes": {
+  "D-007": "B-2",
+  "D-008": "B-3",
+  "D-010": "B-2",
+  "D-011": "B-2",
+  "D-012": "B-6",
+  "D-022": "B-2",
+  "D-023": "B-3",
+  "D-027": "B-2",
+  "D-035": "B-2",
+  "D-040": "B-3",
+  "D-042": "B-2",
+  "D-047": "B-1",
+  "D-052": "B-6",
+  "D-055": "B-2",
+  "D-056": "B-3",
+  "D-062": "B-3",
+  "D-064": "B-2",
+  "D-066": "B-2",
+  "D-067": "B-3",
+  "D-068": "B-3"
+ },
+ "part_b_no": [],
+ "integrity": {
+  "runlog_verdict_mismatch": [],
+  "cert_sha_mismatch": []
+ },
+ "pairs": {
+  "R": {
+   "D-007": {
+    "id": "D-007",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-007",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K2_LOW_POWER",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-007"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-007",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [
+     "K2_LOW_POWER"
+    ],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-007",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-007",
+      "stream": "control:D-007",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-007",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-008": {
+    "id": "D-008",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:permute_vo2_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:permute_vo2_across_patients"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:permute_vo2_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:permute_vo2_across_patients",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:permute_vo2_across_patients",
+      "stream": "control:permute_vo2_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       96,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 3.064583030851385e-36
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:permute_vo2_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-010": {
+    "id": "D-010",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-010",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-010"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-010",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-010",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-010",
+      "stream": "control:D-010",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       112,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 4.778688444779273e-44
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-010",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-011": {
+    "id": "D-011",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-011",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-011"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-011",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-011",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-011",
+      "stream": "control:D-011",
+      "faulty": [
+       85,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.740043318186875e-31
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       88,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3111549670519143e-32
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-012": {
+    "id": "D-012",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-012",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-012"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-012",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-012",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-012",
+      "stream": "control:D-012",
+      "faulty": [
+       60,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 3.1182986517506168e-18
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       57,
+       200
+      ],
+      "fixed": [
+       14,
+       200
+      ],
+      "fisher_p": 8.263702315727282e-09
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-022": {
+    "id": "D-022",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-022",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-022"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-022",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-022",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-022",
+      "stream": "control:D-022",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-022",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-023": {
+    "id": "D-023",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-023",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-023"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-023",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-023",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-023",
+      "stream": "control:D-023",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       66,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.1331142836072046e-23
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       197,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-023",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-027": {
+    "id": "D-027",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-027",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-027"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-027",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-027",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-027",
+      "stream": "control:D-027",
+      "faulty": [
+       198,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       197,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-027",
+      "faulty": [
+       198,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-035": {
+    "id": "D-035",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-035",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-035"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-035",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-035",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-035",
+      "stream": "control:D-035",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-035",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-040": {
+    "id": "D-040",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:permute_height_within_length",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:permute_height_within_length"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:permute_height_within_length",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:permute_height_within_length",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:permute_height_within_length",
+      "stream": "control:permute_height_within_length",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       87,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 3.6317832273207896e-32
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:permute_height_within_length",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-042": {
+    "id": "D-042",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-042"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       128,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.877086180787504e-53
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-047": {
+    "id": "D-047",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-047",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-047"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-047",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-047",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-047",
+      "stream": "control:D-047",
+      "faulty": [
+       136,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.7651435155455987e-57
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       148,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 3.12238698371e-65
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-1",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-052": {
+    "id": "D-052",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-052",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-052"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-052",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-052",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-052",
+      "stream": "control:D-052",
+      "faulty": [
+       49,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 6.542849229266702e-11
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       95,
+       200
+      ],
+      "fixed": [
+       13,
+       200
+      ],
+      "fisher_p": 7.147592226516704e-22
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-055": {
+    "id": "D-055",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-055",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-055"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-055",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-055",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-055",
+      "stream": "control:D-055",
+      "faulty": [
+       65,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 4.249429050398003e-20
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       45,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 5.634622483317031e-12
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-056": {
+    "id": "D-056",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-056"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       53,
+       200
+      ],
+      "fixed": [
+       10,
+       200
+      ],
+      "fisher_p": 1.1299369725096774e-09
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-062": {
+    "id": "D-062",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:permute_humerus_within_species",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:permute_humerus_within_species"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:permute_humerus_within_species",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:permute_humerus_within_species",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:permute_humerus_within_species",
+      "stream": "control:permute_humerus_within_species",
+      "faulty": [
+       176,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.757057785548393e-85
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       149,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.443020760036508e-66
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-064": {
+    "id": "D-064",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-064",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-064"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-064",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-064",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-064",
+      "stream": "control:D-064",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-064",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-066": {
+    "id": "D-066",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-066",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-066"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-066",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-066",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-066",
+      "stream": "control:D-066",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-066",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-067": {
+    "id": "D-067",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:permute_heart_within_mass",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:permute_heart_within_mass"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:permute_heart_within_mass",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:permute_heart_within_mass",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:permute_heart_within_mass",
+      "stream": "control:permute_heart_within_mass",
+      "faulty": [
+       123,
+       200
+      ],
+      "fixed": [
+       5,
+       200
+      ],
+      "fisher_p": 3.4074071458280816e-42
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       64,
+       200
+      ],
+      "fixed": [
+       8,
+       200
+      ],
+      "fisher_p": 2.5458534218472253e-14
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       121,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 5.775640371741943e-40
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-068": {
+    "id": "D-068",
+    "arm": "R",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:D-068",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:D-068"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:D-068",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:D-068",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:D-068",
+      "stream": "control:D-068",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       20,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 5.7868683338233e-07
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:D-068",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   }
+  },
+  "W0": {
+   "D-007": {
+    "id": "D-007",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:survival_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,survival_months",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:survival_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:expression,survival_months"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:survival_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,survival_months",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:survival_permuted_across_patients",
+     "probe:noise",
+     "probe:shuffle:expression,survival_months",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:survival_permuted_across_patients",
+      "stream": "control:survival_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:expression,survival_months",
+      "stream": "probe:shuffle:expression,survival_months",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:survival_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:expression,survival_months",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-008": {
+    "id": "D-008",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+     "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:vo2_permuted_across_occasions_within_patient",
+     "probe:noise",
+     "probe:shuffle:cardiac_output,vo2_expired_gas",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:vo2_permuted_across_occasions_within_patient",
+      "stream": "control:vo2_permuted_across_occasions_within_patient",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:cardiac_output,vo2_expired_gas",
+      "stream": "probe:shuffle:cardiac_output,vo2_expired_gas",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       25,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3397731567711487e-08
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:vo2_permuted_across_occasions_within_patient",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:cardiac_output,vo2_expired_gas",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-010": {
+    "id": "D-010",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:covariates,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:covariates,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:covariates,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_permuted_across_patients",
+     "probe:noise",
+     "probe:shuffle:covariates,y",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_permuted_across_patients",
+      "stream": "control:y_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       112,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 4.778688444779273e-44
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:covariates,y",
+      "stream": "probe:shuffle:covariates,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:covariates,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-011": {
+    "id": "D-011",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:labels_permuted_across_samples",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,myeloid",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:labels_permuted_across_samples",
+     "HIGH_RATE:probe:shuffle:expression,myeloid"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:labels_permuted_across_samples",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,myeloid",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:labels_permuted_across_samples",
+     "probe:noise",
+     "probe:shuffle:expression,myeloid",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:labels_permuted_across_samples",
+      "stream": "control:labels_permuted_across_samples",
+      "faulty": [
+       144,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.4859382612766694e-62
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:expression,myeloid",
+      "stream": "probe:shuffle:expression,myeloid",
+      "faulty": [
+       149,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.443020760036508e-66
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       157,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.1752633125356658e-71
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-012": {
+    "id": "D-012",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:exclosure_labels_reversed"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       19,
+       200
+      ],
+      "fixed": [
+       4,
+       200
+      ],
+      "fisher_p": 0.0009765902966533259
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-022": {
+    "id": "D-022",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_permuted_across_runs",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_permuted_across_runs",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_permuted_across_runs",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_permuted_across_runs",
+     "probe:noise",
+     "probe:shuffle:X,y",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_permuted_across_runs",
+      "stream": "control:y_permuted_across_runs",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:X,y",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_permuted_across_runs",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-023": {
+    "id": "D-023",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:probe:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:wing_permuted_within_body_length_blocks",
+     "HIGH_RATE:probe:shuffle:head_width,wing_length"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:probe:noise"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": false,
+    "qualifying_streams": [
+     "probe:noise"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       66,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.1331142836072046e-23
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-027": {
+    "id": "D-027",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_permuted_across_samples",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_permuted_across_samples",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_permuted_across_samples",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_permuted_across_samples",
+     "probe:noise",
+     "probe:shuffle:X,y",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_permuted_across_samples",
+      "stream": "control:y_permuted_across_samples",
+      "faulty": [
+       198,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:X,y",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       199,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_permuted_across_samples",
+      "faulty": [
+       198,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-035": {
+    "id": "D-035",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "NOT_FALSIFIABLE",
+    "faulty_flags": [
+     "HIGH_RATE:control:labels_permuted_across_records",
+     "HIGH_RATE:probe:shuffle:features,positive",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K2_LOW_POWER",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_DEGENERATE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "NOT_FALSIFIABLE",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:labels_permuted_across_records",
+     "HIGH_RATE:probe:shuffle:features,positive"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:labels_permuted_across_records",
+     "HIGH_RATE:probe:shuffle:features,positive",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": false,
+    "fixed_blocking_non_noise_flags": [
+     "K2_LOW_POWER",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_DEGENERATE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "clean_pass_no_noise": false,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [
+     {
+      "flag": "HIGH_RATE:control:labels_permuted_across_records",
+      "stream": "control:labels_permuted_across_records",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120,
+      "reasons": [
+       "fixed study carries a rate flag on the stream: K4_CONTROL_ALSO_HOLDS"
+      ]
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:features,positive",
+      "stream": "probe:shuffle:features,positive",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120,
+      "reasons": [
+       "fixed study carries a rate flag on the stream: K5_HOLDS_ON_SHUFFLE"
+      ]
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:labels_permuted_across_records",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120,
+      "reasons": [
+       "fixed study carries a rate flag on the stream: K4_CONTROL_ALSO_HOLDS"
+      ]
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:features,positive",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120,
+      "reasons": [
+       "fixed study carries a rate flag on the stream: K5_HOLDS_ON_SHUFFLE"
+      ]
+     }
+    ],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {
+     "control:labels_permuted_across_records": [
+      "K4_CONTROL_ALSO_HOLDS"
+     ],
+     "probe:noise": [
+      "K5_HOLDS_ON_NOISE"
+     ],
+     "probe:shuffle:features,positive": [
+      "K5_HOLDS_ON_SHUFFLE"
+     ]
+    },
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-040": {
+    "id": "D-040",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:height_permuted_within_length_blocks",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:breadth,height",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:height_permuted_within_length_blocks",
+     "HIGH_RATE:probe:shuffle:breadth,height"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:height_permuted_within_length_blocks",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:breadth,height",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:height_permuted_within_length_blocks",
+     "probe:noise",
+     "probe:shuffle:breadth,height",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:height_permuted_within_length_blocks",
+      "stream": "control:height_permuted_within_length_blocks",
+      "faulty": [
+       195,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.790033061093118e-110
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       87,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 3.6317832273207896e-32
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:breadth,height",
+      "stream": "probe:shuffle:breadth,height",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       192,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 7.36496984421298e-106
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:height_permuted_within_length_blocks",
+      "faulty": [
+       195,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.790033061093118e-110
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:breadth,height",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-042": {
+    "id": "D-042",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:compound_activity_permuted_across_compounds",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:compound_activity_permuted_across_compounds",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:compound_activity_permuted_across_compounds",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:compound_activity_permuted_across_compounds",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:compound_activity_permuted_across_compounds",
+      "stream": "control:compound_activity_permuted_across_compounds",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:compound_activity_permuted_across_compounds",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-047": {
+    "id": "D-047",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "WEAK",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "WEAK",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:entry_and_week12_swapped"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": false,
+    "expected_flags_present": [],
+    "noise_only": false,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-1",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-052": {
+    "id": "D-052",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_LOW_POWER",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_DEGENERATE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:age_labels_permuted",
+     "HIGH_RATE:control:pre_post_swapped"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:age_labels_permuted",
+      "faulty": [
+       0,
+       200
+      ],
+      "fixed": [
+       14,
+       200
+      ],
+      "fisher_p": 1.0,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:pre_post_swapped",
+      "faulty": [
+       0,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.0,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       6,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 0.6145216945675376,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     }
+    ],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-055": {
+    "id": "D-055",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "WEAK",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "WEAK",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:outcome_circular_shift",
+     "HIGH_RATE:control:predictor_blocks_permuted",
+     "HIGH_RATE:probe:shuffle:y,X"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": false,
+    "expected_flags_present": [],
+    "noise_only": false,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-056": {
+    "id": "D-056",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_HIGH_SIZE",
+     "K2_LOW_POWER",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:rats_permuted_across_groups"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       22,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 0.0013318638663720025
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-062": {
+    "id": "D-062",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "WEAK",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "WEAK",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:humerus_permuted_within_species",
+     "HIGH_RATE:control:humerus_exchanged_among_length_matched_individuals"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": false,
+    "expected_flags_present": [],
+    "noise_only": false,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-064": {
+    "id": "D-064",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:response_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K2_LOW_POWER",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:response_permuted_across_patients"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:response_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [
+     "K2_LOW_POWER"
+    ],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:response_permuted_across_patients",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:response_permuted_across_patients",
+      "stream": "control:response_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:response_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-066": {
+    "id": "D-066",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:y,X",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:y,X"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:y,X",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:outcome_permuted_across_patients",
+     "probe:shuffle:y,X",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:outcome_permuted_across_patients",
+      "stream": "control:outcome_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:y,X",
+      "stream": "probe:shuffle:y,X",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:outcome_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:y,X",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-067": {
+    "id": "D-067",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:heart_exchanged_among_mass_matched_rats",
+     "control:heart_permuted_across_rats",
+     "probe:noise",
+     "probe:shuffle:kidney_weight,heart_weight",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:heart_exchanged_among_mass_matched_rats",
+      "stream": "control:heart_exchanged_among_mass_matched_rats",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 9.57911350975304e-109
+     },
+     {
+      "flag": "HIGH_RATE:control:heart_permuted_across_rats",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       64,
+       200
+      ],
+      "fixed": [
+       8,
+       200
+      ],
+      "fisher_p": 2.5458534218472253e-14
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       15,
+       200
+      ],
+      "fisher_p": 4.3692572853679003e-97
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       15,
+       200
+      ],
+      "fisher_p": 4.3692572853679003e-97
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:heart_exchanged_among_mass_matched_rats",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 9.57911350975304e-109
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-068": {
+    "id": "D-068",
+    "arm": "W0",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:head_width_exchanged_among_length_matched_specimens",
+     "HIGH_RATE:control:head_width_permuted_within_population",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:head_width_permuted_within_population",
+     "HIGH_RATE:control:head_width_exchanged_among_length_matched_specimens"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:head_width_exchanged_among_length_matched_specimens",
+     "HIGH_RATE:control:head_width_permuted_within_population",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:head_width_exchanged_among_length_matched_specimens",
+     "control:head_width_permuted_within_population",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:head_width_exchanged_among_length_matched_specimens",
+      "stream": "control:head_width_exchanged_among_length_matched_specimens",
+      "faulty": [
+       175,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.99951585271443e-87
+     },
+     {
+      "flag": "HIGH_RATE:control:head_width_permuted_within_population",
+      "stream": "control:head_width_permuted_within_population",
+      "faulty": [
+       197,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       20,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 5.7868683338233e-07
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:head_width_permuted_within_population",
+      "faulty": [
+       197,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   }
+  },
+  "W1": {
+   "D-007": {
+    "id": "D-007",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:survival_shuffled_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K2_LOW_POWER",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:survival_shuffled_across_patients"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:survival_shuffled_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [
+     "K2_LOW_POWER"
+    ],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:survival_shuffled_across_patients",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:survival_shuffled_across_patients",
+      "stream": "control:survival_shuffled_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:survival_shuffled_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-008": {
+    "id": "D-008",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:consumption_shuffled_across_occasions_within_patient",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:consumption_shuffled_across_occasions_within_patient"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:consumption_shuffled_across_occasions_within_patient",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:consumption_shuffled_across_occasions_within_patient",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:consumption_shuffled_across_occasions_within_patient",
+      "stream": "control:consumption_shuffled_across_occasions_within_patient",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       18,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.556712983550819e-06
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:consumption_shuffled_across_occasions_within_patient",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-010": {
+    "id": "D-010",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_shuffled_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_shuffled_across_patients"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_shuffled_across_patients",
+     "HIGH_RATE:probe:noise",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_shuffled_across_patients",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_shuffled_across_patients",
+      "stream": "control:y_shuffled_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       112,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 4.778688444779273e-44
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_shuffled_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-011": {
+    "id": "D-011",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:myeloid_labels_shuffled_across_samples",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:myeloid_labels_shuffled_across_samples"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:myeloid_labels_shuffled_across_samples",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:myeloid_labels_shuffled_across_samples",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:myeloid_labels_shuffled_across_samples",
+      "stream": "control:myeloid_labels_shuffled_across_samples",
+      "faulty": [
+       123,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.5515406086792485e-50
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       120,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.886282172048571e-48
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-012": {
+    "id": "D-012",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:exclosure_shuffled_across_plots",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:exclosure_shuffled_across_plots"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:exclosure_shuffled_across_plots",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:exclosure_shuffled_across_plots",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:exclosure_shuffled_across_plots",
+      "stream": "control:exclosure_shuffled_across_plots",
+      "faulty": [
+       50,
+       200
+      ],
+      "fixed": [
+       10,
+       200
+      ],
+      "fisher_p": 7.951617095287973e-09
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       53,
+       200
+      ],
+      "fixed": [
+       11,
+       200
+      ],
+      "fisher_p": 3.770667479688697e-09
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-022": {
+    "id": "D-022",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_circularly_shifted_against_X_by_30_to_270_runs",
+     "probe:noise",
+     "probe:shuffle:X,y",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_circularly_shifted_against_X_by_30_to_270_runs",
+      "stream": "control:y_circularly_shifted_against_X_by_30_to_270_runs",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:X,y",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 1.3343056246260728e-113
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_circularly_shifted_against_X_by_30_to_270_runs",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-023": {
+    "id": "D-023",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:probe:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:wing_shuffled_within_blocks_of_10_similar_body_lengths"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:probe:noise"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": false,
+    "qualifying_streams": [
+     "probe:noise"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       66,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 2.1331142836072046e-23
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-027": {
+    "id": "D-027",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:y_shuffled_across_samples",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_shuffled_across_samples"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:y_shuffled_across_samples",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:y_shuffled_across_samples",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:y_shuffled_across_samples",
+      "stream": "control:y_shuffled_across_samples",
+      "faulty": [
+       199,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       198,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_shuffled_across_samples",
+      "faulty": [
+       199,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       196,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-035": {
+    "id": "D-035",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:positive_labels_shuffled_across_records",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K2_LOW_POWER",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:positive_labels_shuffled_across_records"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:positive_labels_shuffled_across_records",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [
+     "K2_LOW_POWER"
+    ],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:positive_labels_shuffled_across_records",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:positive_labels_shuffled_across_records",
+      "stream": "control:positive_labels_shuffled_across_records",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:positive_labels_shuffled_across_records",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-040": {
+    "id": "D-040",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:height_shuffled_within_blocks_of_10_similar_lengths",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:height_shuffled_within_blocks_of_10_similar_lengths",
+      "stream": "control:height_shuffled_within_blocks_of_10_similar_lengths",
+      "faulty": [
+       124,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.6546402039645197e-48
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       87,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 3.6317832273207896e-32
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       74,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.2591409002875494e-26
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-042": {
+    "id": "D-042",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:compound_mean_activity_shuffled_across_compounds",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds",
+      "stream": "control:compound_mean_activity_shuffled_across_compounds",
+      "faulty": [
+       141,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.308273359645155e-60
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       95,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 8.90188404199688e-36
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-047": {
+    "id": "D-047",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient",
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:noise",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:entry_and_week12_swapped_at_random_within_patient"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient",
+      "stream": "control:entry_and_week12_swapped_at_random_within_patient",
+      "faulty": [
+       135,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 7.196354332608979e-57
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-1",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-052": {
+    "id": "D-052",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_LOW_POWER",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_DEGENERATE",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:age_labels_permuted",
+     "HIGH_RATE:probe:shuffle:post,young"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:age_labels_permuted",
+      "faulty": [
+       1,
+       200
+      ],
+      "fixed": [
+       11,
+       200
+      ],
+      "fisher_p": 0.9997940083298276,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       6,
+       200
+      ],
+      "fixed": [
+       6,
+       200
+      ],
+      "fisher_p": 0.6145216945675376,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:post,young",
+      "faulty": [
+       1,
+       200
+      ],
+      "fixed": [
+       10,
+       200
+      ],
+      "fisher_p": 0.9995760277264704,
+      "reasons": [
+       "faulty count does not exceed fixed count"
+      ]
+     }
+    ],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-6",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-055": {
+    "id": "D-055",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "WEAK",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "WEAK",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:y_circularly_shifted_200_to_800_days",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": false,
+    "expected_flags_present": [],
+    "noise_only": false,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-056": {
+    "id": "D-056",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:animals_permuted_across_groups_with_their_mass"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       47,
+       200
+      ],
+      "fixed": [
+       10,
+       200
+      ],
+      "fisher_p": 5.2638156327624596e-08
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-062": {
+    "id": "D-062",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "WEAK",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "WEAK",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:humerus_swapped_between_body_length_neighbours",
+     "HIGH_RATE:control:humerus_permuted_within_species"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": false,
+    "expected_flags_present": [],
+    "noise_only": false,
+    "declared_only_baseline": false,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": false,
+    "generic": false,
+    "declared": false,
+    "qualifying_streams": [],
+    "qualifying": [],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-064": {
+    "id": "D-064",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:response_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,response",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:response_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:expression,response"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:response_permuted_across_patients",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:expression,response",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:response_permuted_across_patients",
+     "probe:noise",
+     "probe:shuffle:expression,response",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:response_permuted_across_patients",
+      "stream": "control:response_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:expression,response",
+      "stream": "probe:shuffle:expression,response",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       4,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       4,
+       200
+      ],
+      "fisher_p": 6.804958685592971e-112
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:response_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     },
+     {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 1.9523566667698477e-117
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:expression,response",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 1.971880233437546e-115
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-066": {
+    "id": "D-066",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:X,y"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:outcome_permuted_across_patients",
+     "HIGH_RATE:probe:shuffle:X,y",
+     "K2_FAILS_UNREACHABLE",
+     "K2_HIGH_SIZE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_SHUFFLE"
+    ],
+    "noise_only": false,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": false,
+    "declared": true,
+    "qualifying_streams": [
+     "control:outcome_permuted_across_patients",
+     "probe:shuffle:X,y",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:outcome_permuted_across_patients",
+      "stream": "control:outcome_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:X,y",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:outcome_permuted_across_patients",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     },
+     {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:X,y",
+      "faulty": [
+       200,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 9.713217247611181e-120
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-2",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-067": {
+    "id": "D-067",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:heart_swapped_between_body_mass_neighbours",
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:heart_permuted_across_rats",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:heart_permuted_across_rats",
+     "probe:noise",
+     "probe:shuffle:kidney_weight,heart_weight"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:heart_permuted_across_rats",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty": [
+       33,
+       200
+      ],
+      "fixed": [
+       3,
+       200
+      ],
+      "fisher_p": 3.417234556435365e-08
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       64,
+       200
+      ],
+      "fixed": [
+       8,
+       200
+      ],
+      "fisher_p": 2.5458534218472253e-14
+     },
+     {
+      "flag": "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty": [
+       20,
+       200
+      ],
+      "fixed": [
+       2,
+       200
+      ],
+      "fisher_p": 4.025341112734932e-05
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   },
+   "D-068": {
+    "id": "D-068",
+    "arm": "W1",
+    "faulty_status": "ok",
+    "fixed_status": "ok",
+    "faulty_verdict": "NOT_FALSIFIABLE",
+    "fixed_verdict": "WEAK",
+    "faulty_flags": [
+     "HIGH_RATE:control:head_permuted_within_population",
+     "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE",
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "fixed_flags": [
+     "K5_INCONCLUSIVE:zeros"
+    ],
+    "runlog_verdict_faulty": "NOT_FALSIFIABLE",
+    "runlog_verdict_fixed": "WEAK",
+    "cert_sha_matches_runlog": [
+     true,
+     true
+    ],
+    "expected_flags": [
+     "K2_HIGH_SIZE",
+     "K2_FAILS_UNREACHABLE",
+     "K2_NO_SEPARATION",
+     "K4_CONTROL_ALSO_HOLDS",
+     "K5_HOLDS_ON_NOISE",
+     "K5_HOLDS_ON_NULL",
+     "K5_HOLDS_ON_SHUFFLE",
+     "HIGH_RATE:probe:noise",
+     "HIGH_RATE:world:null",
+     "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+     "HIGH_RATE:control:head_permuted_within_population"
+    ],
+    "attrition_causes": [],
+    "attrition": false,
+    "pb_detected": true,
+    "expected_flags_present": [
+     "HIGH_RATE:control:head_permuted_within_population",
+     "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+     "HIGH_RATE:probe:noise",
+     "K2_HIGH_SIZE"
+    ],
+    "noise_only": true,
+    "declared_only_baseline": true,
+    "clean_pass": true,
+    "fixed_blocking_non_noise_flags": [],
+    "clean_pass_no_noise": true,
+    "flag_everything_detected": true,
+    "flag_everything_clean": false,
+    "attributable": true,
+    "generic": true,
+    "declared": true,
+    "qualifying_streams": [
+     "control:head_permuted_within_population",
+     "control:head_swapped_between_body_length_neighbours",
+     "probe:noise",
+     "world:minus"
+    ],
+    "qualifying": [
+     {
+      "flag": "HIGH_RATE:control:head_permuted_within_population",
+      "stream": "control:head_permuted_within_population",
+      "faulty": [
+       124,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 1.8211863785859284e-50
+     },
+     {
+      "flag": "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+      "stream": "control:head_swapped_between_body_length_neighbours",
+      "faulty": [
+       121,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 8.246520491567346e-49
+     },
+     {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty": [
+       20,
+       200
+      ],
+      "fixed": [
+       0,
+       200
+      ],
+      "fisher_p": 5.7868683338233e-07
+     },
+     {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty": [
+       125,
+       200
+      ],
+      "fixed": [
+       1,
+       200
+      ],
+      "fisher_p": 4.6091131945002766e-49
+     }
+    ],
+    "non_qualifying": [],
+    "listed_cases": [],
+    "fixed_rate_flag_streams": {},
+    "class": "B-3",
+    "part_b": {
+     "X": "yes",
+     "Y": "yes"
+    }
+   }
+  }
+ },
+ "tables": {
+  "R": {
+   "B-2": {
+    "n": 10,
+    "pb_detection": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "attributable": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "generic": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "clean_pass": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "clean_pass_no_noise": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "noise_only": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared_only": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "flag_everything_detection": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 4,
+    "generic_and_declared": 6,
+    "attrition_pairs": 0
+   },
+   "B-3": {
+    "n": 7,
+    "pb_detection": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "attributable": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "generic": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "clean_pass": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "clean_pass_no_noise": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "noise_only": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared_only": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "flag_everything_detection": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 2,
+    "generic_and_declared": 5,
+    "attrition_pairs": 0
+   },
+   "B-1": {
+    "n": 1,
+    "pb_detection": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "attributable": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "clean_pass": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "clean_pass_no_noise": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "noise_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared_only": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "flag_everything_detection": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-6": {
+    "n": 2,
+    "pb_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "attributable": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "clean_pass": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "clean_pass_no_noise": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "noise_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared_only": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 2,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "decoys(B-1+B-6)": {
+    "n": 3,
+    "pb_detection": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "attributable": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "clean_pass": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "clean_pass_no_noise": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "noise_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared_only": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "flag_everything_detection": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 3,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-2+B-3": {
+    "n": 17,
+    "pb_detection": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "attributable": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "generic": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "clean_pass": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "clean_pass_no_noise": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "noise_only": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared_only": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "flag_everything_detection": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 6,
+    "generic_and_declared": 11,
+    "attrition_pairs": 0
+   }
+  },
+  "W0": {
+   "B-2": {
+    "n": 10,
+    "pb_detection": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "attributable": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "generic": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "clean_pass": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "clean_pass_no_noise": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "noise_only": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared_only": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "flag_everything_detection": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 3,
+    "generic_and_declared": 6,
+    "attrition_pairs": 0
+   },
+   "B-3": {
+    "n": 7,
+    "pb_detection": {
+     "count": 6,
+     "wilson_lower": 0.547713305302971
+    },
+    "attributable": {
+     "count": 6,
+     "wilson_lower": 0.547713305302971
+    },
+    "generic": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "clean_pass": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "clean_pass_no_noise": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "noise_only": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared_only": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "flag_everything_detection": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 1,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 4,
+    "attrition_pairs": 0
+   },
+   "B-1": {
+    "n": 1,
+    "pb_detection": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "attributable": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "clean_pass": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "clean_pass_no_noise": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "noise_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "flag_everything_detection": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 0,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-6": {
+    "n": 2,
+    "pb_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "attributable": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "clean_pass": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "clean_pass_no_noise": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "noise_only": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "declared_only": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "decoys(B-1+B-6)": {
+    "n": 3,
+    "pb_detection": {
+     "count": 2,
+     "wilson_lower": 0.2535338682812242
+    },
+    "attributable": {
+     "count": 1,
+     "wilson_lower": 0.0782657263337284
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 1,
+     "wilson_lower": 0.0782657263337284
+    },
+    "clean_pass": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "clean_pass_no_noise": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "noise_only": {
+     "count": 1,
+     "wilson_lower": 0.0782657263337284
+    },
+    "declared_only": {
+     "count": 2,
+     "wilson_lower": 0.2535338682812242
+    },
+    "flag_everything_detection": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-2+B-3": {
+    "n": 17,
+    "pb_detection": {
+     "count": 15,
+     "wilson_lower": 0.6994404144506055
+    },
+    "attributable": {
+     "count": 15,
+     "wilson_lower": 0.6994404144506055
+    },
+    "generic": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared": {
+     "count": 14,
+     "wilson_lower": 0.6310330219309741
+    },
+    "clean_pass": {
+     "count": 16,
+     "wilson_lower": 0.7744414966277938
+    },
+    "clean_pass_no_noise": {
+     "count": 16,
+     "wilson_lower": 0.7744414966277938
+    },
+    "noise_only": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared_only": {
+     "count": 14,
+     "wilson_lower": 0.6310330219309741
+    },
+    "flag_everything_detection": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 1,
+    "declared_only_attributable": 4,
+    "generic_and_declared": 10,
+    "attrition_pairs": 0
+   }
+  },
+  "W1": {
+   "B-2": {
+    "n": 10,
+    "pb_detection": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "attributable": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "generic": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "clean_pass": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "clean_pass_no_noise": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "noise_only": {
+     "count": 6,
+     "wilson_lower": 0.3516385978601219
+    },
+    "declared_only": {
+     "count": 9,
+     "wilson_lower": 0.6522813326641418
+    },
+    "flag_everything_detection": {
+     "count": 10,
+     "wilson_lower": 0.7870580299165931
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 3,
+    "generic_and_declared": 6,
+    "attrition_pairs": 0
+   },
+   "B-3": {
+    "n": 7,
+    "pb_detection": {
+     "count": 6,
+     "wilson_lower": 0.547713305302971
+    },
+    "attributable": {
+     "count": 6,
+     "wilson_lower": 0.547713305302971
+    },
+    "generic": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "clean_pass": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "clean_pass_no_noise": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "noise_only": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "declared_only": {
+     "count": 5,
+     "wilson_lower": 0.4086675455111977
+    },
+    "flag_everything_detection": {
+     "count": 7,
+     "wilson_lower": 0.7212373045474579
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 1,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 4,
+    "attrition_pairs": 0
+   },
+   "B-1": {
+    "n": 1,
+    "pb_detection": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "attributable": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "clean_pass": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "clean_pass_no_noise": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "noise_only": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared_only": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "flag_everything_detection": {
+     "count": 1,
+     "wilson_lower": 0.2698659487840541
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-6": {
+    "n": 2,
+    "pb_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "attributable": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "clean_pass": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "clean_pass_no_noise": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "noise_only": {
+     "count": 1,
+     "wilson_lower": 0.12086631942227365
+    },
+    "declared_only": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_detection": {
+     "count": 2,
+     "wilson_lower": 0.42503060900634637
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 1,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "decoys(B-1+B-6)": {
+    "n": 3,
+    "pb_detection": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "attributable": {
+     "count": 2,
+     "wilson_lower": 0.2535338682812242
+    },
+    "generic": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "declared": {
+     "count": 2,
+     "wilson_lower": 0.2535338682812242
+    },
+    "clean_pass": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "clean_pass_no_noise": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "noise_only": {
+     "count": 1,
+     "wilson_lower": 0.0782657263337284
+    },
+    "declared_only": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "flag_everything_detection": {
+     "count": 3,
+     "wilson_lower": 0.5258044258424873
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 0,
+    "declared_only_attributable": 2,
+    "generic_and_declared": 0,
+    "attrition_pairs": 0
+   },
+   "B-2+B-3": {
+    "n": 17,
+    "pb_detection": {
+     "count": 15,
+     "wilson_lower": 0.6994404144506055
+    },
+    "attributable": {
+     "count": 15,
+     "wilson_lower": 0.6994404144506055
+    },
+    "generic": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared": {
+     "count": 14,
+     "wilson_lower": 0.6310330219309741
+    },
+    "clean_pass": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "clean_pass_no_noise": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "noise_only": {
+     "count": 11,
+     "wilson_lower": 0.4486459019075663
+    },
+    "declared_only": {
+     "count": 14,
+     "wilson_lower": 0.6310330219309741
+    },
+    "flag_everything_detection": {
+     "count": 17,
+     "wilson_lower": 0.862701403775133
+    },
+    "flag_everything_clean": {
+     "count": 0,
+     "wilson_lower": 0.0
+    },
+    "generic_only": 1,
+    "declared_only_attributable": 4,
+    "generic_and_declared": 10,
+    "attrition_pairs": 0
+   }
+  }
+ },
+ "H-D1_H-D2": {
+  "H-D1": {
+   "class": "B-2",
+   "n": 10,
+   "attributable": {
+    "count": 9,
+    "wilson_lower": 0.6522813326641418
+   },
+   "clean_pass": {
+    "count": 10,
+    "wilson_lower": 0.7870580299165931
+   },
+   "criterion": "one-sided 95% Wilson lower bound >= 0.6 on both; n < 16 is insufficient",
+   "verdict": "insufficient cases"
+  },
+  "H-D2": {
+   "class": "B-3",
+   "n": 7,
+   "attributable": {
+    "count": 6,
+    "wilson_lower": 0.547713305302971
+   },
+   "clean_pass": {
+    "count": 7,
+    "wilson_lower": 0.7212373045474579
+   },
+   "criterion": "one-sided 95% Wilson lower bound >= 0.6 on both; n < 16 is insufficient",
+   "verdict": "insufficient cases"
+  }
+ },
+ "H-D3": {
+  "pairs_in_pool": 17,
+  "n_comparable": 17,
+  "exclusions": [],
+  "b_W1_only": 0,
+  "c_W0_only": 0,
+  "both": 14,
+  "neither": 3,
+  "p_exact_one_sided": 1.0,
+  "p_fraction": "1/1",
+  "label": "not demonstrated",
+  "per_class": {
+   "B-2": {
+    "n_comparable": 10,
+    "b_W1_only": 0,
+    "c_W0_only": 0,
+    "both": 9,
+    "neither": 1
+   },
+   "B-3": {
+    "n_comparable": 7,
+    "b_W1_only": 0,
+    "c_W0_only": 0,
+    "both": 5,
+    "neither": 2
+   }
+  },
+  "sensitivity": {
+   "b_W1_only": 0,
+   "c_W0_only": 0,
+   "both": 14,
+   "neither": 3,
+   "n": 17,
+   "p_exact_one_sided": 1.0,
+   "label": "not demonstrated"
+  },
+  "per_pair": [
+   {
+    "id": "D-007",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-008",
+    "class": "B-3",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-010",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-011",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-022",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-023",
+    "class": "B-3",
+    "W1_declared": false,
+    "W0_declared": false,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-027",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-035",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-040",
+    "class": "B-3",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-042",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-055",
+    "class": "B-2",
+    "W1_declared": false,
+    "W0_declared": false,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-056",
+    "class": "B-3",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-062",
+    "class": "B-3",
+    "W1_declared": false,
+    "W0_declared": false,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-064",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-066",
+    "class": "B-2",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-067",
+    "class": "B-3",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   },
+   {
+    "id": "D-068",
+    "class": "B-3",
+    "W1_declared": true,
+    "W0_declared": true,
+    "W1_attrition": [],
+    "W0_attrition": [],
+    "comparable": true
+   }
+  ]
+ },
+ "clean_pass_guard": {
+  "n": 17,
+  "b_W0_clean_W1_not": 0,
+  "c_W1_clean_W0_not": 1,
+  "both_clean": 16,
+  "neither_clean": 0,
+  "p_exact_one_sided": 1.0,
+  "p_fraction": "1/1",
+  "significant_at_0.05": false,
+  "pooled_W1_minus_W0_clean_pass": 1,
+  "decoy_clean_pass_W0": 3,
+  "decoy_clean_pass_W1": 3,
+  "per_pair": [
+   {
+    "id": "D-007",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-008",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-010",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-011",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-022",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-023",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-027",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-035",
+    "class": "B-2",
+    "W1": true,
+    "W0": false
+   },
+   {
+    "id": "D-040",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-042",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-055",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-056",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-062",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-064",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-066",
+    "class": "B-2",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-067",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   },
+   {
+    "id": "D-068",
+    "class": "B-3",
+    "W1": true,
+    "W0": true
+   }
+  ]
+ },
+ "arm_R_not_attributable_or_not_clean": []
+}

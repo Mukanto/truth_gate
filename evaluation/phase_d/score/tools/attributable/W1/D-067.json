@@ -1,0 +1,41 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:heart_permuted_across_rats",
+      "stream": "control:heart_permuted_across_rats",
+      "faulty_holds": 33,
+      "faulty_n": 200,
+      "fixed_holds": 3,
+      "fixed_n": 200,
+      "p": 3.417234556435365e-08
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 64,
+      "faulty_n": 200,
+      "fixed_holds": 8,
+      "fixed_n": 200,
+      "p": 2.5458534218472253e-14
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight",
+      "stream": "probe:shuffle:kidney_weight,heart_weight",
+      "faulty_holds": 20,
+      "faulty_n": 200,
+      "fixed_holds": 2,
+      "fixed_n": 200,
+      "p": 4.025341112734932e-05
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:heart_permuted_across_rats@control:heart_permuted_across_rats 33 vs 3 p=3.42e-08 OK",
+    "HIGH_RATE:probe:noise@probe:noise 64 vs 8 p=2.55e-14 OK",
+    "HIGH_RATE:probe:shuffle:kidney_weight,heart_weight@probe:shuffle:kidney_weight,heart_weight 20 vs 2 p=4.03e-05 OK"
+  ]
+}

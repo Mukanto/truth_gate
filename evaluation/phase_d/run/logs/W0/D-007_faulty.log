@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:survival_permuted_across_patients, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:expression,survival_months, K2_FAILS_UNREACHABLE, K2_HIGH_SIZE, K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W0\D-007_faulty.json
+body_sha256: f45f08e9f175e4112bc311966ebd0ae624ce7a8d7ada8ee025d12f75de2ab25e

@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:heart_permuted_across_rats, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:kidney_weight,heart_weight, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-067_faulty.json
+body_sha256: d8aef8229c07043b04775e045d0d717345968f6e2e5bd59217e9c9dc5301fd70

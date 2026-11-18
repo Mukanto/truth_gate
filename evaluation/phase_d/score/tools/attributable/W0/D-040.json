@@ -1,0 +1,71 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:height_permuted_within_length_blocks",
+      "stream": "control:height_permuted_within_length_blocks",
+      "faulty_holds": 195,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 2.790033061093118e-110
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 87,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 3.6317832273207896e-32
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:breadth,height",
+      "stream": "probe:shuffle:breadth,height",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 192,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 7.36496984421298e-106
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:height_permuted_within_length_blocks",
+      "faulty_holds": 195,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 2.790033061093118e-110
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:breadth,height",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:height_permuted_within_length_blocks@control:height_permuted_within_length_blocks 195 vs 0 p=2.79e-110 OK",
+    "HIGH_RATE:probe:noise@probe:noise 87 vs 0 p=3.63e-32 OK",
+    "HIGH_RATE:probe:shuffle:breadth,height@probe:shuffle:breadth,height 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 192 vs 0 p=7.36e-106 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:height_permuted_within_length_blocks 195 vs 0 p=2.79e-110 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:breadth,height 200 vs 0 p=9.71e-120 OK"
+  ]
+}

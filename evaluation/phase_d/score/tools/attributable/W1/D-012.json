@@ -1,0 +1,31 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:exclosure_shuffled_across_plots",
+      "stream": "control:exclosure_shuffled_across_plots",
+      "faulty_holds": 50,
+      "faulty_n": 200,
+      "fixed_holds": 10,
+      "fixed_n": 200,
+      "p": 7.951617095287973e-09
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 53,
+      "faulty_n": 200,
+      "fixed_holds": 11,
+      "fixed_n": 200,
+      "p": 3.770667479688697e-09
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:exclosure_shuffled_across_plots@control:exclosure_shuffled_across_plots 50 vs 10 p=7.95e-09 OK",
+    "K2_HIGH_SIZE@world:minus 53 vs 11 p=3.77e-09 OK"
+  ]
+}

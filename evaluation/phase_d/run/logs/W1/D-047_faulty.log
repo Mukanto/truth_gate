@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient, K5_INCONCLUSIVE:noise, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-047_faulty.json
+body_sha256: 9299e6a10bac4f4d2b75974a957eeb64695a55816885aae0d37499ea8b5e20ff

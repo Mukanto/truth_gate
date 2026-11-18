@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:labels_permuted_across_samples, HIGH_RATE:probe:noise, HIGH_RATE:probe:shuffle:expression,myeloid, K2_HIGH_SIZE, K5_HOLDS_ON_NOISE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W0\D-011_faulty.json
+body_sha256: 528dd624688b40d90bd6f7ab5cfc24412732f8bcee6e60d4a6622faff2ec3a72

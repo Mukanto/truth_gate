@@ -1,0 +1,21 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient",
+      "stream": "control:entry_and_week12_swapped_at_random_within_patient",
+      "faulty_holds": 135,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 7.196354332608979e-57
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:entry_and_week12_swapped_at_random_within_patient@control:entry_and_week12_swapped_at_random_within_patient 135 vs 0 p=7.2e-57 OK"
+  ]
+}

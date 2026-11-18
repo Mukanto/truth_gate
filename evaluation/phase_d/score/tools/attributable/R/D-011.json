@@ -1,0 +1,51 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:D-011",
+      "stream": "control:D-011",
+      "faulty_holds": 85,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 2.740043318186875e-31
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 88,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.3111549670519143e-32
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:D-011@control:D-011 85 vs 0 p=2.74e-31 OK",
+    "HIGH_RATE:probe:noise@probe:noise 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 88 vs 0 p=1.31e-32 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 200 vs 0 p=9.71e-120 OK"
+  ]
+}

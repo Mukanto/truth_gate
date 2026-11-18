@@ -1,0 +1,21 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": false,
+  "qualifying": [
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 22,
+      "faulty_n": 200,
+      "fixed_holds": 6,
+      "fixed_n": 200,
+      "p": 0.0013318638663720025
+    }
+  ],
+  "reasons": [
+    "K2_HIGH_SIZE@world:minus 22 vs 6 p=0.00133 OK"
+  ]
+}

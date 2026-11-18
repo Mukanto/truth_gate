@@ -1,0 +1,21 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": false,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 66,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 2.1331142836072046e-23
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:probe:noise@probe:noise 66 vs 0 p=2.13e-23 OK"
+  ]
+}

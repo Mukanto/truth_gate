@@ -1,0 +1,30 @@
+{
+  "class": "3",
+  "label": "fixed weak in plus",
+  "verdict": "NOT_FALSIFIABLE",
+  "causes": [],
+  "flags": [
+    "K2_LOW_POWER",
+    "K2_NO_SEPARATION",
+    "K4_CONTROL_ALSO_HOLDS",
+    "K5_HOLDS_ON_DEGENERATE",
+    "K5_HOLDS_ON_NOISE",
+    "K5_HOLDS_ON_SHUFFLE",
+    "K5_INCONCLUSIVE:zeros"
+  ],
+  "failure_flags": [
+    "K2_NO_SEPARATION",
+    "K4_CONTROL_ALSO_HOLDS",
+    "K5_HOLDS_ON_DEGENERATE",
+    "K5_HOLDS_ON_NOISE",
+    "K5_HOLDS_ON_SHUFFLE"
+  ],
+  "size": null,
+  "seed": 20261117,
+  "samples": 1000,
+  "streams": [],
+  "reasons": [
+    "the failure comes only from K2_NO_SEPARATION, K4_CONTROL_ALSO_HOLDS, K5_HOLDS_ON_DEGENERATE, K5_HOLDS_ON_NOISE, K5_HOLDS_ON_SHUFFLE"
+  ],
+  "unconfirmed_rate_flags": []
+}

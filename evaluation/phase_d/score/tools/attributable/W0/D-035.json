@@ -1,0 +1,35 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "K2_FAILS_UNREACHABLE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 200,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 9.713217247611181e-120
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:labels_permuted_across_records@control:labels_permuted_across_records 200 vs 0 p=9.71e-120 fixed-flagged",
+    "HIGH_RATE:probe:shuffle:features,positive@probe:shuffle:features,positive 200 vs 0 p=9.71e-120 fixed-flagged",
+    "K2_FAILS_UNREACHABLE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K2_HIGH_SIZE@world:minus 200 vs 0 p=9.71e-120 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:labels_permuted_across_records 200 vs 0 p=9.71e-120 fixed-flagged",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:features,positive 200 vs 0 p=9.71e-120 fixed-flagged"
+  ]
+}

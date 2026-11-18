@@ -1,0 +1,51 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:head_permuted_within_population",
+      "stream": "control:head_permuted_within_population",
+      "faulty_holds": 124,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.8211863785859284e-50
+    },
+    {
+      "flag": "HIGH_RATE:control:head_swapped_between_body_length_neighbours",
+      "stream": "control:head_swapped_between_body_length_neighbours",
+      "faulty_holds": 121,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 8.246520491567346e-49
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 20,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 5.7868683338233e-07
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 125,
+      "faulty_n": 200,
+      "fixed_holds": 1,
+      "fixed_n": 200,
+      "p": 4.6091131945002766e-49
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:head_permuted_within_population@control:head_permuted_within_population 124 vs 0 p=1.82e-50 OK",
+    "HIGH_RATE:control:head_swapped_between_body_length_neighbours@control:head_swapped_between_body_length_neighbours 121 vs 0 p=8.25e-49 OK",
+    "HIGH_RATE:probe:noise@probe:noise 20 vs 0 p=5.79e-07 OK",
+    "K2_HIGH_SIZE@world:minus 125 vs 1 p=4.61e-49 OK"
+  ]
+}

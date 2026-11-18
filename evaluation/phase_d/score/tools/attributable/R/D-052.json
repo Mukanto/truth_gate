@@ -1,0 +1,31 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": false,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:D-052",
+      "stream": "control:D-052",
+      "faulty_holds": 49,
+      "faulty_n": 200,
+      "fixed_holds": 6,
+      "fixed_n": 200,
+      "p": 6.542849229266702e-11
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 95,
+      "faulty_n": 200,
+      "fixed_holds": 13,
+      "fixed_n": 200,
+      "p": 7.147592226516704e-22
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:D-052@control:D-052 49 vs 6 p=6.54e-11 OK",
+    "K2_HIGH_SIZE@world:minus 95 vs 13 p=7.15e-22 OK"
+  ]
+}

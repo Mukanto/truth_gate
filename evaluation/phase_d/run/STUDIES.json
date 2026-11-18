@@ -1,0 +1,1207 @@
+{
+  "format": 1,
+  "gate_tag": "v0.5.1",
+  "phase": "D",
+  "studies": {
+    "R/D-007_faulty": {
+      "arm": "R",
+      "body": "cases/D-007/faulty_body.py",
+      "body_sha256": "7b696ac4f81d58738000c01a0a234d889a94a9b8201a81d182f0c52a1d09c9b6",
+      "case": "D-007",
+      "sha256": "900c948ecebe0de9bc1ab10f9c9e0c5f3e9413c026b64f9af93e230b9a92d9ae",
+      "skeleton": "cases/D-007/reference.py",
+      "skeleton_sha256": "2a9f8749b3d140ec170dcb76486d1fe8dd465cb4553ab36b0bf73db71cba422d",
+      "twin": "faulty"
+    },
+    "R/D-007_fixed": {
+      "arm": "R",
+      "body": "cases/D-007/fixed_body.py",
+      "body_sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944",
+      "case": "D-007",
+      "sha256": "af79efa77482fe2a8e29ca36388d4f4cd6e4bbc653632d67d853e59144054097",
+      "skeleton": "cases/D-007/reference.py",
+      "skeleton_sha256": "2a9f8749b3d140ec170dcb76486d1fe8dd465cb4553ab36b0bf73db71cba422d",
+      "twin": "fixed"
+    },
+    "R/D-008_faulty": {
+      "arm": "R",
+      "body": "cases/D-008/faulty_body.py",
+      "body_sha256": "337de2ae455618dc40e2b831010c791bb51c5b4f4d593a2b6f5362b88c8f8c5d",
+      "case": "D-008",
+      "sha256": "285d64fae53b9ae0ad35ead299a8edc0c91752e4aeef876e6d480a673687d0b3",
+      "skeleton": "cases/D-008/reference.py",
+      "skeleton_sha256": "f885adc9df756ea07e04fce5ace837e3dc2e9ceb4f5b422987c4dcfb80512b27",
+      "twin": "faulty"
+    },
+    "R/D-008_fixed": {
+      "arm": "R",
+      "body": "cases/D-008/fixed_body.py",
+      "body_sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981",
+      "case": "D-008",
+      "sha256": "b5e78009e984cea785d702bc63454ed892463503a66d0d966421dc3e6dd5d4dc",
+      "skeleton": "cases/D-008/reference.py",
+      "skeleton_sha256": "f885adc9df756ea07e04fce5ace837e3dc2e9ceb4f5b422987c4dcfb80512b27",
+      "twin": "fixed"
+    },
+    "R/D-010_faulty": {
+      "arm": "R",
+      "body": "cases/D-010/faulty_body.py",
+      "body_sha256": "5e5d2dfb9ec726dff6916f9d579ed351b9789d6766d3f8c2c63b0d128b4f493c",
+      "case": "D-010",
+      "sha256": "ed3809fd11be8465e368744df2276166e9041bd775fd5482d9b5eb3ae2f5fb7d",
+      "skeleton": "cases/D-010/reference.py",
+      "skeleton_sha256": "bc94549159855d15e644ba1e63c4faa82c9f3d709f67f55d1d963ee906c0c867",
+      "twin": "faulty"
+    },
+    "R/D-010_fixed": {
+      "arm": "R",
+      "body": "cases/D-010/fixed_body.py",
+      "body_sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+      "case": "D-010",
+      "sha256": "2213b3ed14d4f36502a0422ea47c8b226f114fc7614c44f9c027a6367df0a052",
+      "skeleton": "cases/D-010/reference.py",
+      "skeleton_sha256": "bc94549159855d15e644ba1e63c4faa82c9f3d709f67f55d1d963ee906c0c867",
+      "twin": "fixed"
+    },
+    "R/D-011_faulty": {
+      "arm": "R",
+      "body": "cases/D-011/faulty_body.py",
+      "body_sha256": "0e0c6ca215cdb0df5e7aa6f209b44c51bcb7a40e4e06b713c5dc80542947149f",
+      "case": "D-011",
+      "sha256": "cf2f32ac30b37c0f58fbb00d69b83e8f1e6ab5492e53b5aa76bab47671b48c66",
+      "skeleton": "cases/D-011/reference.py",
+      "skeleton_sha256": "aec2a01649e5197d3bb94137f05a186ec90c0815c6305669f1be06c74192daca",
+      "twin": "faulty"
+    },
+    "R/D-011_fixed": {
+      "arm": "R",
+      "body": "cases/D-011/fixed_body.py",
+      "body_sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa",
+      "case": "D-011",
+      "sha256": "df5cb58092dc99398060b5b65dd669611c55553e8a8f1a37748b4d015d8378ce",
+      "skeleton": "cases/D-011/reference.py",
+      "skeleton_sha256": "aec2a01649e5197d3bb94137f05a186ec90c0815c6305669f1be06c74192daca",
+      "twin": "fixed"
+    },
+    "R/D-012_faulty": {
+      "arm": "R",
+      "body": "cases/D-012/faulty_body.py",
+      "body_sha256": "c314e068c027f548d1d1a5242aef7f7a341fe629a8cab93916a42bb7be489322",
+      "case": "D-012",
+      "sha256": "a330ab351a974de859a86a56d8cd11786f9bfec5cf9d60687540a5f713f33109",
+      "skeleton": "cases/D-012/reference.py",
+      "skeleton_sha256": "ee22175a1186c4727ed617ad2a1c74a6504ab504222949698ad69a2d48dd58f5",
+      "twin": "faulty"
+    },
+    "R/D-012_fixed": {
+      "arm": "R",
+      "body": "cases/D-012/fixed_body.py",
+      "body_sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950",
+      "case": "D-012",
+      "sha256": "8366520743c98f06396dac13fb9c3385ae3f4d5d7e35a1ebd02e02c3f11f1fed",
+      "skeleton": "cases/D-012/reference.py",
+      "skeleton_sha256": "ee22175a1186c4727ed617ad2a1c74a6504ab504222949698ad69a2d48dd58f5",
+      "twin": "fixed"
+    },
+    "R/D-022_faulty": {
+      "arm": "R",
+      "body": "cases/D-022/faulty_body.py",
+      "body_sha256": "7b4f74fa34d000e91f7d753cda60629f6cde584b0426cbca279f203fd38abb2a",
+      "case": "D-022",
+      "sha256": "b9c729ae23fe2c9b0a4dc737e97b0e3bf958d6af2b3b41db243dd399a50891d9",
+      "skeleton": "cases/D-022/reference.py",
+      "skeleton_sha256": "2aa8e14361ecc175be9c3e2e09644875f9cb0c8bb99b8b591121ead27cb70582",
+      "twin": "faulty"
+    },
+    "R/D-022_fixed": {
+      "arm": "R",
+      "body": "cases/D-022/fixed_body.py",
+      "body_sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325",
+      "case": "D-022",
+      "sha256": "c8f6c185936329e6c58cd9366f3c9f2dcffbe80ff8802155cdb1f8a29f58eebb",
+      "skeleton": "cases/D-022/reference.py",
+      "skeleton_sha256": "2aa8e14361ecc175be9c3e2e09644875f9cb0c8bb99b8b591121ead27cb70582",
+      "twin": "fixed"
+    },
+    "R/D-023_faulty": {
+      "arm": "R",
+      "body": "cases/D-023/faulty_body.py",
+      "body_sha256": "a8871e959d06e0b1ae88d094547541e93c1332fd12b9621430cba2be1e1ccf9c",
+      "case": "D-023",
+      "sha256": "2560f9e012d0c734780161f1bddca9b7df0a7b89dd413cf2abbcf04c10bf827d",
+      "skeleton": "cases/D-023/reference.py",
+      "skeleton_sha256": "dee2654c405de7890426681c64830a7c560e8e19d2545938d2070ec5b1b3ea37",
+      "twin": "faulty"
+    },
+    "R/D-023_fixed": {
+      "arm": "R",
+      "body": "cases/D-023/fixed_body.py",
+      "body_sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4",
+      "case": "D-023",
+      "sha256": "3a5f06c76b3f4759fab61231b94931112d97d09fc91fbd7944e0d3fd9b4f9806",
+      "skeleton": "cases/D-023/reference.py",
+      "skeleton_sha256": "dee2654c405de7890426681c64830a7c560e8e19d2545938d2070ec5b1b3ea37",
+      "twin": "fixed"
+    },
+    "R/D-027_faulty": {
+      "arm": "R",
+      "body": "cases/D-027/faulty_body.py",
+      "body_sha256": "3d9c39f7529c9271259c93421fbccf79fd631669cac294d75e950b730a5a1abd",
+      "case": "D-027",
+      "sha256": "f48bd20b2bd34722e8890c16c73038c4471e379863d99dfc16b0897e9854a6d7",
+      "skeleton": "cases/D-027/reference.py",
+      "skeleton_sha256": "1e4f8297f859c4a63da18f78d1ce3844e35f58687e7a36addc789d64845dce9b",
+      "twin": "faulty"
+    },
+    "R/D-027_fixed": {
+      "arm": "R",
+      "body": "cases/D-027/fixed_body.py",
+      "body_sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991",
+      "case": "D-027",
+      "sha256": "25d21bc0164afd848b8fed9c6a5b222790fc1dc1720463bbbafab8df15fb8778",
+      "skeleton": "cases/D-027/reference.py",
+      "skeleton_sha256": "1e4f8297f859c4a63da18f78d1ce3844e35f58687e7a36addc789d64845dce9b",
+      "twin": "fixed"
+    },
+    "R/D-035_faulty": {
+      "arm": "R",
+      "body": "cases/D-035/faulty_body.py",
+      "body_sha256": "93e8adbafdbe882955c0df36e6ac85a7b30da14c0a9b4211765d8798c1b4e915",
+      "case": "D-035",
+      "sha256": "4d05ee0e7754a710b69feac11f10b9d79e559c233c02f58db702c49a4d04c469",
+      "skeleton": "cases/D-035/reference.py",
+      "skeleton_sha256": "66a74ad1fc3a4ce051cb40a33c26a9398c678c76c5fafcc983fdfa471c4d164e",
+      "twin": "faulty"
+    },
+    "R/D-035_fixed": {
+      "arm": "R",
+      "body": "cases/D-035/fixed_body.py",
+      "body_sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c",
+      "case": "D-035",
+      "sha256": "3def2658ec3c13ac1da56d1fc7ac9f4eb8f43f107817c001c7e515ac13964fdb",
+      "skeleton": "cases/D-035/reference.py",
+      "skeleton_sha256": "66a74ad1fc3a4ce051cb40a33c26a9398c678c76c5fafcc983fdfa471c4d164e",
+      "twin": "fixed"
+    },
+    "R/D-040_faulty": {
+      "arm": "R",
+      "body": "cases/D-040/faulty_body.py",
+      "body_sha256": "b4c8f9739d43eedbb95f593fd8eb04248861c4fc2c1866d20e2a0845e44f13ac",
+      "case": "D-040",
+      "sha256": "85dc1799ca52777f08c581650f101bdbb79c80ebe7cfa0ea79e16758b1b0fd87",
+      "skeleton": "cases/D-040/reference.py",
+      "skeleton_sha256": "3b8ec59062b2a3a39dbdfaad9c9bfa9dee983a1446de5f8d24e9a606a1ce3921",
+      "twin": "faulty"
+    },
+    "R/D-040_fixed": {
+      "arm": "R",
+      "body": "cases/D-040/fixed_body.py",
+      "body_sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede",
+      "case": "D-040",
+      "sha256": "469fedf6101395e2b5bdab3ced8737abd00232f0ed2a214a803f332c57f9fc77",
+      "skeleton": "cases/D-040/reference.py",
+      "skeleton_sha256": "3b8ec59062b2a3a39dbdfaad9c9bfa9dee983a1446de5f8d24e9a606a1ce3921",
+      "twin": "fixed"
+    },
+    "R/D-042_faulty": {
+      "arm": "R",
+      "body": "cases/D-042/faulty_body.py",
+      "body_sha256": "8e65d6a981b5e77121f964de71a6f8cee5e274b80bbedf6c1a8577d10f471297",
+      "case": "D-042",
+      "sha256": "0d6b06be0dd6b2f5b84863224cd5f0e79581fc8f5ecfa74c4ef7eec143499fc9",
+      "skeleton": "cases/D-042/reference.py",
+      "skeleton_sha256": "a3dd1f51cda10e304dc72b1b8d3dd191c5465fdc1d688ab048226e3bb5db7ea1",
+      "twin": "faulty"
+    },
+    "R/D-042_fixed": {
+      "arm": "R",
+      "body": "cases/D-042/fixed_body.py",
+      "body_sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c",
+      "case": "D-042",
+      "sha256": "4f00e1549a2582ea28cbc4f93951fb4d31d8d5c79894f0af1523680a6f6bfe85",
+      "skeleton": "cases/D-042/reference.py",
+      "skeleton_sha256": "a3dd1f51cda10e304dc72b1b8d3dd191c5465fdc1d688ab048226e3bb5db7ea1",
+      "twin": "fixed"
+    },
+    "R/D-047_faulty": {
+      "arm": "R",
+      "body": "cases/D-047/faulty_body.py",
+      "body_sha256": "83f40494c677718834325ed6d2208b13e1cac4cc369e72cceca9a7d2d64397d4",
+      "case": "D-047",
+      "sha256": "0c88fc13c82d038f02ff1d17dec478f6c4dd9eb8c2245018020b0fe02beed4dc",
+      "skeleton": "cases/D-047/reference.py",
+      "skeleton_sha256": "31a7f65c2fefc3737f9ee8a518466e47493fc5ada6f44f319721ad4d6fd25555",
+      "twin": "faulty"
+    },
+    "R/D-047_fixed": {
+      "arm": "R",
+      "body": "cases/D-047/fixed_body.py",
+      "body_sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d",
+      "case": "D-047",
+      "sha256": "60e853918d67b9548b317e67bff101c704ef6d19f09d431e4d420b985bd2f644",
+      "skeleton": "cases/D-047/reference.py",
+      "skeleton_sha256": "31a7f65c2fefc3737f9ee8a518466e47493fc5ada6f44f319721ad4d6fd25555",
+      "twin": "fixed"
+    },
+    "R/D-052_faulty": {
+      "arm": "R",
+      "body": "cases/D-052/faulty_body.py",
+      "body_sha256": "0a6a80977f93c63faa4d1e8d6cdecea1c168918e0313ca832975bc4df55cb6b4",
+      "case": "D-052",
+      "sha256": "53ccc6e25f8c28158430e7f593a3602de3ef987fe0f91c6330ba964171bf4a13",
+      "skeleton": "cases/D-052/reference.py",
+      "skeleton_sha256": "4a61e81f45513fbea6bf8265d33074e7df68381dc73a62882efca603b8aa5f35",
+      "twin": "faulty"
+    },
+    "R/D-052_fixed": {
+      "arm": "R",
+      "body": "cases/D-052/fixed_body.py",
+      "body_sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+      "case": "D-052",
+      "sha256": "940569d1f5187fc1a3f8edf267885fcf68ccbe67a697bc9f3c0963a205315d7c",
+      "skeleton": "cases/D-052/reference.py",
+      "skeleton_sha256": "4a61e81f45513fbea6bf8265d33074e7df68381dc73a62882efca603b8aa5f35",
+      "twin": "fixed"
+    },
+    "R/D-055_faulty": {
+      "arm": "R",
+      "body": "cases/D-055/faulty_body.py",
+      "body_sha256": "956f1b749533832597602891bdfebafb674c0daaa015ccfbaf5c3ad75a7e0fe8",
+      "case": "D-055",
+      "sha256": "00f6a7609db1372ec917398974f6fb37561e8f8258437e1e5880ccbe9c8cbfa0",
+      "skeleton": "cases/D-055/reference.py",
+      "skeleton_sha256": "4fb1309a3850ee7f94420bb32769c389c614ee29e6804528773188fbef45d3da",
+      "twin": "faulty"
+    },
+    "R/D-055_fixed": {
+      "arm": "R",
+      "body": "cases/D-055/fixed_body.py",
+      "body_sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a",
+      "case": "D-055",
+      "sha256": "d09e0ad5965d84ba7572655bfcf775e10c3b46d89253ecc71155c5863c2009ae",
+      "skeleton": "cases/D-055/reference.py",
+      "skeleton_sha256": "4fb1309a3850ee7f94420bb32769c389c614ee29e6804528773188fbef45d3da",
+      "twin": "fixed"
+    },
+    "R/D-056_faulty": {
+      "arm": "R",
+      "body": "cases/D-056/faulty_body.py",
+      "body_sha256": "165ea2559b213e7d35ec466b6346939294ae844ce200f0b0a02f019be9e7c93a",
+      "case": "D-056",
+      "sha256": "d36b90e5b24aa42b40a553b3d26d3155180f84d1e09c155e100485da2ff8c395",
+      "skeleton": "cases/D-056/reference.py",
+      "skeleton_sha256": "321e251e16f6ea7200e16cd2a3d51ad48ebffc8d0aa4d441e17bd3ef6ddbe2ad",
+      "twin": "faulty"
+    },
+    "R/D-056_fixed": {
+      "arm": "R",
+      "body": "cases/D-056/fixed_body.py",
+      "body_sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a",
+      "case": "D-056",
+      "sha256": "65923adece3c53e98f9cf4eb7c2ab565d17e5030f98a75c30ea8a2c72f6631ab",
+      "skeleton": "cases/D-056/reference.py",
+      "skeleton_sha256": "321e251e16f6ea7200e16cd2a3d51ad48ebffc8d0aa4d441e17bd3ef6ddbe2ad",
+      "twin": "fixed"
+    },
+    "R/D-062_faulty": {
+      "arm": "R",
+      "body": "cases/D-062/faulty_body.py",
+      "body_sha256": "09b50639c5401b531febd020fcce5d836d6d074784fd80461cf889345881a425",
+      "case": "D-062",
+      "sha256": "a28b1968dc9c477289ab33e3bee94f64bab91f0687ec2cbfa17e2f34f4fb3679",
+      "skeleton": "cases/D-062/reference.py",
+      "skeleton_sha256": "7a11f4c5cff0cbd025d7920e7825badee9a4217bc5fe50a2776059a4edc71dee",
+      "twin": "faulty"
+    },
+    "R/D-062_fixed": {
+      "arm": "R",
+      "body": "cases/D-062/fixed_body.py",
+      "body_sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db",
+      "case": "D-062",
+      "sha256": "f97714d9972b6dcb21355131cbe6855ac8a4e18079743380a28e15a527066bef",
+      "skeleton": "cases/D-062/reference.py",
+      "skeleton_sha256": "7a11f4c5cff0cbd025d7920e7825badee9a4217bc5fe50a2776059a4edc71dee",
+      "twin": "fixed"
+    },
+    "R/D-064_faulty": {
+      "arm": "R",
+      "body": "cases/D-064/faulty_body.py",
+      "body_sha256": "a447fe48bb81d8a6e6408ddcc8c470fe1ba2425f44535ab7a4cfcbb07a51f3eb",
+      "case": "D-064",
+      "sha256": "9e4c255d857f2c075b19e1666c4b2cb0f1009809733220e5f17adcdc3da8ebaf",
+      "skeleton": "cases/D-064/reference.py",
+      "skeleton_sha256": "0a2b100210059485164c3e60148eda80eed166ac5b48754051c21ca92feefa7d",
+      "twin": "faulty"
+    },
+    "R/D-064_fixed": {
+      "arm": "R",
+      "body": "cases/D-064/fixed_body.py",
+      "body_sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d",
+      "case": "D-064",
+      "sha256": "0cb50c16f98bfea4fb26a01a0df4fef2caaa68069b78b578f07d102e2a72c3af",
+      "skeleton": "cases/D-064/reference.py",
+      "skeleton_sha256": "0a2b100210059485164c3e60148eda80eed166ac5b48754051c21ca92feefa7d",
+      "twin": "fixed"
+    },
+    "R/D-066_faulty": {
+      "arm": "R",
+      "body": "cases/D-066/faulty_body.py",
+      "body_sha256": "33d3e7c42a4a725a9033a67ca5c8460c49745dfcec3a1126ca639ffe88843af6",
+      "case": "D-066",
+      "sha256": "db71d9573c9b92277e2b2c9bfd72e10f8f2784f0975115fbe304c9f4e7ee1973",
+      "skeleton": "cases/D-066/reference.py",
+      "skeleton_sha256": "9601be4ad3685b85f9c4feac15145acbdac61923fb2803cad05cd5e1f635b9c4",
+      "twin": "faulty"
+    },
+    "R/D-066_fixed": {
+      "arm": "R",
+      "body": "cases/D-066/fixed_body.py",
+      "body_sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d",
+      "case": "D-066",
+      "sha256": "54d6cf6cf561ca8d7d5b7e9954a4954b44ffc91b9a0576135d92e3d980264dc9",
+      "skeleton": "cases/D-066/reference.py",
+      "skeleton_sha256": "9601be4ad3685b85f9c4feac15145acbdac61923fb2803cad05cd5e1f635b9c4",
+      "twin": "fixed"
+    },
+    "R/D-067_faulty": {
+      "arm": "R",
+      "body": "cases/D-067/faulty_body.py",
+      "body_sha256": "2ac27e1c647137cb1ff6240ef7e0b5b561f81b9d0566639e8471586ba099c484",
+      "case": "D-067",
+      "sha256": "cb85c7614a30b63f3acca15c6f7014d777ccb57602e249deaab2ec969dcfbcf8",
+      "skeleton": "cases/D-067/reference.py",
+      "skeleton_sha256": "6cbf423c775c6e77e63b9164cef09d9fdd21f88f8aae3fafb1edd945a0b31e43",
+      "twin": "faulty"
+    },
+    "R/D-067_fixed": {
+      "arm": "R",
+      "body": "cases/D-067/fixed_body.py",
+      "body_sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339",
+      "case": "D-067",
+      "sha256": "6c1421f09ff4fedef5458b1af2c8e27af0238e0cc34d5b5351fb6b899804f481",
+      "skeleton": "cases/D-067/reference.py",
+      "skeleton_sha256": "6cbf423c775c6e77e63b9164cef09d9fdd21f88f8aae3fafb1edd945a0b31e43",
+      "twin": "fixed"
+    },
+    "R/D-068_faulty": {
+      "arm": "R",
+      "body": "cases/D-068/faulty_body.py",
+      "body_sha256": "173fbd9dffbf733e15710e0446332238750d422cc9beae1e415fe16d9d43083b",
+      "case": "D-068",
+      "sha256": "a033652906ddab99f5a18b8d0318e243a6b300884dedbd6c9bc5bf5f5fe0f055",
+      "skeleton": "cases/D-068/reference.py",
+      "skeleton_sha256": "beb77a8d949ce65ad48a857e8d7640cf5ecb88854523872b60772fa4123ad08a",
+      "twin": "faulty"
+    },
+    "R/D-068_fixed": {
+      "arm": "R",
+      "body": "cases/D-068/fixed_body.py",
+      "body_sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104",
+      "case": "D-068",
+      "sha256": "3f48634ffca2a2f227dfd711465999fe579a61d2faf1489efd23bf5026e962be",
+      "skeleton": "cases/D-068/reference.py",
+      "skeleton_sha256": "beb77a8d949ce65ad48a857e8d7640cf5ecb88854523872b60772fa4123ad08a",
+      "twin": "fixed"
+    },
+    "W0/D-007_faulty": {
+      "arm": "W0",
+      "body": "cases/D-007/faulty_body.py",
+      "body_sha256": "7b696ac4f81d58738000c01a0a234d889a94a9b8201a81d182f0c52a1d09c9b6",
+      "case": "D-007",
+      "sha256": "cd86e4d4f2dfc226911f5a6dbd3f0556bb5301e1d484bd51e687d6e70a66e524",
+      "skeleton": "cases/D-007/skeletons/W0.py",
+      "skeleton_sha256": "a5fd2d66a863e3b0f9cca4d083c06b77111b947be6b68d0f337f7cdc0c1c0edb",
+      "twin": "faulty"
+    },
+    "W0/D-007_fixed": {
+      "arm": "W0",
+      "body": "cases/D-007/fixed_body.py",
+      "body_sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944",
+      "case": "D-007",
+      "sha256": "014e3942be2c72bd06cffa2cf36130f4b3dd4e73d101d25ded820f8490b81e63",
+      "skeleton": "cases/D-007/skeletons/W0.py",
+      "skeleton_sha256": "a5fd2d66a863e3b0f9cca4d083c06b77111b947be6b68d0f337f7cdc0c1c0edb",
+      "twin": "fixed"
+    },
+    "W0/D-008_faulty": {
+      "arm": "W0",
+      "body": "cases/D-008/faulty_body.py",
+      "body_sha256": "337de2ae455618dc40e2b831010c791bb51c5b4f4d593a2b6f5362b88c8f8c5d",
+      "case": "D-008",
+      "sha256": "3e0229ed94140be8e6f54c8a75cce1aee612d7d0c731f6ddee0fb3aaafd638e1",
+      "skeleton": "cases/D-008/skeletons/W0.py",
+      "skeleton_sha256": "2aaba0b7c7dd03f5afb5c5ef68c91435e82d9fac034ffde4bba444e512b89ddc",
+      "twin": "faulty"
+    },
+    "W0/D-008_fixed": {
+      "arm": "W0",
+      "body": "cases/D-008/fixed_body.py",
+      "body_sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981",
+      "case": "D-008",
+      "sha256": "60c1f6e46f346d80a7822188e13830f8a44c5a9fc9207c571a99f38cdb62024d",
+      "skeleton": "cases/D-008/skeletons/W0.py",
+      "skeleton_sha256": "2aaba0b7c7dd03f5afb5c5ef68c91435e82d9fac034ffde4bba444e512b89ddc",
+      "twin": "fixed"
+    },
+    "W0/D-010_faulty": {
+      "arm": "W0",
+      "body": "cases/D-010/faulty_body.py",
+      "body_sha256": "5e5d2dfb9ec726dff6916f9d579ed351b9789d6766d3f8c2c63b0d128b4f493c",
+      "case": "D-010",
+      "sha256": "63b4da13d1adad0d7fef4c7748905bf8cfe6a65166ad08131e625831cdbf93e6",
+      "skeleton": "cases/D-010/skeletons/W0.py",
+      "skeleton_sha256": "54dc82588d00ce106c0215556746b1b4b293fd3324f95a1bc8454501e78410e5",
+      "twin": "faulty"
+    },
+    "W0/D-010_fixed": {
+      "arm": "W0",
+      "body": "cases/D-010/fixed_body.py",
+      "body_sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+      "case": "D-010",
+      "sha256": "6e14c843b9f4028549f6d26b5d330fd46edbe33a65a04312a70737aa21c102b4",
+      "skeleton": "cases/D-010/skeletons/W0.py",
+      "skeleton_sha256": "54dc82588d00ce106c0215556746b1b4b293fd3324f95a1bc8454501e78410e5",
+      "twin": "fixed"
+    },
+    "W0/D-011_faulty": {
+      "arm": "W0",
+      "body": "cases/D-011/faulty_body.py",
+      "body_sha256": "0e0c6ca215cdb0df5e7aa6f209b44c51bcb7a40e4e06b713c5dc80542947149f",
+      "case": "D-011",
+      "sha256": "b29ab68619d43e64510214e232a78df98554ce8c4dd586cddd35aefb8a85f00f",
+      "skeleton": "cases/D-011/skeletons/W0.py",
+      "skeleton_sha256": "4d82ece661ac2db3858a8d51263f252ed9e1b61d941f420cedfc7622602b1cc8",
+      "twin": "faulty"
+    },
+    "W0/D-011_fixed": {
+      "arm": "W0",
+      "body": "cases/D-011/fixed_body.py",
+      "body_sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa",
+      "case": "D-011",
+      "sha256": "0fcd294a7a96bcf957d14e8c7a966ddf215cdc4e2c62f7adec9bc00165de89bb",
+      "skeleton": "cases/D-011/skeletons/W0.py",
+      "skeleton_sha256": "4d82ece661ac2db3858a8d51263f252ed9e1b61d941f420cedfc7622602b1cc8",
+      "twin": "fixed"
+    },
+    "W0/D-012_faulty": {
+      "arm": "W0",
+      "body": "cases/D-012/faulty_body.py",
+      "body_sha256": "c314e068c027f548d1d1a5242aef7f7a341fe629a8cab93916a42bb7be489322",
+      "case": "D-012",
+      "sha256": "0e3dfa3e7acba57d5f26d42d713145ba21f1a437a9e8c82c5bb9662918c9237f",
+      "skeleton": "cases/D-012/skeletons/W0.py",
+      "skeleton_sha256": "6e1425648d73a6ac07140f4bd6463717233f4bad68601dc5f8e230919a06ac9f",
+      "twin": "faulty"
+    },
+    "W0/D-012_fixed": {
+      "arm": "W0",
+      "body": "cases/D-012/fixed_body.py",
+      "body_sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950",
+      "case": "D-012",
+      "sha256": "dd1584fc5e9c7f36bc3b42ec63c415ef43354b9efdaed07b532460b250d05ef3",
+      "skeleton": "cases/D-012/skeletons/W0.py",
+      "skeleton_sha256": "6e1425648d73a6ac07140f4bd6463717233f4bad68601dc5f8e230919a06ac9f",
+      "twin": "fixed"
+    },
+    "W0/D-022_faulty": {
+      "arm": "W0",
+      "body": "cases/D-022/faulty_body.py",
+      "body_sha256": "7b4f74fa34d000e91f7d753cda60629f6cde584b0426cbca279f203fd38abb2a",
+      "case": "D-022",
+      "sha256": "040d0581d98e7e82e1f03c1c682078e350c68b31f81dc9ad1af3261b2f8b62f4",
+      "skeleton": "cases/D-022/skeletons/W0.py",
+      "skeleton_sha256": "23f1e1641861e81b597af29ccea6621e3020bac0f8194db470789c075ed9d9fa",
+      "twin": "faulty"
+    },
+    "W0/D-022_fixed": {
+      "arm": "W0",
+      "body": "cases/D-022/fixed_body.py",
+      "body_sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325",
+      "case": "D-022",
+      "sha256": "6301ddf013415b42ddfb602b762f63c87babdeba7686c04243ff11d890aa1be5",
+      "skeleton": "cases/D-022/skeletons/W0.py",
+      "skeleton_sha256": "23f1e1641861e81b597af29ccea6621e3020bac0f8194db470789c075ed9d9fa",
+      "twin": "fixed"
+    },
+    "W0/D-023_faulty": {
+      "arm": "W0",
+      "body": "cases/D-023/faulty_body.py",
+      "body_sha256": "a8871e959d06e0b1ae88d094547541e93c1332fd12b9621430cba2be1e1ccf9c",
+      "case": "D-023",
+      "sha256": "da05ba9d10550df0aa154021a91cd741698178e53206963f0c4975fef8c6594a",
+      "skeleton": "cases/D-023/skeletons/W0.py",
+      "skeleton_sha256": "e7643c8755723a00f383cbc6a5ff3b93fe7222a850aa8400dd5f3267d1eb8f0e",
+      "twin": "faulty"
+    },
+    "W0/D-023_fixed": {
+      "arm": "W0",
+      "body": "cases/D-023/fixed_body.py",
+      "body_sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4",
+      "case": "D-023",
+      "sha256": "7267319125d7bab05d9b1d26e3e43bfdc3844af79621a92416297837d5898586",
+      "skeleton": "cases/D-023/skeletons/W0.py",
+      "skeleton_sha256": "e7643c8755723a00f383cbc6a5ff3b93fe7222a850aa8400dd5f3267d1eb8f0e",
+      "twin": "fixed"
+    },
+    "W0/D-027_faulty": {
+      "arm": "W0",
+      "body": "cases/D-027/faulty_body.py",
+      "body_sha256": "3d9c39f7529c9271259c93421fbccf79fd631669cac294d75e950b730a5a1abd",
+      "case": "D-027",
+      "sha256": "5ed39950bd1658d253613a73856ee6ce40a2d746efc68bb9cf2a65419ce662e1",
+      "skeleton": "cases/D-027/skeletons/W0.py",
+      "skeleton_sha256": "0a075038342cfbe6a301be54ebca41cf60e37f042648e0e664fddd46e116ba80",
+      "twin": "faulty"
+    },
+    "W0/D-027_fixed": {
+      "arm": "W0",
+      "body": "cases/D-027/fixed_body.py",
+      "body_sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991",
+      "case": "D-027",
+      "sha256": "66c691ef6f76f0a08166cd5875afefe48246b8c86cc1a5dfd202550166290b03",
+      "skeleton": "cases/D-027/skeletons/W0.py",
+      "skeleton_sha256": "0a075038342cfbe6a301be54ebca41cf60e37f042648e0e664fddd46e116ba80",
+      "twin": "fixed"
+    },
+    "W0/D-035_faulty": {
+      "arm": "W0",
+      "body": "cases/D-035/faulty_body.py",
+      "body_sha256": "93e8adbafdbe882955c0df36e6ac85a7b30da14c0a9b4211765d8798c1b4e915",
+      "case": "D-035",
+      "sha256": "b75f4d576d76fc42e7039e3de6c3d8bbf7988c39c675a8b1f94affb21484ebac",
+      "skeleton": "cases/D-035/skeletons/W0.py",
+      "skeleton_sha256": "1df3671a6957183d08b84ab630a296ca796e172ec646c4fb08e4335626cd37f7",
+      "twin": "faulty"
+    },
+    "W0/D-035_fixed": {
+      "arm": "W0",
+      "body": "cases/D-035/fixed_body.py",
+      "body_sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c",
+      "case": "D-035",
+      "sha256": "305f5770e2a1de39511f0cde66dc51bdd777bfb1a14a839f3e598bbca3f0df84",
+      "skeleton": "cases/D-035/skeletons/W0.py",
+      "skeleton_sha256": "1df3671a6957183d08b84ab630a296ca796e172ec646c4fb08e4335626cd37f7",
+      "twin": "fixed"
+    },
+    "W0/D-040_faulty": {
+      "arm": "W0",
+      "body": "cases/D-040/faulty_body.py",
+      "body_sha256": "b4c8f9739d43eedbb95f593fd8eb04248861c4fc2c1866d20e2a0845e44f13ac",
+      "case": "D-040",
+      "sha256": "6311bbe06785e6c07330d6191a66d021a284cb584c57107e8d7ab79dbedce693",
+      "skeleton": "cases/D-040/skeletons/W0.py",
+      "skeleton_sha256": "8528011a2c7d1c89758666e43275163111739839c707c32f825b902efe09bcf3",
+      "twin": "faulty"
+    },
+    "W0/D-040_fixed": {
+      "arm": "W0",
+      "body": "cases/D-040/fixed_body.py",
+      "body_sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede",
+      "case": "D-040",
+      "sha256": "6428efe95b4fc0c846b71d82838c14ac9b1b44167afb5a4460a352fbb8256cbf",
+      "skeleton": "cases/D-040/skeletons/W0.py",
+      "skeleton_sha256": "8528011a2c7d1c89758666e43275163111739839c707c32f825b902efe09bcf3",
+      "twin": "fixed"
+    },
+    "W0/D-042_faulty": {
+      "arm": "W0",
+      "body": "cases/D-042/faulty_body.py",
+      "body_sha256": "8e65d6a981b5e77121f964de71a6f8cee5e274b80bbedf6c1a8577d10f471297",
+      "case": "D-042",
+      "sha256": "a5ee1562607fe747459e253ba8e3325e3c807226c8025df16342744a811fda7d",
+      "skeleton": "cases/D-042/skeletons/W0.py",
+      "skeleton_sha256": "b2a7484ba6c618bb0f733a0ed4d1004e9e0778fc5b97ed25d618fe964e854aac",
+      "twin": "faulty"
+    },
+    "W0/D-042_fixed": {
+      "arm": "W0",
+      "body": "cases/D-042/fixed_body.py",
+      "body_sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c",
+      "case": "D-042",
+      "sha256": "1ecc688593092aa7794113415745cd2cd1b0ac9d8939369e63a7a59e8ad56107",
+      "skeleton": "cases/D-042/skeletons/W0.py",
+      "skeleton_sha256": "b2a7484ba6c618bb0f733a0ed4d1004e9e0778fc5b97ed25d618fe964e854aac",
+      "twin": "fixed"
+    },
+    "W0/D-047_faulty": {
+      "arm": "W0",
+      "body": "cases/D-047/faulty_body.py",
+      "body_sha256": "83f40494c677718834325ed6d2208b13e1cac4cc369e72cceca9a7d2d64397d4",
+      "case": "D-047",
+      "sha256": "365b881d15f3ee5b2a92d74b4e654a8c7781862bce322cad9af6c9fdf5c42f36",
+      "skeleton": "cases/D-047/skeletons/W0.py",
+      "skeleton_sha256": "533db4bd8dd666ff431aadca990354862650a72b4ff22ad034bdee172670e588",
+      "twin": "faulty"
+    },
+    "W0/D-047_fixed": {
+      "arm": "W0",
+      "body": "cases/D-047/fixed_body.py",
+      "body_sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d",
+      "case": "D-047",
+      "sha256": "0513d73cd0a6a87443b7cd200e9289be17e1d13f0e80b129777aaf592ec16350",
+      "skeleton": "cases/D-047/skeletons/W0.py",
+      "skeleton_sha256": "533db4bd8dd666ff431aadca990354862650a72b4ff22ad034bdee172670e588",
+      "twin": "fixed"
+    },
+    "W0/D-052_faulty": {
+      "arm": "W0",
+      "body": "cases/D-052/faulty_body.py",
+      "body_sha256": "0a6a80977f93c63faa4d1e8d6cdecea1c168918e0313ca832975bc4df55cb6b4",
+      "case": "D-052",
+      "sha256": "d9a7e7b040aa7d7f26cb2620c1c2f51a90e3a597e6e216ffa5f131b8aefacceb",
+      "skeleton": "cases/D-052/skeletons/W0.py",
+      "skeleton_sha256": "21e4c94bc511c83b7990b2d30e6bc71f2dd234b847318a052553fa13ee35d0cf",
+      "twin": "faulty"
+    },
+    "W0/D-052_fixed": {
+      "arm": "W0",
+      "body": "cases/D-052/fixed_body.py",
+      "body_sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+      "case": "D-052",
+      "sha256": "5825d110c5767ff1481f48aeced53d759dc6155d9775701b2266efbbc7bd96da",
+      "skeleton": "cases/D-052/skeletons/W0.py",
+      "skeleton_sha256": "21e4c94bc511c83b7990b2d30e6bc71f2dd234b847318a052553fa13ee35d0cf",
+      "twin": "fixed"
+    },
+    "W0/D-055_faulty": {
+      "arm": "W0",
+      "body": "cases/D-055/faulty_body.py",
+      "body_sha256": "956f1b749533832597602891bdfebafb674c0daaa015ccfbaf5c3ad75a7e0fe8",
+      "case": "D-055",
+      "sha256": "8d863a2403b28d2d0bf2f0fa6115b48b915c88faaf23bca4da4fa7b712aed6c6",
+      "skeleton": "cases/D-055/skeletons/W0.py",
+      "skeleton_sha256": "2396ef8451509115214a03036ea949774992d834c4ca169c3ffeeaa745f68cdf",
+      "twin": "faulty"
+    },
+    "W0/D-055_fixed": {
+      "arm": "W0",
+      "body": "cases/D-055/fixed_body.py",
+      "body_sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a",
+      "case": "D-055",
+      "sha256": "8305a4785aaf97b5fbbf9dd1310683be040f35a7f1306082e4d83f93eb92346d",
+      "skeleton": "cases/D-055/skeletons/W0.py",
+      "skeleton_sha256": "2396ef8451509115214a03036ea949774992d834c4ca169c3ffeeaa745f68cdf",
+      "twin": "fixed"
+    },
+    "W0/D-056_faulty": {
+      "arm": "W0",
+      "body": "cases/D-056/faulty_body.py",
+      "body_sha256": "165ea2559b213e7d35ec466b6346939294ae844ce200f0b0a02f019be9e7c93a",
+      "case": "D-056",
+      "sha256": "6789d7031e95b14d198b082163db514326a4d235064518a3d3074910a752de6c",
+      "skeleton": "cases/D-056/skeletons/W0.py",
+      "skeleton_sha256": "8178ef1614612956b57cf68d5a155fa2d2f4b31da5e88d96695016904067a332",
+      "twin": "faulty"
+    },
+    "W0/D-056_fixed": {
+      "arm": "W0",
+      "body": "cases/D-056/fixed_body.py",
+      "body_sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a",
+      "case": "D-056",
+      "sha256": "1907cdf4c6ae56eb574166e72b2220b9c2e659e67954250bf0b1b4cc386dea94",
+      "skeleton": "cases/D-056/skeletons/W0.py",
+      "skeleton_sha256": "8178ef1614612956b57cf68d5a155fa2d2f4b31da5e88d96695016904067a332",
+      "twin": "fixed"
+    },
+    "W0/D-062_faulty": {
+      "arm": "W0",
+      "body": "cases/D-062/faulty_body.py",
+      "body_sha256": "09b50639c5401b531febd020fcce5d836d6d074784fd80461cf889345881a425",
+      "case": "D-062",
+      "sha256": "cfd1baf91f43d3884cb4bb85c177a884ba44c1b3b38be2552f550f1893c6de5c",
+      "skeleton": "cases/D-062/skeletons/W0.py",
+      "skeleton_sha256": "181c3ee9eab0473ca387deab42ecfe276e2546b9452e82bbb9b32942ee5edbc6",
+      "twin": "faulty"
+    },
+    "W0/D-062_fixed": {
+      "arm": "W0",
+      "body": "cases/D-062/fixed_body.py",
+      "body_sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db",
+      "case": "D-062",
+      "sha256": "41f48531d6cfe50f96b99dde41fd0621d2b4bb0231fb16e546451637c09f387f",
+      "skeleton": "cases/D-062/skeletons/W0.py",
+      "skeleton_sha256": "181c3ee9eab0473ca387deab42ecfe276e2546b9452e82bbb9b32942ee5edbc6",
+      "twin": "fixed"
+    },
+    "W0/D-064_faulty": {
+      "arm": "W0",
+      "body": "cases/D-064/faulty_body.py",
+      "body_sha256": "a447fe48bb81d8a6e6408ddcc8c470fe1ba2425f44535ab7a4cfcbb07a51f3eb",
+      "case": "D-064",
+      "sha256": "210a2ec6db1be3996f1c614465a0f05262d51aa0953b0802ed1d531154558bc4",
+      "skeleton": "cases/D-064/skeletons/W0.py",
+      "skeleton_sha256": "5ff4b10befc9886759d5d4891883ad9a3aeb6146724d9ec197e9c454e7708afa",
+      "twin": "faulty"
+    },
+    "W0/D-064_fixed": {
+      "arm": "W0",
+      "body": "cases/D-064/fixed_body.py",
+      "body_sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d",
+      "case": "D-064",
+      "sha256": "44978661da2fe54bdd76841920c2d19fa6e7accd4b1c1ff7b06348c53199063d",
+      "skeleton": "cases/D-064/skeletons/W0.py",
+      "skeleton_sha256": "5ff4b10befc9886759d5d4891883ad9a3aeb6146724d9ec197e9c454e7708afa",
+      "twin": "fixed"
+    },
+    "W0/D-066_faulty": {
+      "arm": "W0",
+      "body": "cases/D-066/faulty_body.py",
+      "body_sha256": "33d3e7c42a4a725a9033a67ca5c8460c49745dfcec3a1126ca639ffe88843af6",
+      "case": "D-066",
+      "sha256": "f20b8746ae9627a677d2d94820656388e6561f10d5c4fc3a20dc9fe0df4392a2",
+      "skeleton": "cases/D-066/skeletons/W0.py",
+      "skeleton_sha256": "75d5bd17810cfc68429b8d669ed1168d816be5b829d588efc29066d02fb81685",
+      "twin": "faulty"
+    },
+    "W0/D-066_fixed": {
+      "arm": "W0",
+      "body": "cases/D-066/fixed_body.py",
+      "body_sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d",
+      "case": "D-066",
+      "sha256": "35d2e4c0fc47249a5bbf47886256c8103acf7e209d2262b41e54dd85ba607002",
+      "skeleton": "cases/D-066/skeletons/W0.py",
+      "skeleton_sha256": "75d5bd17810cfc68429b8d669ed1168d816be5b829d588efc29066d02fb81685",
+      "twin": "fixed"
+    },
+    "W0/D-067_faulty": {
+      "arm": "W0",
+      "body": "cases/D-067/faulty_body.py",
+      "body_sha256": "2ac27e1c647137cb1ff6240ef7e0b5b561f81b9d0566639e8471586ba099c484",
+      "case": "D-067",
+      "sha256": "7fa1983e184bd269fc2ba7710f9d6fd570d0a01bf2463d3fe368d0069c155609",
+      "skeleton": "cases/D-067/skeletons/W0.py",
+      "skeleton_sha256": "c57f4a44653e65e9be8b49d17f49ef4887a844dbe5b6fea9d822ba07d9408e5e",
+      "twin": "faulty"
+    },
+    "W0/D-067_fixed": {
+      "arm": "W0",
+      "body": "cases/D-067/fixed_body.py",
+      "body_sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339",
+      "case": "D-067",
+      "sha256": "c71c2a2b0a4d5d6fab9b627b0de81bbf3ccc0c92505411d5e507d842457ccfec",
+      "skeleton": "cases/D-067/skeletons/W0.py",
+      "skeleton_sha256": "c57f4a44653e65e9be8b49d17f49ef4887a844dbe5b6fea9d822ba07d9408e5e",
+      "twin": "fixed"
+    },
+    "W0/D-068_faulty": {
+      "arm": "W0",
+      "body": "cases/D-068/faulty_body.py",
+      "body_sha256": "173fbd9dffbf733e15710e0446332238750d422cc9beae1e415fe16d9d43083b",
+      "case": "D-068",
+      "sha256": "879b3ce9ba29cdebacb5cefba5966e3997b7b7665fa344f645c4ebf3e2a0e674",
+      "skeleton": "cases/D-068/skeletons/W0.py",
+      "skeleton_sha256": "7b68bdb96c336941bc708addee2667b50948b7aae31abfc929a2dba92554d112",
+      "twin": "faulty"
+    },
+    "W0/D-068_fixed": {
+      "arm": "W0",
+      "body": "cases/D-068/fixed_body.py",
+      "body_sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104",
+      "case": "D-068",
+      "sha256": "e70ec0ac3b61bd1fa491dab5f7efeec4fa535ff149f50d7c41e2c55d54d2f958",
+      "skeleton": "cases/D-068/skeletons/W0.py",
+      "skeleton_sha256": "7b68bdb96c336941bc708addee2667b50948b7aae31abfc929a2dba92554d112",
+      "twin": "fixed"
+    },
+    "W1/D-007_faulty": {
+      "arm": "W1",
+      "body": "cases/D-007/faulty_body.py",
+      "body_sha256": "7b696ac4f81d58738000c01a0a234d889a94a9b8201a81d182f0c52a1d09c9b6",
+      "case": "D-007",
+      "sha256": "2f32313f5a803535d467e63d411676904785d513f42a9c39a5358f85816c9c81",
+      "skeleton": "cases/D-007/skeletons/W1.py",
+      "skeleton_sha256": "df3bd7c798499a79027b1b2d8ee75643dba441df20ff4f491811184991d03ce7",
+      "twin": "faulty"
+    },
+    "W1/D-007_fixed": {
+      "arm": "W1",
+      "body": "cases/D-007/fixed_body.py",
+      "body_sha256": "b5428a42da8ab73c007853cd9416d126b59ddf26fd3a6379b893aae45980f944",
+      "case": "D-007",
+      "sha256": "e5a3795674e1016b87ac7256f136e16dd9f986c4502815c8833bfddcbd996aee",
+      "skeleton": "cases/D-007/skeletons/W1.py",
+      "skeleton_sha256": "df3bd7c798499a79027b1b2d8ee75643dba441df20ff4f491811184991d03ce7",
+      "twin": "fixed"
+    },
+    "W1/D-008_faulty": {
+      "arm": "W1",
+      "body": "cases/D-008/faulty_body.py",
+      "body_sha256": "337de2ae455618dc40e2b831010c791bb51c5b4f4d593a2b6f5362b88c8f8c5d",
+      "case": "D-008",
+      "sha256": "2534821da82e837b6590a21625086d20c0f94d808ed0ba22bf8c6fe0052e4f00",
+      "skeleton": "cases/D-008/skeletons/W1.py",
+      "skeleton_sha256": "198688ff52bb14ef5a7f2fb96f88c523d7f3b6691c83b0e4433585313220f954",
+      "twin": "faulty"
+    },
+    "W1/D-008_fixed": {
+      "arm": "W1",
+      "body": "cases/D-008/fixed_body.py",
+      "body_sha256": "8843f72f864a024557aa130fd945d165a1bca22a5672e1d6b574b5c9cc8bd981",
+      "case": "D-008",
+      "sha256": "9cef8a6a51072cb2798a52f23ef16bda6adc82ce43dca7ef500aeb1aaca3c1a6",
+      "skeleton": "cases/D-008/skeletons/W1.py",
+      "skeleton_sha256": "198688ff52bb14ef5a7f2fb96f88c523d7f3b6691c83b0e4433585313220f954",
+      "twin": "fixed"
+    },
+    "W1/D-010_faulty": {
+      "arm": "W1",
+      "body": "cases/D-010/faulty_body.py",
+      "body_sha256": "5e5d2dfb9ec726dff6916f9d579ed351b9789d6766d3f8c2c63b0d128b4f493c",
+      "case": "D-010",
+      "sha256": "0075e26cc83ee24231b93c6b80e553b8afd8c0d7d63bc2044c489d461b3f6d96",
+      "skeleton": "cases/D-010/skeletons/W1.py",
+      "skeleton_sha256": "d95529bec47e20ecd7b4e50d85a25a412799e8d04d3f2b68a0f826130df47fac",
+      "twin": "faulty"
+    },
+    "W1/D-010_fixed": {
+      "arm": "W1",
+      "body": "cases/D-010/fixed_body.py",
+      "body_sha256": "f6df8235241f693d5907110de5a277d99f2104ca8484f739572ad3ab28840b10",
+      "case": "D-010",
+      "sha256": "241268b7226e2dda1749c17d313f43212ea51cc462cc1adf85a80149d492f6c5",
+      "skeleton": "cases/D-010/skeletons/W1.py",
+      "skeleton_sha256": "d95529bec47e20ecd7b4e50d85a25a412799e8d04d3f2b68a0f826130df47fac",
+      "twin": "fixed"
+    },
+    "W1/D-011_faulty": {
+      "arm": "W1",
+      "body": "cases/D-011/faulty_body.py",
+      "body_sha256": "0e0c6ca215cdb0df5e7aa6f209b44c51bcb7a40e4e06b713c5dc80542947149f",
+      "case": "D-011",
+      "sha256": "722fad50127771f98d6b1f6c830e9f9a29353ccea4584a64b3d053ee898d6731",
+      "skeleton": "cases/D-011/skeletons/W1.py",
+      "skeleton_sha256": "a2c32ca97c9dc281a1bdf0d48e7f9125fa0ffddc128ea375faffcac873194456",
+      "twin": "faulty"
+    },
+    "W1/D-011_fixed": {
+      "arm": "W1",
+      "body": "cases/D-011/fixed_body.py",
+      "body_sha256": "d33c093d8eda4cd48f88c617ac0067b74c961d5456e4edf76396412ae056d6aa",
+      "case": "D-011",
+      "sha256": "717c1a1d3353c059a5593df78d66848e6d41979b7a3f70782fcce5c65df73f72",
+      "skeleton": "cases/D-011/skeletons/W1.py",
+      "skeleton_sha256": "a2c32ca97c9dc281a1bdf0d48e7f9125fa0ffddc128ea375faffcac873194456",
+      "twin": "fixed"
+    },
+    "W1/D-012_faulty": {
+      "arm": "W1",
+      "body": "cases/D-012/faulty_body.py",
+      "body_sha256": "c314e068c027f548d1d1a5242aef7f7a341fe629a8cab93916a42bb7be489322",
+      "case": "D-012",
+      "sha256": "ef29b61febd3a7e5c65b3b6c8b9b79fcc6139e9efe060f8ca6cb79d2605bfd39",
+      "skeleton": "cases/D-012/skeletons/W1.py",
+      "skeleton_sha256": "7c746f5542435c661a1b7fb372bb691e442cebd169816f64c503830603c53fe7",
+      "twin": "faulty"
+    },
+    "W1/D-012_fixed": {
+      "arm": "W1",
+      "body": "cases/D-012/fixed_body.py",
+      "body_sha256": "32e754b54cae4c83bb44e2b753b40a0fae7e632a5a335ce7a7c0ccb06a72e950",
+      "case": "D-012",
+      "sha256": "0f9f64625c846c5375593b26da7bd4521ccb4bd7c1c73a867ffcb6d7b6ad19a2",
+      "skeleton": "cases/D-012/skeletons/W1.py",
+      "skeleton_sha256": "7c746f5542435c661a1b7fb372bb691e442cebd169816f64c503830603c53fe7",
+      "twin": "fixed"
+    },
+    "W1/D-022_faulty": {
+      "arm": "W1",
+      "body": "cases/D-022/faulty_body.py",
+      "body_sha256": "7b4f74fa34d000e91f7d753cda60629f6cde584b0426cbca279f203fd38abb2a",
+      "case": "D-022",
+      "sha256": "dcd9f5abb55f7c17f366ca8f701a8317d292c33d100abdeab4cbdcf6bb1428ac",
+      "skeleton": "cases/D-022/skeletons/W1.py",
+      "skeleton_sha256": "855c3756559082eed69f05fac0493e8c4eb5f784d94143be443b8c6c7a9fb826",
+      "twin": "faulty"
+    },
+    "W1/D-022_fixed": {
+      "arm": "W1",
+      "body": "cases/D-022/fixed_body.py",
+      "body_sha256": "9a07ef75341b5cf265a6181c6a831b3f6236209a4a2868369a190d2b0dd20325",
+      "case": "D-022",
+      "sha256": "2092aa7d572efa2d3e65da8f120310ccae6b1e68495d054516a2221eb2fda688",
+      "skeleton": "cases/D-022/skeletons/W1.py",
+      "skeleton_sha256": "855c3756559082eed69f05fac0493e8c4eb5f784d94143be443b8c6c7a9fb826",
+      "twin": "fixed"
+    },
+    "W1/D-023_faulty": {
+      "arm": "W1",
+      "body": "cases/D-023/faulty_body.py",
+      "body_sha256": "a8871e959d06e0b1ae88d094547541e93c1332fd12b9621430cba2be1e1ccf9c",
+      "case": "D-023",
+      "sha256": "a4e7695d88a51eaa518b487cebcffbe68e5d7bcf348dea82383b6728e84b0370",
+      "skeleton": "cases/D-023/skeletons/W1.py",
+      "skeleton_sha256": "441ec470ae5784ea954448c9b164527d300857eb57b4c964910c7f3d039be4f1",
+      "twin": "faulty"
+    },
+    "W1/D-023_fixed": {
+      "arm": "W1",
+      "body": "cases/D-023/fixed_body.py",
+      "body_sha256": "84ee20bcaf16ca251522c86b50056fd161b5719956c62e0bd199d497ce42cba4",
+      "case": "D-023",
+      "sha256": "8687dfaa5caa62139e96f46608b7c90ad6294b103e1a87601b5c928facb84c32",
+      "skeleton": "cases/D-023/skeletons/W1.py",
+      "skeleton_sha256": "441ec470ae5784ea954448c9b164527d300857eb57b4c964910c7f3d039be4f1",
+      "twin": "fixed"
+    },
+    "W1/D-027_faulty": {
+      "arm": "W1",
+      "body": "cases/D-027/faulty_body.py",
+      "body_sha256": "3d9c39f7529c9271259c93421fbccf79fd631669cac294d75e950b730a5a1abd",
+      "case": "D-027",
+      "sha256": "e784319754b5ff1bfd077ad84fcec36b23491b22dedf5a2d671c30da25caf50f",
+      "skeleton": "cases/D-027/skeletons/W1.py",
+      "skeleton_sha256": "ad803ecbc22df9dc1b9ed7a76ed3f7eb7e9296e7d617dccf47a34637c977ae57",
+      "twin": "faulty"
+    },
+    "W1/D-027_fixed": {
+      "arm": "W1",
+      "body": "cases/D-027/fixed_body.py",
+      "body_sha256": "6e0a38d95ad43d3d7d09043955d0222e0be4a71bf1534de44536e7a7a499a991",
+      "case": "D-027",
+      "sha256": "69e735ca55b772068a0ff8fd102bb071b1d5e927577a9730909a735b80800165",
+      "skeleton": "cases/D-027/skeletons/W1.py",
+      "skeleton_sha256": "ad803ecbc22df9dc1b9ed7a76ed3f7eb7e9296e7d617dccf47a34637c977ae57",
+      "twin": "fixed"
+    },
+    "W1/D-035_faulty": {
+      "arm": "W1",
+      "body": "cases/D-035/faulty_body.py",
+      "body_sha256": "93e8adbafdbe882955c0df36e6ac85a7b30da14c0a9b4211765d8798c1b4e915",
+      "case": "D-035",
+      "sha256": "54f93bc6fb440096444021354b3f45f25fa4dc01f4d965b2f87ff9d1c7321ec3",
+      "skeleton": "cases/D-035/skeletons/W1.py",
+      "skeleton_sha256": "8fe16fb9ae07ef5ac643fbdadeb68b1214a67bfe9d4835d0c6af1989696b3bfd",
+      "twin": "faulty"
+    },
+    "W1/D-035_fixed": {
+      "arm": "W1",
+      "body": "cases/D-035/fixed_body.py",
+      "body_sha256": "bcc216d87acfa3488a628f17cbc8eeabbe6ca2b3d4c0d28880cb7c2adf47188c",
+      "case": "D-035",
+      "sha256": "81f85d41db9f55ecd0407567962179db690695a6d1194749fcfc1c03ca9fd17d",
+      "skeleton": "cases/D-035/skeletons/W1.py",
+      "skeleton_sha256": "8fe16fb9ae07ef5ac643fbdadeb68b1214a67bfe9d4835d0c6af1989696b3bfd",
+      "twin": "fixed"
+    },
+    "W1/D-040_faulty": {
+      "arm": "W1",
+      "body": "cases/D-040/faulty_body.py",
+      "body_sha256": "b4c8f9739d43eedbb95f593fd8eb04248861c4fc2c1866d20e2a0845e44f13ac",
+      "case": "D-040",
+      "sha256": "bcb3ae02780ffb8e3e115008a4a4320efb11f5edf6de521897aba63eda6406ad",
+      "skeleton": "cases/D-040/skeletons/W1.py",
+      "skeleton_sha256": "c502850661d722bbe31ab073c9ca7c2d05c9e3eee320b0667e3479a865e60f4c",
+      "twin": "faulty"
+    },
+    "W1/D-040_fixed": {
+      "arm": "W1",
+      "body": "cases/D-040/fixed_body.py",
+      "body_sha256": "dea3eb4546c8f8b2a6f1e3709da0c05821f2edc918cbe79a232d61f00f38fede",
+      "case": "D-040",
+      "sha256": "21d8e3fb948aa17464e376203edb9e7f103697d52143f2ac1e21e8b45ab51c72",
+      "skeleton": "cases/D-040/skeletons/W1.py",
+      "skeleton_sha256": "c502850661d722bbe31ab073c9ca7c2d05c9e3eee320b0667e3479a865e60f4c",
+      "twin": "fixed"
+    },
+    "W1/D-042_faulty": {
+      "arm": "W1",
+      "body": "cases/D-042/faulty_body.py",
+      "body_sha256": "8e65d6a981b5e77121f964de71a6f8cee5e274b80bbedf6c1a8577d10f471297",
+      "case": "D-042",
+      "sha256": "4d53d48bab662d0c90d6946fb94d646fa0df15d002c931c9d53e5d4b2efc4304",
+      "skeleton": "cases/D-042/skeletons/W1.py",
+      "skeleton_sha256": "cc3e5aa351b5e9dd2dd93835c0c00294e632588f40310cf822cec54557d22e8d",
+      "twin": "faulty"
+    },
+    "W1/D-042_fixed": {
+      "arm": "W1",
+      "body": "cases/D-042/fixed_body.py",
+      "body_sha256": "b010889ce3469bc0a5e1e9bf0d5b0942f9c14473f22cdbbc32644a1937a7189c",
+      "case": "D-042",
+      "sha256": "5334ceb19052ea1a23bf7986c6e3ffd933953e6921b6526e761884e2d26a7b27",
+      "skeleton": "cases/D-042/skeletons/W1.py",
+      "skeleton_sha256": "cc3e5aa351b5e9dd2dd93835c0c00294e632588f40310cf822cec54557d22e8d",
+      "twin": "fixed"
+    },
+    "W1/D-047_faulty": {
+      "arm": "W1",
+      "body": "cases/D-047/faulty_body.py",
+      "body_sha256": "83f40494c677718834325ed6d2208b13e1cac4cc369e72cceca9a7d2d64397d4",
+      "case": "D-047",
+      "sha256": "cc6a0a645ecf2973c1986c0d1fd1bdd715770a4c91aed11a25c12660e3bda3af",
+      "skeleton": "cases/D-047/skeletons/W1.py",
+      "skeleton_sha256": "ad488a096ece4ebe8d2f98817f8745632e04aadb55af2eb8ff2807cb43bd2c20",
+      "twin": "faulty"
+    },
+    "W1/D-047_fixed": {
+      "arm": "W1",
+      "body": "cases/D-047/fixed_body.py",
+      "body_sha256": "281e9f8779f3f7610186711a9788c682f3b5d685c14159e6b4feb7046b56a19d",
+      "case": "D-047",
+      "sha256": "76ffa149dd142b474aded26a70bcb81c95254f56efc10c6c894925f1a5a3cb99",
+      "skeleton": "cases/D-047/skeletons/W1.py",
+      "skeleton_sha256": "ad488a096ece4ebe8d2f98817f8745632e04aadb55af2eb8ff2807cb43bd2c20",
+      "twin": "fixed"
+    },
+    "W1/D-052_faulty": {
+      "arm": "W1",
+      "body": "cases/D-052/faulty_body.py",
+      "body_sha256": "0a6a80977f93c63faa4d1e8d6cdecea1c168918e0313ca832975bc4df55cb6b4",
+      "case": "D-052",
+      "sha256": "b884027cd0835b1e702b5a9d40fc9e3f1002b0173df3b7ab1eaae252d364c02f",
+      "skeleton": "cases/D-052/skeletons/W1.py",
+      "skeleton_sha256": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+      "twin": "faulty"
+    },
+    "W1/D-052_fixed": {
+      "arm": "W1",
+      "body": "cases/D-052/fixed_body.py",
+      "body_sha256": "439fc4ae5b74ad1442ace6bea789b911a7c308f07ed291aaac4cba4115d44bd0",
+      "case": "D-052",
+      "sha256": "eec685752ba7a24906a1bf4269ad2075d514fa79b0c463419c91e5d1bac4bdb1",
+      "skeleton": "cases/D-052/skeletons/W1.py",
+      "skeleton_sha256": "345df82a03f1d518aaae693ec101e08e1907a866b5a344076f7f204679996b10",
+      "twin": "fixed"
+    },
+    "W1/D-055_faulty": {
+      "arm": "W1",
+      "body": "cases/D-055/faulty_body.py",
+      "body_sha256": "956f1b749533832597602891bdfebafb674c0daaa015ccfbaf5c3ad75a7e0fe8",
+      "case": "D-055",
+      "sha256": "bb7326fc83c2b23dfa4ce92514a332215596f1ec4ab590a1e6de2a78a9edba0b",
+      "skeleton": "cases/D-055/skeletons/W1.py",
+      "skeleton_sha256": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+      "twin": "faulty"
+    },
+    "W1/D-055_fixed": {
+      "arm": "W1",
+      "body": "cases/D-055/fixed_body.py",
+      "body_sha256": "ed065baebe6bba513948a7db44edba983ca770a2771daa1b99ab7072313e705a",
+      "case": "D-055",
+      "sha256": "02a0de58958b771ebddf486387b1f9ff96992a742a03921f702616b49337f5bc",
+      "skeleton": "cases/D-055/skeletons/W1.py",
+      "skeleton_sha256": "d83098cbae6f69f09363f907d9bd45d7d019afa626b4b435062e15fc06ed3959",
+      "twin": "fixed"
+    },
+    "W1/D-056_faulty": {
+      "arm": "W1",
+      "body": "cases/D-056/faulty_body.py",
+      "body_sha256": "165ea2559b213e7d35ec466b6346939294ae844ce200f0b0a02f019be9e7c93a",
+      "case": "D-056",
+      "sha256": "5607c5dbcabbfd6566d25fbf17a5406e7e16bf7f742040ecd094854d89898bfd",
+      "skeleton": "cases/D-056/skeletons/W1.py",
+      "skeleton_sha256": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+      "twin": "faulty"
+    },
+    "W1/D-056_fixed": {
+      "arm": "W1",
+      "body": "cases/D-056/fixed_body.py",
+      "body_sha256": "35c3c0ee47ea237719532c606e73bb2e65bf9933fadd233d373fc3de9924523a",
+      "case": "D-056",
+      "sha256": "6940c4de3a8b8c8b251d2078288fba140d335f006565ab6014ad321b9edf5cac",
+      "skeleton": "cases/D-056/skeletons/W1.py",
+      "skeleton_sha256": "34e441869897dbc2f24b32adbeed136a4230b381fc16581b1a9d33bb85400178",
+      "twin": "fixed"
+    },
+    "W1/D-062_faulty": {
+      "arm": "W1",
+      "body": "cases/D-062/faulty_body.py",
+      "body_sha256": "09b50639c5401b531febd020fcce5d836d6d074784fd80461cf889345881a425",
+      "case": "D-062",
+      "sha256": "1bdaf3ef541db4458f3a75ef9d3f406b869d6e835e5bd56bf6a38cd5281e8ded",
+      "skeleton": "cases/D-062/skeletons/W1.py",
+      "skeleton_sha256": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+      "twin": "faulty"
+    },
+    "W1/D-062_fixed": {
+      "arm": "W1",
+      "body": "cases/D-062/fixed_body.py",
+      "body_sha256": "9d69f4fd6d2f7cda23d63cb4810392ca5ad167a2a626c52bec9dfe12cac9b3db",
+      "case": "D-062",
+      "sha256": "9491c31795a8235809e535af04f7d54a90e636312237e08402858448b8d6496f",
+      "skeleton": "cases/D-062/skeletons/W1.py",
+      "skeleton_sha256": "28d9b9e91a5735b29bd7069bf96326645acb69b7f6b1397023843a13ad3a0b9d",
+      "twin": "fixed"
+    },
+    "W1/D-064_faulty": {
+      "arm": "W1",
+      "body": "cases/D-064/faulty_body.py",
+      "body_sha256": "a447fe48bb81d8a6e6408ddcc8c470fe1ba2425f44535ab7a4cfcbb07a51f3eb",
+      "case": "D-064",
+      "sha256": "65a939a83996fda957c47ce749f1d0452231a0754f624fe727859d713de9c650",
+      "skeleton": "cases/D-064/skeletons/W1.py",
+      "skeleton_sha256": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+      "twin": "faulty"
+    },
+    "W1/D-064_fixed": {
+      "arm": "W1",
+      "body": "cases/D-064/fixed_body.py",
+      "body_sha256": "5e64a58408e971a84596c585ab21e863d52d58fac9fa53b74dbafb7913a56c3d",
+      "case": "D-064",
+      "sha256": "353a448d7abc0035c0dfdd41cfa3cade7b2d501101a9e42c28ca91305d10eb68",
+      "skeleton": "cases/D-064/skeletons/W1.py",
+      "skeleton_sha256": "d7afd806c86e7016b2e0dba13d0b0735a4bfd9db3cb9f8996869981f795b149f",
+      "twin": "fixed"
+    },
+    "W1/D-066_faulty": {
+      "arm": "W1",
+      "body": "cases/D-066/faulty_body.py",
+      "body_sha256": "33d3e7c42a4a725a9033a67ca5c8460c49745dfcec3a1126ca639ffe88843af6",
+      "case": "D-066",
+      "sha256": "4745c398361675a288c3c348acf87c5c479e77a5c3158de9f57c181e04340664",
+      "skeleton": "cases/D-066/skeletons/W1.py",
+      "skeleton_sha256": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+      "twin": "faulty"
+    },
+    "W1/D-066_fixed": {
+      "arm": "W1",
+      "body": "cases/D-066/fixed_body.py",
+      "body_sha256": "123b04fc38e116104cb5a0c4f0c3359f596bb25c4f858064eb4f18bd9419b91d",
+      "case": "D-066",
+      "sha256": "d43a98fdca09c6c88660437a07e092953927756c9e88ed38505d1507c68e8a91",
+      "skeleton": "cases/D-066/skeletons/W1.py",
+      "skeleton_sha256": "8946d19608e509c11ed04cd73e086f3c98a452cf607907a46f4a75335d00cc89",
+      "twin": "fixed"
+    },
+    "W1/D-067_faulty": {
+      "arm": "W1",
+      "body": "cases/D-067/faulty_body.py",
+      "body_sha256": "2ac27e1c647137cb1ff6240ef7e0b5b561f81b9d0566639e8471586ba099c484",
+      "case": "D-067",
+      "sha256": "e6ad3d760a11374c7b1a45b82894bc6f1535926a857798826ae2930c4b3b3b50",
+      "skeleton": "cases/D-067/skeletons/W1.py",
+      "skeleton_sha256": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+      "twin": "faulty"
+    },
+    "W1/D-067_fixed": {
+      "arm": "W1",
+      "body": "cases/D-067/fixed_body.py",
+      "body_sha256": "1106ec786fd36a1fdd31d03b258bd413a3061a3e62a9f2b33fbcccd8939aa339",
+      "case": "D-067",
+      "sha256": "747b7d54def1a773852d77777255c94f3877d7a2d8eb51801206d10407e8310d",
+      "skeleton": "cases/D-067/skeletons/W1.py",
+      "skeleton_sha256": "e9ab073c1e49139d0f19c3b08e77c4891598ab068dd1f476bd310984cb87bba4",
+      "twin": "fixed"
+    },
+    "W1/D-068_faulty": {
+      "arm": "W1",
+      "body": "cases/D-068/faulty_body.py",
+      "body_sha256": "173fbd9dffbf733e15710e0446332238750d422cc9beae1e415fe16d9d43083b",
+      "case": "D-068",
+      "sha256": "276fec09c7efe994dcb1a66fc066425a27305e2bdc65086190b2a9455ab80eb1",
+      "skeleton": "cases/D-068/skeletons/W1.py",
+      "skeleton_sha256": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+      "twin": "faulty"
+    },
+    "W1/D-068_fixed": {
+      "arm": "W1",
+      "body": "cases/D-068/fixed_body.py",
+      "body_sha256": "4fc0cb11ce55f218716b1316f67243138daa998d2769b72bd3a0be659e4ea104",
+      "case": "D-068",
+      "sha256": "bbe7b2c5f43d95a6c79d1c0ad6701a9d26371f7c578cd15b93001ec5fd96b1f5",
+      "skeleton": "cases/D-068/skeletons/W1.py",
+      "skeleton_sha256": "4865761d2b5b6151d87597e8bcd2a45bcbb9a440cbf32319723f4d0e4849ff38",
+      "twin": "fixed"
+    }
+  }
+}

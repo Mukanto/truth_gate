@@ -1,0 +1,81 @@
+{
+  "pb_detected": true,
+  "attributable": true,
+  "generic": true,
+  "declared": true,
+  "draft1_rule": true,
+  "qualifying": [
+    {
+      "flag": "HIGH_RATE:control:y_permuted_across_samples",
+      "stream": "control:y_permuted_across_samples",
+      "faulty_holds": 198,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "HIGH_RATE:probe:noise",
+      "stream": "probe:noise",
+      "faulty_holds": 196,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    },
+    {
+      "flag": "HIGH_RATE:probe:shuffle:X,y",
+      "stream": "probe:shuffle:X,y",
+      "faulty_holds": 196,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    },
+    {
+      "flag": "K2_HIGH_SIZE",
+      "stream": "world:minus",
+      "faulty_holds": 199,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.9523566667698477e-117
+    },
+    {
+      "flag": "K4_CONTROL_ALSO_HOLDS",
+      "stream": "control:y_permuted_across_samples",
+      "faulty_holds": 198,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 1.971880233437546e-115
+    },
+    {
+      "flag": "K5_HOLDS_ON_NOISE",
+      "stream": "probe:noise",
+      "faulty_holds": 196,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    },
+    {
+      "flag": "K5_HOLDS_ON_SHUFFLE",
+      "stream": "probe:shuffle:X,y",
+      "faulty_holds": 196,
+      "faulty_n": 200,
+      "fixed_holds": 0,
+      "fixed_n": 200,
+      "p": 6.804958685592971e-112
+    }
+  ],
+  "reasons": [
+    "HIGH_RATE:control:y_permuted_across_samples@control:y_permuted_across_samples 198 vs 0 p=1.97e-115 OK",
+    "HIGH_RATE:probe:noise@probe:noise 196 vs 0 p=6.8e-112 OK",
+    "HIGH_RATE:probe:shuffle:X,y@probe:shuffle:X,y 196 vs 0 p=6.8e-112 OK",
+    "K2_HIGH_SIZE@world:minus 199 vs 0 p=1.95e-117 OK",
+    "K4_CONTROL_ALSO_HOLDS@control:y_permuted_across_samples 198 vs 0 p=1.97e-115 OK",
+    "K5_HOLDS_ON_NOISE@probe:noise 196 vs 0 p=6.8e-112 OK",
+    "K5_HOLDS_ON_SHUFFLE@probe:shuffle:X,y 196 vs 0 p=6.8e-112 OK"
+  ]
+}

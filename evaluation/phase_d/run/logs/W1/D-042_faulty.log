@@ -1,0 +1,6 @@
+COMPONENT  VERDICT          FLAGS
+C          NOT_FALSIFIABLE  HIGH_RATE:control:compound_mean_activity_shuffled_across_compounds, K2_HIGH_SIZE, K5_INCONCLUSIVE:zeros
+study flags: -
+mode: full   verdict: NOT_FALSIFIABLE
+certificate: E:\Claude Projects\Kapi\phase_d_work\run\certs\W1\D-042_faulty.json
+body_sha256: 615637a4bd6fac3d45d9acee9354c4b65d57dcba87057a85db3dece3ab3af4d2

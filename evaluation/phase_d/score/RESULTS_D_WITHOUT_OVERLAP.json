@@ -1,0 +1,164 @@
+{
+ "overlapping_selected": [
+  "D-008",
+  "D-011",
+  "D-040",
+  "D-066",
+  "D-067"
+ ],
+ "kept": [
+  "D-007",
+  "D-010",
+  "D-012",
+  "D-022",
+  "D-023",
+  "D-027",
+  "D-035",
+  "D-042",
+  "D-047",
+  "D-052",
+  "D-055",
+  "D-056",
+  "D-062",
+  "D-064",
+  "D-068"
+ ],
+ "per_class_overlap": {
+  "B-2": {
+   "n": 10,
+   "overlapping": 2,
+   "largely_repeats": false
+  },
+  "B-3": {
+   "n": 7,
+   "overlapping": 3,
+   "largely_repeats": false
+  },
+  "B-1": {
+   "n": 1,
+   "overlapping": 0,
+   "largely_repeats": false
+  },
+  "B-6": {
+   "n": 2,
+   "overlapping": 0,
+   "largely_repeats": false
+  }
+ },
+ "arms": {
+  "R": {
+   "B-2": {
+    "n": 8,
+    "attributable": 8,
+    "declared": 8,
+    "clean": 8,
+    "attr_lower": 0.7473,
+    "clean_lower": 0.7473
+   },
+   "B-3": {
+    "n": 4,
+    "attributable": 4,
+    "declared": 4,
+    "clean": 4,
+    "attr_lower": 0.5965,
+    "clean_lower": 0.5965
+   },
+   "B-1": {
+    "n": 1,
+    "attributable": 1,
+    "declared": 1,
+    "clean": 1,
+    "attr_lower": 0.2699,
+    "clean_lower": 0.2699
+   },
+   "B-6": {
+    "n": 2,
+    "attributable": 2,
+    "declared": 2,
+    "clean": 2,
+    "attr_lower": 0.425,
+    "clean_lower": 0.425
+   }
+  },
+  "W0": {
+   "B-2": {
+    "n": 8,
+    "attributable": 7,
+    "declared": 7,
+    "clean": 7,
+    "attr_lower": 0.5889,
+    "clean_lower": 0.5889
+   },
+   "B-3": {
+    "n": 4,
+    "attributable": 3,
+    "declared": 2,
+    "clean": 4,
+    "attr_lower": 0.3562,
+    "clean_lower": 0.5965
+   },
+   "B-1": {
+    "n": 1,
+    "attributable": 0,
+    "declared": 0,
+    "clean": 1,
+    "attr_lower": 0.0,
+    "clean_lower": 0.2699
+   },
+   "B-6": {
+    "n": 2,
+    "attributable": 1,
+    "declared": 1,
+    "clean": 2,
+    "attr_lower": 0.1209,
+    "clean_lower": 0.425
+   }
+  },
+  "W1": {
+   "B-2": {
+    "n": 8,
+    "attributable": 7,
+    "declared": 7,
+    "clean": 8,
+    "attr_lower": 0.5889,
+    "clean_lower": 0.7473
+   },
+   "B-3": {
+    "n": 4,
+    "attributable": 3,
+    "declared": 2,
+    "clean": 4,
+    "attr_lower": 0.3562,
+    "clean_lower": 0.5965
+   },
+   "B-1": {
+    "n": 1,
+    "attributable": 1,
+    "declared": 1,
+    "clean": 1,
+    "attr_lower": 0.2699,
+    "clean_lower": 0.2699
+   },
+   "B-6": {
+    "n": 2,
+    "attributable": 1,
+    "declared": 1,
+    "clean": 2,
+    "attr_lower": 0.1209,
+    "clean_lower": 0.425
+   }
+  }
+ },
+ "H-D3": {
+  "pairs": 12,
+  "b": 0,
+  "c": 0,
+  "p": 1.0
+ },
+ "guard": {
+  "pairs": 12,
+  "w0_only": 0,
+  "w1_only": 1,
+  "p": 1.0
+ }
+}
